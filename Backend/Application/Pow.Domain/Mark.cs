@@ -7,7 +7,7 @@ namespace Pow.Domain
     public class Mark : BaseModel
     {
         
-        public bool Desabled { get; init; }
+        public bool Disabled { get; init; }
 
         public string Country { get; init; }
 
@@ -25,7 +25,7 @@ namespace Pow.Domain
 
         public string MapUrl { get; init; }
 
-        public string GpsLongtitude { get; init; }
+        public string GpsLongitude { get; init; }
 
         public string GpsLatitude { get; init; }
 

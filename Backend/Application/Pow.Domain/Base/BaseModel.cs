@@ -2,7 +2,7 @@
 
 namespace Pow.Domain.Base
 {
-    public class BaseModel
+    public abstract class BaseModel
     {
         public Guid Id { get; init; }
     }
