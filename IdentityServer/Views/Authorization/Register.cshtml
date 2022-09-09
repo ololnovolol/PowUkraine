@@ -3,12 +3,13 @@
     ViewData["Title"] = "Registration";
 }
 
-<link rel="stylesheet" href="~/css/fields.css" media="screen" type="text/css" />
+<link rel="stylesheet" href="~/css/custom.css" media="screen" type="text/css" />
 
-<div class="row justify-content-center align-items-center" >
+@*<div class="row justify-content-center align-items-center" style="margin-top: 10%">
     <div class="col-md-4">
 
-        <h4>Register</h4>
+        <header class="accordion-header" >Register</header>
+
         <form asp-action="Register" asp-controller="Authorization">
 
             <div class="form-group">
@@ -31,6 +32,11 @@
                 <input asp-for="ConfirmPassword" class="form-control"/>
                 <span asp-validation-for="ConfirmPassword" class="text-danger"></span>
             </div>
+            <div class="form-group">
+                <label asp-for="BirthDay" class="control-label"></label>
+                <input asp-for="BirthDay" class="form-control"/>
+                <span asp-validation-for="BirthDay" class="text-danger"></span>
+            </div>
 
 
             <div class="form-group">
@@ -45,4 +51,62 @@
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.17.0/jquery.validate.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validation-unobtrusive/3.2.11/jquery.validate.unobtrusive.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validation-unobtrusive/3.2.11/jquery.validate.unobtrusive.min.js"></script>*@
+
+                
+                
+                
+                
+<main class="form-signin">
+    <div class="row justify-content-center align-items-center" screen_capture_injected="true" style="margin-top: 10%">
+        <div class="col-mb-3">
+            <h1 class="h3 mb-3 fw-normal align-items-center text-center">Registration</h1>
+            <form asp-action="Register" asp-controller="Authorization">
+
+                <div class="form-group">
+                    <label asp-for="UserName" class="control-label">Login</label>
+                    <input asp-for="UserName" class="form-control" placeholder="Login"/>
+                    <span asp-validation-for="UserName" class="text-danger"></span>
+                </div>
+
+                <div class="form-group">
+                    <label asp-for="Email" class="control-label"></label>
+                    <input asp-for="Email" class="form-control" placeholder="Email"/>
+                    <span asp-validation-for="Email" class="text-danger"></span>
+                </div>
+
+                <div class="form-group">
+                    <label asp-for="Password" class="control-label">Password</label>
+                    <input asp-for="Password" class="form-control" placeholder="Password"/>
+                    <span asp-validation-for="Password" class="text-danger"></span>
+                </div>
+
+                <div class="form-group">
+                    <label asp-for="ConfirmPassword" class="control-label">Password</label>
+                    <input asp-for="ConfirmPassword" class="form-control" placeholder="Confirm password"/>
+                    <span asp-validation-for="ConfirmPassword" class="text-danger"></span>
+                </div>
+
+                <div class="form-group">
+                    <label asp-for="BirthDay" class="control-label">Birthday</label>
+                    <input asp-for="BirthDay" class="form-control" placeholder="Datetime"/> 
+                    <span asp-validation-for="BirthDay" class="text-danger"></span>
+                </div>
+                
+                <div class="form-group">
+                    <button class="w-100 btn btn-md btn-success" style="background-color: #88A87D; color: #FAAA0A" type="submit">Register</button>
+                </div>
+
+                <div class="form-group">
+                    <label class="form-label">Already have an account? Login: </label>
+                    <a asp-action="Login" asp-controller="Authorization" class="w-100 btn btn-md btn-success" tabindex="-1" role="button" aria-disabled="true"
+                       style="background-color: #88A87D;" type="button">Login</a>
+                </div>
+            </form>
+        </div>
+    </div>
+</main>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.17.0/jquery.validate.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validation-unobtrusive/3.2.11/jquery.validate.unobtrusive.min.js"></script>
