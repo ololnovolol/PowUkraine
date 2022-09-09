@@ -2,11 +2,9 @@ using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
-using System.IO;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
-using Microsoft.Extensions.FileProviders;
 using IdentityServer.Data;
 using IdentityServer.Models;
 
@@ -33,9 +31,10 @@ namespace IdentityServer
             // todo make stronger
             services.AddIdentity<AppUser, IdentityRole>(config =>
             {
-                config.Password.RequireDigit = false;
-                config.Password.RequireUppercase = false;
-                config.Password.RequireNonAlphanumeric = false;
+                config.Password.RequireUppercase = true;
+                config.Password.RequireDigit = true;
+                config.Password.RequireLowercase = true;
+                config.Password.RequiredLength = 8;
             })
                 .AddEntityFrameworkStores<AuthorizationDbContext>()
                 .AddDefaultTokenProviders();
@@ -51,8 +50,8 @@ namespace IdentityServer
             services.ConfigureApplicationCookie(config =>
             {
                 config.Cookie.Name = "IdentityServer.Cookie";
-                config.LoginPath = "/Auth/Login";
-                config.LogoutPath = "/Auth/Logout";
+                config.LoginPath = "/Authorization/Login";
+                config.LogoutPath = "/Authorization/Logout";
             });
 
             services.AddControllersWithViews();
