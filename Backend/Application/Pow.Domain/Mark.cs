@@ -1,0 +1,34 @@
+﻿using Pow.Domain.Base;
+using System;
+
+
+namespace Pow.Domain
+{
+    public class Mark : BaseModel
+    {
+        
+        public bool Desabled { get; init; }
+
+        public string Country { get; init; }
+
+        public string City { get; init; }
+
+        public string Region { get; init; }
+
+        public string Address { get; init; }
+
+        public string StreetNumber { get; init; }
+
+        public string PostalCode { get; init; }
+
+        public string County { get; init; }
+
+        public string MapUrl { get; init; }
+
+        public string GpsLongtitude { get; init; }
+
+        public string GpsLatitude { get; init; }
+
+        public Guid? UserId { get; init; }
+    }
+}
