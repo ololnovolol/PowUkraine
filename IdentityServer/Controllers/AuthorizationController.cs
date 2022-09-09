@@ -23,16 +23,13 @@ namespace IdentityServer.Controllers
 
         // authorization/login
         [HttpGet]
-        public IActionResult Login(string returlUrl)
+        public IActionResult Login(string returnUrl)
         {
-            var viewModel = new LoginViewModel()
-            {
-                ReturnUrl = returlUrl
-            };
-            return View(viewModel);
+            return View(new LoginViewModel { ReturnUrl = returnUrl });
         }
 
         [HttpPost]
+        [ValidateAntiForgeryToken]
         public async Task<IActionResult> Login(LoginViewModel viewModel)
         {
             if (!ModelState.IsValid)
@@ -48,25 +45,31 @@ namespace IdentityServer.Controllers
             }
 
             var result = await _signInManager.PasswordSignInAsync(viewModel.Email,
-                viewModel.Password, false, false);
+                viewModel.Password, viewModel.RememberMe, false);
+
             if (result.Succeeded)
             {
-                return Redirect(viewModel.ReturnUrl);
+                //return Redirect(viewModel.ReturnUrl);
+                // if has Url
+                if (!string.IsNullOrEmpty(viewModel.ReturnUrl) && Url.IsLocalUrl(viewModel.ReturnUrl))
+                {
+                    return Redirect(viewModel.ReturnUrl);
+                }
+                else
+                {
+                    //return RedirectToAction("Index", "Home");
+                }
             }
 
-            ModelState.AddModelError(string.Empty, "Login error");
+            ModelState.AddModelError(string.Empty, "Incorrect email (or) password");
             return View(viewModel);
         }
 
         // authorization/register
         [HttpGet]
-        public IActionResult Register(string returlUrl)
+        public IActionResult Register(string returnUrl)
         {
-            var viewModel = new RegisterViewModel()
-            {
-                ReturnUrl = returlUrl
-            };
-            return View(viewModel);
+            return View(new RegisterViewModel() { ReturnUrl = returnUrl });
         }
 
         [HttpPost]
@@ -89,11 +92,12 @@ namespace IdentityServer.Controllers
                 return Redirect(viewModel.ReturnUrl);
             }
 
-            ModelState.AddModelError(string.Empty, "Error occured");
+            ModelState.AddModelError(string.Empty, "Error occurred");
             return View(viewModel);
         }
 
         [HttpGet]
+        [ValidateAntiForgeryToken]
         public async Task<IActionResult> Logout(string logoutId)
         {
             await _signInManager.SignOutAsync();
