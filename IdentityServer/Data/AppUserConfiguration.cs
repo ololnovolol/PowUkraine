@@ -13,6 +13,7 @@ namespace IdentityServer.Data
 
             builder.Property(x => x.FirstName).HasMaxLength(256);
             builder.Property(x => x.LastName).HasMaxLength(256);
+            builder.Property(x => x.BirthDay).IsRequired();
             builder.Property(x => x.UserName).HasMaxLength(256).IsRequired();
             builder.Property(x => x.NormalizedUserName).HasMaxLength(256).IsRequired();
             builder.Property(x => x.Email).HasMaxLength(250).IsRequired();

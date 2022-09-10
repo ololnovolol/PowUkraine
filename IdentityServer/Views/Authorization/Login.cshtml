@@ -4,49 +4,51 @@
 @model IdentityServer.Models.LoginViewModel
 
 <link rel="stylesheet" href="~/css/custom.css" media="screen" type="text/css" />
+<link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
 
-<main class="form-signin">
 
-    <div class="row justify-content-center align-items-center" screen_capture_injected="true" style="margin-top: 10%">
-        <div class="col-mb-3">
+<section class="vh-100">
+    <div class="mask d-flex align-items-center h-100 gradient-custom-3">
+        <div class="container h-100">
+            <div class="row d-flex justify-content-center align-items-center h-100">
+                <div class="col-12 col-md-9 col-lg-7 col-xl-6">
+                    <div class="card" style="border-radius: 15px;">
+                        <div class="card-body p-5">
+                            <h2 class="text-uppercase text-center mb-5">Login</h2>
+                             <form asp-action="Login" asp-controller="Authorization">
 
-            <h1 class="h3 mb-3 fw-normal align-items-center text-center">Login</h1>
-
-            <form asp-action="Login" asp-controller="Authorization">
-
-                <div class="form-group">
-                    <div class="form-group">
-
-                        <label asp-for="Email" class="form-label"></label>
-                        <input asp-for="Email" class="form-control" placeholder="Email"/>
-                        <span asp-validation-for="Email" class="text-danger"></span>
+                                <div class="form-outline mb-4">
+                                    <div class="form-group">
+                                        <label asp-for="Email" class="form-label"></label>
+                                        <input asp-for="Email" class="form-control form-control-lg" placeholder="Email"/>
+                                        <span asp-validation-for="Email" class="text-danger"></span>
+                                    </div>
+                                    <div class="form-outline mb-4">
+                                        <label asp-for="Password" class="form-label">Password</label>
+                                        <input asp-for="Password" class="form-control form-control-lg" placeholder="Password"/>
+                                        <span asp-validation-for="Password" class="text-danger"></span>
+                                    </div>
+                                    <div class="form-outline mb-5">
+                                        <input asp-for="RememberMe" />
+                                        <label asp-for="RememberMe "></label>
+                                    </div>
+                                    <div class="form-outline mb-4">
+                                        <button class="w-100 btn btn-lg btn-success" style="background-color: #88A87D" type="submit">Login</button>
+                                    </div>
+                                    <div class="form-group">
+                                        <label class="form-label">Not registered yet?</label>
+                                        <a asp-action="Register" asp-controller="Authorization" class="w-100 btn btn-lg btn-success" tabindex="-1" role="button"
+                                           style="background-color: #88A87D; color: #FAAA0A" type="button">Register</a>
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
                     </div>
-                    <div class="form-group">
-                        <label asp-for="Password" class="form-label">Password</label>
-                        <input asp-for="Password" class="form-control" placeholder="Password"/>
-                        <span asp-validation-for="Password" class="text-danger"></span>
-                    </div>
-                    <div class="form-group">
-                        <label asp-for="RememberMe"></label><br/>
-                        <input asp-for="RememberMe" />
-                    </div>
-                    <div class="form-group">
-                        <button class="w-100 btn btn-md btn-success" style="background-color: #88A87D" type="submit">Login</button>
-                    </div>
-                    <div class="form-group">
-                        <label class="form-label">Not registered yet?</label>
-                        <a asp-action="Register" asp-controller="Authorization" class="w-100 btn btn-md btn-success" tabindex="-1" role="button"
-                           style="background-color: #88A87D; color: #FAAA0A" type="button">Register</a>
-                    </div>
-
                 </div>
-
-            </form>
-
+            </div>
         </div>
     </div>
-
-</main>
+</section>
 
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>

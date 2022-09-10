@@ -20,11 +20,11 @@ namespace IdentityServer.Models
         [Required]
         [Compare("Password", ErrorMessage = "Passwords do not match")]
         [DataType(DataType.Password)]
-        [Display(Name = "Passwords Confirm")]
+        [Display(Name = "Repeat your password")]
         public string ConfirmPassword { get; set; }
 
         [Required]
-        [Display(Name = "Date your birthday")]
+        [Display(Name = "Your date of birth")]
         public DateTime BirthDay { get; set; }
 
         public string ReturnUrl { get; set; }
