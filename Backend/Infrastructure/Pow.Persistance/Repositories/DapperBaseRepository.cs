@@ -1,8 +1,5 @@
-﻿using System;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using System.Data.SqlClient;
-using System.Linq;
-using System.Text;
 using System.Threading.Tasks;
 using Dapper;
 using Microsoft.Extensions.Configuration;
@@ -13,45 +10,45 @@ namespace Pow.Persistance.Repositories
     {
         private readonly IConfiguration _config;
 
-        public DapperBaseRepository(IConfiguration config)
+        protected DapperBaseRepository(IConfiguration config)
         {
             _config = config;
         }
 
-        public IEnumerable<T> Query<T>(string query, object parameters = null)
+        public async Task<IEnumerable<T>> QueryAsync<T>(string query, object parameters = null)
         {
             using var connection = new SqlConnection(_config.GetConnectionString("DefaultConnection"));
-            return connection.Query<T>(query, parameters).ToList();
+            return await connection.QueryAsync<T>(query, parameters);
         }
 
-        public T QueryFirst<T>(string query, object parameters = null)
+        public async Task<T> QueryFirstAsync<T>(string query, object parameters = null)
         {
             using var connection = new SqlConnection(_config.GetConnectionString("DefaultConnection"));
-            return connection.QueryFirst<T>(query, parameters);
+            return await connection.QueryFirstAsync<T>(query, parameters);
         }
 
-        public T QueryFirstOfDefault<T>(string query, object parameters = null)
+        public async Task<T> QueryFirstOfDefaultAsync<T>(string query, object parameters = null)
         {
             using var connection = new SqlConnection(_config.GetConnectionString("DefaultConnection"));
-            return connection.QueryFirstOrDefault<T>(query, parameters);
+            return await connection.QueryFirstOrDefaultAsync<T>(query, parameters);
         }
 
-        public T QuerySingle<T>(string query, object parameters = null)
+        public async Task<T> QuerySingleAsync<T>(string query, object parameters = null)
         {
             using var connection = new SqlConnection(_config.GetConnectionString("DefaultConnection"));
-            return connection.QuerySingle<T>(query, parameters);
+            return await connection.QuerySingleAsync<T>(query, parameters);
         }
 
-        public T QuerySingleOrDefault<T>(string query, object parameters = null)
+        public async Task<T> QuerySingleOrDefaultAsync<T>(string query, object parameters = null)
         {
             using var connection = new SqlConnection(_config.GetConnectionString("DefaultConnection"));
-            return connection.QuerySingleOrDefault<T>(query, parameters);
+            return await connection.QuerySingleOrDefaultAsync<T>(query, parameters);
         }
 
-        public void Execute(string query, object parameters = null)
+        public async Task ExecuteAsync(string query, object parameters = null)
         {
             using var connection = new SqlConnection(_config.GetConnectionString("DefaultConnection"));
-             connection.Execute(query, parameters);
+            await connection.ExecuteAsync(query, parameters);
         }
     }
 }
