@@ -38,12 +38,12 @@ namespace IdentityServer
                     ClientId = "pow-web-api",
                     ClientName = "Pow Web",
                     AllowedGrantTypes = GrantTypes.Code,
-                    RequireClientSecret = false,
+                    RequireClientSecret = false, // todo set code
                     RequirePkce = true,
-                    RedirectUris = {"http:// .../signin-oidc"}, // todo setup with front end
+                    RedirectUris = {"http:// .../signin-oidc"}, // todo setup with frontend
                     AllowedCorsOrigins =
                     {
-                        "http:/..." // todo setup with front end
+                        "http:/..." // todo setup with frontend and any other
                     },
                     PostLogoutRedirectUris =
                     {

@@ -3,9 +3,7 @@
 }
 @model IdentityServer.Models.LoginViewModel
 
-<link rel="stylesheet" href="~/css/custom.css" media="screen" type="text/css" />
 <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
-
 
 <section class="vh-100">
     <div class="mask d-flex align-items-center h-100 gradient-custom-3">
@@ -15,8 +13,11 @@
                     <div class="card" style="border-radius: 15px;">
                         <div class="card-body p-5">
                             <h2 class="text-uppercase text-center mb-5">Login</h2>
-                             <form asp-action="Login" asp-controller="Authorization">
+                            <form asp-action="Login" asp-controller="Authorization">
+                                
+                                <div asp-validation-summary="All" class="text-danger"></div>
 
+                                <input type="hidden" asp-for="ReturnUrl"/>
                                 <div class="form-outline mb-4">
                                     <div class="form-group">
                                         <label asp-for="Email" class="form-label"></label>
@@ -29,15 +30,15 @@
                                         <span asp-validation-for="Password" class="text-danger"></span>
                                     </div>
                                     <div class="form-outline mb-5">
-                                        <input asp-for="RememberMe" />
-                                        <label asp-for="RememberMe "></label>
+                                        <input asp-for="RememberMe"/>
+                                        <label asp-for="RememberMe"></label>
                                     </div>
                                     <div class="form-outline mb-4">
                                         <button class="w-100 btn btn-lg btn-success" style="background-color: #88A87D" type="submit">Login</button>
                                     </div>
                                     <div class="form-group">
                                         <label class="form-label">Not registered yet?</label>
-                                        <a asp-action="Register" asp-controller="Authorization" class="w-100 btn btn-lg btn-success" tabindex="-1" role="button"
+                                        <a asp-action="Register" asp-controller="Authorization" asp-route-returnUrl="@Model.ReturnUrl" class="w-100 btn btn-lg btn-success" tabindex="-1" role="button"
                                            style="background-color: #88A87D; color: #FAAA0A" type="button">Register</a>
                                     </div>
                                 </div>

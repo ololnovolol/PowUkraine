@@ -27,6 +27,9 @@ namespace IdentityServer.Models
         [Display(Name = "Your date of birth")]
         public DateTime BirthDay { get; set; }
 
+        [Display(Name = "I agree all statements")]
+        public bool agreeAllStatements { get; set; }
+
         public string ReturnUrl { get; set; }
     }
 }

@@ -40,12 +40,12 @@ namespace Pow.WebApi
                 })
                 .AddJwtBearer("Bearer", options =>
                 {
-                    options.Authority = "https://localhost:44393/";
-                    options.Audience = "NotesWebAPI";
+                    options.Authority = "https://localhost:44316/";
+                    options.Audience = "PowWebApi";
                     options.RequireHttpsMetadata = false;
                 });
 
-            services.AddHttpContextAccessor();
+           //services.AddHttpContextAccessor();
 
         }
 
@@ -57,8 +57,6 @@ namespace Pow.WebApi
                 app.UseDeveloperExceptionPage();
             }
 
-            app.UseSwagger();
-            app.UseSwaggerUI();
             app.UseCustomExceptionHandler();
             app.UseRouting();
             app.UseHttpsRedirection();

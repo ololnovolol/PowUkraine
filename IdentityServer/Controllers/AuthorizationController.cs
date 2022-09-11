@@ -1,4 +1,5 @@
-﻿using System.Threading.Tasks;
+﻿using System;
+using System.Threading.Tasks;
 using IdentityServer4.Services;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
@@ -37,7 +38,7 @@ namespace IdentityServer.Controllers
                 return View(viewModel);
             }
 
-            var user = await _userManager.FindByNameAsync(viewModel.Email);
+            var user = await _userManager.FindByEmailAsync(viewModel.Email);
             if (user == null)
             {
                 ModelState.AddModelError(string.Empty, "User not found");
@@ -49,15 +50,9 @@ namespace IdentityServer.Controllers
 
             if (result.Succeeded)
             {
-                //return Redirect(viewModel.ReturnUrl);
-                // if has Url
                 if (!string.IsNullOrEmpty(viewModel.ReturnUrl) && Url.IsLocalUrl(viewModel.ReturnUrl))
                 {
                     return Redirect(viewModel.ReturnUrl);
-                }
-                else
-                {
-                    //return RedirectToAction("Index", "Home");
                 }
             }
 
@@ -80,6 +75,12 @@ namespace IdentityServer.Controllers
                 return View(viewModel);
             }
 
+            if (!viewModel.agreeAllStatements)
+            {
+                ModelState.AddModelError(String.Empty, "You must agree all statements");
+                return View(viewModel);
+            }
+
             var user = new AppUser
             {
                 UserName = viewModel.UserName,
@@ -94,7 +95,10 @@ namespace IdentityServer.Controllers
                 return Redirect(viewModel.ReturnUrl);
             }
 
-            ModelState.AddModelError(string.Empty, "Error occurred");
+            foreach (var error in result.Errors)
+            {
+                ModelState.AddModelError(error.Code, error.Description);
+            }
             return View(viewModel);
         }
 

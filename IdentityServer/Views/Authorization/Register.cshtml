@@ -15,6 +15,9 @@
                             <h2 class="text-uppercase text-center mb-5">Registration</h2>
                             <form asp-action="Register" asp-controller="Authorization">
 
+                                <div asp-validation-summary="All" class="text-danger"></div>
+
+                                <input type="hidden" asp-for="ReturnUrl"/>
                                 <div class="form-outline mb-4">
                                     <label asp-for="UserName" class="form-label">Login</label>
                                     <input asp-for="UserName" class="form-control  form-control-lg" placeholder="Login"/>
@@ -44,9 +47,9 @@
                                     <input asp-for="BirthDay" class="form-control  form-control-lg" placeholder="Datetime"/>
                                     <span asp-validation-for="BirthDay" class="text-danger"></span>
                                 </div>
-                                
+
                                 <div class="form-outline mb-5">
-                                    <input type="checkbox" value="false" />
+                                    <input type="checkbox" value="false"/>
                                     <label class="form-check-label">
                                         I agree all statements in <a href="#!" class="text-body"><u>Terms of service</u></a>
                                     </label>
@@ -58,10 +61,9 @@
 
                                 <div class="form-outline mb-4">
                                     <label class="form-label">Have already an account? Login: </label>
-                                    <a asp-action="Login" asp-controller="Authorization" class="w-100 btn btn-lg btn-success" tabindex="-1" role="button" aria-disabled="true"
+                                    <a asp-action="Login" asp-controller="Authorization" asp-route-returnUrl="@Model.ReturnUrl" class="w-100 btn btn-lg btn-success" tabindex="-1" role="button" aria-disabled="true"
                                        style="background-color: #88A87D;" type="button">Login</a>
                                 </div>
-
                             </form>
                         </div>
                     </div>

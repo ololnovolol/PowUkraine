@@ -6,35 +6,38 @@ using System.Net;
 using System.Text.Json;
 using System.Threading.Tasks;
 
-public class CustomExceptionMiddleware
+namespace Pow.WebApi.Middleware
 {
-    private readonly RequestDelegate _next;
 
-    public CustomExceptionMiddleware(RequestDelegate next)
+    public class CustomExceptionMiddleware
     {
-        _next = next;
-    }
+        private readonly RequestDelegate _next;
 
-    public async Task Invoke(HttpContext context)
-    {
-        try
+        public CustomExceptionMiddleware(RequestDelegate next)
         {
-            await _next(context);
+            _next = next;
         }
-        catch (Exception exception)
+
+        public async Task Invoke(HttpContext context)
         {
-            await HandleExceptionAsync(context, exception);
+            try
+            {
+                await _next(context);
+            }
+            catch (Exception exception)
+            {
+                await HandleExceptionAsync(context, exception);
+            }
         }
-    }
 
-    private Task HandleExceptionAsync(HttpContext context, Exception exception)
-    {
-        var code = HttpStatusCode.InternalServerError;
-        var result = string.Empty;
-
-        switch (exception)
+        private Task HandleExceptionAsync(HttpContext context, Exception exception)
         {
-            case ValidationException validationException:
+            var code = HttpStatusCode.InternalServerError;
+            var result = string.Empty;
+
+            switch (exception)
+            {
+                case ValidationException validationException:
                 {
                     ValidationException validation = validationException;
                     code = HttpStatusCode.BadRequest;
@@ -42,21 +45,22 @@ public class CustomExceptionMiddleware
 
                     break;
                 }
-            case NotFoundException notFoundException:
-                code = HttpStatusCode.NotFound;
-                break;
+                case NotFoundException notFoundException:
+                    code = HttpStatusCode.NotFound;
+                    break;
+            }
+
+
+            context.Response.ContentType = "application/json";
+            context.Response.StatusCode = (int)code;
+
+            if (result == String.Empty)
+            {
+                result = JsonSerializer.Serialize(new { error = exception.Message });
+            }
+
+            return context.Response.WriteAsync(result);
         }
-
-
-        context.Response.ContentType = "application/json";
-        context.Response.StatusCode = (int)code;
-
-        if (result == String.Empty)
-        {
-            result = JsonSerializer.Serialize(new { error = exception.Message });
-        }
-
-        return context.Response.WriteAsync(result);
     }
 }
 
