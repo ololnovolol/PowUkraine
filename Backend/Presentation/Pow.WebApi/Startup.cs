@@ -1,8 +1,10 @@
+using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
+using Pow.WebApi.Middleware;
 
 namespace Pow.WebApi
 {
@@ -19,6 +21,32 @@ namespace Pow.WebApi
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddControllers();
+
+            services.AddCors(options =>
+            {
+                options.AddPolicy("AllowAll", policy =>
+                {
+                    policy.AllowAnyHeader();
+                    policy.AllowAnyMethod();
+                    policy.AllowAnyOrigin();
+                });
+            });
+
+            services.AddAuthentication(config =>
+                {
+                    config.DefaultAuthenticateScheme =
+                        JwtBearerDefaults.AuthenticationScheme;
+                    config.DefaultChallengeScheme = JwtBearerDefaults.AuthenticationScheme;
+                })
+                .AddJwtBearer("Bearer", options =>
+                {
+                    options.Authority = "https://localhost:44393/";
+                    options.Audience = "NotesWebAPI";
+                    options.RequireHttpsMetadata = false;
+                });
+
+            services.AddHttpContextAccessor();
+
         }
 
 
@@ -29,10 +57,13 @@ namespace Pow.WebApi
                 app.UseDeveloperExceptionPage();
             }
 
-            app.UseHttpsRedirection();
-
+            app.UseSwagger();
+            app.UseSwaggerUI();
+            app.UseCustomExceptionHandler();
             app.UseRouting();
-
+            app.UseHttpsRedirection();
+            app.UseCors("AllowAll"); // todo expand Cors
+            app.UseAuthentication();
             app.UseAuthorization();
 
             app.UseEndpoints(endpoints =>
