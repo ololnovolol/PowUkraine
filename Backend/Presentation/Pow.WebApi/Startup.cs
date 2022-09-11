@@ -45,7 +45,7 @@ namespace Pow.WebApi
                     options.RequireHttpsMetadata = false;
                 });
 
-           //services.AddHttpContextAccessor();
+            //services.AddHttpContextAccessor();
 
         }
 

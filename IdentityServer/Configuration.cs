@@ -1,7 +1,7 @@
-﻿using System.Collections.Generic;
-using IdentityModel;
+﻿using IdentityModel;
 using IdentityServer4;
 using IdentityServer4.Models;
+using System.Collections.Generic;
 
 namespace IdentityServer
 {
@@ -40,14 +40,14 @@ namespace IdentityServer
                     AllowedGrantTypes = GrantTypes.Code,
                     RequireClientSecret = false, // todo set code
                     RequirePkce = true,
-                    RedirectUris = {"http:// .../signin-oidc"}, // todo setup with frontend
+                    RedirectUris = {"http://localhost:3000/signin-oidc"}, // todo setup with frontend
                     AllowedCorsOrigins =
                     {
-                        "http:/..." // todo setup with frontend and any other
+                        "http://localhost:3000" // todo setup with frontend and any other
                     },
                     PostLogoutRedirectUris =
                     {
-                        "http:/.../signout-oidc" // todo setup with front end
+                        "http://localhost:3000/signout-oidc" // todo setup with front end
                     },
                     AllowedScopes =
                     {

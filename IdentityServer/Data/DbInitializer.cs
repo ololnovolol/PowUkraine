@@ -1,6 +1,4 @@
-﻿using IdentityServer.Data;
-
-namespace IdentityServer.Data
+﻿namespace IdentityServer.Data
 {
     // todo remove
     public class DbInitializer

@@ -1,7 +1,7 @@
-﻿using Microsoft.AspNetCore.Identity;
+﻿using IdentityServer.Models;
+using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore;
-using IdentityServer.Models;
 
 namespace IdentityServer.Data
 {
@@ -18,15 +18,15 @@ namespace IdentityServer.Data
 
             builder.Entity<AppUser>(entity => entity.ToTable("Users"));
             builder.Entity<IdentityRole>(entity => entity.ToTable("Roles"));
-            builder.Entity<IdentityUserRole<string>>(entity => 
+            builder.Entity<IdentityUserRole<string>>(entity =>
                 entity.ToTable("UsersRoles"));
-            builder.Entity<IdentityUserClaim<string>>(entity => 
+            builder.Entity<IdentityUserClaim<string>>(entity =>
                 entity.ToTable("UserClaim"));
-            builder.Entity<IdentityUserLogin<string>>(entity => 
+            builder.Entity<IdentityUserLogin<string>>(entity =>
                 entity.ToTable("UserLogin"));
-            builder.Entity<IdentityUserToken<string>>(entity => 
+            builder.Entity<IdentityUserToken<string>>(entity =>
                 entity.ToTable("UserTokens"));
-            builder.Entity<IdentityRoleClaim<string>>(entity => 
+            builder.Entity<IdentityRoleClaim<string>>(entity =>
                 entity.ToTable("RoleClaims"));
 
             builder.ApplyConfiguration(new AppUserConfiguration());
