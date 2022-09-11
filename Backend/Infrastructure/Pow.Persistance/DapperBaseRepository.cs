@@ -4,7 +4,7 @@ using System.Threading.Tasks;
 using Dapper;
 using Microsoft.Extensions.Configuration;
 
-namespace Pow.Persistance.Repositories
+namespace Pow.Persistance
 {
     public abstract class DapperBaseRepository
     {
