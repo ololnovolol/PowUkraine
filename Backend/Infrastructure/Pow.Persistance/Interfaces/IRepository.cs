@@ -5,7 +5,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Pow.Persistance.Repositories
+namespace Pow.Persistance
 {
     public interface IRepository<T> where T : BaseModel
     {

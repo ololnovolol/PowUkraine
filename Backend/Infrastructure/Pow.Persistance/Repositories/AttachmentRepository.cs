@@ -1,4 +1,5 @@
-﻿using Pow.Domain;
+﻿using Microsoft.Extensions.Configuration;
+using Pow.Domain;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -7,8 +8,12 @@ using System.Threading.Tasks;
 
 namespace Pow.Persistance.Repositories
 {
-    public class AttachmentRepository : IRepository<Attachment>
+    public class AttachmentRepository : DapperBaseRepository, IRepository<Attachment>
     {
+        public AttachmentRepository(IConfiguration config) : base(config)
+        {
+        }
+
         public void Create(Attachment entity)
         {
             throw new NotImplementedException();
