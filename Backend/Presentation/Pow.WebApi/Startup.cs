@@ -3,6 +3,7 @@ using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
+using Microsoft.Extensions.DependencyInjection.Extensions;
 using Microsoft.Extensions.Hosting;
 using Pow.WebApi.Middleware;
 
@@ -20,7 +21,7 @@ namespace Pow.WebApi
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddControllers();
-
+            
             services.AddCors(options =>
             {
                 options.AddPolicy("AllowAll", policy =>
@@ -44,8 +45,6 @@ namespace Pow.WebApi
                     options.RequireHttpsMetadata = false;
                 });
 
-            //services.AddHttpContextAccessor();
-
         }
 
         public void Configure(IApplicationBuilder app, IWebHostEnvironment env)
@@ -55,6 +54,7 @@ namespace Pow.WebApi
                 app.UseDeveloperExceptionPage();
             }
 
+            
             app.UseCustomExceptionHandler();
             app.UseRouting();
             app.UseHttpsRedirection();
