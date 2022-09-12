@@ -5,7 +5,7 @@ namespace IdentityServer.Models
 {
     public class RegisterViewModel
     {
-        [Required] 
+        [Required]
         public string UserName { get; set; }
 
         [Required()]

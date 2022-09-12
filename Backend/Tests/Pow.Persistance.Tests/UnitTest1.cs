@@ -1,5 +1,3 @@
-using System;
-
 namespace Pow.Persistance.Tests
 {
     public class UnitTest1

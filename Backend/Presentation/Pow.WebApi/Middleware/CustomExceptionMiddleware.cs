@@ -38,13 +38,13 @@ namespace Pow.WebApi.Middleware
             switch (exception)
             {
                 case ValidationException validationException:
-                {
-                    ValidationException validation = validationException;
-                    code = HttpStatusCode.BadRequest;
-                    result = JsonSerializer.Serialize(validation.Errors);
+                    {
+                        ValidationException validation = validationException;
+                        code = HttpStatusCode.BadRequest;
+                        result = JsonSerializer.Serialize(validation.Errors);
 
-                    break;
-                }
+                        break;
+                    }
                 case NotFoundException notFoundException:
                     code = HttpStatusCode.NotFound;
                     break;

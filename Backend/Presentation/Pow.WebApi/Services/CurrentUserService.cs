@@ -1,7 +1,7 @@
 ﻿using Microsoft.AspNetCore.Http;
-using System.Security.Claims;
-using System;
 using Pow.Application.Interfaces;
+using System;
+using System.Security.Claims;
 
 namespace Pow.WebApi.Services
 {

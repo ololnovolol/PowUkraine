@@ -1,8 +1,7 @@
-﻿using System;
-using System.Security.Cryptography;
-using Microsoft.AspNetCore.Authorization;
+﻿using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Pow.WebApi.Controllers.Base;
+using System;
 
 namespace Pow.WebApi.Controllers
 {
@@ -24,7 +23,7 @@ namespace Pow.WebApi.Controllers
 
         [Authorize]
         [HttpPost]
-        public IActionResult Create([FromBody]string model)
+        public IActionResult Create([FromBody] string model)
         {
             return Ok(model);
         }

@@ -1,9 +1,9 @@
-﻿using System;
-using System.Threading.Tasks;
+﻿using IdentityServer.Models;
 using IdentityServer4.Services;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
-using IdentityServer.Models;
+using System;
+using System.Threading.Tasks;
 
 namespace IdentityServer.Controllers
 {
@@ -14,7 +14,7 @@ namespace IdentityServer.Controllers
         private readonly UserManager<AppUser> _userManager;
         private readonly IIdentityServerInteractionService _interactionService;
 
-        public AuthorizationController(SignInManager<AppUser> signInManager, UserManager<AppUser> userManager, 
+        public AuthorizationController(SignInManager<AppUser> signInManager, UserManager<AppUser> userManager,
             IIdentityServerInteractionService interactionService)
         {
             _signInManager = signInManager;

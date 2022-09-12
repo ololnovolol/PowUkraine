@@ -18,7 +18,6 @@ namespace Pow.WebApi
 
         public IConfiguration Configuration { get; }
 
-
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddControllers();
@@ -46,11 +45,7 @@ namespace Pow.WebApi
                     options.RequireHttpsMetadata = false;
                 });
 
-
-           //services.AddHttpContextAccessor();
-
         }
-
 
         public void Configure(IApplicationBuilder app, IWebHostEnvironment env)
         {

@@ -1,6 +1,6 @@
-﻿using System;
+﻿using Microsoft.AspNetCore.Mvc;
+using System;
 using System.Security.Claims;
-using Microsoft.AspNetCore.Mvc;
 
 namespace Pow.WebApi.Controllers.Base
 {
