@@ -5,17 +5,17 @@ namespace Pow.Domain
 {
     public class Message : BaseModel
     {
-        public string Description { get; init; }
+        public string Description { get; set; }
 
-        public DateTime CreatedDate { get; init; }
+        public DateTime CreatedDate { get; set; }
 
-        public DateTime EventDate { get; init; }
+        public DateTime EventDate { get; set; }
 
-        public string Phone { get; init; }
+        public string Phone { get; set; }
 
-        public string Email { get; init; }
+        public string Email { get; set; }
 
-        public Guid? UserId { get; init; }
+        public Guid? UserId { get; set; }
     }
 
 }

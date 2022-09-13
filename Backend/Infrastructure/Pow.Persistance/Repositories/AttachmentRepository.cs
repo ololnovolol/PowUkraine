@@ -1,28 +1,66 @@
-﻿using Pow.Domain;
+﻿using Dapper;
+using Microsoft.Extensions.Configuration;
+using Pow.Domain;
+using Pow.Persistance.Repositories.Interfaces;
 using System;
+using System.Collections.Generic;
+using System.Data.SqlClient;
+using System.Linq;
+using System.Linq.Expressions;
+using System.Threading.Tasks;
 
 namespace Pow.Persistance.Repositories
 {
-    public class AttachmentRepository : IRepository<Attachment>
+    public class AttachmentRepository : IAttachmentRepository
     {
-        public void Create(Attachment entity)
+        private readonly IConfiguration configuration;
+        public AttachmentRepository(IConfiguration configuration)
         {
-            throw new NotImplementedException();
+            this.configuration = configuration;
         }
-
-        public void Delete(Attachment entity)
+        public async Task<int> AddAsync(Attachment entity)
         {
-            throw new NotImplementedException();
+            var sql = "Insert into Attachments (Title,File,MessageId) VALUES (@Title,@File,@MessageId)";
+            using (var connection = new SqlConnection(configuration.GetConnectionString("DefaultConnection")))
+            {
+                connection.Open();
+                var result = await connection.ExecuteAsync(sql, entity);
+                return result;
+            }
         }
-
-        public Attachment GetById(int id)
+        public async Task<int> DeleteAsync(string id)
         {
-            throw new NotImplementedException();
+            var sql = "DELETE FROM Attachments WHERE Id = @Id";
+            using (var connection = new SqlConnection(configuration.GetConnectionString("DefaultConnection")))
+            {
+                connection.Open();
+                var result = await connection.ExecuteAsync(sql, new { Id = id });
+                return result;
+            }
         }
-
-        public void Update(Attachment entity)
+        public async Task<IReadOnlyList<Attachment>> GetAllAsync()
         {
-            throw new NotImplementedException();
+            var sql = "SELECT * FROM Attachments";
+            using (var connection = new SqlConnection(configuration.GetConnectionString("DefaultConnection")))
+            {
+                connection.Open();
+                var result = await connection.QueryAsync<Attachment>(sql);
+                return result.ToList();
+            }
+        }
+        public async Task<Attachment> GetByIdAsync(string id)
+        {
+            var sql = "SELECT * FROM Attachments WHERE Id = @Id";
+            using (var connection = new SqlConnection(configuration.GetConnectionString("DefaultConnection")))
+            {
+                connection.Open();
+                var result = await connection.QuerySingleOrDefaultAsync<Attachment>(sql, new { Id = id });
+                return result;
+            }
+        }
+        public async Task<int> UpdateAsync(Attachment entity)
+        {
+            throw new Exception();
         }
     }
 }
