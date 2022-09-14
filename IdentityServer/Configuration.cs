@@ -26,7 +26,7 @@ namespace IdentityServer
                 new ApiResource("PowWebApi", "Web API", new[]
                     { JwtClaimTypes.Name })
                 {
-                    Scopes = {"PowWebAPI"}
+                    Scopes = { "PowWebApi" }
                 }
             };
 
@@ -35,7 +35,7 @@ namespace IdentityServer
             {
                 new Client()
                 {
-                    ClientId = "pow-web-api",
+                    ClientId = "pow-web-app",
                     ClientName = "Pow Web",
                     AllowedGrantTypes = GrantTypes.Code,
                     RequireClientSecret = false, // todo set code
@@ -52,7 +52,7 @@ namespace IdentityServer
                     AllowedScopes =
                     {
                         IdentityServerConstants.StandardScopes.OpenId,
-                        IdentityServerConstants.StandardScopes.OpenId,
+                        IdentityServerConstants.StandardScopes.Profile,
                         "PowWebApi"
 
                     },

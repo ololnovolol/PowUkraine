@@ -30,7 +30,7 @@ namespace IdentityServer.Controllers
         }
 
         [HttpPost]
-        [ValidateAntiForgeryToken]
+        //[ValidateAntiForgeryToken]
         public async Task<IActionResult> Login(LoginViewModel viewModel)
         {
             if (!ModelState.IsValid)
@@ -75,7 +75,7 @@ namespace IdentityServer.Controllers
                 return View(viewModel);
             }
 
-            if (!viewModel.agreeAllStatements)
+            if (viewModel.agreeAllStatements)
             {
                 ModelState.AddModelError(String.Empty, "You must agree all statements");
                 return View(viewModel);
@@ -103,7 +103,7 @@ namespace IdentityServer.Controllers
         }
 
         [HttpGet]
-        [ValidateAntiForgeryToken]
+        //[ValidateAntiForgeryToken]
         public async Task<IActionResult> Logout(string logoutId)
         {
             await _signInManager.SignOutAsync();
