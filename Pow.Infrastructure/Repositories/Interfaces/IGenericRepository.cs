@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Pow.Persistance.Repositories.Interfaces
+namespace Pow.Infrastructure.Repositories.Interfaces
 {
     public interface IGenericRepository<T> where T : class
     {

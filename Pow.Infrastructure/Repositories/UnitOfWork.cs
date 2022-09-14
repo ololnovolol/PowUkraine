@@ -1,11 +1,11 @@
-﻿using Pow.Persistance.Repositories.Interfaces;
+﻿using Pow.Infrastructure.Repositories.Interfaces;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Pow.Persistance.Repositories
+namespace Pow.Infrastructure.Repositories
 {
     public class UnitOfWork : IUnitOfWork
     {

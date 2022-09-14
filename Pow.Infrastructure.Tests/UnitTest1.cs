@@ -1,4 +1,4 @@
-namespace Pow.Persistance.Tests
+namespace Pow.Infrastructure.Tests
 {
     public class UnitTest1
     {
