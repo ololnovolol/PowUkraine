@@ -20,7 +20,6 @@ namespace Pow.Persistance.Migrations
 
                 Create.Table("Marks")
                     .WithColumn("Id").AsString(450).WithDefaultValue(SystemMethods.NewGuid).NotNullable().PrimaryKey()
-                    .WithColumn("CreatedDate").AsString(100)
                     .WithColumn("Desabled").AsBoolean()
                     .WithColumn("MessageId").AsString(450)
                     .WithColumn("Country").AsString(100)

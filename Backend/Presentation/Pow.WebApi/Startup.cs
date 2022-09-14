@@ -5,6 +5,7 @@ using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.DependencyInjection.Extensions;
 using Microsoft.Extensions.Hosting;
+using Pow.WebApi.Extensions;
 using Pow.WebApi.Middleware;
 
 namespace Pow.WebApi
@@ -44,6 +45,7 @@ namespace Pow.WebApi
                     options.Audience = "PowWebApi";
                     options.RequireHttpsMetadata = false;
                 });
+            services.AddInfrastructure();
 
         }
 
