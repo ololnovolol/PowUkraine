@@ -8,10 +8,10 @@ namespace Pow.WebApi.Extensions
     {
         public static void AddInfrastructure(this IServiceCollection services)
         {
-            services.AddTransient<IMessageRepository, MessageRepository>();
-            services.AddTransient<IMarkRepository, MarkRepository>();
-            services.AddTransient<IAttachmentRepository, AttachmentRepository>();
-            services.AddTransient<IUnitOfWork, UnitOfWork>();
+            services.AddTransient<IMessageRepository, MessageRepository>()
+                .AddTransient<IMarkRepository, MarkRepository>()
+                .AddTransient<IAttachmentRepository, AttachmentRepository>()
+                .AddTransient<IUnitOfWork, UnitOfWork>();
         }
     }
 }

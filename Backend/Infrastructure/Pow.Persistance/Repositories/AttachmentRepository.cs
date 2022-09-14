@@ -14,10 +14,12 @@ namespace Pow.Persistance.Repositories
     public class AttachmentRepository : IAttachmentRepository
     {
         private readonly IConfiguration configuration;
+
         public AttachmentRepository(IConfiguration configuration)
         {
             this.configuration = configuration;
         }
+
         public async Task<int> AddAsync(Attachment entity)
         {
             var sql = "Insert into Attachments (Title,File,MessageId) VALUES (@Title,@File,@MessageId)";
@@ -28,6 +30,7 @@ namespace Pow.Persistance.Repositories
                 return result;
             }
         }
+
         public async Task<int> DeleteAsync(string id)
         {
             var sql = "DELETE FROM Attachments WHERE Id = @Id";
@@ -38,6 +41,7 @@ namespace Pow.Persistance.Repositories
                 return result;
             }
         }
+
         public async Task<IReadOnlyList<Attachment>> GetAllAsync()
         {
             var sql = "SELECT * FROM Attachments";
@@ -48,6 +52,7 @@ namespace Pow.Persistance.Repositories
                 return result.ToList();
             }
         }
+
         public async Task<Attachment> GetByIdAsync(string id)
         {
             var sql = "SELECT * FROM Attachments WHERE Id = @Id";
@@ -58,6 +63,7 @@ namespace Pow.Persistance.Repositories
                 return result;
             }
         }
+
         public async Task<int> UpdateAsync(Attachment entity)
         {
             throw new Exception();

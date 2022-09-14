@@ -3,6 +3,8 @@ using Microsoft.AspNetCore.Hosting;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using Pow.Persistance.Migrations;
+using Pow.WebApi.Extensions;
+using Pow.WebApi.Services;
 using System;
 
 namespace Pow.WebApi
@@ -12,8 +14,11 @@ namespace Pow.WebApi
         
         public static void Main(string[] args)
         {
-                        
-            CreateHostBuilder(args).Build().Run();
+
+            CreateHostBuilder(args)
+                .Build()
+                .MigrateDatabase()
+                .Run();
         }
 
         public static IHostBuilder CreateHostBuilder(string[] args) =>

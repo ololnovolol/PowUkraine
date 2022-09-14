@@ -1,10 +1,13 @@
+using FluentMigrator.Runner;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
-using Microsoft.Extensions.DependencyInjection.Extensions;
 using Microsoft.Extensions.Hosting;
+using Pow.Persistance;
+using Pow.Persistance.Context;
+using Pow.Persistance.Migrations;
 using Pow.WebApi.Extensions;
 using Pow.WebApi.Middleware;
 
@@ -21,8 +24,17 @@ namespace Pow.WebApi
 
         public void ConfigureServices(IServiceCollection services)
         {
+            services.AddSingleton<DapperContext>();
+            services.AddSingleton<Database>();
+            services.AddLogging(c => c.AddFluentMigratorConsole())
+                 .AddFluentMigratorCore()
+                 .ConfigureRunner(c => c.AddSqlServer()
+                 .WithGlobalConnectionString(Configuration.GetConnectionString("DbConnection"))
+                 .ScanIn(typeof(DBInitialization).Assembly).For.Migrations());
+
+
             services.AddControllers();
-            
+
             services.AddCors(options =>
             {
                 options.AddPolicy("AllowAll", policy =>
@@ -55,8 +67,7 @@ namespace Pow.WebApi
             {
                 app.UseDeveloperExceptionPage();
             }
-
-            
+     
             app.UseCustomExceptionHandler();
             app.UseRouting();
             app.UseHttpsRedirection();
