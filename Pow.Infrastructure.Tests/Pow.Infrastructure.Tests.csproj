@@ -21,8 +21,8 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\..\Application\Pow.Domain\Pow.Domain.csproj" />
-    <ProjectReference Include="..\..\Infrastructure\Pow.Persistance\Pow.Infrastructure.csproj" />
+    <ProjectReference Include="..\Pow.Domain\Pow.Domain.csproj" />
+    <ProjectReference Include="..\Pow.Infrastructure\Pow.Infrastructure.csproj" />
   </ItemGroup>
 
 </Project>

@@ -2,7 +2,7 @@ using FluentMigrator.Runner;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
-using Pow.Persistance.Migrations;
+using Pow.Infrastructure.Migrations;
 using Pow.WebApi.Extensions;
 using Pow.WebApi.Services;
 using System;

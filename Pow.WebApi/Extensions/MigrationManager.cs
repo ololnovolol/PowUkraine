@@ -1,7 +1,7 @@
 ﻿using FluentMigrator.Runner;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
-using Pow.Persistance;
+using Pow.Infrastructure;
 
 namespace Pow.WebApi.Extensions
 {
