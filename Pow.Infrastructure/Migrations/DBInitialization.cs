@@ -1,7 +1,7 @@
 ﻿using FluentMigrator;
 
 
-namespace Pow.Persistance.Migrations
+namespace Pow.Infrastructure.Migrations
 {
     [Migration(20220911200000)]
     public class DBInitialization : Migration

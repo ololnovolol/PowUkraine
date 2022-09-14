@@ -1,8 +1,8 @@
 ﻿using Dapper;
-using Pow.Persistance.Context;
+using Pow.Infrastructure.Context;
 using System.Linq;
 
-namespace Pow.Persistance
+namespace Pow.Infrastructure
 {
     public class Database
     {

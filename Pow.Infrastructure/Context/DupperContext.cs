@@ -3,7 +3,7 @@ using Microsoft.Extensions.Configuration;
 using System.Data;
 
 
-namespace Pow.Persistance.Context
+namespace Pow.Infrastructure.Context
 {
     public class DapperContext
     {
