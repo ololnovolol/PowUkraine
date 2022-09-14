@@ -1,5 +1,6 @@
 ﻿using System;
 using FluentMigrator.Runner;
+using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Pow.Persistance.Migrations;
 
@@ -22,7 +23,7 @@ namespace Pow.Persistance.Runner
                 .AddFluentMigratorCore()
                 .ConfigureRunner(rb => rb
                     .AddSqlServer()
-                    .WithGlobalConnectionString("Server=(localdb)\\MSSQLLocalDB;Database=IdentityServer;Trusted_Connection=True")
+                    .WithGlobalConnectionString(GetConnectionString())
                     .ScanIn(typeof(DBInitialization).Assembly).For.Migrations())
                 .AddLogging(lb => lb.AddFluentMigratorConsole())
                 .BuildServiceProvider(false);
@@ -32,6 +33,14 @@ namespace Pow.Persistance.Runner
         {
             var runner = serviceProvider.GetRequiredService<IMigrationRunner>();
             runner.MigrateUp();
+        }
+
+        private static string GetConnectionString()
+        {
+            var config = new ConfigurationBuilder()
+                .AddJsonFile("appsettings.json")
+                .Build();
+            return config.GetConnectionString("DefaultConnection");
         }
     }
 }
