@@ -34,6 +34,7 @@ namespace Pow.WebApi
 
             services.AddInfrastructure();
 
+            services.AddValidators();
         }
 
         public void Configure(IApplicationBuilder app, IWebHostEnvironment env)
