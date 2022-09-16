@@ -1,12 +1,10 @@
 ﻿using Pow.Domain.Base;
 using System;
 
-
 namespace Pow.Domain
 {
     public class Mark : BaseModel
     {
-
         public bool Disabled { get; init; }
 
         public string Country { get; init; }

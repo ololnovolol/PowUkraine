@@ -17,5 +17,4 @@ namespace Pow.Domain
 
         public Guid? UserId { get; set; }
     }
-
 }
