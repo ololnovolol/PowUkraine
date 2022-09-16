@@ -117,7 +117,7 @@ namespace IdentityServer.Controllers
             await _signInManager.SignOutAsync();
             var logoutRequest = await _interactionService.GetLogoutContextAsync(logoutId);
 
-            return Redirect(logoutRequest.SignOutIFrameUrl);
+            return Redirect(logoutRequest.PostLogoutRedirectUri);
         }
 
 

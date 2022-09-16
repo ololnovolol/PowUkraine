@@ -24,40 +24,14 @@ namespace Pow.WebApi
 
         public void ConfigureServices(IServiceCollection services)
         {
-            services.AddSingleton<DapperContext>();
-            services.AddSingleton<Database>();
-            services.AddLogging(c => c.AddFluentMigratorConsole())
-                 .AddFluentMigratorCore()
-                 .ConfigureRunner(c => c.AddSqlServer()
-                 .WithGlobalConnectionString(Configuration.GetConnectionString("DbConnection"))
-                 .ScanIn(typeof(DBInitialization).Assembly).For.Migrations());
-
+            services.AddCustomDapperConfiguration(Configuration);
 
             services.AddControllers();
 
-            services.AddCors(options =>
-            {
-                options.AddPolicy("AllowAll", policy =>
-                {
-                    policy.AllowAnyHeader();
-                    policy.AllowAnyMethod();
-                    policy.AllowAnyOrigin();
-                    //policy.WithOrigins("https://localhost:3000/");
-                });
-            });
+            services.AddCustomCorsConfiguration();
 
-            services.AddAuthentication(config =>
-                {
-                    config.DefaultAuthenticateScheme =
-                        JwtBearerDefaults.AuthenticationScheme;
-                    config.DefaultChallengeScheme = JwtBearerDefaults.AuthenticationScheme;
-                })
-                .AddJwtBearer("Bearer", options =>
-                {
-                    options.Authority = "https://localhost:44316/";
-                    options.Audience = "PowWebApi";
-                    options.RequireHttpsMetadata = false;
-                });
+            services.AddCustomAuthConfiguration();
+
             services.AddInfrastructure();
 
         }
