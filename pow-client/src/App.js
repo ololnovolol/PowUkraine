@@ -1,13 +1,13 @@
 import React, { useEffect } from 'react';
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom'
-import SigninOidc from './pages/signin-oidc'
-import SignoutOidc from './pages/signout-oidc'
+import SigninOidc from './pages/auth/signin-oidc'
+import SignoutOidc from './pages/auth/signout-oidc'
 import Home from './pages/home'
 import Login from './pages/login'
 import { Provider } from 'react-redux';
 import store from './store';
 import userManager, { loadUserFromStorage } from './services/userService'
-import AuthProvider from './utils/authProvider'
+import AuthProvider from './providers/authProvider'
 import PrivateRoute from './utils/protectedRoute'
 
 function App() {

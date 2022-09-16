@@ -3,7 +3,8 @@
 }
 @model IdentityServer.Models.LoginViewModel
 
-<link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
 
 <section class="vh-100">
     <div class="mask d-flex align-items-center h-100 gradient-custom-3">
@@ -42,7 +43,27 @@
                                            style="background-color: #88A87D; color: #FAAA0A" type="button">Register</a>
                                     </div>
                                 </div>
+                          
                             </form>
+
+                            <div class="row d-flex justify-content-center align-items-center h-100">
+                                <form asp-controller="Authorization" asp-action="ExternalLogin"
+                                      asp-route-returnUrl="@Model.ReturnUrl" method="post">
+                                    @foreach (var provider in Model.ExternalProviders)
+                                    {
+      
+                                        <div class="container">
+                                            <div class="row">
+                                                <button href="#" type="submit" style="border-radius: 4px;" value="@provider.Name" name="provider" class="fa fa-google"></button>
+                                                <button href="#" type="submit" style="border-radius: 4px;" value="@provider.Name" name="provider" class="fa fa-facebook"></button>
+                                                <button href="#" type="submit" style="border-radius: 4px;" value="@provider.Name" name="provider" class="fa fa-linkedin"></button>
+                                            </div>
+                                        </div>
+                                    }
+
+                                </form>
+                            </div>
+
                         </div>
                     </div>
                 </div>

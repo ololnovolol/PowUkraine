@@ -37,9 +37,11 @@ namespace IdentityServer
                 {
                     ClientId = "pow-web-app",
                     ClientName = "Pow Web",
+                    ClientSecrets = { new Secret("palyanitsa_=)".ToSha256())},
                     AllowedGrantTypes = GrantTypes.Code,
                     RequireClientSecret = false, // todo set code
                     RequirePkce = true,
+                    RequireConsent = false,
                     RedirectUris = {"http://localhost:3000/signin-oidc"}, // todo setup with frontend
                     AllowedCorsOrigins =
                     {
@@ -47,7 +49,7 @@ namespace IdentityServer
                     },
                     PostLogoutRedirectUris =
                     {
-                        "http://localhost:3000/signout-oidc" // todo setup with front end
+                        "http://localhost:3000/signout-callback-oidc" // todo setup with front end
                     },
                     AllowedScopes =
                     {
@@ -56,7 +58,9 @@ namespace IdentityServer
                         "PowWebApi"
 
                     },
-                    AllowAccessTokensViaBrowser = true
+                    AllowOfflineAccess = true,
+                    AllowAccessTokensViaBrowser = true,
+                    AccessTokenLifetime = 1
                 }
             };
 

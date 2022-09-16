@@ -68,7 +68,7 @@ namespace Pow.WebApi
             {
                 app.UseDeveloperExceptionPage();
             }
-     
+
             app.UseCustomExceptionHandler();
             app.UseRouting();
             app.UseHttpsRedirection();

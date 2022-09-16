@@ -1,7 +1,9 @@
 ﻿@model IdentityServer.Models.RegisterViewModel
 @{
-    ViewData["Title"] = "Registration";
+    ViewData["Title"] = "ExternalRegister";
 }
+
+<link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
 
 <section class="vh-100">
     <div class="mask d-flex align-items-center h-100 gradient-custom-3">
@@ -11,39 +13,17 @@
                     <div class="card" style="border-radius: 15px;">
                         <div class="card-body p-5">
                             <h2 class="text-uppercase text-center mb-5">Registration</h2>
-                            <form asp-action="Register" asp-controller="Authorization" method="post">
+                            <form asp-action="ExternalRegister" asp-controller="Authorization" method="post">
 
                                 <div asp-validation-summary="All" class="text-danger"></div>
 
                                 <input type="hidden" asp-for="ReturnUrl"/>
+                                <input type="hidden" asp-for="Email" />
+
                                 <div class="form-outline mb-4">
                                     <label asp-for="UserName" class="form-label">Login</label>
                                     <input asp-for="UserName" class="form-control  form-control-lg" placeholder="Login"/>
                                     <span asp-validation-for="UserName" class="text-danger"></span>
-                                </div>
-
-                                <div class="form-outline mb-4">
-                                    <label asp-for="Email" class="form-label"></label>
-                                    <input asp-for="Email" class="form-control  form-control-lg" placeholder="Email"/>
-                                    <span asp-validation-for="Email" class="text-danger"></span>
-                                </div>
-
-                                <div class="form-outline mb-4">
-                                    <label asp-for="Password" class="form-label">Password</label>
-                                    <input asp-for="Password" class="form-control  form-control-lg" placeholder="Password"/>
-                                    <span asp-validation-for="Password" class="text-danger"></span>
-                                </div>
-
-                                <div class="form-outline mb-4">
-                                    <label asp-for="ConfirmPassword" class="form-label"></label>
-                                    <input asp-for="ConfirmPassword" class="form-control  form-control-lg" placeholder="Confirm password"/>
-                                    <span asp-validation-for="ConfirmPassword" class="text-danger"></span>
-                                </div>
-
-                                <div class="form-outline mb-4">
-                                    <label asp-for="BirthDay" class="form-label"></label>
-                                    <input asp-for="BirthDay" class="form-control  form-control-lg" placeholder="Datetime"/>
-                                    <span asp-validation-for="BirthDay" class="text-danger"></span>
                                 </div>
 
                                 <div class="form-outline mb-5">
@@ -71,6 +51,6 @@
     </div>
 </section>
 
-<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+@*<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.17.0/jquery.validate.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validation-unobtrusive/3.2.11/jquery.validate.unobtrusive.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validation-unobtrusive/3.2.11/jquery.validate.unobtrusive.min.js"></script>*@

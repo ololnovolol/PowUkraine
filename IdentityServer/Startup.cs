@@ -1,13 +1,11 @@
 using IdentityServer.Data;
-using IdentityServer.Models;
+using IdentityServer.Extentions;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
-using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
-using Microsoft.Extensions.Logging;
 
 namespace IdentityServer
 {
@@ -22,38 +20,17 @@ namespace IdentityServer
 
         public void ConfigureServices(IServiceCollection services)
         {
-            var connectionString = AppConfiguration.GetValue<string>("DbConnection");
 
             services.AddDbContext<AuthorizationDbContext>(options =>
             {
-                options.UseSqlServer(connectionString);
+                options.UseSqlServer(AppConfiguration.GetValue<string>("DbConnection"));
             });
 
-            // todo make stronger
-            services.AddIdentity<AppUser, IdentityRole>(config =>
-            {
-                config.Password.RequireUppercase = true;
-                config.Password.RequireDigit = true;
-                config.Password.RequireLowercase = true;
-                config.Password.RequiredLength = 8;
-            })
-                .AddEntityFrameworkStores<AuthorizationDbContext>()
-                .AddDefaultTokenProviders();
+            services.AddCustomIdentityConfigurations();
 
-            services.AddIdentityServer()
-                .AddAspNetIdentity<AppUser>()
-                .AddInMemoryApiResources(Configuration.ApiResources)
-                .AddInMemoryIdentityResources(Configuration.IdentityResources)
-                .AddInMemoryApiScopes(Configuration.ApiScopes)
-                .AddInMemoryClients(Configuration.Clients)
-                .AddDeveloperSigningCredential();
+            services.AddCustomCookiesConfigurations();
 
-            services.ConfigureApplicationCookie(config =>
-            {
-                config.Cookie.Name = "IdentityServer.Cookie";
-                config.LoginPath = "/Authorization/Login";
-                config.LogoutPath = "/Authorization/Logout";
-            });
+            services.AddCustomAuthenticationConfigurations(AppConfiguration);
 
             services.AddControllersWithViews();
         }

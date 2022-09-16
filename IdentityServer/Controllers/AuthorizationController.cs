@@ -3,6 +3,7 @@ using IdentityServer4.Services;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
 using System;
+using System.Security.Claims;
 using System.Threading.Tasks;
 
 namespace IdentityServer.Controllers
@@ -24,13 +25,19 @@ namespace IdentityServer.Controllers
 
         // authorization/login
         [HttpGet]
-        public IActionResult Login(string returnUrl)
+        public async Task<IActionResult> Login(string returnUrl)
         {
-            return View(new LoginViewModel { ReturnUrl = returnUrl });
+            var externalProviders = await _signInManager.GetExternalAuthenticationSchemesAsync();
+
+            return View(new LoginViewModel
+            {
+                ReturnUrl = returnUrl,
+                ExternalProviders = externalProviders
+            });
         }
 
         [HttpPost]
-        //[ValidateAntiForgeryToken]
+        [ValidateAntiForgeryToken]
         public async Task<IActionResult> Login(LoginViewModel viewModel)
         {
             if (!ModelState.IsValid)
@@ -45,7 +52,7 @@ namespace IdentityServer.Controllers
                 return View(viewModel);
             }
 
-            var result = await _signInManager.PasswordSignInAsync(viewModel.Email,
+            var result = await _signInManager.PasswordSignInAsync(user.UserName,
                 viewModel.Password, viewModel.RememberMe, false);
 
             if (result.Succeeded)
@@ -75,7 +82,7 @@ namespace IdentityServer.Controllers
                 return View(viewModel);
             }
 
-            if (viewModel.agreeAllStatements)
+            if (viewModel.AreeAllStatements)
             {
                 ModelState.AddModelError(String.Empty, "You must agree all statements");
                 return View(viewModel);
@@ -106,9 +113,84 @@ namespace IdentityServer.Controllers
         //[ValidateAntiForgeryToken]
         public async Task<IActionResult> Logout(string logoutId)
         {
+
             await _signInManager.SignOutAsync();
             var logoutRequest = await _interactionService.GetLogoutContextAsync(logoutId);
-            return Redirect(logoutRequest.PostLogoutRedirectUri);
+
+            return Redirect(logoutRequest.SignOutIFrameUrl);
+        }
+
+
+        [HttpPost]
+        public IActionResult ExternalLogin(string provider, string returnUrl)
+        {
+            var redirectUri = Url.Action(nameof(ExteranlLoginCallback), "Authorization", new { returnUrl });
+            var properties = _signInManager.ConfigureExternalAuthenticationProperties(provider, redirectUri);
+            return Challenge(properties, provider);
+        }
+
+        [HttpGet]
+        public async Task<IActionResult> ExteranlLoginCallback(string returnUrl)
+        {
+            var info = await _signInManager.GetExternalLoginInfoAsync();
+            if (info == null)
+            {
+                return RedirectToAction("Login");
+            }
+
+            var result = await _signInManager
+                .ExternalLoginSignInAsync(info.LoginProvider, info.ProviderKey, false);
+
+            if (result.Succeeded)
+            {
+                return Redirect(returnUrl);
+            }
+
+            return View("ExternalRegister", new RegisterViewModel
+            {
+                UserName = info.Principal.FindFirstValue(ClaimTypes.Name),
+                Email = info.Principal.FindFirst(ClaimTypes.Email).Value,
+                ReturnUrl = returnUrl
+            });
+        }
+
+        [HttpPost]
+        public async Task<IActionResult> ExternalRegister(RegisterViewModel viewModel)
+        {
+
+            if (viewModel.AreeAllStatements)
+            {
+                ModelState.AddModelError(String.Empty, "You must agree all statements");
+                return View(viewModel);
+            }
+
+            var info = await _signInManager.GetExternalLoginInfoAsync();
+            if (info == null)
+            {
+                return RedirectToAction("Login");
+            }
+
+            var user = new AppUser()
+            {
+                UserName = viewModel.UserName,
+                Email = viewModel.Email,
+            };
+
+            var result = await _userManager.CreateAsync(user);
+            if (result.Succeeded)
+            {
+                result = await _userManager.AddLoginAsync(user, info);
+                await _signInManager.SignInAsync(user, false);
+                return Redirect(viewModel.ReturnUrl);
+            }
+
+            foreach (var error in result.Errors)
+            {
+                ModelState.AddModelError(error.Code, error.Description);
+            }
+            return View(viewModel);
+
         }
     }
 }
+

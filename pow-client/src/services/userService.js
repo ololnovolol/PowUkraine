@@ -1,16 +1,8 @@
 import { UserManager } from 'oidc-client';
 import { storeUserError, storeUser } from '../actions/authActions'
+import { IDENTITY_CONFIG, METADATA_OIDC } from '../utils/Constants/authConstants'
 
-const config = {
-  authority: "https://localhost:44316/",
-  client_id: "pow-web-app",
-  redirect_uri: "http://localhost:3000/signin-oidc",
-  response_type: "code",
-  scope: "openid profile PowWebApi",
-  post_logout_redirect_uri: "http://localhost:3000/signout-oidc",
-};
-
-const userManager = new UserManager(config)
+const userManager = new UserManager(IDENTITY_CONFIG)
 
 export async function loadUserFromStorage(store) {
   try {

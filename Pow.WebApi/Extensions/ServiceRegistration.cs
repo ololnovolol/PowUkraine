@@ -1,6 +1,6 @@
 ﻿using Microsoft.Extensions.DependencyInjection;
-using Pow.Infrastructure.Repositories.Interfaces;
 using Pow.Infrastructure.Repositories;
+using Pow.Infrastructure.Repositories.Interfaces;
 
 namespace Pow.WebApi.Extensions
 {

@@ -1,0 +1,1200 @@
+2022-09-16 00:00:33.896 +03:00 [INF] Starting host...
+2022-09-16 00:00:35.876 +03:00 [INF] Starting IdentityServer4 version 4.1.2+997a6cdd643e46cd5762b710c4ddc43574cbec2e
+2022-09-16 00:00:35.883 +03:00 [INF] You are using the in-memory version of the persisted grant store. This will store consent decisions, authorization codes, refresh and reference tokens in memory only. If you are using any of those features in production, you want to switch to a different store implementation.
+2022-09-16 00:00:35.886 +03:00 [INF] Using the default authentication scheme Identity.Application for IdentityServer
+2022-09-16 00:00:35.886 +03:00 [DBG] Using Identity.Application as default ASP.NET Core scheme for authentication
+2022-09-16 00:00:35.886 +03:00 [DBG] Using Identity.External as default ASP.NET Core scheme for sign-in
+2022-09-16 00:00:35.886 +03:00 [DBG] Using Identity.External as default ASP.NET Core scheme for sign-out
+2022-09-16 00:00:35.886 +03:00 [DBG] Using Identity.Application as default ASP.NET Core scheme for challenge
+2022-09-16 00:00:35.887 +03:00 [DBG] Using Identity.Application as default ASP.NET Core scheme for forbid
+2022-09-16 00:00:35.957 +03:00 [INF] Application started. Press Ctrl+C to shut down.
+2022-09-16 00:00:35.957 +03:00 [INF] Hosting environment: Development
+2022-09-16 00:00:35.957 +03:00 [INF] Content root path: D:\programming\dotNet\OlegLearning\Sigma_Trainee\PowUkraine\IdentityServer
+2022-09-16 00:00:36.055 +03:00 [DBG] Login Url: /Authorization/Login
+2022-09-16 00:00:36.056 +03:00 [DBG] Login Return Url Parameter: ReturnUrl
+2022-09-16 00:00:36.056 +03:00 [DBG] Logout Url: /Authorization/Logout
+2022-09-16 00:00:36.056 +03:00 [DBG] ConsentUrl Url: /consent
+2022-09-16 00:00:36.056 +03:00 [DBG] Consent Return Url Parameter: returnUrl
+2022-09-16 00:00:36.056 +03:00 [DBG] Error Url: /home/error
+2022-09-16 00:00:36.056 +03:00 [DBG] Error Id Parameter: errorId
+2022-09-16 00:00:46.370 +03:00 [INF] AuthenticationScheme: Google was challenged.
+2022-09-16 00:01:37.123 +03:00 [INF] Starting host...
+2022-09-16 00:01:38.991 +03:00 [INF] Starting IdentityServer4 version 4.1.2+997a6cdd643e46cd5762b710c4ddc43574cbec2e
+2022-09-16 00:01:38.998 +03:00 [INF] You are using the in-memory version of the persisted grant store. This will store consent decisions, authorization codes, refresh and reference tokens in memory only. If you are using any of those features in production, you want to switch to a different store implementation.
+2022-09-16 00:01:39.000 +03:00 [INF] Using the default authentication scheme Identity.Application for IdentityServer
+2022-09-16 00:01:39.000 +03:00 [DBG] Using Identity.Application as default ASP.NET Core scheme for authentication
+2022-09-16 00:01:39.000 +03:00 [DBG] Using Identity.External as default ASP.NET Core scheme for sign-in
+2022-09-16 00:01:39.000 +03:00 [DBG] Using Identity.External as default ASP.NET Core scheme for sign-out
+2022-09-16 00:01:39.000 +03:00 [DBG] Using Identity.Application as default ASP.NET Core scheme for challenge
+2022-09-16 00:01:39.000 +03:00 [DBG] Using Identity.Application as default ASP.NET Core scheme for forbid
+2022-09-16 00:01:39.060 +03:00 [INF] Application started. Press Ctrl+C to shut down.
+2022-09-16 00:01:39.061 +03:00 [INF] Hosting environment: Development
+2022-09-16 00:01:39.061 +03:00 [INF] Content root path: D:\programming\dotNet\OlegLearning\Sigma_Trainee\PowUkraine\IdentityServer
+2022-09-16 00:01:39.137 +03:00 [DBG] Login Url: /Authorization/Login
+2022-09-16 00:01:39.138 +03:00 [DBG] Login Return Url Parameter: ReturnUrl
+2022-09-16 00:01:39.138 +03:00 [DBG] Logout Url: /Authorization/Logout
+2022-09-16 00:01:39.138 +03:00 [DBG] ConsentUrl Url: /consent
+2022-09-16 00:01:39.138 +03:00 [DBG] Consent Return Url Parameter: returnUrl
+2022-09-16 00:01:39.138 +03:00 [DBG] Error Url: /home/error
+2022-09-16 00:01:39.138 +03:00 [DBG] Error Id Parameter: errorId
+2022-09-16 00:04:30.820 +03:00 [INF] Starting host...
+2022-09-16 00:04:32.571 +03:00 [INF] Starting IdentityServer4 version 4.1.2+997a6cdd643e46cd5762b710c4ddc43574cbec2e
+2022-09-16 00:04:32.577 +03:00 [INF] You are using the in-memory version of the persisted grant store. This will store consent decisions, authorization codes, refresh and reference tokens in memory only. If you are using any of those features in production, you want to switch to a different store implementation.
+2022-09-16 00:04:32.579 +03:00 [INF] Using the default authentication scheme Identity.Application for IdentityServer
+2022-09-16 00:04:32.579 +03:00 [DBG] Using Identity.Application as default ASP.NET Core scheme for authentication
+2022-09-16 00:04:32.579 +03:00 [DBG] Using Identity.External as default ASP.NET Core scheme for sign-in
+2022-09-16 00:04:32.579 +03:00 [DBG] Using Identity.External as default ASP.NET Core scheme for sign-out
+2022-09-16 00:04:32.579 +03:00 [DBG] Using Identity.Application as default ASP.NET Core scheme for challenge
+2022-09-16 00:04:32.579 +03:00 [DBG] Using Identity.Application as default ASP.NET Core scheme for forbid
+2022-09-16 00:04:32.635 +03:00 [INF] Application started. Press Ctrl+C to shut down.
+2022-09-16 00:04:32.635 +03:00 [INF] Hosting environment: Development
+2022-09-16 00:04:32.635 +03:00 [INF] Content root path: D:\programming\dotNet\OlegLearning\Sigma_Trainee\PowUkraine\IdentityServer
+2022-09-16 00:04:32.707 +03:00 [DBG] Login Url: /Authorization/Login
+2022-09-16 00:04:32.708 +03:00 [DBG] Login Return Url Parameter: ReturnUrl
+2022-09-16 00:04:32.708 +03:00 [DBG] Logout Url: /Authorization/Logout
+2022-09-16 00:04:32.708 +03:00 [DBG] ConsentUrl Url: /consent
+2022-09-16 00:04:32.708 +03:00 [DBG] Consent Return Url Parameter: returnUrl
+2022-09-16 00:04:32.708 +03:00 [DBG] Error Url: /home/error
+2022-09-16 00:04:32.708 +03:00 [DBG] Error Id Parameter: errorId
+2022-09-16 00:22:30.615 +03:00 [INF] Starting host...
+2022-09-16 00:22:32.478 +03:00 [INF] Starting IdentityServer4 version 4.1.2+997a6cdd643e46cd5762b710c4ddc43574cbec2e
+2022-09-16 00:22:32.485 +03:00 [INF] You are using the in-memory version of the persisted grant store. This will store consent decisions, authorization codes, refresh and reference tokens in memory only. If you are using any of those features in production, you want to switch to a different store implementation.
+2022-09-16 00:22:32.487 +03:00 [INF] Using the default authentication scheme Identity.Application for IdentityServer
+2022-09-16 00:22:32.487 +03:00 [DBG] Using Identity.Application as default ASP.NET Core scheme for authentication
+2022-09-16 00:22:32.487 +03:00 [DBG] Using Identity.External as default ASP.NET Core scheme for sign-in
+2022-09-16 00:22:32.487 +03:00 [DBG] Using Identity.External as default ASP.NET Core scheme for sign-out
+2022-09-16 00:22:32.487 +03:00 [DBG] Using Identity.Application as default ASP.NET Core scheme for challenge
+2022-09-16 00:22:32.487 +03:00 [DBG] Using Identity.Application as default ASP.NET Core scheme for forbid
+2022-09-16 00:22:32.552 +03:00 [INF] Application started. Press Ctrl+C to shut down.
+2022-09-16 00:22:32.552 +03:00 [INF] Hosting environment: Development
+2022-09-16 00:22:32.552 +03:00 [INF] Content root path: D:\programming\dotNet\OlegLearning\Sigma_Trainee\PowUkraine\IdentityServer
+2022-09-16 00:22:32.635 +03:00 [DBG] Login Url: /Authorization/Login
+2022-09-16 00:22:32.637 +03:00 [DBG] Login Return Url Parameter: ReturnUrl
+2022-09-16 00:22:32.637 +03:00 [DBG] Logout Url: /Authorization/Logout
+2022-09-16 00:22:32.637 +03:00 [DBG] ConsentUrl Url: /consent
+2022-09-16 00:22:32.637 +03:00 [DBG] Consent Return Url Parameter: returnUrl
+2022-09-16 00:22:32.637 +03:00 [DBG] Error Url: /home/error
+2022-09-16 00:22:32.637 +03:00 [DBG] Error Id Parameter: errorId
+2022-09-16 00:23:34.934 +03:00 [INF] Starting host...
+2022-09-16 00:23:36.809 +03:00 [INF] Starting IdentityServer4 version 4.1.2+997a6cdd643e46cd5762b710c4ddc43574cbec2e
+2022-09-16 00:23:36.815 +03:00 [INF] You are using the in-memory version of the persisted grant store. This will store consent decisions, authorization codes, refresh and reference tokens in memory only. If you are using any of those features in production, you want to switch to a different store implementation.
+2022-09-16 00:23:36.817 +03:00 [INF] Using the default authentication scheme Identity.Application for IdentityServer
+2022-09-16 00:23:36.817 +03:00 [DBG] Using Identity.Application as default ASP.NET Core scheme for authentication
+2022-09-16 00:23:36.817 +03:00 [DBG] Using Identity.External as default ASP.NET Core scheme for sign-in
+2022-09-16 00:23:36.817 +03:00 [DBG] Using Identity.External as default ASP.NET Core scheme for sign-out
+2022-09-16 00:23:36.817 +03:00 [DBG] Using Identity.Application as default ASP.NET Core scheme for challenge
+2022-09-16 00:23:36.817 +03:00 [DBG] Using Identity.Application as default ASP.NET Core scheme for forbid
+2022-09-16 00:23:36.876 +03:00 [INF] Application started. Press Ctrl+C to shut down.
+2022-09-16 00:23:36.877 +03:00 [INF] Hosting environment: Development
+2022-09-16 00:23:36.877 +03:00 [INF] Content root path: D:\programming\dotNet\OlegLearning\Sigma_Trainee\PowUkraine\IdentityServer
+2022-09-16 00:23:36.951 +03:00 [DBG] Login Url: /Authorization/Login
+2022-09-16 00:23:36.952 +03:00 [DBG] Login Return Url Parameter: ReturnUrl
+2022-09-16 00:23:36.952 +03:00 [DBG] Logout Url: /Authorization/Logout
+2022-09-16 00:23:36.952 +03:00 [DBG] ConsentUrl Url: /consent
+2022-09-16 00:23:36.952 +03:00 [DBG] Consent Return Url Parameter: returnUrl
+2022-09-16 00:23:36.952 +03:00 [DBG] Error Url: /home/error
+2022-09-16 00:23:36.952 +03:00 [DBG] Error Id Parameter: errorId
+2022-09-16 00:24:04.081 +03:00 [INF] Starting host...
+2022-09-16 00:24:05.890 +03:00 [INF] Starting IdentityServer4 version 4.1.2+997a6cdd643e46cd5762b710c4ddc43574cbec2e
+2022-09-16 00:24:05.897 +03:00 [INF] You are using the in-memory version of the persisted grant store. This will store consent decisions, authorization codes, refresh and reference tokens in memory only. If you are using any of those features in production, you want to switch to a different store implementation.
+2022-09-16 00:24:05.898 +03:00 [INF] Using the default authentication scheme Identity.Application for IdentityServer
+2022-09-16 00:24:05.898 +03:00 [DBG] Using Identity.Application as default ASP.NET Core scheme for authentication
+2022-09-16 00:24:05.898 +03:00 [DBG] Using Identity.External as default ASP.NET Core scheme for sign-in
+2022-09-16 00:24:05.898 +03:00 [DBG] Using Identity.External as default ASP.NET Core scheme for sign-out
+2022-09-16 00:24:05.898 +03:00 [DBG] Using Identity.Application as default ASP.NET Core scheme for challenge
+2022-09-16 00:24:05.898 +03:00 [DBG] Using Identity.Application as default ASP.NET Core scheme for forbid
+2022-09-16 00:24:05.959 +03:00 [INF] Application started. Press Ctrl+C to shut down.
+2022-09-16 00:24:05.959 +03:00 [INF] Hosting environment: Development
+2022-09-16 00:24:05.959 +03:00 [INF] Content root path: D:\programming\dotNet\OlegLearning\Sigma_Trainee\PowUkraine\IdentityServer
+2022-09-16 00:24:06.034 +03:00 [DBG] Login Url: /Authorization/Login
+2022-09-16 00:24:06.035 +03:00 [DBG] Login Return Url Parameter: ReturnUrl
+2022-09-16 00:24:06.035 +03:00 [DBG] Logout Url: /Authorization/Logout
+2022-09-16 00:24:06.035 +03:00 [DBG] ConsentUrl Url: /consent
+2022-09-16 00:24:06.035 +03:00 [DBG] Consent Return Url Parameter: returnUrl
+2022-09-16 00:24:06.036 +03:00 [DBG] Error Url: /home/error
+2022-09-16 00:24:06.036 +03:00 [DBG] Error Id Parameter: errorId
+2022-09-16 00:36:43.999 +03:00 [INF] Starting host...
+2022-09-16 00:36:46.020 +03:00 [INF] Starting IdentityServer4 version 4.1.2+997a6cdd643e46cd5762b710c4ddc43574cbec2e
+2022-09-16 00:36:46.027 +03:00 [INF] You are using the in-memory version of the persisted grant store. This will store consent decisions, authorization codes, refresh and reference tokens in memory only. If you are using any of those features in production, you want to switch to a different store implementation.
+2022-09-16 00:36:46.030 +03:00 [INF] Using the default authentication scheme Identity.Application for IdentityServer
+2022-09-16 00:36:46.030 +03:00 [DBG] Using Identity.Application as default ASP.NET Core scheme for authentication
+2022-09-16 00:36:46.030 +03:00 [DBG] Using Identity.External as default ASP.NET Core scheme for sign-in
+2022-09-16 00:36:46.030 +03:00 [DBG] Using Identity.External as default ASP.NET Core scheme for sign-out
+2022-09-16 00:36:46.030 +03:00 [DBG] Using Identity.Application as default ASP.NET Core scheme for challenge
+2022-09-16 00:36:46.030 +03:00 [DBG] Using Identity.Application as default ASP.NET Core scheme for forbid
+2022-09-16 00:36:46.093 +03:00 [INF] Application started. Press Ctrl+C to shut down.
+2022-09-16 00:36:46.093 +03:00 [INF] Hosting environment: Development
+2022-09-16 00:36:46.093 +03:00 [INF] Content root path: D:\programming\dotNet\OlegLearning\Sigma_Trainee\PowUkraine\IdentityServer
+2022-09-16 00:36:46.181 +03:00 [DBG] Login Url: /Authorization/Login
+2022-09-16 00:36:46.183 +03:00 [DBG] Login Return Url Parameter: ReturnUrl
+2022-09-16 00:36:46.183 +03:00 [DBG] Logout Url: /Authorization/Logout
+2022-09-16 00:36:46.183 +03:00 [DBG] ConsentUrl Url: /consent
+2022-09-16 00:36:46.183 +03:00 [DBG] Consent Return Url Parameter: returnUrl
+2022-09-16 00:36:46.183 +03:00 [DBG] Error Url: /home/error
+2022-09-16 00:36:46.183 +03:00 [DBG] Error Id Parameter: errorId
+2022-09-16 00:37:44.803 +03:00 [INF] Starting host...
+2022-09-16 00:37:46.672 +03:00 [INF] Starting IdentityServer4 version 4.1.2+997a6cdd643e46cd5762b710c4ddc43574cbec2e
+2022-09-16 00:37:46.679 +03:00 [INF] You are using the in-memory version of the persisted grant store. This will store consent decisions, authorization codes, refresh and reference tokens in memory only. If you are using any of those features in production, you want to switch to a different store implementation.
+2022-09-16 00:37:46.681 +03:00 [INF] Using the default authentication scheme Identity.Application for IdentityServer
+2022-09-16 00:37:46.681 +03:00 [DBG] Using Identity.Application as default ASP.NET Core scheme for authentication
+2022-09-16 00:37:46.681 +03:00 [DBG] Using Identity.External as default ASP.NET Core scheme for sign-in
+2022-09-16 00:37:46.681 +03:00 [DBG] Using Identity.External as default ASP.NET Core scheme for sign-out
+2022-09-16 00:37:46.681 +03:00 [DBG] Using Identity.Application as default ASP.NET Core scheme for challenge
+2022-09-16 00:37:46.681 +03:00 [DBG] Using Identity.Application as default ASP.NET Core scheme for forbid
+2022-09-16 00:37:46.739 +03:00 [INF] Application started. Press Ctrl+C to shut down.
+2022-09-16 00:37:46.739 +03:00 [INF] Hosting environment: Development
+2022-09-16 00:37:46.739 +03:00 [INF] Content root path: D:\programming\dotNet\OlegLearning\Sigma_Trainee\PowUkraine\IdentityServer
+2022-09-16 00:37:46.814 +03:00 [DBG] Login Url: /Authorization/Login
+2022-09-16 00:37:46.815 +03:00 [DBG] Login Return Url Parameter: ReturnUrl
+2022-09-16 00:37:46.815 +03:00 [DBG] Logout Url: /Authorization/Logout
+2022-09-16 00:37:46.815 +03:00 [DBG] ConsentUrl Url: /consent
+2022-09-16 00:37:46.815 +03:00 [DBG] Consent Return Url Parameter: returnUrl
+2022-09-16 00:37:46.815 +03:00 [DBG] Error Url: /home/error
+2022-09-16 00:37:46.815 +03:00 [DBG] Error Id Parameter: errorId
+2022-09-16 00:39:40.000 +03:00 [INF] Starting host...
+2022-09-16 00:39:41.882 +03:00 [INF] Starting IdentityServer4 version 4.1.2+997a6cdd643e46cd5762b710c4ddc43574cbec2e
+2022-09-16 00:39:41.889 +03:00 [INF] You are using the in-memory version of the persisted grant store. This will store consent decisions, authorization codes, refresh and reference tokens in memory only. If you are using any of those features in production, you want to switch to a different store implementation.
+2022-09-16 00:39:41.891 +03:00 [INF] Using the default authentication scheme Identity.Application for IdentityServer
+2022-09-16 00:39:41.891 +03:00 [DBG] Using Identity.Application as default ASP.NET Core scheme for authentication
+2022-09-16 00:39:41.891 +03:00 [DBG] Using Identity.External as default ASP.NET Core scheme for sign-in
+2022-09-16 00:39:41.891 +03:00 [DBG] Using Identity.External as default ASP.NET Core scheme for sign-out
+2022-09-16 00:39:41.891 +03:00 [DBG] Using Identity.Application as default ASP.NET Core scheme for challenge
+2022-09-16 00:39:41.891 +03:00 [DBG] Using Identity.Application as default ASP.NET Core scheme for forbid
+2022-09-16 00:39:41.950 +03:00 [INF] Application started. Press Ctrl+C to shut down.
+2022-09-16 00:39:41.950 +03:00 [INF] Hosting environment: Development
+2022-09-16 00:39:41.950 +03:00 [INF] Content root path: D:\programming\dotNet\OlegLearning\Sigma_Trainee\PowUkraine\IdentityServer
+2022-09-16 00:39:42.031 +03:00 [DBG] Login Url: /Authorization/Login
+2022-09-16 00:39:42.033 +03:00 [DBG] Login Return Url Parameter: ReturnUrl
+2022-09-16 00:39:42.033 +03:00 [DBG] Logout Url: /Authorization/Logout
+2022-09-16 00:39:42.033 +03:00 [DBG] ConsentUrl Url: /consent
+2022-09-16 00:39:42.033 +03:00 [DBG] Consent Return Url Parameter: returnUrl
+2022-09-16 00:39:42.033 +03:00 [DBG] Error Url: /home/error
+2022-09-16 00:39:42.033 +03:00 [DBG] Error Id Parameter: errorId
+2022-09-16 00:40:39.781 +03:00 [INF] Starting host...
+2022-09-16 00:40:41.623 +03:00 [INF] Starting IdentityServer4 version 4.1.2+997a6cdd643e46cd5762b710c4ddc43574cbec2e
+2022-09-16 00:40:41.632 +03:00 [INF] You are using the in-memory version of the persisted grant store. This will store consent decisions, authorization codes, refresh and reference tokens in memory only. If you are using any of those features in production, you want to switch to a different store implementation.
+2022-09-16 00:40:41.634 +03:00 [INF] Using the default authentication scheme Identity.Application for IdentityServer
+2022-09-16 00:40:41.634 +03:00 [DBG] Using Identity.Application as default ASP.NET Core scheme for authentication
+2022-09-16 00:40:41.634 +03:00 [DBG] Using Identity.External as default ASP.NET Core scheme for sign-in
+2022-09-16 00:40:41.635 +03:00 [DBG] Using Identity.External as default ASP.NET Core scheme for sign-out
+2022-09-16 00:40:41.635 +03:00 [DBG] Using Identity.Application as default ASP.NET Core scheme for challenge
+2022-09-16 00:40:41.635 +03:00 [DBG] Using Identity.Application as default ASP.NET Core scheme for forbid
+2022-09-16 00:40:41.699 +03:00 [INF] Application started. Press Ctrl+C to shut down.
+2022-09-16 00:40:41.699 +03:00 [INF] Hosting environment: Development
+2022-09-16 00:40:41.699 +03:00 [INF] Content root path: D:\programming\dotNet\OlegLearning\Sigma_Trainee\PowUkraine\IdentityServer
+2022-09-16 00:40:41.771 +03:00 [DBG] Login Url: /Authorization/Login
+2022-09-16 00:40:41.772 +03:00 [DBG] Login Return Url Parameter: ReturnUrl
+2022-09-16 00:40:41.772 +03:00 [DBG] Logout Url: /Authorization/Logout
+2022-09-16 00:40:41.772 +03:00 [DBG] ConsentUrl Url: /consent
+2022-09-16 00:40:41.772 +03:00 [DBG] Consent Return Url Parameter: returnUrl
+2022-09-16 00:40:41.772 +03:00 [DBG] Error Url: /home/error
+2022-09-16 00:40:41.772 +03:00 [DBG] Error Id Parameter: errorId
+2022-09-16 00:42:23.489 +03:00 [INF] Starting host...
+2022-09-16 00:42:25.293 +03:00 [INF] Starting IdentityServer4 version 4.1.2+997a6cdd643e46cd5762b710c4ddc43574cbec2e
+2022-09-16 00:42:25.300 +03:00 [INF] You are using the in-memory version of the persisted grant store. This will store consent decisions, authorization codes, refresh and reference tokens in memory only. If you are using any of those features in production, you want to switch to a different store implementation.
+2022-09-16 00:42:25.302 +03:00 [INF] Using the default authentication scheme Identity.Application for IdentityServer
+2022-09-16 00:42:25.302 +03:00 [DBG] Using Identity.Application as default ASP.NET Core scheme for authentication
+2022-09-16 00:42:25.302 +03:00 [DBG] Using Identity.External as default ASP.NET Core scheme for sign-in
+2022-09-16 00:42:25.302 +03:00 [DBG] Using Identity.External as default ASP.NET Core scheme for sign-out
+2022-09-16 00:42:25.302 +03:00 [DBG] Using Identity.Application as default ASP.NET Core scheme for challenge
+2022-09-16 00:42:25.302 +03:00 [DBG] Using Identity.Application as default ASP.NET Core scheme for forbid
+2022-09-16 00:42:25.362 +03:00 [INF] Application started. Press Ctrl+C to shut down.
+2022-09-16 00:42:25.363 +03:00 [INF] Hosting environment: Development
+2022-09-16 00:42:25.363 +03:00 [INF] Content root path: D:\programming\dotNet\OlegLearning\Sigma_Trainee\PowUkraine\IdentityServer
+2022-09-16 00:42:25.434 +03:00 [DBG] Login Url: /Authorization/Login
+2022-09-16 00:42:25.435 +03:00 [DBG] Login Return Url Parameter: ReturnUrl
+2022-09-16 00:42:25.435 +03:00 [DBG] Logout Url: /Authorization/Logout
+2022-09-16 00:42:25.435 +03:00 [DBG] ConsentUrl Url: /consent
+2022-09-16 00:42:25.435 +03:00 [DBG] Consent Return Url Parameter: returnUrl
+2022-09-16 00:42:25.435 +03:00 [DBG] Error Url: /home/error
+2022-09-16 00:42:25.435 +03:00 [DBG] Error Id Parameter: errorId
+2022-09-16 01:19:14.287 +03:00 [INF] Starting host...
+2022-09-16 01:19:18.702 +03:00 [INF] Starting IdentityServer4 version 4.1.2+997a6cdd643e46cd5762b710c4ddc43574cbec2e
+2022-09-16 01:19:18.709 +03:00 [INF] You are using the in-memory version of the persisted grant store. This will store consent decisions, authorization codes, refresh and reference tokens in memory only. If you are using any of those features in production, you want to switch to a different store implementation.
+2022-09-16 01:19:18.711 +03:00 [INF] Using the default authentication scheme Identity.Application for IdentityServer
+2022-09-16 01:19:18.711 +03:00 [DBG] Using Identity.Application as default ASP.NET Core scheme for authentication
+2022-09-16 01:19:18.711 +03:00 [DBG] Using Identity.External as default ASP.NET Core scheme for sign-in
+2022-09-16 01:19:18.711 +03:00 [DBG] Using Identity.External as default ASP.NET Core scheme for sign-out
+2022-09-16 01:19:18.711 +03:00 [DBG] Using Identity.Application as default ASP.NET Core scheme for challenge
+2022-09-16 01:19:18.711 +03:00 [DBG] Using Identity.Application as default ASP.NET Core scheme for forbid
+2022-09-16 01:19:18.819 +03:00 [INF] Application started. Press Ctrl+C to shut down.
+2022-09-16 01:19:18.819 +03:00 [INF] Hosting environment: Development
+2022-09-16 01:19:18.819 +03:00 [INF] Content root path: D:\programming\dotNet\OlegLearning\Sigma_Trainee\PowUkraine\IdentityServer
+2022-09-16 01:19:18.943 +03:00 [DBG] Login Url: /Authorization/Login
+2022-09-16 01:19:18.944 +03:00 [DBG] Login Return Url Parameter: ReturnUrl
+2022-09-16 01:19:18.944 +03:00 [DBG] Logout Url: /Authorization/Logout
+2022-09-16 01:19:18.944 +03:00 [DBG] ConsentUrl Url: /consent
+2022-09-16 01:19:18.944 +03:00 [DBG] Consent Return Url Parameter: returnUrl
+2022-09-16 01:19:18.944 +03:00 [DBG] Error Url: /home/error
+2022-09-16 01:19:18.944 +03:00 [DBG] Error Id Parameter: errorId
+2022-09-16 01:21:58.457 +03:00 [INF] Starting host...
+2022-09-16 01:22:00.249 +03:00 [INF] Starting IdentityServer4 version 4.1.2+997a6cdd643e46cd5762b710c4ddc43574cbec2e
+2022-09-16 01:22:00.257 +03:00 [INF] You are using the in-memory version of the persisted grant store. This will store consent decisions, authorization codes, refresh and reference tokens in memory only. If you are using any of those features in production, you want to switch to a different store implementation.
+2022-09-16 01:22:00.259 +03:00 [INF] Using the default authentication scheme Identity.Application for IdentityServer
+2022-09-16 01:22:00.259 +03:00 [DBG] Using Identity.Application as default ASP.NET Core scheme for authentication
+2022-09-16 01:22:00.259 +03:00 [DBG] Using Identity.External as default ASP.NET Core scheme for sign-in
+2022-09-16 01:22:00.259 +03:00 [DBG] Using Identity.External as default ASP.NET Core scheme for sign-out
+2022-09-16 01:22:00.259 +03:00 [DBG] Using Identity.Application as default ASP.NET Core scheme for challenge
+2022-09-16 01:22:00.259 +03:00 [DBG] Using Identity.Application as default ASP.NET Core scheme for forbid
+2022-09-16 01:22:00.316 +03:00 [INF] Application started. Press Ctrl+C to shut down.
+2022-09-16 01:22:00.316 +03:00 [INF] Hosting environment: Development
+2022-09-16 01:22:00.316 +03:00 [INF] Content root path: D:\programming\dotNet\OlegLearning\Sigma_Trainee\PowUkraine\IdentityServer
+2022-09-16 01:22:00.388 +03:00 [DBG] Login Url: /Authorization/Login
+2022-09-16 01:22:00.389 +03:00 [DBG] Login Return Url Parameter: ReturnUrl
+2022-09-16 01:22:00.389 +03:00 [DBG] Logout Url: /Authorization/Logout
+2022-09-16 01:22:00.389 +03:00 [DBG] ConsentUrl Url: /consent
+2022-09-16 01:22:00.389 +03:00 [DBG] Consent Return Url Parameter: returnUrl
+2022-09-16 01:22:00.389 +03:00 [DBG] Error Url: /home/error
+2022-09-16 01:22:00.389 +03:00 [DBG] Error Id Parameter: errorId
+2022-09-16 01:22:41.003 +03:00 [INF] Starting host...
+2022-09-16 01:22:42.940 +03:00 [INF] Starting IdentityServer4 version 4.1.2+997a6cdd643e46cd5762b710c4ddc43574cbec2e
+2022-09-16 01:22:42.947 +03:00 [INF] You are using the in-memory version of the persisted grant store. This will store consent decisions, authorization codes, refresh and reference tokens in memory only. If you are using any of those features in production, you want to switch to a different store implementation.
+2022-09-16 01:22:42.948 +03:00 [INF] Using the default authentication scheme Identity.Application for IdentityServer
+2022-09-16 01:22:42.948 +03:00 [DBG] Using Identity.Application as default ASP.NET Core scheme for authentication
+2022-09-16 01:22:42.949 +03:00 [DBG] Using Identity.External as default ASP.NET Core scheme for sign-in
+2022-09-16 01:22:42.949 +03:00 [DBG] Using Identity.External as default ASP.NET Core scheme for sign-out
+2022-09-16 01:22:42.949 +03:00 [DBG] Using Identity.Application as default ASP.NET Core scheme for challenge
+2022-09-16 01:22:42.949 +03:00 [DBG] Using Identity.Application as default ASP.NET Core scheme for forbid
+2022-09-16 01:22:43.011 +03:00 [INF] Application started. Press Ctrl+C to shut down.
+2022-09-16 01:22:43.011 +03:00 [INF] Hosting environment: Development
+2022-09-16 01:22:43.011 +03:00 [INF] Content root path: D:\programming\dotNet\OlegLearning\Sigma_Trainee\PowUkraine\IdentityServer
+2022-09-16 01:22:43.087 +03:00 [DBG] Login Url: /Authorization/Login
+2022-09-16 01:22:43.089 +03:00 [DBG] Login Return Url Parameter: ReturnUrl
+2022-09-16 01:22:43.089 +03:00 [DBG] Logout Url: /Authorization/Logout
+2022-09-16 01:22:43.089 +03:00 [DBG] ConsentUrl Url: /consent
+2022-09-16 01:22:43.089 +03:00 [DBG] Consent Return Url Parameter: returnUrl
+2022-09-16 01:22:43.089 +03:00 [DBG] Error Url: /home/error
+2022-09-16 01:22:43.089 +03:00 [DBG] Error Id Parameter: errorId
+2022-09-16 01:24:09.959 +03:00 [INF] Starting host...
+2022-09-16 01:24:11.841 +03:00 [INF] Starting IdentityServer4 version 4.1.2+997a6cdd643e46cd5762b710c4ddc43574cbec2e
+2022-09-16 01:24:11.848 +03:00 [INF] You are using the in-memory version of the persisted grant store. This will store consent decisions, authorization codes, refresh and reference tokens in memory only. If you are using any of those features in production, you want to switch to a different store implementation.
+2022-09-16 01:24:11.850 +03:00 [INF] Using the default authentication scheme Identity.Application for IdentityServer
+2022-09-16 01:24:11.850 +03:00 [DBG] Using Identity.Application as default ASP.NET Core scheme for authentication
+2022-09-16 01:24:11.850 +03:00 [DBG] Using Identity.External as default ASP.NET Core scheme for sign-in
+2022-09-16 01:24:11.851 +03:00 [DBG] Using Identity.External as default ASP.NET Core scheme for sign-out
+2022-09-16 01:24:11.851 +03:00 [DBG] Using Identity.Application as default ASP.NET Core scheme for challenge
+2022-09-16 01:24:11.851 +03:00 [DBG] Using Identity.Application as default ASP.NET Core scheme for forbid
+2022-09-16 01:24:11.909 +03:00 [INF] Application started. Press Ctrl+C to shut down.
+2022-09-16 01:24:11.909 +03:00 [INF] Hosting environment: Development
+2022-09-16 01:24:11.909 +03:00 [INF] Content root path: D:\programming\dotNet\OlegLearning\Sigma_Trainee\PowUkraine\IdentityServer
+2022-09-16 01:24:12.029 +03:00 [DBG] Login Url: /Authorization/Login
+2022-09-16 01:24:12.031 +03:00 [DBG] Login Return Url Parameter: ReturnUrl
+2022-09-16 01:24:12.031 +03:00 [DBG] Logout Url: /Authorization/Logout
+2022-09-16 01:24:12.031 +03:00 [DBG] ConsentUrl Url: /consent
+2022-09-16 01:24:12.031 +03:00 [DBG] Consent Return Url Parameter: returnUrl
+2022-09-16 01:24:12.031 +03:00 [DBG] Error Url: /home/error
+2022-09-16 01:24:12.031 +03:00 [DBG] Error Id Parameter: errorId
+2022-09-16 01:25:06.000 +03:00 [INF] Starting host...
+2022-09-16 01:25:07.828 +03:00 [INF] Starting IdentityServer4 version 4.1.2+997a6cdd643e46cd5762b710c4ddc43574cbec2e
+2022-09-16 01:25:07.835 +03:00 [INF] You are using the in-memory version of the persisted grant store. This will store consent decisions, authorization codes, refresh and reference tokens in memory only. If you are using any of those features in production, you want to switch to a different store implementation.
+2022-09-16 01:25:07.837 +03:00 [INF] Using the default authentication scheme Identity.Application for IdentityServer
+2022-09-16 01:25:07.837 +03:00 [DBG] Using Identity.Application as default ASP.NET Core scheme for authentication
+2022-09-16 01:25:07.837 +03:00 [DBG] Using Identity.External as default ASP.NET Core scheme for sign-in
+2022-09-16 01:25:07.837 +03:00 [DBG] Using Identity.External as default ASP.NET Core scheme for sign-out
+2022-09-16 01:25:07.837 +03:00 [DBG] Using Identity.Application as default ASP.NET Core scheme for challenge
+2022-09-16 01:25:07.837 +03:00 [DBG] Using Identity.Application as default ASP.NET Core scheme for forbid
+2022-09-16 01:25:07.899 +03:00 [INF] Application started. Press Ctrl+C to shut down.
+2022-09-16 01:25:07.899 +03:00 [INF] Hosting environment: Development
+2022-09-16 01:25:07.899 +03:00 [INF] Content root path: D:\programming\dotNet\OlegLearning\Sigma_Trainee\PowUkraine\IdentityServer
+2022-09-16 01:25:07.977 +03:00 [DBG] Login Url: /Authorization/Login
+2022-09-16 01:25:07.978 +03:00 [DBG] Login Return Url Parameter: ReturnUrl
+2022-09-16 01:25:07.978 +03:00 [DBG] Logout Url: /Authorization/Logout
+2022-09-16 01:25:07.978 +03:00 [DBG] ConsentUrl Url: /consent
+2022-09-16 01:25:07.978 +03:00 [DBG] Consent Return Url Parameter: returnUrl
+2022-09-16 01:25:07.978 +03:00 [DBG] Error Url: /home/error
+2022-09-16 01:25:07.978 +03:00 [DBG] Error Id Parameter: errorId
+2022-09-16 01:27:05.898 +03:00 [INF] Starting host...
+2022-09-16 01:27:07.897 +03:00 [INF] Starting IdentityServer4 version 4.1.2+997a6cdd643e46cd5762b710c4ddc43574cbec2e
+2022-09-16 01:27:07.904 +03:00 [INF] You are using the in-memory version of the persisted grant store. This will store consent decisions, authorization codes, refresh and reference tokens in memory only. If you are using any of those features in production, you want to switch to a different store implementation.
+2022-09-16 01:27:07.906 +03:00 [INF] Using the default authentication scheme Identity.Application for IdentityServer
+2022-09-16 01:27:07.906 +03:00 [DBG] Using Identity.Application as default ASP.NET Core scheme for authentication
+2022-09-16 01:27:07.906 +03:00 [DBG] Using Identity.External as default ASP.NET Core scheme for sign-in
+2022-09-16 01:27:07.906 +03:00 [DBG] Using Identity.External as default ASP.NET Core scheme for sign-out
+2022-09-16 01:27:07.906 +03:00 [DBG] Using Identity.Application as default ASP.NET Core scheme for challenge
+2022-09-16 01:27:07.906 +03:00 [DBG] Using Identity.Application as default ASP.NET Core scheme for forbid
+2022-09-16 01:27:07.969 +03:00 [INF] Application started. Press Ctrl+C to shut down.
+2022-09-16 01:27:07.969 +03:00 [INF] Hosting environment: Development
+2022-09-16 01:27:07.969 +03:00 [INF] Content root path: D:\programming\dotNet\OlegLearning\Sigma_Trainee\PowUkraine\IdentityServer
+2022-09-16 01:27:08.066 +03:00 [DBG] Login Url: /Authorization/Login
+2022-09-16 01:27:08.067 +03:00 [DBG] Login Return Url Parameter: ReturnUrl
+2022-09-16 01:27:08.067 +03:00 [DBG] Logout Url: /Authorization/Logout
+2022-09-16 01:27:08.067 +03:00 [DBG] ConsentUrl Url: /consent
+2022-09-16 01:27:08.067 +03:00 [DBG] Consent Return Url Parameter: returnUrl
+2022-09-16 01:27:08.067 +03:00 [DBG] Error Url: /home/error
+2022-09-16 01:27:08.067 +03:00 [DBG] Error Id Parameter: errorId
+2022-09-16 01:27:13.464 +03:00 [INF] AuthenticationScheme: Google was challenged.
+2022-09-16 01:35:45.607 +03:00 [INF] Starting host...
+2022-09-16 01:35:47.528 +03:00 [INF] Starting IdentityServer4 version 4.1.2+997a6cdd643e46cd5762b710c4ddc43574cbec2e
+2022-09-16 01:35:47.536 +03:00 [INF] You are using the in-memory version of the persisted grant store. This will store consent decisions, authorization codes, refresh and reference tokens in memory only. If you are using any of those features in production, you want to switch to a different store implementation.
+2022-09-16 01:35:47.538 +03:00 [INF] Using the default authentication scheme Identity.Application for IdentityServer
+2022-09-16 01:35:47.538 +03:00 [DBG] Using Identity.Application as default ASP.NET Core scheme for authentication
+2022-09-16 01:35:47.538 +03:00 [DBG] Using Identity.External as default ASP.NET Core scheme for sign-in
+2022-09-16 01:35:47.538 +03:00 [DBG] Using Identity.External as default ASP.NET Core scheme for sign-out
+2022-09-16 01:35:47.538 +03:00 [DBG] Using Identity.Application as default ASP.NET Core scheme for challenge
+2022-09-16 01:35:47.538 +03:00 [DBG] Using Identity.Application as default ASP.NET Core scheme for forbid
+2022-09-16 01:35:47.601 +03:00 [INF] Application started. Press Ctrl+C to shut down.
+2022-09-16 01:35:47.601 +03:00 [INF] Hosting environment: Development
+2022-09-16 01:35:47.601 +03:00 [INF] Content root path: D:\programming\dotNet\OlegLearning\Sigma_Trainee\PowUkraine\IdentityServer
+2022-09-16 01:35:47.686 +03:00 [DBG] Login Url: /Authorization/Login
+2022-09-16 01:35:47.687 +03:00 [DBG] Login Return Url Parameter: ReturnUrl
+2022-09-16 01:35:47.687 +03:00 [DBG] Logout Url: /Authorization/Logout
+2022-09-16 01:35:47.687 +03:00 [DBG] ConsentUrl Url: /consent
+2022-09-16 01:35:47.687 +03:00 [DBG] Consent Return Url Parameter: returnUrl
+2022-09-16 01:35:47.687 +03:00 [DBG] Error Url: /home/error
+2022-09-16 01:35:47.687 +03:00 [DBG] Error Id Parameter: errorId
+2022-09-16 01:39:13.536 +03:00 [INF] Starting host...
+2022-09-16 01:39:15.450 +03:00 [INF] Starting IdentityServer4 version 4.1.2+997a6cdd643e46cd5762b710c4ddc43574cbec2e
+2022-09-16 01:39:15.457 +03:00 [INF] You are using the in-memory version of the persisted grant store. This will store consent decisions, authorization codes, refresh and reference tokens in memory only. If you are using any of those features in production, you want to switch to a different store implementation.
+2022-09-16 01:39:15.459 +03:00 [INF] Using the default authentication scheme Identity.Application for IdentityServer
+2022-09-16 01:39:15.459 +03:00 [DBG] Using Identity.Application as default ASP.NET Core scheme for authentication
+2022-09-16 01:39:15.459 +03:00 [DBG] Using Identity.External as default ASP.NET Core scheme for sign-in
+2022-09-16 01:39:15.459 +03:00 [DBG] Using Identity.External as default ASP.NET Core scheme for sign-out
+2022-09-16 01:39:15.459 +03:00 [DBG] Using Identity.Application as default ASP.NET Core scheme for challenge
+2022-09-16 01:39:15.459 +03:00 [DBG] Using Identity.Application as default ASP.NET Core scheme for forbid
+2022-09-16 01:39:15.517 +03:00 [INF] Application started. Press Ctrl+C to shut down.
+2022-09-16 01:39:15.517 +03:00 [INF] Hosting environment: Development
+2022-09-16 01:39:15.517 +03:00 [INF] Content root path: D:\programming\dotNet\OlegLearning\Sigma_Trainee\PowUkraine\IdentityServer
+2022-09-16 01:39:15.594 +03:00 [DBG] Login Url: /Authorization/Login
+2022-09-16 01:39:15.595 +03:00 [DBG] Login Return Url Parameter: ReturnUrl
+2022-09-16 01:39:15.595 +03:00 [DBG] Logout Url: /Authorization/Logout
+2022-09-16 01:39:15.595 +03:00 [DBG] ConsentUrl Url: /consent
+2022-09-16 01:39:15.595 +03:00 [DBG] Consent Return Url Parameter: returnUrl
+2022-09-16 01:39:15.595 +03:00 [DBG] Error Url: /home/error
+2022-09-16 01:39:15.595 +03:00 [DBG] Error Id Parameter: errorId
+2022-09-16 01:39:25.445 +03:00 [INF] AuthenticationScheme: Identity.Application was challenged.
+2022-09-16 01:39:25.798 +03:00 [INF] AuthenticationScheme: Identity.Application was challenged.
+2022-09-16 01:39:26.267 +03:00 [INF] AuthenticationScheme: Identity.Application was challenged.
+2022-09-16 01:39:27.714 +03:00 [INF] AuthenticationScheme: Identity.Application was challenged.
+2022-09-16 01:39:28.780 +03:00 [INF] AuthenticationScheme: Identity.Application was challenged.
+2022-09-16 01:39:29.455 +03:00 [INF] AuthenticationScheme: Identity.Application was challenged.
+2022-09-16 01:39:30.073 +03:00 [INF] AuthenticationScheme: Identity.Application was challenged.
+2022-09-16 01:39:33.628 +03:00 [INF] AuthenticationScheme: Identity.Application was challenged.
+2022-09-16 01:39:34.414 +03:00 [INF] AuthenticationScheme: Identity.Application was challenged.
+2022-09-16 01:39:37.239 +03:00 [INF] AuthenticationScheme: Identity.Application was challenged.
+2022-09-16 01:39:39.629 +03:00 [INF] AuthenticationScheme: Identity.Application was challenged.
+2022-09-16 01:40:03.372 +03:00 [INF] Starting host...
+2022-09-16 01:40:05.251 +03:00 [INF] Starting IdentityServer4 version 4.1.2+997a6cdd643e46cd5762b710c4ddc43574cbec2e
+2022-09-16 01:40:05.257 +03:00 [INF] You are using the in-memory version of the persisted grant store. This will store consent decisions, authorization codes, refresh and reference tokens in memory only. If you are using any of those features in production, you want to switch to a different store implementation.
+2022-09-16 01:40:05.259 +03:00 [INF] Using the default authentication scheme Identity.Application for IdentityServer
+2022-09-16 01:40:05.259 +03:00 [DBG] Using Identity.Application as default ASP.NET Core scheme for authentication
+2022-09-16 01:40:05.259 +03:00 [DBG] Using Identity.External as default ASP.NET Core scheme for sign-in
+2022-09-16 01:40:05.259 +03:00 [DBG] Using Identity.External as default ASP.NET Core scheme for sign-out
+2022-09-16 01:40:05.259 +03:00 [DBG] Using Identity.Application as default ASP.NET Core scheme for challenge
+2022-09-16 01:40:05.259 +03:00 [DBG] Using Identity.Application as default ASP.NET Core scheme for forbid
+2022-09-16 01:40:05.316 +03:00 [INF] Application started. Press Ctrl+C to shut down.
+2022-09-16 01:40:05.316 +03:00 [INF] Hosting environment: Development
+2022-09-16 01:40:05.316 +03:00 [INF] Content root path: D:\programming\dotNet\OlegLearning\Sigma_Trainee\PowUkraine\IdentityServer
+2022-09-16 01:40:05.387 +03:00 [DBG] Login Url: /Authorization/Login
+2022-09-16 01:40:05.388 +03:00 [DBG] Login Return Url Parameter: ReturnUrl
+2022-09-16 01:40:05.388 +03:00 [DBG] Logout Url: /Authorization/Logout
+2022-09-16 01:40:05.388 +03:00 [DBG] ConsentUrl Url: /consent
+2022-09-16 01:40:05.388 +03:00 [DBG] Consent Return Url Parameter: returnUrl
+2022-09-16 01:40:05.388 +03:00 [DBG] Error Url: /home/error
+2022-09-16 01:40:05.388 +03:00 [DBG] Error Id Parameter: errorId
+2022-09-16 01:44:11.620 +03:00 [INF] Starting host...
+2022-09-16 01:44:13.494 +03:00 [INF] Starting IdentityServer4 version 4.1.2+997a6cdd643e46cd5762b710c4ddc43574cbec2e
+2022-09-16 01:44:13.501 +03:00 [INF] You are using the in-memory version of the persisted grant store. This will store consent decisions, authorization codes, refresh and reference tokens in memory only. If you are using any of those features in production, you want to switch to a different store implementation.
+2022-09-16 01:44:13.502 +03:00 [INF] Using the default authentication scheme Identity.Application for IdentityServer
+2022-09-16 01:44:13.502 +03:00 [DBG] Using Identity.Application as default ASP.NET Core scheme for authentication
+2022-09-16 01:44:13.502 +03:00 [DBG] Using Identity.External as default ASP.NET Core scheme for sign-in
+2022-09-16 01:44:13.503 +03:00 [DBG] Using Identity.External as default ASP.NET Core scheme for sign-out
+2022-09-16 01:44:13.503 +03:00 [DBG] Using Identity.Application as default ASP.NET Core scheme for challenge
+2022-09-16 01:44:13.503 +03:00 [DBG] Using Identity.Application as default ASP.NET Core scheme for forbid
+2022-09-16 01:44:13.556 +03:00 [INF] Application started. Press Ctrl+C to shut down.
+2022-09-16 01:44:13.557 +03:00 [INF] Hosting environment: Development
+2022-09-16 01:44:13.557 +03:00 [INF] Content root path: D:\programming\dotNet\OlegLearning\Sigma_Trainee\PowUkraine\IdentityServer
+2022-09-16 01:44:13.629 +03:00 [DBG] Login Url: /Authorization/Login
+2022-09-16 01:44:13.630 +03:00 [DBG] Login Return Url Parameter: ReturnUrl
+2022-09-16 01:44:13.630 +03:00 [DBG] Logout Url: /Authorization/Logout
+2022-09-16 01:44:13.630 +03:00 [DBG] ConsentUrl Url: /consent
+2022-09-16 01:44:13.630 +03:00 [DBG] Consent Return Url Parameter: returnUrl
+2022-09-16 01:44:13.631 +03:00 [DBG] Error Url: /home/error
+2022-09-16 01:44:13.631 +03:00 [DBG] Error Id Parameter: errorId
+2022-09-16 01:45:55.651 +03:00 [INF] Starting host...
+2022-09-16 01:45:57.497 +03:00 [INF] Starting IdentityServer4 version 4.1.2+997a6cdd643e46cd5762b710c4ddc43574cbec2e
+2022-09-16 01:45:57.504 +03:00 [INF] You are using the in-memory version of the persisted grant store. This will store consent decisions, authorization codes, refresh and reference tokens in memory only. If you are using any of those features in production, you want to switch to a different store implementation.
+2022-09-16 01:45:57.506 +03:00 [INF] Using the default authentication scheme Identity.Application for IdentityServer
+2022-09-16 01:45:57.506 +03:00 [DBG] Using Identity.Application as default ASP.NET Core scheme for authentication
+2022-09-16 01:45:57.506 +03:00 [DBG] Using Identity.External as default ASP.NET Core scheme for sign-in
+2022-09-16 01:45:57.506 +03:00 [DBG] Using Identity.External as default ASP.NET Core scheme for sign-out
+2022-09-16 01:45:57.506 +03:00 [DBG] Using Identity.Application as default ASP.NET Core scheme for challenge
+2022-09-16 01:45:57.506 +03:00 [DBG] Using Identity.Application as default ASP.NET Core scheme for forbid
+2022-09-16 01:45:57.568 +03:00 [INF] Application started. Press Ctrl+C to shut down.
+2022-09-16 01:45:57.568 +03:00 [INF] Hosting environment: Development
+2022-09-16 01:45:57.568 +03:00 [INF] Content root path: D:\programming\dotNet\OlegLearning\Sigma_Trainee\PowUkraine\IdentityServer
+2022-09-16 01:45:57.644 +03:00 [DBG] Login Url: /Authorization/Login
+2022-09-16 01:45:57.646 +03:00 [DBG] Login Return Url Parameter: ReturnUrl
+2022-09-16 01:45:57.646 +03:00 [DBG] Logout Url: /Authorization/Logout
+2022-09-16 01:45:57.646 +03:00 [DBG] ConsentUrl Url: /consent
+2022-09-16 01:45:57.646 +03:00 [DBG] Consent Return Url Parameter: returnUrl
+2022-09-16 01:45:57.646 +03:00 [DBG] Error Url: /home/error
+2022-09-16 01:45:57.646 +03:00 [DBG] Error Id Parameter: errorId
+2022-09-16 01:46:35.424 +03:00 [INF] Starting host...
+2022-09-16 01:46:37.072 +03:00 [INF] Starting IdentityServer4 version 4.1.2+997a6cdd643e46cd5762b710c4ddc43574cbec2e
+2022-09-16 01:46:37.079 +03:00 [INF] You are using the in-memory version of the persisted grant store. This will store consent decisions, authorization codes, refresh and reference tokens in memory only. If you are using any of those features in production, you want to switch to a different store implementation.
+2022-09-16 01:46:37.081 +03:00 [INF] Using the default authentication scheme Identity.Application for IdentityServer
+2022-09-16 01:46:37.081 +03:00 [DBG] Using Identity.Application as default ASP.NET Core scheme for authentication
+2022-09-16 01:46:37.081 +03:00 [DBG] Using Identity.External as default ASP.NET Core scheme for sign-in
+2022-09-16 01:46:37.081 +03:00 [DBG] Using Identity.External as default ASP.NET Core scheme for sign-out
+2022-09-16 01:46:37.081 +03:00 [DBG] Using Identity.Application as default ASP.NET Core scheme for challenge
+2022-09-16 01:46:37.081 +03:00 [DBG] Using Identity.Application as default ASP.NET Core scheme for forbid
+2022-09-16 01:46:37.140 +03:00 [INF] Application started. Press Ctrl+C to shut down.
+2022-09-16 01:46:37.140 +03:00 [INF] Hosting environment: Development
+2022-09-16 01:46:37.140 +03:00 [INF] Content root path: D:\programming\dotNet\OlegLearning\Sigma_Trainee\PowUkraine\IdentityServer
+2022-09-16 01:46:37.210 +03:00 [DBG] Login Url: /Authorization/Login
+2022-09-16 01:46:37.211 +03:00 [DBG] Login Return Url Parameter: ReturnUrl
+2022-09-16 01:46:37.211 +03:00 [DBG] Logout Url: /Authorization/Logout
+2022-09-16 01:46:37.211 +03:00 [DBG] ConsentUrl Url: /consent
+2022-09-16 01:46:37.211 +03:00 [DBG] Consent Return Url Parameter: returnUrl
+2022-09-16 01:46:37.211 +03:00 [DBG] Error Url: /home/error
+2022-09-16 01:46:37.211 +03:00 [DBG] Error Id Parameter: errorId
+2022-09-16 01:47:40.445 +03:00 [INF] Starting host...
+2022-09-16 01:47:42.190 +03:00 [INF] Starting IdentityServer4 version 4.1.2+997a6cdd643e46cd5762b710c4ddc43574cbec2e
+2022-09-16 01:47:42.196 +03:00 [INF] You are using the in-memory version of the persisted grant store. This will store consent decisions, authorization codes, refresh and reference tokens in memory only. If you are using any of those features in production, you want to switch to a different store implementation.
+2022-09-16 01:47:42.198 +03:00 [INF] Using the default authentication scheme Identity.Application for IdentityServer
+2022-09-16 01:47:42.198 +03:00 [DBG] Using Identity.Application as default ASP.NET Core scheme for authentication
+2022-09-16 01:47:42.198 +03:00 [DBG] Using Identity.External as default ASP.NET Core scheme for sign-in
+2022-09-16 01:47:42.198 +03:00 [DBG] Using Identity.External as default ASP.NET Core scheme for sign-out
+2022-09-16 01:47:42.198 +03:00 [DBG] Using Identity.Application as default ASP.NET Core scheme for challenge
+2022-09-16 01:47:42.198 +03:00 [DBG] Using Identity.Application as default ASP.NET Core scheme for forbid
+2022-09-16 01:47:42.254 +03:00 [INF] Application started. Press Ctrl+C to shut down.
+2022-09-16 01:47:42.254 +03:00 [INF] Hosting environment: Development
+2022-09-16 01:47:42.254 +03:00 [INF] Content root path: D:\programming\dotNet\OlegLearning\Sigma_Trainee\PowUkraine\IdentityServer
+2022-09-16 01:47:42.326 +03:00 [DBG] Login Url: /Authorization/Login
+2022-09-16 01:47:42.327 +03:00 [DBG] Login Return Url Parameter: ReturnUrl
+2022-09-16 01:47:42.327 +03:00 [DBG] Logout Url: /Authorization/Logout
+2022-09-16 01:47:42.327 +03:00 [DBG] ConsentUrl Url: /consent
+2022-09-16 01:47:42.327 +03:00 [DBG] Consent Return Url Parameter: returnUrl
+2022-09-16 01:47:42.327 +03:00 [DBG] Error Url: /home/error
+2022-09-16 01:47:42.327 +03:00 [DBG] Error Id Parameter: errorId
+2022-09-16 01:48:29.020 +03:00 [INF] Starting host...
+2022-09-16 01:48:30.997 +03:00 [INF] Starting IdentityServer4 version 4.1.2+997a6cdd643e46cd5762b710c4ddc43574cbec2e
+2022-09-16 01:48:31.004 +03:00 [INF] You are using the in-memory version of the persisted grant store. This will store consent decisions, authorization codes, refresh and reference tokens in memory only. If you are using any of those features in production, you want to switch to a different store implementation.
+2022-09-16 01:48:31.007 +03:00 [INF] Using the default authentication scheme Identity.Application for IdentityServer
+2022-09-16 01:48:31.007 +03:00 [DBG] Using Identity.Application as default ASP.NET Core scheme for authentication
+2022-09-16 01:48:31.007 +03:00 [DBG] Using Identity.External as default ASP.NET Core scheme for sign-in
+2022-09-16 01:48:31.007 +03:00 [DBG] Using Identity.External as default ASP.NET Core scheme for sign-out
+2022-09-16 01:48:31.007 +03:00 [DBG] Using Identity.Application as default ASP.NET Core scheme for challenge
+2022-09-16 01:48:31.007 +03:00 [DBG] Using Identity.Application as default ASP.NET Core scheme for forbid
+2022-09-16 01:48:31.071 +03:00 [INF] Application started. Press Ctrl+C to shut down.
+2022-09-16 01:48:31.071 +03:00 [INF] Hosting environment: Development
+2022-09-16 01:48:31.071 +03:00 [INF] Content root path: D:\programming\dotNet\OlegLearning\Sigma_Trainee\PowUkraine\IdentityServer
+2022-09-16 01:48:31.149 +03:00 [DBG] Login Url: /Authorization/Login
+2022-09-16 01:48:31.150 +03:00 [DBG] Login Return Url Parameter: ReturnUrl
+2022-09-16 01:48:31.150 +03:00 [DBG] Logout Url: /Authorization/Logout
+2022-09-16 01:48:31.150 +03:00 [DBG] ConsentUrl Url: /consent
+2022-09-16 01:48:31.150 +03:00 [DBG] Consent Return Url Parameter: returnUrl
+2022-09-16 01:48:31.150 +03:00 [DBG] Error Url: /home/error
+2022-09-16 01:48:31.150 +03:00 [DBG] Error Id Parameter: errorId
+2022-09-16 01:49:55.686 +03:00 [INF] Starting host...
+2022-09-16 01:49:57.680 +03:00 [INF] Starting IdentityServer4 version 4.1.2+997a6cdd643e46cd5762b710c4ddc43574cbec2e
+2022-09-16 01:49:57.687 +03:00 [INF] You are using the in-memory version of the persisted grant store. This will store consent decisions, authorization codes, refresh and reference tokens in memory only. If you are using any of those features in production, you want to switch to a different store implementation.
+2022-09-16 01:49:57.689 +03:00 [INF] Using the default authentication scheme Identity.Application for IdentityServer
+2022-09-16 01:49:57.689 +03:00 [DBG] Using Identity.Application as default ASP.NET Core scheme for authentication
+2022-09-16 01:49:57.689 +03:00 [DBG] Using Identity.External as default ASP.NET Core scheme for sign-in
+2022-09-16 01:49:57.689 +03:00 [DBG] Using Identity.External as default ASP.NET Core scheme for sign-out
+2022-09-16 01:49:57.689 +03:00 [DBG] Using Identity.Application as default ASP.NET Core scheme for challenge
+2022-09-16 01:49:57.689 +03:00 [DBG] Using Identity.Application as default ASP.NET Core scheme for forbid
+2022-09-16 01:49:57.753 +03:00 [INF] Application started. Press Ctrl+C to shut down.
+2022-09-16 01:49:57.753 +03:00 [INF] Hosting environment: Development
+2022-09-16 01:49:57.753 +03:00 [INF] Content root path: D:\programming\dotNet\OlegLearning\Sigma_Trainee\PowUkraine\IdentityServer
+2022-09-16 01:49:57.836 +03:00 [DBG] Login Url: /Authorization/Login
+2022-09-16 01:49:57.837 +03:00 [DBG] Login Return Url Parameter: ReturnUrl
+2022-09-16 01:49:57.837 +03:00 [DBG] Logout Url: /Authorization/Logout
+2022-09-16 01:49:57.837 +03:00 [DBG] ConsentUrl Url: /consent
+2022-09-16 01:49:57.837 +03:00 [DBG] Consent Return Url Parameter: returnUrl
+2022-09-16 01:49:57.837 +03:00 [DBG] Error Url: /home/error
+2022-09-16 01:49:57.837 +03:00 [DBG] Error Id Parameter: errorId
+2022-09-16 01:51:32.815 +03:00 [INF] Starting host...
+2022-09-16 01:51:34.611 +03:00 [INF] Starting IdentityServer4 version 4.1.2+997a6cdd643e46cd5762b710c4ddc43574cbec2e
+2022-09-16 01:51:34.618 +03:00 [INF] You are using the in-memory version of the persisted grant store. This will store consent decisions, authorization codes, refresh and reference tokens in memory only. If you are using any of those features in production, you want to switch to a different store implementation.
+2022-09-16 01:51:34.620 +03:00 [INF] Using the default authentication scheme Identity.Application for IdentityServer
+2022-09-16 01:51:34.620 +03:00 [DBG] Using Identity.Application as default ASP.NET Core scheme for authentication
+2022-09-16 01:51:34.620 +03:00 [DBG] Using Identity.External as default ASP.NET Core scheme for sign-in
+2022-09-16 01:51:34.620 +03:00 [DBG] Using Identity.External as default ASP.NET Core scheme for sign-out
+2022-09-16 01:51:34.620 +03:00 [DBG] Using Identity.Application as default ASP.NET Core scheme for challenge
+2022-09-16 01:51:34.620 +03:00 [DBG] Using Identity.Application as default ASP.NET Core scheme for forbid
+2022-09-16 01:51:34.678 +03:00 [INF] Application started. Press Ctrl+C to shut down.
+2022-09-16 01:51:34.679 +03:00 [INF] Hosting environment: Development
+2022-09-16 01:51:34.679 +03:00 [INF] Content root path: D:\programming\dotNet\OlegLearning\Sigma_Trainee\PowUkraine\IdentityServer
+2022-09-16 01:51:34.750 +03:00 [DBG] Login Url: /Authorization/Login
+2022-09-16 01:51:34.751 +03:00 [DBG] Login Return Url Parameter: ReturnUrl
+2022-09-16 01:51:34.751 +03:00 [DBG] Logout Url: /Authorization/Logout
+2022-09-16 01:51:34.751 +03:00 [DBG] ConsentUrl Url: /consent
+2022-09-16 01:51:34.751 +03:00 [DBG] Consent Return Url Parameter: returnUrl
+2022-09-16 01:51:34.751 +03:00 [DBG] Error Url: /home/error
+2022-09-16 01:51:34.751 +03:00 [DBG] Error Id Parameter: errorId
+2022-09-16 01:52:16.496 +03:00 [INF] Starting host...
+2022-09-16 01:52:18.249 +03:00 [INF] Starting IdentityServer4 version 4.1.2+997a6cdd643e46cd5762b710c4ddc43574cbec2e
+2022-09-16 01:52:18.256 +03:00 [INF] You are using the in-memory version of the persisted grant store. This will store consent decisions, authorization codes, refresh and reference tokens in memory only. If you are using any of those features in production, you want to switch to a different store implementation.
+2022-09-16 01:52:18.258 +03:00 [INF] Using the default authentication scheme Identity.Application for IdentityServer
+2022-09-16 01:52:18.258 +03:00 [DBG] Using Identity.Application as default ASP.NET Core scheme for authentication
+2022-09-16 01:52:18.258 +03:00 [DBG] Using Identity.External as default ASP.NET Core scheme for sign-in
+2022-09-16 01:52:18.258 +03:00 [DBG] Using Identity.External as default ASP.NET Core scheme for sign-out
+2022-09-16 01:52:18.258 +03:00 [DBG] Using Identity.Application as default ASP.NET Core scheme for challenge
+2022-09-16 01:52:18.258 +03:00 [DBG] Using Identity.Application as default ASP.NET Core scheme for forbid
+2022-09-16 01:52:18.316 +03:00 [INF] Application started. Press Ctrl+C to shut down.
+2022-09-16 01:52:18.316 +03:00 [INF] Hosting environment: Development
+2022-09-16 01:52:18.316 +03:00 [INF] Content root path: D:\programming\dotNet\OlegLearning\Sigma_Trainee\PowUkraine\IdentityServer
+2022-09-16 01:52:18.388 +03:00 [DBG] Login Url: /Authorization/Login
+2022-09-16 01:52:18.390 +03:00 [DBG] Login Return Url Parameter: ReturnUrl
+2022-09-16 01:52:18.390 +03:00 [DBG] Logout Url: /Authorization/Logout
+2022-09-16 01:52:18.390 +03:00 [DBG] ConsentUrl Url: /consent
+2022-09-16 01:52:18.390 +03:00 [DBG] Consent Return Url Parameter: returnUrl
+2022-09-16 01:52:18.390 +03:00 [DBG] Error Url: /home/error
+2022-09-16 01:52:18.390 +03:00 [DBG] Error Id Parameter: errorId
+2022-09-16 01:52:45.557 +03:00 [INF] Starting host...
+2022-09-16 01:52:47.495 +03:00 [INF] Starting IdentityServer4 version 4.1.2+997a6cdd643e46cd5762b710c4ddc43574cbec2e
+2022-09-16 01:52:47.502 +03:00 [INF] You are using the in-memory version of the persisted grant store. This will store consent decisions, authorization codes, refresh and reference tokens in memory only. If you are using any of those features in production, you want to switch to a different store implementation.
+2022-09-16 01:52:47.503 +03:00 [INF] Using the default authentication scheme Identity.Application for IdentityServer
+2022-09-16 01:52:47.503 +03:00 [DBG] Using Identity.Application as default ASP.NET Core scheme for authentication
+2022-09-16 01:52:47.503 +03:00 [DBG] Using Identity.External as default ASP.NET Core scheme for sign-in
+2022-09-16 01:52:47.503 +03:00 [DBG] Using Identity.External as default ASP.NET Core scheme for sign-out
+2022-09-16 01:52:47.503 +03:00 [DBG] Using Identity.Application as default ASP.NET Core scheme for challenge
+2022-09-16 01:52:47.504 +03:00 [DBG] Using Identity.Application as default ASP.NET Core scheme for forbid
+2022-09-16 01:52:47.559 +03:00 [INF] Application started. Press Ctrl+C to shut down.
+2022-09-16 01:52:47.559 +03:00 [INF] Hosting environment: Development
+2022-09-16 01:52:47.559 +03:00 [INF] Content root path: D:\programming\dotNet\OlegLearning\Sigma_Trainee\PowUkraine\IdentityServer
+2022-09-16 01:52:47.630 +03:00 [DBG] Login Url: /Authorization/Login
+2022-09-16 01:52:47.631 +03:00 [DBG] Login Return Url Parameter: ReturnUrl
+2022-09-16 01:52:47.631 +03:00 [DBG] Logout Url: /Authorization/Logout
+2022-09-16 01:52:47.631 +03:00 [DBG] ConsentUrl Url: /consent
+2022-09-16 01:52:47.631 +03:00 [DBG] Consent Return Url Parameter: returnUrl
+2022-09-16 01:52:47.631 +03:00 [DBG] Error Url: /home/error
+2022-09-16 01:52:47.631 +03:00 [DBG] Error Id Parameter: errorId
+2022-09-16 01:54:28.459 +03:00 [INF] Starting host...
+2022-09-16 01:54:30.372 +03:00 [INF] Starting IdentityServer4 version 4.1.2+997a6cdd643e46cd5762b710c4ddc43574cbec2e
+2022-09-16 01:54:30.378 +03:00 [INF] You are using the in-memory version of the persisted grant store. This will store consent decisions, authorization codes, refresh and reference tokens in memory only. If you are using any of those features in production, you want to switch to a different store implementation.
+2022-09-16 01:54:30.380 +03:00 [INF] Using the default authentication scheme Identity.Application for IdentityServer
+2022-09-16 01:54:30.380 +03:00 [DBG] Using Identity.Application as default ASP.NET Core scheme for authentication
+2022-09-16 01:54:30.380 +03:00 [DBG] Using Identity.External as default ASP.NET Core scheme for sign-in
+2022-09-16 01:54:30.380 +03:00 [DBG] Using Identity.External as default ASP.NET Core scheme for sign-out
+2022-09-16 01:54:30.380 +03:00 [DBG] Using Identity.Application as default ASP.NET Core scheme for challenge
+2022-09-16 01:54:30.380 +03:00 [DBG] Using Identity.Application as default ASP.NET Core scheme for forbid
+2022-09-16 01:54:30.439 +03:00 [INF] Application started. Press Ctrl+C to shut down.
+2022-09-16 01:54:30.439 +03:00 [INF] Hosting environment: Development
+2022-09-16 01:54:30.439 +03:00 [INF] Content root path: D:\programming\dotNet\OlegLearning\Sigma_Trainee\PowUkraine\IdentityServer
+2022-09-16 01:54:30.511 +03:00 [DBG] Login Url: /Authorization/Login
+2022-09-16 01:54:30.512 +03:00 [DBG] Login Return Url Parameter: ReturnUrl
+2022-09-16 01:54:30.512 +03:00 [DBG] Logout Url: /Authorization/Logout
+2022-09-16 01:54:30.512 +03:00 [DBG] ConsentUrl Url: /consent
+2022-09-16 01:54:30.512 +03:00 [DBG] Consent Return Url Parameter: returnUrl
+2022-09-16 01:54:30.512 +03:00 [DBG] Error Url: /home/error
+2022-09-16 01:54:30.512 +03:00 [DBG] Error Id Parameter: errorId
+2022-09-16 01:55:15.964 +03:00 [INF] Starting host...
+2022-09-16 01:55:17.731 +03:00 [INF] Starting IdentityServer4 version 4.1.2+997a6cdd643e46cd5762b710c4ddc43574cbec2e
+2022-09-16 01:55:17.737 +03:00 [INF] You are using the in-memory version of the persisted grant store. This will store consent decisions, authorization codes, refresh and reference tokens in memory only. If you are using any of those features in production, you want to switch to a different store implementation.
+2022-09-16 01:55:17.739 +03:00 [INF] Using the default authentication scheme Identity.Application for IdentityServer
+2022-09-16 01:55:17.739 +03:00 [DBG] Using Identity.Application as default ASP.NET Core scheme for authentication
+2022-09-16 01:55:17.739 +03:00 [DBG] Using Identity.External as default ASP.NET Core scheme for sign-in
+2022-09-16 01:55:17.739 +03:00 [DBG] Using Identity.External as default ASP.NET Core scheme for sign-out
+2022-09-16 01:55:17.739 +03:00 [DBG] Using Identity.Application as default ASP.NET Core scheme for challenge
+2022-09-16 01:55:17.739 +03:00 [DBG] Using Identity.Application as default ASP.NET Core scheme for forbid
+2022-09-16 01:55:17.798 +03:00 [INF] Application started. Press Ctrl+C to shut down.
+2022-09-16 01:55:17.798 +03:00 [INF] Hosting environment: Development
+2022-09-16 01:55:17.798 +03:00 [INF] Content root path: D:\programming\dotNet\OlegLearning\Sigma_Trainee\PowUkraine\IdentityServer
+2022-09-16 01:55:17.873 +03:00 [DBG] Login Url: /Authorization/Login
+2022-09-16 01:55:17.874 +03:00 [DBG] Login Return Url Parameter: ReturnUrl
+2022-09-16 01:55:17.874 +03:00 [DBG] Logout Url: /Authorization/Logout
+2022-09-16 01:55:17.874 +03:00 [DBG] ConsentUrl Url: /consent
+2022-09-16 01:55:17.874 +03:00 [DBG] Consent Return Url Parameter: returnUrl
+2022-09-16 01:55:17.874 +03:00 [DBG] Error Url: /home/error
+2022-09-16 01:55:17.874 +03:00 [DBG] Error Id Parameter: errorId
+2022-09-16 01:55:39.249 +03:00 [INF] Starting host...
+2022-09-16 01:55:41.170 +03:00 [INF] Starting IdentityServer4 version 4.1.2+997a6cdd643e46cd5762b710c4ddc43574cbec2e
+2022-09-16 01:55:41.177 +03:00 [INF] You are using the in-memory version of the persisted grant store. This will store consent decisions, authorization codes, refresh and reference tokens in memory only. If you are using any of those features in production, you want to switch to a different store implementation.
+2022-09-16 01:55:41.178 +03:00 [INF] Using the default authentication scheme Identity.Application for IdentityServer
+2022-09-16 01:55:41.178 +03:00 [DBG] Using Identity.Application as default ASP.NET Core scheme for authentication
+2022-09-16 01:55:41.178 +03:00 [DBG] Using Identity.External as default ASP.NET Core scheme for sign-in
+2022-09-16 01:55:41.178 +03:00 [DBG] Using Identity.External as default ASP.NET Core scheme for sign-out
+2022-09-16 01:55:41.179 +03:00 [DBG] Using Identity.Application as default ASP.NET Core scheme for challenge
+2022-09-16 01:55:41.179 +03:00 [DBG] Using Identity.Application as default ASP.NET Core scheme for forbid
+2022-09-16 01:55:41.237 +03:00 [INF] Application started. Press Ctrl+C to shut down.
+2022-09-16 01:55:41.237 +03:00 [INF] Hosting environment: Development
+2022-09-16 01:55:41.237 +03:00 [INF] Content root path: D:\programming\dotNet\OlegLearning\Sigma_Trainee\PowUkraine\IdentityServer
+2022-09-16 01:55:41.310 +03:00 [DBG] Login Url: /Authorization/Login
+2022-09-16 01:55:41.311 +03:00 [DBG] Login Return Url Parameter: ReturnUrl
+2022-09-16 01:55:41.311 +03:00 [DBG] Logout Url: /Authorization/Logout
+2022-09-16 01:55:41.311 +03:00 [DBG] ConsentUrl Url: /consent
+2022-09-16 01:55:41.311 +03:00 [DBG] Consent Return Url Parameter: returnUrl
+2022-09-16 01:55:41.311 +03:00 [DBG] Error Url: /home/error
+2022-09-16 01:55:41.311 +03:00 [DBG] Error Id Parameter: errorId
+2022-09-16 01:56:47.437 +03:00 [INF] Starting host...
+2022-09-16 01:56:49.457 +03:00 [INF] Starting IdentityServer4 version 4.1.2+997a6cdd643e46cd5762b710c4ddc43574cbec2e
+2022-09-16 01:56:49.464 +03:00 [INF] You are using the in-memory version of the persisted grant store. This will store consent decisions, authorization codes, refresh and reference tokens in memory only. If you are using any of those features in production, you want to switch to a different store implementation.
+2022-09-16 01:56:49.465 +03:00 [INF] Using the default authentication scheme Identity.Application for IdentityServer
+2022-09-16 01:56:49.465 +03:00 [DBG] Using Identity.Application as default ASP.NET Core scheme for authentication
+2022-09-16 01:56:49.465 +03:00 [DBG] Using Identity.External as default ASP.NET Core scheme for sign-in
+2022-09-16 01:56:49.465 +03:00 [DBG] Using Identity.External as default ASP.NET Core scheme for sign-out
+2022-09-16 01:56:49.466 +03:00 [DBG] Using Identity.Application as default ASP.NET Core scheme for challenge
+2022-09-16 01:56:49.466 +03:00 [DBG] Using Identity.Application as default ASP.NET Core scheme for forbid
+2022-09-16 01:56:49.526 +03:00 [INF] Application started. Press Ctrl+C to shut down.
+2022-09-16 01:56:49.526 +03:00 [INF] Hosting environment: Development
+2022-09-16 01:56:49.526 +03:00 [INF] Content root path: D:\programming\dotNet\OlegLearning\Sigma_Trainee\PowUkraine\IdentityServer
+2022-09-16 01:56:49.607 +03:00 [DBG] Login Url: /Authorization/Login
+2022-09-16 01:56:49.609 +03:00 [DBG] Login Return Url Parameter: ReturnUrl
+2022-09-16 01:56:49.609 +03:00 [DBG] Logout Url: /Authorization/Logout
+2022-09-16 01:56:49.609 +03:00 [DBG] ConsentUrl Url: /consent
+2022-09-16 01:56:49.609 +03:00 [DBG] Consent Return Url Parameter: returnUrl
+2022-09-16 01:56:49.609 +03:00 [DBG] Error Url: /home/error
+2022-09-16 01:56:49.609 +03:00 [DBG] Error Id Parameter: errorId
+2022-09-16 01:57:20.049 +03:00 [INF] Starting host...
+2022-09-16 01:57:21.883 +03:00 [INF] Starting IdentityServer4 version 4.1.2+997a6cdd643e46cd5762b710c4ddc43574cbec2e
+2022-09-16 01:57:21.890 +03:00 [INF] You are using the in-memory version of the persisted grant store. This will store consent decisions, authorization codes, refresh and reference tokens in memory only. If you are using any of those features in production, you want to switch to a different store implementation.
+2022-09-16 01:57:21.892 +03:00 [INF] Using the default authentication scheme Identity.Application for IdentityServer
+2022-09-16 01:57:21.892 +03:00 [DBG] Using Identity.Application as default ASP.NET Core scheme for authentication
+2022-09-16 01:57:21.892 +03:00 [DBG] Using Identity.External as default ASP.NET Core scheme for sign-in
+2022-09-16 01:57:21.892 +03:00 [DBG] Using Identity.External as default ASP.NET Core scheme for sign-out
+2022-09-16 01:57:21.892 +03:00 [DBG] Using Identity.Application as default ASP.NET Core scheme for challenge
+2022-09-16 01:57:21.892 +03:00 [DBG] Using Identity.Application as default ASP.NET Core scheme for forbid
+2022-09-16 01:57:21.949 +03:00 [INF] Application started. Press Ctrl+C to shut down.
+2022-09-16 01:57:21.949 +03:00 [INF] Hosting environment: Development
+2022-09-16 01:57:21.949 +03:00 [INF] Content root path: D:\programming\dotNet\OlegLearning\Sigma_Trainee\PowUkraine\IdentityServer
+2022-09-16 01:57:22.022 +03:00 [DBG] Login Url: /Authorization/Login
+2022-09-16 01:57:22.023 +03:00 [DBG] Login Return Url Parameter: ReturnUrl
+2022-09-16 01:57:22.023 +03:00 [DBG] Logout Url: /Authorization/Logout
+2022-09-16 01:57:22.023 +03:00 [DBG] ConsentUrl Url: /consent
+2022-09-16 01:57:22.023 +03:00 [DBG] Consent Return Url Parameter: returnUrl
+2022-09-16 01:57:22.023 +03:00 [DBG] Error Url: /home/error
+2022-09-16 01:57:22.023 +03:00 [DBG] Error Id Parameter: errorId
+2022-09-16 01:57:42.371 +03:00 [INF] Starting host...
+2022-09-16 01:57:44.217 +03:00 [INF] Starting IdentityServer4 version 4.1.2+997a6cdd643e46cd5762b710c4ddc43574cbec2e
+2022-09-16 01:57:44.224 +03:00 [INF] You are using the in-memory version of the persisted grant store. This will store consent decisions, authorization codes, refresh and reference tokens in memory only. If you are using any of those features in production, you want to switch to a different store implementation.
+2022-09-16 01:57:44.226 +03:00 [INF] Using the default authentication scheme Identity.Application for IdentityServer
+2022-09-16 01:57:44.226 +03:00 [DBG] Using Identity.Application as default ASP.NET Core scheme for authentication
+2022-09-16 01:57:44.227 +03:00 [DBG] Using Identity.External as default ASP.NET Core scheme for sign-in
+2022-09-16 01:57:44.227 +03:00 [DBG] Using Identity.External as default ASP.NET Core scheme for sign-out
+2022-09-16 01:57:44.227 +03:00 [DBG] Using Identity.Application as default ASP.NET Core scheme for challenge
+2022-09-16 01:57:44.227 +03:00 [DBG] Using Identity.Application as default ASP.NET Core scheme for forbid
+2022-09-16 01:57:44.289 +03:00 [INF] Application started. Press Ctrl+C to shut down.
+2022-09-16 01:57:44.289 +03:00 [INF] Hosting environment: Development
+2022-09-16 01:57:44.289 +03:00 [INF] Content root path: D:\programming\dotNet\OlegLearning\Sigma_Trainee\PowUkraine\IdentityServer
+2022-09-16 01:57:44.362 +03:00 [DBG] Login Url: /Authorization/Login
+2022-09-16 01:57:44.363 +03:00 [DBG] Login Return Url Parameter: ReturnUrl
+2022-09-16 01:57:44.363 +03:00 [DBG] Logout Url: /Authorization/Logout
+2022-09-16 01:57:44.364 +03:00 [DBG] ConsentUrl Url: /consent
+2022-09-16 01:57:44.364 +03:00 [DBG] Consent Return Url Parameter: returnUrl
+2022-09-16 01:57:44.364 +03:00 [DBG] Error Url: /home/error
+2022-09-16 01:57:44.364 +03:00 [DBG] Error Id Parameter: errorId
+2022-09-16 01:58:27.170 +03:00 [INF] Starting host...
+2022-09-16 01:58:28.935 +03:00 [INF] Starting IdentityServer4 version 4.1.2+997a6cdd643e46cd5762b710c4ddc43574cbec2e
+2022-09-16 01:58:28.942 +03:00 [INF] You are using the in-memory version of the persisted grant store. This will store consent decisions, authorization codes, refresh and reference tokens in memory only. If you are using any of those features in production, you want to switch to a different store implementation.
+2022-09-16 01:58:28.943 +03:00 [INF] Using the default authentication scheme Identity.Application for IdentityServer
+2022-09-16 01:58:28.943 +03:00 [DBG] Using Identity.Application as default ASP.NET Core scheme for authentication
+2022-09-16 01:58:28.943 +03:00 [DBG] Using Identity.External as default ASP.NET Core scheme for sign-in
+2022-09-16 01:58:28.943 +03:00 [DBG] Using Identity.External as default ASP.NET Core scheme for sign-out
+2022-09-16 01:58:28.943 +03:00 [DBG] Using Identity.Application as default ASP.NET Core scheme for challenge
+2022-09-16 01:58:28.943 +03:00 [DBG] Using Identity.Application as default ASP.NET Core scheme for forbid
+2022-09-16 01:58:29.001 +03:00 [INF] Application started. Press Ctrl+C to shut down.
+2022-09-16 01:58:29.001 +03:00 [INF] Hosting environment: Development
+2022-09-16 01:58:29.001 +03:00 [INF] Content root path: D:\programming\dotNet\OlegLearning\Sigma_Trainee\PowUkraine\IdentityServer
+2022-09-16 01:58:29.073 +03:00 [DBG] Login Url: /Authorization/Login
+2022-09-16 01:58:29.074 +03:00 [DBG] Login Return Url Parameter: ReturnUrl
+2022-09-16 01:58:29.074 +03:00 [DBG] Logout Url: /Authorization/Logout
+2022-09-16 01:58:29.074 +03:00 [DBG] ConsentUrl Url: /consent
+2022-09-16 01:58:29.074 +03:00 [DBG] Consent Return Url Parameter: returnUrl
+2022-09-16 01:58:29.075 +03:00 [DBG] Error Url: /home/error
+2022-09-16 01:58:29.075 +03:00 [DBG] Error Id Parameter: errorId
+2022-09-16 01:59:13.785 +03:00 [INF] Starting host...
+2022-09-16 01:59:15.589 +03:00 [INF] Starting IdentityServer4 version 4.1.2+997a6cdd643e46cd5762b710c4ddc43574cbec2e
+2022-09-16 01:59:15.596 +03:00 [INF] You are using the in-memory version of the persisted grant store. This will store consent decisions, authorization codes, refresh and reference tokens in memory only. If you are using any of those features in production, you want to switch to a different store implementation.
+2022-09-16 01:59:15.598 +03:00 [INF] Using the default authentication scheme Identity.Application for IdentityServer
+2022-09-16 01:59:15.598 +03:00 [DBG] Using Identity.Application as default ASP.NET Core scheme for authentication
+2022-09-16 01:59:15.598 +03:00 [DBG] Using Identity.External as default ASP.NET Core scheme for sign-in
+2022-09-16 01:59:15.598 +03:00 [DBG] Using Identity.External as default ASP.NET Core scheme for sign-out
+2022-09-16 01:59:15.598 +03:00 [DBG] Using Identity.Application as default ASP.NET Core scheme for challenge
+2022-09-16 01:59:15.598 +03:00 [DBG] Using Identity.Application as default ASP.NET Core scheme for forbid
+2022-09-16 01:59:15.654 +03:00 [INF] Application started. Press Ctrl+C to shut down.
+2022-09-16 01:59:15.654 +03:00 [INF] Hosting environment: Development
+2022-09-16 01:59:15.654 +03:00 [INF] Content root path: D:\programming\dotNet\OlegLearning\Sigma_Trainee\PowUkraine\IdentityServer
+2022-09-16 01:59:15.727 +03:00 [DBG] Login Url: /Authorization/Login
+2022-09-16 01:59:15.728 +03:00 [DBG] Login Return Url Parameter: ReturnUrl
+2022-09-16 01:59:15.728 +03:00 [DBG] Logout Url: /Authorization/Logout
+2022-09-16 01:59:15.728 +03:00 [DBG] ConsentUrl Url: /consent
+2022-09-16 01:59:15.728 +03:00 [DBG] Consent Return Url Parameter: returnUrl
+2022-09-16 01:59:15.728 +03:00 [DBG] Error Url: /home/error
+2022-09-16 01:59:15.728 +03:00 [DBG] Error Id Parameter: errorId
+2022-09-16 02:03:33.837 +03:00 [INF] Starting host...
+2022-09-16 02:03:35.787 +03:00 [INF] Starting IdentityServer4 version 4.1.2+997a6cdd643e46cd5762b710c4ddc43574cbec2e
+2022-09-16 02:03:35.794 +03:00 [INF] You are using the in-memory version of the persisted grant store. This will store consent decisions, authorization codes, refresh and reference tokens in memory only. If you are using any of those features in production, you want to switch to a different store implementation.
+2022-09-16 02:03:35.796 +03:00 [INF] Using the default authentication scheme Identity.Application for IdentityServer
+2022-09-16 02:03:35.796 +03:00 [DBG] Using Identity.Application as default ASP.NET Core scheme for authentication
+2022-09-16 02:03:35.796 +03:00 [DBG] Using Identity.External as default ASP.NET Core scheme for sign-in
+2022-09-16 02:03:35.796 +03:00 [DBG] Using Identity.External as default ASP.NET Core scheme for sign-out
+2022-09-16 02:03:35.796 +03:00 [DBG] Using Identity.Application as default ASP.NET Core scheme for challenge
+2022-09-16 02:03:35.796 +03:00 [DBG] Using Identity.Application as default ASP.NET Core scheme for forbid
+2022-09-16 02:03:35.856 +03:00 [INF] Application started. Press Ctrl+C to shut down.
+2022-09-16 02:03:35.856 +03:00 [INF] Hosting environment: Development
+2022-09-16 02:03:35.856 +03:00 [INF] Content root path: D:\programming\dotNet\OlegLearning\Sigma_Trainee\PowUkraine\IdentityServer
+2022-09-16 02:03:35.927 +03:00 [DBG] Login Url: /Authorization/Login
+2022-09-16 02:03:35.928 +03:00 [DBG] Login Return Url Parameter: ReturnUrl
+2022-09-16 02:03:35.928 +03:00 [DBG] Logout Url: /Authorization/Logout
+2022-09-16 02:03:35.928 +03:00 [DBG] ConsentUrl Url: /consent
+2022-09-16 02:03:35.929 +03:00 [DBG] Consent Return Url Parameter: returnUrl
+2022-09-16 02:03:35.929 +03:00 [DBG] Error Url: /home/error
+2022-09-16 02:03:35.929 +03:00 [DBG] Error Id Parameter: errorId
+2022-09-16 02:04:06.981 +03:00 [INF] Starting host...
+2022-09-16 02:04:08.796 +03:00 [INF] Starting IdentityServer4 version 4.1.2+997a6cdd643e46cd5762b710c4ddc43574cbec2e
+2022-09-16 02:04:08.802 +03:00 [INF] You are using the in-memory version of the persisted grant store. This will store consent decisions, authorization codes, refresh and reference tokens in memory only. If you are using any of those features in production, you want to switch to a different store implementation.
+2022-09-16 02:04:08.804 +03:00 [INF] Using the default authentication scheme Identity.Application for IdentityServer
+2022-09-16 02:04:08.804 +03:00 [DBG] Using Identity.Application as default ASP.NET Core scheme for authentication
+2022-09-16 02:04:08.804 +03:00 [DBG] Using Identity.External as default ASP.NET Core scheme for sign-in
+2022-09-16 02:04:08.804 +03:00 [DBG] Using Identity.External as default ASP.NET Core scheme for sign-out
+2022-09-16 02:04:08.804 +03:00 [DBG] Using Identity.Application as default ASP.NET Core scheme for challenge
+2022-09-16 02:04:08.804 +03:00 [DBG] Using Identity.Application as default ASP.NET Core scheme for forbid
+2022-09-16 02:04:08.861 +03:00 [INF] Application started. Press Ctrl+C to shut down.
+2022-09-16 02:04:08.861 +03:00 [INF] Hosting environment: Development
+2022-09-16 02:04:08.861 +03:00 [INF] Content root path: D:\programming\dotNet\OlegLearning\Sigma_Trainee\PowUkraine\IdentityServer
+2022-09-16 02:04:08.934 +03:00 [DBG] Login Url: /Authorization/Login
+2022-09-16 02:04:08.935 +03:00 [DBG] Login Return Url Parameter: ReturnUrl
+2022-09-16 02:04:08.935 +03:00 [DBG] Logout Url: /Authorization/Logout
+2022-09-16 02:04:08.935 +03:00 [DBG] ConsentUrl Url: /consent
+2022-09-16 02:04:08.935 +03:00 [DBG] Consent Return Url Parameter: returnUrl
+2022-09-16 02:04:08.935 +03:00 [DBG] Error Url: /home/error
+2022-09-16 02:04:08.935 +03:00 [DBG] Error Id Parameter: errorId
+2022-09-16 02:04:50.938 +03:00 [INF] Starting host...
+2022-09-16 02:04:52.745 +03:00 [INF] Starting IdentityServer4 version 4.1.2+997a6cdd643e46cd5762b710c4ddc43574cbec2e
+2022-09-16 02:04:52.751 +03:00 [INF] You are using the in-memory version of the persisted grant store. This will store consent decisions, authorization codes, refresh and reference tokens in memory only. If you are using any of those features in production, you want to switch to a different store implementation.
+2022-09-16 02:04:52.753 +03:00 [INF] Using the default authentication scheme Identity.Application for IdentityServer
+2022-09-16 02:04:52.753 +03:00 [DBG] Using Identity.Application as default ASP.NET Core scheme for authentication
+2022-09-16 02:04:52.753 +03:00 [DBG] Using Identity.External as default ASP.NET Core scheme for sign-in
+2022-09-16 02:04:52.753 +03:00 [DBG] Using Identity.External as default ASP.NET Core scheme for sign-out
+2022-09-16 02:04:52.753 +03:00 [DBG] Using Identity.Application as default ASP.NET Core scheme for challenge
+2022-09-16 02:04:52.753 +03:00 [DBG] Using Identity.Application as default ASP.NET Core scheme for forbid
+2022-09-16 02:04:52.808 +03:00 [INF] Application started. Press Ctrl+C to shut down.
+2022-09-16 02:04:52.808 +03:00 [INF] Hosting environment: Development
+2022-09-16 02:04:52.808 +03:00 [INF] Content root path: D:\programming\dotNet\OlegLearning\Sigma_Trainee\PowUkraine\IdentityServer
+2022-09-16 02:04:52.884 +03:00 [DBG] Login Url: /Authorization/Login
+2022-09-16 02:04:52.885 +03:00 [DBG] Login Return Url Parameter: ReturnUrl
+2022-09-16 02:04:52.885 +03:00 [DBG] Logout Url: /Authorization/Logout
+2022-09-16 02:04:52.885 +03:00 [DBG] ConsentUrl Url: /consent
+2022-09-16 02:04:52.885 +03:00 [DBG] Consent Return Url Parameter: returnUrl
+2022-09-16 02:04:52.885 +03:00 [DBG] Error Url: /home/error
+2022-09-16 02:04:52.885 +03:00 [DBG] Error Id Parameter: errorId
+2022-09-16 02:08:25.146 +03:00 [INF] Starting host...
+2022-09-16 02:08:27.007 +03:00 [INF] Starting IdentityServer4 version 4.1.2+997a6cdd643e46cd5762b710c4ddc43574cbec2e
+2022-09-16 02:08:27.014 +03:00 [INF] You are using the in-memory version of the persisted grant store. This will store consent decisions, authorization codes, refresh and reference tokens in memory only. If you are using any of those features in production, you want to switch to a different store implementation.
+2022-09-16 02:08:27.015 +03:00 [INF] Using the default authentication scheme Identity.Application for IdentityServer
+2022-09-16 02:08:27.015 +03:00 [DBG] Using Identity.Application as default ASP.NET Core scheme for authentication
+2022-09-16 02:08:27.015 +03:00 [DBG] Using Identity.External as default ASP.NET Core scheme for sign-in
+2022-09-16 02:08:27.015 +03:00 [DBG] Using Identity.External as default ASP.NET Core scheme for sign-out
+2022-09-16 02:08:27.015 +03:00 [DBG] Using Identity.Application as default ASP.NET Core scheme for challenge
+2022-09-16 02:08:27.016 +03:00 [DBG] Using Identity.Application as default ASP.NET Core scheme for forbid
+2022-09-16 02:08:27.078 +03:00 [INF] Application started. Press Ctrl+C to shut down.
+2022-09-16 02:08:27.078 +03:00 [INF] Hosting environment: Development
+2022-09-16 02:08:27.078 +03:00 [INF] Content root path: D:\programming\dotNet\OlegLearning\Sigma_Trainee\PowUkraine\IdentityServer
+2022-09-16 02:08:27.170 +03:00 [DBG] Login Url: /Authorization/Login
+2022-09-16 02:08:27.172 +03:00 [DBG] Login Return Url Parameter: ReturnUrl
+2022-09-16 02:08:27.172 +03:00 [DBG] Logout Url: /Authorization/Logout
+2022-09-16 02:08:27.172 +03:00 [DBG] ConsentUrl Url: /consent
+2022-09-16 02:08:27.172 +03:00 [DBG] Consent Return Url Parameter: returnUrl
+2022-09-16 02:08:27.172 +03:00 [DBG] Error Url: /home/error
+2022-09-16 02:08:27.172 +03:00 [DBG] Error Id Parameter: errorId
+2022-09-16 02:09:19.163 +03:00 [INF] Starting host...
+2022-09-16 02:09:20.975 +03:00 [INF] Starting IdentityServer4 version 4.1.2+997a6cdd643e46cd5762b710c4ddc43574cbec2e
+2022-09-16 02:09:20.982 +03:00 [INF] You are using the in-memory version of the persisted grant store. This will store consent decisions, authorization codes, refresh and reference tokens in memory only. If you are using any of those features in production, you want to switch to a different store implementation.
+2022-09-16 02:09:20.984 +03:00 [INF] Using the default authentication scheme Identity.Application for IdentityServer
+2022-09-16 02:09:20.984 +03:00 [DBG] Using Identity.Application as default ASP.NET Core scheme for authentication
+2022-09-16 02:09:20.984 +03:00 [DBG] Using Identity.External as default ASP.NET Core scheme for sign-in
+2022-09-16 02:09:20.984 +03:00 [DBG] Using Identity.External as default ASP.NET Core scheme for sign-out
+2022-09-16 02:09:20.984 +03:00 [DBG] Using Identity.Application as default ASP.NET Core scheme for challenge
+2022-09-16 02:09:20.984 +03:00 [DBG] Using Identity.Application as default ASP.NET Core scheme for forbid
+2022-09-16 02:09:21.041 +03:00 [INF] Application started. Press Ctrl+C to shut down.
+2022-09-16 02:09:21.041 +03:00 [INF] Hosting environment: Development
+2022-09-16 02:09:21.041 +03:00 [INF] Content root path: D:\programming\dotNet\OlegLearning\Sigma_Trainee\PowUkraine\IdentityServer
+2022-09-16 02:09:21.115 +03:00 [DBG] Login Url: /Authorization/Login
+2022-09-16 02:09:21.116 +03:00 [DBG] Login Return Url Parameter: ReturnUrl
+2022-09-16 02:09:21.116 +03:00 [DBG] Logout Url: /Authorization/Logout
+2022-09-16 02:09:21.116 +03:00 [DBG] ConsentUrl Url: /consent
+2022-09-16 02:09:21.116 +03:00 [DBG] Consent Return Url Parameter: returnUrl
+2022-09-16 02:09:21.116 +03:00 [DBG] Error Url: /home/error
+2022-09-16 02:09:21.116 +03:00 [DBG] Error Id Parameter: errorId
+2022-09-16 02:19:02.063 +03:00 [INF] Starting host...
+2022-09-16 02:19:04.118 +03:00 [INF] Starting IdentityServer4 version 4.1.2+997a6cdd643e46cd5762b710c4ddc43574cbec2e
+2022-09-16 02:19:04.126 +03:00 [INF] You are using the in-memory version of the persisted grant store. This will store consent decisions, authorization codes, refresh and reference tokens in memory only. If you are using any of those features in production, you want to switch to a different store implementation.
+2022-09-16 02:19:04.128 +03:00 [INF] Using the default authentication scheme Identity.Application for IdentityServer
+2022-09-16 02:19:04.128 +03:00 [DBG] Using Identity.Application as default ASP.NET Core scheme for authentication
+2022-09-16 02:19:04.128 +03:00 [DBG] Using Identity.External as default ASP.NET Core scheme for sign-in
+2022-09-16 02:19:04.128 +03:00 [DBG] Using Identity.External as default ASP.NET Core scheme for sign-out
+2022-09-16 02:19:04.128 +03:00 [DBG] Using Identity.Application as default ASP.NET Core scheme for challenge
+2022-09-16 02:19:04.128 +03:00 [DBG] Using Identity.Application as default ASP.NET Core scheme for forbid
+2022-09-16 02:19:04.198 +03:00 [INF] Application started. Press Ctrl+C to shut down.
+2022-09-16 02:19:04.198 +03:00 [INF] Hosting environment: Development
+2022-09-16 02:19:04.198 +03:00 [INF] Content root path: D:\programming\dotNet\OlegLearning\Sigma_Trainee\PowUkraine\IdentityServer
+2022-09-16 02:19:04.282 +03:00 [DBG] Login Url: /Authorization/Login
+2022-09-16 02:19:04.283 +03:00 [DBG] Login Return Url Parameter: ReturnUrl
+2022-09-16 02:19:04.283 +03:00 [DBG] Logout Url: /Authorization/Logout
+2022-09-16 02:19:04.283 +03:00 [DBG] ConsentUrl Url: /consent
+2022-09-16 02:19:04.283 +03:00 [DBG] Consent Return Url Parameter: returnUrl
+2022-09-16 02:19:04.283 +03:00 [DBG] Error Url: /home/error
+2022-09-16 02:19:04.283 +03:00 [DBG] Error Id Parameter: errorId
+2022-09-16 02:19:58.577 +03:00 [INF] Starting host...
+2022-09-16 02:20:00.409 +03:00 [INF] Starting IdentityServer4 version 4.1.2+997a6cdd643e46cd5762b710c4ddc43574cbec2e
+2022-09-16 02:20:00.418 +03:00 [INF] You are using the in-memory version of the persisted grant store. This will store consent decisions, authorization codes, refresh and reference tokens in memory only. If you are using any of those features in production, you want to switch to a different store implementation.
+2022-09-16 02:20:00.420 +03:00 [INF] Using the default authentication scheme Identity.Application for IdentityServer
+2022-09-16 02:20:00.420 +03:00 [DBG] Using Identity.Application as default ASP.NET Core scheme for authentication
+2022-09-16 02:20:00.420 +03:00 [DBG] Using Identity.External as default ASP.NET Core scheme for sign-in
+2022-09-16 02:20:00.420 +03:00 [DBG] Using Identity.External as default ASP.NET Core scheme for sign-out
+2022-09-16 02:20:00.420 +03:00 [DBG] Using Identity.Application as default ASP.NET Core scheme for challenge
+2022-09-16 02:20:00.420 +03:00 [DBG] Using Identity.Application as default ASP.NET Core scheme for forbid
+2022-09-16 02:20:00.482 +03:00 [INF] Application started. Press Ctrl+C to shut down.
+2022-09-16 02:20:00.482 +03:00 [INF] Hosting environment: Development
+2022-09-16 02:20:00.482 +03:00 [INF] Content root path: D:\programming\dotNet\OlegLearning\Sigma_Trainee\PowUkraine\IdentityServer
+2022-09-16 02:20:00.557 +03:00 [DBG] Login Url: /Authorization/Login
+2022-09-16 02:20:00.558 +03:00 [DBG] Login Return Url Parameter: ReturnUrl
+2022-09-16 02:20:00.558 +03:00 [DBG] Logout Url: /Authorization/Logout
+2022-09-16 02:20:00.558 +03:00 [DBG] ConsentUrl Url: /consent
+2022-09-16 02:20:00.558 +03:00 [DBG] Consent Return Url Parameter: returnUrl
+2022-09-16 02:20:00.558 +03:00 [DBG] Error Url: /home/error
+2022-09-16 02:20:00.558 +03:00 [DBG] Error Id Parameter: errorId
+2022-09-16 02:24:35.080 +03:00 [INF] Starting host...
+2022-09-16 02:24:36.906 +03:00 [INF] Starting IdentityServer4 version 4.1.2+997a6cdd643e46cd5762b710c4ddc43574cbec2e
+2022-09-16 02:24:36.913 +03:00 [INF] You are using the in-memory version of the persisted grant store. This will store consent decisions, authorization codes, refresh and reference tokens in memory only. If you are using any of those features in production, you want to switch to a different store implementation.
+2022-09-16 02:24:36.915 +03:00 [INF] Using the default authentication scheme Identity.Application for IdentityServer
+2022-09-16 02:24:36.915 +03:00 [DBG] Using Identity.Application as default ASP.NET Core scheme for authentication
+2022-09-16 02:24:36.915 +03:00 [DBG] Using Identity.External as default ASP.NET Core scheme for sign-in
+2022-09-16 02:24:36.915 +03:00 [DBG] Using Identity.External as default ASP.NET Core scheme for sign-out
+2022-09-16 02:24:36.915 +03:00 [DBG] Using Identity.Application as default ASP.NET Core scheme for challenge
+2022-09-16 02:24:36.915 +03:00 [DBG] Using Identity.Application as default ASP.NET Core scheme for forbid
+2022-09-16 02:24:36.983 +03:00 [INF] Application started. Press Ctrl+C to shut down.
+2022-09-16 02:24:36.983 +03:00 [INF] Hosting environment: Development
+2022-09-16 02:24:36.983 +03:00 [INF] Content root path: D:\programming\dotNet\OlegLearning\Sigma_Trainee\PowUkraine\IdentityServer
+2022-09-16 02:24:37.058 +03:00 [DBG] Login Url: /Authorization/Login
+2022-09-16 02:24:37.060 +03:00 [DBG] Login Return Url Parameter: ReturnUrl
+2022-09-16 02:24:37.060 +03:00 [DBG] Logout Url: /Authorization/Logout
+2022-09-16 02:24:37.060 +03:00 [DBG] ConsentUrl Url: /consent
+2022-09-16 02:24:37.060 +03:00 [DBG] Consent Return Url Parameter: returnUrl
+2022-09-16 02:24:37.060 +03:00 [DBG] Error Url: /home/error
+2022-09-16 02:24:37.060 +03:00 [DBG] Error Id Parameter: errorId
+2022-09-16 02:25:13.248 +03:00 [INF] Starting host...
+2022-09-16 02:25:14.964 +03:00 [INF] Starting IdentityServer4 version 4.1.2+997a6cdd643e46cd5762b710c4ddc43574cbec2e
+2022-09-16 02:25:14.970 +03:00 [INF] You are using the in-memory version of the persisted grant store. This will store consent decisions, authorization codes, refresh and reference tokens in memory only. If you are using any of those features in production, you want to switch to a different store implementation.
+2022-09-16 02:25:14.972 +03:00 [INF] Using the default authentication scheme Identity.Application for IdentityServer
+2022-09-16 02:25:14.972 +03:00 [DBG] Using Identity.Application as default ASP.NET Core scheme for authentication
+2022-09-16 02:25:14.972 +03:00 [DBG] Using Identity.External as default ASP.NET Core scheme for sign-in
+2022-09-16 02:25:14.972 +03:00 [DBG] Using Identity.External as default ASP.NET Core scheme for sign-out
+2022-09-16 02:25:14.972 +03:00 [DBG] Using Identity.Application as default ASP.NET Core scheme for challenge
+2022-09-16 02:25:14.972 +03:00 [DBG] Using Identity.Application as default ASP.NET Core scheme for forbid
+2022-09-16 02:25:15.029 +03:00 [INF] Application started. Press Ctrl+C to shut down.
+2022-09-16 02:25:15.029 +03:00 [INF] Hosting environment: Development
+2022-09-16 02:25:15.029 +03:00 [INF] Content root path: D:\programming\dotNet\OlegLearning\Sigma_Trainee\PowUkraine\IdentityServer
+2022-09-16 02:25:15.105 +03:00 [DBG] Login Url: /Authorization/Login
+2022-09-16 02:25:15.106 +03:00 [DBG] Login Return Url Parameter: ReturnUrl
+2022-09-16 02:25:15.106 +03:00 [DBG] Logout Url: /Authorization/Logout
+2022-09-16 02:25:15.106 +03:00 [DBG] ConsentUrl Url: /consent
+2022-09-16 02:25:15.106 +03:00 [DBG] Consent Return Url Parameter: returnUrl
+2022-09-16 02:25:15.106 +03:00 [DBG] Error Url: /home/error
+2022-09-16 02:25:15.106 +03:00 [DBG] Error Id Parameter: errorId
+2022-09-16 02:26:38.644 +03:00 [INF] Starting host...
+2022-09-16 02:26:40.410 +03:00 [INF] Starting IdentityServer4 version 4.1.2+997a6cdd643e46cd5762b710c4ddc43574cbec2e
+2022-09-16 02:26:40.417 +03:00 [INF] You are using the in-memory version of the persisted grant store. This will store consent decisions, authorization codes, refresh and reference tokens in memory only. If you are using any of those features in production, you want to switch to a different store implementation.
+2022-09-16 02:26:40.418 +03:00 [INF] Using the default authentication scheme Identity.Application for IdentityServer
+2022-09-16 02:26:40.418 +03:00 [DBG] Using Identity.Application as default ASP.NET Core scheme for authentication
+2022-09-16 02:26:40.418 +03:00 [DBG] Using Identity.External as default ASP.NET Core scheme for sign-in
+2022-09-16 02:26:40.418 +03:00 [DBG] Using Identity.External as default ASP.NET Core scheme for sign-out
+2022-09-16 02:26:40.418 +03:00 [DBG] Using Identity.Application as default ASP.NET Core scheme for challenge
+2022-09-16 02:26:40.418 +03:00 [DBG] Using Identity.Application as default ASP.NET Core scheme for forbid
+2022-09-16 02:26:40.480 +03:00 [INF] Application started. Press Ctrl+C to shut down.
+2022-09-16 02:26:40.480 +03:00 [INF] Hosting environment: Development
+2022-09-16 02:26:40.480 +03:00 [INF] Content root path: D:\programming\dotNet\OlegLearning\Sigma_Trainee\PowUkraine\IdentityServer
+2022-09-16 02:26:40.557 +03:00 [DBG] Login Url: /Authorization/Login
+2022-09-16 02:26:40.558 +03:00 [DBG] Login Return Url Parameter: ReturnUrl
+2022-09-16 02:26:40.558 +03:00 [DBG] Logout Url: /Authorization/Logout
+2022-09-16 02:26:40.558 +03:00 [DBG] ConsentUrl Url: /consent
+2022-09-16 02:26:40.558 +03:00 [DBG] Consent Return Url Parameter: returnUrl
+2022-09-16 02:26:40.558 +03:00 [DBG] Error Url: /home/error
+2022-09-16 02:26:40.558 +03:00 [DBG] Error Id Parameter: errorId
+2022-09-16 02:27:15.479 +03:00 [INF] Starting host...
+2022-09-16 02:27:17.246 +03:00 [INF] Starting IdentityServer4 version 4.1.2+997a6cdd643e46cd5762b710c4ddc43574cbec2e
+2022-09-16 02:27:17.252 +03:00 [INF] You are using the in-memory version of the persisted grant store. This will store consent decisions, authorization codes, refresh and reference tokens in memory only. If you are using any of those features in production, you want to switch to a different store implementation.
+2022-09-16 02:27:17.254 +03:00 [INF] Using the default authentication scheme Identity.Application for IdentityServer
+2022-09-16 02:27:17.254 +03:00 [DBG] Using Identity.Application as default ASP.NET Core scheme for authentication
+2022-09-16 02:27:17.254 +03:00 [DBG] Using Identity.External as default ASP.NET Core scheme for sign-in
+2022-09-16 02:27:17.254 +03:00 [DBG] Using Identity.External as default ASP.NET Core scheme for sign-out
+2022-09-16 02:27:17.254 +03:00 [DBG] Using Identity.Application as default ASP.NET Core scheme for challenge
+2022-09-16 02:27:17.254 +03:00 [DBG] Using Identity.Application as default ASP.NET Core scheme for forbid
+2022-09-16 02:27:17.311 +03:00 [INF] Application started. Press Ctrl+C to shut down.
+2022-09-16 02:27:17.311 +03:00 [INF] Hosting environment: Development
+2022-09-16 02:27:17.311 +03:00 [INF] Content root path: D:\programming\dotNet\OlegLearning\Sigma_Trainee\PowUkraine\IdentityServer
+2022-09-16 02:27:17.383 +03:00 [DBG] Login Url: /Authorization/Login
+2022-09-16 02:27:17.384 +03:00 [DBG] Login Return Url Parameter: ReturnUrl
+2022-09-16 02:27:17.384 +03:00 [DBG] Logout Url: /Authorization/Logout
+2022-09-16 02:27:17.384 +03:00 [DBG] ConsentUrl Url: /consent
+2022-09-16 02:27:17.384 +03:00 [DBG] Consent Return Url Parameter: returnUrl
+2022-09-16 02:27:17.384 +03:00 [DBG] Error Url: /home/error
+2022-09-16 02:27:17.384 +03:00 [DBG] Error Id Parameter: errorId
+2022-09-16 02:27:52.379 +03:00 [INF] Starting host...
+2022-09-16 02:27:54.122 +03:00 [INF] Starting IdentityServer4 version 4.1.2+997a6cdd643e46cd5762b710c4ddc43574cbec2e
+2022-09-16 02:27:54.129 +03:00 [INF] You are using the in-memory version of the persisted grant store. This will store consent decisions, authorization codes, refresh and reference tokens in memory only. If you are using any of those features in production, you want to switch to a different store implementation.
+2022-09-16 02:27:54.130 +03:00 [INF] Using the default authentication scheme Identity.Application for IdentityServer
+2022-09-16 02:27:54.130 +03:00 [DBG] Using Identity.Application as default ASP.NET Core scheme for authentication
+2022-09-16 02:27:54.130 +03:00 [DBG] Using Identity.External as default ASP.NET Core scheme for sign-in
+2022-09-16 02:27:54.130 +03:00 [DBG] Using Identity.External as default ASP.NET Core scheme for sign-out
+2022-09-16 02:27:54.130 +03:00 [DBG] Using Identity.Application as default ASP.NET Core scheme for challenge
+2022-09-16 02:27:54.131 +03:00 [DBG] Using Identity.Application as default ASP.NET Core scheme for forbid
+2022-09-16 02:27:54.189 +03:00 [INF] Application started. Press Ctrl+C to shut down.
+2022-09-16 02:27:54.189 +03:00 [INF] Hosting environment: Development
+2022-09-16 02:27:54.189 +03:00 [INF] Content root path: D:\programming\dotNet\OlegLearning\Sigma_Trainee\PowUkraine\IdentityServer
+2022-09-16 02:27:54.262 +03:00 [DBG] Login Url: /Authorization/Login
+2022-09-16 02:27:54.263 +03:00 [DBG] Login Return Url Parameter: ReturnUrl
+2022-09-16 02:27:54.263 +03:00 [DBG] Logout Url: /Authorization/Logout
+2022-09-16 02:27:54.263 +03:00 [DBG] ConsentUrl Url: /consent
+2022-09-16 02:27:54.263 +03:00 [DBG] Consent Return Url Parameter: returnUrl
+2022-09-16 02:27:54.263 +03:00 [DBG] Error Url: /home/error
+2022-09-16 02:27:54.263 +03:00 [DBG] Error Id Parameter: errorId
+2022-09-16 02:28:12.850 +03:00 [INF] Starting host...
+2022-09-16 02:28:14.551 +03:00 [INF] Starting IdentityServer4 version 4.1.2+997a6cdd643e46cd5762b710c4ddc43574cbec2e
+2022-09-16 02:28:14.558 +03:00 [INF] You are using the in-memory version of the persisted grant store. This will store consent decisions, authorization codes, refresh and reference tokens in memory only. If you are using any of those features in production, you want to switch to a different store implementation.
+2022-09-16 02:28:14.559 +03:00 [INF] Using the default authentication scheme Identity.Application for IdentityServer
+2022-09-16 02:28:14.559 +03:00 [DBG] Using Identity.Application as default ASP.NET Core scheme for authentication
+2022-09-16 02:28:14.559 +03:00 [DBG] Using Identity.External as default ASP.NET Core scheme for sign-in
+2022-09-16 02:28:14.560 +03:00 [DBG] Using Identity.External as default ASP.NET Core scheme for sign-out
+2022-09-16 02:28:14.560 +03:00 [DBG] Using Identity.Application as default ASP.NET Core scheme for challenge
+2022-09-16 02:28:14.560 +03:00 [DBG] Using Identity.Application as default ASP.NET Core scheme for forbid
+2022-09-16 02:28:14.617 +03:00 [INF] Application started. Press Ctrl+C to shut down.
+2022-09-16 02:28:14.617 +03:00 [INF] Hosting environment: Development
+2022-09-16 02:28:14.617 +03:00 [INF] Content root path: D:\programming\dotNet\OlegLearning\Sigma_Trainee\PowUkraine\IdentityServer
+2022-09-16 02:28:14.772 +03:00 [DBG] Login Url: /Authorization/Login
+2022-09-16 02:28:14.773 +03:00 [DBG] Login Return Url Parameter: ReturnUrl
+2022-09-16 02:28:14.773 +03:00 [DBG] Logout Url: /Authorization/Logout
+2022-09-16 02:28:14.773 +03:00 [DBG] ConsentUrl Url: /consent
+2022-09-16 02:28:14.773 +03:00 [DBG] Consent Return Url Parameter: returnUrl
+2022-09-16 02:28:14.773 +03:00 [DBG] Error Url: /home/error
+2022-09-16 02:28:14.773 +03:00 [DBG] Error Id Parameter: errorId
+2022-09-16 02:28:36.250 +03:00 [INF] Starting host...
+2022-09-16 02:28:38.029 +03:00 [INF] Starting IdentityServer4 version 4.1.2+997a6cdd643e46cd5762b710c4ddc43574cbec2e
+2022-09-16 02:28:38.036 +03:00 [INF] You are using the in-memory version of the persisted grant store. This will store consent decisions, authorization codes, refresh and reference tokens in memory only. If you are using any of those features in production, you want to switch to a different store implementation.
+2022-09-16 02:28:38.038 +03:00 [INF] Using the default authentication scheme Identity.Application for IdentityServer
+2022-09-16 02:28:38.038 +03:00 [DBG] Using Identity.Application as default ASP.NET Core scheme for authentication
+2022-09-16 02:28:38.038 +03:00 [DBG] Using Identity.External as default ASP.NET Core scheme for sign-in
+2022-09-16 02:28:38.038 +03:00 [DBG] Using Identity.External as default ASP.NET Core scheme for sign-out
+2022-09-16 02:28:38.038 +03:00 [DBG] Using Identity.Application as default ASP.NET Core scheme for challenge
+2022-09-16 02:28:38.038 +03:00 [DBG] Using Identity.Application as default ASP.NET Core scheme for forbid
+2022-09-16 02:28:38.095 +03:00 [INF] Application started. Press Ctrl+C to shut down.
+2022-09-16 02:28:38.095 +03:00 [INF] Hosting environment: Development
+2022-09-16 02:28:38.095 +03:00 [INF] Content root path: D:\programming\dotNet\OlegLearning\Sigma_Trainee\PowUkraine\IdentityServer
+2022-09-16 02:28:38.166 +03:00 [DBG] Login Url: /Authorization/Login
+2022-09-16 02:28:38.167 +03:00 [DBG] Login Return Url Parameter: ReturnUrl
+2022-09-16 02:28:38.167 +03:00 [DBG] Logout Url: /Authorization/Logout
+2022-09-16 02:28:38.167 +03:00 [DBG] ConsentUrl Url: /consent
+2022-09-16 02:28:38.167 +03:00 [DBG] Consent Return Url Parameter: returnUrl
+2022-09-16 02:28:38.167 +03:00 [DBG] Error Url: /home/error
+2022-09-16 02:28:38.167 +03:00 [DBG] Error Id Parameter: errorId
+2022-09-16 13:44:41.197 +03:00 [INF] Starting host...
+2022-09-16 13:44:47.379 +03:00 [INF] Starting IdentityServer4 version 4.1.2+997a6cdd643e46cd5762b710c4ddc43574cbec2e
+2022-09-16 13:44:47.388 +03:00 [INF] You are using the in-memory version of the persisted grant store. This will store consent decisions, authorization codes, refresh and reference tokens in memory only. If you are using any of those features in production, you want to switch to a different store implementation.
+2022-09-16 13:44:47.390 +03:00 [INF] Using the default authentication scheme Identity.Application for IdentityServer
+2022-09-16 13:44:47.390 +03:00 [DBG] Using Identity.Application as default ASP.NET Core scheme for authentication
+2022-09-16 13:44:47.390 +03:00 [DBG] Using Identity.External as default ASP.NET Core scheme for sign-in
+2022-09-16 13:44:47.390 +03:00 [DBG] Using Identity.External as default ASP.NET Core scheme for sign-out
+2022-09-16 13:44:47.390 +03:00 [DBG] Using Identity.Application as default ASP.NET Core scheme for challenge
+2022-09-16 13:44:47.390 +03:00 [DBG] Using Identity.Application as default ASP.NET Core scheme for forbid
+2022-09-16 13:44:47.548 +03:00 [INF] Application started. Press Ctrl+C to shut down.
+2022-09-16 13:44:47.548 +03:00 [INF] Hosting environment: Development
+2022-09-16 13:44:47.548 +03:00 [INF] Content root path: D:\programming\dotNet\OlegLearning\Sigma_Trainee\PowUkraine\IdentityServer
+2022-09-16 13:44:47.701 +03:00 [DBG] Login Url: /Authorization/Login
+2022-09-16 13:44:47.702 +03:00 [DBG] Login Return Url Parameter: ReturnUrl
+2022-09-16 13:44:47.702 +03:00 [DBG] Logout Url: /Authorization/Logout
+2022-09-16 13:44:47.702 +03:00 [DBG] ConsentUrl Url: /consent
+2022-09-16 13:44:47.702 +03:00 [DBG] Consent Return Url Parameter: returnUrl
+2022-09-16 13:44:47.702 +03:00 [DBG] Error Url: /home/error
+2022-09-16 13:44:47.702 +03:00 [DBG] Error Id Parameter: errorId
+2022-09-16 13:46:00.980 +03:00 [INF] Starting host...
+2022-09-16 13:46:02.890 +03:00 [INF] Starting IdentityServer4 version 4.1.2+997a6cdd643e46cd5762b710c4ddc43574cbec2e
+2022-09-16 13:46:02.897 +03:00 [INF] You are using the in-memory version of the persisted grant store. This will store consent decisions, authorization codes, refresh and reference tokens in memory only. If you are using any of those features in production, you want to switch to a different store implementation.
+2022-09-16 13:46:02.898 +03:00 [INF] Using the default authentication scheme Identity.Application for IdentityServer
+2022-09-16 13:46:02.898 +03:00 [DBG] Using Identity.Application as default ASP.NET Core scheme for authentication
+2022-09-16 13:46:02.898 +03:00 [DBG] Using Identity.External as default ASP.NET Core scheme for sign-in
+2022-09-16 13:46:02.899 +03:00 [DBG] Using Identity.External as default ASP.NET Core scheme for sign-out
+2022-09-16 13:46:02.899 +03:00 [DBG] Using Identity.Application as default ASP.NET Core scheme for challenge
+2022-09-16 13:46:02.899 +03:00 [DBG] Using Identity.Application as default ASP.NET Core scheme for forbid
+2022-09-16 13:46:02.954 +03:00 [INF] Application started. Press Ctrl+C to shut down.
+2022-09-16 13:46:02.955 +03:00 [INF] Hosting environment: Development
+2022-09-16 13:46:02.955 +03:00 [INF] Content root path: D:\programming\dotNet\OlegLearning\Sigma_Trainee\PowUkraine\IdentityServer
+2022-09-16 13:46:03.028 +03:00 [DBG] Login Url: /Authorization/Login
+2022-09-16 13:46:03.029 +03:00 [DBG] Login Return Url Parameter: ReturnUrl
+2022-09-16 13:46:03.029 +03:00 [DBG] Logout Url: /Authorization/Logout
+2022-09-16 13:46:03.029 +03:00 [DBG] ConsentUrl Url: /consent
+2022-09-16 13:46:03.029 +03:00 [DBG] Consent Return Url Parameter: returnUrl
+2022-09-16 13:46:03.029 +03:00 [DBG] Error Url: /home/error
+2022-09-16 13:46:03.029 +03:00 [DBG] Error Id Parameter: errorId
+2022-09-16 13:47:18.005 +03:00 [INF] Starting host...
+2022-09-16 13:47:19.870 +03:00 [INF] Starting IdentityServer4 version 4.1.2+997a6cdd643e46cd5762b710c4ddc43574cbec2e
+2022-09-16 13:47:19.877 +03:00 [INF] You are using the in-memory version of the persisted grant store. This will store consent decisions, authorization codes, refresh and reference tokens in memory only. If you are using any of those features in production, you want to switch to a different store implementation.
+2022-09-16 13:47:19.879 +03:00 [INF] Using the default authentication scheme Identity.Application for IdentityServer
+2022-09-16 13:47:19.879 +03:00 [DBG] Using Identity.Application as default ASP.NET Core scheme for authentication
+2022-09-16 13:47:19.879 +03:00 [DBG] Using Identity.External as default ASP.NET Core scheme for sign-in
+2022-09-16 13:47:19.879 +03:00 [DBG] Using Identity.External as default ASP.NET Core scheme for sign-out
+2022-09-16 13:47:19.879 +03:00 [DBG] Using Identity.Application as default ASP.NET Core scheme for challenge
+2022-09-16 13:47:19.879 +03:00 [DBG] Using Identity.Application as default ASP.NET Core scheme for forbid
+2022-09-16 13:47:19.948 +03:00 [INF] Application started. Press Ctrl+C to shut down.
+2022-09-16 13:47:19.948 +03:00 [INF] Hosting environment: Development
+2022-09-16 13:47:19.948 +03:00 [INF] Content root path: D:\programming\dotNet\OlegLearning\Sigma_Trainee\PowUkraine\IdentityServer
+2022-09-16 13:47:20.020 +03:00 [DBG] Login Url: /Authorization/Login
+2022-09-16 13:47:20.021 +03:00 [DBG] Login Return Url Parameter: ReturnUrl
+2022-09-16 13:47:20.021 +03:00 [DBG] Logout Url: /Authorization/Logout
+2022-09-16 13:47:20.021 +03:00 [DBG] ConsentUrl Url: /consent
+2022-09-16 13:47:20.021 +03:00 [DBG] Consent Return Url Parameter: returnUrl
+2022-09-16 13:47:20.021 +03:00 [DBG] Error Url: /home/error
+2022-09-16 13:47:20.021 +03:00 [DBG] Error Id Parameter: errorId
+2022-09-16 13:49:25.447 +03:00 [INF] Starting host...
+2022-09-16 13:49:27.325 +03:00 [INF] Starting IdentityServer4 version 4.1.2+997a6cdd643e46cd5762b710c4ddc43574cbec2e
+2022-09-16 13:49:27.332 +03:00 [INF] You are using the in-memory version of the persisted grant store. This will store consent decisions, authorization codes, refresh and reference tokens in memory only. If you are using any of those features in production, you want to switch to a different store implementation.
+2022-09-16 13:49:27.334 +03:00 [INF] Using the default authentication scheme Identity.Application for IdentityServer
+2022-09-16 13:49:27.334 +03:00 [DBG] Using Identity.Application as default ASP.NET Core scheme for authentication
+2022-09-16 13:49:27.334 +03:00 [DBG] Using Identity.External as default ASP.NET Core scheme for sign-in
+2022-09-16 13:49:27.334 +03:00 [DBG] Using Identity.External as default ASP.NET Core scheme for sign-out
+2022-09-16 13:49:27.334 +03:00 [DBG] Using Identity.Application as default ASP.NET Core scheme for challenge
+2022-09-16 13:49:27.334 +03:00 [DBG] Using Identity.Application as default ASP.NET Core scheme for forbid
+2022-09-16 13:49:27.390 +03:00 [INF] Application started. Press Ctrl+C to shut down.
+2022-09-16 13:49:27.390 +03:00 [INF] Hosting environment: Development
+2022-09-16 13:49:27.390 +03:00 [INF] Content root path: D:\programming\dotNet\OlegLearning\Sigma_Trainee\PowUkraine\IdentityServer
+2022-09-16 13:49:27.462 +03:00 [DBG] Login Url: /Authorization/Login
+2022-09-16 13:49:27.463 +03:00 [DBG] Login Return Url Parameter: ReturnUrl
+2022-09-16 13:49:27.463 +03:00 [DBG] Logout Url: /Authorization/Logout
+2022-09-16 13:49:27.463 +03:00 [DBG] ConsentUrl Url: /consent
+2022-09-16 13:49:27.463 +03:00 [DBG] Consent Return Url Parameter: returnUrl
+2022-09-16 13:49:27.463 +03:00 [DBG] Error Url: /home/error
+2022-09-16 13:49:27.463 +03:00 [DBG] Error Id Parameter: errorId
+2022-09-16 13:49:35.999 +03:00 [INF] AuthenticationScheme: Google was challenged.
+2022-09-16 13:50:36.802 +03:00 [INF] Starting host...
+2022-09-16 13:50:38.652 +03:00 [INF] Starting IdentityServer4 version 4.1.2+997a6cdd643e46cd5762b710c4ddc43574cbec2e
+2022-09-16 13:50:38.659 +03:00 [INF] You are using the in-memory version of the persisted grant store. This will store consent decisions, authorization codes, refresh and reference tokens in memory only. If you are using any of those features in production, you want to switch to a different store implementation.
+2022-09-16 13:50:38.660 +03:00 [INF] Using the default authentication scheme Identity.Application for IdentityServer
+2022-09-16 13:50:38.660 +03:00 [DBG] Using Identity.Application as default ASP.NET Core scheme for authentication
+2022-09-16 13:50:38.660 +03:00 [DBG] Using Identity.External as default ASP.NET Core scheme for sign-in
+2022-09-16 13:50:38.661 +03:00 [DBG] Using Identity.External as default ASP.NET Core scheme for sign-out
+2022-09-16 13:50:38.661 +03:00 [DBG] Using Identity.Application as default ASP.NET Core scheme for challenge
+2022-09-16 13:50:38.661 +03:00 [DBG] Using Identity.Application as default ASP.NET Core scheme for forbid
+2022-09-16 13:50:38.718 +03:00 [INF] Application started. Press Ctrl+C to shut down.
+2022-09-16 13:50:38.718 +03:00 [INF] Hosting environment: Development
+2022-09-16 13:50:38.718 +03:00 [INF] Content root path: D:\programming\dotNet\OlegLearning\Sigma_Trainee\PowUkraine\IdentityServer
+2022-09-16 13:50:38.789 +03:00 [DBG] Login Url: /Authorization/Login
+2022-09-16 13:50:38.790 +03:00 [DBG] Login Return Url Parameter: ReturnUrl
+2022-09-16 13:50:38.790 +03:00 [DBG] Logout Url: /Authorization/Logout
+2022-09-16 13:50:38.790 +03:00 [DBG] ConsentUrl Url: /consent
+2022-09-16 13:50:38.790 +03:00 [DBG] Consent Return Url Parameter: returnUrl
+2022-09-16 13:50:38.791 +03:00 [DBG] Error Url: /home/error
+2022-09-16 13:50:38.791 +03:00 [DBG] Error Id Parameter: errorId
+2022-09-16 13:50:45.784 +03:00 [INF] AuthenticationScheme: Google was challenged.
+2022-09-16 13:51:07.589 +03:00 [INF] Starting host...
+2022-09-16 13:51:09.382 +03:00 [INF] Starting IdentityServer4 version 4.1.2+997a6cdd643e46cd5762b710c4ddc43574cbec2e
+2022-09-16 13:51:09.389 +03:00 [INF] You are using the in-memory version of the persisted grant store. This will store consent decisions, authorization codes, refresh and reference tokens in memory only. If you are using any of those features in production, you want to switch to a different store implementation.
+2022-09-16 13:51:09.390 +03:00 [INF] Using the default authentication scheme Identity.Application for IdentityServer
+2022-09-16 13:51:09.390 +03:00 [DBG] Using Identity.Application as default ASP.NET Core scheme for authentication
+2022-09-16 13:51:09.390 +03:00 [DBG] Using Identity.External as default ASP.NET Core scheme for sign-in
+2022-09-16 13:51:09.390 +03:00 [DBG] Using Identity.External as default ASP.NET Core scheme for sign-out
+2022-09-16 13:51:09.390 +03:00 [DBG] Using Identity.Application as default ASP.NET Core scheme for challenge
+2022-09-16 13:51:09.390 +03:00 [DBG] Using Identity.Application as default ASP.NET Core scheme for forbid
+2022-09-16 13:51:09.451 +03:00 [INF] Application started. Press Ctrl+C to shut down.
+2022-09-16 13:51:09.451 +03:00 [INF] Hosting environment: Development
+2022-09-16 13:51:09.451 +03:00 [INF] Content root path: D:\programming\dotNet\OlegLearning\Sigma_Trainee\PowUkraine\IdentityServer
+2022-09-16 13:51:09.527 +03:00 [DBG] Login Url: /Authorization/Login
+2022-09-16 13:51:09.529 +03:00 [DBG] Login Return Url Parameter: ReturnUrl
+2022-09-16 13:51:09.529 +03:00 [DBG] Logout Url: /Authorization/Logout
+2022-09-16 13:51:09.529 +03:00 [DBG] ConsentUrl Url: /consent
+2022-09-16 13:51:09.529 +03:00 [DBG] Consent Return Url Parameter: returnUrl
+2022-09-16 13:51:09.529 +03:00 [DBG] Error Url: /home/error
+2022-09-16 13:51:09.529 +03:00 [DBG] Error Id Parameter: errorId
+2022-09-16 13:51:13.237 +03:00 [INF] AuthenticationScheme: Google was challenged.
+2022-09-16 13:51:16.030 +03:00 [INF] AuthenticationScheme: Google was challenged.
+2022-09-16 13:51:18.857 +03:00 [INF] AuthenticationScheme: Google was challenged.
+2022-09-16 13:53:21.011 +03:00 [INF] Starting host...
+2022-09-16 13:53:22.778 +03:00 [INF] Starting IdentityServer4 version 4.1.2+997a6cdd643e46cd5762b710c4ddc43574cbec2e
+2022-09-16 13:53:22.784 +03:00 [INF] You are using the in-memory version of the persisted grant store. This will store consent decisions, authorization codes, refresh and reference tokens in memory only. If you are using any of those features in production, you want to switch to a different store implementation.
+2022-09-16 13:53:22.786 +03:00 [INF] Using the default authentication scheme Identity.Application for IdentityServer
+2022-09-16 13:53:22.786 +03:00 [DBG] Using Identity.Application as default ASP.NET Core scheme for authentication
+2022-09-16 13:53:22.786 +03:00 [DBG] Using Identity.External as default ASP.NET Core scheme for sign-in
+2022-09-16 13:53:22.786 +03:00 [DBG] Using Identity.External as default ASP.NET Core scheme for sign-out
+2022-09-16 13:53:22.786 +03:00 [DBG] Using Identity.Application as default ASP.NET Core scheme for challenge
+2022-09-16 13:53:22.786 +03:00 [DBG] Using Identity.Application as default ASP.NET Core scheme for forbid
+2022-09-16 13:53:22.846 +03:00 [INF] Application started. Press Ctrl+C to shut down.
+2022-09-16 13:53:22.846 +03:00 [INF] Hosting environment: Development
+2022-09-16 13:53:22.846 +03:00 [INF] Content root path: D:\programming\dotNet\OlegLearning\Sigma_Trainee\PowUkraine\IdentityServer
+2022-09-16 13:53:22.929 +03:00 [DBG] Login Url: /Authorization/Login
+2022-09-16 13:53:22.931 +03:00 [DBG] Login Return Url Parameter: ReturnUrl
+2022-09-16 13:53:22.931 +03:00 [DBG] Logout Url: /Authorization/Logout
+2022-09-16 13:53:22.931 +03:00 [DBG] ConsentUrl Url: /consent
+2022-09-16 13:53:22.931 +03:00 [DBG] Consent Return Url Parameter: returnUrl
+2022-09-16 13:53:22.931 +03:00 [DBG] Error Url: /home/error
+2022-09-16 13:53:22.931 +03:00 [DBG] Error Id Parameter: errorId
+2022-09-16 13:53:28.154 +03:00 [INF] AuthenticationScheme: Google was challenged.
+2022-09-16 13:53:42.437 +03:00 [INF] Starting host...
+2022-09-16 13:53:44.322 +03:00 [INF] Starting IdentityServer4 version 4.1.2+997a6cdd643e46cd5762b710c4ddc43574cbec2e
+2022-09-16 13:53:44.328 +03:00 [INF] You are using the in-memory version of the persisted grant store. This will store consent decisions, authorization codes, refresh and reference tokens in memory only. If you are using any of those features in production, you want to switch to a different store implementation.
+2022-09-16 13:53:44.330 +03:00 [INF] Using the default authentication scheme Identity.Application for IdentityServer
+2022-09-16 13:53:44.330 +03:00 [DBG] Using Identity.Application as default ASP.NET Core scheme for authentication
+2022-09-16 13:53:44.330 +03:00 [DBG] Using Identity.External as default ASP.NET Core scheme for sign-in
+2022-09-16 13:53:44.330 +03:00 [DBG] Using Identity.External as default ASP.NET Core scheme for sign-out
+2022-09-16 13:53:44.330 +03:00 [DBG] Using Identity.Application as default ASP.NET Core scheme for challenge
+2022-09-16 13:53:44.330 +03:00 [DBG] Using Identity.Application as default ASP.NET Core scheme for forbid
+2022-09-16 13:53:44.405 +03:00 [INF] Application started. Press Ctrl+C to shut down.
+2022-09-16 13:53:44.405 +03:00 [INF] Hosting environment: Development
+2022-09-16 13:53:44.405 +03:00 [INF] Content root path: D:\programming\dotNet\OlegLearning\Sigma_Trainee\PowUkraine\IdentityServer
+2022-09-16 13:53:44.485 +03:00 [DBG] Login Url: /Authorization/Login
+2022-09-16 13:53:44.486 +03:00 [DBG] Login Return Url Parameter: ReturnUrl
+2022-09-16 13:53:44.486 +03:00 [DBG] Logout Url: /Authorization/Logout
+2022-09-16 13:53:44.486 +03:00 [DBG] ConsentUrl Url: /consent
+2022-09-16 13:53:44.486 +03:00 [DBG] Consent Return Url Parameter: returnUrl
+2022-09-16 13:53:44.486 +03:00 [DBG] Error Url: /home/error
+2022-09-16 13:53:44.486 +03:00 [DBG] Error Id Parameter: errorId
+2022-09-16 13:53:48.440 +03:00 [INF] AuthenticationScheme: Google was challenged.
+2022-09-16 13:53:50.909 +03:00 [INF] AuthenticationScheme: Google was challenged.
+2022-09-16 13:53:53.325 +03:00 [INF] AuthenticationScheme: Google was challenged.
+2022-09-16 13:58:02.001 +03:00 [INF] Starting host...
+2022-09-16 13:58:03.835 +03:00 [INF] Starting IdentityServer4 version 4.1.2+997a6cdd643e46cd5762b710c4ddc43574cbec2e
+2022-09-16 13:58:03.842 +03:00 [INF] You are using the in-memory version of the persisted grant store. This will store consent decisions, authorization codes, refresh and reference tokens in memory only. If you are using any of those features in production, you want to switch to a different store implementation.
+2022-09-16 13:58:03.844 +03:00 [INF] Using the default authentication scheme Identity.Application for IdentityServer
+2022-09-16 13:58:03.844 +03:00 [DBG] Using Identity.Application as default ASP.NET Core scheme for authentication
+2022-09-16 13:58:03.844 +03:00 [DBG] Using Identity.External as default ASP.NET Core scheme for sign-in
+2022-09-16 13:58:03.844 +03:00 [DBG] Using Identity.External as default ASP.NET Core scheme for sign-out
+2022-09-16 13:58:03.844 +03:00 [DBG] Using Identity.Application as default ASP.NET Core scheme for challenge
+2022-09-16 13:58:03.844 +03:00 [DBG] Using Identity.Application as default ASP.NET Core scheme for forbid
+2022-09-16 13:58:03.904 +03:00 [INF] Application started. Press Ctrl+C to shut down.
+2022-09-16 13:58:03.904 +03:00 [INF] Hosting environment: Development
+2022-09-16 13:58:03.904 +03:00 [INF] Content root path: D:\programming\dotNet\OlegLearning\Sigma_Trainee\PowUkraine\IdentityServer
+2022-09-16 13:58:03.979 +03:00 [DBG] Login Url: /Authorization/Login
+2022-09-16 13:58:03.980 +03:00 [DBG] Login Return Url Parameter: ReturnUrl
+2022-09-16 13:58:03.980 +03:00 [DBG] Logout Url: /Authorization/Logout
+2022-09-16 13:58:03.980 +03:00 [DBG] ConsentUrl Url: /consent
+2022-09-16 13:58:03.980 +03:00 [DBG] Consent Return Url Parameter: returnUrl
+2022-09-16 13:58:03.980 +03:00 [DBG] Error Url: /home/error
+2022-09-16 13:58:03.980 +03:00 [DBG] Error Id Parameter: errorId
+2022-09-16 13:59:10.841 +03:00 [INF] Starting host...
+2022-09-16 13:59:12.667 +03:00 [INF] Starting IdentityServer4 version 4.1.2+997a6cdd643e46cd5762b710c4ddc43574cbec2e
+2022-09-16 13:59:12.679 +03:00 [INF] You are using the in-memory version of the persisted grant store. This will store consent decisions, authorization codes, refresh and reference tokens in memory only. If you are using any of those features in production, you want to switch to a different store implementation.
+2022-09-16 13:59:12.682 +03:00 [INF] Using the default authentication scheme Identity.Application for IdentityServer
+2022-09-16 13:59:12.682 +03:00 [DBG] Using Identity.Application as default ASP.NET Core scheme for authentication
+2022-09-16 13:59:12.682 +03:00 [DBG] Using Identity.External as default ASP.NET Core scheme for sign-in
+2022-09-16 13:59:12.682 +03:00 [DBG] Using Identity.External as default ASP.NET Core scheme for sign-out
+2022-09-16 13:59:12.683 +03:00 [DBG] Using Identity.Application as default ASP.NET Core scheme for challenge
+2022-09-16 13:59:12.683 +03:00 [DBG] Using Identity.Application as default ASP.NET Core scheme for forbid
+2022-09-16 13:59:12.830 +03:00 [INF] Application started. Press Ctrl+C to shut down.
+2022-09-16 13:59:12.831 +03:00 [INF] Hosting environment: Development
+2022-09-16 13:59:12.831 +03:00 [INF] Content root path: D:\programming\dotNet\OlegLearning\Sigma_Trainee\PowUkraine\IdentityServer
+2022-09-16 13:59:12.910 +03:00 [DBG] Login Url: /Authorization/Login
+2022-09-16 13:59:12.911 +03:00 [DBG] Login Return Url Parameter: ReturnUrl
+2022-09-16 13:59:12.911 +03:00 [DBG] Logout Url: /Authorization/Logout
+2022-09-16 13:59:12.911 +03:00 [DBG] ConsentUrl Url: /consent
+2022-09-16 13:59:12.911 +03:00 [DBG] Consent Return Url Parameter: returnUrl
+2022-09-16 13:59:12.911 +03:00 [DBG] Error Url: /home/error
+2022-09-16 13:59:12.911 +03:00 [DBG] Error Id Parameter: errorId
+2022-09-16 14:00:34.426 +03:00 [INF] Starting host...
+2022-09-16 14:00:36.241 +03:00 [INF] Starting IdentityServer4 version 4.1.2+997a6cdd643e46cd5762b710c4ddc43574cbec2e
+2022-09-16 14:00:36.248 +03:00 [INF] You are using the in-memory version of the persisted grant store. This will store consent decisions, authorization codes, refresh and reference tokens in memory only. If you are using any of those features in production, you want to switch to a different store implementation.
+2022-09-16 14:00:36.250 +03:00 [INF] Using the default authentication scheme Identity.Application for IdentityServer
+2022-09-16 14:00:36.250 +03:00 [DBG] Using Identity.Application as default ASP.NET Core scheme for authentication
+2022-09-16 14:00:36.250 +03:00 [DBG] Using Identity.External as default ASP.NET Core scheme for sign-in
+2022-09-16 14:00:36.250 +03:00 [DBG] Using Identity.External as default ASP.NET Core scheme for sign-out
+2022-09-16 14:00:36.250 +03:00 [DBG] Using Identity.Application as default ASP.NET Core scheme for challenge
+2022-09-16 14:00:36.250 +03:00 [DBG] Using Identity.Application as default ASP.NET Core scheme for forbid
+2022-09-16 14:00:36.309 +03:00 [INF] Application started. Press Ctrl+C to shut down.
+2022-09-16 14:00:36.309 +03:00 [INF] Hosting environment: Development
+2022-09-16 14:00:36.309 +03:00 [INF] Content root path: D:\programming\dotNet\OlegLearning\Sigma_Trainee\PowUkraine\IdentityServer
+2022-09-16 14:00:36.383 +03:00 [DBG] Login Url: /Authorization/Login
+2022-09-16 14:00:36.384 +03:00 [DBG] Login Return Url Parameter: ReturnUrl
+2022-09-16 14:00:36.384 +03:00 [DBG] Logout Url: /Authorization/Logout
+2022-09-16 14:00:36.384 +03:00 [DBG] ConsentUrl Url: /consent
+2022-09-16 14:00:36.384 +03:00 [DBG] Consent Return Url Parameter: returnUrl
+2022-09-16 14:00:36.384 +03:00 [DBG] Error Url: /home/error
+2022-09-16 14:00:36.384 +03:00 [DBG] Error Id Parameter: errorId

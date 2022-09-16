@@ -5,7 +5,8 @@ namespace IdentityServer.Models
 {
     public class RegisterViewModel
     {
-        [Required]
+        [Required()]
+        [Display(Name = "User name")]
         public string UserName { get; set; }
 
         [Required()]
@@ -23,12 +24,12 @@ namespace IdentityServer.Models
         [Display(Name = "Repeat your password")]
         public string ConfirmPassword { get; set; }
 
-        [Required]
+
         [Display(Name = "Your date of birth")]
         public DateTime BirthDay { get; set; }
 
         [Display(Name = "I agree all statements")]
-        public bool agreeAllStatements { get; set; }
+        public bool AreeAllStatements { get; set; }
 
         public string ReturnUrl { get; set; }
     }

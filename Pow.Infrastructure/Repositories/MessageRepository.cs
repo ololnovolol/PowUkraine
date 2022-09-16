@@ -6,7 +6,6 @@ using System;
 using System.Collections.Generic;
 using System.Data.SqlClient;
 using System.Linq;
-using System.Linq.Expressions;
 using System.Threading.Tasks;
 
 namespace Pow.Infrastructure.Repositories
@@ -62,7 +61,7 @@ namespace Pow.Infrastructure.Repositories
         public async Task<int> UpdateAsync(Message entity)
         {
             throw new Exception();
-            
+
         }
     }
 }
