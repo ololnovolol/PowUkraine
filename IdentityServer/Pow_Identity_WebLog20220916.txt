@@ -1577,3 +1577,1368 @@ System.ArgumentException: Value cannot be null or empty. (Parameter 'url')
 2022-09-16 17:47:05.098 +03:00 [DBG] Consent Return Url Parameter: returnUrl
 2022-09-16 17:47:05.098 +03:00 [DBG] Error Url: /home/error
 2022-09-16 17:47:05.098 +03:00 [DBG] Error Id Parameter: errorId
+2022-09-16 17:51:01.775 +03:00 [INF] Starting host...
+2022-09-16 17:51:03.408 +03:00 [INF] Starting IdentityServer4 version 4.1.2+997a6cdd643e46cd5762b710c4ddc43574cbec2e
+2022-09-16 17:51:03.415 +03:00 [INF] You are using the in-memory version of the persisted grant store. This will store consent decisions, authorization codes, refresh and reference tokens in memory only. If you are using any of those features in production, you want to switch to a different store implementation.
+2022-09-16 17:51:03.416 +03:00 [INF] Using the default authentication scheme Identity.Application for IdentityServer
+2022-09-16 17:51:03.416 +03:00 [DBG] Using Identity.Application as default ASP.NET Core scheme for authentication
+2022-09-16 17:51:03.416 +03:00 [DBG] Using Identity.External as default ASP.NET Core scheme for sign-in
+2022-09-16 17:51:03.416 +03:00 [DBG] Using Identity.External as default ASP.NET Core scheme for sign-out
+2022-09-16 17:51:03.416 +03:00 [DBG] Using Identity.Application as default ASP.NET Core scheme for challenge
+2022-09-16 17:51:03.416 +03:00 [DBG] Using Identity.Application as default ASP.NET Core scheme for forbid
+2022-09-16 17:51:03.474 +03:00 [INF] Application started. Press Ctrl+C to shut down.
+2022-09-16 17:51:03.474 +03:00 [INF] Hosting environment: Development
+2022-09-16 17:51:03.474 +03:00 [INF] Content root path: D:\programming\dotNet\OlegLearning\Sigma_Trainee\PowUkraine\IdentityServer
+2022-09-16 17:51:03.568 +03:00 [DBG] Login Url: /Authorization/Login
+2022-09-16 17:51:03.569 +03:00 [DBG] Login Return Url Parameter: ReturnUrl
+2022-09-16 17:51:03.569 +03:00 [DBG] Logout Url: /Authorization/Logout
+2022-09-16 17:51:03.569 +03:00 [DBG] ConsentUrl Url: /consent
+2022-09-16 17:51:03.569 +03:00 [DBG] Consent Return Url Parameter: returnUrl
+2022-09-16 17:51:03.569 +03:00 [DBG] Error Url: /home/error
+2022-09-16 17:51:03.569 +03:00 [DBG] Error Id Parameter: errorId
+2022-09-16 18:32:45.429 +03:00 [INF] Starting host...
+2022-09-16 18:32:48.149 +03:00 [INF] Starting IdentityServer4 version 4.1.2+997a6cdd643e46cd5762b710c4ddc43574cbec2e
+2022-09-16 18:32:48.156 +03:00 [INF] You are using the in-memory version of the persisted grant store. This will store consent decisions, authorization codes, refresh and reference tokens in memory only. If you are using any of those features in production, you want to switch to a different store implementation.
+2022-09-16 18:32:48.158 +03:00 [INF] Using the default authentication scheme Identity.Application for IdentityServer
+2022-09-16 18:32:48.158 +03:00 [DBG] Using Identity.Application as default ASP.NET Core scheme for authentication
+2022-09-16 18:32:48.158 +03:00 [DBG] Using Identity.External as default ASP.NET Core scheme for sign-in
+2022-09-16 18:32:48.158 +03:00 [DBG] Using Identity.External as default ASP.NET Core scheme for sign-out
+2022-09-16 18:32:48.158 +03:00 [DBG] Using Identity.Application as default ASP.NET Core scheme for challenge
+2022-09-16 18:32:48.158 +03:00 [DBG] Using Identity.Application as default ASP.NET Core scheme for forbid
+2022-09-16 18:32:48.214 +03:00 [INF] Application started. Press Ctrl+C to shut down.
+2022-09-16 18:32:48.214 +03:00 [INF] Hosting environment: Development
+2022-09-16 18:32:48.214 +03:00 [INF] Content root path: D:\programming\dotNet\OlegLearning\Sigma_Trainee\PowUkraine\IdentityServer
+2022-09-16 18:32:48.296 +03:00 [ERR] An unhandled exception has occurred while executing the request.
+System.ArgumentException: The 'AppId' option must be provided. (Parameter 'AppId')
+   at Microsoft.AspNetCore.Authentication.Facebook.FacebookOptions.Validate()
+   at Microsoft.AspNetCore.Authentication.RemoteAuthenticationOptions.Validate(String scheme)
+   at Microsoft.AspNetCore.Authentication.AuthenticationBuilder.<>c__DisplayClass4_0`2.<AddSchemeHelper>b__1(TOptions o)
+   at Microsoft.Extensions.Options.ValidateOptions`1.Validate(String name, TOptions options)
+   at Microsoft.Extensions.Options.OptionsFactory`1.Create(String name)
+   at Microsoft.Extensions.Options.OptionsMonitor`1.<>c__DisplayClass11_0.<Get>b__0()
+   at System.Lazy`1.ViaFactory(LazyThreadSafetyMode mode)
+   at System.Lazy`1.ExecutionAndPublication(LazyHelper executionAndPublication, Boolean useDefaultConstructor)
+   at System.Lazy`1.CreateValue()
+   at System.Lazy`1.get_Value()
+   at Microsoft.Extensions.Options.OptionsCache`1.GetOrAdd(String name, Func`1 createOptions)
+   at Microsoft.Extensions.Options.OptionsMonitor`1.Get(String name)
+   at Microsoft.AspNetCore.Authentication.AuthenticationHandler`1.InitializeAsync(AuthenticationScheme scheme, HttpContext context)
+   at Microsoft.AspNetCore.Authentication.AuthenticationHandlerProvider.GetHandlerAsync(HttpContext context, String authenticationScheme)
+   at IdentityServer4.Hosting.FederatedSignOut.FederatedSignoutAuthenticationHandlerProvider.GetHandlerAsync(HttpContext context, String authenticationScheme)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at IdentityServer4.Hosting.BaseUrlMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware.Invoke(HttpContext context)
+2022-09-16 18:32:55.891 +03:00 [ERR] An unhandled exception has occurred while executing the request.
+System.ArgumentException: The 'AppId' option must be provided. (Parameter 'AppId')
+   at Microsoft.AspNetCore.Authentication.Facebook.FacebookOptions.Validate()
+   at Microsoft.AspNetCore.Authentication.RemoteAuthenticationOptions.Validate(String scheme)
+   at Microsoft.AspNetCore.Authentication.AuthenticationBuilder.<>c__DisplayClass4_0`2.<AddSchemeHelper>b__1(TOptions o)
+   at Microsoft.Extensions.Options.ValidateOptions`1.Validate(String name, TOptions options)
+   at Microsoft.Extensions.Options.OptionsFactory`1.Create(String name)
+   at Microsoft.Extensions.Options.OptionsMonitor`1.<>c__DisplayClass11_0.<Get>b__0()
+   at System.Lazy`1.ViaFactory(LazyThreadSafetyMode mode)
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Lazy`1.CreateValue()
+   at System.Lazy`1.get_Value()
+   at Microsoft.Extensions.Options.OptionsCache`1.GetOrAdd(String name, Func`1 createOptions)
+   at Microsoft.Extensions.Options.OptionsMonitor`1.Get(String name)
+   at Microsoft.AspNetCore.Authentication.AuthenticationHandler`1.InitializeAsync(AuthenticationScheme scheme, HttpContext context)
+   at Microsoft.AspNetCore.Authentication.AuthenticationHandlerProvider.GetHandlerAsync(HttpContext context, String authenticationScheme)
+   at IdentityServer4.Hosting.FederatedSignOut.FederatedSignoutAuthenticationHandlerProvider.GetHandlerAsync(HttpContext context, String authenticationScheme)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at IdentityServer4.Hosting.BaseUrlMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware.Invoke(HttpContext context)
+2022-09-16 18:33:19.227 +03:00 [INF] Starting host...
+2022-09-16 18:33:20.910 +03:00 [INF] Starting IdentityServer4 version 4.1.2+997a6cdd643e46cd5762b710c4ddc43574cbec2e
+2022-09-16 18:33:20.917 +03:00 [INF] You are using the in-memory version of the persisted grant store. This will store consent decisions, authorization codes, refresh and reference tokens in memory only. If you are using any of those features in production, you want to switch to a different store implementation.
+2022-09-16 18:33:20.918 +03:00 [INF] Using the default authentication scheme Identity.Application for IdentityServer
+2022-09-16 18:33:20.918 +03:00 [DBG] Using Identity.Application as default ASP.NET Core scheme for authentication
+2022-09-16 18:33:20.919 +03:00 [DBG] Using Identity.External as default ASP.NET Core scheme for sign-in
+2022-09-16 18:33:20.919 +03:00 [DBG] Using Identity.External as default ASP.NET Core scheme for sign-out
+2022-09-16 18:33:20.919 +03:00 [DBG] Using Identity.Application as default ASP.NET Core scheme for challenge
+2022-09-16 18:33:20.919 +03:00 [DBG] Using Identity.Application as default ASP.NET Core scheme for forbid
+2022-09-16 18:33:20.974 +03:00 [INF] Application started. Press Ctrl+C to shut down.
+2022-09-16 18:33:20.974 +03:00 [INF] Hosting environment: Development
+2022-09-16 18:33:20.974 +03:00 [INF] Content root path: D:\programming\dotNet\OlegLearning\Sigma_Trainee\PowUkraine\IdentityServer
+2022-09-16 18:33:21.080 +03:00 [ERR] An unhandled exception has occurred while executing the request.
+System.ArgumentException: The 'AppId' option must be provided. (Parameter 'AppId')
+   at Microsoft.AspNetCore.Authentication.Facebook.FacebookOptions.Validate()
+   at Microsoft.AspNetCore.Authentication.RemoteAuthenticationOptions.Validate(String scheme)
+   at Microsoft.AspNetCore.Authentication.AuthenticationBuilder.<>c__DisplayClass4_0`2.<AddSchemeHelper>b__1(TOptions o)
+   at Microsoft.Extensions.Options.ValidateOptions`1.Validate(String name, TOptions options)
+   at Microsoft.Extensions.Options.OptionsFactory`1.Create(String name)
+   at Microsoft.Extensions.Options.OptionsMonitor`1.<>c__DisplayClass11_0.<Get>b__0()
+   at System.Lazy`1.ViaFactory(LazyThreadSafetyMode mode)
+   at System.Lazy`1.ExecutionAndPublication(LazyHelper executionAndPublication, Boolean useDefaultConstructor)
+   at System.Lazy`1.CreateValue()
+   at System.Lazy`1.get_Value()
+   at Microsoft.Extensions.Options.OptionsCache`1.GetOrAdd(String name, Func`1 createOptions)
+   at Microsoft.Extensions.Options.OptionsMonitor`1.Get(String name)
+   at Microsoft.AspNetCore.Authentication.AuthenticationHandler`1.InitializeAsync(AuthenticationScheme scheme, HttpContext context)
+   at Microsoft.AspNetCore.Authentication.AuthenticationHandlerProvider.GetHandlerAsync(HttpContext context, String authenticationScheme)
+   at IdentityServer4.Hosting.FederatedSignOut.FederatedSignoutAuthenticationHandlerProvider.GetHandlerAsync(HttpContext context, String authenticationScheme)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at IdentityServer4.Hosting.BaseUrlMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware.Invoke(HttpContext context)
+2022-09-16 18:33:23.153 +03:00 [ERR] An unhandled exception has occurred while executing the request.
+System.ArgumentException: The 'AppId' option must be provided. (Parameter 'AppId')
+   at Microsoft.AspNetCore.Authentication.Facebook.FacebookOptions.Validate()
+   at Microsoft.AspNetCore.Authentication.RemoteAuthenticationOptions.Validate(String scheme)
+   at Microsoft.AspNetCore.Authentication.AuthenticationBuilder.<>c__DisplayClass4_0`2.<AddSchemeHelper>b__1(TOptions o)
+   at Microsoft.Extensions.Options.ValidateOptions`1.Validate(String name, TOptions options)
+   at Microsoft.Extensions.Options.OptionsFactory`1.Create(String name)
+   at Microsoft.Extensions.Options.OptionsMonitor`1.<>c__DisplayClass11_0.<Get>b__0()
+   at System.Lazy`1.ViaFactory(LazyThreadSafetyMode mode)
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Lazy`1.CreateValue()
+   at System.Lazy`1.get_Value()
+   at Microsoft.Extensions.Options.OptionsCache`1.GetOrAdd(String name, Func`1 createOptions)
+   at Microsoft.Extensions.Options.OptionsMonitor`1.Get(String name)
+   at Microsoft.AspNetCore.Authentication.AuthenticationHandler`1.InitializeAsync(AuthenticationScheme scheme, HttpContext context)
+   at Microsoft.AspNetCore.Authentication.AuthenticationHandlerProvider.GetHandlerAsync(HttpContext context, String authenticationScheme)
+   at IdentityServer4.Hosting.FederatedSignOut.FederatedSignoutAuthenticationHandlerProvider.GetHandlerAsync(HttpContext context, String authenticationScheme)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at IdentityServer4.Hosting.BaseUrlMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware.Invoke(HttpContext context)
+2022-09-16 18:33:57.561 +03:00 [INF] Starting host...
+2022-09-16 18:33:59.257 +03:00 [INF] Starting IdentityServer4 version 4.1.2+997a6cdd643e46cd5762b710c4ddc43574cbec2e
+2022-09-16 18:33:59.264 +03:00 [INF] You are using the in-memory version of the persisted grant store. This will store consent decisions, authorization codes, refresh and reference tokens in memory only. If you are using any of those features in production, you want to switch to a different store implementation.
+2022-09-16 18:33:59.265 +03:00 [INF] Using the default authentication scheme Identity.Application for IdentityServer
+2022-09-16 18:33:59.265 +03:00 [DBG] Using Identity.Application as default ASP.NET Core scheme for authentication
+2022-09-16 18:33:59.266 +03:00 [DBG] Using Identity.External as default ASP.NET Core scheme for sign-in
+2022-09-16 18:33:59.266 +03:00 [DBG] Using Identity.External as default ASP.NET Core scheme for sign-out
+2022-09-16 18:33:59.266 +03:00 [DBG] Using Identity.Application as default ASP.NET Core scheme for challenge
+2022-09-16 18:33:59.266 +03:00 [DBG] Using Identity.Application as default ASP.NET Core scheme for forbid
+2022-09-16 18:33:59.333 +03:00 [INF] Application started. Press Ctrl+C to shut down.
+2022-09-16 18:33:59.334 +03:00 [INF] Hosting environment: Development
+2022-09-16 18:33:59.334 +03:00 [INF] Content root path: D:\programming\dotNet\OlegLearning\Sigma_Trainee\PowUkraine\IdentityServer
+2022-09-16 18:33:59.410 +03:00 [ERR] An unhandled exception has occurred while executing the request.
+System.ArgumentException: The 'AppSecret' option must be provided. (Parameter 'AppSecret')
+   at Microsoft.AspNetCore.Authentication.Facebook.FacebookOptions.Validate()
+   at Microsoft.AspNetCore.Authentication.RemoteAuthenticationOptions.Validate(String scheme)
+   at Microsoft.AspNetCore.Authentication.AuthenticationBuilder.<>c__DisplayClass4_0`2.<AddSchemeHelper>b__1(TOptions o)
+   at Microsoft.Extensions.Options.ValidateOptions`1.Validate(String name, TOptions options)
+   at Microsoft.Extensions.Options.OptionsFactory`1.Create(String name)
+   at Microsoft.Extensions.Options.OptionsMonitor`1.<>c__DisplayClass11_0.<Get>b__0()
+   at System.Lazy`1.ViaFactory(LazyThreadSafetyMode mode)
+   at System.Lazy`1.ExecutionAndPublication(LazyHelper executionAndPublication, Boolean useDefaultConstructor)
+   at System.Lazy`1.CreateValue()
+   at System.Lazy`1.get_Value()
+   at Microsoft.Extensions.Options.OptionsCache`1.GetOrAdd(String name, Func`1 createOptions)
+   at Microsoft.Extensions.Options.OptionsMonitor`1.Get(String name)
+   at Microsoft.AspNetCore.Authentication.AuthenticationHandler`1.InitializeAsync(AuthenticationScheme scheme, HttpContext context)
+   at Microsoft.AspNetCore.Authentication.AuthenticationHandlerProvider.GetHandlerAsync(HttpContext context, String authenticationScheme)
+   at IdentityServer4.Hosting.FederatedSignOut.FederatedSignoutAuthenticationHandlerProvider.GetHandlerAsync(HttpContext context, String authenticationScheme)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at IdentityServer4.Hosting.BaseUrlMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware.Invoke(HttpContext context)
+2022-09-16 18:34:28.309 +03:00 [INF] Starting host...
+2022-09-16 18:34:30.028 +03:00 [INF] Starting IdentityServer4 version 4.1.2+997a6cdd643e46cd5762b710c4ddc43574cbec2e
+2022-09-16 18:34:30.034 +03:00 [INF] You are using the in-memory version of the persisted grant store. This will store consent decisions, authorization codes, refresh and reference tokens in memory only. If you are using any of those features in production, you want to switch to a different store implementation.
+2022-09-16 18:34:30.036 +03:00 [INF] Using the default authentication scheme Identity.Application for IdentityServer
+2022-09-16 18:34:30.036 +03:00 [DBG] Using Identity.Application as default ASP.NET Core scheme for authentication
+2022-09-16 18:34:30.036 +03:00 [DBG] Using Identity.External as default ASP.NET Core scheme for sign-in
+2022-09-16 18:34:30.036 +03:00 [DBG] Using Identity.External as default ASP.NET Core scheme for sign-out
+2022-09-16 18:34:30.037 +03:00 [DBG] Using Identity.Application as default ASP.NET Core scheme for challenge
+2022-09-16 18:34:30.037 +03:00 [DBG] Using Identity.Application as default ASP.NET Core scheme for forbid
+2022-09-16 18:34:30.095 +03:00 [INF] Application started. Press Ctrl+C to shut down.
+2022-09-16 18:34:30.095 +03:00 [INF] Hosting environment: Development
+2022-09-16 18:34:30.095 +03:00 [INF] Content root path: D:\programming\dotNet\OlegLearning\Sigma_Trainee\PowUkraine\IdentityServer
+2022-09-16 18:34:30.169 +03:00 [DBG] Login Url: /Authorization/Login
+2022-09-16 18:34:30.170 +03:00 [DBG] Login Return Url Parameter: ReturnUrl
+2022-09-16 18:34:30.170 +03:00 [DBG] Logout Url: /Authorization/Logout
+2022-09-16 18:34:30.170 +03:00 [DBG] ConsentUrl Url: /consent
+2022-09-16 18:34:30.170 +03:00 [DBG] Consent Return Url Parameter: returnUrl
+2022-09-16 18:34:30.170 +03:00 [DBG] Error Url: /home/error
+2022-09-16 18:34:30.170 +03:00 [DBG] Error Id Parameter: errorId
+2022-09-16 18:34:37.668 +03:00 [INF] AuthenticationScheme: Google was challenged.
+2022-09-16 18:34:40.185 +03:00 [INF] AuthenticationScheme: Google was challenged.
+2022-09-16 18:35:08.718 +03:00 [INF] Starting host...
+2022-09-16 18:35:10.406 +03:00 [INF] Starting IdentityServer4 version 4.1.2+997a6cdd643e46cd5762b710c4ddc43574cbec2e
+2022-09-16 18:35:10.413 +03:00 [INF] You are using the in-memory version of the persisted grant store. This will store consent decisions, authorization codes, refresh and reference tokens in memory only. If you are using any of those features in production, you want to switch to a different store implementation.
+2022-09-16 18:35:10.415 +03:00 [INF] Using the default authentication scheme Identity.Application for IdentityServer
+2022-09-16 18:35:10.415 +03:00 [DBG] Using Identity.Application as default ASP.NET Core scheme for authentication
+2022-09-16 18:35:10.415 +03:00 [DBG] Using Identity.External as default ASP.NET Core scheme for sign-in
+2022-09-16 18:35:10.415 +03:00 [DBG] Using Identity.External as default ASP.NET Core scheme for sign-out
+2022-09-16 18:35:10.415 +03:00 [DBG] Using Identity.Application as default ASP.NET Core scheme for challenge
+2022-09-16 18:35:10.415 +03:00 [DBG] Using Identity.Application as default ASP.NET Core scheme for forbid
+2022-09-16 18:35:10.470 +03:00 [INF] Application started. Press Ctrl+C to shut down.
+2022-09-16 18:35:10.470 +03:00 [INF] Hosting environment: Development
+2022-09-16 18:35:10.470 +03:00 [INF] Content root path: D:\programming\dotNet\OlegLearning\Sigma_Trainee\PowUkraine\IdentityServer
+2022-09-16 18:35:10.555 +03:00 [DBG] Login Url: /Authorization/Login
+2022-09-16 18:35:10.556 +03:00 [DBG] Login Return Url Parameter: ReturnUrl
+2022-09-16 18:35:10.556 +03:00 [DBG] Logout Url: /Authorization/Logout
+2022-09-16 18:35:10.556 +03:00 [DBG] ConsentUrl Url: /consent
+2022-09-16 18:35:10.556 +03:00 [DBG] Consent Return Url Parameter: returnUrl
+2022-09-16 18:35:10.556 +03:00 [DBG] Error Url: /home/error
+2022-09-16 18:35:10.556 +03:00 [DBG] Error Id Parameter: errorId
+2022-09-16 18:35:13.236 +03:00 [DBG] HandleChallenge with Location: https://www.linkedin.com/oauth/v2/authorization?client_id=77uwjf5mrps8cc&scope=r_liteprofile%20r_emailaddress&response_type=code&redirect_uri=https%3A%2F%2Flocalhost%3A44316%2Fsignin-linkedin&state=CfDJ8PQUTOErAuxPrciDv0CMQm_qKh6qcZ-kzFcedz0ofnWtSBA0HdcbW8F4FnvpWjGA9vGeD6P-ZR6t6xITNILGV3lQtv77akh1OO10P7OfA-inCjY0063fnUQr1daU8fhZfiMBIK4e4xsjPO6hq2sxMOyBvjuoPjdrzIn0MAXzg01jIlyyh5OIv7RTt0sxVFye1WTu5w7G07sECj7sgYuq7KR_a4c15UQcgTLUfQSI1MJHnumlRcBzvTxguT0VrlkpuqY3hEWrmuslMtPFmEwUKczvdQyGRh2UNQdZhuSty5TQ; and Set-Cookie: .AspNetCore.Correlation.LinkedIn.Z1qji2rkK206OGiAFXTIaTbDSgsch76mJMjGpXPl2BY=N; expires=Fri, 16 Sep 2022 15:50:13 GMT; path=/signin-linkedin; secure; samesite=none; httponly.
+2022-09-16 18:35:13.241 +03:00 [INF] AuthenticationScheme: LinkedIn was challenged.
+2022-09-16 18:35:17.531 +03:00 [INF] AuthenticationScheme: Google was challenged.
+2022-09-16 18:35:20.294 +03:00 [INF] AuthenticationScheme: Google was challenged.
+2022-09-16 18:35:30.037 +03:00 [INF] Starting host...
+2022-09-16 18:35:31.636 +03:00 [INF] Starting IdentityServer4 version 4.1.2+997a6cdd643e46cd5762b710c4ddc43574cbec2e
+2022-09-16 18:35:31.643 +03:00 [INF] You are using the in-memory version of the persisted grant store. This will store consent decisions, authorization codes, refresh and reference tokens in memory only. If you are using any of those features in production, you want to switch to a different store implementation.
+2022-09-16 18:35:31.645 +03:00 [INF] Using the default authentication scheme Identity.Application for IdentityServer
+2022-09-16 18:35:31.645 +03:00 [DBG] Using Identity.Application as default ASP.NET Core scheme for authentication
+2022-09-16 18:35:31.645 +03:00 [DBG] Using Identity.External as default ASP.NET Core scheme for sign-in
+2022-09-16 18:35:31.645 +03:00 [DBG] Using Identity.External as default ASP.NET Core scheme for sign-out
+2022-09-16 18:35:31.645 +03:00 [DBG] Using Identity.Application as default ASP.NET Core scheme for challenge
+2022-09-16 18:35:31.645 +03:00 [DBG] Using Identity.Application as default ASP.NET Core scheme for forbid
+2022-09-16 18:35:31.703 +03:00 [INF] Application started. Press Ctrl+C to shut down.
+2022-09-16 18:35:31.703 +03:00 [INF] Hosting environment: Development
+2022-09-16 18:35:31.703 +03:00 [INF] Content root path: D:\programming\dotNet\OlegLearning\Sigma_Trainee\PowUkraine\IdentityServer
+2022-09-16 18:35:31.786 +03:00 [DBG] Login Url: /Authorization/Login
+2022-09-16 18:35:31.788 +03:00 [DBG] Login Return Url Parameter: ReturnUrl
+2022-09-16 18:35:31.788 +03:00 [DBG] Logout Url: /Authorization/Logout
+2022-09-16 18:35:31.788 +03:00 [DBG] ConsentUrl Url: /consent
+2022-09-16 18:35:31.788 +03:00 [DBG] Consent Return Url Parameter: returnUrl
+2022-09-16 18:35:31.788 +03:00 [DBG] Error Url: /home/error
+2022-09-16 18:35:31.788 +03:00 [DBG] Error Id Parameter: errorId
+2022-09-16 21:09:31.010 +03:00 [INF] Starting host...
+2022-09-16 21:24:11.185 +03:00 [INF] Starting host...
+2022-09-16 21:24:14.108 +03:00 [INF] Starting IdentityServer4 version 4.1.2+997a6cdd643e46cd5762b710c4ddc43574cbec2e
+2022-09-16 21:24:14.116 +03:00 [INF] You are using the in-memory version of the persisted grant store. This will store consent decisions, authorization codes, refresh and reference tokens in memory only. If you are using any of those features in production, you want to switch to a different store implementation.
+2022-09-16 21:24:14.117 +03:00 [INF] Using the default authentication scheme Identity.Application for IdentityServer
+2022-09-16 21:24:14.118 +03:00 [DBG] Using Identity.Application as default ASP.NET Core scheme for authentication
+2022-09-16 21:24:14.118 +03:00 [DBG] Using Identity.External as default ASP.NET Core scheme for sign-in
+2022-09-16 21:24:14.118 +03:00 [DBG] Using Identity.External as default ASP.NET Core scheme for sign-out
+2022-09-16 21:24:14.118 +03:00 [DBG] Using Identity.Application as default ASP.NET Core scheme for challenge
+2022-09-16 21:24:14.118 +03:00 [DBG] Using Identity.Application as default ASP.NET Core scheme for forbid
+2022-09-16 21:24:14.225 +03:00 [INF] Application started. Press Ctrl+C to shut down.
+2022-09-16 21:24:14.226 +03:00 [INF] Hosting environment: Development
+2022-09-16 21:24:14.226 +03:00 [INF] Content root path: D:\programming\dotNet\OlegLearning\Sigma_Trainee\PowUkraine\IdentityServer
+2022-09-16 21:24:14.354 +03:00 [DBG] Login Url: /Authorization/Login
+2022-09-16 21:24:14.356 +03:00 [DBG] Login Return Url Parameter: ReturnUrl
+2022-09-16 21:24:14.356 +03:00 [DBG] Logout Url: /Authorization/Logout
+2022-09-16 21:24:14.356 +03:00 [DBG] ConsentUrl Url: /consent
+2022-09-16 21:24:14.356 +03:00 [DBG] Consent Return Url Parameter: returnUrl
+2022-09-16 21:24:14.356 +03:00 [DBG] Error Url: /home/error
+2022-09-16 21:24:14.356 +03:00 [DBG] Error Id Parameter: errorId
+2022-09-16 21:28:58.850 +03:00 [INF] Starting host...
+2022-09-16 21:29:00.573 +03:00 [INF] Starting IdentityServer4 version 4.1.2+997a6cdd643e46cd5762b710c4ddc43574cbec2e
+2022-09-16 21:29:00.580 +03:00 [INF] You are using the in-memory version of the persisted grant store. This will store consent decisions, authorization codes, refresh and reference tokens in memory only. If you are using any of those features in production, you want to switch to a different store implementation.
+2022-09-16 21:29:00.582 +03:00 [INF] Using the default authentication scheme Identity.Application for IdentityServer
+2022-09-16 21:29:00.582 +03:00 [DBG] Using Identity.Application as default ASP.NET Core scheme for authentication
+2022-09-16 21:29:00.582 +03:00 [DBG] Using Identity.External as default ASP.NET Core scheme for sign-in
+2022-09-16 21:29:00.582 +03:00 [DBG] Using Identity.External as default ASP.NET Core scheme for sign-out
+2022-09-16 21:29:00.582 +03:00 [DBG] Using Identity.Application as default ASP.NET Core scheme for challenge
+2022-09-16 21:29:00.582 +03:00 [DBG] Using Identity.Application as default ASP.NET Core scheme for forbid
+2022-09-16 21:29:00.651 +03:00 [INF] Application started. Press Ctrl+C to shut down.
+2022-09-16 21:29:00.651 +03:00 [INF] Hosting environment: Development
+2022-09-16 21:29:00.652 +03:00 [INF] Content root path: D:\programming\dotNet\OlegLearning\Sigma_Trainee\PowUkraine\IdentityServer
+2022-09-16 21:29:00.724 +03:00 [DBG] Login Url: /Authorization/Login
+2022-09-16 21:29:00.725 +03:00 [DBG] Login Return Url Parameter: ReturnUrl
+2022-09-16 21:29:00.725 +03:00 [DBG] Logout Url: /Authorization/Logout
+2022-09-16 21:29:00.725 +03:00 [DBG] ConsentUrl Url: /consent
+2022-09-16 21:29:00.725 +03:00 [DBG] Consent Return Url Parameter: returnUrl
+2022-09-16 21:29:00.725 +03:00 [DBG] Error Url: /home/error
+2022-09-16 21:29:00.725 +03:00 [DBG] Error Id Parameter: errorId
+2022-09-16 21:34:10.129 +03:00 [DBG] Request path /connect/authorize/callback matched to endpoint type Authorize
+2022-09-16 21:34:10.231 +03:00 [DBG] Endpoint enabled: Authorize, successfully created handler: IdentityServer4.Endpoints.AuthorizeCallbackEndpoint
+2022-09-16 21:34:10.231 +03:00 [INF] Invoking IdentityServer endpoint: IdentityServer4.Endpoints.AuthorizeCallbackEndpoint for /connect/authorize/callback
+2022-09-16 21:34:10.232 +03:00 [DBG] Start authorize callback request
+2022-09-16 21:34:10.237 +03:00 [DBG] User in authorize request: 5bfb002d-22d4-4bed-8f1d-fc81a6c5530f
+2022-09-16 21:34:10.238 +03:00 [DBG] Start authorize request protocol validation
+2022-09-16 21:34:10.245 +03:00 [DBG] client configuration validation for client pow-web-app succeeded.
+2022-09-16 21:34:10.257 +03:00 [ERR] Invalid redirect_uri: https://oauth.pstmn.io/v1/callback
+{"ClientId":"pow-web-app","ClientName":"Pow Web","RedirectUri":null,"AllowedRedirectUris":["http://localhost:3000/signin-oidc"],"SubjectId":"5bfb002d-22d4-4bed-8f1d-fc81a6c5530f","ResponseType":null,"ResponseMode":null,"GrantType":null,"RequestedScopes":"","State":null,"UiLocales":null,"Nonce":null,"AuthenticationContextReferenceClasses":null,"DisplayMode":null,"PromptMode":"","MaxAge":null,"LoginHint":null,"SessionId":null,"Raw":{"response_type":"code","client_id":"pow-web-app","scope":"openid profile PowWebApi","redirect_uri":"https://oauth.pstmn.io/v1/callback"},"$type":"AuthorizeRequestValidationLog"}
+2022-09-16 21:34:10.261 +03:00 [ERR] Request validation failed
+2022-09-16 21:34:10.261 +03:00 [INF] {"ClientId":"pow-web-app","ClientName":"Pow Web","RedirectUri":null,"AllowedRedirectUris":["http://localhost:3000/signin-oidc"],"SubjectId":"5bfb002d-22d4-4bed-8f1d-fc81a6c5530f","ResponseType":null,"ResponseMode":null,"GrantType":null,"RequestedScopes":"","State":null,"UiLocales":null,"Nonce":null,"AuthenticationContextReferenceClasses":null,"DisplayMode":null,"PromptMode":"","MaxAge":null,"LoginHint":null,"SessionId":null,"Raw":{"response_type":"code","client_id":"pow-web-app","scope":"openid profile PowWebApi","redirect_uri":"https://oauth.pstmn.io/v1/callback"},"$type":"AuthorizeRequestValidationLog"}
+2022-09-16 21:34:45.096 +03:00 [DBG] Request path /connect/authorize/callback matched to endpoint type Authorize
+2022-09-16 21:34:45.097 +03:00 [DBG] Endpoint enabled: Authorize, successfully created handler: IdentityServer4.Endpoints.AuthorizeCallbackEndpoint
+2022-09-16 21:34:45.097 +03:00 [INF] Invoking IdentityServer endpoint: IdentityServer4.Endpoints.AuthorizeCallbackEndpoint for /connect/authorize/callback
+2022-09-16 21:34:45.100 +03:00 [DBG] Start authorize callback request
+2022-09-16 21:34:45.101 +03:00 [DBG] User in authorize request: 5bfb002d-22d4-4bed-8f1d-fc81a6c5530f
+2022-09-16 21:34:45.101 +03:00 [DBG] Start authorize request protocol validation
+2022-09-16 21:34:45.101 +03:00 [DBG] client configuration validation for client pow-web-app succeeded.
+2022-09-16 21:34:45.102 +03:00 [ERR] Invalid redirect_uri: https://oauth.pstmn.io/v1/callback
+{"ClientId":"pow-web-app","ClientName":"Pow Web","RedirectUri":null,"AllowedRedirectUris":["http://localhost:3000/signin-oidc"],"SubjectId":"5bfb002d-22d4-4bed-8f1d-fc81a6c5530f","ResponseType":null,"ResponseMode":null,"GrantType":null,"RequestedScopes":"","State":null,"UiLocales":null,"Nonce":null,"AuthenticationContextReferenceClasses":null,"DisplayMode":null,"PromptMode":"","MaxAge":null,"LoginHint":null,"SessionId":null,"Raw":{"response_type":"code","client_id":"pow-web-app","scope":"openid profile PowWebApi","redirect_uri":"https://oauth.pstmn.io/v1/callback"},"$type":"AuthorizeRequestValidationLog"}
+2022-09-16 21:34:45.102 +03:00 [ERR] Request validation failed
+2022-09-16 21:34:45.102 +03:00 [INF] {"ClientId":"pow-web-app","ClientName":"Pow Web","RedirectUri":null,"AllowedRedirectUris":["http://localhost:3000/signin-oidc"],"SubjectId":"5bfb002d-22d4-4bed-8f1d-fc81a6c5530f","ResponseType":null,"ResponseMode":null,"GrantType":null,"RequestedScopes":"","State":null,"UiLocales":null,"Nonce":null,"AuthenticationContextReferenceClasses":null,"DisplayMode":null,"PromptMode":"","MaxAge":null,"LoginHint":null,"SessionId":null,"Raw":{"response_type":"code","client_id":"pow-web-app","scope":"openid profile PowWebApi","redirect_uri":"https://oauth.pstmn.io/v1/callback"},"$type":"AuthorizeRequestValidationLog"}
+2022-09-16 21:35:00.278 +03:00 [INF] Starting host...
+2022-09-16 21:35:02.232 +03:00 [INF] Starting IdentityServer4 version 4.1.2+997a6cdd643e46cd5762b710c4ddc43574cbec2e
+2022-09-16 21:35:02.239 +03:00 [INF] You are using the in-memory version of the persisted grant store. This will store consent decisions, authorization codes, refresh and reference tokens in memory only. If you are using any of those features in production, you want to switch to a different store implementation.
+2022-09-16 21:35:02.242 +03:00 [INF] Using the default authentication scheme Identity.Application for IdentityServer
+2022-09-16 21:35:02.242 +03:00 [DBG] Using Identity.Application as default ASP.NET Core scheme for authentication
+2022-09-16 21:35:02.242 +03:00 [DBG] Using Identity.External as default ASP.NET Core scheme for sign-in
+2022-09-16 21:35:02.242 +03:00 [DBG] Using Identity.External as default ASP.NET Core scheme for sign-out
+2022-09-16 21:35:02.242 +03:00 [DBG] Using Identity.Application as default ASP.NET Core scheme for challenge
+2022-09-16 21:35:02.242 +03:00 [DBG] Using Identity.Application as default ASP.NET Core scheme for forbid
+2022-09-16 21:35:02.310 +03:00 [INF] Application started. Press Ctrl+C to shut down.
+2022-09-16 21:35:02.310 +03:00 [INF] Hosting environment: Development
+2022-09-16 21:35:02.310 +03:00 [INF] Content root path: D:\programming\dotNet\OlegLearning\Sigma_Trainee\PowUkraine\IdentityServer
+2022-09-16 21:35:02.399 +03:00 [DBG] Login Url: /Authorization/Login
+2022-09-16 21:35:02.400 +03:00 [DBG] Login Return Url Parameter: ReturnUrl
+2022-09-16 21:35:02.400 +03:00 [DBG] Logout Url: /Authorization/Logout
+2022-09-16 21:35:02.400 +03:00 [DBG] ConsentUrl Url: /consent
+2022-09-16 21:35:02.400 +03:00 [DBG] Consent Return Url Parameter: returnUrl
+2022-09-16 21:35:02.400 +03:00 [DBG] Error Url: /home/error
+2022-09-16 21:35:02.400 +03:00 [DBG] Error Id Parameter: errorId
+2022-09-16 21:35:07.177 +03:00 [DBG] Request path /connect/authorize/callback matched to endpoint type Authorize
+2022-09-16 21:35:07.193 +03:00 [DBG] Endpoint enabled: Authorize, successfully created handler: IdentityServer4.Endpoints.AuthorizeCallbackEndpoint
+2022-09-16 21:35:07.193 +03:00 [INF] Invoking IdentityServer endpoint: IdentityServer4.Endpoints.AuthorizeCallbackEndpoint for /connect/authorize/callback
+2022-09-16 21:35:07.194 +03:00 [DBG] Start authorize callback request
+2022-09-16 21:35:07.200 +03:00 [DBG] User in authorize request: 5bfb002d-22d4-4bed-8f1d-fc81a6c5530f
+2022-09-16 21:35:07.201 +03:00 [DBG] Start authorize request protocol validation
+2022-09-16 21:35:07.209 +03:00 [DBG] client configuration validation for client pow-web-app succeeded.
+2022-09-16 21:35:07.224 +03:00 [ERR] Invalid redirect_uri: https://oauth.pstmn.io/v1/callback
+{"ClientId":"pow-web-app","ClientName":"Pow Web","RedirectUri":null,"AllowedRedirectUris":["http://localhost:3000/signin-oidc"],"SubjectId":"5bfb002d-22d4-4bed-8f1d-fc81a6c5530f","ResponseType":null,"ResponseMode":null,"GrantType":null,"RequestedScopes":"","State":null,"UiLocales":null,"Nonce":null,"AuthenticationContextReferenceClasses":null,"DisplayMode":null,"PromptMode":"","MaxAge":null,"LoginHint":null,"SessionId":null,"Raw":{"response_type":"code","client_id":"pow-web-app","scope":"openid profile PowWebApi","redirect_uri":"https://oauth.pstmn.io/v1/callback"},"$type":"AuthorizeRequestValidationLog"}
+2022-09-16 21:35:07.227 +03:00 [ERR] Request validation failed
+2022-09-16 21:35:07.227 +03:00 [INF] {"ClientId":"pow-web-app","ClientName":"Pow Web","RedirectUri":null,"AllowedRedirectUris":["http://localhost:3000/signin-oidc"],"SubjectId":"5bfb002d-22d4-4bed-8f1d-fc81a6c5530f","ResponseType":null,"ResponseMode":null,"GrantType":null,"RequestedScopes":"","State":null,"UiLocales":null,"Nonce":null,"AuthenticationContextReferenceClasses":null,"DisplayMode":null,"PromptMode":"","MaxAge":null,"LoginHint":null,"SessionId":null,"Raw":{"response_type":"code","client_id":"pow-web-app","scope":"openid profile PowWebApi","redirect_uri":"https://oauth.pstmn.io/v1/callback"},"$type":"AuthorizeRequestValidationLog"}
+2022-09-16 21:35:41.101 +03:00 [DBG] Request path /connect/authorize/callback matched to endpoint type Authorize
+2022-09-16 21:35:41.102 +03:00 [DBG] Endpoint enabled: Authorize, successfully created handler: IdentityServer4.Endpoints.AuthorizeCallbackEndpoint
+2022-09-16 21:35:41.102 +03:00 [INF] Invoking IdentityServer endpoint: IdentityServer4.Endpoints.AuthorizeCallbackEndpoint for /connect/authorize/callback
+2022-09-16 21:35:41.102 +03:00 [DBG] Start authorize callback request
+2022-09-16 21:35:41.105 +03:00 [DBG] User in authorize request: 5bfb002d-22d4-4bed-8f1d-fc81a6c5530f
+2022-09-16 21:35:41.105 +03:00 [DBG] Start authorize request protocol validation
+2022-09-16 21:35:41.105 +03:00 [DBG] client configuration validation for client pow-web-app succeeded.
+2022-09-16 21:35:41.105 +03:00 [ERR] Invalid redirect_uri: https://oauth.pstmn.io/v1/callback
+{"ClientId":"pow-web-app","ClientName":"Pow Web","RedirectUri":null,"AllowedRedirectUris":["http://localhost:3000/signin-oidc"],"SubjectId":"5bfb002d-22d4-4bed-8f1d-fc81a6c5530f","ResponseType":null,"ResponseMode":null,"GrantType":null,"RequestedScopes":"","State":null,"UiLocales":null,"Nonce":null,"AuthenticationContextReferenceClasses":null,"DisplayMode":null,"PromptMode":"","MaxAge":null,"LoginHint":null,"SessionId":null,"Raw":{"response_type":"code","client_id":"pow-web-app","scope":"openid profile PowWebApi","redirect_uri":"https://oauth.pstmn.io/v1/callback"},"$type":"AuthorizeRequestValidationLog"}
+2022-09-16 21:35:41.105 +03:00 [ERR] Request validation failed
+2022-09-16 21:35:41.105 +03:00 [INF] {"ClientId":"pow-web-app","ClientName":"Pow Web","RedirectUri":null,"AllowedRedirectUris":["http://localhost:3000/signin-oidc"],"SubjectId":"5bfb002d-22d4-4bed-8f1d-fc81a6c5530f","ResponseType":null,"ResponseMode":null,"GrantType":null,"RequestedScopes":"","State":null,"UiLocales":null,"Nonce":null,"AuthenticationContextReferenceClasses":null,"DisplayMode":null,"PromptMode":"","MaxAge":null,"LoginHint":null,"SessionId":null,"Raw":{"response_type":"code","client_id":"pow-web-app","scope":"openid profile PowWebApi","redirect_uri":"https://oauth.pstmn.io/v1/callback"},"$type":"AuthorizeRequestValidationLog"}
+2022-09-16 21:35:52.257 +03:00 [DBG] Request path /connect/authorize/callback matched to endpoint type Authorize
+2022-09-16 21:35:52.261 +03:00 [DBG] Endpoint enabled: Authorize, successfully created handler: IdentityServer4.Endpoints.AuthorizeCallbackEndpoint
+2022-09-16 21:35:52.261 +03:00 [INF] Invoking IdentityServer endpoint: IdentityServer4.Endpoints.AuthorizeCallbackEndpoint for /connect/authorize/callback
+2022-09-16 21:35:52.262 +03:00 [DBG] Start authorize callback request
+2022-09-16 21:35:52.262 +03:00 [DBG] User in authorize request: 5bfb002d-22d4-4bed-8f1d-fc81a6c5530f
+2022-09-16 21:35:52.262 +03:00 [DBG] Start authorize request protocol validation
+2022-09-16 21:35:52.262 +03:00 [DBG] client configuration validation for client pow-web-app succeeded.
+2022-09-16 21:35:52.262 +03:00 [ERR] Invalid redirect_uri: https://oauth.pstmn.io/v1/callback
+{"ClientId":"pow-web-app","ClientName":"Pow Web","RedirectUri":null,"AllowedRedirectUris":["http://localhost:3000/signin-oidc"],"SubjectId":"5bfb002d-22d4-4bed-8f1d-fc81a6c5530f","ResponseType":null,"ResponseMode":null,"GrantType":null,"RequestedScopes":"","State":null,"UiLocales":null,"Nonce":null,"AuthenticationContextReferenceClasses":null,"DisplayMode":null,"PromptMode":"","MaxAge":null,"LoginHint":null,"SessionId":null,"Raw":{"response_type":"code","client_id":"pow-web-app","scope":"openid profile PowWebApi","redirect_uri":"https://oauth.pstmn.io/v1/callback","code_challenge":"Soo7C2moax2HSC9J9Q5rB0wKtbQ89h1rnu-CAJwYbBM","code_challenge_method":"S256"},"$type":"AuthorizeRequestValidationLog"}
+2022-09-16 21:35:52.262 +03:00 [ERR] Request validation failed
+2022-09-16 21:35:52.262 +03:00 [INF] {"ClientId":"pow-web-app","ClientName":"Pow Web","RedirectUri":null,"AllowedRedirectUris":["http://localhost:3000/signin-oidc"],"SubjectId":"5bfb002d-22d4-4bed-8f1d-fc81a6c5530f","ResponseType":null,"ResponseMode":null,"GrantType":null,"RequestedScopes":"","State":null,"UiLocales":null,"Nonce":null,"AuthenticationContextReferenceClasses":null,"DisplayMode":null,"PromptMode":"","MaxAge":null,"LoginHint":null,"SessionId":null,"Raw":{"response_type":"code","client_id":"pow-web-app","scope":"openid profile PowWebApi","redirect_uri":"https://oauth.pstmn.io/v1/callback","code_challenge":"Soo7C2moax2HSC9J9Q5rB0wKtbQ89h1rnu-CAJwYbBM","code_challenge_method":"S256"},"$type":"AuthorizeRequestValidationLog"}
+2022-09-16 21:36:49.735 +03:00 [DBG] Request path /connect/authorize/callback matched to endpoint type Authorize
+2022-09-16 21:36:49.736 +03:00 [DBG] Endpoint enabled: Authorize, successfully created handler: IdentityServer4.Endpoints.AuthorizeCallbackEndpoint
+2022-09-16 21:36:49.736 +03:00 [INF] Invoking IdentityServer endpoint: IdentityServer4.Endpoints.AuthorizeCallbackEndpoint for /connect/authorize/callback
+2022-09-16 21:36:49.736 +03:00 [DBG] Start authorize callback request
+2022-09-16 21:36:49.737 +03:00 [DBG] User in authorize request: 5bfb002d-22d4-4bed-8f1d-fc81a6c5530f
+2022-09-16 21:36:49.737 +03:00 [DBG] Start authorize request protocol validation
+2022-09-16 21:36:49.737 +03:00 [DBG] client configuration validation for client pow-web-app succeeded.
+2022-09-16 21:36:49.738 +03:00 [ERR] Invalid redirect_uri: https://oauth.pstmn.io/v1/callback
+{"ClientId":"pow-web-app","ClientName":"Pow Web","RedirectUri":null,"AllowedRedirectUris":["http://localhost:3000/signin-oidc"],"SubjectId":"5bfb002d-22d4-4bed-8f1d-fc81a6c5530f","ResponseType":null,"ResponseMode":null,"GrantType":null,"RequestedScopes":"","State":null,"UiLocales":null,"Nonce":null,"AuthenticationContextReferenceClasses":null,"DisplayMode":null,"PromptMode":"","MaxAge":null,"LoginHint":null,"SessionId":null,"Raw":{"response_type":"code","client_id":"pow-web-app","scope":"openid profile PowWebApi","redirect_uri":"https://oauth.pstmn.io/v1/callback"},"$type":"AuthorizeRequestValidationLog"}
+2022-09-16 21:36:49.739 +03:00 [ERR] Request validation failed
+2022-09-16 21:36:49.739 +03:00 [INF] {"ClientId":"pow-web-app","ClientName":"Pow Web","RedirectUri":null,"AllowedRedirectUris":["http://localhost:3000/signin-oidc"],"SubjectId":"5bfb002d-22d4-4bed-8f1d-fc81a6c5530f","ResponseType":null,"ResponseMode":null,"GrantType":null,"RequestedScopes":"","State":null,"UiLocales":null,"Nonce":null,"AuthenticationContextReferenceClasses":null,"DisplayMode":null,"PromptMode":"","MaxAge":null,"LoginHint":null,"SessionId":null,"Raw":{"response_type":"code","client_id":"pow-web-app","scope":"openid profile PowWebApi","redirect_uri":"https://oauth.pstmn.io/v1/callback"},"$type":"AuthorizeRequestValidationLog"}
+2022-09-16 21:37:13.664 +03:00 [DBG] Request path /connect/authorize/callback matched to endpoint type Authorize
+2022-09-16 21:37:13.664 +03:00 [DBG] Endpoint enabled: Authorize, successfully created handler: IdentityServer4.Endpoints.AuthorizeCallbackEndpoint
+2022-09-16 21:37:13.664 +03:00 [INF] Invoking IdentityServer endpoint: IdentityServer4.Endpoints.AuthorizeCallbackEndpoint for /connect/authorize/callback
+2022-09-16 21:37:13.664 +03:00 [DBG] Start authorize callback request
+2022-09-16 21:37:13.665 +03:00 [DBG] User in authorize request: 5bfb002d-22d4-4bed-8f1d-fc81a6c5530f
+2022-09-16 21:37:13.665 +03:00 [DBG] Start authorize request protocol validation
+2022-09-16 21:37:13.665 +03:00 [DBG] client configuration validation for client pow-web-app succeeded.
+2022-09-16 21:37:13.665 +03:00 [ERR] Invalid redirect_uri: https://oauth.pstmn.io/v1/callback
+{"ClientId":"pow-web-app","ClientName":"Pow Web","RedirectUri":null,"AllowedRedirectUris":["http://localhost:3000/signin-oidc"],"SubjectId":"5bfb002d-22d4-4bed-8f1d-fc81a6c5530f","ResponseType":null,"ResponseMode":null,"GrantType":null,"RequestedScopes":"","State":null,"UiLocales":null,"Nonce":null,"AuthenticationContextReferenceClasses":null,"DisplayMode":null,"PromptMode":"","MaxAge":null,"LoginHint":null,"SessionId":null,"Raw":{"response_type":"code","client_id":"pow-web-app","scope":"openid profile PowWebApi","redirect_uri":"https://oauth.pstmn.io/v1/callback"},"$type":"AuthorizeRequestValidationLog"}
+2022-09-16 21:37:13.665 +03:00 [ERR] Request validation failed
+2022-09-16 21:37:13.665 +03:00 [INF] {"ClientId":"pow-web-app","ClientName":"Pow Web","RedirectUri":null,"AllowedRedirectUris":["http://localhost:3000/signin-oidc"],"SubjectId":"5bfb002d-22d4-4bed-8f1d-fc81a6c5530f","ResponseType":null,"ResponseMode":null,"GrantType":null,"RequestedScopes":"","State":null,"UiLocales":null,"Nonce":null,"AuthenticationContextReferenceClasses":null,"DisplayMode":null,"PromptMode":"","MaxAge":null,"LoginHint":null,"SessionId":null,"Raw":{"response_type":"code","client_id":"pow-web-app","scope":"openid profile PowWebApi","redirect_uri":"https://oauth.pstmn.io/v1/callback"},"$type":"AuthorizeRequestValidationLog"}
+2022-09-16 21:37:25.217 +03:00 [DBG] Request path /connect/authorize/callback matched to endpoint type Authorize
+2022-09-16 21:37:25.217 +03:00 [DBG] Endpoint enabled: Authorize, successfully created handler: IdentityServer4.Endpoints.AuthorizeCallbackEndpoint
+2022-09-16 21:37:25.217 +03:00 [INF] Invoking IdentityServer endpoint: IdentityServer4.Endpoints.AuthorizeCallbackEndpoint for /connect/authorize/callback
+2022-09-16 21:37:25.217 +03:00 [DBG] Start authorize callback request
+2022-09-16 21:37:25.218 +03:00 [DBG] User in authorize request: 5bfb002d-22d4-4bed-8f1d-fc81a6c5530f
+2022-09-16 21:37:25.218 +03:00 [DBG] Start authorize request protocol validation
+2022-09-16 21:37:25.218 +03:00 [DBG] client configuration validation for client pow-web-app succeeded.
+2022-09-16 21:37:25.218 +03:00 [ERR] Invalid redirect_uri: https://oauth.pstmn.io/v1/callback
+{"ClientId":"pow-web-app","ClientName":"Pow Web","RedirectUri":null,"AllowedRedirectUris":["http://localhost:3000/signin-oidc"],"SubjectId":"5bfb002d-22d4-4bed-8f1d-fc81a6c5530f","ResponseType":null,"ResponseMode":null,"GrantType":null,"RequestedScopes":"","State":null,"UiLocales":null,"Nonce":null,"AuthenticationContextReferenceClasses":null,"DisplayMode":null,"PromptMode":"","MaxAge":null,"LoginHint":null,"SessionId":null,"Raw":{"response_type":"code","client_id":"pow-web-app","scope":"openid profile PowWebApi","redirect_uri":"https://oauth.pstmn.io/v1/callback"},"$type":"AuthorizeRequestValidationLog"}
+2022-09-16 21:37:25.219 +03:00 [ERR] Request validation failed
+2022-09-16 21:37:25.219 +03:00 [INF] {"ClientId":"pow-web-app","ClientName":"Pow Web","RedirectUri":null,"AllowedRedirectUris":["http://localhost:3000/signin-oidc"],"SubjectId":"5bfb002d-22d4-4bed-8f1d-fc81a6c5530f","ResponseType":null,"ResponseMode":null,"GrantType":null,"RequestedScopes":"","State":null,"UiLocales":null,"Nonce":null,"AuthenticationContextReferenceClasses":null,"DisplayMode":null,"PromptMode":"","MaxAge":null,"LoginHint":null,"SessionId":null,"Raw":{"response_type":"code","client_id":"pow-web-app","scope":"openid profile PowWebApi","redirect_uri":"https://oauth.pstmn.io/v1/callback"},"$type":"AuthorizeRequestValidationLog"}
+2022-09-16 21:39:20.756 +03:00 [DBG] CORS request made for path: /.well-known/openid-configuration from origin: http://localhost:3000
+2022-09-16 21:39:20.757 +03:00 [DBG] Client list checked and origin: http://localhost:3000 is allowed
+2022-09-16 21:39:20.757 +03:00 [DBG] CorsPolicyService allowed origin: http://localhost:3000
+2022-09-16 21:39:20.759 +03:00 [DBG] Request path /.well-known/openid-configuration matched to endpoint type Discovery
+2022-09-16 21:39:20.760 +03:00 [DBG] Endpoint enabled: Discovery, successfully created handler: IdentityServer4.Endpoints.DiscoveryEndpoint
+2022-09-16 21:39:20.760 +03:00 [INF] Invoking IdentityServer endpoint: IdentityServer4.Endpoints.DiscoveryEndpoint for /.well-known/openid-configuration
+2022-09-16 21:39:20.760 +03:00 [DBG] Start discovery request
+2022-09-16 21:39:20.806 +03:00 [DBG] Request path /connect/authorize matched to endpoint type Authorize
+2022-09-16 21:39:20.806 +03:00 [DBG] Endpoint enabled: Authorize, successfully created handler: IdentityServer4.Endpoints.AuthorizeEndpoint
+2022-09-16 21:39:20.806 +03:00 [INF] Invoking IdentityServer endpoint: IdentityServer4.Endpoints.AuthorizeEndpoint for /connect/authorize
+2022-09-16 21:39:20.807 +03:00 [DBG] Start authorize request
+2022-09-16 21:39:20.807 +03:00 [DBG] User in authorize request: 5bfb002d-22d4-4bed-8f1d-fc81a6c5530f
+2022-09-16 21:39:20.808 +03:00 [DBG] Start authorize request protocol validation
+2022-09-16 21:39:20.808 +03:00 [DBG] client configuration validation for client pow-web-app succeeded.
+2022-09-16 21:39:20.809 +03:00 [DBG] Checking for PKCE parameters
+2022-09-16 21:39:20.823 +03:00 [DBG] Calling into custom validator: IdentityServer4.Validation.DefaultCustomAuthorizeRequestValidator
+2022-09-16 21:39:20.824 +03:00 [DBG] ValidatedAuthorizeRequest
+{"ClientId":"pow-web-app","ClientName":"Pow Web","RedirectUri":"http://localhost:3000/signin-oidc","AllowedRedirectUris":["http://localhost:3000/signin-oidc"],"SubjectId":"5bfb002d-22d4-4bed-8f1d-fc81a6c5530f","ResponseType":"code","ResponseMode":"query","GrantType":"authorization_code","RequestedScopes":"openid profile PowWebApi","State":"93bca31b83d7473fbfa29c0a117cf77a","UiLocales":null,"Nonce":null,"AuthenticationContextReferenceClasses":null,"DisplayMode":null,"PromptMode":"","MaxAge":null,"LoginHint":null,"SessionId":"A6AEC4415F7C12D8B5055C7B312C9548","Raw":{"client_id":"pow-web-app","redirect_uri":"http://localhost:3000/signin-oidc","response_type":"code","scope":"openid profile PowWebApi","state":"93bca31b83d7473fbfa29c0a117cf77a","code_challenge":"6WbTvIPs3LSOMavguXiofFOXwdlpVeeWooGW3vT89Lk","code_challenge_method":"S256","response_mode":"query"},"$type":"AuthorizeRequestValidationLog"}
+2022-09-16 21:39:21.143 +03:00 [DBG] Client is configured to not require consent, no consent is required
+2022-09-16 21:39:21.145 +03:00 [DBG] Creating Authorization Code Flow response.
+2022-09-16 21:39:21.186 +03:00 [DBG] Authorize endpoint response
+{"SubjectId":"5bfb002d-22d4-4bed-8f1d-fc81a6c5530f","ClientId":"pow-web-app","RedirectUri":"http://localhost:3000/signin-oidc","State":"93bca31b83d7473fbfa29c0a117cf77a","Scope":"openid profile PowWebApi","Error":null,"ErrorDescription":null,"$type":"AuthorizeResponseLog"}
+2022-09-16 21:39:21.248 +03:00 [DBG] CORS request made for path: /.well-known/openid-configuration from origin: http://localhost:3000
+2022-09-16 21:39:21.248 +03:00 [DBG] Client list checked and origin: http://localhost:3000 is allowed
+2022-09-16 21:39:21.248 +03:00 [DBG] CorsPolicyService allowed origin: http://localhost:3000
+2022-09-16 21:39:21.248 +03:00 [DBG] Request path /.well-known/openid-configuration matched to endpoint type Discovery
+2022-09-16 21:39:21.248 +03:00 [DBG] Endpoint enabled: Discovery, successfully created handler: IdentityServer4.Endpoints.DiscoveryEndpoint
+2022-09-16 21:39:21.248 +03:00 [INF] Invoking IdentityServer endpoint: IdentityServer4.Endpoints.DiscoveryEndpoint for /.well-known/openid-configuration
+2022-09-16 21:39:21.248 +03:00 [DBG] Start discovery request
+2022-09-16 21:39:21.255 +03:00 [DBG] CORS request made for path: /connect/token from origin: http://localhost:3000
+2022-09-16 21:39:21.255 +03:00 [DBG] Client list checked and origin: http://localhost:3000 is allowed
+2022-09-16 21:39:21.255 +03:00 [DBG] CorsPolicyService allowed origin: http://localhost:3000
+2022-09-16 21:39:21.255 +03:00 [DBG] Request path /connect/token matched to endpoint type Token
+2022-09-16 21:39:21.257 +03:00 [DBG] Endpoint enabled: Token, successfully created handler: IdentityServer4.Endpoints.TokenEndpoint
+2022-09-16 21:39:21.257 +03:00 [INF] Invoking IdentityServer endpoint: IdentityServer4.Endpoints.TokenEndpoint for /connect/token
+2022-09-16 21:39:21.259 +03:00 [DBG] Start token request.
+2022-09-16 21:39:21.260 +03:00 [DBG] Start client validation
+2022-09-16 21:39:21.263 +03:00 [DBG] Start parsing Basic Authentication secret
+2022-09-16 21:39:21.264 +03:00 [DBG] Start parsing for secret in post body
+2022-09-16 21:39:21.270 +03:00 [DBG] client id without secret found
+2022-09-16 21:39:21.270 +03:00 [DBG] Parser found secret: PostBodySecretParser
+2022-09-16 21:39:21.270 +03:00 [DBG] Secret id found: pow-web-app
+2022-09-16 21:39:21.271 +03:00 [DBG] client configuration validation for client pow-web-app succeeded.
+2022-09-16 21:39:21.271 +03:00 [DBG] Public Client - skipping secret validation success
+2022-09-16 21:39:21.271 +03:00 [DBG] Client validation success
+2022-09-16 21:39:21.272 +03:00 [DBG] Start token request validation
+2022-09-16 21:39:21.274 +03:00 [DBG] Start validation of authorization code token request
+2022-09-16 21:39:21.294 +03:00 [DBG] Client required a proof key for code exchange. Starting PKCE validation
+2022-09-16 21:39:21.328 +03:00 [DBG] Validation of authorization code token request success
+2022-09-16 21:39:21.331 +03:00 [INF] Token request validation success, {"ClientId":"pow-web-app","ClientName":"Pow Web","GrantType":"authorization_code","Scopes":null,"AuthorizationCode":"****52FA","RefreshToken":"********","UserName":null,"AuthenticationContextReferenceClasses":null,"Tenant":null,"IdP":null,"Raw":{"client_id":"pow-web-app","code":"1DACCE4453013A1921F8114BB1A661D0D1A819BBECF715F1D1DD4D1836DB52FA","redirect_uri":"http://localhost:3000/signin-oidc","code_verifier":"a9f6bf17e053490883eabb9ac04220fd4a39a3c90f7c47098276895c37faeb0431927f6cd53b46c9b932ded1b9935525","grant_type":"authorization_code"},"$type":"TokenRequestValidationLog"}
+2022-09-16 21:39:21.335 +03:00 [DBG] client configuration validation for client pow-web-app succeeded.
+2022-09-16 21:39:21.343 +03:00 [DBG] Getting claims for access token for client: pow-web-app
+2022-09-16 21:39:21.343 +03:00 [DBG] Getting claims for access token for subject: 5bfb002d-22d4-4bed-8f1d-fc81a6c5530f
+2022-09-16 21:39:21.534 +03:00 [DBG] client configuration validation for client pow-web-app succeeded.
+2022-09-16 21:39:21.537 +03:00 [DBG] Getting claims for identity token for subject: 5bfb002d-22d4-4bed-8f1d-fc81a6c5530f and client: pow-web-app
+2022-09-16 21:39:21.537 +03:00 [DBG] In addition to an id_token, an access_token was requested. No claims other than sub are included in the id_token. To obtain more user claims, either use the user info endpoint or set AlwaysIncludeUserClaimsInIdToken on the client configuration.
+2022-09-16 21:39:21.539 +03:00 [DBG] Token request success.
+2022-09-16 21:39:21.560 +03:00 [DBG] Request path /connect/checksession matched to endpoint type Checksession
+2022-09-16 21:39:21.560 +03:00 [DBG] Endpoint enabled: Checksession, successfully created handler: IdentityServer4.Endpoints.CheckSessionEndpoint
+2022-09-16 21:39:21.560 +03:00 [INF] Invoking IdentityServer endpoint: IdentityServer4.Endpoints.CheckSessionEndpoint for /connect/checksession
+2022-09-16 21:39:21.560 +03:00 [DBG] Rendering check session result
+2022-09-16 21:40:06.270 +03:00 [DBG] CORS request made for path: /.well-known/openid-configuration from origin: http://localhost:3000
+2022-09-16 21:40:06.270 +03:00 [DBG] Client list checked and origin: http://localhost:3000 is allowed
+2022-09-16 21:40:06.270 +03:00 [DBG] CorsPolicyService allowed origin: http://localhost:3000
+2022-09-16 21:40:06.271 +03:00 [DBG] Request path /.well-known/openid-configuration matched to endpoint type Discovery
+2022-09-16 21:40:06.272 +03:00 [DBG] Endpoint enabled: Discovery, successfully created handler: IdentityServer4.Endpoints.DiscoveryEndpoint
+2022-09-16 21:40:06.272 +03:00 [INF] Invoking IdentityServer endpoint: IdentityServer4.Endpoints.DiscoveryEndpoint for /.well-known/openid-configuration
+2022-09-16 21:40:06.272 +03:00 [DBG] Start discovery request
+2022-09-16 21:40:06.293 +03:00 [DBG] Request path /connect/authorize matched to endpoint type Authorize
+2022-09-16 21:40:06.294 +03:00 [DBG] Endpoint enabled: Authorize, successfully created handler: IdentityServer4.Endpoints.AuthorizeEndpoint
+2022-09-16 21:40:06.294 +03:00 [INF] Invoking IdentityServer endpoint: IdentityServer4.Endpoints.AuthorizeEndpoint for /connect/authorize
+2022-09-16 21:40:06.294 +03:00 [DBG] Start authorize request
+2022-09-16 21:40:06.294 +03:00 [DBG] No user present in authorize request
+2022-09-16 21:40:06.294 +03:00 [DBG] Start authorize request protocol validation
+2022-09-16 21:40:06.295 +03:00 [DBG] client configuration validation for client pow-web-app succeeded.
+2022-09-16 21:40:06.295 +03:00 [DBG] Checking for PKCE parameters
+2022-09-16 21:40:06.296 +03:00 [DBG] Calling into custom validator: IdentityServer4.Validation.DefaultCustomAuthorizeRequestValidator
+2022-09-16 21:40:06.296 +03:00 [DBG] ValidatedAuthorizeRequest
+{"ClientId":"pow-web-app","ClientName":"Pow Web","RedirectUri":"http://localhost:3000/signin-oidc","AllowedRedirectUris":["http://localhost:3000/signin-oidc"],"SubjectId":"anonymous","ResponseType":"code","ResponseMode":"query","GrantType":"authorization_code","RequestedScopes":"openid profile PowWebApi","State":"7819c88c5bc7402f867f310735bc7dd3","UiLocales":null,"Nonce":null,"AuthenticationContextReferenceClasses":null,"DisplayMode":null,"PromptMode":"","MaxAge":null,"LoginHint":null,"SessionId":"","Raw":{"client_id":"pow-web-app","redirect_uri":"http://localhost:3000/signin-oidc","response_type":"code","scope":"openid profile PowWebApi","state":"7819c88c5bc7402f867f310735bc7dd3","code_challenge":"kiyPc7HcUgHImMHq5aM6HG6hB_nd_GP0EojGAtE9gs0","code_challenge_method":"S256","response_mode":"query"},"$type":"AuthorizeRequestValidationLog"}
+2022-09-16 21:40:06.296 +03:00 [INF] Showing login: User is not authenticated
+2022-09-16 21:40:59.067 +03:00 [DBG] Request path /connect/authorize matched to endpoint type Authorize
+2022-09-16 21:40:59.072 +03:00 [DBG] Endpoint enabled: Authorize, successfully created handler: IdentityServer4.Endpoints.AuthorizeEndpoint
+2022-09-16 21:40:59.072 +03:00 [INF] Invoking IdentityServer endpoint: IdentityServer4.Endpoints.AuthorizeEndpoint for /connect/authorize
+2022-09-16 21:40:59.072 +03:00 [DBG] Start authorize request
+2022-09-16 21:40:59.072 +03:00 [DBG] User in authorize request: 5bfb002d-22d4-4bed-8f1d-fc81a6c5530f
+2022-09-16 21:40:59.072 +03:00 [DBG] Start authorize request protocol validation
+2022-09-16 21:40:59.072 +03:00 [DBG] client configuration validation for client pow-web-app succeeded.
+2022-09-16 21:40:59.073 +03:00 [ERR] Invalid redirect_uri: https://oauth.pstmn.io/v1/callback
+{"ClientId":"pow-web-app","ClientName":"Pow Web","RedirectUri":null,"AllowedRedirectUris":["http://localhost:3000/signin-oidc"],"SubjectId":"5bfb002d-22d4-4bed-8f1d-fc81a6c5530f","ResponseType":null,"ResponseMode":null,"GrantType":null,"RequestedScopes":"","State":null,"UiLocales":null,"Nonce":null,"AuthenticationContextReferenceClasses":null,"DisplayMode":null,"PromptMode":"","MaxAge":null,"LoginHint":null,"SessionId":null,"Raw":{"response_type":"code","client_id":"pow-web-app","scope":"openid profile PowWebApi","redirect_uri":"https://oauth.pstmn.io/v1/callback"},"$type":"AuthorizeRequestValidationLog"}
+2022-09-16 21:40:59.073 +03:00 [ERR] Request validation failed
+2022-09-16 21:40:59.073 +03:00 [INF] {"ClientId":"pow-web-app","ClientName":"Pow Web","RedirectUri":null,"AllowedRedirectUris":["http://localhost:3000/signin-oidc"],"SubjectId":"5bfb002d-22d4-4bed-8f1d-fc81a6c5530f","ResponseType":null,"ResponseMode":null,"GrantType":null,"RequestedScopes":"","State":null,"UiLocales":null,"Nonce":null,"AuthenticationContextReferenceClasses":null,"DisplayMode":null,"PromptMode":"","MaxAge":null,"LoginHint":null,"SessionId":null,"Raw":{"response_type":"code","client_id":"pow-web-app","scope":"openid profile PowWebApi","redirect_uri":"https://oauth.pstmn.io/v1/callback"},"$type":"AuthorizeRequestValidationLog"}
+2022-09-16 21:41:12.147 +03:00 [DBG] Request path /connect/authorize matched to endpoint type Authorize
+2022-09-16 21:41:12.147 +03:00 [DBG] Endpoint enabled: Authorize, successfully created handler: IdentityServer4.Endpoints.AuthorizeEndpoint
+2022-09-16 21:41:12.147 +03:00 [INF] Invoking IdentityServer endpoint: IdentityServer4.Endpoints.AuthorizeEndpoint for /connect/authorize
+2022-09-16 21:41:12.147 +03:00 [DBG] Start authorize request
+2022-09-16 21:41:12.147 +03:00 [DBG] User in authorize request: 5bfb002d-22d4-4bed-8f1d-fc81a6c5530f
+2022-09-16 21:41:12.148 +03:00 [DBG] Start authorize request protocol validation
+2022-09-16 21:41:12.148 +03:00 [DBG] client configuration validation for client pow-web-app succeeded.
+2022-09-16 21:41:12.148 +03:00 [ERR] Invalid redirect_uri: https://oauth.pstmn.io/v1/callback
+{"ClientId":"pow-web-app","ClientName":"Pow Web","RedirectUri":null,"AllowedRedirectUris":["http://localhost:3000/signin-oidc"],"SubjectId":"5bfb002d-22d4-4bed-8f1d-fc81a6c5530f","ResponseType":null,"ResponseMode":null,"GrantType":null,"RequestedScopes":"","State":null,"UiLocales":null,"Nonce":null,"AuthenticationContextReferenceClasses":null,"DisplayMode":null,"PromptMode":"","MaxAge":null,"LoginHint":null,"SessionId":null,"Raw":{"response_type":"code","client_id":"pow-web-app","scope":"openid profile PowWebApi","redirect_uri":"https://oauth.pstmn.io/v1/callback"},"$type":"AuthorizeRequestValidationLog"}
+2022-09-16 21:41:12.148 +03:00 [ERR] Request validation failed
+2022-09-16 21:41:12.148 +03:00 [INF] {"ClientId":"pow-web-app","ClientName":"Pow Web","RedirectUri":null,"AllowedRedirectUris":["http://localhost:3000/signin-oidc"],"SubjectId":"5bfb002d-22d4-4bed-8f1d-fc81a6c5530f","ResponseType":null,"ResponseMode":null,"GrantType":null,"RequestedScopes":"","State":null,"UiLocales":null,"Nonce":null,"AuthenticationContextReferenceClasses":null,"DisplayMode":null,"PromptMode":"","MaxAge":null,"LoginHint":null,"SessionId":null,"Raw":{"response_type":"code","client_id":"pow-web-app","scope":"openid profile PowWebApi","redirect_uri":"https://oauth.pstmn.io/v1/callback"},"$type":"AuthorizeRequestValidationLog"}
+2022-09-16 21:44:50.612 +03:00 [DBG] Request path /connect/authorize matched to endpoint type Authorize
+2022-09-16 21:44:50.612 +03:00 [DBG] Endpoint enabled: Authorize, successfully created handler: IdentityServer4.Endpoints.AuthorizeEndpoint
+2022-09-16 21:44:50.612 +03:00 [INF] Invoking IdentityServer endpoint: IdentityServer4.Endpoints.AuthorizeEndpoint for /connect/authorize
+2022-09-16 21:44:50.612 +03:00 [DBG] Start authorize request
+2022-09-16 21:44:50.612 +03:00 [DBG] User in authorize request: 5bfb002d-22d4-4bed-8f1d-fc81a6c5530f
+2022-09-16 21:44:50.612 +03:00 [DBG] Start authorize request protocol validation
+2022-09-16 21:44:50.612 +03:00 [DBG] client configuration validation for client pow-web-app succeeded.
+2022-09-16 21:44:50.613 +03:00 [ERR] Invalid redirect_uri: https://oauth.pstmn.io/v1/callback
+{"ClientId":"pow-web-app","ClientName":"Pow Web","RedirectUri":null,"AllowedRedirectUris":["http://localhost:3000/signin-oidc"],"SubjectId":"5bfb002d-22d4-4bed-8f1d-fc81a6c5530f","ResponseType":null,"ResponseMode":null,"GrantType":null,"RequestedScopes":"","State":null,"UiLocales":null,"Nonce":null,"AuthenticationContextReferenceClasses":null,"DisplayMode":null,"PromptMode":"","MaxAge":null,"LoginHint":null,"SessionId":null,"Raw":{"response_type":"code","client_id":"pow-web-app","scope":"openid profile PowWebApi","redirect_uri":"https://oauth.pstmn.io/v1/callback"},"$type":"AuthorizeRequestValidationLog"}
+2022-09-16 21:44:50.613 +03:00 [ERR] Request validation failed
+2022-09-16 21:44:50.613 +03:00 [INF] {"ClientId":"pow-web-app","ClientName":"Pow Web","RedirectUri":null,"AllowedRedirectUris":["http://localhost:3000/signin-oidc"],"SubjectId":"5bfb002d-22d4-4bed-8f1d-fc81a6c5530f","ResponseType":null,"ResponseMode":null,"GrantType":null,"RequestedScopes":"","State":null,"UiLocales":null,"Nonce":null,"AuthenticationContextReferenceClasses":null,"DisplayMode":null,"PromptMode":"","MaxAge":null,"LoginHint":null,"SessionId":null,"Raw":{"response_type":"code","client_id":"pow-web-app","scope":"openid profile PowWebApi","redirect_uri":"https://oauth.pstmn.io/v1/callback"},"$type":"AuthorizeRequestValidationLog"}
+2022-09-16 21:45:37.695 +03:00 [DBG] Request path /connect/authorize matched to endpoint type Authorize
+2022-09-16 21:45:37.695 +03:00 [DBG] Endpoint enabled: Authorize, successfully created handler: IdentityServer4.Endpoints.AuthorizeEndpoint
+2022-09-16 21:45:37.695 +03:00 [INF] Invoking IdentityServer endpoint: IdentityServer4.Endpoints.AuthorizeEndpoint for /connect/authorize
+2022-09-16 21:45:37.695 +03:00 [DBG] Start authorize request
+2022-09-16 21:45:37.696 +03:00 [DBG] User in authorize request: 5bfb002d-22d4-4bed-8f1d-fc81a6c5530f
+2022-09-16 21:45:37.696 +03:00 [DBG] Start authorize request protocol validation
+2022-09-16 21:45:37.696 +03:00 [DBG] client configuration validation for client pow-web-app succeeded.
+2022-09-16 21:45:37.696 +03:00 [ERR] Invalid redirect_uri: https://oauth.pstmn.io/v1/callback
+{"ClientId":"pow-web-app","ClientName":"Pow Web","RedirectUri":null,"AllowedRedirectUris":["http://localhost:3000/signin-oidc"],"SubjectId":"5bfb002d-22d4-4bed-8f1d-fc81a6c5530f","ResponseType":null,"ResponseMode":null,"GrantType":null,"RequestedScopes":"","State":null,"UiLocales":null,"Nonce":null,"AuthenticationContextReferenceClasses":null,"DisplayMode":null,"PromptMode":"","MaxAge":null,"LoginHint":null,"SessionId":null,"Raw":{"response_type":"code","client_id":"pow-web-app","scope":"openid profile PowWebApi","redirect_uri":"https://oauth.pstmn.io/v1/callback"},"$type":"AuthorizeRequestValidationLog"}
+2022-09-16 21:45:37.696 +03:00 [ERR] Request validation failed
+2022-09-16 21:45:37.697 +03:00 [INF] {"ClientId":"pow-web-app","ClientName":"Pow Web","RedirectUri":null,"AllowedRedirectUris":["http://localhost:3000/signin-oidc"],"SubjectId":"5bfb002d-22d4-4bed-8f1d-fc81a6c5530f","ResponseType":null,"ResponseMode":null,"GrantType":null,"RequestedScopes":"","State":null,"UiLocales":null,"Nonce":null,"AuthenticationContextReferenceClasses":null,"DisplayMode":null,"PromptMode":"","MaxAge":null,"LoginHint":null,"SessionId":null,"Raw":{"response_type":"code","client_id":"pow-web-app","scope":"openid profile PowWebApi","redirect_uri":"https://oauth.pstmn.io/v1/callback"},"$type":"AuthorizeRequestValidationLog"}
+2022-09-16 21:46:53.825 +03:00 [DBG] Request path /connect/authorize matched to endpoint type Authorize
+2022-09-16 21:46:53.826 +03:00 [DBG] Endpoint enabled: Authorize, successfully created handler: IdentityServer4.Endpoints.AuthorizeEndpoint
+2022-09-16 21:46:53.826 +03:00 [INF] Invoking IdentityServer endpoint: IdentityServer4.Endpoints.AuthorizeEndpoint for /connect/authorize
+2022-09-16 21:46:53.826 +03:00 [DBG] Start authorize request
+2022-09-16 21:46:53.826 +03:00 [DBG] User in authorize request: 5bfb002d-22d4-4bed-8f1d-fc81a6c5530f
+2022-09-16 21:46:53.826 +03:00 [DBG] Start authorize request protocol validation
+2022-09-16 21:46:53.826 +03:00 [DBG] client configuration validation for client pow-web-app succeeded.
+2022-09-16 21:46:53.826 +03:00 [ERR] Invalid redirect_uri: https://oauth.pstmn.io/v1/callback
+{"ClientId":"pow-web-app","ClientName":"Pow Web","RedirectUri":null,"AllowedRedirectUris":["http://localhost:3000/signin-oidc"],"SubjectId":"5bfb002d-22d4-4bed-8f1d-fc81a6c5530f","ResponseType":null,"ResponseMode":null,"GrantType":null,"RequestedScopes":"","State":null,"UiLocales":null,"Nonce":null,"AuthenticationContextReferenceClasses":null,"DisplayMode":null,"PromptMode":"","MaxAge":null,"LoginHint":null,"SessionId":null,"Raw":{"response_type":"code","client_id":"pow-web-app","scope":"openid profile PowWebApi","redirect_uri":"https://oauth.pstmn.io/v1/callback"},"$type":"AuthorizeRequestValidationLog"}
+2022-09-16 21:46:53.827 +03:00 [ERR] Request validation failed
+2022-09-16 21:46:53.827 +03:00 [INF] {"ClientId":"pow-web-app","ClientName":"Pow Web","RedirectUri":null,"AllowedRedirectUris":["http://localhost:3000/signin-oidc"],"SubjectId":"5bfb002d-22d4-4bed-8f1d-fc81a6c5530f","ResponseType":null,"ResponseMode":null,"GrantType":null,"RequestedScopes":"","State":null,"UiLocales":null,"Nonce":null,"AuthenticationContextReferenceClasses":null,"DisplayMode":null,"PromptMode":"","MaxAge":null,"LoginHint":null,"SessionId":null,"Raw":{"response_type":"code","client_id":"pow-web-app","scope":"openid profile PowWebApi","redirect_uri":"https://oauth.pstmn.io/v1/callback"},"$type":"AuthorizeRequestValidationLog"}
+2022-09-16 22:05:32.892 +03:00 [INF] Starting host...
+2022-09-16 22:05:35.549 +03:00 [INF] Starting IdentityServer4 version 4.1.2+997a6cdd643e46cd5762b710c4ddc43574cbec2e
+2022-09-16 22:05:35.556 +03:00 [INF] You are using the in-memory version of the persisted grant store. This will store consent decisions, authorization codes, refresh and reference tokens in memory only. If you are using any of those features in production, you want to switch to a different store implementation.
+2022-09-16 22:05:35.558 +03:00 [INF] Using the default authentication scheme Identity.Application for IdentityServer
+2022-09-16 22:05:35.558 +03:00 [DBG] Using Identity.Application as default ASP.NET Core scheme for authentication
+2022-09-16 22:05:35.558 +03:00 [DBG] Using Identity.External as default ASP.NET Core scheme for sign-in
+2022-09-16 22:05:35.559 +03:00 [DBG] Using Identity.External as default ASP.NET Core scheme for sign-out
+2022-09-16 22:05:35.559 +03:00 [DBG] Using Identity.Application as default ASP.NET Core scheme for challenge
+2022-09-16 22:05:35.559 +03:00 [DBG] Using Identity.Application as default ASP.NET Core scheme for forbid
+2022-09-16 22:05:35.626 +03:00 [INF] Application started. Press Ctrl+C to shut down.
+2022-09-16 22:05:35.626 +03:00 [INF] Hosting environment: Development
+2022-09-16 22:05:35.626 +03:00 [INF] Content root path: D:\programming\dotNet\OlegLearning\Sigma_Trainee\PowUkraine\IdentityServer
+2022-09-16 22:05:35.702 +03:00 [DBG] Login Url: /Authorization/Login
+2022-09-16 22:05:35.703 +03:00 [DBG] Login Return Url Parameter: ReturnUrl
+2022-09-16 22:05:35.703 +03:00 [DBG] Logout Url: /Authorization/Logout
+2022-09-16 22:05:35.703 +03:00 [DBG] ConsentUrl Url: /consent
+2022-09-16 22:05:35.703 +03:00 [DBG] Consent Return Url Parameter: returnUrl
+2022-09-16 22:05:35.703 +03:00 [DBG] Error Url: /home/error
+2022-09-16 22:05:35.704 +03:00 [DBG] Error Id Parameter: errorId
+2022-09-16 22:19:57.720 +03:00 [INF] Starting host...
+2022-09-16 22:20:00.292 +03:00 [INF] Starting IdentityServer4 version 4.1.2+997a6cdd643e46cd5762b710c4ddc43574cbec2e
+2022-09-16 22:20:00.299 +03:00 [INF] You are using the in-memory version of the persisted grant store. This will store consent decisions, authorization codes, refresh and reference tokens in memory only. If you are using any of those features in production, you want to switch to a different store implementation.
+2022-09-16 22:20:00.301 +03:00 [INF] Using the default authentication scheme Identity.Application for IdentityServer
+2022-09-16 22:20:00.301 +03:00 [DBG] Using Identity.Application as default ASP.NET Core scheme for authentication
+2022-09-16 22:20:00.301 +03:00 [DBG] Using Identity.External as default ASP.NET Core scheme for sign-in
+2022-09-16 22:20:00.301 +03:00 [DBG] Using Identity.External as default ASP.NET Core scheme for sign-out
+2022-09-16 22:20:00.301 +03:00 [DBG] Using Identity.Application as default ASP.NET Core scheme for challenge
+2022-09-16 22:20:00.301 +03:00 [DBG] Using Identity.Application as default ASP.NET Core scheme for forbid
+2022-09-16 22:20:00.380 +03:00 [INF] Application started. Press Ctrl+C to shut down.
+2022-09-16 22:20:00.380 +03:00 [INF] Hosting environment: Development
+2022-09-16 22:20:00.380 +03:00 [INF] Content root path: D:\programming\dotNet\OlegLearning\Sigma_Trainee\PowUkraine\IdentityServer
+2022-09-16 22:20:00.456 +03:00 [DBG] Login Url: /Authorization/Login
+2022-09-16 22:20:00.457 +03:00 [DBG] Login Return Url Parameter: ReturnUrl
+2022-09-16 22:20:00.457 +03:00 [DBG] Logout Url: /Authorization/Logout
+2022-09-16 22:20:00.457 +03:00 [DBG] ConsentUrl Url: /consent
+2022-09-16 22:20:00.457 +03:00 [DBG] Consent Return Url Parameter: returnUrl
+2022-09-16 22:20:00.457 +03:00 [DBG] Error Url: /home/error
+2022-09-16 22:20:00.457 +03:00 [DBG] Error Id Parameter: errorId
+2022-09-16 22:29:41.992 +03:00 [DBG] HandleChallenge with Location: https://www.linkedin.com/oauth/v2/authorization?client_id=77uwjf5mrps8cc&scope=r_liteprofile%20r_emailaddress&response_type=code&redirect_uri=https%3A%2F%2Flocalhost%3A44316%2Fsignin-linkedin&state=CfDJ8PQUTOErAuxPrciDv0CMQm_CAvB0LVs4YbMCp5OYgrGf_MliC3qeKO4w1lNr0n4DMbv-lzwXXwzsgeyeQoN1zOOd0u2g8SQO9GcHg80iF1DiSpzxxpa0Gu2mWQLbljFK5Oolg0mmsy5qbyKVsDY4SOM_7dxbpwRcAI7M52P6oOUUhmA0hi-PBHr-VrtAAteGwPO8PeCRIGTawcM9NPlUgPjUmJt6PXD8BJnjYn5rgHmD6vHfZZfkdvlXAnMiViCYCag2We-KoRT2Zr6J_3SXpUfLtnkb_BDNLWLNikl8K3mk; and Set-Cookie: .AspNetCore.Correlation.LinkedIn.CdaCtJcOoZsdchtMzDvq45XwOMJDWbyjYyGvrpdq56s=N; expires=Fri, 16 Sep 2022 19:44:41 GMT; path=/signin-linkedin; secure; samesite=none; httponly.
+2022-09-16 22:29:41.995 +03:00 [INF] AuthenticationScheme: LinkedIn was challenged.
+2022-09-16 22:50:47.005 +03:00 [INF] Starting host...
+2022-09-16 22:50:49.709 +03:00 [INF] Starting IdentityServer4 version 4.1.2+997a6cdd643e46cd5762b710c4ddc43574cbec2e
+2022-09-16 22:50:49.715 +03:00 [INF] You are using the in-memory version of the persisted grant store. This will store consent decisions, authorization codes, refresh and reference tokens in memory only. If you are using any of those features in production, you want to switch to a different store implementation.
+2022-09-16 22:50:49.717 +03:00 [INF] Using the default authentication scheme Identity.Application for IdentityServer
+2022-09-16 22:50:49.717 +03:00 [DBG] Using Identity.Application as default ASP.NET Core scheme for authentication
+2022-09-16 22:50:49.717 +03:00 [DBG] Using Identity.External as default ASP.NET Core scheme for sign-in
+2022-09-16 22:50:49.717 +03:00 [DBG] Using Identity.External as default ASP.NET Core scheme for sign-out
+2022-09-16 22:50:49.717 +03:00 [DBG] Using Identity.Application as default ASP.NET Core scheme for challenge
+2022-09-16 22:50:49.717 +03:00 [DBG] Using Identity.Application as default ASP.NET Core scheme for forbid
+2022-09-16 22:50:49.777 +03:00 [INF] Application started. Press Ctrl+C to shut down.
+2022-09-16 22:50:49.777 +03:00 [INF] Hosting environment: Development
+2022-09-16 22:50:49.777 +03:00 [INF] Content root path: D:\programming\dotNet\OlegLearning\Sigma_Trainee\PowUkraine\IdentityServer
+2022-09-16 22:50:49.850 +03:00 [ERR] An unhandled exception has occurred while executing the request.
+System.ArgumentException: The 'AppSecret' option must be provided. (Parameter 'AppSecret')
+   at Microsoft.AspNetCore.Authentication.Facebook.FacebookOptions.Validate()
+   at Microsoft.AspNetCore.Authentication.RemoteAuthenticationOptions.Validate(String scheme)
+   at Microsoft.AspNetCore.Authentication.AuthenticationBuilder.<>c__DisplayClass4_0`2.<AddSchemeHelper>b__1(TOptions o)
+   at Microsoft.Extensions.Options.ValidateOptions`1.Validate(String name, TOptions options)
+   at Microsoft.Extensions.Options.OptionsFactory`1.Create(String name)
+   at Microsoft.Extensions.Options.OptionsMonitor`1.<>c__DisplayClass11_0.<Get>b__0()
+   at System.Lazy`1.ViaFactory(LazyThreadSafetyMode mode)
+   at System.Lazy`1.ExecutionAndPublication(LazyHelper executionAndPublication, Boolean useDefaultConstructor)
+   at System.Lazy`1.CreateValue()
+   at System.Lazy`1.get_Value()
+   at Microsoft.Extensions.Options.OptionsCache`1.GetOrAdd(String name, Func`1 createOptions)
+   at Microsoft.Extensions.Options.OptionsMonitor`1.Get(String name)
+   at Microsoft.AspNetCore.Authentication.AuthenticationHandler`1.InitializeAsync(AuthenticationScheme scheme, HttpContext context)
+   at Microsoft.AspNetCore.Authentication.AuthenticationHandlerProvider.GetHandlerAsync(HttpContext context, String authenticationScheme)
+   at IdentityServer4.Hosting.FederatedSignOut.FederatedSignoutAuthenticationHandlerProvider.GetHandlerAsync(HttpContext context, String authenticationScheme)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at IdentityServer4.Hosting.BaseUrlMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware.Invoke(HttpContext context)
+2022-09-16 22:51:29.752 +03:00 [INF] Starting host...
+2022-09-16 22:51:31.454 +03:00 [INF] Starting IdentityServer4 version 4.1.2+997a6cdd643e46cd5762b710c4ddc43574cbec2e
+2022-09-16 22:51:31.461 +03:00 [INF] You are using the in-memory version of the persisted grant store. This will store consent decisions, authorization codes, refresh and reference tokens in memory only. If you are using any of those features in production, you want to switch to a different store implementation.
+2022-09-16 22:51:31.462 +03:00 [INF] Using the default authentication scheme Identity.Application for IdentityServer
+2022-09-16 22:51:31.462 +03:00 [DBG] Using Identity.Application as default ASP.NET Core scheme for authentication
+2022-09-16 22:51:31.463 +03:00 [DBG] Using Identity.External as default ASP.NET Core scheme for sign-in
+2022-09-16 22:51:31.463 +03:00 [DBG] Using Identity.External as default ASP.NET Core scheme for sign-out
+2022-09-16 22:51:31.463 +03:00 [DBG] Using Identity.Application as default ASP.NET Core scheme for challenge
+2022-09-16 22:51:31.463 +03:00 [DBG] Using Identity.Application as default ASP.NET Core scheme for forbid
+2022-09-16 22:51:31.521 +03:00 [INF] Application started. Press Ctrl+C to shut down.
+2022-09-16 22:51:31.521 +03:00 [INF] Hosting environment: Development
+2022-09-16 22:51:31.521 +03:00 [INF] Content root path: D:\programming\dotNet\OlegLearning\Sigma_Trainee\PowUkraine\IdentityServer
+2022-09-16 22:51:39.641 +03:00 [ERR] An unhandled exception has occurred while executing the request.
+System.ArgumentException: The 'AppSecret' option must be provided. (Parameter 'AppSecret')
+   at Microsoft.AspNetCore.Authentication.Facebook.FacebookOptions.Validate()
+   at Microsoft.AspNetCore.Authentication.RemoteAuthenticationOptions.Validate(String scheme)
+   at Microsoft.AspNetCore.Authentication.AuthenticationBuilder.<>c__DisplayClass4_0`2.<AddSchemeHelper>b__1(TOptions o)
+   at Microsoft.Extensions.Options.ValidateOptions`1.Validate(String name, TOptions options)
+   at Microsoft.Extensions.Options.OptionsFactory`1.Create(String name)
+   at Microsoft.Extensions.Options.OptionsMonitor`1.<>c__DisplayClass11_0.<Get>b__0()
+   at System.Lazy`1.ViaFactory(LazyThreadSafetyMode mode)
+   at System.Lazy`1.ExecutionAndPublication(LazyHelper executionAndPublication, Boolean useDefaultConstructor)
+   at System.Lazy`1.CreateValue()
+   at System.Lazy`1.get_Value()
+   at Microsoft.Extensions.Options.OptionsCache`1.GetOrAdd(String name, Func`1 createOptions)
+   at Microsoft.Extensions.Options.OptionsMonitor`1.Get(String name)
+   at Microsoft.AspNetCore.Authentication.AuthenticationHandler`1.InitializeAsync(AuthenticationScheme scheme, HttpContext context)
+   at Microsoft.AspNetCore.Authentication.AuthenticationHandlerProvider.GetHandlerAsync(HttpContext context, String authenticationScheme)
+   at IdentityServer4.Hosting.FederatedSignOut.FederatedSignoutAuthenticationHandlerProvider.GetHandlerAsync(HttpContext context, String authenticationScheme)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at IdentityServer4.Hosting.BaseUrlMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware.Invoke(HttpContext context)
+2022-09-16 22:51:54.372 +03:00 [INF] Starting host...
+2022-09-16 22:51:56.178 +03:00 [INF] Starting IdentityServer4 version 4.1.2+997a6cdd643e46cd5762b710c4ddc43574cbec2e
+2022-09-16 22:51:56.185 +03:00 [INF] You are using the in-memory version of the persisted grant store. This will store consent decisions, authorization codes, refresh and reference tokens in memory only. If you are using any of those features in production, you want to switch to a different store implementation.
+2022-09-16 22:51:56.187 +03:00 [INF] Using the default authentication scheme Identity.Application for IdentityServer
+2022-09-16 22:51:56.187 +03:00 [DBG] Using Identity.Application as default ASP.NET Core scheme for authentication
+2022-09-16 22:51:56.187 +03:00 [DBG] Using Identity.External as default ASP.NET Core scheme for sign-in
+2022-09-16 22:51:56.187 +03:00 [DBG] Using Identity.External as default ASP.NET Core scheme for sign-out
+2022-09-16 22:51:56.187 +03:00 [DBG] Using Identity.Application as default ASP.NET Core scheme for challenge
+2022-09-16 22:51:56.187 +03:00 [DBG] Using Identity.Application as default ASP.NET Core scheme for forbid
+2022-09-16 22:51:56.245 +03:00 [INF] Application started. Press Ctrl+C to shut down.
+2022-09-16 22:51:56.245 +03:00 [INF] Hosting environment: Development
+2022-09-16 22:51:56.245 +03:00 [INF] Content root path: D:\programming\dotNet\OlegLearning\Sigma_Trainee\PowUkraine\IdentityServer
+2022-09-16 22:51:56.323 +03:00 [DBG] Login Url: /Authorization/Login
+2022-09-16 22:51:56.324 +03:00 [DBG] Login Return Url Parameter: ReturnUrl
+2022-09-16 22:51:56.324 +03:00 [DBG] Logout Url: /Authorization/Logout
+2022-09-16 22:51:56.324 +03:00 [DBG] ConsentUrl Url: /consent
+2022-09-16 22:51:56.324 +03:00 [DBG] Consent Return Url Parameter: returnUrl
+2022-09-16 22:51:56.324 +03:00 [DBG] Error Url: /home/error
+2022-09-16 22:51:56.324 +03:00 [DBG] Error Id Parameter: errorId
+2022-09-16 22:52:01.690 +03:00 [INF] AuthenticationScheme: Facebook was challenged.
+2022-09-16 22:52:09.329 +03:00 [INF] AuthenticationScheme: Identity.External signed in.
+2022-09-16 22:52:12.122 +03:00 [WRN] User validation failed: InvalidUserName.
+2022-09-16 22:52:19.739 +03:00 [WRN] User validation failed: InvalidUserName.
+2022-09-16 22:52:28.581 +03:00 [WRN] '.AspNetCore.Correlation.Facebook.E94rTN8NTinejgIdalwBuzRZSuIzfeB0jyQhH_Q9T74' cookie not found.
+2022-09-16 22:52:28.581 +03:00 [INF] Error from RemoteAuthentication: Correlation failed..
+2022-09-16 22:52:28.586 +03:00 [ERR] An unhandled exception has occurred while executing the request.
+System.Exception: An error was encountered while handling the remote login.
+ ---> System.Exception: Correlation failed.
+   --- End of inner exception stack trace ---
+   at Microsoft.AspNetCore.Authentication.RemoteAuthenticationHandler`1.HandleRequestAsync()
+   at IdentityServer4.Hosting.FederatedSignOut.AuthenticationRequestHandlerWrapper.HandleRequestAsync()
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at IdentityServer4.Hosting.BaseUrlMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware.Invoke(HttpContext context)
+2022-09-16 22:52:32.056 +03:00 [INF] AuthenticationScheme: Google was challenged.
+2022-09-16 22:52:34.999 +03:00 [DBG] HandleChallenge with Location: https://www.linkedin.com/oauth/v2/authorization?client_id=77uwjf5mrps8cc&scope=r_liteprofile%20r_emailaddress&response_type=code&redirect_uri=https%3A%2F%2Flocalhost%3A44316%2Fsignin-linkedin&state=CfDJ8PQUTOErAuxPrciDv0CMQm9J4BPr6nnOf0eur3kjHkRL-iHx6eU0unYygh8Igw6V-USpuoApqQT-mza-NINOfw0dfQGlxfBEvs7BmMOOsG8o7tPnJWgotCGrx7YCERzmI0wptjthdxzxaUq510DenIDZH2Y3obURLQz4GEoHca90HwqqSimb9JHhmpEu7O_9bN52xTaRP9N0OPYJBbZk5mr1frQ25F8bLbVm5N7wFqiP-Xw5O_LviQjv2ioHOgGd_9vils9lFDPl4YGgXDxWPSw5oO6g99j9KVqp7_YXSGpc; and Set-Cookie: .AspNetCore.Correlation.LinkedIn.Z1qTls0FsMKyyePXR0dKa1J-_pDYzwRArtvYQyc9E1E=N; expires=Fri, 16 Sep 2022 20:07:34 GMT; path=/signin-linkedin; secure; samesite=none; httponly.
+2022-09-16 22:52:35.000 +03:00 [INF] AuthenticationScheme: LinkedIn was challenged.
+2022-09-16 22:52:38.049 +03:00 [INF] AuthenticationScheme: Facebook was challenged.
+2022-09-16 22:52:38.746 +03:00 [INF] AuthenticationScheme: Identity.External signed in.
+2022-09-16 22:52:48.401 +03:00 [WRN] User validation failed: InvalidUserName.
+2022-09-16 22:54:12.285 +03:00 [DBG] HandleChallenge with Location: https://www.linkedin.com/oauth/v2/authorization?client_id=77uwjf5mrps8cc&scope=r_liteprofile%20r_emailaddress&response_type=code&redirect_uri=https%3A%2F%2Flocalhost%3A44316%2Fsignin-linkedin&state=CfDJ8PQUTOErAuxPrciDv0CMQm_ugtkR5V8oBP5yamYMUaouI2zInLS3mJMfePRrZPM10iGsknUEN_OBvWcNqeOaTzdKE90XV-nqPp-rbwB7z68HQ93PLP3YYVQvra1LQUSb9uEPxql5uuTxv0ariKTI8yuU34CdPNNJwA9AcWXS3kPy5-f1mZpfXqcPpTHZXwBPIcITBu5t7XIORUwGGs_pCGJCBASpYzDL73LvQUb1B7i4Gfw8deQTx3HwM5-lYxT_iGvf-R3_F-CPP5MZ5-qX6ua9TaQ9hJH9Q5o3RbTbEYH1; and Set-Cookie: .AspNetCore.Correlation.LinkedIn.50b9uNCfL6_1BOw_Vp0uY-qTTv6z8oMAFFHi9YKuM5o=N; expires=Fri, 16 Sep 2022 20:09:12 GMT; path=/signin-linkedin; secure; samesite=none; httponly.
+2022-09-16 22:54:12.285 +03:00 [INF] AuthenticationScheme: LinkedIn was challenged.
+2022-09-16 22:54:17.891 +03:00 [INF] AuthenticationScheme: Facebook was challenged.
+2022-09-16 22:54:18.596 +03:00 [INF] AuthenticationScheme: Identity.External signed in.
+2022-09-16 22:55:24.362 +03:00 [DBG] Augmenting SignInContext
+2022-09-16 22:55:24.363 +03:00 [DBG] Adding idp claim with value: local
+2022-09-16 22:55:24.363 +03:00 [DBG] Adding amr claim with value: pwd
+2022-09-16 22:55:24.363 +03:00 [DBG] Adding auth_time claim with value: 1663358124
+2022-09-16 22:55:24.365 +03:00 [INF] AuthenticationScheme: Identity.Application signed in.
+2022-09-16 22:55:25.291 +03:00 [ERR] An unhandled exception has occurred while executing the request.
+System.ArgumentException: Value cannot be null or empty. (Parameter 'url')
+   at Microsoft.AspNetCore.Mvc.ControllerBase.Redirect(String url)
+   at IdentityServer.Controllers.AuthorizationController.ExternalRegister(RegisterViewModel viewModel) in D:\programming\dotNet\OlegLearning\Sigma_Trainee\PowUkraine\IdentityServer\Controllers\AuthorizationController.cs:line 184
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.TaskOfIActionResultExecutor.Execute(IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeActionMethodAsync>g__Awaited|12_0(ControllerActionInvoker invoker, ValueTask`1 actionResultValueTask)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeNextActionFilterAsync>g__Awaited|10_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeInnerFilterAsync>g__Awaited|13_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeNextResourceFilter>g__Awaited|24_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Rethrow(ResourceExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|19_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|6_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at IdentityServer4.Hosting.IdentityServerMiddleware.Invoke(HttpContext context, IEndpointRouter router, IUserSession session, IEventService events, IBackChannelLogoutService backChannelLogoutService)
+   at IdentityServer4.Hosting.MutualTlsEndpointMiddleware.Invoke(HttpContext context, IAuthenticationSchemeProvider schemes)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at IdentityServer4.Hosting.BaseUrlMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware.Invoke(HttpContext context)
+2022-09-16 22:55:36.562 +03:00 [INF] Starting host...
+2022-09-16 22:55:38.316 +03:00 [INF] Starting IdentityServer4 version 4.1.2+997a6cdd643e46cd5762b710c4ddc43574cbec2e
+2022-09-16 22:55:38.326 +03:00 [INF] You are using the in-memory version of the persisted grant store. This will store consent decisions, authorization codes, refresh and reference tokens in memory only. If you are using any of those features in production, you want to switch to a different store implementation.
+2022-09-16 22:55:38.329 +03:00 [INF] Using the default authentication scheme Identity.Application for IdentityServer
+2022-09-16 22:55:38.329 +03:00 [DBG] Using Identity.Application as default ASP.NET Core scheme for authentication
+2022-09-16 22:55:38.329 +03:00 [DBG] Using Identity.External as default ASP.NET Core scheme for sign-in
+2022-09-16 22:55:38.329 +03:00 [DBG] Using Identity.External as default ASP.NET Core scheme for sign-out
+2022-09-16 22:55:38.329 +03:00 [DBG] Using Identity.Application as default ASP.NET Core scheme for challenge
+2022-09-16 22:55:38.329 +03:00 [DBG] Using Identity.Application as default ASP.NET Core scheme for forbid
+2022-09-16 22:55:38.393 +03:00 [INF] Application started. Press Ctrl+C to shut down.
+2022-09-16 22:55:38.393 +03:00 [INF] Hosting environment: Development
+2022-09-16 22:55:38.393 +03:00 [INF] Content root path: D:\programming\dotNet\OlegLearning\Sigma_Trainee\PowUkraine\IdentityServer
+2022-09-16 22:55:38.476 +03:00 [DBG] Login Url: /Authorization/Login
+2022-09-16 22:55:38.477 +03:00 [DBG] Login Return Url Parameter: ReturnUrl
+2022-09-16 22:55:38.477 +03:00 [DBG] Logout Url: /Authorization/Logout
+2022-09-16 22:55:38.477 +03:00 [DBG] ConsentUrl Url: /consent
+2022-09-16 22:55:38.477 +03:00 [DBG] Consent Return Url Parameter: returnUrl
+2022-09-16 22:55:38.477 +03:00 [DBG] Error Url: /home/error
+2022-09-16 22:55:38.477 +03:00 [DBG] Error Id Parameter: errorId
+2022-09-16 22:55:49.990 +03:00 [DBG] CORS request made for path: /.well-known/openid-configuration from origin: http://localhost:3000
+2022-09-16 22:55:49.991 +03:00 [DBG] Client list checked and origin: http://localhost:3000 is allowed
+2022-09-16 22:55:49.991 +03:00 [DBG] CorsPolicyService allowed origin: http://localhost:3000
+2022-09-16 22:55:49.995 +03:00 [DBG] Request path /.well-known/openid-configuration matched to endpoint type Discovery
+2022-09-16 22:55:50.005 +03:00 [DBG] Endpoint enabled: Discovery, successfully created handler: IdentityServer4.Endpoints.DiscoveryEndpoint
+2022-09-16 22:55:50.005 +03:00 [INF] Invoking IdentityServer endpoint: IdentityServer4.Endpoints.DiscoveryEndpoint for /.well-known/openid-configuration
+2022-09-16 22:55:50.006 +03:00 [DBG] Start discovery request
+2022-09-16 22:55:50.055 +03:00 [DBG] Request path /connect/authorize matched to endpoint type Authorize
+2022-09-16 22:55:50.065 +03:00 [DBG] Endpoint enabled: Authorize, successfully created handler: IdentityServer4.Endpoints.AuthorizeEndpoint
+2022-09-16 22:55:50.065 +03:00 [INF] Invoking IdentityServer endpoint: IdentityServer4.Endpoints.AuthorizeEndpoint for /connect/authorize
+2022-09-16 22:55:50.066 +03:00 [DBG] Start authorize request
+2022-09-16 22:55:50.070 +03:00 [DBG] User in authorize request: 5bfb002d-22d4-4bed-8f1d-fc81a6c5530f
+2022-09-16 22:55:50.071 +03:00 [DBG] Start authorize request protocol validation
+2022-09-16 22:55:50.078 +03:00 [DBG] client configuration validation for client pow-web-app succeeded.
+2022-09-16 22:55:50.083 +03:00 [DBG] Checking for PKCE parameters
+2022-09-16 22:55:50.095 +03:00 [DBG] Calling into custom validator: IdentityServer4.Validation.DefaultCustomAuthorizeRequestValidator
+2022-09-16 22:55:50.102 +03:00 [DBG] ValidatedAuthorizeRequest
+{"ClientId":"pow-web-app","ClientName":"Pow Web","RedirectUri":"http://localhost:3000/signin-oidc","AllowedRedirectUris":["http://localhost:3000/signin-oidc"],"SubjectId":"5bfb002d-22d4-4bed-8f1d-fc81a6c5530f","ResponseType":"code","ResponseMode":"query","GrantType":"authorization_code","RequestedScopes":"openid profile PowWebApi","State":"79aaa709615a4531a26223291573e8f3","UiLocales":null,"Nonce":null,"AuthenticationContextReferenceClasses":null,"DisplayMode":null,"PromptMode":"","MaxAge":null,"LoginHint":null,"SessionId":"A6AEC4415F7C12D8B5055C7B312C9548","Raw":{"client_id":"pow-web-app","redirect_uri":"http://localhost:3000/signin-oidc","response_type":"code","scope":"openid profile PowWebApi","state":"79aaa709615a4531a26223291573e8f3","code_challenge":"eC7qB_ARKM6ZlkgvqzwbDYoXQCoVVBtePwPE2OBonVc","code_challenge_method":"S256","response_mode":"query"},"$type":"AuthorizeRequestValidationLog"}
+2022-09-16 22:55:50.403 +03:00 [DBG] Client is configured to not require consent, no consent is required
+2022-09-16 22:55:50.404 +03:00 [DBG] Creating Authorization Code Flow response.
+2022-09-16 22:55:50.445 +03:00 [DBG] Authorize endpoint response
+{"SubjectId":"5bfb002d-22d4-4bed-8f1d-fc81a6c5530f","ClientId":"pow-web-app","RedirectUri":"http://localhost:3000/signin-oidc","State":"79aaa709615a4531a26223291573e8f3","Scope":"openid profile PowWebApi","Error":null,"ErrorDescription":null,"$type":"AuthorizeResponseLog"}
+2022-09-16 22:55:50.524 +03:00 [DBG] CORS request made for path: /.well-known/openid-configuration from origin: http://localhost:3000
+2022-09-16 22:55:50.524 +03:00 [DBG] Client list checked and origin: http://localhost:3000 is allowed
+2022-09-16 22:55:50.524 +03:00 [DBG] CorsPolicyService allowed origin: http://localhost:3000
+2022-09-16 22:55:50.524 +03:00 [DBG] Request path /.well-known/openid-configuration matched to endpoint type Discovery
+2022-09-16 22:55:50.524 +03:00 [DBG] Endpoint enabled: Discovery, successfully created handler: IdentityServer4.Endpoints.DiscoveryEndpoint
+2022-09-16 22:55:50.524 +03:00 [INF] Invoking IdentityServer endpoint: IdentityServer4.Endpoints.DiscoveryEndpoint for /.well-known/openid-configuration
+2022-09-16 22:55:50.524 +03:00 [DBG] Start discovery request
+2022-09-16 22:55:50.531 +03:00 [DBG] CORS request made for path: /connect/token from origin: http://localhost:3000
+2022-09-16 22:55:50.531 +03:00 [DBG] Client list checked and origin: http://localhost:3000 is allowed
+2022-09-16 22:55:50.531 +03:00 [DBG] CorsPolicyService allowed origin: http://localhost:3000
+2022-09-16 22:55:50.531 +03:00 [DBG] Request path /connect/token matched to endpoint type Token
+2022-09-16 22:55:50.533 +03:00 [DBG] Endpoint enabled: Token, successfully created handler: IdentityServer4.Endpoints.TokenEndpoint
+2022-09-16 22:55:50.534 +03:00 [INF] Invoking IdentityServer endpoint: IdentityServer4.Endpoints.TokenEndpoint for /connect/token
+2022-09-16 22:55:50.535 +03:00 [DBG] Start token request.
+2022-09-16 22:55:50.537 +03:00 [DBG] Start client validation
+2022-09-16 22:55:50.540 +03:00 [DBG] Start parsing Basic Authentication secret
+2022-09-16 22:55:50.541 +03:00 [DBG] Start parsing for secret in post body
+2022-09-16 22:55:50.546 +03:00 [DBG] client id without secret found
+2022-09-16 22:55:50.546 +03:00 [DBG] Parser found secret: PostBodySecretParser
+2022-09-16 22:55:50.546 +03:00 [DBG] Secret id found: pow-web-app
+2022-09-16 22:55:50.547 +03:00 [DBG] client configuration validation for client pow-web-app succeeded.
+2022-09-16 22:55:50.547 +03:00 [DBG] Public Client - skipping secret validation success
+2022-09-16 22:55:50.547 +03:00 [DBG] Client validation success
+2022-09-16 22:55:50.548 +03:00 [DBG] Start token request validation
+2022-09-16 22:55:50.550 +03:00 [DBG] Start validation of authorization code token request
+2022-09-16 22:55:50.568 +03:00 [DBG] Client required a proof key for code exchange. Starting PKCE validation
+2022-09-16 22:55:50.600 +03:00 [DBG] Validation of authorization code token request success
+2022-09-16 22:55:50.602 +03:00 [INF] Token request validation success, {"ClientId":"pow-web-app","ClientName":"Pow Web","GrantType":"authorization_code","Scopes":null,"AuthorizationCode":"****8434","RefreshToken":"********","UserName":null,"AuthenticationContextReferenceClasses":null,"Tenant":null,"IdP":null,"Raw":{"client_id":"pow-web-app","code":"5C80FD49B08869ADBF264E2224C76B80F6BFEED560ABFD39828C8A892D6D8434","redirect_uri":"http://localhost:3000/signin-oidc","code_verifier":"c62f4c27a722421faa307e2fc6cd67d2839ecffd016a4be0b596d7c9159177ffd7e0a72c9cca4cc691d51c10aa0c51a1","grant_type":"authorization_code"},"$type":"TokenRequestValidationLog"}
+2022-09-16 22:55:50.606 +03:00 [DBG] client configuration validation for client pow-web-app succeeded.
+2022-09-16 22:55:50.614 +03:00 [DBG] Getting claims for access token for client: pow-web-app
+2022-09-16 22:55:50.614 +03:00 [DBG] Getting claims for access token for subject: 5bfb002d-22d4-4bed-8f1d-fc81a6c5530f
+2022-09-16 22:55:50.722 +03:00 [DBG] client configuration validation for client pow-web-app succeeded.
+2022-09-16 22:55:50.725 +03:00 [DBG] Getting claims for identity token for subject: 5bfb002d-22d4-4bed-8f1d-fc81a6c5530f and client: pow-web-app
+2022-09-16 22:55:50.725 +03:00 [DBG] In addition to an id_token, an access_token was requested. No claims other than sub are included in the id_token. To obtain more user claims, either use the user info endpoint or set AlwaysIncludeUserClaimsInIdToken on the client configuration.
+2022-09-16 22:55:50.727 +03:00 [DBG] Token request success.
+2022-09-16 22:55:50.757 +03:00 [DBG] Request path /connect/checksession matched to endpoint type Checksession
+2022-09-16 22:55:50.757 +03:00 [DBG] Endpoint enabled: Checksession, successfully created handler: IdentityServer4.Endpoints.CheckSessionEndpoint
+2022-09-16 22:55:50.757 +03:00 [INF] Invoking IdentityServer endpoint: IdentityServer4.Endpoints.CheckSessionEndpoint for /connect/checksession
+2022-09-16 22:55:50.758 +03:00 [DBG] Rendering check session result
+2022-09-16 22:55:57.289 +03:00 [DBG] CORS request made for path: /.well-known/openid-configuration from origin: http://localhost:3000
+2022-09-16 22:55:57.289 +03:00 [DBG] Client list checked and origin: http://localhost:3000 is allowed
+2022-09-16 22:55:57.290 +03:00 [DBG] CorsPolicyService allowed origin: http://localhost:3000
+2022-09-16 22:55:57.292 +03:00 [DBG] Request path /.well-known/openid-configuration matched to endpoint type Discovery
+2022-09-16 22:55:57.295 +03:00 [DBG] Endpoint enabled: Discovery, successfully created handler: IdentityServer4.Endpoints.DiscoveryEndpoint
+2022-09-16 22:55:57.295 +03:00 [INF] Invoking IdentityServer endpoint: IdentityServer4.Endpoints.DiscoveryEndpoint for /.well-known/openid-configuration
+2022-09-16 22:55:57.295 +03:00 [DBG] Start discovery request
+2022-09-16 22:55:57.314 +03:00 [DBG] Request path /connect/checksession matched to endpoint type Checksession
+2022-09-16 22:55:57.314 +03:00 [DBG] Endpoint enabled: Checksession, successfully created handler: IdentityServer4.Endpoints.CheckSessionEndpoint
+2022-09-16 22:55:57.314 +03:00 [INF] Invoking IdentityServer endpoint: IdentityServer4.Endpoints.CheckSessionEndpoint for /connect/checksession
+2022-09-16 22:55:57.314 +03:00 [DBG] Rendering check session result
+2022-09-16 22:55:58.956 +03:00 [DBG] Request path /connect/endsession matched to endpoint type Endsession
+2022-09-16 22:55:58.957 +03:00 [DBG] Endpoint enabled: Endsession, successfully created handler: IdentityServer4.Endpoints.EndSessionEndpoint
+2022-09-16 22:55:58.957 +03:00 [INF] Invoking IdentityServer endpoint: IdentityServer4.Endpoints.EndSessionEndpoint for /connect/endsession
+2022-09-16 22:55:58.958 +03:00 [DBG] Processing signout request for 5bfb002d-22d4-4bed-8f1d-fc81a6c5530f
+2022-09-16 22:55:58.959 +03:00 [DBG] Start end session request validation
+2022-09-16 22:55:58.960 +03:00 [INF] End session request validation success
+{"ClientId":null,"ClientName":null,"SubjectId":"5bfb002d-22d4-4bed-8f1d-fc81a6c5530f","PostLogOutUri":null,"State":null,"Raw":{"post_logout_redirect_uri":"http://localhost:3000/signout-callback-oidc"},"$type":"EndSessionRequestValidationLog"}
+2022-09-16 22:55:58.960 +03:00 [DBG] Success validating end session request from null
+2022-09-16 22:56:00.558 +03:00 [INF] AuthenticationScheme: Identity.Application signed out.
+2022-09-16 22:56:00.559 +03:00 [INF] AuthenticationScheme: Identity.External signed out.
+2022-09-16 22:56:00.559 +03:00 [INF] AuthenticationScheme: Identity.TwoFactorUserId signed out.
+2022-09-16 22:56:00.588 +03:00 [ERR] An unhandled exception has occurred while executing the request.
+System.ArgumentException: Value cannot be null or empty. (Parameter 'url')
+   at Microsoft.AspNetCore.Mvc.ControllerBase.Redirect(String url)
+   at IdentityServer.Controllers.AuthorizationController.Logout(String logoutId) in D:\programming\dotNet\OlegLearning\Sigma_Trainee\PowUkraine\IdentityServer\Controllers\AuthorizationController.cs:line 120
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.TaskOfIActionResultExecutor.Execute(IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeActionMethodAsync>g__Awaited|12_0(ControllerActionInvoker invoker, ValueTask`1 actionResultValueTask)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeNextActionFilterAsync>g__Awaited|10_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeInnerFilterAsync()
+--- End of stack trace from previous location where exception was thrown ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeNextResourceFilter>g__Awaited|24_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Rethrow(ResourceExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.InvokeFilterPipelineAsync()
+--- End of stack trace from previous location where exception was thrown ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|6_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at IdentityServer4.Hosting.IdentityServerMiddleware.Invoke(HttpContext context, IEndpointRouter router, IUserSession session, IEventService events, IBackChannelLogoutService backChannelLogoutService)
+   at IdentityServer4.Hosting.MutualTlsEndpointMiddleware.Invoke(HttpContext context, IAuthenticationSchemeProvider schemes)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at IdentityServer4.Hosting.BaseUrlMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware.Invoke(HttpContext context)
+2022-09-16 22:56:00.688 +03:00 [DBG] SignOutCalled set; processing post-signout session cleanup.
+2022-09-16 22:56:00.692 +03:00 [DBG] client configuration validation for client pow-web-app succeeded.
+2022-09-16 22:56:00.692 +03:00 [DBG] No client back-channel logout URLs
+2022-09-16 22:56:16.317 +03:00 [DBG] CORS request made for path: /.well-known/openid-configuration from origin: http://localhost:3000
+2022-09-16 22:56:16.317 +03:00 [DBG] Client list checked and origin: http://localhost:3000 is allowed
+2022-09-16 22:56:16.317 +03:00 [DBG] CorsPolicyService allowed origin: http://localhost:3000
+2022-09-16 22:56:16.318 +03:00 [DBG] Request path /.well-known/openid-configuration matched to endpoint type Discovery
+2022-09-16 22:56:16.318 +03:00 [DBG] Endpoint enabled: Discovery, successfully created handler: IdentityServer4.Endpoints.DiscoveryEndpoint
+2022-09-16 22:56:16.318 +03:00 [INF] Invoking IdentityServer endpoint: IdentityServer4.Endpoints.DiscoveryEndpoint for /.well-known/openid-configuration
+2022-09-16 22:56:16.318 +03:00 [DBG] Start discovery request
+2022-09-16 22:56:16.336 +03:00 [DBG] Request path /connect/authorize matched to endpoint type Authorize
+2022-09-16 22:56:16.336 +03:00 [DBG] Endpoint enabled: Authorize, successfully created handler: IdentityServer4.Endpoints.AuthorizeEndpoint
+2022-09-16 22:56:16.336 +03:00 [INF] Invoking IdentityServer endpoint: IdentityServer4.Endpoints.AuthorizeEndpoint for /connect/authorize
+2022-09-16 22:56:16.336 +03:00 [DBG] Start authorize request
+2022-09-16 22:56:16.336 +03:00 [DBG] User in authorize request: 5bfb002d-22d4-4bed-8f1d-fc81a6c5530f
+2022-09-16 22:56:16.336 +03:00 [DBG] Start authorize request protocol validation
+2022-09-16 22:56:16.336 +03:00 [DBG] client configuration validation for client pow-web-app succeeded.
+2022-09-16 22:56:16.337 +03:00 [DBG] Checking for PKCE parameters
+2022-09-16 22:56:16.337 +03:00 [DBG] Calling into custom validator: IdentityServer4.Validation.DefaultCustomAuthorizeRequestValidator
+2022-09-16 22:56:16.337 +03:00 [DBG] ValidatedAuthorizeRequest
+{"ClientId":"pow-web-app","ClientName":"Pow Web","RedirectUri":"http://localhost:3000/signin-oidc","AllowedRedirectUris":["http://localhost:3000/signin-oidc"],"SubjectId":"5bfb002d-22d4-4bed-8f1d-fc81a6c5530f","ResponseType":"code","ResponseMode":"query","GrantType":"authorization_code","RequestedScopes":"openid profile PowWebApi","State":"dfa7a76ec6684a81819f7a03cd4d060d","UiLocales":null,"Nonce":null,"AuthenticationContextReferenceClasses":null,"DisplayMode":null,"PromptMode":"","MaxAge":null,"LoginHint":null,"SessionId":"A6AEC4415F7C12D8B5055C7B312C9548","Raw":{"client_id":"pow-web-app","redirect_uri":"http://localhost:3000/signin-oidc","response_type":"code","scope":"openid profile PowWebApi","state":"dfa7a76ec6684a81819f7a03cd4d060d","code_challenge":"fYOxLlN13fHah2HYl5DQeATRnWkgwRLiO_jfvXr0vSU","code_challenge_method":"S256","response_mode":"query"},"$type":"AuthorizeRequestValidationLog"}
+2022-09-16 22:56:16.343 +03:00 [DBG] Client is configured to not require consent, no consent is required
+2022-09-16 22:56:16.343 +03:00 [DBG] Creating Authorization Code Flow response.
+2022-09-16 22:56:16.344 +03:00 [DBG] Authorize endpoint response
+{"SubjectId":"5bfb002d-22d4-4bed-8f1d-fc81a6c5530f","ClientId":"pow-web-app","RedirectUri":"http://localhost:3000/signin-oidc","State":"dfa7a76ec6684a81819f7a03cd4d060d","Scope":"openid profile PowWebApi","Error":null,"ErrorDescription":null,"$type":"AuthorizeResponseLog"}
+2022-09-16 22:56:16.499 +03:00 [DBG] CORS request made for path: /.well-known/openid-configuration from origin: http://localhost:3000
+2022-09-16 22:56:16.499 +03:00 [DBG] Client list checked and origin: http://localhost:3000 is allowed
+2022-09-16 22:56:16.499 +03:00 [DBG] CorsPolicyService allowed origin: http://localhost:3000
+2022-09-16 22:56:16.499 +03:00 [DBG] Request path /.well-known/openid-configuration matched to endpoint type Discovery
+2022-09-16 22:56:16.500 +03:00 [DBG] Endpoint enabled: Discovery, successfully created handler: IdentityServer4.Endpoints.DiscoveryEndpoint
+2022-09-16 22:56:16.500 +03:00 [INF] Invoking IdentityServer endpoint: IdentityServer4.Endpoints.DiscoveryEndpoint for /.well-known/openid-configuration
+2022-09-16 22:56:16.500 +03:00 [DBG] Start discovery request
+2022-09-16 22:56:16.510 +03:00 [DBG] CORS request made for path: /connect/token from origin: http://localhost:3000
+2022-09-16 22:56:16.510 +03:00 [DBG] Client list checked and origin: http://localhost:3000 is allowed
+2022-09-16 22:56:16.510 +03:00 [DBG] CorsPolicyService allowed origin: http://localhost:3000
+2022-09-16 22:56:16.510 +03:00 [DBG] Request path /connect/token matched to endpoint type Token
+2022-09-16 22:56:16.510 +03:00 [DBG] Endpoint enabled: Token, successfully created handler: IdentityServer4.Endpoints.TokenEndpoint
+2022-09-16 22:56:16.510 +03:00 [INF] Invoking IdentityServer endpoint: IdentityServer4.Endpoints.TokenEndpoint for /connect/token
+2022-09-16 22:56:16.510 +03:00 [DBG] Start token request.
+2022-09-16 22:56:16.510 +03:00 [DBG] Start client validation
+2022-09-16 22:56:16.510 +03:00 [DBG] Start parsing Basic Authentication secret
+2022-09-16 22:56:16.510 +03:00 [DBG] Start parsing for secret in post body
+2022-09-16 22:56:16.511 +03:00 [DBG] client id without secret found
+2022-09-16 22:56:16.511 +03:00 [DBG] Parser found secret: PostBodySecretParser
+2022-09-16 22:56:16.511 +03:00 [DBG] Secret id found: pow-web-app
+2022-09-16 22:56:16.511 +03:00 [DBG] client configuration validation for client pow-web-app succeeded.
+2022-09-16 22:56:16.511 +03:00 [DBG] Public Client - skipping secret validation success
+2022-09-16 22:56:16.511 +03:00 [DBG] Client validation success
+2022-09-16 22:56:16.511 +03:00 [DBG] Start token request validation
+2022-09-16 22:56:16.511 +03:00 [DBG] Start validation of authorization code token request
+2022-09-16 22:56:16.511 +03:00 [DBG] Client required a proof key for code exchange. Starting PKCE validation
+2022-09-16 22:56:16.514 +03:00 [DBG] Validation of authorization code token request success
+2022-09-16 22:56:16.514 +03:00 [INF] Token request validation success, {"ClientId":"pow-web-app","ClientName":"Pow Web","GrantType":"authorization_code","Scopes":null,"AuthorizationCode":"****9124","RefreshToken":"********","UserName":null,"AuthenticationContextReferenceClasses":null,"Tenant":null,"IdP":null,"Raw":{"client_id":"pow-web-app","code":"650B9A5BB7821851FA2C1EDE862C210384A2032DDAD87C836C4CF7857CC19124","redirect_uri":"http://localhost:3000/signin-oidc","code_verifier":"84ac7de0441247ee8a653cb838884b662ac313007d884f679de28f2f455fbb658d362c25849c4db4966612653304a71e","grant_type":"authorization_code"},"$type":"TokenRequestValidationLog"}
+2022-09-16 22:56:16.515 +03:00 [DBG] client configuration validation for client pow-web-app succeeded.
+2022-09-16 22:56:16.515 +03:00 [DBG] Getting claims for access token for client: pow-web-app
+2022-09-16 22:56:16.515 +03:00 [DBG] Getting claims for access token for subject: 5bfb002d-22d4-4bed-8f1d-fc81a6c5530f
+2022-09-16 22:56:16.520 +03:00 [DBG] client configuration validation for client pow-web-app succeeded.
+2022-09-16 22:56:16.520 +03:00 [DBG] Getting claims for identity token for subject: 5bfb002d-22d4-4bed-8f1d-fc81a6c5530f and client: pow-web-app
+2022-09-16 22:56:16.520 +03:00 [DBG] In addition to an id_token, an access_token was requested. No claims other than sub are included in the id_token. To obtain more user claims, either use the user info endpoint or set AlwaysIncludeUserClaimsInIdToken on the client configuration.
+2022-09-16 22:56:16.521 +03:00 [DBG] Token request success.
+2022-09-16 22:56:16.537 +03:00 [DBG] Request path /connect/checksession matched to endpoint type Checksession
+2022-09-16 22:56:16.538 +03:00 [DBG] Endpoint enabled: Checksession, successfully created handler: IdentityServer4.Endpoints.CheckSessionEndpoint
+2022-09-16 22:56:16.538 +03:00 [INF] Invoking IdentityServer endpoint: IdentityServer4.Endpoints.CheckSessionEndpoint for /connect/checksession
+2022-09-16 22:56:16.538 +03:00 [DBG] Rendering check session result
+2022-09-16 22:56:31.055 +03:00 [DBG] CORS request made for path: /.well-known/openid-configuration from origin: http://localhost:3000
+2022-09-16 22:56:31.055 +03:00 [DBG] Client list checked and origin: http://localhost:3000 is allowed
+2022-09-16 22:56:31.055 +03:00 [DBG] CorsPolicyService allowed origin: http://localhost:3000
+2022-09-16 22:56:31.056 +03:00 [DBG] Request path /.well-known/openid-configuration matched to endpoint type Discovery
+2022-09-16 22:56:31.057 +03:00 [DBG] Endpoint enabled: Discovery, successfully created handler: IdentityServer4.Endpoints.DiscoveryEndpoint
+2022-09-16 22:56:31.057 +03:00 [INF] Invoking IdentityServer endpoint: IdentityServer4.Endpoints.DiscoveryEndpoint for /.well-known/openid-configuration
+2022-09-16 22:56:31.057 +03:00 [DBG] Start discovery request
+2022-09-16 22:56:31.070 +03:00 [DBG] Request path /connect/authorize matched to endpoint type Authorize
+2022-09-16 22:56:31.074 +03:00 [DBG] Endpoint enabled: Authorize, successfully created handler: IdentityServer4.Endpoints.AuthorizeEndpoint
+2022-09-16 22:56:31.074 +03:00 [INF] Invoking IdentityServer endpoint: IdentityServer4.Endpoints.AuthorizeEndpoint for /connect/authorize
+2022-09-16 22:56:31.074 +03:00 [DBG] Start authorize request
+2022-09-16 22:56:31.074 +03:00 [DBG] No user present in authorize request
+2022-09-16 22:56:31.074 +03:00 [DBG] Start authorize request protocol validation
+2022-09-16 22:56:31.074 +03:00 [DBG] client configuration validation for client pow-web-app succeeded.
+2022-09-16 22:56:31.074 +03:00 [DBG] Checking for PKCE parameters
+2022-09-16 22:56:31.075 +03:00 [DBG] Calling into custom validator: IdentityServer4.Validation.DefaultCustomAuthorizeRequestValidator
+2022-09-16 22:56:31.075 +03:00 [DBG] ValidatedAuthorizeRequest
+{"ClientId":"pow-web-app","ClientName":"Pow Web","RedirectUri":"http://localhost:3000/signin-oidc","AllowedRedirectUris":["http://localhost:3000/signin-oidc"],"SubjectId":"anonymous","ResponseType":"code","ResponseMode":"query","GrantType":"authorization_code","RequestedScopes":"openid profile PowWebApi","State":"5b86d35c52764433b184253c83d72b6d","UiLocales":null,"Nonce":null,"AuthenticationContextReferenceClasses":null,"DisplayMode":null,"PromptMode":"","MaxAge":null,"LoginHint":null,"SessionId":"","Raw":{"client_id":"pow-web-app","redirect_uri":"http://localhost:3000/signin-oidc","response_type":"code","scope":"openid profile PowWebApi","state":"5b86d35c52764433b184253c83d72b6d","code_challenge":"CU90I4M3guVXw34h-kEZK06u3iyzpswfNMp91UwGlzg","code_challenge_method":"S256","response_mode":"query"},"$type":"AuthorizeRequestValidationLog"}
+2022-09-16 22:56:31.075 +03:00 [INF] Showing login: User is not authenticated
+2022-09-16 22:56:37.268 +03:00 [INF] AuthenticationScheme: Facebook was challenged.
+2022-09-16 22:58:07.569 +03:00 [INF] AuthenticationScheme: Identity.External signed in.
+2022-09-16 22:58:07.615 +03:00 [INF] AuthenticationScheme: Identity.External signed out.
+2022-09-16 22:58:07.622 +03:00 [DBG] Augmenting SignInContext
+2022-09-16 22:58:07.622 +03:00 [DBG] Removing amr claim with value: Facebook
+2022-09-16 22:58:07.622 +03:00 [DBG] Adding idp claim with value: Facebook
+2022-09-16 22:58:07.622 +03:00 [DBG] Adding amr claim with value: external
+2022-09-16 22:58:07.622 +03:00 [DBG] Adding auth_time claim with value: 1663358287
+2022-09-16 22:58:07.623 +03:00 [INF] AuthenticationScheme: Identity.Application signed in.
+2022-09-16 22:58:07.629 +03:00 [DBG] Request path /connect/authorize/callback matched to endpoint type Authorize
+2022-09-16 22:58:07.629 +03:00 [DBG] Endpoint enabled: Authorize, successfully created handler: IdentityServer4.Endpoints.AuthorizeCallbackEndpoint
+2022-09-16 22:58:07.629 +03:00 [INF] Invoking IdentityServer endpoint: IdentityServer4.Endpoints.AuthorizeCallbackEndpoint for /connect/authorize/callback
+2022-09-16 22:58:07.630 +03:00 [DBG] Start authorize callback request
+2022-09-16 22:58:07.632 +03:00 [DBG] User in authorize request: 6ec82ff9-0501-4a64-9457-5f5f7796175b
+2022-09-16 22:58:07.632 +03:00 [DBG] Start authorize request protocol validation
+2022-09-16 22:58:07.632 +03:00 [DBG] client configuration validation for client pow-web-app succeeded.
+2022-09-16 22:58:07.632 +03:00 [DBG] Checking for PKCE parameters
+2022-09-16 22:58:07.632 +03:00 [DBG] Calling into custom validator: IdentityServer4.Validation.DefaultCustomAuthorizeRequestValidator
+2022-09-16 22:58:07.632 +03:00 [DBG] ValidatedAuthorizeRequest
+{"ClientId":"pow-web-app","ClientName":"Pow Web","RedirectUri":"http://localhost:3000/signin-oidc","AllowedRedirectUris":["http://localhost:3000/signin-oidc"],"SubjectId":"6ec82ff9-0501-4a64-9457-5f5f7796175b","ResponseType":"code","ResponseMode":"query","GrantType":"authorization_code","RequestedScopes":"openid profile PowWebApi","State":"5b86d35c52764433b184253c83d72b6d","UiLocales":null,"Nonce":null,"AuthenticationContextReferenceClasses":null,"DisplayMode":null,"PromptMode":"","MaxAge":null,"LoginHint":null,"SessionId":"DB72791A21CC8D45A40BEDDCA8268D0E","Raw":{"client_id":"pow-web-app","redirect_uri":"http://localhost:3000/signin-oidc","response_type":"code","scope":"openid profile PowWebApi","state":"5b86d35c52764433b184253c83d72b6d","code_challenge":"CU90I4M3guVXw34h-kEZK06u3iyzpswfNMp91UwGlzg","code_challenge_method":"S256","response_mode":"query"},"$type":"AuthorizeRequestValidationLog"}
+2022-09-16 22:58:07.634 +03:00 [DBG] Client is configured to not require consent, no consent is required
+2022-09-16 22:58:07.634 +03:00 [DBG] Creating Authorization Code Flow response.
+2022-09-16 22:58:07.635 +03:00 [DBG] Authorize endpoint response
+{"SubjectId":"6ec82ff9-0501-4a64-9457-5f5f7796175b","ClientId":"pow-web-app","RedirectUri":"http://localhost:3000/signin-oidc","State":"5b86d35c52764433b184253c83d72b6d","Scope":"openid profile PowWebApi","Error":null,"ErrorDescription":null,"$type":"AuthorizeResponseLog"}
+2022-09-16 22:58:07.637 +03:00 [DBG] Augmenting SignInContext
+2022-09-16 22:58:07.637 +03:00 [INF] AuthenticationScheme: Identity.Application signed in.
+2022-09-16 22:58:08.072 +03:00 [DBG] CORS request made for path: /.well-known/openid-configuration from origin: http://localhost:3000
+2022-09-16 22:58:08.072 +03:00 [DBG] Client list checked and origin: http://localhost:3000 is allowed
+2022-09-16 22:58:08.072 +03:00 [DBG] CorsPolicyService allowed origin: http://localhost:3000
+2022-09-16 22:58:08.072 +03:00 [DBG] Request path /.well-known/openid-configuration matched to endpoint type Discovery
+2022-09-16 22:58:08.073 +03:00 [DBG] Endpoint enabled: Discovery, successfully created handler: IdentityServer4.Endpoints.DiscoveryEndpoint
+2022-09-16 22:58:08.073 +03:00 [INF] Invoking IdentityServer endpoint: IdentityServer4.Endpoints.DiscoveryEndpoint for /.well-known/openid-configuration
+2022-09-16 22:58:08.073 +03:00 [DBG] Start discovery request
+2022-09-16 22:58:08.078 +03:00 [DBG] CORS request made for path: /connect/token from origin: http://localhost:3000
+2022-09-16 22:58:08.078 +03:00 [DBG] Client list checked and origin: http://localhost:3000 is allowed
+2022-09-16 22:58:08.078 +03:00 [DBG] CorsPolicyService allowed origin: http://localhost:3000
+2022-09-16 22:58:08.079 +03:00 [DBG] Request path /connect/token matched to endpoint type Token
+2022-09-16 22:58:08.085 +03:00 [DBG] Endpoint enabled: Token, successfully created handler: IdentityServer4.Endpoints.TokenEndpoint
+2022-09-16 22:58:08.085 +03:00 [INF] Invoking IdentityServer endpoint: IdentityServer4.Endpoints.TokenEndpoint for /connect/token
+2022-09-16 22:58:08.085 +03:00 [DBG] Start token request.
+2022-09-16 22:58:08.085 +03:00 [DBG] Start client validation
+2022-09-16 22:58:08.085 +03:00 [DBG] Start parsing Basic Authentication secret
+2022-09-16 22:58:08.085 +03:00 [DBG] Start parsing for secret in post body
+2022-09-16 22:58:08.086 +03:00 [DBG] client id without secret found
+2022-09-16 22:58:08.086 +03:00 [DBG] Parser found secret: PostBodySecretParser
+2022-09-16 22:58:08.086 +03:00 [DBG] Secret id found: pow-web-app
+2022-09-16 22:58:08.086 +03:00 [DBG] client configuration validation for client pow-web-app succeeded.
+2022-09-16 22:58:08.086 +03:00 [DBG] Public Client - skipping secret validation success
+2022-09-16 22:58:08.086 +03:00 [DBG] Client validation success
+2022-09-16 22:58:08.086 +03:00 [DBG] Start token request validation
+2022-09-16 22:58:08.086 +03:00 [DBG] Start validation of authorization code token request
+2022-09-16 22:58:08.087 +03:00 [DBG] Client required a proof key for code exchange. Starting PKCE validation
+2022-09-16 22:58:08.095 +03:00 [DBG] Validation of authorization code token request success
+2022-09-16 22:58:08.095 +03:00 [INF] Token request validation success, {"ClientId":"pow-web-app","ClientName":"Pow Web","GrantType":"authorization_code","Scopes":null,"AuthorizationCode":"****6D51","RefreshToken":"********","UserName":null,"AuthenticationContextReferenceClasses":null,"Tenant":null,"IdP":null,"Raw":{"client_id":"pow-web-app","code":"1E5330F56D8F4BE4B05F9EB960608E31341627AE084D5C047947C30D18FB6D51","redirect_uri":"http://localhost:3000/signin-oidc","code_verifier":"a70351f821b84a3396688a0cdabcd7dae5811f57dfa54826b27582e8d7d5f7c02a4b58387dde4631a8ceb6736de98610","grant_type":"authorization_code"},"$type":"TokenRequestValidationLog"}
+2022-09-16 22:58:08.095 +03:00 [DBG] client configuration validation for client pow-web-app succeeded.
+2022-09-16 22:58:08.096 +03:00 [DBG] Getting claims for access token for client: pow-web-app
+2022-09-16 22:58:08.096 +03:00 [DBG] Getting claims for access token for subject: 6ec82ff9-0501-4a64-9457-5f5f7796175b
+2022-09-16 22:58:08.106 +03:00 [DBG] client configuration validation for client pow-web-app succeeded.
+2022-09-16 22:58:08.106 +03:00 [DBG] Getting claims for identity token for subject: 6ec82ff9-0501-4a64-9457-5f5f7796175b and client: pow-web-app
+2022-09-16 22:58:08.106 +03:00 [DBG] In addition to an id_token, an access_token was requested. No claims other than sub are included in the id_token. To obtain more user claims, either use the user info endpoint or set AlwaysIncludeUserClaimsInIdToken on the client configuration.
+2022-09-16 22:58:08.107 +03:00 [DBG] Token request success.
+2022-09-16 22:58:08.118 +03:00 [DBG] Request path /connect/checksession matched to endpoint type Checksession
+2022-09-16 22:58:08.118 +03:00 [DBG] Endpoint enabled: Checksession, successfully created handler: IdentityServer4.Endpoints.CheckSessionEndpoint
+2022-09-16 22:58:08.118 +03:00 [INF] Invoking IdentityServer endpoint: IdentityServer4.Endpoints.CheckSessionEndpoint for /connect/checksession
+2022-09-16 22:58:08.118 +03:00 [DBG] Rendering check session result
+2022-09-16 23:00:38.984 +03:00 [INF] Starting host...
+2022-09-16 23:00:40.586 +03:00 [INF] Starting IdentityServer4 version 4.1.2+997a6cdd643e46cd5762b710c4ddc43574cbec2e
+2022-09-16 23:00:40.596 +03:00 [INF] You are using the in-memory version of the persisted grant store. This will store consent decisions, authorization codes, refresh and reference tokens in memory only. If you are using any of those features in production, you want to switch to a different store implementation.
+2022-09-16 23:00:40.599 +03:00 [INF] Using the default authentication scheme Identity.Application for IdentityServer
+2022-09-16 23:00:40.599 +03:00 [DBG] Using Identity.Application as default ASP.NET Core scheme for authentication
+2022-09-16 23:00:40.599 +03:00 [DBG] Using Identity.External as default ASP.NET Core scheme for sign-in
+2022-09-16 23:00:40.599 +03:00 [DBG] Using Identity.External as default ASP.NET Core scheme for sign-out
+2022-09-16 23:00:40.599 +03:00 [DBG] Using Identity.Application as default ASP.NET Core scheme for challenge
+2022-09-16 23:00:40.599 +03:00 [DBG] Using Identity.Application as default ASP.NET Core scheme for forbid
+2022-09-16 23:00:40.680 +03:00 [INF] Application started. Press Ctrl+C to shut down.
+2022-09-16 23:00:40.680 +03:00 [INF] Hosting environment: Development
+2022-09-16 23:00:40.680 +03:00 [INF] Content root path: D:\programming\dotNet\OlegLearning\Sigma_Trainee\PowUkraine\IdentityServer
+2022-09-16 23:00:40.769 +03:00 [DBG] Login Url: /Authorization/Login
+2022-09-16 23:00:40.770 +03:00 [DBG] Login Return Url Parameter: ReturnUrl
+2022-09-16 23:00:40.770 +03:00 [DBG] Logout Url: /Authorization/Logout
+2022-09-16 23:00:40.770 +03:00 [DBG] ConsentUrl Url: /consent
+2022-09-16 23:00:40.770 +03:00 [DBG] Consent Return Url Parameter: returnUrl
+2022-09-16 23:00:40.770 +03:00 [DBG] Error Url: /home/error
+2022-09-16 23:00:40.770 +03:00 [DBG] Error Id Parameter: errorId
+2022-09-16 23:01:15.094 +03:00 [INF] Starting host...
+2022-09-16 23:01:16.597 +03:00 [INF] Starting IdentityServer4 version 4.1.2+997a6cdd643e46cd5762b710c4ddc43574cbec2e
+2022-09-16 23:01:16.604 +03:00 [INF] You are using the in-memory version of the persisted grant store. This will store consent decisions, authorization codes, refresh and reference tokens in memory only. If you are using any of those features in production, you want to switch to a different store implementation.
+2022-09-16 23:01:16.605 +03:00 [INF] Using the default authentication scheme Identity.Application for IdentityServer
+2022-09-16 23:01:16.605 +03:00 [DBG] Using Identity.Application as default ASP.NET Core scheme for authentication
+2022-09-16 23:01:16.605 +03:00 [DBG] Using Identity.External as default ASP.NET Core scheme for sign-in
+2022-09-16 23:01:16.606 +03:00 [DBG] Using Identity.External as default ASP.NET Core scheme for sign-out
+2022-09-16 23:01:16.606 +03:00 [DBG] Using Identity.Application as default ASP.NET Core scheme for challenge
+2022-09-16 23:01:16.606 +03:00 [DBG] Using Identity.Application as default ASP.NET Core scheme for forbid
+2022-09-16 23:01:16.669 +03:00 [INF] Application started. Press Ctrl+C to shut down.
+2022-09-16 23:01:16.669 +03:00 [INF] Hosting environment: Development
+2022-09-16 23:01:16.669 +03:00 [INF] Content root path: D:\programming\dotNet\OlegLearning\Sigma_Trainee\PowUkraine\IdentityServer
+2022-09-16 23:01:16.748 +03:00 [DBG] Login Url: /Authorization/Login
+2022-09-16 23:01:16.749 +03:00 [DBG] Login Return Url Parameter: ReturnUrl
+2022-09-16 23:01:16.749 +03:00 [DBG] Logout Url: /Authorization/Logout
+2022-09-16 23:01:16.749 +03:00 [DBG] ConsentUrl Url: /consent
+2022-09-16 23:01:16.749 +03:00 [DBG] Consent Return Url Parameter: returnUrl
+2022-09-16 23:01:16.749 +03:00 [DBG] Error Url: /home/error
+2022-09-16 23:01:16.749 +03:00 [DBG] Error Id Parameter: errorId
+2022-09-16 23:01:25.931 +03:00 [INF] AuthenticationScheme: Facebook was challenged.
+2022-09-16 23:01:26.739 +03:00 [INF] AuthenticationScheme: Identity.External signed in.
+2022-09-16 23:01:27.084 +03:00 [INF] AuthenticationScheme: Identity.External signed out.
+2022-09-16 23:01:27.137 +03:00 [DBG] Augmenting SignInContext
+2022-09-16 23:01:27.137 +03:00 [DBG] Removing amr claim with value: Facebook
+2022-09-16 23:01:27.138 +03:00 [DBG] Adding idp claim with value: Facebook
+2022-09-16 23:01:27.138 +03:00 [DBG] Adding amr claim with value: external
+2022-09-16 23:01:27.138 +03:00 [DBG] Adding auth_time claim with value: 1663358487
+2022-09-16 23:01:27.140 +03:00 [INF] AuthenticationScheme: Identity.Application signed in.
+2022-09-16 23:01:27.214 +03:00 [ERR] An unhandled exception has occurred while executing the request.
+System.ArgumentException: Value cannot be null or empty. (Parameter 'url')
+   at Microsoft.AspNetCore.Mvc.ControllerBase.Redirect(String url)
+   at IdentityServer.Controllers.AuthorizationController.ExteranlLoginCallback(String returnUrl) in D:\programming\dotNet\OlegLearning\Sigma_Trainee\PowUkraine\IdentityServer\Controllers\AuthorizationController.cs:line 146
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.TaskOfIActionResultExecutor.Execute(IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeActionMethodAsync>g__Awaited|12_0(ControllerActionInvoker invoker, ValueTask`1 actionResultValueTask)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeNextActionFilterAsync>g__Awaited|10_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeInnerFilterAsync>g__Awaited|13_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeNextResourceFilter>g__Awaited|24_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Rethrow(ResourceExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|19_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|6_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at IdentityServer4.Hosting.IdentityServerMiddleware.Invoke(HttpContext context, IEndpointRouter router, IUserSession session, IEventService events, IBackChannelLogoutService backChannelLogoutService)
+   at IdentityServer4.Hosting.MutualTlsEndpointMiddleware.Invoke(HttpContext context, IAuthenticationSchemeProvider schemes)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at IdentityServer4.Hosting.BaseUrlMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware.Invoke(HttpContext context)
+2022-09-16 23:02:01.621 +03:00 [INF] Starting host...
+2022-09-16 23:02:03.180 +03:00 [INF] Starting IdentityServer4 version 4.1.2+997a6cdd643e46cd5762b710c4ddc43574cbec2e
+2022-09-16 23:02:03.187 +03:00 [INF] You are using the in-memory version of the persisted grant store. This will store consent decisions, authorization codes, refresh and reference tokens in memory only. If you are using any of those features in production, you want to switch to a different store implementation.
+2022-09-16 23:02:03.189 +03:00 [INF] Using the default authentication scheme Identity.Application for IdentityServer
+2022-09-16 23:02:03.189 +03:00 [DBG] Using Identity.Application as default ASP.NET Core scheme for authentication
+2022-09-16 23:02:03.189 +03:00 [DBG] Using Identity.External as default ASP.NET Core scheme for sign-in
+2022-09-16 23:02:03.189 +03:00 [DBG] Using Identity.External as default ASP.NET Core scheme for sign-out
+2022-09-16 23:02:03.189 +03:00 [DBG] Using Identity.Application as default ASP.NET Core scheme for challenge
+2022-09-16 23:02:03.189 +03:00 [DBG] Using Identity.Application as default ASP.NET Core scheme for forbid
+2022-09-16 23:02:03.245 +03:00 [INF] Application started. Press Ctrl+C to shut down.
+2022-09-16 23:02:03.246 +03:00 [INF] Hosting environment: Development
+2022-09-16 23:02:03.246 +03:00 [INF] Content root path: D:\programming\dotNet\OlegLearning\Sigma_Trainee\PowUkraine\IdentityServer
+2022-09-16 23:02:03.320 +03:00 [DBG] Login Url: /Authorization/Login
+2022-09-16 23:02:03.322 +03:00 [DBG] Login Return Url Parameter: ReturnUrl
+2022-09-16 23:02:03.322 +03:00 [DBG] Logout Url: /Authorization/Logout
+2022-09-16 23:02:03.322 +03:00 [DBG] ConsentUrl Url: /consent
+2022-09-16 23:02:03.322 +03:00 [DBG] Consent Return Url Parameter: returnUrl
+2022-09-16 23:02:03.322 +03:00 [DBG] Error Url: /home/error
+2022-09-16 23:02:03.322 +03:00 [DBG] Error Id Parameter: errorId
+2022-09-16 23:02:05.772 +03:00 [INF] AuthenticationScheme: Facebook was challenged.
+2022-09-16 23:02:06.632 +03:00 [INF] AuthenticationScheme: Identity.External signed in.
+2022-09-16 23:02:06.971 +03:00 [INF] AuthenticationScheme: Identity.External signed out.
+2022-09-16 23:02:07.024 +03:00 [DBG] Augmenting SignInContext
+2022-09-16 23:02:07.025 +03:00 [DBG] Removing amr claim with value: Facebook
+2022-09-16 23:02:07.025 +03:00 [DBG] Adding idp claim with value: Facebook
+2022-09-16 23:02:07.025 +03:00 [DBG] Adding amr claim with value: external
+2022-09-16 23:02:07.025 +03:00 [DBG] Adding auth_time claim with value: 1663358527
+2022-09-16 23:02:07.027 +03:00 [INF] AuthenticationScheme: Identity.Application signed in.
+2022-09-16 23:02:12.936 +03:00 [INF] AuthenticationScheme: Google was challenged.
+2022-09-16 23:02:16.473 +03:00 [DBG] HandleChallenge with Location: https://www.linkedin.com/oauth/v2/authorization?client_id=77uwjf5mrps8cc&scope=r_liteprofile%20r_emailaddress&response_type=code&redirect_uri=https%3A%2F%2Flocalhost%3A44316%2Fsignin-linkedin&state=CfDJ8PQUTOErAuxPrciDv0CMQm9cXU51ehK-wNe2mJ0Ws1wd1PyXv8gRckLEB2Rio3kiJ1ldO0R26K1Rb7LbKhQ6c9scBYEhYU3UWgCEsWVRAASHc3EDmpHc4pd6im13ji5rBk_lzAiE4I8SPTDX7XaBxaNIjudBfg0wYUnZET4I-WmBAgnEoAxT8rQS8O_UWzoshHrMa2bIPG2h2MJYl-q0FgkzJ5H0S4uJUohOqSkyn4N33R_sQEtmsZR7PAPi-GSu-rfSOhOtHFOaSuYeQBM5IqCsQPyp2Opp5d96549ISV02; and Set-Cookie: .AspNetCore.Correlation.LinkedIn.yl0Tbw-DNJ_wfB3oXBxIVsYk0jYDLO-hX4WJafUkzWg=N; expires=Fri, 16 Sep 2022 20:17:16 GMT; path=/signin-linkedin; secure; samesite=none; httponly.
+2022-09-16 23:02:16.473 +03:00 [INF] AuthenticationScheme: LinkedIn was challenged.
+2022-09-16 23:02:19.066 +03:00 [INF] AuthenticationScheme: Facebook was challenged.
+2022-09-16 23:02:19.778 +03:00 [INF] AuthenticationScheme: Identity.External signed in.
+2022-09-16 23:02:19.820 +03:00 [INF] AuthenticationScheme: Identity.External signed out.
+2022-09-16 23:02:19.824 +03:00 [DBG] Augmenting SignInContext
+2022-09-16 23:02:19.824 +03:00 [DBG] Removing amr claim with value: Facebook
+2022-09-16 23:02:19.824 +03:00 [DBG] Adding idp claim with value: Facebook
+2022-09-16 23:02:19.824 +03:00 [DBG] Adding amr claim with value: external
+2022-09-16 23:02:19.824 +03:00 [DBG] Adding auth_time claim with value: 1663358539
+2022-09-16 23:02:19.824 +03:00 [INF] AuthenticationScheme: Identity.Application signed in.
+2022-09-16 23:02:43.825 +03:00 [INF] AuthenticationScheme: Facebook was challenged.
+2022-09-16 23:02:44.523 +03:00 [INF] AuthenticationScheme: Identity.External signed in.
+2022-09-16 23:03:01.673 +03:00 [INF] AuthenticationScheme: Identity.External signed out.
+2022-09-16 23:03:01.676 +03:00 [DBG] Augmenting SignInContext
+2022-09-16 23:03:01.676 +03:00 [DBG] Removing amr claim with value: Facebook
+2022-09-16 23:03:01.676 +03:00 [DBG] Adding idp claim with value: Facebook
+2022-09-16 23:03:01.676 +03:00 [DBG] Adding amr claim with value: external
+2022-09-16 23:03:01.676 +03:00 [DBG] Adding auth_time claim with value: 1663358581
+2022-09-16 23:03:01.677 +03:00 [INF] AuthenticationScheme: Identity.Application signed in.
+2022-09-16 23:06:04.679 +03:00 [INF] Starting host...
+2022-09-16 23:06:06.269 +03:00 [INF] Starting IdentityServer4 version 4.1.2+997a6cdd643e46cd5762b710c4ddc43574cbec2e
+2022-09-16 23:06:06.275 +03:00 [INF] You are using the in-memory version of the persisted grant store. This will store consent decisions, authorization codes, refresh and reference tokens in memory only. If you are using any of those features in production, you want to switch to a different store implementation.
+2022-09-16 23:06:06.277 +03:00 [INF] Using the default authentication scheme Identity.Application for IdentityServer
+2022-09-16 23:06:06.277 +03:00 [DBG] Using Identity.Application as default ASP.NET Core scheme for authentication
+2022-09-16 23:06:06.277 +03:00 [DBG] Using Identity.External as default ASP.NET Core scheme for sign-in
+2022-09-16 23:06:06.277 +03:00 [DBG] Using Identity.External as default ASP.NET Core scheme for sign-out
+2022-09-16 23:06:06.277 +03:00 [DBG] Using Identity.Application as default ASP.NET Core scheme for challenge
+2022-09-16 23:06:06.277 +03:00 [DBG] Using Identity.Application as default ASP.NET Core scheme for forbid
+2022-09-16 23:06:06.337 +03:00 [INF] Application started. Press Ctrl+C to shut down.
+2022-09-16 23:06:06.338 +03:00 [INF] Hosting environment: Development
+2022-09-16 23:06:06.338 +03:00 [INF] Content root path: D:\programming\dotNet\OlegLearning\Sigma_Trainee\PowUkraine\IdentityServer
+2022-09-16 23:06:06.412 +03:00 [DBG] Login Url: /Authorization/Login
+2022-09-16 23:06:06.414 +03:00 [DBG] Login Return Url Parameter: ReturnUrl
+2022-09-16 23:06:06.414 +03:00 [DBG] Logout Url: /Authorization/Logout
+2022-09-16 23:06:06.414 +03:00 [DBG] ConsentUrl Url: /consent
+2022-09-16 23:06:06.414 +03:00 [DBG] Consent Return Url Parameter: returnUrl
+2022-09-16 23:06:06.414 +03:00 [DBG] Error Url: /home/error
+2022-09-16 23:06:06.414 +03:00 [DBG] Error Id Parameter: errorId
+2022-09-16 23:06:27.295 +03:00 [INF] Starting host...
+2022-09-16 23:06:28.838 +03:00 [INF] Starting IdentityServer4 version 4.1.2+997a6cdd643e46cd5762b710c4ddc43574cbec2e
+2022-09-16 23:06:28.845 +03:00 [INF] You are using the in-memory version of the persisted grant store. This will store consent decisions, authorization codes, refresh and reference tokens in memory only. If you are using any of those features in production, you want to switch to a different store implementation.
+2022-09-16 23:06:28.846 +03:00 [INF] Using the default authentication scheme Identity.Application for IdentityServer
+2022-09-16 23:06:28.846 +03:00 [DBG] Using Identity.Application as default ASP.NET Core scheme for authentication
+2022-09-16 23:06:28.847 +03:00 [DBG] Using Identity.External as default ASP.NET Core scheme for sign-in
+2022-09-16 23:06:28.847 +03:00 [DBG] Using Identity.External as default ASP.NET Core scheme for sign-out
+2022-09-16 23:06:28.847 +03:00 [DBG] Using Identity.Application as default ASP.NET Core scheme for challenge
+2022-09-16 23:06:28.847 +03:00 [DBG] Using Identity.Application as default ASP.NET Core scheme for forbid
+2022-09-16 23:06:28.902 +03:00 [INF] Application started. Press Ctrl+C to shut down.
+2022-09-16 23:06:28.902 +03:00 [INF] Hosting environment: Development
+2022-09-16 23:06:28.902 +03:00 [INF] Content root path: D:\programming\dotNet\OlegLearning\Sigma_Trainee\PowUkraine\IdentityServer
+2022-09-16 23:06:28.974 +03:00 [DBG] Login Url: /Authorization/Login
+2022-09-16 23:06:28.975 +03:00 [DBG] Login Return Url Parameter: ReturnUrl
+2022-09-16 23:06:28.975 +03:00 [DBG] Logout Url: /Authorization/Logout
+2022-09-16 23:06:28.975 +03:00 [DBG] ConsentUrl Url: /consent
+2022-09-16 23:06:28.975 +03:00 [DBG] Consent Return Url Parameter: returnUrl
+2022-09-16 23:06:28.975 +03:00 [DBG] Error Url: /home/error
+2022-09-16 23:06:28.975 +03:00 [DBG] Error Id Parameter: errorId
+2022-09-16 23:07:20.726 +03:00 [INF] Starting host...
+2022-09-16 23:07:22.337 +03:00 [INF] Starting IdentityServer4 version 4.1.2+997a6cdd643e46cd5762b710c4ddc43574cbec2e
+2022-09-16 23:07:22.349 +03:00 [INF] You are using the in-memory version of the persisted grant store. This will store consent decisions, authorization codes, refresh and reference tokens in memory only. If you are using any of those features in production, you want to switch to a different store implementation.
+2022-09-16 23:07:22.351 +03:00 [INF] Using the default authentication scheme Identity.Application for IdentityServer
+2022-09-16 23:07:22.351 +03:00 [DBG] Using Identity.Application as default ASP.NET Core scheme for authentication
+2022-09-16 23:07:22.351 +03:00 [DBG] Using Identity.External as default ASP.NET Core scheme for sign-in
+2022-09-16 23:07:22.351 +03:00 [DBG] Using Identity.External as default ASP.NET Core scheme for sign-out
+2022-09-16 23:07:22.351 +03:00 [DBG] Using Identity.Application as default ASP.NET Core scheme for challenge
+2022-09-16 23:07:22.351 +03:00 [DBG] Using Identity.Application as default ASP.NET Core scheme for forbid
+2022-09-16 23:07:22.420 +03:00 [INF] Application started. Press Ctrl+C to shut down.
+2022-09-16 23:07:22.420 +03:00 [INF] Hosting environment: Development
+2022-09-16 23:07:22.420 +03:00 [INF] Content root path: D:\programming\dotNet\OlegLearning\Sigma_Trainee\PowUkraine\IdentityServer
+2022-09-16 23:07:22.532 +03:00 [DBG] Login Url: /Authorization/Login
+2022-09-16 23:07:22.534 +03:00 [DBG] Login Return Url Parameter: ReturnUrl
+2022-09-16 23:07:22.534 +03:00 [DBG] Logout Url: /Authorization/Logout
+2022-09-16 23:07:22.534 +03:00 [DBG] ConsentUrl Url: /consent
+2022-09-16 23:07:22.534 +03:00 [DBG] Consent Return Url Parameter: returnUrl
+2022-09-16 23:07:22.534 +03:00 [DBG] Error Url: /home/error
+2022-09-16 23:07:22.534 +03:00 [DBG] Error Id Parameter: errorId
+2022-09-16 23:07:56.106 +03:00 [INF] Starting host...
+2022-09-16 23:07:57.725 +03:00 [INF] Starting IdentityServer4 version 4.1.2+997a6cdd643e46cd5762b710c4ddc43574cbec2e
+2022-09-16 23:07:57.731 +03:00 [INF] You are using the in-memory version of the persisted grant store. This will store consent decisions, authorization codes, refresh and reference tokens in memory only. If you are using any of those features in production, you want to switch to a different store implementation.
+2022-09-16 23:07:57.733 +03:00 [INF] Using the default authentication scheme Identity.Application for IdentityServer
+2022-09-16 23:07:57.733 +03:00 [DBG] Using Identity.Application as default ASP.NET Core scheme for authentication
+2022-09-16 23:07:57.733 +03:00 [DBG] Using Identity.External as default ASP.NET Core scheme for sign-in
+2022-09-16 23:07:57.733 +03:00 [DBG] Using Identity.External as default ASP.NET Core scheme for sign-out
+2022-09-16 23:07:57.733 +03:00 [DBG] Using Identity.Application as default ASP.NET Core scheme for challenge
+2022-09-16 23:07:57.733 +03:00 [DBG] Using Identity.Application as default ASP.NET Core scheme for forbid
+2022-09-16 23:07:57.791 +03:00 [INF] Application started. Press Ctrl+C to shut down.
+2022-09-16 23:07:57.791 +03:00 [INF] Hosting environment: Development
+2022-09-16 23:07:57.791 +03:00 [INF] Content root path: D:\programming\dotNet\OlegLearning\Sigma_Trainee\PowUkraine\IdentityServer
+2022-09-16 23:07:57.870 +03:00 [DBG] Login Url: /Authorization/Login
+2022-09-16 23:07:57.871 +03:00 [DBG] Login Return Url Parameter: ReturnUrl
+2022-09-16 23:07:57.871 +03:00 [DBG] Logout Url: /Authorization/Logout
+2022-09-16 23:07:57.871 +03:00 [DBG] ConsentUrl Url: /consent
+2022-09-16 23:07:57.871 +03:00 [DBG] Consent Return Url Parameter: returnUrl
+2022-09-16 23:07:57.871 +03:00 [DBG] Error Url: /home/error
+2022-09-16 23:07:57.871 +03:00 [DBG] Error Id Parameter: errorId
+2022-09-16 23:08:03.060 +03:00 [INF] AuthenticationScheme: Google was challenged.
+2022-09-16 23:08:05.563 +03:00 [DBG] HandleChallenge with Location: https://www.linkedin.com/oauth/v2/authorization?client_id=77uwjf5mrps8cc&scope=r_liteprofile%20r_emailaddress&response_type=code&redirect_uri=https%3A%2F%2Flocalhost%3A44316%2Fsignin-linkedin&state=CfDJ8PQUTOErAuxPrciDv0CMQm-wuGU5w4lg4-PpcCjPzBRIgRwYb_Bi8wAQEL0JOWd78YtURFmju6tT1KsJoSC9s5qSEVrIhu1q4Kyum9Co9FlZ6uTrKZTh57U6vE54JUExvx-jQbnhJ_MOv7yTbwm2-deR4sntdVHjwUWezcGlD9jIPrtL0mSurOg1hYpJrrgiekZX3E5W1rGv65jhj2z41ikBN4zmOipANovw4w-whbQXt9kEKXIJ57q9pZjIpLinSoDubhecx7HFPxK3K9xJOv9_j0DXaHknCBelVJOJifFB; and Set-Cookie: .AspNetCore.Correlation.LinkedIn.3U01KLHB7M8cf8-pWeaQHR_NQSa-JRG7AMPHXaJ4Lxw=N; expires=Fri, 16 Sep 2022 20:23:05 GMT; path=/signin-linkedin; secure; samesite=none; httponly.
+2022-09-16 23:08:05.563 +03:00 [INF] AuthenticationScheme: LinkedIn was challenged.
+2022-09-16 23:08:08.190 +03:00 [INF] AuthenticationScheme: Facebook was challenged.
+2022-09-16 23:08:08.986 +03:00 [INF] AuthenticationScheme: Identity.External signed in.
+2022-09-16 23:08:09.320 +03:00 [INF] AuthenticationScheme: Identity.External signed out.
+2022-09-16 23:08:09.372 +03:00 [DBG] Augmenting SignInContext
+2022-09-16 23:08:09.372 +03:00 [DBG] Removing amr claim with value: Facebook
+2022-09-16 23:08:09.372 +03:00 [DBG] Adding idp claim with value: Facebook
+2022-09-16 23:08:09.372 +03:00 [DBG] Adding amr claim with value: external
+2022-09-16 23:08:09.373 +03:00 [DBG] Adding auth_time claim with value: 1663358889
+2022-09-16 23:08:09.375 +03:00 [INF] AuthenticationScheme: Identity.Application signed in.
+2022-09-16 23:08:09.427 +03:00 [ERR] An unhandled exception has occurred while executing the request.
+System.ArgumentException: Value cannot be null or empty. (Parameter 'url')
+   at Microsoft.AspNetCore.Mvc.ControllerBase.Redirect(String url)
+   at IdentityServer.Controllers.AuthorizationController.ExteranlLoginCallback(String returnUrl) in D:\programming\dotNet\OlegLearning\Sigma_Trainee\PowUkraine\IdentityServer\Controllers\AuthorizationController.cs:line 146
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.TaskOfIActionResultExecutor.Execute(IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeActionMethodAsync>g__Awaited|12_0(ControllerActionInvoker invoker, ValueTask`1 actionResultValueTask)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeNextActionFilterAsync>g__Awaited|10_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeInnerFilterAsync>g__Awaited|13_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeNextResourceFilter>g__Awaited|24_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Rethrow(ResourceExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|19_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|6_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at IdentityServer4.Hosting.IdentityServerMiddleware.Invoke(HttpContext context, IEndpointRouter router, IUserSession session, IEventService events, IBackChannelLogoutService backChannelLogoutService)
+   at IdentityServer4.Hosting.MutualTlsEndpointMiddleware.Invoke(HttpContext context, IAuthenticationSchemeProvider schemes)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at IdentityServer4.Hosting.BaseUrlMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware.Invoke(HttpContext context)
+2022-09-16 23:10:35.889 +03:00 [INF] Starting host...
+2022-09-16 23:10:37.518 +03:00 [INF] Starting IdentityServer4 version 4.1.2+997a6cdd643e46cd5762b710c4ddc43574cbec2e
+2022-09-16 23:10:37.525 +03:00 [INF] You are using the in-memory version of the persisted grant store. This will store consent decisions, authorization codes, refresh and reference tokens in memory only. If you are using any of those features in production, you want to switch to a different store implementation.
+2022-09-16 23:10:37.526 +03:00 [INF] Using the default authentication scheme Identity.Application for IdentityServer
+2022-09-16 23:10:37.526 +03:00 [DBG] Using Identity.Application as default ASP.NET Core scheme for authentication
+2022-09-16 23:10:37.526 +03:00 [DBG] Using Identity.External as default ASP.NET Core scheme for sign-in
+2022-09-16 23:10:37.527 +03:00 [DBG] Using Identity.External as default ASP.NET Core scheme for sign-out
+2022-09-16 23:10:37.527 +03:00 [DBG] Using Identity.Application as default ASP.NET Core scheme for challenge
+2022-09-16 23:10:37.527 +03:00 [DBG] Using Identity.Application as default ASP.NET Core scheme for forbid
+2022-09-16 23:10:37.585 +03:00 [INF] Application started. Press Ctrl+C to shut down.
+2022-09-16 23:10:37.585 +03:00 [INF] Hosting environment: Development
+2022-09-16 23:10:37.585 +03:00 [INF] Content root path: D:\programming\dotNet\OlegLearning\Sigma_Trainee\PowUkraine\IdentityServer
+2022-09-16 23:10:37.664 +03:00 [DBG] Login Url: /Authorization/Login
+2022-09-16 23:10:37.665 +03:00 [DBG] Login Return Url Parameter: ReturnUrl
+2022-09-16 23:10:37.665 +03:00 [DBG] Logout Url: /Authorization/Logout
+2022-09-16 23:10:37.665 +03:00 [DBG] ConsentUrl Url: /consent
+2022-09-16 23:10:37.665 +03:00 [DBG] Consent Return Url Parameter: returnUrl
+2022-09-16 23:10:37.665 +03:00 [DBG] Error Url: /home/error
+2022-09-16 23:10:37.665 +03:00 [DBG] Error Id Parameter: errorId
+2022-09-16 23:12:25.047 +03:00 [INF] Starting host...
+2022-09-16 23:12:26.679 +03:00 [INF] Starting IdentityServer4 version 4.1.2+997a6cdd643e46cd5762b710c4ddc43574cbec2e
+2022-09-16 23:12:26.686 +03:00 [INF] You are using the in-memory version of the persisted grant store. This will store consent decisions, authorization codes, refresh and reference tokens in memory only. If you are using any of those features in production, you want to switch to a different store implementation.
+2022-09-16 23:12:26.688 +03:00 [INF] Using the default authentication scheme Identity.Application for IdentityServer
+2022-09-16 23:12:26.688 +03:00 [DBG] Using Identity.Application as default ASP.NET Core scheme for authentication
+2022-09-16 23:12:26.689 +03:00 [DBG] Using Identity.External as default ASP.NET Core scheme for sign-in
+2022-09-16 23:12:26.689 +03:00 [DBG] Using Identity.External as default ASP.NET Core scheme for sign-out
+2022-09-16 23:12:26.689 +03:00 [DBG] Using Identity.Application as default ASP.NET Core scheme for challenge
+2022-09-16 23:12:26.689 +03:00 [DBG] Using Identity.Application as default ASP.NET Core scheme for forbid
+2022-09-16 23:12:26.751 +03:00 [INF] Application started. Press Ctrl+C to shut down.
+2022-09-16 23:12:26.751 +03:00 [INF] Hosting environment: Development
+2022-09-16 23:12:26.751 +03:00 [INF] Content root path: D:\programming\dotNet\OlegLearning\Sigma_Trainee\PowUkraine\IdentityServer
+2022-09-16 23:12:26.829 +03:00 [DBG] Login Url: /Authorization/Login
+2022-09-16 23:12:26.830 +03:00 [DBG] Login Return Url Parameter: ReturnUrl
+2022-09-16 23:12:26.830 +03:00 [DBG] Logout Url: /Authorization/Logout
+2022-09-16 23:12:26.830 +03:00 [DBG] ConsentUrl Url: /consent
+2022-09-16 23:12:26.830 +03:00 [DBG] Consent Return Url Parameter: returnUrl
+2022-09-16 23:12:26.830 +03:00 [DBG] Error Url: /home/error
+2022-09-16 23:12:26.830 +03:00 [DBG] Error Id Parameter: errorId
+2022-09-16 23:12:33.909 +03:00 [INF] AuthenticationScheme: Google was challenged.
+2022-09-16 23:12:36.525 +03:00 [INF] AuthenticationScheme: Facebook was challenged.
+2022-09-16 23:12:37.387 +03:00 [INF] AuthenticationScheme: Identity.External signed in.
+2022-09-16 23:12:37.737 +03:00 [INF] AuthenticationScheme: Identity.External signed out.
+2022-09-16 23:12:37.792 +03:00 [DBG] Augmenting SignInContext
+2022-09-16 23:12:37.792 +03:00 [DBG] Removing amr claim with value: Facebook
+2022-09-16 23:12:37.792 +03:00 [DBG] Adding idp claim with value: Facebook
+2022-09-16 23:12:37.792 +03:00 [DBG] Adding amr claim with value: external
+2022-09-16 23:12:37.793 +03:00 [DBG] Adding auth_time claim with value: 1663359157
+2022-09-16 23:12:37.795 +03:00 [INF] AuthenticationScheme: Identity.Application signed in.
+2022-09-16 23:12:37.854 +03:00 [ERR] An unhandled exception has occurred while executing the request.
+System.ArgumentException: Value cannot be null or empty. (Parameter 'url')
+   at Microsoft.AspNetCore.Mvc.ControllerBase.Redirect(String url)
+   at IdentityServer.Controllers.AuthorizationController.ExteranlLoginCallback(String returnUrl) in D:\programming\dotNet\OlegLearning\Sigma_Trainee\PowUkraine\IdentityServer\Controllers\AuthorizationController.cs:line 146
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.TaskOfIActionResultExecutor.Execute(IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeActionMethodAsync>g__Awaited|12_0(ControllerActionInvoker invoker, ValueTask`1 actionResultValueTask)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeNextActionFilterAsync>g__Awaited|10_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeInnerFilterAsync>g__Awaited|13_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeNextResourceFilter>g__Awaited|24_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Rethrow(ResourceExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|19_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|6_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at IdentityServer4.Hosting.IdentityServerMiddleware.Invoke(HttpContext context, IEndpointRouter router, IUserSession session, IEventService events, IBackChannelLogoutService backChannelLogoutService)
+   at IdentityServer4.Hosting.MutualTlsEndpointMiddleware.Invoke(HttpContext context, IAuthenticationSchemeProvider schemes)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at IdentityServer4.Hosting.BaseUrlMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware.Invoke(HttpContext context)
+2022-09-16 23:12:45.238 +03:00 [DBG] HandleChallenge with Location: https://www.linkedin.com/oauth/v2/authorization?client_id=77uwjf5mrps8cc&scope=r_liteprofile%20r_emailaddress&response_type=code&redirect_uri=https%3A%2F%2Flocalhost%3A44316%2Fsignin-linkedin&state=CfDJ8PQUTOErAuxPrciDv0CMQm-_88xup5OS8txK4d5Ly4JQ0uAogbqa6IR4hxnw0BNJgdoIMASd0-7DZmZ0g9IP88HFspmVe2KAnd8y_-zatKh9foeZk1jX2U0Qg9pVyeiyy7acQhpFWcqQzRS0Dmqbsj_XBsu1GeLgSjPOLP2LgLfCwlXcvH6CD84lQq7-OWXDx_50sdMT5Jrtl6ADXlzVEGzhqXSTFCoufYBPSI54K4-YcCcnK8c2bu8MYyrJwaioc0qs3ARQRZ0uLUESKi1Cyk0r0OmczMIJ3fduc9LH9joK; and Set-Cookie: .AspNetCore.Correlation.LinkedIn.hSxZBPfO6heAEHwjuf8AsuEVjIvfL3MRJeZ2_lc_DJ4=N; expires=Fri, 16 Sep 2022 20:27:45 GMT; path=/signin-linkedin; secure; samesite=none; httponly.
+2022-09-16 23:12:45.238 +03:00 [INF] AuthenticationScheme: LinkedIn was challenged.
+2022-09-16 23:12:47.744 +03:00 [INF] AuthenticationScheme: Facebook was challenged.
+2022-09-16 23:12:48.397 +03:00 [INF] AuthenticationScheme: Identity.External signed in.
+2022-09-16 23:12:48.444 +03:00 [INF] AuthenticationScheme: Identity.External signed out.
+2022-09-16 23:12:48.448 +03:00 [DBG] Augmenting SignInContext
+2022-09-16 23:12:48.448 +03:00 [DBG] Removing amr claim with value: Facebook
+2022-09-16 23:12:48.448 +03:00 [DBG] Adding idp claim with value: Facebook
+2022-09-16 23:12:48.448 +03:00 [DBG] Adding amr claim with value: external
+2022-09-16 23:12:48.448 +03:00 [DBG] Adding auth_time claim with value: 1663359168
+2022-09-16 23:12:48.448 +03:00 [INF] AuthenticationScheme: Identity.Application signed in.
+2022-09-16 23:12:48.467 +03:00 [ERR] An unhandled exception has occurred while executing the request.
+System.ArgumentException: Value cannot be null or empty. (Parameter 'url')
+   at Microsoft.AspNetCore.Mvc.ControllerBase.Redirect(String url)
+   at IdentityServer.Controllers.AuthorizationController.ExteranlLoginCallback(String returnUrl) in D:\programming\dotNet\OlegLearning\Sigma_Trainee\PowUkraine\IdentityServer\Controllers\AuthorizationController.cs:line 146
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.TaskOfIActionResultExecutor.Execute(IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeActionMethodAsync>g__Awaited|12_0(ControllerActionInvoker invoker, ValueTask`1 actionResultValueTask)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeNextActionFilterAsync>g__Awaited|10_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeInnerFilterAsync>g__Awaited|13_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeNextResourceFilter>g__Awaited|24_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Rethrow(ResourceExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|19_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|6_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at IdentityServer4.Hosting.IdentityServerMiddleware.Invoke(HttpContext context, IEndpointRouter router, IUserSession session, IEventService events, IBackChannelLogoutService backChannelLogoutService)
+   at IdentityServer4.Hosting.MutualTlsEndpointMiddleware.Invoke(HttpContext context, IAuthenticationSchemeProvider schemes)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at IdentityServer4.Hosting.BaseUrlMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware.Invoke(HttpContext context)
+2022-09-16 23:13:09.344 +03:00 [INF] AuthenticationScheme: Facebook was challenged.
+2022-09-16 23:13:10.048 +03:00 [INF] AuthenticationScheme: Identity.External signed in.
+2022-09-16 23:13:10.061 +03:00 [INF] AuthenticationScheme: Identity.External signed out.
+2022-09-16 23:13:10.066 +03:00 [DBG] Augmenting SignInContext
+2022-09-16 23:13:10.066 +03:00 [DBG] Removing amr claim with value: Facebook
+2022-09-16 23:13:10.066 +03:00 [DBG] Adding idp claim with value: Facebook
+2022-09-16 23:13:10.066 +03:00 [DBG] Adding amr claim with value: external
+2022-09-16 23:13:10.067 +03:00 [DBG] Adding auth_time claim with value: 1663359190
+2022-09-16 23:13:10.067 +03:00 [INF] AuthenticationScheme: Identity.Application signed in.
+2022-09-16 23:13:10.095 +03:00 [ERR] An unhandled exception has occurred while executing the request.
+System.ArgumentException: Value cannot be null or empty. (Parameter 'url')
+   at Microsoft.AspNetCore.Mvc.ControllerBase.Redirect(String url)
+   at IdentityServer.Controllers.AuthorizationController.ExteranlLoginCallback(String returnUrl) in D:\programming\dotNet\OlegLearning\Sigma_Trainee\PowUkraine\IdentityServer\Controllers\AuthorizationController.cs:line 146
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.TaskOfIActionResultExecutor.Execute(IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeActionMethodAsync>g__Awaited|12_0(ControllerActionInvoker invoker, ValueTask`1 actionResultValueTask)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeNextActionFilterAsync>g__Awaited|10_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeInnerFilterAsync>g__Awaited|13_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeNextResourceFilter>g__Awaited|24_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Rethrow(ResourceExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|19_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|6_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at IdentityServer4.Hosting.IdentityServerMiddleware.Invoke(HttpContext context, IEndpointRouter router, IUserSession session, IEventService events, IBackChannelLogoutService backChannelLogoutService)
+   at IdentityServer4.Hosting.MutualTlsEndpointMiddleware.Invoke(HttpContext context, IAuthenticationSchemeProvider schemes)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at IdentityServer4.Hosting.BaseUrlMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware.Invoke(HttpContext context)
+2022-09-16 23:13:18.873 +03:00 [INF] AuthenticationScheme: Google was challenged.
+2022-09-16 23:13:19.448 +03:00 [INF] AuthenticationScheme: Identity.External signed in.
+2022-09-16 23:13:19.457 +03:00 [INF] AuthenticationScheme: Identity.External signed out.
+2022-09-16 23:13:19.460 +03:00 [DBG] Augmenting SignInContext
+2022-09-16 23:13:19.460 +03:00 [DBG] Removing amr claim with value: Google
+2022-09-16 23:13:19.460 +03:00 [DBG] Adding idp claim with value: Google
+2022-09-16 23:13:19.460 +03:00 [DBG] Adding amr claim with value: external
+2022-09-16 23:13:19.460 +03:00 [DBG] Adding auth_time claim with value: 1663359199
+2022-09-16 23:13:19.460 +03:00 [INF] AuthenticationScheme: Identity.Application signed in.
+2022-09-16 23:13:19.478 +03:00 [ERR] An unhandled exception has occurred while executing the request.
+System.ArgumentException: Value cannot be null or empty. (Parameter 'url')
+   at Microsoft.AspNetCore.Mvc.ControllerBase.Redirect(String url)
+   at IdentityServer.Controllers.AuthorizationController.ExteranlLoginCallback(String returnUrl) in D:\programming\dotNet\OlegLearning\Sigma_Trainee\PowUkraine\IdentityServer\Controllers\AuthorizationController.cs:line 146
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.TaskOfIActionResultExecutor.Execute(IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeActionMethodAsync>g__Awaited|12_0(ControllerActionInvoker invoker, ValueTask`1 actionResultValueTask)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeNextActionFilterAsync>g__Awaited|10_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeInnerFilterAsync>g__Awaited|13_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeNextResourceFilter>g__Awaited|24_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Rethrow(ResourceExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|19_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|6_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at IdentityServer4.Hosting.IdentityServerMiddleware.Invoke(HttpContext context, IEndpointRouter router, IUserSession session, IEventService events, IBackChannelLogoutService backChannelLogoutService)
+   at IdentityServer4.Hosting.MutualTlsEndpointMiddleware.Invoke(HttpContext context, IAuthenticationSchemeProvider schemes)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at IdentityServer4.Hosting.BaseUrlMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware.Invoke(HttpContext context)
+2022-09-16 23:13:23.346 +03:00 [DBG] HandleChallenge with Location: https://www.linkedin.com/oauth/v2/authorization?client_id=77uwjf5mrps8cc&scope=r_liteprofile%20r_emailaddress&response_type=code&redirect_uri=https%3A%2F%2Flocalhost%3A44316%2Fsignin-linkedin&state=CfDJ8PQUTOErAuxPrciDv0CMQm94TxeKgpANDss6T7ON48hLmVXl4utZxZiuOE9wn2ocg_eS9dhUlA-uei23P3x4OHnf9tZI2UTXbb2xqJS0nXCtN2vLYLSfhRuvIKt-7tc3tbL_aXvXB04JkziEvf47mCtQrvkmraSCCO3rzaFJ51V_OIYln2BDg-hDBSSBSTU3FwyowjbgomdQoRgCP6-m-qlw-bh8KoQ35emCdAHbah3nA1zHQ8nSRB5sNvffGqKH50a8cbdp63AToGcy09V-XnogqjwWVQ-1vMps2kRRSqAk; and Set-Cookie: .AspNetCore.Correlation.LinkedIn.Ndf5e-nY-uiJlsq3sERgXIwKedDoczerBnu82-EYtoI=N; expires=Fri, 16 Sep 2022 20:28:23 GMT; path=/signin-linkedin; secure; samesite=none; httponly.
+2022-09-16 23:13:23.346 +03:00 [INF] AuthenticationScheme: LinkedIn was challenged.
+2022-09-16 23:13:25.649 +03:00 [INF] AuthenticationScheme: Google was challenged.
+2022-09-16 23:13:26.090 +03:00 [INF] AuthenticationScheme: Identity.External signed in.
+2022-09-16 23:13:26.099 +03:00 [INF] AuthenticationScheme: Identity.External signed out.
+2022-09-16 23:13:26.102 +03:00 [DBG] Augmenting SignInContext
+2022-09-16 23:13:26.102 +03:00 [DBG] Removing amr claim with value: Google
+2022-09-16 23:13:26.102 +03:00 [DBG] Adding idp claim with value: Google
+2022-09-16 23:13:26.102 +03:00 [DBG] Adding amr claim with value: external
+2022-09-16 23:13:26.102 +03:00 [DBG] Adding auth_time claim with value: 1663359206
+2022-09-16 23:13:26.103 +03:00 [INF] AuthenticationScheme: Identity.Application signed in.
+2022-09-16 23:13:26.121 +03:00 [ERR] An unhandled exception has occurred while executing the request.
+System.ArgumentException: Value cannot be null or empty. (Parameter 'url')
+   at Microsoft.AspNetCore.Mvc.ControllerBase.Redirect(String url)
+   at IdentityServer.Controllers.AuthorizationController.ExteranlLoginCallback(String returnUrl) in D:\programming\dotNet\OlegLearning\Sigma_Trainee\PowUkraine\IdentityServer\Controllers\AuthorizationController.cs:line 146
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.TaskOfIActionResultExecutor.Execute(IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeActionMethodAsync>g__Awaited|12_0(ControllerActionInvoker invoker, ValueTask`1 actionResultValueTask)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeNextActionFilterAsync>g__Awaited|10_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeInnerFilterAsync>g__Awaited|13_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeNextResourceFilter>g__Awaited|24_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Rethrow(ResourceExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|19_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|6_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at IdentityServer4.Hosting.IdentityServerMiddleware.Invoke(HttpContext context, IEndpointRouter router, IUserSession session, IEventService events, IBackChannelLogoutService backChannelLogoutService)
+   at IdentityServer4.Hosting.MutualTlsEndpointMiddleware.Invoke(HttpContext context, IAuthenticationSchemeProvider schemes)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at IdentityServer4.Hosting.BaseUrlMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware.Invoke(HttpContext context)

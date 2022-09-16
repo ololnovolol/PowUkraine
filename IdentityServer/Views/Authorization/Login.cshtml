@@ -49,18 +49,18 @@
                             <div class="row d-flex justify-content-center align-items-center h-100">
                                 <form asp-controller="Authorization" asp-action="ExternalLogin"
                                       asp-route-returnUrl="@Model.ReturnUrl" method="post">
-                                    @foreach (var provider in Model.ExternalProviders)
-                                    {
-      
-                                        <div class="container">
-                                            <div class="row">
-                                                <button href="#" type="submit" style="border-radius: 4px;" value="@provider.Name" name="provider" class="fa fa-google"></button>
-                                                <button href="#" type="submit" style="border-radius: 4px;" value="@provider.Name" name="provider" class="fa fa-facebook"></button>
-                                                <button href="#" type="submit" style="border-radius: 4px;" value="@provider.Name" name="provider" class="fa fa-linkedin"></button>
-                                            </div>
-                                        </div>
-                                    }
+                                 
+                                    <div class="container">
+                                        <div class="row">
 
+                                            @foreach (var provider in Model.ExternalProviders)
+                                            {
+                                                <button href="#" type="submit" style="border-radius: 4px;" value="@provider.Name" name="provider" class="fa fa-@provider.Name.ToLower()"></button>
+                                            }
+              
+                                        </div>
+                                    </div>
+                                    
                                 </form>
                             </div>
 

@@ -10,11 +10,22 @@ namespace IdentityServer.Extentions
             services.AddAuthentication()
                 .AddGoogle(google =>
                 {
-                    google.ClientId = AppConfiguration["web:client_id"];
-                    google.ClientSecret = AppConfiguration["web:client_secret"];
+                    google.ClientId = AppConfiguration["google:client_id"];
+                    google.ClientSecret = AppConfiguration["google:client_secret"];
+                })
+                .AddFacebook(facebook =>
+                {
+                    facebook.AppId = AppConfiguration["facebook:client_id"];
+                    facebook.AppSecret = AppConfiguration["facebook:client_secret"];
+                })
+                .AddLinkedIn(linkedIn =>
+                {
+                    linkedIn.ClientId = AppConfiguration["linkedin:client_id"];
+                    linkedIn.ClientSecret = AppConfiguration["linkedin:client_secret"];
                 });
         }
     }
+
 
 
 
