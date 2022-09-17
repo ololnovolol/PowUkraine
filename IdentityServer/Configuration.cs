@@ -17,7 +17,8 @@ namespace IdentityServer
             new List<IdentityResource>
             {
                 new IdentityResources.OpenId(),
-                new IdentityResources.Profile()
+                new IdentityResources.Profile(),
+                new IdentityResource("roles", new[] { "role" })
             };
 
         public static IEnumerable<ApiResource> ApiResources =>
@@ -42,6 +43,7 @@ namespace IdentityServer
                     RequireClientSecret = false, // todo set code
                     RequirePkce = true,
                     RequireConsent = false,
+                    FrontChannelLogoutUri = "https://localhost:3000/signout-oidc", // todo setup with frontend
                     RedirectUris = {"http://localhost:3000/signin-oidc"}, // todo setup with frontend
                     AllowedCorsOrigins =
                     {

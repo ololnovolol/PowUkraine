@@ -40,6 +40,8 @@ namespace IdentityServer.Controllers
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> Login(LoginViewModel viewModel)
         {
+            viewModel.ExternalProviders = await _signInManager.GetExternalAuthenticationSchemesAsync();
+
             if (!ModelState.IsValid)
             {
                 return View(viewModel);
@@ -98,7 +100,9 @@ namespace IdentityServer.Controllers
             var result = await _userManager.CreateAsync(user, viewModel.Password);
             if (result.Succeeded)
             {
+                await _userManager.AddToRoleAsync(user, "User");
                 await _signInManager.SignInAsync(user, false);
+
                 return Redirect(viewModel.ReturnUrl);
             }
 
@@ -117,7 +121,7 @@ namespace IdentityServer.Controllers
             await _signInManager.SignOutAsync();
             var logoutRequest = await _interactionService.GetLogoutContextAsync(logoutId);
 
-            return Redirect(logoutRequest.PostLogoutRedirectUri);
+            return Redirect(logoutRequest.SignOutIFrameUrl);
         }
 
 
@@ -180,6 +184,7 @@ namespace IdentityServer.Controllers
             if (result.Succeeded)
             {
                 result = await _userManager.AddLoginAsync(user, info);
+                await _userManager.AddToRoleAsync(user, "User");
                 await _signInManager.SignInAsync(user, false);
                 return Redirect(viewModel.ReturnUrl);
             }
