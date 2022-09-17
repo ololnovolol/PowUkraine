@@ -1,5 +1,4 @@
 ﻿using Microsoft.Extensions.DependencyInjection;
-using System.Reflection.Metadata.Ecma335;
 
 namespace Pow.WebApi.Extensions
 {

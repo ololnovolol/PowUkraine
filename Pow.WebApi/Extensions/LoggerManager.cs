@@ -1,9 +1,9 @@
-﻿using Microsoft.Extensions.Hosting;
-using Serilog.Events;
+﻿using Microsoft.Extensions.DependencyInjection;
+using Microsoft.Extensions.Hosting;
 using Serilog;
-using System.Diagnostics;
+using Serilog.Events;
 using System;
-using Microsoft.Extensions.DependencyInjection;
+using System.Diagnostics;
 
 namespace Pow.WebApi.Extensions
 {

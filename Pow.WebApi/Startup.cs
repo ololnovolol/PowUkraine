@@ -1,13 +1,8 @@
-using FluentMigrator.Runner;
-using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
-using Pow.Infrastructure;
-using Pow.Infrastructure.Context;
-using Pow.Infrastructure.Migrations;
 using Pow.WebApi.Extensions;
 using Pow.WebApi.Middleware;
 

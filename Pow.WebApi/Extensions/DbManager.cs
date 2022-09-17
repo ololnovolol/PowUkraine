@@ -1,9 +1,9 @@
 ﻿using FluentMigrator.Runner;
+using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
+using Pow.Infrastructure;
 using Pow.Infrastructure.Context;
 using Pow.Infrastructure.Migrations;
-using Pow.Infrastructure;
-using Microsoft.Extensions.Configuration;
 
 namespace Pow.WebApi.Extensions
 {
