@@ -7,18 +7,21 @@ namespace Pow.WebApi.Controllers
 {
     public class HomeController : BaseController
     {
-        [Authorize]
+        //[Authorize(Roles ="User")]
+        //[Authorize(Roles = "Admin")]
         [HttpGet("{id}")]
-        public IActionResult Get(Guid id)
+        public IActionResult Get()
         {
-            return Ok($"get_{id}");
+            return Ok($"Users_only______get=)");
         }
 
+        //[Authorize(Roles ="User")]
+        //[Authorize(Roles = "Admin")]
         [Authorize]
         [HttpGet]
         public IActionResult GetAll()
         {
-            return Ok("getAll");
+            return Ok("Admin_only____getAll");
         }
 
         [Authorize]

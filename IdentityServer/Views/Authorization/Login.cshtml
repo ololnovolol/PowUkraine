@@ -14,11 +14,13 @@
                     <div class="card" style="border-radius: 15px;">
                         <div class="card-body p-5">
                             <h2 class="text-uppercase text-center mb-5">Login</h2>
+
                             <form asp-action="Login" asp-controller="Authorization" method="post">
                                 
                                 <div asp-validation-summary="All" class="text-danger"></div>
 
                                 <input type="hidden" asp-for="ReturnUrl"/>
+                                <input type="hidden" asp-for="ExternalProviders"/>
                                 <div class="form-outline mb-4">
                                     <div class="form-group">
                                         <label asp-for="Email" class="form-label"></label>
@@ -35,12 +37,12 @@
                                         <label asp-for="RememberMe"></label>
                                     </div>
                                     <div class="form-outline mb-4">
-                                        <button class="w-100 btn btn-lg btn-success" style="background-color: #88A87D" type="submit">Login</button>
+                                        <button class="w-100 btn btn-lg btn-success" style="background-color: #88A87D;" type="submit">Login</button>
                                     </div>
                                     <div class="form-group">
                                         <label class="form-label">Not registered yet?</label>
                                         <a asp-action="Register" asp-controller="Authorization" asp-route-returnUrl="@Model.ReturnUrl" class="w-100 btn btn-lg btn-success" tabindex="-1" role="button"
-                                           style="background-color: #88A87D; color: #FAAA0A" type="button">Register</a>
+                                           style="color: #FAAA0A;background-color: #88A87D; color;     " type="button">Register</a>
                                     </div>
                                 </div>
                           
@@ -55,7 +57,7 @@
 
                                             @foreach (var provider in Model.ExternalProviders)
                                             {
-                                                <button href="#" type="submit" style="border-radius: 4px;" value="@provider.Name" name="provider" class="fa fa-@provider.Name.ToLower()"></button>
+                                                <button href="#" type="submit" style="border-radius: 50px;" value="@provider.Name" name="provider" class="fa fa-@provider.Name.ToLower()"></button>
                                             }
               
                                         </div>

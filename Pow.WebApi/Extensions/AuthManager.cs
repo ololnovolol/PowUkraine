@@ -19,6 +19,9 @@ namespace Pow.WebApi.Extensions
                     options.Audience = "PowWebApi";
                     options.RequireHttpsMetadata = false;
                 });
+
         }
+
+
     }
 }
