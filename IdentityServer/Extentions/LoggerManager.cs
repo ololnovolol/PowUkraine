@@ -18,7 +18,7 @@ namespace IdentityServer.Extentions
                 try
                 {
                     var context = serviceProvider.GetRequiredService<AuthorizationDbContext>();
-                    DbInitializer.Initialize(context);
+                    DbInitializer.Initialize(context, serviceProvider);
                 }
                 catch (Exception exception)
                 {
