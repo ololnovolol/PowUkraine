@@ -7,31 +7,28 @@ namespace Pow.WebApi.Controllers
 {
     public class HomeController : BaseController
     {
-        //[Authorize(Roles ="User")]
-        //[Authorize(Roles = "Admin")]
-        [HttpGet("{id}")]
+        [Authorize(Policy = "UserAccess")]
+        [HttpGet]
         public IActionResult Get()
         {
-            return Ok($"Users_only______get=)");
+            return Ok($"Users_only___User___get method=)");
         }
 
-        //[Authorize(Roles ="User")]
-        //[Authorize(Roles = "Admin")]
-        [Authorize]
+        [Authorize(Policy = "AdminAccess")]
         [HttpGet]
         public IActionResult GetAll()
         {
-            return Ok("Admin_only____getAll");
+            return Ok("Admin Access_only___Admin___getAll");
         }
 
-        [Authorize]
+        [Authorize(Policy = "UserAccess")]
         [HttpPost]
         public IActionResult Create([FromBody] string model)
         {
             return Ok(model);
         }
 
-        [Authorize]
+        [Authorize(Policy = "UserAccess")]
         [HttpDelete("{id}")]
         public IActionResult Delete(Guid id)
         {

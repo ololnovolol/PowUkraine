@@ -1,9 +1,9 @@
 ﻿using IdentityServer.Models;
 using Microsoft.AspNetCore.Identity;
-using System.Threading.Tasks;
-using System;
-using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Configuration;
+using Microsoft.Extensions.DependencyInjection;
+using System;
+using System.Threading.Tasks;
 
 namespace IdentityServer.Services
 {

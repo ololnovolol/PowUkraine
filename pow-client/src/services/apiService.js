@@ -1,10 +1,14 @@
 import axios from 'axios'
 
-async function getDoughnutsFromApi() {
+export async function getFromApi_Admin() {
   const response = await axios.get('https://localhost:44312/api/home/getall');
   return response.data;
-}
+};
 
-export {
-  getDoughnutsFromApi
-}
+export async function getFromApi_User() {
+  const response = await axios.get('https://localhost:44312/api/home/get');
+  return response.data;
+};
+
+
+

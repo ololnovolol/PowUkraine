@@ -20,6 +20,18 @@ namespace Pow.WebApi.Extensions
                     options.RequireHttpsMetadata = false;
                 });
 
+
+            services.AddAuthorization(options =>
+            {
+                options.AddPolicy("AdminAccess", policy =>
+                    policy.RequireRole("Admin"));
+
+                options.AddPolicy("UserAccess", policy =>
+                    policy.RequireAssertion(context =>
+                                context.User.IsInRole("Admin")
+                                || context.User.IsInRole("User")));
+            });
+
         }
 
 

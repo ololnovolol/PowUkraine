@@ -2,17 +2,25 @@ import React, { useState } from 'react'
 import { signoutRedirect } from '../services/userService'
 import { useSelector } from 'react-redux'
 import * as apiService from '../services/apiService'
+import { getFromApi_User } from '../services/apiService'
+import { getFromApi_Admin } from '../services/apiService'
 import { prettifyJson } from '../utils/jsonUtils'
 
 function Home() {
   const user = useSelector(state => state.auth.user)
   const [doughnutData, setDoughnutData] = useState(null)
+
   function signOut() {
     signoutRedirect()
   }
 
-  async function getDoughnuts() {
-    const doughnuts = await apiService.getDoughnutsFromApi()
+  async function getAllAdmin() {
+    const doughnuts = await apiService.getFromApi_Admin()
+    setDoughnutData(doughnuts)
+  }
+
+  async function getAllUser() {
+    const doughnuts = await getFromApi_User()
     setDoughnutData(doughnuts)
   }
 
@@ -23,12 +31,13 @@ function Home() {
 
       <p>💡 <strong>Tip: </strong><em> ............. </em></p>
 
-      <button className="button button-outline" onClick={() => getDoughnuts()}>GetAll_api</button>
+      <button className="button button-outline" onClick={() => getAllAdmin()}>GetAll_Admin_api</button>
+      <button className="button button-outline" onClick={() => getAllUser()}>GetAll_User_api</button>
       <button className="button button-clear" onClick={() => signOut()}>Sign Out</button>
 
       <pre>
         <code>
-          {prettifyJson(doughnutData ? doughnutData : 'No doughnuts yet :(')}
+          {prettifyJson(doughnutData ? doughnutData : 'No api connect yet :(')}
         </code>
       </pre>
 

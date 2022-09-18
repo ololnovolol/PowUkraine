@@ -1,13 +1,9 @@
-﻿using IdentityServer.Models;
-using Microsoft.AspNetCore.Identity;
-using Microsoft.Extensions.DependencyInjection;
-using System;
-using System.Threading.Tasks;
+﻿using System;
 
 namespace IdentityServer.Data
 {
-    // todo remove
     public class DbInitializer
+
     {
         public static void Initialize(AuthorizationDbContext context, IServiceProvider serviceProvider)
         {
@@ -15,6 +11,6 @@ namespace IdentityServer.Data
 
         }
 
-        
+
     }
 }
