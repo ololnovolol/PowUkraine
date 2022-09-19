@@ -23,16 +23,16 @@
                                 <input type="hidden" asp-for="ExternalProviders"/>
                                 <div class="form-outline mb-4">
                                     <div class="form-group">
-                                        <label asp-for="Email" class="form-label"></label>
-                                        <input asp-for="Email" class="form-control form-control-lg" placeholder="Email"/>
+                                        <label asp-for="Email" class="col-form-label"></label>
+                                        <input asp-for="Email" type="email" class="form-control" placeholder="Email"/>
                                         <span asp-validation-for="Email" class="text-danger"></span>
                                     </div>
-                                    <div class="form-outline mb-4">
+                                    <div class="form-group mb-4">
                                         <label asp-for="Password" class="form-label">Password</label>
-                                        <input asp-for="Password" class="form-control form-control-lg" placeholder="Password"/>
+                                        <input asp-for="Password" type="password" id="password" name="password" class="form-control" data-toggle="password" placeholder=" Password" />
                                         <span asp-validation-for="Password" class="text-danger"></span>
                                     </div>
-                                    <div class="form-outline mb-5">
+                                    <div class="form-group mb-5">
                                         <input asp-for="RememberMe"/>
                                         <label asp-for="RememberMe"></label>
                                     </div>
@@ -78,3 +78,20 @@
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.17.0/jquery.validate.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validation-unobtrusive/3.2.11/jquery.validate.unobtrusive.min.js"></script>
+
+@*<script>
+    function password_show_hide() {
+        var x = document.getElementById("password");
+        var show_eye = document.getElementById("show_eye");
+        var hide_eye = document.getElementById("hide_eye");
+        hide_eye.classList.remove("d-none");
+        if (x.type === "password") {
+            x.type = "text";
+            show_eye.style.display = "none";
+            hide_eye.style.display = "block";
+        } else {
+            x.type = "password";
+            show_eye.style.display = "block";
+            hide_eye.style.display = "none";
+        }
+    }</script>*@

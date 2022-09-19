@@ -8,10 +8,10 @@ namespace IdentityServer
 {
     public class Program
     {
+        [Obsolete]
         public static void Main(string[] args)
         {
             LoggerManager.RunSerilog();
-
             try
             {
                 Log.Information("Starting host...");

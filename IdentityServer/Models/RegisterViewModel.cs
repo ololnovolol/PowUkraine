@@ -26,6 +26,7 @@ namespace IdentityServer.Models
 
 
         [Display(Name = "Your date of birth")]
+        [System.ComponentModel.Bindable(true)]
         public DateTime BirthDay { get; set; }
 
         [Display(Name = "I agree all statements")]

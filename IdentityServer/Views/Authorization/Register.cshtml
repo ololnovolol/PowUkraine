@@ -24,30 +24,30 @@
 
                                 <div class="form-outline mb-4">
                                     <label asp-for="Email" class="form-label"></label>
-                                    <input asp-for="Email" class="form-control  form-control-lg" placeholder="Email"/>
+                                    <input asp-for="Email" type="email"  class="form-control  form-control-lg" placeholder="Email" />
                                     <span asp-validation-for="Email" class="text-danger"></span>
                                 </div>
 
                                 <div class="form-outline mb-4">
                                     <label asp-for="Password" class="form-label">Password</label>
-                                    <input asp-for="Password" class="form-control  form-control-lg" placeholder="Password"/>
+                                    <input asp-for="Password" type="password"  class="form-control  form-control-lg" placeholder="Password" />
                                     <span asp-validation-for="Password" class="text-danger"></span>
                                 </div>
 
                                 <div class="form-outline mb-4">
                                     <label asp-for="ConfirmPassword" class="form-label"></label>
-                                    <input asp-for="ConfirmPassword" class="form-control  form-control-lg" placeholder="Confirm password"/>
+                                    <input asp-for="ConfirmPassword" type="password" class="form-control  form-control-lg" placeholder="Confirm password" />
                                     <span asp-validation-for="ConfirmPassword" class="text-danger"></span>
                                 </div>
 
                                 <div class="form-outline mb-4">
                                     <label asp-for="BirthDay" class="form-label"></label>
-                                    <input asp-for="BirthDay" class="form-control  form-control-lg" placeholder="Datetime"/>
+                                    <input asp-for="BirthDay" type="date" class="form-control  form-control-lg" value="@DateTime.Now.ToShortDateString()" />
                                     <span asp-validation-for="BirthDay" class="text-danger"></span>
                                 </div>
 
                                 <div class="form-outline mb-5">
-                                    <input type="checkbox" value="false"/>
+                                    <input type="checkbox" asp-for="AreeAllStatements"/>
                                     <label class="form-check-label">
                                         I agree all statements in <a href="#!" class="text-body"><u>Terms of service</u></a>
                                     </label>

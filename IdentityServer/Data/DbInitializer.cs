@@ -1,13 +1,16 @@
-﻿using System;
+﻿using Microsoft.EntityFrameworkCore;
+using System;
 
 namespace IdentityServer.Data
 {
     public class DbInitializer
 
     {
-        public static void Initialize(AuthorizationDbContext context, IServiceProvider serviceProvider)
+        public static void Initialize(AuthorizationDbContext context)
         {
-            context.Database.EnsureCreated();
+            
+            context.Database.Migrate();
+           // context.Database.EnsureCreated();
 
         }
 
