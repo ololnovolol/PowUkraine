@@ -23,6 +23,7 @@ namespace IdentityServer.Controllers
             _interactionService = interactionService;
         }
 
+        #region StandartAuth
         // authorization/login
         [HttpGet]
         public async Task<IActionResult> Login(string returnUrl)
@@ -126,8 +127,9 @@ namespace IdentityServer.Controllers
 
             return Redirect(logoutRequest.PostLogoutRedirectUri);
         }
+        #endregion
 
-
+        #region ExternalAuth
         [HttpPost]
         public IActionResult ExternalLogin(string provider, string returnUrl)
         {
@@ -199,6 +201,7 @@ namespace IdentityServer.Controllers
             return View(viewModel);
 
         }
+        #endregion
     }
 }
 

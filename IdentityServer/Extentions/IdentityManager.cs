@@ -19,7 +19,7 @@ namespace IdentityServer.Extentions
                 config.User.RequireUniqueEmail = true;
                 config.User.AllowedUserNameCharacters = "";
 
-            })           
+            })
            .AddEntityFrameworkStores<AuthorizationDbContext>()
            .AddDefaultTokenProviders();
 

@@ -18,14 +18,12 @@ namespace IdentityServer.Extentions
                 var serviceProvider = scope.ServiceProvider;
                 try
                 {
-                    var context = serviceProvider.GetRequiredService<AuthorizationDbContext>();
-                    DbInitializer.Initialize(context);
 
                     var environment = serviceProvider.GetRequiredService<IHostingEnvironment>();
 
                     if (!environment.IsDevelopment())
                     {
-                        context = serviceProvider.GetRequiredService<AuthorizationDbContext>();
+                        var context = serviceProvider.GetRequiredService<AuthorizationDbContext>();
                         DbInitializer.Initialize(context);
                     }
                 }
@@ -44,7 +42,6 @@ namespace IdentityServer.Extentions
             Activity.DefaultIdFormat = ActivityIdFormat.W3C;
 
             Log.Logger = new LoggerConfiguration()
-                //.MinimumLevel.Override("Microsoft", LogEventLevel.Information)
                 .MinimumLevel.Debug()
                 .MinimumLevel.Override("Microsoft", LogEventLevel.Warning)
                 .MinimumLevel.Override("Microsoft.Hosting.Lifetime", LogEventLevel.Information)

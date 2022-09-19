@@ -58,7 +58,6 @@ namespace IdentityServer
                         IdentityServerConstants.StandardScopes.OpenId,
                         IdentityServerConstants.StandardScopes.Profile,
                         "PowWebApi"
-
                     },
                     AllowOfflineAccess = true,
                     AllowAccessTokensViaBrowser = true,

@@ -9,10 +9,55 @@ namespace IdentityServer.Common.Validators
 {
     public class CustomUserValidator : IUserValidator<AppUser>
     {
+        private List<IdentityError> errors;
+
+        public CustomUserValidator()
+        {
+            errors = new List<IdentityError>();
+        }
+
         public async Task<IdentityResult> ValidateAsync(UserManager<AppUser> manager, AppUser user)
         {
-            List<IdentityError> errors = new List<IdentityError>();
+            ValidateEmail(user);
+            await ValidateUserName(manager, user);
+            ValidateBirthDate(user);
 
+            return await Task.FromResult(errors.Count == 0 ?
+                IdentityResult.Success : IdentityResult.Failed(errors.ToArray()));
+        }
+
+        private void ValidateBirthDate(AppUser user)
+        {
+            if (user.BirthDay.Year > (DateTime.Now.Year - Constants.MIN_AGE_TO_ACCESS) ||
+                user.BirthDay.Year < (DateTime.Now.Year - Constants.MAX_AGE_TO_ACCESS))
+            {
+                AddErrorsToResult("Incorect birthdate",
+                    $"User birthdate must be upper than {DateTime.Now.Year - Constants.MAX_AGE_TO_ACCESS} " +
+                    $"and lower than {DateTime.Now.Year - Constants.MIN_AGE_TO_ACCESS}");
+            }
+        }
+
+        private async Task ValidateUserName(UserManager<AppUser> manager, AppUser user)
+        {
+            if (user.UserName.Contains("admin"))
+            {
+                AddErrorsToResult("Incorect user name",
+                    "User nickname must not contain the word 'admin'");
+            }
+            if (await manager.FindByNameAsync(user.UserName) != null)
+            {
+                AddErrorsToResult("Incorect user name",
+                    "This name is already in use");
+            }
+            if (await manager.FindByLoginAsync(user.UserName, "Incorect user name") != null)
+            {
+                AddErrorsToResult("Incorect user name",
+                    "This name is already in use");
+            }
+        }
+
+        private void ValidateEmail(AppUser user)
+        {
             string pattern = @"^(?("")(""[^""]+?""@)|(([0-9a-z]((\.(?!\.))|[-!#\$%&'\*\+/=\?\^`\{\}\|~\w])*)(?<=[0-9a-z])@))" +
                 @"(?(\[)(\[(\d{1,3}\.){3}\d{1,3}\])|(([0-9a-z][-\w]*[0-9a-z]*\.)+[a-z0-9]{2,17}))$";
 
@@ -21,56 +66,23 @@ namespace IdentityServer.Common.Validators
                 (user.Email.ToLower().EndsWith("ru")))
 
             {
-                errors.Add(new IdentityError
-                {
-                    Code = "Incorrect Email Domen",
-                    Description = "This domain is in the spam database. Choose another email service"
-                });
+                AddErrorsToResult("Incorrect Email Domen",
+                    "This domain is in the spam database. Choose another email service");
             }
-            if (Regex.IsMatch(user.Email, pattern, RegexOptions.IgnoreCase))
+            if (!Regex.IsMatch(user.Email, pattern, RegexOptions.IgnoreCase))
             {
-                errors.Add(new IdentityError
-                {
-                    Code = "Incorrect format Email",
-                    Description = "Incorrect format email adress"
-                });
+                AddErrorsToResult("Incorrect format Email",
+                    "Incorrect format email adress");
             }
-            if (user.UserName.Contains("admin"))
+        }
+
+        private void AddErrorsToResult(string code, string description)
+        {
+            errors.Add(new IdentityError
             {
-                errors.Add(new IdentityError
-                {
-                    Code = "Incorect user name",
-                    Description = "User nickname must not contain the word 'admin'"
-                });
-            }
-            if (await manager.FindByNameAsync(user.UserName) != null)
-            {
-                errors.Add(new IdentityError
-                {
-                    Code = "Incorect user name",
-                    Description = "This name is already in use"
-                });
-            }
-            if (await manager.FindByLoginAsync(user.UserName, "Incorect user name") != null)
-            {
-                errors.Add(new IdentityError
-                {
-                    Code = "Incorect user name",
-                    Description = "This name is already in use"
-                });
-            }
-            if (user.BirthDay.Year > (DateTime.Now.Year - Constants.MIN_AGE_TO_ACCESS) || 
-                user.BirthDay.Year < (DateTime.Now.Year - Constants.MAX_AGE_TO_ACCESS))
-            {
-                errors.Add(new IdentityError
-                {
-                    Code = "Incorect birthdate",
-                    Description = $"User birthdate must be upper than {DateTime.Now.Year - Constants.MAX_AGE_TO_ACCESS} " +
-                    $"and lower than {DateTime.Now.Year - Constants.MIN_AGE_TO_ACCESS}"
-                });
-            }
-            return await Task.FromResult(errors.Count == 0 ?
-                IdentityResult.Success : IdentityResult.Failed(errors.ToArray()));
+                Code = code,
+                Description = description
+            });
         }
     }
 }
