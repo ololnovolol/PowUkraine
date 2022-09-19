@@ -12,7 +12,7 @@ namespace IdentityServer.Controllers
         RoleManager<IdentityRole> _roleManager;
         UserManager<AppUser> _userManager;
 
-        public RolesController(RoleManager<IdentityRole> roleManager, 
+        public RolesController(RoleManager<IdentityRole> roleManager,
             UserManager<AppUser> userManager)
         {
             _roleManager = roleManager;
