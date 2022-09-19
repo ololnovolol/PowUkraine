@@ -23,11 +23,17 @@ export function signinRedirectCallback() {
   return userManager.signinRedirectCallback()
 }
 
-export function signoutRedirect() {
+export async function signoutRedirect() {
+  let user = await userManager.getUser()
+
   userManager.clearStaleState()
   userManager.removeUser()
-  return userManager.signoutRedirect()
+
+  let id = {'id_token_hint' : user.id_token}
+  return userManager.signoutRedirect(id)
 }
+
+
 
 export function signoutRedirectCallback() {
   userManager.clearStaleState()

@@ -63,6 +63,10 @@ namespace IdentityServer.Controllers
                 {
                     return Redirect(viewModel.ReturnUrl);
                 }
+                else
+                {
+                    return BadRequest();
+                }
             }
 
             ModelState.AddModelError(string.Empty, "Incorrect email (or) password");
@@ -84,7 +88,7 @@ namespace IdentityServer.Controllers
                 return View(viewModel);
             }
 
-            if (viewModel.AreeAllStatements)
+            if (!viewModel.AreeAllStatements)
             {
                 ModelState.AddModelError(String.Empty, "You must agree all statements");
                 return View(viewModel);

@@ -10,6 +10,7 @@ namespace IdentityServer.Extentions
 {
     public static class LoggerManager
     {
+        [Obsolete]
         public static IHost SetupLogger(this IHost host)
         {
             using (var scope = host.Services.CreateScope())
@@ -18,7 +19,15 @@ namespace IdentityServer.Extentions
                 try
                 {
                     var context = serviceProvider.GetRequiredService<AuthorizationDbContext>();
-                    DbInitializer.Initialize(context, serviceProvider);
+                    DbInitializer.Initialize(context);
+
+                    var environment = serviceProvider.GetRequiredService<IHostingEnvironment>();
+
+                    if (!environment.IsDevelopment())
+                    {
+                        context = serviceProvider.GetRequiredService<AuthorizationDbContext>();
+                        DbInitializer.Initialize(context);
+                    }
                 }
                 catch (Exception exception)
                 {
@@ -42,7 +51,7 @@ namespace IdentityServer.Extentions
                 .MinimumLevel.Override("System", LogEventLevel.Warning)
                 .MinimumLevel.Override("Microsoft.AspNetCore.Authentication", LogEventLevel.Information)
                 .Enrich.FromLogContext()
-                .WriteTo.File("Pow_Identity_WebLog.txt", rollingInterval:
+                .WriteTo.File("./LogData/Pow_Identity_WebLog.txt", rollingInterval:
                     RollingInterval.Day)
                 .CreateLogger();
         }

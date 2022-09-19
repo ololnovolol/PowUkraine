@@ -1,4 +1,5 @@
-﻿using IdentityServer.Data;
+﻿using IdentityServer.Common.Validators;
+using IdentityServer.Data;
 using IdentityServer.Models;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.Extensions.DependencyInjection;
@@ -16,8 +17,9 @@ namespace IdentityServer.Extentions
                 config.Password.RequireLowercase = true;
                 config.Password.RequiredLength = 8;
                 config.User.RequireUniqueEmail = true;
+                config.User.AllowedUserNameCharacters = "";
 
-            })
+            })           
            .AddEntityFrameworkStores<AuthorizationDbContext>()
            .AddDefaultTokenProviders();
 
@@ -28,6 +30,9 @@ namespace IdentityServer.Extentions
                 .AddInMemoryApiScopes(Configuration.ApiScopes)
                 .AddInMemoryClients(Configuration.Clients)
                 .AddDeveloperSigningCredential();
+
+
+            services.AddTransient<IUserValidator<AppUser>, CustomUserValidator>();
         }
     }
 }

@@ -53,3 +53,118 @@
 2022-09-18 22:14:59.078 +03:00 [INF] Starting host...
 2022-09-18 22:16:59.123 +03:00 [INF] Starting host...
 2022-09-18 22:19:11.401 +03:00 [INF] Starting host...
+2022-09-18 22:31:41.057 +03:00 [INF] Starting host...
+2022-09-18 22:36:26.226 +03:00 [INF] Starting host...
+2022-09-18 22:46:28.607 +03:00 [INF] Starting host...
+2022-09-18 22:59:53.921 +03:00 [INF] Starting host...
+2022-09-18 23:04:33.895 +03:00 [INF] Starting host...
+2022-09-18 23:39:03.072 +03:00 [INF] Starting host...
+2022-09-18 23:39:53.247 +03:00 [INF] Starting host...
+2022-09-18 23:39:54.380 +03:00 [FTL] Host terminated unexpectedly.
+System.Exception: An error occured executing the following sql:
+ALTER TABLE [dbo].[Messages] ADD CONSTRAINT [fk_Users_MessagesId_MessagesId] FOREIGN KEY ([UserId]) REFERENCES [dbo].[Users] ([Id])
+The error was Foreign key 'fk_Users_MessagesId_MessagesId' references invalid table 'dbo.Users'.
+Could not create constraint or index. See previous errors.
+
+ ---> Microsoft.Data.SqlClient.SqlException (0x80131904): Foreign key 'fk_Users_MessagesId_MessagesId' references invalid table 'dbo.Users'.
+Could not create constraint or index. See previous errors.
+   at Microsoft.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at Microsoft.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at Microsoft.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   at Microsoft.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   at Microsoft.Data.SqlClient.SqlCommand.RunExecuteNonQueryTds(String methodName, Boolean isAsync, Int32 timeout, Boolean asyncWrite)
+   at Microsoft.Data.SqlClient.SqlCommand.InternalExecuteNonQuery(TaskCompletionSource`1 completion, Boolean sendToPipe, Int32 timeout, Boolean& usedCache, Boolean asyncWrite, Boolean inRetry, String methodName)
+   at Microsoft.Data.SqlClient.SqlCommand.ExecuteNonQuery()
+   at FluentMigrator.Runner.Processors.SqlServer.SqlServerProcessor.ExecuteNonQuery(String sql)
+ClientConnectionId:b22605ab-9830-4d60-be3a-f067f68b6615
+Error Number:1767,State:0,Class:16
+   --- End of inner exception stack trace ---
+   at FluentMigrator.Runner.Processors.ProcessorBase.ReThrowWithSql(Exception ex, String sql)
+   at FluentMigrator.Runner.Processors.SqlServer.SqlServerProcessor.ExecuteNonQuery(String sql)
+   at FluentMigrator.Runner.Processors.SqlServer.SqlServerProcessor.Process(String sql)
+   at FluentMigrator.Runner.Processors.ProcessorBase.Process(CreateForeignKeyExpression expression)
+   at FluentMigrator.Expressions.CreateForeignKeyExpression.ExecuteWith(IMigrationProcessor processor)
+   at FluentMigrator.Runner.MigrationRunner.<>c__DisplayClass80_0.<ExecuteExpressions>b__1()
+   at FluentMigrator.Runner.StopWatch.Time(Action action)
+   at FluentMigrator.Runner.MigrationRunner.ExecuteExpressions(ICollection`1 expressions)
+   at FluentMigrator.Runner.MigrationRunner.ExecuteMigration(IMigration migration, Action`2 getExpressions)
+   at FluentMigrator.Runner.MigrationRunner.ApplyMigrationUp(IMigrationInfo migrationInfo, Boolean useTransaction)
+   at FluentMigrator.Runner.MigrationRunner.MigrateUp(Int64 targetVersion, Boolean useAutomaticTransactionManagement)
+   at FluentMigrator.Runner.MigrationRunner.MigrateUp(Boolean useAutomaticTransactionManagement)
+   at FluentMigrator.Runner.MigrationRunner.MigrateUp()
+   at Pow.WebApi.Extensions.MigrationManager.MigrateDatabase(IHost host) in D:\programming\dotNet\OlegLearning\Sigma_Trainee\PowUkraine\Pow.WebApi\Extensions\MigrationManager.cs:line 20
+   at Pow.WebApi.Program.Main(String[] args) in D:\programming\dotNet\OlegLearning\Sigma_Trainee\PowUkraine\Pow.WebApi\Program.cs:line 20
+2022-09-18 23:40:06.267 +03:00 [INF] Starting host...
+2022-09-18 23:40:07.461 +03:00 [FTL] Host terminated unexpectedly.
+System.Exception: An error occured executing the following sql:
+ALTER TABLE [dbo].[Messages] ADD CONSTRAINT [fk_Users_MessagesId_MessagesId] FOREIGN KEY ([UserId]) REFERENCES [dbo].[Users] ([Id])
+The error was Foreign key 'fk_Users_MessagesId_MessagesId' references invalid table 'dbo.Users'.
+Could not create constraint or index. See previous errors.
+
+ ---> Microsoft.Data.SqlClient.SqlException (0x80131904): Foreign key 'fk_Users_MessagesId_MessagesId' references invalid table 'dbo.Users'.
+Could not create constraint or index. See previous errors.
+   at Microsoft.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at Microsoft.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at Microsoft.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   at Microsoft.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   at Microsoft.Data.SqlClient.SqlCommand.RunExecuteNonQueryTds(String methodName, Boolean isAsync, Int32 timeout, Boolean asyncWrite)
+   at Microsoft.Data.SqlClient.SqlCommand.InternalExecuteNonQuery(TaskCompletionSource`1 completion, Boolean sendToPipe, Int32 timeout, Boolean& usedCache, Boolean asyncWrite, Boolean inRetry, String methodName)
+   at Microsoft.Data.SqlClient.SqlCommand.ExecuteNonQuery()
+   at FluentMigrator.Runner.Processors.SqlServer.SqlServerProcessor.ExecuteNonQuery(String sql)
+ClientConnectionId:46fb4e6f-e1bb-4a5a-8455-cdedf4d4715e
+Error Number:1767,State:0,Class:16
+   --- End of inner exception stack trace ---
+   at FluentMigrator.Runner.Processors.ProcessorBase.ReThrowWithSql(Exception ex, String sql)
+   at FluentMigrator.Runner.Processors.SqlServer.SqlServerProcessor.ExecuteNonQuery(String sql)
+   at FluentMigrator.Runner.Processors.SqlServer.SqlServerProcessor.Process(String sql)
+   at FluentMigrator.Runner.Processors.ProcessorBase.Process(CreateForeignKeyExpression expression)
+   at FluentMigrator.Expressions.CreateForeignKeyExpression.ExecuteWith(IMigrationProcessor processor)
+   at FluentMigrator.Runner.MigrationRunner.<>c__DisplayClass80_0.<ExecuteExpressions>b__1()
+   at FluentMigrator.Runner.StopWatch.Time(Action action)
+   at FluentMigrator.Runner.MigrationRunner.ExecuteExpressions(ICollection`1 expressions)
+   at FluentMigrator.Runner.MigrationRunner.ExecuteMigration(IMigration migration, Action`2 getExpressions)
+   at FluentMigrator.Runner.MigrationRunner.ApplyMigrationUp(IMigrationInfo migrationInfo, Boolean useTransaction)
+   at FluentMigrator.Runner.MigrationRunner.MigrateUp(Int64 targetVersion, Boolean useAutomaticTransactionManagement)
+   at FluentMigrator.Runner.MigrationRunner.MigrateUp(Boolean useAutomaticTransactionManagement)
+   at FluentMigrator.Runner.MigrationRunner.MigrateUp()
+   at Pow.WebApi.Extensions.MigrationManager.MigrateDatabase(IHost host) in D:\programming\dotNet\OlegLearning\Sigma_Trainee\PowUkraine\Pow.WebApi\Extensions\MigrationManager.cs:line 20
+   at Pow.WebApi.Program.Main(String[] args) in D:\programming\dotNet\OlegLearning\Sigma_Trainee\PowUkraine\Pow.WebApi\Program.cs:line 20
+2022-09-18 23:41:30.190 +03:00 [INF] Starting host...
+2022-09-18 23:41:31.300 +03:00 [FTL] Host terminated unexpectedly.
+System.Exception: An error occured executing the following sql:
+ALTER TABLE [dbo].[Messages] ADD CONSTRAINT [fk_Users_MessagesId_MessagesId] FOREIGN KEY ([UserId]) REFERENCES [dbo].[Users] ([Id])
+The error was Foreign key 'fk_Users_MessagesId_MessagesId' references invalid table 'dbo.Users'.
+Could not create constraint or index. See previous errors.
+
+ ---> Microsoft.Data.SqlClient.SqlException (0x80131904): Foreign key 'fk_Users_MessagesId_MessagesId' references invalid table 'dbo.Users'.
+Could not create constraint or index. See previous errors.
+   at Microsoft.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at Microsoft.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at Microsoft.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   at Microsoft.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   at Microsoft.Data.SqlClient.SqlCommand.RunExecuteNonQueryTds(String methodName, Boolean isAsync, Int32 timeout, Boolean asyncWrite)
+   at Microsoft.Data.SqlClient.SqlCommand.InternalExecuteNonQuery(TaskCompletionSource`1 completion, Boolean sendToPipe, Int32 timeout, Boolean& usedCache, Boolean asyncWrite, Boolean inRetry, String methodName)
+   at Microsoft.Data.SqlClient.SqlCommand.ExecuteNonQuery()
+   at FluentMigrator.Runner.Processors.SqlServer.SqlServerProcessor.ExecuteNonQuery(String sql)
+ClientConnectionId:2a292e2f-ac83-40f8-9fa0-2e7a720119d4
+Error Number:1767,State:0,Class:16
+   --- End of inner exception stack trace ---
+   at FluentMigrator.Runner.Processors.ProcessorBase.ReThrowWithSql(Exception ex, String sql)
+   at FluentMigrator.Runner.Processors.SqlServer.SqlServerProcessor.ExecuteNonQuery(String sql)
+   at FluentMigrator.Runner.Processors.SqlServer.SqlServerProcessor.Process(String sql)
+   at FluentMigrator.Runner.Processors.ProcessorBase.Process(CreateForeignKeyExpression expression)
+   at FluentMigrator.Expressions.CreateForeignKeyExpression.ExecuteWith(IMigrationProcessor processor)
+   at FluentMigrator.Runner.MigrationRunner.<>c__DisplayClass80_0.<ExecuteExpressions>b__1()
+   at FluentMigrator.Runner.StopWatch.Time(Action action)
+   at FluentMigrator.Runner.MigrationRunner.ExecuteExpressions(ICollection`1 expressions)
+   at FluentMigrator.Runner.MigrationRunner.ExecuteMigration(IMigration migration, Action`2 getExpressions)
+   at FluentMigrator.Runner.MigrationRunner.ApplyMigrationUp(IMigrationInfo migrationInfo, Boolean useTransaction)
+   at FluentMigrator.Runner.MigrationRunner.MigrateUp(Int64 targetVersion, Boolean useAutomaticTransactionManagement)
+   at FluentMigrator.Runner.MigrationRunner.MigrateUp(Boolean useAutomaticTransactionManagement)
+   at FluentMigrator.Runner.MigrationRunner.MigrateUp()
+   at Pow.WebApi.Extensions.MigrationManager.MigrateDatabase(IHost host) in D:\programming\dotNet\OlegLearning\Sigma_Trainee\PowUkraine\Pow.WebApi\Extensions\MigrationManager.cs:line 20
+   at Pow.WebApi.Program.Main(String[] args) in D:\programming\dotNet\OlegLearning\Sigma_Trainee\PowUkraine\Pow.WebApi\Program.cs:line 20
+2022-09-18 23:47:00.306 +03:00 [INF] Starting host...
+2022-09-18 23:49:19.803 +03:00 [INF] Starting host...
+2022-09-18 23:52:22.623 +03:00 [INF] Starting host...
+2022-09-18 23:59:38.780 +03:00 [INF] Starting host...
