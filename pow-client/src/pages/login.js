@@ -11,18 +11,7 @@ function Login() {
   }
 
   return (
-    (user) ?
-      (<Redirect to={'/'} />)
-      :
-      (
-        <div>
-          <h1>Hello!</h1>
-          <p>A demo of using React and Identity Server 4 to authenticate a user via OpenID Connect to gain access to a web API</p>
-          <p>Start by signing in.</p>
-
-          <button onClick={() => login()}>Login</button>
-        </div>
-      )
+   login()
   )
 }
 

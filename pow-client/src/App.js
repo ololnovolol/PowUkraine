@@ -9,6 +9,8 @@ import store from './store';
 import userManager, { loadUserFromStorage } from './services/userService'
 import AuthProvider from './providers/authProvider'
 import PrivateRoute from './utils/protectedRoute'
+import NavState from './context/navState';
+import MainMenu from './components/mainMenu'
 
 function App() {
 
@@ -18,18 +20,23 @@ function App() {
   }, [])
 
   return (
-    <Provider store={store}>
-      <AuthProvider userManager={userManager} store={store}>
-        <Router>
-          <Switch>
-            <Route path="/login" component={Login} />
-            <Route path="/signout-oidc" component={SignoutOidc} />
-            <Route path="/signin-oidc" component={SigninOidc} />
-            <PrivateRoute exact path="/" component={Home} />
-          </Switch>
-        </Router>
-      </AuthProvider>
-    </Provider>
+    <NavState>  
+      <Provider store={store}>            
+        <AuthProvider userManager={userManager} store={store}>
+          <Router>
+            <Switch>
+           
+                <Route path="/login" component={Login} />
+                <Route path="/signout-oidc" component={SignoutOidc} />
+                <Route path="/signin-oidc" component={SigninOidc} />
+                <PrivateRoute exact path="/" component={Home} />
+
+                 <MainMenu />     
+            </Switch>
+          </Router>
+        </AuthProvider>   
+      </Provider>
+    </NavState>
   );
 }
 

@@ -3,7 +3,6 @@ import { signoutRedirect } from '../services/userService'
 import { useSelector } from 'react-redux'
 import * as apiService from '../services/apiService'
 import { getFromApi_User } from '../services/apiService'
-import { getFromApi_Admin } from '../services/apiService'
 import { prettifyJson } from '../utils/jsonUtils'
 
 function Home() {
@@ -29,7 +28,7 @@ function Home() {
       <h1>Home</h1>
       <p>Hello, {user.profile.given_name}.</p>
 
-      <p>💡 <strong>Tip: </strong><em> ............. </em></p>
+
 
       <button className="button button-outline" onClick={() => getAllAdmin()}>GetAll_Admin_api</button>
       <button className="button button-outline" onClick={() => getAllUser()}>GetAll_User_api</button>
