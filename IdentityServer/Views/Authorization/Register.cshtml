@@ -3,6 +3,8 @@
     ViewData["Title"] = "Registration";
 }
 
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
 <section class="vh-100">
     <div class="mask d-flex align-items-center h-100 gradient-custom-3">
         <div class="container h-100">
@@ -30,13 +32,15 @@
 
                                 <div class="form-outline mb-4">
                                     <label asp-for="Password" class="form-label">Password</label>
-                                    <input asp-for="Password" type="password"  class="form-control  form-control-lg" placeholder="Password" />
+                                    <input asp-for="Password" type="password" id="password" class="form-control  form-control-lg" placeholder="Password" />
+                                    <span class="fa fa-eye" aria-hidden="true" style="float: right; position: relative; top: -54px;" id="#eye1" onclick="toggle('password')"></span>
                                     <span asp-validation-for="Password" class="text-danger"></span>
                                 </div>
 
                                 <div class="form-outline mb-4">
-                                    <label asp-for="ConfirmPassword" class="form-label"></label>
-                                    <input asp-for="ConfirmPassword" type="password" class="form-control  form-control-lg" placeholder="Confirm password" />
+                                    <label asp-for="ConfirmPassword" class="form-label"></label>      
+                                    <input asp-for="ConfirmPassword" type="password" id="confirmPassword" class="form-control  form-control-lg" placeholder="Confirm password" />
+                                    <span class="fa fa-eye" aria-hidden="true" style="float: right; position: relative; top: -54px;" id="#eye2" onclick="toggleConfirm('confirmPassword')"></span>
                                     <span asp-validation-for="ConfirmPassword" class="text-danger"></span>
                                 </div>
 
@@ -60,7 +64,7 @@
                                 <div class="form-outline mb-4">
                                     <label class="form-label">Have already an account? Login: </label>
                                     <a asp-action="Login" asp-controller="Authorization" asp-route-returnUrl="@Model.ReturnUrl" class="w-100 btn btn-lg btn-success" tabindex="-1" role="button" aria-disabled="true"
-                                       style="background-color: #88A87D; font-weight: 600;" type="button">Login</a>
+                                       style="background-color: #88A87D; font-weight: 600;">Login</a>
                                 </div>
                             </form>
                         </div>
@@ -74,3 +78,34 @@
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.17.0/jquery.validate.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validation-unobtrusive/3.2.11/jquery.validate.unobtrusive.min.js"></script>
+
+<script>
+    var state = false;
+
+    function toggle(name) {
+        if (state) {
+            document.getElementById(name).setAttribute("type", name);
+            state = false;
+        }
+        else {
+            document.getElementById(name).setAttribute("type", "text");
+            state = true;
+        }
+    }
+
+</script>
+
+<script>
+    var stateConfirm = false;
+
+    function toggleConfirm(name) {
+        if (stateConfirm) {
+            document.getElementById(name).setAttribute("type", "password");
+            stateConfirm = false;
+        }
+        else {
+            document.getElementById(name).setAttribute("type", "text");
+            stateConfirm = true;
+        }
+    }
+</script>

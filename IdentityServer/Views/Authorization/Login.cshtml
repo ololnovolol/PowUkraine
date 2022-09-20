@@ -4,7 +4,6 @@
 @model IdentityServer.Models.LoginViewModel
 
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
 
 <section class="vh-100">
     <div class="mask d-flex align-items-center h-100 gradient-custom-3">
@@ -27,12 +26,13 @@
                                         <input asp-for="Email" type="email" class="form-control" placeholder="Email"/>
                                         <span asp-validation-for="Email" class="text-danger"></span>
                                     </div>
-                                    <div class="form-group mb-4">
+                                    <div class="form-outline mb-4"> 
                                         <label asp-for="Password" class="form-label">Password</label>
-                                        <input asp-for="Password" type="password" id="password" name="password" class="form-control" data-toggle="password" placeholder=" Password" />
+                                        <input asp-for="Password" type="password" id="password" class="form-control" placeholder="Password" /> 
+                                        <span class="fa fa-eye" aria-hidden="true" style="float: right; position: relative; top: -46px;" id="#eye" onclick="toggle('password')"></span>
                                         <span asp-validation-for="Password" class="text-danger"></span>
                                     </div>
-                                    <div class="form-group mb-5">
+                                    <div class="form-group mb-4">
                                         <input asp-for="RememberMe"/>
                                         <label asp-for="RememberMe"></label>
                                     </div>
@@ -42,7 +42,7 @@
                                     <div class="form-group">
                                         <label class="form-label">Not registered yet?</label>
                                         <a asp-action="Register" asp-controller="Authorization" asp-route-returnUrl="@Model.ReturnUrl" class="w-100 btn btn-lg btn-success" tabindex="-1" role="button"
-                                           style="color: #FAAA0A;background-color: #88A87D; color;     " type="button">Register</a>
+                                           style="color: #FAAA0A;background-color: #88A87D;">Register</a>
                                     </div>
                                 </div>
                           
@@ -74,7 +74,21 @@
     </div>
 </section>
 
-
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.17.0/jquery.validate.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validation-unobtrusive/3.2.11/jquery.validate.unobtrusive.min.js"></script>
+
+<script>
+    var state = false;
+
+    function toggle(name) {
+        if (state) {
+            document.getElementById(name).setAttribute("type", name);
+            state = false;
+        }
+        else {
+            document.getElementById(name).setAttribute("type", "text");
+            state = true;
+        }
+    }
+</script>
