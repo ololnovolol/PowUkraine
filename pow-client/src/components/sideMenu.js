@@ -66,8 +66,8 @@ SideMenu.propTypes = {
 SideMenu.defaultProps = {
   children: (
     <>
-      <MenuLink href="/home">Mark the enemy</MenuLink>
-      <MenuLink href="/messages">Important message</MenuLink>
+      <MenuLink href="/mark">Mark the enemy</MenuLink>
+      <MenuLink href="/message">Important message</MenuLink>
   
 
       <MenuLink href=""></MenuLink>
@@ -77,7 +77,7 @@ SideMenu.defaultProps = {
       <MenuLink href=""></MenuLink>
 
 
-      <MenuLink href="/adminPanel">Admin panel</MenuLink>
+      <MenuLink href="/admin">Admin panel</MenuLink>
       <MenuLink href="/userLobby">Lobby</MenuLink>
       <MenuLink href="/login">Aitorization</MenuLink>
       <MenuLink href="/about">About</MenuLink>

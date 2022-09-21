@@ -1,9 +1,14 @@
 import React, { useEffect } from 'react';
+import './App.css';
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom'
 import SigninOidc from './pages/auth/signin-oidc'
 import SignoutOidc from './pages/auth/signout-oidc'
-import Home from './pages/home'
-import Login from './pages/login'
+import Lobby from './pages/lobby';
+import Mark from './pages/mark';
+import Login from './pages/login';
+import About from './pages/about';
+import Message from './pages/messages';
+import Admin from './pages/admin';
 import { Provider } from 'react-redux';
 import store from './store';
 import userManager, { loadUserFromStorage } from './services/userService'
@@ -24,14 +29,20 @@ function App() {
       <Provider store={store}>            
         <AuthProvider userManager={userManager} store={store}>
           <Router>
+            <MainMenu />  
             <Switch>
            
+                <Route path="/mark" exact component={Mark} />
+                <Route path="/message" component={Message} />
                 <Route path="/login" component={Login} />
                 <Route path="/signout-oidc" component={SignoutOidc} />
                 <Route path="/signin-oidc" component={SigninOidc} />
-                <PrivateRoute exact path="/" component={Home} />
+                <Route path="/about" component={About} />
 
-                 <MainMenu />     
+
+                <PrivateRoute exact path="/lobby" component={Lobby} />
+                <PrivateRoute exact path="/admin" component={Admin} />
+               
             </Switch>
           </Router>
         </AuthProvider>   

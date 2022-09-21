@@ -5,7 +5,7 @@ import * as apiService from '../services/apiService'
 import { getFromApi_User } from '../services/apiService'
 import { prettifyJson } from '../utils/jsonUtils'
 
-function Home() {
+function Lobby() {
   const user = useSelector(state => state.auth.user)
   const [doughnutData, setDoughnutData] = useState(null)
 
@@ -25,7 +25,7 @@ function Home() {
 
   return (
     <div>
-      <h1>Home</h1>
+      <h1>Lobby</h1>
       <p>Hello, {user.profile.given_name}.</p>
 
 
@@ -44,4 +44,4 @@ function Home() {
   )
 }
 
-export default Home
+export default Lobby
