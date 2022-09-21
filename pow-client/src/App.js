@@ -14,8 +14,8 @@ import store from './store';
 import userManager, { loadUserFromStorage } from './services/userService'
 import AuthProvider from './providers/authProvider'
 import PrivateRoute from './utils/protectedRoute'
-import NavState from './context/navState';
 import Navbar from './components/navbar/navbar';
+
 
 function App() {
 
@@ -25,13 +25,11 @@ function App() {
   }, [])
 
   return (
-    <NavState>  
       <Provider store={store}>            
         <AuthProvider userManager={userManager} store={store}>
-          <Router>
-          <Navbar /> 
-            <Switch>
-           
+          <Router>          
+            <Navbar />          
+            <Switch>      
                 <Route path="/" exact component={Mark} />
                 <Route path="/message" component={Message} />
                 <Route path="/login" component={Login} />
@@ -46,7 +44,6 @@ function App() {
           </Router>
         </AuthProvider>   
       </Provider>
-    </NavState>
   );
 }
 

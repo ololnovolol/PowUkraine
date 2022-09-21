@@ -1,10 +1,14 @@
 import React from 'react';
+import MapComponent from '../components/maps/mapGeoJson';
 
 function Mark() {
   return (
-    <div className='mark'>
-      <h1>Mark</h1>
+    <>
+    <div >
+       <MapComponent />
     </div>
+    </>
+
   );
 }
 

@@ -7,7 +7,7 @@ import SubMenu from './subMenu';
 import { IconContext } from 'react-icons/lib';
 
 const Nav = styled.div`
-  background: transparent;
+  background: #3A5431;
   height: 80px;
   display: flex;
   justify-content: flex-start;
@@ -29,7 +29,7 @@ const SidebarNav = styled.nav`
   height: 100vh;
   display: flex;
   justify-content: center;
-  position: fixed;
+  position: absolute;
   top: 0;
   left: ${({ sidebar }) => (sidebar ? '0' : '-100%')};
   transition: 350ms;

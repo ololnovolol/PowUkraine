@@ -1,0 +1,8 @@
+.button-widget {
+    background: #F0A30A;
+    position: fixed;
+    top: 2rem;
+    right: 3rem;
+    border-radius: 4px;
+    z-index: 1000;
+  }
