@@ -1,38 +1,131 @@
 import React from 'react';
 import * as FaIcons from 'react-icons/fa';
-import * as AiIcons from 'react-icons/ai';
+import * as MdIcons from 'react-icons/md';
 import * as IoIcons from 'react-icons/io';
+import * as RiIcons from 'react-icons/ri';
+import * as TiIcons from 'react-icons/ti';
 
 
 export const SidebarData = [
   {
     title: 'Mark the enemy',
-    path: '/mark',
-    icon: <AiIcons.AiFillHome />,
+    path: '/',
+    icon: <FaIcons.FaMapMarkerAlt />,
     cName: 'nav-text'
   },
   {
     title: 'Important message',
     path: '/message',
-    icon: <IoIcons.IoIosPaper />,
+    icon: <RiIcons.RiMessage3Line />,
+
+    iconClosed: <MdIcons.MdOutlineKeyboardArrowDown />,
+    iconOpened: <MdIcons.MdKeyboardArrowUp />,
+
+    subNav: [
+      {
+        title: 'Message 1',
+        path: '/message/message1',
+        icon: <IoIcons.IoIosPaper />
+      },
+      {
+        title: 'Message 2',
+        path: '/message/message2',
+        icon: <IoIcons.IoIosPaper />
+      }
+    ]
+  },
+
+  {
+    title: '',
+    path: '',
+    icon: '',
     cName: 'nav-text'
   },
+  {
+    title: '',
+    path: '',
+    icon: '',
+    cName: 'nav-text'
+  },
+  {
+    title: '',
+    path: '',
+    icon: '',
+    cName: 'nav-text'
+  },
+  {
+    title: '',
+    path: '',
+    icon: '',
+    cName: 'nav-text'
+  },
+  {
+    title: '',
+    path: '',
+    icon: '',
+    cName: 'nav-text'
+  },
+  {
+    title: '',
+    path: '',
+    icon: '',
+    cName: 'nav-text'
+  },
+  
   {
     title: 'Admin panel',
-    path: '/login',
-    icon: <FaIcons.FaCartPlus />,
-    cName: 'nav-text'
-  },
-  {
-    title: 'Aitorization',
-    path: '/team',
-    icon: <IoIcons.IoMdPeople />,
-    cName: 'nav-text'
+    path: '/admin',
+    icon: <RiIcons.RiAdminLine />,  
+    iconClosed: <MdIcons.MdOutlineKeyboardArrowDown />,
+    iconOpened: <MdIcons.MdKeyboardArrowUp />,
+
+    subNav: [
+        {
+            title: 'Accounts',
+            path: '/ManageAccounts',
+            icon: <IoIcons.IoMdPeople />,
+        },
+        {
+            title: 'All marks',
+            path: '/allmarks',
+            icon: <MdIcons.MdOutlineBookmarks />,
+        },
+        {
+            title: 'All messages',
+            path: '/allmarks',
+            icon: <TiIcons.TiMessages />,
+        }
+    ],
   },
   {
     title: 'Lobby',
     path: '/userLobby',
-    icon: <FaIcons.FaEnvelopeOpenText />,
+    icon: <RiIcons.RiUserSettingsLine />,  
+    iconClosed: <MdIcons.MdOutlineKeyboardArrowDown />,
+    iconOpened: <MdIcons.MdKeyboardArrowUp />,
+
+    subNav: [
+        {
+            title: 'All Marks',
+            path: '/allmarks',
+            icon: <MdIcons.MdBookmarks />,
+        },
+        {
+            title: 'Manage Account',
+            path: '/manageAccount',
+            icon: <RiIcons.RiSettings4Line />,
+        },
+        {
+          title: 'Logout',
+          path: '/logout',
+          icon: <RiIcons.RiLogoutBoxRLine />,
+      }
+    ],
+  },
+  {
+    title: 'Authorization',
+    path: '/login',
+    icon: <RiIcons.RiOpenArmLine />,
     cName: 'nav-text'
   },
   {
@@ -40,5 +133,5 @@ export const SidebarData = [
     path: '/about',
     icon: <IoIcons.IoMdHelpCircle />,
     cName: 'nav-text'
-  }
+  },
 ];

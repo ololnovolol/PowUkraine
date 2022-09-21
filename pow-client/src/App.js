@@ -15,7 +15,6 @@ import userManager, { loadUserFromStorage } from './services/userService'
 import AuthProvider from './providers/authProvider'
 import PrivateRoute from './utils/protectedRoute'
 import NavState from './context/navState';
-import MainMenu from './components/mainMenu'
 import Navbar from './components/navbar/navbar';
 
 function App() {
@@ -33,7 +32,7 @@ function App() {
           <Navbar /> 
             <Switch>
            
-                <Route path="/mark" exact component={Mark} />
+                <Route path="/" exact component={Mark} />
                 <Route path="/message" component={Message} />
                 <Route path="/login" component={Login} />
                 <Route path="/signout-oidc" component={SignoutOidc} />
