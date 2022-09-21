@@ -16,6 +16,7 @@ import AuthProvider from './providers/authProvider'
 import PrivateRoute from './utils/protectedRoute'
 import NavState from './context/navState';
 import MainMenu from './components/mainMenu'
+import Navbar from './components/navbar/navbar';
 
 function App() {
 
@@ -29,7 +30,7 @@ function App() {
       <Provider store={store}>            
         <AuthProvider userManager={userManager} store={store}>
           <Router>
-            <MainMenu />  
+          <Navbar /> 
             <Switch>
            
                 <Route path="/mark" exact component={Mark} />
@@ -39,8 +40,7 @@ function App() {
                 <Route path="/signin-oidc" component={SigninOidc} />
                 <Route path="/about" component={About} />
 
-
-                <PrivateRoute exact path="/lobby" component={Lobby} />
+                <PrivateRoute exact path="/userLobby" component={Lobby} />
                 <PrivateRoute exact path="/admin" component={Admin} />
                
             </Switch>

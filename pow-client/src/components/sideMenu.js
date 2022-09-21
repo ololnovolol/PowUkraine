@@ -2,9 +2,6 @@ import React, { useContext, useEffect } from 'react';
 import PropTypes from 'prop-types';
 import styled, { css } from 'styled-components';
 import { MenuContext } from '../context/navState';
-import Login from '../pages/login'
-import MainMenu from './mainMenu';
-
 
 const Menu = styled.nav`
   position: absolute;
