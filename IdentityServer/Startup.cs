@@ -21,6 +21,7 @@ namespace IdentityServer
             AppConfiguration = appConfiguration;
         }
 
+        //// TODO Remove empty lines everywhere where they are not needed 
         public void ConfigureServices(IServiceCollection services)
         {
 
@@ -58,6 +59,6 @@ namespace IdentityServer
             RolesConfigurationService.CreateUserRoles(services, AppConfiguration).Wait();
         }
 
-
+        //// TODO Remove empty lines everywhere where they are not needed 
     }
 }

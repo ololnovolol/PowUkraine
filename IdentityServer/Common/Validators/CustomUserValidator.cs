@@ -7,6 +7,7 @@ using System.Threading.Tasks;
 
 namespace IdentityServer.Common.Validators
 {
+    //// TODO Move error messages to resources
     public class CustomUserValidator : IUserValidator<AppUser>
     {
         private List<IdentityError> errors;
@@ -82,7 +83,7 @@ namespace IdentityServer.Common.Validators
             {
                 Code = code,
                 Description = description
-            });
+            });5
         }
     }
 }
