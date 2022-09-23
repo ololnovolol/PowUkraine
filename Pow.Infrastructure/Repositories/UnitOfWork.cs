@@ -6,12 +6,15 @@ namespace Pow.Infrastructure.Repositories
     {
         public UnitOfWork(IMarkRepository markRepository, IMessageRepository messageRepository, IAttachmentRepository attachmentRepository)
         {
-            Messages = messageRepository;
-            Marks = markRepository;
-            Attachments = attachmentRepository;
+            this.Messages = messageRepository;
+            this.Marks = markRepository;
+            this.Attachments = attachmentRepository;
         }
+
         public IMessageRepository Messages { get; }
+
         public IMarkRepository Marks { get; }
+
         public IAttachmentRepository Attachments { get; }
     }
 }

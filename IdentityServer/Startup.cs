@@ -1,3 +1,4 @@
+using System;
 using IdentityServer.Data;
 using IdentityServer.Extentions;
 using IdentityServer.Services;
@@ -8,7 +9,7 @@ using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
-using System;
+
 
 namespace IdentityServer
 {

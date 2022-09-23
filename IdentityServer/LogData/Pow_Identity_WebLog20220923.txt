@@ -1,0 +1,18 @@
+2022-09-23 18:04:01.631 +03:00 [INF] Starting host...
+2022-09-23 18:04:04.677 +03:00 [INF] Starting IdentityServer4 version 4.1.2+997a6cdd643e46cd5762b710c4ddc43574cbec2e
+2022-09-23 18:04:04.683 +03:00 [INF] You are using the in-memory version of the persisted grant store. This will store consent decisions, authorization codes, refresh and reference tokens in memory only. If you are using any of those features in production, you want to switch to a different store implementation.
+2022-09-23 18:04:04.686 +03:00 [INF] Using the default authentication scheme Identity.Application for IdentityServer
+2022-09-23 18:04:04.686 +03:00 [DBG] Using Identity.Application as default ASP.NET Core scheme for authentication
+2022-09-23 18:04:04.686 +03:00 [DBG] Using Identity.External as default ASP.NET Core scheme for sign-in
+2022-09-23 18:04:04.686 +03:00 [DBG] Using Identity.External as default ASP.NET Core scheme for sign-out
+2022-09-23 18:04:04.686 +03:00 [DBG] Using Identity.Application as default ASP.NET Core scheme for challenge
+2022-09-23 18:04:04.686 +03:00 [DBG] Using Identity.Application as default ASP.NET Core scheme for forbid
+2022-09-23 18:07:17.413 +03:00 [INF] Starting host...
+2022-09-23 18:07:18.308 +03:00 [INF] Starting IdentityServer4 version 4.1.2+997a6cdd643e46cd5762b710c4ddc43574cbec2e
+2022-09-23 18:07:18.314 +03:00 [INF] You are using the in-memory version of the persisted grant store. This will store consent decisions, authorization codes, refresh and reference tokens in memory only. If you are using any of those features in production, you want to switch to a different store implementation.
+2022-09-23 18:07:18.316 +03:00 [INF] Using the default authentication scheme Identity.Application for IdentityServer
+2022-09-23 18:07:18.316 +03:00 [DBG] Using Identity.Application as default ASP.NET Core scheme for authentication
+2022-09-23 18:07:18.316 +03:00 [DBG] Using Identity.External as default ASP.NET Core scheme for sign-in
+2022-09-23 18:07:18.316 +03:00 [DBG] Using Identity.External as default ASP.NET Core scheme for sign-out
+2022-09-23 18:07:18.316 +03:00 [DBG] Using Identity.Application as default ASP.NET Core scheme for challenge
+2022-09-23 18:07:18.316 +03:00 [DBG] Using Identity.Application as default ASP.NET Core scheme for forbid

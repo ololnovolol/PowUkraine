@@ -1,13 +1,11 @@
 ﻿using System;
-using Pow.Domain.Base;
+using System.Collections.Generic;
 
-namespace Pow.Domain
+namespace Pow.WebApi.Models
 {
-    public class Message : BaseModel
+    public class MessageModel : BaseModel
     {
         public string Description { get; set; }
-
-        public DateTime CreatedDate { get; set; }
 
         public DateTime EventDate { get; set; }
 
@@ -16,5 +14,9 @@ namespace Pow.Domain
         public string Email { get; set; }
 
         public Guid? UserId { get; set; }
-     }
+
+        public ICollection<AttachmentModel> Attachments { get; set; }
+
+        public MarkModel Mark { get; set; }
+    }
 }

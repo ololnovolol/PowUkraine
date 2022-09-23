@@ -1,9 +1,9 @@
 ﻿using System;
-using Pow.Domain.Base;
+using System.Collections.Generic;
 
-namespace Pow.Domain
+namespace Pow.Application.Models
 {
-    public class Message : BaseModel
+    public class MessageBL : BaseModelBL
     {
         public string Description { get; set; }
 
@@ -16,5 +16,9 @@ namespace Pow.Domain
         public string Email { get; set; }
 
         public Guid? UserId { get; set; }
-     }
+
+        public ICollection<AttachmentBL> Attachments { get; set; }
+
+        public MarkBL Mark { get; set; }
+    }
 }

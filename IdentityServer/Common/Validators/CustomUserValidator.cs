@@ -83,7 +83,7 @@ namespace IdentityServer.Common.Validators
             {
                 Code = code,
                 Description = description
-            });5
+            });
         }
     }
 }

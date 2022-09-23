@@ -1,12 +1,13 @@
-﻿using Dapper;
-using Microsoft.Extensions.Configuration;
-using Pow.Domain;
-using Pow.Infrastructure.Repositories.Interfaces;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Data.SqlClient;
 using System.Linq;
 using System.Threading.Tasks;
+using Dapper;
+using Microsoft.Extensions.Configuration;
+using Pow.Domain;
+using Pow.Infrastructure.Repositories.Interfaces;
+
 
 namespace Pow.Infrastructure.Repositories
 {
