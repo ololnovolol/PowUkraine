@@ -1,4 +1,4 @@
-﻿@model IdentityServer.Models.RegisterViewModel
+﻿@model RegisterViewModel
 @{
     ViewData["Title"] = "Registration";
 }
@@ -26,34 +26,37 @@
 
                                 <div class="form-outline mb-4">
                                     <label asp-for="Email" class="form-label"></label>
-                                    <input asp-for="Email" type="email"  class="form-control  form-control-lg" placeholder="Email" />
+                                    <input asp-for="Email" type="email" class="form-control  form-control-lg" placeholder="Email"/>
                                     <span asp-validation-for="Email" class="text-danger"></span>
                                 </div>
 
                                 <div class="form-outline mb-4">
                                     <label asp-for="Password" class="form-label">Password</label>
-                                    <input asp-for="Password" type="password" id="password" class="form-control  form-control-lg" placeholder="Password" />
+                                    <input asp-for="Password" type="password" id="password" class="form-control  form-control-lg" placeholder="Password"/>
                                     <span class="fa fa-eye" aria-hidden="true" style="float: right; position: relative; top: -54px;" id="#eye1" onclick="toggle('password')"></span>
                                     <span asp-validation-for="Password" class="text-danger"></span>
                                 </div>
 
                                 <div class="form-outline mb-4">
-                                    <label asp-for="ConfirmPassword" class="form-label"></label>      
-                                    <input asp-for="ConfirmPassword" type="password" id="confirmPassword" class="form-control  form-control-lg" placeholder="Confirm password" />
+                                    <label asp-for="ConfirmPassword" class="form-label"></label>
+                                    <input asp-for="ConfirmPassword" type="password" id="confirmPassword" class="form-control  form-control-lg" placeholder="Confirm password"/>
                                     <span class="fa fa-eye" aria-hidden="true" style="float: right; position: relative; top: -54px;" id="#eye2" onclick="toggleConfirm('confirmPassword')"></span>
                                     <span asp-validation-for="ConfirmPassword" class="text-danger"></span>
                                 </div>
 
                                 <div class="form-outline mb-4">
                                     <label asp-for="BirthDay" class="form-label"></label>
-                                    <input asp-for="BirthDay" type="date" class="form-control  form-control-lg" value="@DateTime.Now.ToShortDateString()" />
+                                    <input asp-for="BirthDay" type="date" class="form-control  form-control-lg" value="@DateTime.Now.ToShortDateString()"/>
                                     <span asp-validation-for="BirthDay" class="text-danger"></span>
                                 </div>
 
                                 <div class="form-outline mb-5">
-                                    <input type="checkbox" asp-for="AreeAllStatements"/>
+                                    <input type="checkbox" asp-for="AgreeAllStatements"/>
                                     <label class="form-check-label">
-                                        I agree all statements in <a href="#!" class="text-body"><u>Terms of service</u></a>
+                                        I agree all statements in
+                                        <a href="#!" class="text-body">
+                                            <u>Terms of service</u>
+                                        </a>
                                     </label>
                                 </div>
 
@@ -64,7 +67,9 @@
                                 <div class="form-outline mb-4">
                                     <label class="form-label">Have already an account? Login: </label>
                                     <a asp-action="Login" asp-controller="Authorization" asp-route-returnUrl="@Model.ReturnUrl" class="w-100 btn btn-lg btn-success" tabindex="-1" role="button" aria-disabled="true"
-                                       style="background-color: #88A87D; font-weight: 600;">Login</a>
+                                       style="background-color: #88A87D; font-weight: 600;">
+                                        Login
+                                    </a>
                                 </div>
                             </form>
                         </div>

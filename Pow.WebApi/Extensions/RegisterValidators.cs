@@ -10,8 +10,8 @@ namespace Pow.WebApi.Extensions
         public static void AddValidators(this IServiceCollection services)
         {
             services.AddScoped<IValidator<Attachment>, AttachmentValidator>()
-                    .AddScoped<IValidator<Message>, MessageValidator>()
-                    .AddScoped<IValidator<Mark>, MarkValidator>();
+                .AddScoped<IValidator<Message>, MessageValidator>()
+                .AddScoped<IValidator<Mark>, MarkValidator>();
         }
     }
 }

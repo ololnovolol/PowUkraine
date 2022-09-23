@@ -2,7 +2,5 @@
 
 namespace Pow.Infrastructure.Repositories.Interfaces
 {
-    public interface IMarkRepository : IGenericRepository<Mark>
-    {
-    }
+    public interface IMarkRepository : IGenericRepository<Mark> { }
 }

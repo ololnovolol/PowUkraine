@@ -2,7 +2,5 @@
 
 namespace Pow.Infrastructure.Repositories.Interfaces
 {
-    public interface IAttachmentRepository : IGenericRepository<Attachment>
-    {
-    }
+    public interface IAttachmentRepository : IGenericRepository<Attachment> { }
 }

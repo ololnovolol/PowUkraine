@@ -1,6 +1,6 @@
-﻿using Dapper;
+﻿using System.Linq;
+using Dapper;
 using Pow.Infrastructure.Context;
-using System.Linq;
 
 namespace Pow.Infrastructure
 {
@@ -22,8 +22,11 @@ namespace Pow.Infrastructure
             using (var connection = _context.CreateConnection())
             {
                 var records = connection.Query(query, parameters);
+
                 if (!records.Any())
+                {
                     connection.Execute($"CREATE DATABASE {dbName}");
+                }
             }
         }
     }

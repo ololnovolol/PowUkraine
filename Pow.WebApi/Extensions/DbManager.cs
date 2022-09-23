@@ -13,11 +13,14 @@ namespace Pow.WebApi.Extensions
         {
             services.AddSingleton<DapperContext>();
             services.AddSingleton<Database>();
+
             services.AddLogging(c => c.AddFluentMigratorConsole())
-                     .AddFluentMigratorCore()
-                     .ConfigureRunner(c => c.AddSqlServer()
-                     .WithGlobalConnectionString(configuration.GetConnectionString("DbConnection"))
-                     .ScanIn(typeof(DBInitialization).Assembly).For.Migrations());
+                .AddFluentMigratorCore()
+                .ConfigureRunner(
+                    c => c.AddSqlServer()
+                        .WithGlobalConnectionString(configuration.GetConnectionString("DbConnection"))
+                        .ScanIn(typeof(DbInitialization).Assembly)
+                        .For.Migrations());
         }
     }
 }

@@ -1,7 +1,6 @@
-﻿using Microsoft.Data.SqlClient;
+﻿using System.Data;
+using Microsoft.Data.SqlClient;
 using Microsoft.Extensions.Configuration;
-using System.Data;
-
 
 namespace Pow.Infrastructure.Context
 {
@@ -15,7 +14,8 @@ namespace Pow.Infrastructure.Context
         }
 
         public IDbConnection CreateConnection()
-            => new SqlConnection(_configuration.GetConnectionString("DbConnection"));
-
+        {
+            return new SqlConnection(_configuration.GetConnectionString("DbConnection"));
+        }
     }
 }

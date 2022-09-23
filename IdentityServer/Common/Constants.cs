@@ -1,11 +1,9 @@
 ﻿namespace IdentityServer.Common
 {
-
-    /// TODO: Move to .config file. 
+    /// TODO: Move to .config file.
     public static class Constants
     {
-        internal const int MIN_AGE_TO_ACCESS = 16;
-        internal const int MAX_AGE_TO_ACCESS = 150;
-
+        internal const int MinAgeToAccess = 16;
+        internal const int MaxAgeToAccess = 150;
     }
 }

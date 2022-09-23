@@ -1,70 +1,74 @@
-﻿using IdentityModel;
+﻿using System.Collections.Generic;
+using IdentityModel;
 using IdentityServer4;
 using IdentityServer4.Models;
-using System.Collections.Generic;
+using Microsoft.Extensions.Configuration;
 
 namespace IdentityServer
 {
     public static class Configuration
     {
-        public static IEnumerable<ApiScope> ApiScopes =>
-            new List<ApiScope>
-            {
-                new ApiScope("PowWebApi", "Web API")
-            };
-
-        public static IEnumerable<IdentityResource> IdentityResources =>
-            new List<IdentityResource>
+        public static IEnumerable<IdentityResource> IdentityResources
+            => new List<IdentityResource>
             {
                 new IdentityResources.OpenId(),
                 new IdentityResources.Profile(),
                 new IdentityResource("roles", new[] { "role" })
             };
 
-        public static IEnumerable<ApiResource> ApiResources =>
-            new List<ApiResource>
+        public static IEnumerable<ApiScope> ApiScopes(IConfiguration config)
+        {
+            return new List<ApiScope>
             {
-                new ApiResource("PowWebApi", "Web API", new[]
-                    { JwtClaimTypes.Name })
-                {
-                    Scopes = { "PowWebApi" }
-                }
+                new ApiScope(config["clientSecret:c_name"], config["clientSecret:c_Disp_name"])
             };
+        }
 
-        //// TODO Move links and etc to .config file
-        public static IEnumerable<Client> Clients =>
-            new List<Client>
+        public static IEnumerable<ApiResource> ApiResources(IConfiguration config)
+        {
+            return new List<ApiResource>
             {
-                new Client()
+                new ApiResource(
+                    config["clientSecret:c_name"],
+                    config["clientSecret:c_Disp_name"],
+                    new[] { JwtClaimTypes.Name }) { Scopes = { config["clientSecret:c_name"] } }
+            };
+        }
+
+        public static IEnumerable<Client> Clients(IConfiguration config)
+        {
+            return new List<Client>
+            {
+                new Client
                 {
-                    ClientId = "pow-web-app",
+                    ClientId = config["clientSecret:c_id"],
                     ClientName = "Pow Web",
-                    ClientSecrets = { new Secret("palyanitsa_=)".ToSha256())},
+                    ClientSecrets = { new Secret(config["clientSecret:c_id"].ToSha256()) },
                     AllowedGrantTypes = GrantTypes.Code,
                     RequireClientSecret = false, // todo set code
                     RequirePkce = true,
                     RequireConsent = false,
-                    FrontChannelLogoutUri = "https://localhost:3000/signout-oidc", // todo setup with frontend
-                    RedirectUris = {"http://localhost:3000/signin-oidc"}, // todo setup with frontend
+                    FrontChannelLogoutUri = config["clientSecret:c_front_logout_uri"], // todo setup with frontend
+                    RedirectUris = { config["clientSecret:c_redirect_uris"] }, // todo setup with frontend
                     AllowedCorsOrigins =
                     {
-                        "http://localhost:3000" // todo setup with frontend and any other
+                        config["clientSecret:c_cors_origin"] // todo setup with frontend and any other
                     },
                     PostLogoutRedirectUris =
                     {
-                        "http://localhost:3000/signout-callback-oidc" // todo setup with front end
+                        config["clientSecret:c_post_logout"] // todo setup with front end
                     },
                     AllowedScopes =
                     {
                         IdentityServerConstants.StandardScopes.OpenId,
                         IdentityServerConstants.StandardScopes.Profile,
-                        "PowWebApi"
+                        config["clientSecret:c_name"]
                     },
                     AllowOfflineAccess = true,
                     AllowAccessTokensViaBrowser = true,
                     AccessTokenLifetime = 1
                 }
             };
-
+        }
     }
 }

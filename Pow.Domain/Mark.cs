@@ -1,5 +1,5 @@
-﻿using Pow.Domain.Base;
-using System;
+﻿using System;
+using Pow.Domain.Base;
 
 namespace Pow.Domain
 {

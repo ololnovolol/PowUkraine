@@ -1,7 +1,7 @@
-﻿using Microsoft.AspNetCore.Authorization;
+﻿using System;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Pow.WebApi.Controllers.Base;
-using System;
 
 namespace Pow.WebApi.Controllers
 {
@@ -11,7 +11,7 @@ namespace Pow.WebApi.Controllers
         [HttpGet]
         public IActionResult Get()
         {
-            return Ok($"Users_only___User___get method=)");
+            return Ok("Users_only___User___get method=)");
         }
 
         [Authorize(Policy = "AdminAccess")]

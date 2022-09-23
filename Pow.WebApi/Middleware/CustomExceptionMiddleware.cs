@@ -1,14 +1,13 @@
-﻿using FluentValidation;
-using Microsoft.AspNetCore.Http;
-using Pow.Application.Common.Exceptions;
-using System;
+﻿using System;
 using System.Net;
 using System.Text.Json;
 using System.Threading.Tasks;
+using FluentValidation;
+using Microsoft.AspNetCore.Http;
+using Pow.Application.Common.Exceptions;
 
 namespace Pow.WebApi.Middleware
 {
-
     public class CustomExceptionMiddleware
     {
         private readonly RequestDelegate _next;
@@ -30,7 +29,7 @@ namespace Pow.WebApi.Middleware
             }
         }
 
-        private Task HandleExceptionAsync(HttpContext context, Exception exception)
+        private static Task HandleExceptionAsync(HttpContext context, Exception exception)
         {
             var code = HttpStatusCode.InternalServerError;
             var result = string.Empty;
@@ -38,23 +37,22 @@ namespace Pow.WebApi.Middleware
             switch (exception)
             {
                 case ValidationException validationException:
-                    {
-                        ValidationException validation = validationException;
-                        code = HttpStatusCode.BadRequest;
-                        result = JsonSerializer.Serialize(validation.Errors);
+                {
+                    code = HttpStatusCode.BadRequest;
+                    result = JsonSerializer.Serialize(validationException.Errors);
 
-                        break;
-                    }
+                    break;
+                }
                 case NotFoundException notFoundException:
                     code = HttpStatusCode.NotFound;
+
                     break;
             }
-
 
             context.Response.ContentType = "application/json";
             context.Response.StatusCode = (int)code;
 
-            if (result == String.Empty)
+            if (result == string.Empty)
             {
                 result = JsonSerializer.Serialize(new { error = exception.Message });
             }
@@ -63,4 +61,3 @@ namespace Pow.WebApi.Middleware
         }
     }
 }
-

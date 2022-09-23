@@ -1,17 +1,16 @@
 ﻿using System;
+using System.ComponentModel;
 using System.ComponentModel.DataAnnotations;
 
 namespace IdentityServer.Models
 {
     public class RegisterViewModel
     {
-        [Required()]
+        [Required]
         [Display(Name = "User name")]
         public string UserName { get; set; }
 
-        [Required()]
-        [Display(Name = "Email")]
-        public string Email { get; set; }
+        [Required] [Display(Name = "Email")] public string Email { get; set; }
 
         [Required]
         [DataType(DataType.Password)]
@@ -24,13 +23,12 @@ namespace IdentityServer.Models
         [Display(Name = "Repeat your password")]
         public string ConfirmPassword { get; set; }
 
-
         [Display(Name = "Your date of birth")]
-        [System.ComponentModel.Bindable(true)]
+        [Bindable(true)]
         public DateTime BirthDay { get; set; }
 
         [Display(Name = "I agree all statements")]
-        public bool AreeAllStatements { get; set; }
+        public bool AgreeAllStatements { get; set; }
 
         public string ReturnUrl { get; set; }
     }

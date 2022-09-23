@@ -13,18 +13,11 @@ namespace Pow.WebApi.Extensions
             {
                 var databaseService = scope.ServiceProvider.GetRequiredService<Database>();
                 var migrationService = scope.ServiceProvider.GetRequiredService<IMigrationRunner>();
-                try
-                {
-                    databaseService.CreateDatabase("IdentityServer");
-                    migrationService.ListMigrations();
-                    migrationService.MigrateUp();
-                }
-                catch
-                {
-                    //log errors or ...
-                    throw;
-                }
+                databaseService.CreateDatabase("IdentityServer");
+                migrationService.ListMigrations();
+                migrationService.MigrateUp();
             }
+
             return host;
         }
     }

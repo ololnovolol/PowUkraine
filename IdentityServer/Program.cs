@@ -1,8 +1,8 @@
-using IdentityServer.Extentions;
+using System;
+using IdentityServer.Extensions;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.Extensions.Hosting;
 using Serilog;
-using System;
 
 namespace IdentityServer
 {
@@ -11,15 +11,16 @@ namespace IdentityServer
         [Obsolete]
         public static void Main(string[] args)
         {
-            LoggerManager.RunSerilog();
+            LoggerManager.RunLogger();
+
             try
             {
                 Log.Information("Starting host...");
 
                 CreateHostBuilder(args)
-                .Build()
-                .SetupLogger()
-                .Run();
+                    .Build()
+                    .SetupLogger()
+                    .Run();
             }
             catch (Exception ex)
             {
@@ -31,12 +32,11 @@ namespace IdentityServer
             }
         }
 
-        public static IHostBuilder CreateHostBuilder(string[] args) =>
-            Host.CreateDefaultBuilder(args)
+        public static IHostBuilder CreateHostBuilder(string[] args)
+        {
+            return Host.CreateDefaultBuilder(args)
                 .UseSerilog()
-                .ConfigureWebHostDefaults(webBuilder =>
-                {
-                    webBuilder.UseStartup<Startup>();
-                });
+                .ConfigureWebHostDefaults(webBuilder => { webBuilder.UseStartup<Startup>(); });
+        }
     }
 }

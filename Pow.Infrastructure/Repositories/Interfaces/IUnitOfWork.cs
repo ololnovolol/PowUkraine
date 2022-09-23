@@ -5,6 +5,5 @@
         IMessageRepository Messages { get; }
         IMarkRepository Marks { get; }
         IAttachmentRepository Attachments { get; }
-
     }
 }

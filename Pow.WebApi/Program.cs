@@ -1,27 +1,26 @@
+using System;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.Extensions.Hosting;
 using Pow.WebApi.Extensions;
 using Serilog;
-using System;
 
 namespace Pow.WebApi
 {
     public class Program
     {
-
         public static void Main(string[] args)
         {
-            LoggerManager.RunSerilog();
+            LoggerManager.RunLogger();
 
             try
             {
                 Log.Information("Starting host...");
 
                 CreateHostBuilder(args)
-               .Build()
-               .SetupLogger()
-               .MigrateDatabase()
-               .Run();
+                    .Build()
+                    .SetupLogger()
+                    .MigrateDatabase()
+                    .Run();
             }
             catch (Exception ex)
             {
@@ -33,11 +32,10 @@ namespace Pow.WebApi
             }
         }
 
-        public static IHostBuilder CreateHostBuilder(string[] args) =>
-            Host.CreateDefaultBuilder(args)
-                .ConfigureWebHostDefaults(webBuilder =>
-                {
-                    webBuilder.UseStartup<Startup>();
-                });
+        public static IHostBuilder CreateHostBuilder(string[] args)
+        {
+            return Host.CreateDefaultBuilder(args)
+                .ConfigureWebHostDefaults(webBuilder => { webBuilder.UseStartup<Startup>(); });
+        }
     }
 }

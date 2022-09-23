@@ -1,9 +1,9 @@
-﻿using Microsoft.Extensions.DependencyInjection;
+﻿using System;
+using System.Diagnostics;
+using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using Serilog;
 using Serilog.Events;
-using System;
-using System.Diagnostics;
 
 namespace Pow.WebApi.Extensions
 {
@@ -14,6 +14,7 @@ namespace Pow.WebApi.Extensions
             using (var scope = host.Services.CreateScope())
             {
                 var serviceProvider = scope.ServiceProvider;
+
                 try
                 {
                     // todo add need scopes
@@ -27,8 +28,7 @@ namespace Pow.WebApi.Extensions
             return host;
         }
 
-
-        public static void RunSerilog()
+        public static void RunLogger()
         {
             Activity.DefaultIdFormat = ActivityIdFormat.W3C;
 
@@ -40,7 +40,9 @@ namespace Pow.WebApi.Extensions
                 .MinimumLevel.Override("System", LogEventLevel.Warning)
                 .MinimumLevel.Override("Microsoft.AspNetCore.Authentication", LogEventLevel.Information)
                 .Enrich.FromLogContext()
-                .WriteTo.File("./LogData/Pow_Api_WebLog.txt", rollingInterval:
+                .WriteTo.File(
+                    "./LogData/Pow_Api_WebLog.txt",
+                    rollingInterval:
                     RollingInterval.Day)
                 .CreateLogger();
         }

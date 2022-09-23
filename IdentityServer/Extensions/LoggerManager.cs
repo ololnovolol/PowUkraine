@@ -1,12 +1,12 @@
-﻿using IdentityServer.Data;
+﻿using System;
+using System.Diagnostics;
+using IdentityServer.Data;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using Serilog;
 using Serilog.Events;
-using System;
-using System.Diagnostics;
 
-namespace IdentityServer.Extentions
+namespace IdentityServer.Extensions
 {
     public static class LoggerManager
     {
@@ -16,9 +16,9 @@ namespace IdentityServer.Extentions
             using (var scope = host.Services.CreateScope())
             {
                 var serviceProvider = scope.ServiceProvider;
+
                 try
                 {
-
                     var environment = serviceProvider.GetRequiredService<IHostingEnvironment>();
 
                     if (!environment.IsDevelopment())
@@ -36,8 +36,7 @@ namespace IdentityServer.Extentions
             return host;
         }
 
-
-        public static void RunSerilog()
+        public static void RunLogger()
         {
             Activity.DefaultIdFormat = ActivityIdFormat.W3C;
 
@@ -48,7 +47,9 @@ namespace IdentityServer.Extentions
                 .MinimumLevel.Override("System", LogEventLevel.Warning)
                 .MinimumLevel.Override("Microsoft.AspNetCore.Authentication", LogEventLevel.Information)
                 .Enrich.FromLogContext()
-                .WriteTo.File("./LogData/Pow_Identity_WebLog.txt", rollingInterval:
+                .WriteTo.File(
+                    "./LogData/Pow_Identity_WebLog.txt",
+                    rollingInterval:
                     RollingInterval.Day)
                 .CreateLogger();
         }

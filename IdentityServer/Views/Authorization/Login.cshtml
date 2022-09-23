@@ -1,7 +1,7 @@
 ﻿@{
     ViewData["Title"] = "Login";
 }
-@model IdentityServer.Models.LoginViewModel
+@model LoginViewModel
 
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
@@ -15,7 +15,7 @@
                             <h2 class="text-uppercase text-center mb-5">Login</h2>
 
                             <form asp-action="Login" asp-controller="Authorization" method="post">
-                                
+
                                 <div asp-validation-summary="All" class="text-danger"></div>
 
                                 <input type="hidden" asp-for="ReturnUrl"/>
@@ -26,9 +26,9 @@
                                         <input asp-for="Email" type="email" class="form-control" placeholder="Email"/>
                                         <span asp-validation-for="Email" class="text-danger"></span>
                                     </div>
-                                    <div class="form-outline mb-4"> 
+                                    <div class="form-outline mb-4">
                                         <label asp-for="Password" class="form-label">Password</label>
-                                        <input asp-for="Password" type="password" id="password" class="form-control" placeholder="Password" /> 
+                                        <input asp-for="Password" type="password" id="password" class="form-control" placeholder="Password"/>
                                         <span class="fa fa-eye" aria-hidden="true" style="float: right; position: relative; top: -46px;" id="#eye" onclick="toggle('password')"></span>
                                         <span asp-validation-for="Password" class="text-danger"></span>
                                     </div>
@@ -42,16 +42,18 @@
                                     <div class="form-group">
                                         <label class="form-label">Not registered yet?</label>
                                         <a asp-action="Register" asp-controller="Authorization" asp-route-returnUrl="@Model.ReturnUrl" class="w-100 btn btn-lg btn-success" tabindex="-1" role="button"
-                                           style="color: #FAAA0A;background-color: #88A87D;">Register</a>
+                                           style="color: #FAAA0A; background-color: #88A87D;">
+                                            Register
+                                        </a>
                                     </div>
                                 </div>
-                          
+
                             </form>
 
                             <div class="row d-flex justify-content-center align-items-center h-100">
                                 <form asp-controller="Authorization" asp-action="ExternalLogin"
                                       asp-route-returnUrl="@Model.ReturnUrl" method="post">
-                                 
+
                                     <div class="container">
                                         <div class="row">
 
@@ -59,10 +61,10 @@
                                             {
                                                 <button href="#" type="submit" style="border-radius: 50px;" value="@provider.Name" name="provider" class="fa fa-@provider.Name.ToLower()"></button>
                                             }
-              
+
                                         </div>
                                     </div>
-                                    
+
                                 </form>
                             </div>
 

@@ -1,36 +1,35 @@
-﻿@using System.Net
-<!DOCTYPE html>
-    <html lang="en">
-        <head>
-            <meta charset="utf-8" />
-            <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-            <title>@ViewData["Title"] - PowUkraine</title>
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>@ViewData["Title"] - PowUkraine</title>
 
-            <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
-            <link rel="stylesheet" href="~/css/custom.css" />
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="~/css/custom.css"/>
 
-        </head>
-    <body>
-        <header>
+</head>
+<body>
+<header>
 
-        </header>
-        <div>
-            <main role="main">
-                @RenderBody()
-            </main>
-        </div>
+</header>
+<div>
+    <main role="main">
+        @RenderBody()
+    </main>
+</div>
 
-        <footer class="bg-light text-center text-lg-start">
-            <div class="text-center p-3" style="background-color: white;">
-            © @DateTime.Now.Year Copyright: <b> The Power of Will Ukraine </b> by
-            <a class="text-info" href="https://t.me/+BUQdSRBvz3ViZGIy">Sigma "Right_Team"</a>
-            </div>
-        </footer>
+<footer class="bg-light text-center text-lg-start">
+    <div class="text-center p-3" style="background-color: white;">
+        © @DateTime.Now.Year Copyright: <b> The Power of Will Ukraine </b> by
+        <a class="text-info" href="https://t.me/+BUQdSRBvz3ViZGIy">Sigma "Right_Team"</a>
+    </div>
+</footer>
 
-        <script src="~/lib/jquery/dist/jquery.min.js"></script>
-        <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
-        <script src="~/js/site.js" asp-append-version="true"></script>
-        @await RenderSectionAsync("Scripts", required: false)
+<script src="~/lib/jquery/dist/jquery.min.js"></script>
+<script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+<script src="~/js/site.js" asp-append-version="true"></script>
+@await RenderSectionAsync("Scripts", false)
 
-    </body>
+</body>
 </html>

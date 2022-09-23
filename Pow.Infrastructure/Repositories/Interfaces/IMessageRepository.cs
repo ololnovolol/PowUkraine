@@ -2,7 +2,5 @@
 
 namespace Pow.Infrastructure.Repositories.Interfaces
 {
-    public interface IMessageRepository : IGenericRepository<Message>
-    {
-    }
+    public interface IMessageRepository : IGenericRepository<Message> { }
 }

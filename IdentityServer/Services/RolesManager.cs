@@ -1,9 +1,9 @@
-﻿using IdentityServer.Models;
+﻿using System;
+using System.Threading.Tasks;
+using IdentityServer.Models;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
-using System;
-using System.Threading.Tasks;
 
 namespace IdentityServer.Services
 {
@@ -11,43 +11,39 @@ namespace IdentityServer.Services
     {
         public static async Task CreateUserRoles(IServiceProvider serviceProvider, IConfiguration configuration)
         {
-            var RoleManager = serviceProvider.GetRequiredService<RoleManager<IdentityRole>>();
-            var UserManager = serviceProvider.GetRequiredService<UserManager<AppUser>>();
+            var roleManager = serviceProvider.GetRequiredService<RoleManager<IdentityRole>>();
+            var userManager = serviceProvider.GetRequiredService<UserManager<AppUser>>();
 
-            if (!await RoleManager.RoleExistsAsync("Admin"))
+            if (!await roleManager.RoleExistsAsync("Admin"))
             {
-                await RoleManager.CreateAsync(new IdentityRole("Admin"));
-                await UserManager.AddToRoleAsync(await CreateUserAsync("admin", configuration, UserManager), "Admin");
+                await roleManager.CreateAsync(new IdentityRole("Admin"));
+                await userManager.AddToRoleAsync(await CreateUserAsync("admin", configuration, userManager), "Admin");
             }
 
-            if (!await RoleManager.RoleExistsAsync("User"))
+            if (!await roleManager.RoleExistsAsync("User"))
             {
-                await RoleManager.CreateAsync(new IdentityRole("User"));
-                await UserManager.AddToRoleAsync(await CreateUserAsync("user", configuration, UserManager), "User");
+                await roleManager.CreateAsync(new IdentityRole("User"));
+                await userManager.AddToRoleAsync(await CreateUserAsync("user", configuration, userManager), "User");
             }
-
         }
 
-        private static async Task<AppUser> CreateUserAsync(string name, IConfiguration configuration,
+        private static async Task<AppUser> CreateUserAsync(
+            string name,
+            IConfiguration configuration,
             UserManager<AppUser> userManager)
         {
             var result = await userManager.FindByNameAsync(name);
 
-            if (result == null)
+            if (result != null)
             {
-                var user = new AppUser
-                {
-                    UserName = name,
-                    Email = configuration[$"{name}:email"],
-                    BirthDay = DateTime.Now,
-                };
-
-                await userManager.CreateAsync(user, configuration[$"{name}:password"]);
-                return user;
+                return result;
             }
 
-            return result;
-        }
+            var user = new AppUser { UserName = name, Email = configuration[$"{name}:email"], BirthDay = DateTime.Now };
 
+            await userManager.CreateAsync(user, configuration[$"{name}:password"]);
+
+            return user;
+        }
     }
 }
