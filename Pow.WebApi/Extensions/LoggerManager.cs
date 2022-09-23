@@ -40,7 +40,7 @@ namespace Pow.WebApi.Extensions
                 .MinimumLevel.Override("System", LogEventLevel.Warning)
                 .MinimumLevel.Override("Microsoft.AspNetCore.Authentication", LogEventLevel.Information)
                 .Enrich.FromLogContext()
-                .WriteTo.File("Pow_Api_WebLog.txt", rollingInterval:
+                .WriteTo.File("./LogData/Pow_Api_WebLog.txt", rollingInterval:
                     RollingInterval.Day)
                 .CreateLogger();
         }
