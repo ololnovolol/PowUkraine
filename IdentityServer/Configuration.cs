@@ -31,6 +31,7 @@ namespace IdentityServer
                 }
             };
 
+        //// TODO Move links and etc to .config file
         public static IEnumerable<Client> Clients =>
             new List<Client>
             {

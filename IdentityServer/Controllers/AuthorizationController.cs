@@ -6,6 +6,7 @@ using System;
 using System.Security.Claims;
 using System.Threading.Tasks;
 
+/// Move all errors to resources 
 namespace IdentityServer.Controllers
 {
     public class AuthorizationController : Controller
