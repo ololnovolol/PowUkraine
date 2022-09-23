@@ -1,0 +1,802 @@
+2022-09-22 19:47:26.170 +03:00 [INF] Starting host...
+2022-09-22 19:47:30.130 +03:00 [INF] Starting IdentityServer4 version 4.1.2+997a6cdd643e46cd5762b710c4ddc43574cbec2e
+2022-09-22 19:47:30.137 +03:00 [INF] You are using the in-memory version of the persisted grant store. This will store consent decisions, authorization codes, refresh and reference tokens in memory only. If you are using any of those features in production, you want to switch to a different store implementation.
+2022-09-22 19:47:30.138 +03:00 [INF] Using the default authentication scheme Identity.Application for IdentityServer
+2022-09-22 19:47:30.138 +03:00 [DBG] Using Identity.Application as default ASP.NET Core scheme for authentication
+2022-09-22 19:47:30.139 +03:00 [DBG] Using Identity.External as default ASP.NET Core scheme for sign-in
+2022-09-22 19:47:30.139 +03:00 [DBG] Using Identity.External as default ASP.NET Core scheme for sign-out
+2022-09-22 19:47:30.139 +03:00 [DBG] Using Identity.Application as default ASP.NET Core scheme for challenge
+2022-09-22 19:47:30.139 +03:00 [DBG] Using Identity.Application as default ASP.NET Core scheme for forbid
+2022-09-22 19:47:34.460 +03:00 [INF] Application started. Press Ctrl+C to shut down.
+2022-09-22 19:47:34.460 +03:00 [INF] Hosting environment: Development
+2022-09-22 19:47:34.460 +03:00 [INF] Content root path: D:\programming\dotNet\OlegLearning\Sigma_Trainee\PowUkraine\IdentityServer
+2022-09-22 19:47:34.654 +03:00 [DBG] Login Url: /Authorization/Login
+2022-09-22 19:47:34.655 +03:00 [DBG] Login Return Url Parameter: ReturnUrl
+2022-09-22 19:47:34.655 +03:00 [DBG] Logout Url: /Authorization/Logout
+2022-09-22 19:47:34.655 +03:00 [DBG] ConsentUrl Url: /consent
+2022-09-22 19:47:34.655 +03:00 [DBG] Consent Return Url Parameter: returnUrl
+2022-09-22 19:47:34.655 +03:00 [DBG] Error Url: /home/error
+2022-09-22 19:47:34.655 +03:00 [DBG] Error Id Parameter: errorId
+2022-09-22 19:47:36.138 +03:00 [DBG] CORS request made for path: /.well-known/openid-configuration from origin: http://localhost:3000
+2022-09-22 19:47:36.220 +03:00 [DBG] Client list checked and origin: http://localhost:3000 is allowed
+2022-09-22 19:47:36.220 +03:00 [DBG] CorsPolicyService allowed origin: http://localhost:3000
+2022-09-22 19:47:36.222 +03:00 [DBG] Request path /.well-known/openid-configuration matched to endpoint type Discovery
+2022-09-22 19:47:36.224 +03:00 [DBG] Endpoint enabled: Discovery, successfully created handler: IdentityServer4.Endpoints.DiscoveryEndpoint
+2022-09-22 19:47:36.224 +03:00 [INF] Invoking IdentityServer endpoint: IdentityServer4.Endpoints.DiscoveryEndpoint for /.well-known/openid-configuration
+2022-09-22 19:47:36.225 +03:00 [DBG] Start discovery request
+2022-09-22 19:47:36.268 +03:00 [DBG] CORS request made for path: /.well-known/openid-configuration from origin: http://localhost:3000
+2022-09-22 19:47:36.268 +03:00 [DBG] Client list checked and origin: http://localhost:3000 is allowed
+2022-09-22 19:47:36.268 +03:00 [DBG] CorsPolicyService allowed origin: http://localhost:3000
+2022-09-22 19:47:36.274 +03:00 [DBG] Request path /.well-known/openid-configuration matched to endpoint type Discovery
+2022-09-22 19:47:36.274 +03:00 [DBG] Endpoint enabled: Discovery, successfully created handler: IdentityServer4.Endpoints.DiscoveryEndpoint
+2022-09-22 19:47:36.274 +03:00 [INF] Invoking IdentityServer endpoint: IdentityServer4.Endpoints.DiscoveryEndpoint for /.well-known/openid-configuration
+2022-09-22 19:47:36.274 +03:00 [DBG] Start discovery request
+2022-09-22 19:47:36.332 +03:00 [DBG] Request path /connect/authorize matched to endpoint type Authorize
+2022-09-22 19:47:36.441 +03:00 [DBG] Endpoint enabled: Authorize, successfully created handler: IdentityServer4.Endpoints.AuthorizeEndpoint
+2022-09-22 19:47:36.441 +03:00 [INF] Invoking IdentityServer endpoint: IdentityServer4.Endpoints.AuthorizeEndpoint for /connect/authorize
+2022-09-22 19:47:36.442 +03:00 [DBG] Start authorize request
+2022-09-22 19:47:36.447 +03:00 [DBG] User in authorize request: c0749054-3b91-4b41-b171-cb8164b008cf
+2022-09-22 19:47:36.448 +03:00 [DBG] Start authorize request protocol validation
+2022-09-22 19:47:36.456 +03:00 [DBG] client configuration validation for client pow-web-app succeeded.
+2022-09-22 19:47:36.462 +03:00 [DBG] Checking for PKCE parameters
+2022-09-22 19:47:36.476 +03:00 [DBG] Calling into custom validator: IdentityServer4.Validation.DefaultCustomAuthorizeRequestValidator
+2022-09-22 19:47:36.483 +03:00 [DBG] ValidatedAuthorizeRequest
+{"ClientId":"pow-web-app","ClientName":"Pow Web","RedirectUri":"http://localhost:3000/signin-oidc","AllowedRedirectUris":["http://localhost:3000/signin-oidc"],"SubjectId":"c0749054-3b91-4b41-b171-cb8164b008cf","ResponseType":"code","ResponseMode":"query","GrantType":"authorization_code","RequestedScopes":"openid profile PowWebApi","State":"804f69ffe8034f5184b0f98d88634c2f","UiLocales":null,"Nonce":null,"AuthenticationContextReferenceClasses":null,"DisplayMode":null,"PromptMode":"","MaxAge":null,"LoginHint":null,"SessionId":"5131A8A23E3041B32C3AA90539DABDD6","Raw":{"client_id":"pow-web-app","redirect_uri":"http://localhost:3000/signin-oidc","response_type":"code","scope":"openid profile PowWebApi","state":"804f69ffe8034f5184b0f98d88634c2f","code_challenge":"a-sRQZA6zBPQINU3LLEPRKRvksehpfXW9l82PjnJhM4","code_challenge_method":"S256","response_mode":"query"},"$type":"AuthorizeRequestValidationLog"}
+2022-09-22 19:47:36.491 +03:00 [DBG] Client is configured to not require consent, no consent is required
+2022-09-22 19:47:36.492 +03:00 [DBG] Creating Authorization Code Flow response.
+2022-09-22 19:47:36.540 +03:00 [DBG] Authorize endpoint response
+{"SubjectId":"c0749054-3b91-4b41-b171-cb8164b008cf","ClientId":"pow-web-app","RedirectUri":"http://localhost:3000/signin-oidc","State":"804f69ffe8034f5184b0f98d88634c2f","Scope":"openid profile PowWebApi","Error":null,"ErrorDescription":null,"$type":"AuthorizeResponseLog"}
+2022-09-22 19:47:38.138 +03:00 [DBG] CORS request made for path: /.well-known/openid-configuration from origin: http://localhost:3000
+2022-09-22 19:47:38.139 +03:00 [DBG] Client list checked and origin: http://localhost:3000 is allowed
+2022-09-22 19:47:38.139 +03:00 [DBG] CorsPolicyService allowed origin: http://localhost:3000
+2022-09-22 19:47:38.141 +03:00 [DBG] Request path /.well-known/openid-configuration matched to endpoint type Discovery
+2022-09-22 19:47:38.151 +03:00 [DBG] Endpoint enabled: Discovery, successfully created handler: IdentityServer4.Endpoints.DiscoveryEndpoint
+2022-09-22 19:47:38.151 +03:00 [INF] Invoking IdentityServer endpoint: IdentityServer4.Endpoints.DiscoveryEndpoint for /.well-known/openid-configuration
+2022-09-22 19:47:38.152 +03:00 [DBG] Start discovery request
+2022-09-22 19:47:38.172 +03:00 [DBG] CORS request made for path: /connect/token from origin: http://localhost:3000
+2022-09-22 19:47:38.172 +03:00 [DBG] Client list checked and origin: http://localhost:3000 is allowed
+2022-09-22 19:47:38.172 +03:00 [DBG] CorsPolicyService allowed origin: http://localhost:3000
+2022-09-22 19:47:38.173 +03:00 [DBG] Request path /connect/token matched to endpoint type Token
+2022-09-22 19:47:38.176 +03:00 [DBG] Endpoint enabled: Token, successfully created handler: IdentityServer4.Endpoints.TokenEndpoint
+2022-09-22 19:47:38.176 +03:00 [INF] Invoking IdentityServer endpoint: IdentityServer4.Endpoints.TokenEndpoint for /connect/token
+2022-09-22 19:47:38.178 +03:00 [DBG] Start token request.
+2022-09-22 19:47:38.179 +03:00 [DBG] Start client validation
+2022-09-22 19:47:38.181 +03:00 [DBG] Start parsing Basic Authentication secret
+2022-09-22 19:47:38.182 +03:00 [DBG] Start parsing for secret in post body
+2022-09-22 19:47:38.195 +03:00 [DBG] client id without secret found
+2022-09-22 19:47:38.195 +03:00 [DBG] Parser found secret: PostBodySecretParser
+2022-09-22 19:47:38.195 +03:00 [DBG] Secret id found: pow-web-app
+2022-09-22 19:47:38.195 +03:00 [DBG] client configuration validation for client pow-web-app succeeded.
+2022-09-22 19:47:38.195 +03:00 [DBG] Public Client - skipping secret validation success
+2022-09-22 19:47:38.196 +03:00 [DBG] Client validation success
+2022-09-22 19:47:38.197 +03:00 [DBG] Start token request validation
+2022-09-22 19:47:38.200 +03:00 [DBG] Start validation of authorization code token request
+2022-09-22 19:47:38.223 +03:00 [DBG] Client required a proof key for code exchange. Starting PKCE validation
+2022-09-22 19:47:38.224 +03:00 [DBG] Validation of authorization code token request success
+2022-09-22 19:47:38.226 +03:00 [INF] Token request validation success, {"ClientId":"pow-web-app","ClientName":"Pow Web","GrantType":"authorization_code","Scopes":null,"AuthorizationCode":"****C0FE","RefreshToken":"********","UserName":null,"AuthenticationContextReferenceClasses":null,"Tenant":null,"IdP":null,"Raw":{"client_id":"pow-web-app","code":"E03100B21CD298CF0B455C9A81313656215ED635ED72931049196AB8A05FC0FE","redirect_uri":"http://localhost:3000/signin-oidc","code_verifier":"bec78497fb274dc4949b8d920eb0525ee4f79d4bc70244b1b3d0f1a58ed979e64c5d0b4c2477448ea0456ebe98d242a4","grant_type":"authorization_code"},"$type":"TokenRequestValidationLog"}
+2022-09-22 19:47:38.229 +03:00 [DBG] client configuration validation for client pow-web-app succeeded.
+2022-09-22 19:47:38.237 +03:00 [DBG] Getting claims for access token for client: pow-web-app
+2022-09-22 19:47:38.237 +03:00 [DBG] Getting claims for access token for subject: c0749054-3b91-4b41-b171-cb8164b008cf
+2022-09-22 19:47:38.353 +03:00 [DBG] client configuration validation for client pow-web-app succeeded.
+2022-09-22 19:47:38.356 +03:00 [DBG] Getting claims for identity token for subject: c0749054-3b91-4b41-b171-cb8164b008cf and client: pow-web-app
+2022-09-22 19:47:38.356 +03:00 [DBG] In addition to an id_token, an access_token was requested. No claims other than sub are included in the id_token. To obtain more user claims, either use the user info endpoint or set AlwaysIncludeUserClaimsInIdToken on the client configuration.
+2022-09-22 19:47:38.358 +03:00 [DBG] Token request success.
+2022-09-22 19:47:38.380 +03:00 [DBG] Request path /connect/checksession matched to endpoint type Checksession
+2022-09-22 19:47:38.381 +03:00 [DBG] Endpoint enabled: Checksession, successfully created handler: IdentityServer4.Endpoints.CheckSessionEndpoint
+2022-09-22 19:47:38.381 +03:00 [INF] Invoking IdentityServer endpoint: IdentityServer4.Endpoints.CheckSessionEndpoint for /connect/checksession
+2022-09-22 19:47:38.381 +03:00 [DBG] Rendering check session result
+2022-09-22 19:48:18.348 +03:00 [DBG] CORS request made for path: /.well-known/openid-configuration from origin: http://localhost:3000
+2022-09-22 19:48:18.349 +03:00 [DBG] Client list checked and origin: http://localhost:3000 is allowed
+2022-09-22 19:48:18.349 +03:00 [DBG] CorsPolicyService allowed origin: http://localhost:3000
+2022-09-22 19:48:18.350 +03:00 [DBG] Request path /.well-known/openid-configuration matched to endpoint type Discovery
+2022-09-22 19:48:18.351 +03:00 [DBG] Endpoint enabled: Discovery, successfully created handler: IdentityServer4.Endpoints.DiscoveryEndpoint
+2022-09-22 19:48:18.351 +03:00 [INF] Invoking IdentityServer endpoint: IdentityServer4.Endpoints.DiscoveryEndpoint for /.well-known/openid-configuration
+2022-09-22 19:48:18.351 +03:00 [DBG] Start discovery request
+2022-09-22 19:48:18.360 +03:00 [DBG] CORS request made for path: /.well-known/openid-configuration from origin: http://localhost:3000
+2022-09-22 19:48:18.361 +03:00 [DBG] Client list checked and origin: http://localhost:3000 is allowed
+2022-09-22 19:48:18.361 +03:00 [DBG] CorsPolicyService allowed origin: http://localhost:3000
+2022-09-22 19:48:18.361 +03:00 [DBG] Request path /.well-known/openid-configuration matched to endpoint type Discovery
+2022-09-22 19:48:18.361 +03:00 [DBG] Endpoint enabled: Discovery, successfully created handler: IdentityServer4.Endpoints.DiscoveryEndpoint
+2022-09-22 19:48:18.362 +03:00 [INF] Invoking IdentityServer endpoint: IdentityServer4.Endpoints.DiscoveryEndpoint for /.well-known/openid-configuration
+2022-09-22 19:48:18.362 +03:00 [DBG] Start discovery request
+2022-09-22 19:48:18.364 +03:00 [DBG] CORS request made for path: /.well-known/openid-configuration from origin: http://localhost:3000
+2022-09-22 19:48:18.364 +03:00 [DBG] Client list checked and origin: http://localhost:3000 is allowed
+2022-09-22 19:48:18.364 +03:00 [DBG] CorsPolicyService allowed origin: http://localhost:3000
+2022-09-22 19:48:18.364 +03:00 [DBG] Request path /.well-known/openid-configuration matched to endpoint type Discovery
+2022-09-22 19:48:18.365 +03:00 [DBG] Endpoint enabled: Discovery, successfully created handler: IdentityServer4.Endpoints.DiscoveryEndpoint
+2022-09-22 19:48:18.365 +03:00 [INF] Invoking IdentityServer endpoint: IdentityServer4.Endpoints.DiscoveryEndpoint for /.well-known/openid-configuration
+2022-09-22 19:48:18.365 +03:00 [DBG] Start discovery request
+2022-09-22 19:48:18.463 +03:00 [DBG] Request path /connect/authorize matched to endpoint type Authorize
+2022-09-22 19:48:18.463 +03:00 [DBG] Request path /connect/checksession matched to endpoint type Checksession
+2022-09-22 19:48:18.464 +03:00 [DBG] Endpoint enabled: Checksession, successfully created handler: IdentityServer4.Endpoints.CheckSessionEndpoint
+2022-09-22 19:48:18.464 +03:00 [INF] Invoking IdentityServer endpoint: IdentityServer4.Endpoints.CheckSessionEndpoint for /connect/checksession
+2022-09-22 19:48:18.464 +03:00 [DBG] Rendering check session result
+2022-09-22 19:48:18.464 +03:00 [DBG] Endpoint enabled: Authorize, successfully created handler: IdentityServer4.Endpoints.AuthorizeEndpoint
+2022-09-22 19:48:18.464 +03:00 [INF] Invoking IdentityServer endpoint: IdentityServer4.Endpoints.AuthorizeEndpoint for /connect/authorize
+2022-09-22 19:48:18.464 +03:00 [DBG] Start authorize request
+2022-09-22 19:48:18.464 +03:00 [DBG] User in authorize request: c0749054-3b91-4b41-b171-cb8164b008cf
+2022-09-22 19:48:18.464 +03:00 [DBG] Start authorize request protocol validation
+2022-09-22 19:48:18.464 +03:00 [DBG] client configuration validation for client pow-web-app succeeded.
+2022-09-22 19:48:18.465 +03:00 [DBG] Checking for PKCE parameters
+2022-09-22 19:48:18.468 +03:00 [DBG] Calling into custom validator: IdentityServer4.Validation.DefaultCustomAuthorizeRequestValidator
+2022-09-22 19:48:18.470 +03:00 [DBG] ValidatedAuthorizeRequest
+{"ClientId":"pow-web-app","ClientName":"Pow Web","RedirectUri":"http://localhost:3000/signin-oidc","AllowedRedirectUris":["http://localhost:3000/signin-oidc"],"SubjectId":"c0749054-3b91-4b41-b171-cb8164b008cf","ResponseType":"code","ResponseMode":"query","GrantType":"authorization_code","RequestedScopes":"openid profile PowWebApi","State":"bf9a88e7a2cf44fe8b45756a6be003fb","UiLocales":null,"Nonce":null,"AuthenticationContextReferenceClasses":null,"DisplayMode":null,"PromptMode":"","MaxAge":null,"LoginHint":null,"SessionId":"5131A8A23E3041B32C3AA90539DABDD6","Raw":{"client_id":"pow-web-app","redirect_uri":"http://localhost:3000/signin-oidc","response_type":"code","scope":"openid profile PowWebApi","state":"bf9a88e7a2cf44fe8b45756a6be003fb","code_challenge":"hkjo8CpMu1DnUIZ2zn949jQ4WykUv89wEqjnwE-GUnY","code_challenge_method":"S256","response_mode":"query"},"$type":"AuthorizeRequestValidationLog"}
+2022-09-22 19:48:18.470 +03:00 [DBG] Client is configured to not require consent, no consent is required
+2022-09-22 19:48:18.470 +03:00 [DBG] Creating Authorization Code Flow response.
+2022-09-22 19:48:18.471 +03:00 [DBG] Authorize endpoint response
+{"SubjectId":"c0749054-3b91-4b41-b171-cb8164b008cf","ClientId":"pow-web-app","RedirectUri":"http://localhost:3000/signin-oidc","State":"bf9a88e7a2cf44fe8b45756a6be003fb","Scope":"openid profile PowWebApi","Error":null,"ErrorDescription":null,"$type":"AuthorizeResponseLog"}
+2022-09-22 19:48:18.936 +03:00 [DBG] CORS request made for path: /.well-known/openid-configuration from origin: http://localhost:3000
+2022-09-22 19:48:18.936 +03:00 [DBG] Client list checked and origin: http://localhost:3000 is allowed
+2022-09-22 19:48:18.936 +03:00 [DBG] CorsPolicyService allowed origin: http://localhost:3000
+2022-09-22 19:48:18.936 +03:00 [DBG] Request path /.well-known/openid-configuration matched to endpoint type Discovery
+2022-09-22 19:48:18.937 +03:00 [DBG] Endpoint enabled: Discovery, successfully created handler: IdentityServer4.Endpoints.DiscoveryEndpoint
+2022-09-22 19:48:18.937 +03:00 [INF] Invoking IdentityServer endpoint: IdentityServer4.Endpoints.DiscoveryEndpoint for /.well-known/openid-configuration
+2022-09-22 19:48:18.937 +03:00 [DBG] Start discovery request
+2022-09-22 19:48:18.942 +03:00 [DBG] CORS request made for path: /.well-known/openid-configuration from origin: http://localhost:3000
+2022-09-22 19:48:18.943 +03:00 [DBG] Client list checked and origin: http://localhost:3000 is allowed
+2022-09-22 19:48:18.943 +03:00 [DBG] CorsPolicyService allowed origin: http://localhost:3000
+2022-09-22 19:48:18.943 +03:00 [DBG] Request path /.well-known/openid-configuration matched to endpoint type Discovery
+2022-09-22 19:48:18.943 +03:00 [DBG] Endpoint enabled: Discovery, successfully created handler: IdentityServer4.Endpoints.DiscoveryEndpoint
+2022-09-22 19:48:18.943 +03:00 [INF] Invoking IdentityServer endpoint: IdentityServer4.Endpoints.DiscoveryEndpoint for /.well-known/openid-configuration
+2022-09-22 19:48:18.943 +03:00 [DBG] Start discovery request
+2022-09-22 19:48:18.950 +03:00 [DBG] Request path /connect/checksession matched to endpoint type Checksession
+2022-09-22 19:48:18.951 +03:00 [DBG] Endpoint enabled: Checksession, successfully created handler: IdentityServer4.Endpoints.CheckSessionEndpoint
+2022-09-22 19:48:18.951 +03:00 [INF] Invoking IdentityServer endpoint: IdentityServer4.Endpoints.CheckSessionEndpoint for /connect/checksession
+2022-09-22 19:48:18.951 +03:00 [DBG] Rendering check session result
+2022-09-22 19:48:18.951 +03:00 [DBG] CORS request made for path: /connect/token from origin: http://localhost:3000
+2022-09-22 19:48:18.951 +03:00 [DBG] Client list checked and origin: http://localhost:3000 is allowed
+2022-09-22 19:48:18.951 +03:00 [DBG] CorsPolicyService allowed origin: http://localhost:3000
+2022-09-22 19:48:18.952 +03:00 [DBG] Request path /connect/token matched to endpoint type Token
+2022-09-22 19:48:18.952 +03:00 [DBG] Endpoint enabled: Token, successfully created handler: IdentityServer4.Endpoints.TokenEndpoint
+2022-09-22 19:48:18.952 +03:00 [INF] Invoking IdentityServer endpoint: IdentityServer4.Endpoints.TokenEndpoint for /connect/token
+2022-09-22 19:48:18.952 +03:00 [DBG] Start token request.
+2022-09-22 19:48:18.952 +03:00 [DBG] Start client validation
+2022-09-22 19:48:18.952 +03:00 [DBG] Start parsing Basic Authentication secret
+2022-09-22 19:48:18.952 +03:00 [DBG] Start parsing for secret in post body
+2022-09-22 19:48:18.953 +03:00 [DBG] client id without secret found
+2022-09-22 19:48:18.953 +03:00 [DBG] Parser found secret: PostBodySecretParser
+2022-09-22 19:48:18.953 +03:00 [DBG] Secret id found: pow-web-app
+2022-09-22 19:48:18.953 +03:00 [DBG] client configuration validation for client pow-web-app succeeded.
+2022-09-22 19:48:18.953 +03:00 [DBG] Public Client - skipping secret validation success
+2022-09-22 19:48:18.953 +03:00 [DBG] Client validation success
+2022-09-22 19:48:18.953 +03:00 [DBG] Start token request validation
+2022-09-22 19:48:18.953 +03:00 [DBG] Start validation of authorization code token request
+2022-09-22 19:48:18.953 +03:00 [DBG] Client required a proof key for code exchange. Starting PKCE validation
+2022-09-22 19:48:18.953 +03:00 [DBG] Validation of authorization code token request success
+2022-09-22 19:48:18.954 +03:00 [INF] Token request validation success, {"ClientId":"pow-web-app","ClientName":"Pow Web","GrantType":"authorization_code","Scopes":null,"AuthorizationCode":"****D7AA","RefreshToken":"********","UserName":null,"AuthenticationContextReferenceClasses":null,"Tenant":null,"IdP":null,"Raw":{"client_id":"pow-web-app","code":"9A0128F063264DD265EB70491ACB537BE3D2E2CF483A5B8D61E005772DECD7AA","redirect_uri":"http://localhost:3000/signin-oidc","code_verifier":"ba79ab8ad27e4f29a901acdb9fadff20b65d970a343041bba2c8740d173d6a001e719a117e4542049186dd5c69fa5c06","grant_type":"authorization_code"},"$type":"TokenRequestValidationLog"}
+2022-09-22 19:48:18.954 +03:00 [DBG] client configuration validation for client pow-web-app succeeded.
+2022-09-22 19:48:18.954 +03:00 [DBG] Getting claims for access token for client: pow-web-app
+2022-09-22 19:48:18.954 +03:00 [DBG] Getting claims for access token for subject: c0749054-3b91-4b41-b171-cb8164b008cf
+2022-09-22 19:48:18.956 +03:00 [DBG] client configuration validation for client pow-web-app succeeded.
+2022-09-22 19:48:18.956 +03:00 [DBG] Getting claims for identity token for subject: c0749054-3b91-4b41-b171-cb8164b008cf and client: pow-web-app
+2022-09-22 19:48:18.956 +03:00 [DBG] In addition to an id_token, an access_token was requested. No claims other than sub are included in the id_token. To obtain more user claims, either use the user info endpoint or set AlwaysIncludeUserClaimsInIdToken on the client configuration.
+2022-09-22 19:48:18.957 +03:00 [DBG] Token request success.
+2022-09-22 19:50:05.992 +03:00 [DBG] CORS request made for path: /.well-known/openid-configuration from origin: http://localhost:3000
+2022-09-22 19:50:05.992 +03:00 [DBG] Client list checked and origin: http://localhost:3000 is allowed
+2022-09-22 19:50:05.992 +03:00 [DBG] CorsPolicyService allowed origin: http://localhost:3000
+2022-09-22 19:50:05.993 +03:00 [DBG] Request path /.well-known/openid-configuration matched to endpoint type Discovery
+2022-09-22 19:50:05.993 +03:00 [DBG] Endpoint enabled: Discovery, successfully created handler: IdentityServer4.Endpoints.DiscoveryEndpoint
+2022-09-22 19:50:05.993 +03:00 [INF] Invoking IdentityServer endpoint: IdentityServer4.Endpoints.DiscoveryEndpoint for /.well-known/openid-configuration
+2022-09-22 19:50:05.994 +03:00 [DBG] Start discovery request
+2022-09-22 19:50:05.999 +03:00 [DBG] CORS request made for path: /.well-known/openid-configuration from origin: http://localhost:3000
+2022-09-22 19:50:05.999 +03:00 [DBG] Client list checked and origin: http://localhost:3000 is allowed
+2022-09-22 19:50:05.999 +03:00 [DBG] CorsPolicyService allowed origin: http://localhost:3000
+2022-09-22 19:50:06.000 +03:00 [DBG] Request path /.well-known/openid-configuration matched to endpoint type Discovery
+2022-09-22 19:50:06.000 +03:00 [DBG] Endpoint enabled: Discovery, successfully created handler: IdentityServer4.Endpoints.DiscoveryEndpoint
+2022-09-22 19:50:06.000 +03:00 [INF] Invoking IdentityServer endpoint: IdentityServer4.Endpoints.DiscoveryEndpoint for /.well-known/openid-configuration
+2022-09-22 19:50:06.000 +03:00 [DBG] Start discovery request
+2022-09-22 19:50:06.004 +03:00 [DBG] CORS request made for path: /.well-known/openid-configuration from origin: http://localhost:3000
+2022-09-22 19:50:06.004 +03:00 [DBG] Client list checked and origin: http://localhost:3000 is allowed
+2022-09-22 19:50:06.004 +03:00 [DBG] CorsPolicyService allowed origin: http://localhost:3000
+2022-09-22 19:50:06.004 +03:00 [DBG] Request path /.well-known/openid-configuration matched to endpoint type Discovery
+2022-09-22 19:50:06.004 +03:00 [DBG] Endpoint enabled: Discovery, successfully created handler: IdentityServer4.Endpoints.DiscoveryEndpoint
+2022-09-22 19:50:06.004 +03:00 [INF] Invoking IdentityServer endpoint: IdentityServer4.Endpoints.DiscoveryEndpoint for /.well-known/openid-configuration
+2022-09-22 19:50:06.004 +03:00 [DBG] Start discovery request
+2022-09-22 19:50:06.128 +03:00 [DBG] Request path /connect/checksession matched to endpoint type Checksession
+2022-09-22 19:50:06.128 +03:00 [DBG] Request path /connect/authorize matched to endpoint type Authorize
+2022-09-22 19:50:06.128 +03:00 [DBG] Endpoint enabled: Checksession, successfully created handler: IdentityServer4.Endpoints.CheckSessionEndpoint
+2022-09-22 19:50:06.128 +03:00 [INF] Invoking IdentityServer endpoint: IdentityServer4.Endpoints.CheckSessionEndpoint for /connect/checksession
+2022-09-22 19:50:06.128 +03:00 [DBG] Rendering check session result
+2022-09-22 19:50:06.133 +03:00 [DBG] Endpoint enabled: Authorize, successfully created handler: IdentityServer4.Endpoints.AuthorizeEndpoint
+2022-09-22 19:50:06.133 +03:00 [INF] Invoking IdentityServer endpoint: IdentityServer4.Endpoints.AuthorizeEndpoint for /connect/authorize
+2022-09-22 19:50:06.133 +03:00 [DBG] Start authorize request
+2022-09-22 19:50:06.133 +03:00 [DBG] User in authorize request: c0749054-3b91-4b41-b171-cb8164b008cf
+2022-09-22 19:50:06.133 +03:00 [DBG] Start authorize request protocol validation
+2022-09-22 19:50:06.133 +03:00 [DBG] client configuration validation for client pow-web-app succeeded.
+2022-09-22 19:50:06.133 +03:00 [DBG] Checking for PKCE parameters
+2022-09-22 19:50:06.134 +03:00 [DBG] Calling into custom validator: IdentityServer4.Validation.DefaultCustomAuthorizeRequestValidator
+2022-09-22 19:50:06.134 +03:00 [DBG] ValidatedAuthorizeRequest
+{"ClientId":"pow-web-app","ClientName":"Pow Web","RedirectUri":"http://localhost:3000/signin-oidc","AllowedRedirectUris":["http://localhost:3000/signin-oidc"],"SubjectId":"c0749054-3b91-4b41-b171-cb8164b008cf","ResponseType":"code","ResponseMode":"query","GrantType":"authorization_code","RequestedScopes":"openid profile PowWebApi","State":"d37ed23751244459ba6841b7d0092b79","UiLocales":null,"Nonce":null,"AuthenticationContextReferenceClasses":null,"DisplayMode":null,"PromptMode":"","MaxAge":null,"LoginHint":null,"SessionId":"5131A8A23E3041B32C3AA90539DABDD6","Raw":{"client_id":"pow-web-app","redirect_uri":"http://localhost:3000/signin-oidc","response_type":"code","scope":"openid profile PowWebApi","state":"d37ed23751244459ba6841b7d0092b79","code_challenge":"f3KrXowtjDs3qpS7qJZKsuzgs2ZPgYTBf3FAns8kGAc","code_challenge_method":"S256","response_mode":"query"},"$type":"AuthorizeRequestValidationLog"}
+2022-09-22 19:50:06.134 +03:00 [DBG] Client is configured to not require consent, no consent is required
+2022-09-22 19:50:06.134 +03:00 [DBG] Creating Authorization Code Flow response.
+2022-09-22 19:50:06.135 +03:00 [DBG] Authorize endpoint response
+{"SubjectId":"c0749054-3b91-4b41-b171-cb8164b008cf","ClientId":"pow-web-app","RedirectUri":"http://localhost:3000/signin-oidc","State":"d37ed23751244459ba6841b7d0092b79","Scope":"openid profile PowWebApi","Error":null,"ErrorDescription":null,"$type":"AuthorizeResponseLog"}
+2022-09-22 19:50:06.636 +03:00 [DBG] CORS request made for path: /.well-known/openid-configuration from origin: http://localhost:3000
+2022-09-22 19:50:06.637 +03:00 [DBG] Client list checked and origin: http://localhost:3000 is allowed
+2022-09-22 19:50:06.637 +03:00 [DBG] CorsPolicyService allowed origin: http://localhost:3000
+2022-09-22 19:50:06.637 +03:00 [DBG] Request path /.well-known/openid-configuration matched to endpoint type Discovery
+2022-09-22 19:50:06.638 +03:00 [DBG] Endpoint enabled: Discovery, successfully created handler: IdentityServer4.Endpoints.DiscoveryEndpoint
+2022-09-22 19:50:06.638 +03:00 [INF] Invoking IdentityServer endpoint: IdentityServer4.Endpoints.DiscoveryEndpoint for /.well-known/openid-configuration
+2022-09-22 19:50:06.638 +03:00 [DBG] Start discovery request
+2022-09-22 19:50:06.647 +03:00 [DBG] CORS request made for path: /.well-known/openid-configuration from origin: http://localhost:3000
+2022-09-22 19:50:06.647 +03:00 [DBG] Client list checked and origin: http://localhost:3000 is allowed
+2022-09-22 19:50:06.647 +03:00 [DBG] CorsPolicyService allowed origin: http://localhost:3000
+2022-09-22 19:50:06.648 +03:00 [DBG] Request path /.well-known/openid-configuration matched to endpoint type Discovery
+2022-09-22 19:50:06.649 +03:00 [DBG] Endpoint enabled: Discovery, successfully created handler: IdentityServer4.Endpoints.DiscoveryEndpoint
+2022-09-22 19:50:06.649 +03:00 [INF] Invoking IdentityServer endpoint: IdentityServer4.Endpoints.DiscoveryEndpoint for /.well-known/openid-configuration
+2022-09-22 19:50:06.649 +03:00 [DBG] Start discovery request
+2022-09-22 19:50:06.657 +03:00 [DBG] Request path /connect/checksession matched to endpoint type Checksession
+2022-09-22 19:50:06.657 +03:00 [DBG] Endpoint enabled: Checksession, successfully created handler: IdentityServer4.Endpoints.CheckSessionEndpoint
+2022-09-22 19:50:06.657 +03:00 [INF] Invoking IdentityServer endpoint: IdentityServer4.Endpoints.CheckSessionEndpoint for /connect/checksession
+2022-09-22 19:50:06.657 +03:00 [DBG] Rendering check session result
+2022-09-22 19:50:06.659 +03:00 [DBG] CORS request made for path: /connect/token from origin: http://localhost:3000
+2022-09-22 19:50:06.659 +03:00 [DBG] Client list checked and origin: http://localhost:3000 is allowed
+2022-09-22 19:50:06.659 +03:00 [DBG] CorsPolicyService allowed origin: http://localhost:3000
+2022-09-22 19:50:06.660 +03:00 [DBG] Request path /connect/token matched to endpoint type Token
+2022-09-22 19:50:06.667 +03:00 [DBG] Endpoint enabled: Token, successfully created handler: IdentityServer4.Endpoints.TokenEndpoint
+2022-09-22 19:50:06.667 +03:00 [INF] Invoking IdentityServer endpoint: IdentityServer4.Endpoints.TokenEndpoint for /connect/token
+2022-09-22 19:50:06.667 +03:00 [DBG] Start token request.
+2022-09-22 19:50:06.667 +03:00 [DBG] Start client validation
+2022-09-22 19:50:06.667 +03:00 [DBG] Start parsing Basic Authentication secret
+2022-09-22 19:50:06.667 +03:00 [DBG] Start parsing for secret in post body
+2022-09-22 19:50:06.667 +03:00 [DBG] client id without secret found
+2022-09-22 19:50:06.667 +03:00 [DBG] Parser found secret: PostBodySecretParser
+2022-09-22 19:50:06.668 +03:00 [DBG] Secret id found: pow-web-app
+2022-09-22 19:50:06.668 +03:00 [DBG] client configuration validation for client pow-web-app succeeded.
+2022-09-22 19:50:06.668 +03:00 [DBG] Public Client - skipping secret validation success
+2022-09-22 19:50:06.668 +03:00 [DBG] Client validation success
+2022-09-22 19:50:06.668 +03:00 [DBG] Start token request validation
+2022-09-22 19:50:06.668 +03:00 [DBG] Start validation of authorization code token request
+2022-09-22 19:50:06.669 +03:00 [DBG] Client required a proof key for code exchange. Starting PKCE validation
+2022-09-22 19:50:06.669 +03:00 [DBG] Validation of authorization code token request success
+2022-09-22 19:50:06.669 +03:00 [INF] Token request validation success, {"ClientId":"pow-web-app","ClientName":"Pow Web","GrantType":"authorization_code","Scopes":null,"AuthorizationCode":"****F127","RefreshToken":"********","UserName":null,"AuthenticationContextReferenceClasses":null,"Tenant":null,"IdP":null,"Raw":{"client_id":"pow-web-app","code":"08DEBF62BF443D6818D47F98ABDF6670CC2B495A319F6456BB3CB27BC4B1F127","redirect_uri":"http://localhost:3000/signin-oidc","code_verifier":"416ad10e8f2c423a87ed34b6f380ea1ea4ef5afde7194843a242f7c3d2157c458216ba22b09344c1a1627c15e033a0f4","grant_type":"authorization_code"},"$type":"TokenRequestValidationLog"}
+2022-09-22 19:50:06.670 +03:00 [DBG] client configuration validation for client pow-web-app succeeded.
+2022-09-22 19:50:06.670 +03:00 [DBG] Getting claims for access token for client: pow-web-app
+2022-09-22 19:50:06.670 +03:00 [DBG] Getting claims for access token for subject: c0749054-3b91-4b41-b171-cb8164b008cf
+2022-09-22 19:50:06.671 +03:00 [DBG] client configuration validation for client pow-web-app succeeded.
+2022-09-22 19:50:06.671 +03:00 [DBG] Getting claims for identity token for subject: c0749054-3b91-4b41-b171-cb8164b008cf and client: pow-web-app
+2022-09-22 19:50:06.671 +03:00 [DBG] In addition to an id_token, an access_token was requested. No claims other than sub are included in the id_token. To obtain more user claims, either use the user info endpoint or set AlwaysIncludeUserClaimsInIdToken on the client configuration.
+2022-09-22 19:50:06.672 +03:00 [DBG] Token request success.
+2022-09-22 19:51:52.210 +03:00 [DBG] CORS request made for path: /.well-known/openid-configuration from origin: http://localhost:3000
+2022-09-22 19:51:52.210 +03:00 [DBG] Client list checked and origin: http://localhost:3000 is allowed
+2022-09-22 19:51:52.210 +03:00 [DBG] CorsPolicyService allowed origin: http://localhost:3000
+2022-09-22 19:51:52.211 +03:00 [DBG] Request path /.well-known/openid-configuration matched to endpoint type Discovery
+2022-09-22 19:51:52.211 +03:00 [DBG] Endpoint enabled: Discovery, successfully created handler: IdentityServer4.Endpoints.DiscoveryEndpoint
+2022-09-22 19:51:52.211 +03:00 [INF] Invoking IdentityServer endpoint: IdentityServer4.Endpoints.DiscoveryEndpoint for /.well-known/openid-configuration
+2022-09-22 19:51:52.211 +03:00 [DBG] Start discovery request
+2022-09-22 19:51:52.243 +03:00 [DBG] Request path /connect/checksession matched to endpoint type Checksession
+2022-09-22 19:51:52.243 +03:00 [DBG] Endpoint enabled: Checksession, successfully created handler: IdentityServer4.Endpoints.CheckSessionEndpoint
+2022-09-22 19:51:52.243 +03:00 [INF] Invoking IdentityServer endpoint: IdentityServer4.Endpoints.CheckSessionEndpoint for /connect/checksession
+2022-09-22 19:51:52.243 +03:00 [DBG] Rendering check session result
+2022-09-22 19:52:35.038 +03:00 [DBG] CORS request made for path: /.well-known/openid-configuration from origin: http://localhost:3000
+2022-09-22 19:52:35.038 +03:00 [DBG] Client list checked and origin: http://localhost:3000 is allowed
+2022-09-22 19:52:35.038 +03:00 [DBG] CorsPolicyService allowed origin: http://localhost:3000
+2022-09-22 19:52:35.039 +03:00 [DBG] Request path /.well-known/openid-configuration matched to endpoint type Discovery
+2022-09-22 19:52:35.039 +03:00 [DBG] Endpoint enabled: Discovery, successfully created handler: IdentityServer4.Endpoints.DiscoveryEndpoint
+2022-09-22 19:52:35.039 +03:00 [INF] Invoking IdentityServer endpoint: IdentityServer4.Endpoints.DiscoveryEndpoint for /.well-known/openid-configuration
+2022-09-22 19:52:35.039 +03:00 [DBG] Start discovery request
+2022-09-22 19:52:35.069 +03:00 [DBG] Request path /connect/checksession matched to endpoint type Checksession
+2022-09-22 19:52:35.069 +03:00 [DBG] Endpoint enabled: Checksession, successfully created handler: IdentityServer4.Endpoints.CheckSessionEndpoint
+2022-09-22 19:52:35.069 +03:00 [INF] Invoking IdentityServer endpoint: IdentityServer4.Endpoints.CheckSessionEndpoint for /connect/checksession
+2022-09-22 19:52:35.069 +03:00 [DBG] Rendering check session result
+2022-09-22 19:52:45.849 +03:00 [DBG] CORS request made for path: /.well-known/openid-configuration from origin: http://localhost:3000
+2022-09-22 19:52:45.849 +03:00 [DBG] Client list checked and origin: http://localhost:3000 is allowed
+2022-09-22 19:52:45.849 +03:00 [DBG] CorsPolicyService allowed origin: http://localhost:3000
+2022-09-22 19:52:45.850 +03:00 [DBG] Request path /.well-known/openid-configuration matched to endpoint type Discovery
+2022-09-22 19:52:45.850 +03:00 [DBG] Endpoint enabled: Discovery, successfully created handler: IdentityServer4.Endpoints.DiscoveryEndpoint
+2022-09-22 19:52:45.850 +03:00 [INF] Invoking IdentityServer endpoint: IdentityServer4.Endpoints.DiscoveryEndpoint for /.well-known/openid-configuration
+2022-09-22 19:52:45.850 +03:00 [DBG] Start discovery request
+2022-09-22 19:52:45.881 +03:00 [DBG] Request path /connect/checksession matched to endpoint type Checksession
+2022-09-22 19:52:45.881 +03:00 [DBG] Endpoint enabled: Checksession, successfully created handler: IdentityServer4.Endpoints.CheckSessionEndpoint
+2022-09-22 19:52:45.881 +03:00 [INF] Invoking IdentityServer endpoint: IdentityServer4.Endpoints.CheckSessionEndpoint for /connect/checksession
+2022-09-22 19:52:45.881 +03:00 [DBG] Rendering check session result
+2022-09-22 19:52:54.012 +03:00 [DBG] CORS request made for path: /.well-known/openid-configuration from origin: http://localhost:3000
+2022-09-22 19:52:54.012 +03:00 [DBG] Client list checked and origin: http://localhost:3000 is allowed
+2022-09-22 19:52:54.012 +03:00 [DBG] CorsPolicyService allowed origin: http://localhost:3000
+2022-09-22 19:52:54.012 +03:00 [DBG] Request path /.well-known/openid-configuration matched to endpoint type Discovery
+2022-09-22 19:52:54.013 +03:00 [DBG] Endpoint enabled: Discovery, successfully created handler: IdentityServer4.Endpoints.DiscoveryEndpoint
+2022-09-22 19:52:54.013 +03:00 [INF] Invoking IdentityServer endpoint: IdentityServer4.Endpoints.DiscoveryEndpoint for /.well-known/openid-configuration
+2022-09-22 19:52:54.013 +03:00 [DBG] Start discovery request
+2022-09-22 19:52:54.032 +03:00 [DBG] Request path /connect/checksession matched to endpoint type Checksession
+2022-09-22 19:52:54.032 +03:00 [DBG] Endpoint enabled: Checksession, successfully created handler: IdentityServer4.Endpoints.CheckSessionEndpoint
+2022-09-22 19:52:54.032 +03:00 [INF] Invoking IdentityServer endpoint: IdentityServer4.Endpoints.CheckSessionEndpoint for /connect/checksession
+2022-09-22 19:52:54.032 +03:00 [DBG] Rendering check session result
+2022-09-22 19:53:03.770 +03:00 [DBG] CORS request made for path: /.well-known/openid-configuration from origin: http://localhost:3000
+2022-09-22 19:53:03.770 +03:00 [DBG] Client list checked and origin: http://localhost:3000 is allowed
+2022-09-22 19:53:03.770 +03:00 [DBG] CorsPolicyService allowed origin: http://localhost:3000
+2022-09-22 19:53:03.771 +03:00 [DBG] Request path /.well-known/openid-configuration matched to endpoint type Discovery
+2022-09-22 19:53:03.771 +03:00 [DBG] Endpoint enabled: Discovery, successfully created handler: IdentityServer4.Endpoints.DiscoveryEndpoint
+2022-09-22 19:53:03.771 +03:00 [INF] Invoking IdentityServer endpoint: IdentityServer4.Endpoints.DiscoveryEndpoint for /.well-known/openid-configuration
+2022-09-22 19:53:03.771 +03:00 [DBG] Start discovery request
+2022-09-22 19:53:03.791 +03:00 [DBG] Request path /connect/checksession matched to endpoint type Checksession
+2022-09-22 19:53:03.791 +03:00 [DBG] Endpoint enabled: Checksession, successfully created handler: IdentityServer4.Endpoints.CheckSessionEndpoint
+2022-09-22 19:53:03.791 +03:00 [INF] Invoking IdentityServer endpoint: IdentityServer4.Endpoints.CheckSessionEndpoint for /connect/checksession
+2022-09-22 19:53:03.791 +03:00 [DBG] Rendering check session result
+2022-09-22 19:54:16.224 +03:00 [DBG] CORS request made for path: /.well-known/openid-configuration from origin: http://localhost:3000
+2022-09-22 19:54:16.224 +03:00 [DBG] Client list checked and origin: http://localhost:3000 is allowed
+2022-09-22 19:54:16.224 +03:00 [DBG] CorsPolicyService allowed origin: http://localhost:3000
+2022-09-22 19:54:16.224 +03:00 [DBG] Request path /.well-known/openid-configuration matched to endpoint type Discovery
+2022-09-22 19:54:16.225 +03:00 [DBG] Endpoint enabled: Discovery, successfully created handler: IdentityServer4.Endpoints.DiscoveryEndpoint
+2022-09-22 19:54:16.225 +03:00 [INF] Invoking IdentityServer endpoint: IdentityServer4.Endpoints.DiscoveryEndpoint for /.well-known/openid-configuration
+2022-09-22 19:54:16.225 +03:00 [DBG] Start discovery request
+2022-09-22 19:54:16.231 +03:00 [DBG] CORS request made for path: /.well-known/openid-configuration from origin: http://localhost:3000
+2022-09-22 19:54:16.231 +03:00 [DBG] Client list checked and origin: http://localhost:3000 is allowed
+2022-09-22 19:54:16.231 +03:00 [DBG] CorsPolicyService allowed origin: http://localhost:3000
+2022-09-22 19:54:16.232 +03:00 [DBG] Request path /.well-known/openid-configuration matched to endpoint type Discovery
+2022-09-22 19:54:16.232 +03:00 [DBG] Endpoint enabled: Discovery, successfully created handler: IdentityServer4.Endpoints.DiscoveryEndpoint
+2022-09-22 19:54:16.232 +03:00 [INF] Invoking IdentityServer endpoint: IdentityServer4.Endpoints.DiscoveryEndpoint for /.well-known/openid-configuration
+2022-09-22 19:54:16.232 +03:00 [DBG] Start discovery request
+2022-09-22 19:54:16.236 +03:00 [DBG] CORS request made for path: /.well-known/openid-configuration from origin: http://localhost:3000
+2022-09-22 19:54:16.236 +03:00 [DBG] Client list checked and origin: http://localhost:3000 is allowed
+2022-09-22 19:54:16.236 +03:00 [DBG] CorsPolicyService allowed origin: http://localhost:3000
+2022-09-22 19:54:16.236 +03:00 [DBG] Request path /.well-known/openid-configuration matched to endpoint type Discovery
+2022-09-22 19:54:16.237 +03:00 [DBG] Endpoint enabled: Discovery, successfully created handler: IdentityServer4.Endpoints.DiscoveryEndpoint
+2022-09-22 19:54:16.237 +03:00 [INF] Invoking IdentityServer endpoint: IdentityServer4.Endpoints.DiscoveryEndpoint for /.well-known/openid-configuration
+2022-09-22 19:54:16.237 +03:00 [DBG] Start discovery request
+2022-09-22 19:54:16.331 +03:00 [DBG] Request path /connect/checksession matched to endpoint type Checksession
+2022-09-22 19:54:16.331 +03:00 [DBG] Endpoint enabled: Checksession, successfully created handler: IdentityServer4.Endpoints.CheckSessionEndpoint
+2022-09-22 19:54:16.331 +03:00 [INF] Invoking IdentityServer endpoint: IdentityServer4.Endpoints.CheckSessionEndpoint for /connect/checksession
+2022-09-22 19:54:16.331 +03:00 [DBG] Rendering check session result
+2022-09-22 19:54:16.340 +03:00 [DBG] Request path /connect/authorize matched to endpoint type Authorize
+2022-09-22 19:54:16.341 +03:00 [DBG] Endpoint enabled: Authorize, successfully created handler: IdentityServer4.Endpoints.AuthorizeEndpoint
+2022-09-22 19:54:16.341 +03:00 [INF] Invoking IdentityServer endpoint: IdentityServer4.Endpoints.AuthorizeEndpoint for /connect/authorize
+2022-09-22 19:54:16.341 +03:00 [DBG] Start authorize request
+2022-09-22 19:54:16.341 +03:00 [DBG] User in authorize request: c0749054-3b91-4b41-b171-cb8164b008cf
+2022-09-22 19:54:16.341 +03:00 [DBG] Start authorize request protocol validation
+2022-09-22 19:54:16.341 +03:00 [DBG] client configuration validation for client pow-web-app succeeded.
+2022-09-22 19:54:16.341 +03:00 [DBG] Checking for PKCE parameters
+2022-09-22 19:54:16.342 +03:00 [DBG] Calling into custom validator: IdentityServer4.Validation.DefaultCustomAuthorizeRequestValidator
+2022-09-22 19:54:16.342 +03:00 [DBG] ValidatedAuthorizeRequest
+{"ClientId":"pow-web-app","ClientName":"Pow Web","RedirectUri":"http://localhost:3000/signin-oidc","AllowedRedirectUris":["http://localhost:3000/signin-oidc"],"SubjectId":"c0749054-3b91-4b41-b171-cb8164b008cf","ResponseType":"code","ResponseMode":"query","GrantType":"authorization_code","RequestedScopes":"openid profile PowWebApi","State":"e30d795fc92244468a86571f539922c6","UiLocales":null,"Nonce":null,"AuthenticationContextReferenceClasses":null,"DisplayMode":null,"PromptMode":"","MaxAge":null,"LoginHint":null,"SessionId":"5131A8A23E3041B32C3AA90539DABDD6","Raw":{"client_id":"pow-web-app","redirect_uri":"http://localhost:3000/signin-oidc","response_type":"code","scope":"openid profile PowWebApi","state":"e30d795fc92244468a86571f539922c6","code_challenge":"6aY6RBqhPgH0A-zOR1Hjl6Fq36HvOCEC02lssPZKhCg","code_challenge_method":"S256","response_mode":"query"},"$type":"AuthorizeRequestValidationLog"}
+2022-09-22 19:54:16.342 +03:00 [DBG] Client is configured to not require consent, no consent is required
+2022-09-22 19:54:16.342 +03:00 [DBG] Creating Authorization Code Flow response.
+2022-09-22 19:54:16.343 +03:00 [DBG] Authorize endpoint response
+{"SubjectId":"c0749054-3b91-4b41-b171-cb8164b008cf","ClientId":"pow-web-app","RedirectUri":"http://localhost:3000/signin-oidc","State":"e30d795fc92244468a86571f539922c6","Scope":"openid profile PowWebApi","Error":null,"ErrorDescription":null,"$type":"AuthorizeResponseLog"}
+2022-09-22 19:54:16.804 +03:00 [DBG] CORS request made for path: /.well-known/openid-configuration from origin: http://localhost:3000
+2022-09-22 19:54:16.804 +03:00 [DBG] Client list checked and origin: http://localhost:3000 is allowed
+2022-09-22 19:54:16.804 +03:00 [DBG] CorsPolicyService allowed origin: http://localhost:3000
+2022-09-22 19:54:16.804 +03:00 [DBG] Request path /.well-known/openid-configuration matched to endpoint type Discovery
+2022-09-22 19:54:16.804 +03:00 [DBG] Endpoint enabled: Discovery, successfully created handler: IdentityServer4.Endpoints.DiscoveryEndpoint
+2022-09-22 19:54:16.804 +03:00 [INF] Invoking IdentityServer endpoint: IdentityServer4.Endpoints.DiscoveryEndpoint for /.well-known/openid-configuration
+2022-09-22 19:54:16.804 +03:00 [DBG] Start discovery request
+2022-09-22 19:54:16.815 +03:00 [DBG] CORS request made for path: /.well-known/openid-configuration from origin: http://localhost:3000
+2022-09-22 19:54:16.815 +03:00 [DBG] Client list checked and origin: http://localhost:3000 is allowed
+2022-09-22 19:54:16.815 +03:00 [DBG] CorsPolicyService allowed origin: http://localhost:3000
+2022-09-22 19:54:16.815 +03:00 [DBG] Request path /.well-known/openid-configuration matched to endpoint type Discovery
+2022-09-22 19:54:16.815 +03:00 [DBG] Endpoint enabled: Discovery, successfully created handler: IdentityServer4.Endpoints.DiscoveryEndpoint
+2022-09-22 19:54:16.815 +03:00 [INF] Invoking IdentityServer endpoint: IdentityServer4.Endpoints.DiscoveryEndpoint for /.well-known/openid-configuration
+2022-09-22 19:54:16.816 +03:00 [DBG] Start discovery request
+2022-09-22 19:54:16.820 +03:00 [DBG] Request path /connect/checksession matched to endpoint type Checksession
+2022-09-22 19:54:16.820 +03:00 [DBG] Endpoint enabled: Checksession, successfully created handler: IdentityServer4.Endpoints.CheckSessionEndpoint
+2022-09-22 19:54:16.820 +03:00 [INF] Invoking IdentityServer endpoint: IdentityServer4.Endpoints.CheckSessionEndpoint for /connect/checksession
+2022-09-22 19:54:16.820 +03:00 [DBG] Rendering check session result
+2022-09-22 19:54:16.827 +03:00 [DBG] CORS request made for path: /connect/token from origin: http://localhost:3000
+2022-09-22 19:54:16.828 +03:00 [DBG] Client list checked and origin: http://localhost:3000 is allowed
+2022-09-22 19:54:16.828 +03:00 [DBG] CorsPolicyService allowed origin: http://localhost:3000
+2022-09-22 19:54:16.828 +03:00 [DBG] Request path /connect/token matched to endpoint type Token
+2022-09-22 19:54:16.828 +03:00 [DBG] Endpoint enabled: Token, successfully created handler: IdentityServer4.Endpoints.TokenEndpoint
+2022-09-22 19:54:16.828 +03:00 [INF] Invoking IdentityServer endpoint: IdentityServer4.Endpoints.TokenEndpoint for /connect/token
+2022-09-22 19:54:16.829 +03:00 [DBG] Start token request.
+2022-09-22 19:54:16.829 +03:00 [DBG] Start client validation
+2022-09-22 19:54:16.829 +03:00 [DBG] Start parsing Basic Authentication secret
+2022-09-22 19:54:16.829 +03:00 [DBG] Start parsing for secret in post body
+2022-09-22 19:54:16.829 +03:00 [DBG] client id without secret found
+2022-09-22 19:54:16.829 +03:00 [DBG] Parser found secret: PostBodySecretParser
+2022-09-22 19:54:16.829 +03:00 [DBG] Secret id found: pow-web-app
+2022-09-22 19:54:16.829 +03:00 [DBG] client configuration validation for client pow-web-app succeeded.
+2022-09-22 19:54:16.829 +03:00 [DBG] Public Client - skipping secret validation success
+2022-09-22 19:54:16.829 +03:00 [DBG] Client validation success
+2022-09-22 19:54:16.829 +03:00 [DBG] Start token request validation
+2022-09-22 19:54:16.829 +03:00 [DBG] Start validation of authorization code token request
+2022-09-22 19:54:16.830 +03:00 [DBG] Client required a proof key for code exchange. Starting PKCE validation
+2022-09-22 19:54:16.830 +03:00 [DBG] Validation of authorization code token request success
+2022-09-22 19:54:16.830 +03:00 [INF] Token request validation success, {"ClientId":"pow-web-app","ClientName":"Pow Web","GrantType":"authorization_code","Scopes":null,"AuthorizationCode":"****2C74","RefreshToken":"********","UserName":null,"AuthenticationContextReferenceClasses":null,"Tenant":null,"IdP":null,"Raw":{"client_id":"pow-web-app","code":"2E7F3AA2A5AC2F420571A3FE15E91417BAB28C02F5D6ACAF19BBC1B8AAA02C74","redirect_uri":"http://localhost:3000/signin-oidc","code_verifier":"a9b2b0ef4d6d47c0b36988d87f1a9935f2735ccf6fba4756bde96f7349c8d9992af92b15d3354f9caf8be7e29f2ab4b8","grant_type":"authorization_code"},"$type":"TokenRequestValidationLog"}
+2022-09-22 19:54:16.830 +03:00 [DBG] client configuration validation for client pow-web-app succeeded.
+2022-09-22 19:54:16.830 +03:00 [DBG] Getting claims for access token for client: pow-web-app
+2022-09-22 19:54:16.830 +03:00 [DBG] Getting claims for access token for subject: c0749054-3b91-4b41-b171-cb8164b008cf
+2022-09-22 19:54:16.832 +03:00 [DBG] client configuration validation for client pow-web-app succeeded.
+2022-09-22 19:54:16.832 +03:00 [DBG] Getting claims for identity token for subject: c0749054-3b91-4b41-b171-cb8164b008cf and client: pow-web-app
+2022-09-22 19:54:16.832 +03:00 [DBG] In addition to an id_token, an access_token was requested. No claims other than sub are included in the id_token. To obtain more user claims, either use the user info endpoint or set AlwaysIncludeUserClaimsInIdToken on the client configuration.
+2022-09-22 19:54:16.833 +03:00 [DBG] Token request success.
+2022-09-22 19:54:27.506 +03:00 [DBG] CORS request made for path: /.well-known/openid-configuration from origin: http://localhost:3000
+2022-09-22 19:54:27.506 +03:00 [DBG] Client list checked and origin: http://localhost:3000 is allowed
+2022-09-22 19:54:27.506 +03:00 [DBG] CorsPolicyService allowed origin: http://localhost:3000
+2022-09-22 19:54:27.507 +03:00 [DBG] Request path /.well-known/openid-configuration matched to endpoint type Discovery
+2022-09-22 19:54:27.507 +03:00 [DBG] Endpoint enabled: Discovery, successfully created handler: IdentityServer4.Endpoints.DiscoveryEndpoint
+2022-09-22 19:54:27.507 +03:00 [INF] Invoking IdentityServer endpoint: IdentityServer4.Endpoints.DiscoveryEndpoint for /.well-known/openid-configuration
+2022-09-22 19:54:27.508 +03:00 [DBG] Start discovery request
+2022-09-22 19:54:27.531 +03:00 [DBG] Request path /connect/checksession matched to endpoint type Checksession
+2022-09-22 19:54:27.532 +03:00 [DBG] Endpoint enabled: Checksession, successfully created handler: IdentityServer4.Endpoints.CheckSessionEndpoint
+2022-09-22 19:54:27.532 +03:00 [INF] Invoking IdentityServer endpoint: IdentityServer4.Endpoints.CheckSessionEndpoint for /connect/checksession
+2022-09-22 19:54:27.532 +03:00 [DBG] Rendering check session result
+2022-09-22 19:54:45.057 +03:00 [DBG] CORS request made for path: /.well-known/openid-configuration from origin: http://localhost:3000
+2022-09-22 19:54:45.057 +03:00 [DBG] Client list checked and origin: http://localhost:3000 is allowed
+2022-09-22 19:54:45.057 +03:00 [DBG] CorsPolicyService allowed origin: http://localhost:3000
+2022-09-22 19:54:45.058 +03:00 [DBG] Request path /.well-known/openid-configuration matched to endpoint type Discovery
+2022-09-22 19:54:45.058 +03:00 [DBG] Endpoint enabled: Discovery, successfully created handler: IdentityServer4.Endpoints.DiscoveryEndpoint
+2022-09-22 19:54:45.058 +03:00 [INF] Invoking IdentityServer endpoint: IdentityServer4.Endpoints.DiscoveryEndpoint for /.well-known/openid-configuration
+2022-09-22 19:54:45.058 +03:00 [DBG] Start discovery request
+2022-09-22 19:54:45.089 +03:00 [DBG] Request path /connect/checksession matched to endpoint type Checksession
+2022-09-22 19:54:45.089 +03:00 [DBG] Endpoint enabled: Checksession, successfully created handler: IdentityServer4.Endpoints.CheckSessionEndpoint
+2022-09-22 19:54:45.089 +03:00 [INF] Invoking IdentityServer endpoint: IdentityServer4.Endpoints.CheckSessionEndpoint for /connect/checksession
+2022-09-22 19:54:45.090 +03:00 [DBG] Rendering check session result
+2022-09-22 19:55:02.731 +03:00 [DBG] CORS request made for path: /.well-known/openid-configuration from origin: http://localhost:3000
+2022-09-22 19:55:02.731 +03:00 [DBG] Client list checked and origin: http://localhost:3000 is allowed
+2022-09-22 19:55:02.731 +03:00 [DBG] CorsPolicyService allowed origin: http://localhost:3000
+2022-09-22 19:55:02.731 +03:00 [DBG] Request path /.well-known/openid-configuration matched to endpoint type Discovery
+2022-09-22 19:55:02.731 +03:00 [DBG] Endpoint enabled: Discovery, successfully created handler: IdentityServer4.Endpoints.DiscoveryEndpoint
+2022-09-22 19:55:02.731 +03:00 [INF] Invoking IdentityServer endpoint: IdentityServer4.Endpoints.DiscoveryEndpoint for /.well-known/openid-configuration
+2022-09-22 19:55:02.731 +03:00 [DBG] Start discovery request
+2022-09-22 19:55:02.756 +03:00 [DBG] Request path /connect/checksession matched to endpoint type Checksession
+2022-09-22 19:55:02.756 +03:00 [DBG] Endpoint enabled: Checksession, successfully created handler: IdentityServer4.Endpoints.CheckSessionEndpoint
+2022-09-22 19:55:02.756 +03:00 [INF] Invoking IdentityServer endpoint: IdentityServer4.Endpoints.CheckSessionEndpoint for /connect/checksession
+2022-09-22 19:55:02.757 +03:00 [DBG] Rendering check session result
+2022-09-22 20:03:01.300 +03:00 [INF] Starting host...
+2022-09-22 20:03:02.266 +03:00 [INF] Starting IdentityServer4 version 4.1.2+997a6cdd643e46cd5762b710c4ddc43574cbec2e
+2022-09-22 20:03:02.273 +03:00 [INF] You are using the in-memory version of the persisted grant store. This will store consent decisions, authorization codes, refresh and reference tokens in memory only. If you are using any of those features in production, you want to switch to a different store implementation.
+2022-09-22 20:03:02.275 +03:00 [INF] Using the default authentication scheme Identity.Application for IdentityServer
+2022-09-22 20:03:02.275 +03:00 [DBG] Using Identity.Application as default ASP.NET Core scheme for authentication
+2022-09-22 20:03:02.275 +03:00 [DBG] Using Identity.External as default ASP.NET Core scheme for sign-in
+2022-09-22 20:03:02.275 +03:00 [DBG] Using Identity.External as default ASP.NET Core scheme for sign-out
+2022-09-22 20:03:02.275 +03:00 [DBG] Using Identity.Application as default ASP.NET Core scheme for challenge
+2022-09-22 20:03:02.275 +03:00 [DBG] Using Identity.Application as default ASP.NET Core scheme for forbid
+2022-09-22 20:03:04.581 +03:00 [INF] Application started. Press Ctrl+C to shut down.
+2022-09-22 20:03:04.581 +03:00 [INF] Hosting environment: Development
+2022-09-22 20:03:04.581 +03:00 [INF] Content root path: D:\programming\dotNet\OlegLearning\Sigma_Trainee\PowUkraine\IdentityServer
+2022-09-22 20:03:04.657 +03:00 [DBG] Login Url: /Authorization/Login
+2022-09-22 20:03:04.658 +03:00 [DBG] Login Return Url Parameter: ReturnUrl
+2022-09-22 20:03:04.658 +03:00 [DBG] Logout Url: /Authorization/Logout
+2022-09-22 20:03:04.658 +03:00 [DBG] ConsentUrl Url: /consent
+2022-09-22 20:03:04.658 +03:00 [DBG] Consent Return Url Parameter: returnUrl
+2022-09-22 20:03:04.658 +03:00 [DBG] Error Url: /home/error
+2022-09-22 20:03:04.658 +03:00 [DBG] Error Id Parameter: errorId
+2022-09-22 20:03:37.198 +03:00 [INF] Starting host...
+2022-09-22 20:03:38.139 +03:00 [INF] Starting IdentityServer4 version 4.1.2+997a6cdd643e46cd5762b710c4ddc43574cbec2e
+2022-09-22 20:03:38.147 +03:00 [INF] You are using the in-memory version of the persisted grant store. This will store consent decisions, authorization codes, refresh and reference tokens in memory only. If you are using any of those features in production, you want to switch to a different store implementation.
+2022-09-22 20:03:38.148 +03:00 [INF] Using the default authentication scheme Identity.Application for IdentityServer
+2022-09-22 20:03:38.148 +03:00 [DBG] Using Identity.Application as default ASP.NET Core scheme for authentication
+2022-09-22 20:03:38.148 +03:00 [DBG] Using Identity.External as default ASP.NET Core scheme for sign-in
+2022-09-22 20:03:38.148 +03:00 [DBG] Using Identity.External as default ASP.NET Core scheme for sign-out
+2022-09-22 20:03:38.148 +03:00 [DBG] Using Identity.Application as default ASP.NET Core scheme for challenge
+2022-09-22 20:03:38.148 +03:00 [DBG] Using Identity.Application as default ASP.NET Core scheme for forbid
+2022-09-22 20:03:39.296 +03:00 [INF] Application started. Press Ctrl+C to shut down.
+2022-09-22 20:03:39.296 +03:00 [INF] Hosting environment: Development
+2022-09-22 20:03:39.296 +03:00 [INF] Content root path: D:\programming\dotNet\OlegLearning\Sigma_Trainee\PowUkraine\IdentityServer
+2022-09-22 20:03:39.372 +03:00 [DBG] Login Url: /Authorization/Login
+2022-09-22 20:03:39.373 +03:00 [DBG] Login Return Url Parameter: ReturnUrl
+2022-09-22 20:03:39.373 +03:00 [DBG] Logout Url: /Authorization/Logout
+2022-09-22 20:03:39.373 +03:00 [DBG] ConsentUrl Url: /consent
+2022-09-22 20:03:39.373 +03:00 [DBG] Consent Return Url Parameter: returnUrl
+2022-09-22 20:03:39.373 +03:00 [DBG] Error Url: /home/error
+2022-09-22 20:03:39.373 +03:00 [DBG] Error Id Parameter: errorId
+2022-09-22 20:06:37.346 +03:00 [INF] Starting host...
+2022-09-22 20:06:38.416 +03:00 [INF] Starting IdentityServer4 version 4.1.2+997a6cdd643e46cd5762b710c4ddc43574cbec2e
+2022-09-22 20:06:38.426 +03:00 [INF] You are using the in-memory version of the persisted grant store. This will store consent decisions, authorization codes, refresh and reference tokens in memory only. If you are using any of those features in production, you want to switch to a different store implementation.
+2022-09-22 20:06:38.429 +03:00 [INF] Using the default authentication scheme Identity.Application for IdentityServer
+2022-09-22 20:06:38.429 +03:00 [DBG] Using Identity.Application as default ASP.NET Core scheme for authentication
+2022-09-22 20:06:38.429 +03:00 [DBG] Using Identity.External as default ASP.NET Core scheme for sign-in
+2022-09-22 20:06:38.429 +03:00 [DBG] Using Identity.External as default ASP.NET Core scheme for sign-out
+2022-09-22 20:06:38.429 +03:00 [DBG] Using Identity.Application as default ASP.NET Core scheme for challenge
+2022-09-22 20:06:38.429 +03:00 [DBG] Using Identity.Application as default ASP.NET Core scheme for forbid
+2022-09-22 20:06:39.517 +03:00 [INF] Application started. Press Ctrl+C to shut down.
+2022-09-22 20:06:39.517 +03:00 [INF] Hosting environment: Development
+2022-09-22 20:06:39.517 +03:00 [INF] Content root path: D:\programming\dotNet\OlegLearning\Sigma_Trainee\PowUkraine\IdentityServer
+2022-09-22 20:06:39.594 +03:00 [DBG] Login Url: /Authorization/Login
+2022-09-22 20:06:39.595 +03:00 [DBG] Login Return Url Parameter: ReturnUrl
+2022-09-22 20:06:39.595 +03:00 [DBG] Logout Url: /Authorization/Logout
+2022-09-22 20:06:39.595 +03:00 [DBG] ConsentUrl Url: /consent
+2022-09-22 20:06:39.595 +03:00 [DBG] Consent Return Url Parameter: returnUrl
+2022-09-22 20:06:39.595 +03:00 [DBG] Error Url: /home/error
+2022-09-22 20:06:39.595 +03:00 [DBG] Error Id Parameter: errorId
+2022-09-22 20:06:45.507 +03:00 [DBG] CORS request made for path: /.well-known/openid-configuration from origin: http://localhost:3000
+2022-09-22 20:06:45.509 +03:00 [DBG] Client list checked and origin: http://localhost:3000 is allowed
+2022-09-22 20:06:45.509 +03:00 [DBG] CorsPolicyService allowed origin: http://localhost:3000
+2022-09-22 20:06:45.512 +03:00 [DBG] Request path /.well-known/openid-configuration matched to endpoint type Discovery
+2022-09-22 20:06:45.514 +03:00 [DBG] Endpoint enabled: Discovery, successfully created handler: IdentityServer4.Endpoints.DiscoveryEndpoint
+2022-09-22 20:06:45.514 +03:00 [INF] Invoking IdentityServer endpoint: IdentityServer4.Endpoints.DiscoveryEndpoint for /.well-known/openid-configuration
+2022-09-22 20:06:45.515 +03:00 [DBG] Start discovery request
+2022-09-22 20:06:46.197 +03:00 [DBG] CORS request made for path: /.well-known/openid-configuration from origin: http://localhost:3000
+2022-09-22 20:06:46.197 +03:00 [DBG] Client list checked and origin: http://localhost:3000 is allowed
+2022-09-22 20:06:46.197 +03:00 [DBG] CorsPolicyService allowed origin: http://localhost:3000
+2022-09-22 20:06:46.203 +03:00 [DBG] Request path /.well-known/openid-configuration matched to endpoint type Discovery
+2022-09-22 20:06:46.204 +03:00 [DBG] Endpoint enabled: Discovery, successfully created handler: IdentityServer4.Endpoints.DiscoveryEndpoint
+2022-09-22 20:06:46.204 +03:00 [INF] Invoking IdentityServer endpoint: IdentityServer4.Endpoints.DiscoveryEndpoint for /.well-known/openid-configuration
+2022-09-22 20:06:46.204 +03:00 [DBG] Start discovery request
+2022-09-22 20:06:46.210 +03:00 [DBG] CORS request made for path: /.well-known/openid-configuration from origin: http://localhost:3000
+2022-09-22 20:06:46.210 +03:00 [DBG] Client list checked and origin: http://localhost:3000 is allowed
+2022-09-22 20:06:46.210 +03:00 [DBG] CorsPolicyService allowed origin: http://localhost:3000
+2022-09-22 20:06:46.211 +03:00 [DBG] Request path /.well-known/openid-configuration matched to endpoint type Discovery
+2022-09-22 20:06:46.223 +03:00 [DBG] Endpoint enabled: Discovery, successfully created handler: IdentityServer4.Endpoints.DiscoveryEndpoint
+2022-09-22 20:06:46.223 +03:00 [INF] Invoking IdentityServer endpoint: IdentityServer4.Endpoints.DiscoveryEndpoint for /.well-known/openid-configuration
+2022-09-22 20:06:46.223 +03:00 [DBG] Start discovery request
+2022-09-22 20:06:46.309 +03:00 [DBG] Request path /connect/authorize matched to endpoint type Authorize
+2022-09-22 20:06:46.322 +03:00 [DBG] Endpoint enabled: Authorize, successfully created handler: IdentityServer4.Endpoints.AuthorizeEndpoint
+2022-09-22 20:06:46.322 +03:00 [INF] Invoking IdentityServer endpoint: IdentityServer4.Endpoints.AuthorizeEndpoint for /connect/authorize
+2022-09-22 20:06:46.323 +03:00 [DBG] Start authorize request
+2022-09-22 20:06:46.327 +03:00 [DBG] User in authorize request: c0749054-3b91-4b41-b171-cb8164b008cf
+2022-09-22 20:06:46.329 +03:00 [DBG] Start authorize request protocol validation
+2022-09-22 20:06:46.337 +03:00 [DBG] client configuration validation for client pow-web-app succeeded.
+2022-09-22 20:06:46.344 +03:00 [DBG] Checking for PKCE parameters
+2022-09-22 20:06:46.359 +03:00 [DBG] Calling into custom validator: IdentityServer4.Validation.DefaultCustomAuthorizeRequestValidator
+2022-09-22 20:06:46.368 +03:00 [DBG] ValidatedAuthorizeRequest
+{"ClientId":"pow-web-app","ClientName":"Pow Web","RedirectUri":"http://localhost:3000/signin-oidc","AllowedRedirectUris":["http://localhost:3000/signin-oidc"],"SubjectId":"c0749054-3b91-4b41-b171-cb8164b008cf","ResponseType":"code","ResponseMode":"query","GrantType":"authorization_code","RequestedScopes":"openid profile PowWebApi","State":"17cb7ccb1c02450fa35de262e0a9fb4f","UiLocales":null,"Nonce":null,"AuthenticationContextReferenceClasses":null,"DisplayMode":null,"PromptMode":"","MaxAge":null,"LoginHint":null,"SessionId":"5131A8A23E3041B32C3AA90539DABDD6","Raw":{"client_id":"pow-web-app","redirect_uri":"http://localhost:3000/signin-oidc","response_type":"code","scope":"openid profile PowWebApi","state":"17cb7ccb1c02450fa35de262e0a9fb4f","code_challenge":"TW8G9BGFoxaNFU7WRFyTMHP53FOpgPPRFvGMeyl7jvc","code_challenge_method":"S256","response_mode":"query"},"$type":"AuthorizeRequestValidationLog"}
+2022-09-22 20:06:46.378 +03:00 [DBG] Client is configured to not require consent, no consent is required
+2022-09-22 20:06:46.380 +03:00 [DBG] Creating Authorization Code Flow response.
+2022-09-22 20:06:46.433 +03:00 [DBG] Authorize endpoint response
+{"SubjectId":"c0749054-3b91-4b41-b171-cb8164b008cf","ClientId":"pow-web-app","RedirectUri":"http://localhost:3000/signin-oidc","State":"17cb7ccb1c02450fa35de262e0a9fb4f","Scope":"openid profile PowWebApi","Error":null,"ErrorDescription":null,"$type":"AuthorizeResponseLog"}
+2022-09-22 20:06:51.349 +03:00 [DBG] CORS request made for path: /.well-known/openid-configuration from origin: http://localhost:3000
+2022-09-22 20:06:51.350 +03:00 [DBG] Client list checked and origin: http://localhost:3000 is allowed
+2022-09-22 20:06:51.350 +03:00 [DBG] CorsPolicyService allowed origin: http://localhost:3000
+2022-09-22 20:06:51.352 +03:00 [DBG] Request path /.well-known/openid-configuration matched to endpoint type Discovery
+2022-09-22 20:06:51.354 +03:00 [DBG] Endpoint enabled: Discovery, successfully created handler: IdentityServer4.Endpoints.DiscoveryEndpoint
+2022-09-22 20:06:51.354 +03:00 [INF] Invoking IdentityServer endpoint: IdentityServer4.Endpoints.DiscoveryEndpoint for /.well-known/openid-configuration
+2022-09-22 20:06:51.354 +03:00 [DBG] Start discovery request
+2022-09-22 20:06:51.361 +03:00 [DBG] CORS request made for path: /.well-known/openid-configuration from origin: http://localhost:3000
+2022-09-22 20:06:51.361 +03:00 [DBG] Client list checked and origin: http://localhost:3000 is allowed
+2022-09-22 20:06:51.361 +03:00 [DBG] CorsPolicyService allowed origin: http://localhost:3000
+2022-09-22 20:06:51.363 +03:00 [DBG] Request path /.well-known/openid-configuration matched to endpoint type Discovery
+2022-09-22 20:06:51.364 +03:00 [DBG] Endpoint enabled: Discovery, successfully created handler: IdentityServer4.Endpoints.DiscoveryEndpoint
+2022-09-22 20:06:51.364 +03:00 [INF] Invoking IdentityServer endpoint: IdentityServer4.Endpoints.DiscoveryEndpoint for /.well-known/openid-configuration
+2022-09-22 20:06:51.364 +03:00 [DBG] Start discovery request
+2022-09-22 20:06:51.472 +03:00 [DBG] Request path /connect/authorize matched to endpoint type Authorize
+2022-09-22 20:06:51.472 +03:00 [DBG] Endpoint enabled: Authorize, successfully created handler: IdentityServer4.Endpoints.AuthorizeEndpoint
+2022-09-22 20:06:51.472 +03:00 [INF] Invoking IdentityServer endpoint: IdentityServer4.Endpoints.AuthorizeEndpoint for /connect/authorize
+2022-09-22 20:06:51.472 +03:00 [DBG] Start authorize request
+2022-09-22 20:06:51.473 +03:00 [DBG] User in authorize request: c0749054-3b91-4b41-b171-cb8164b008cf
+2022-09-22 20:06:51.473 +03:00 [DBG] Start authorize request protocol validation
+2022-09-22 20:06:51.473 +03:00 [DBG] client configuration validation for client pow-web-app succeeded.
+2022-09-22 20:06:51.473 +03:00 [DBG] Checking for PKCE parameters
+2022-09-22 20:06:51.474 +03:00 [DBG] Calling into custom validator: IdentityServer4.Validation.DefaultCustomAuthorizeRequestValidator
+2022-09-22 20:06:51.474 +03:00 [DBG] ValidatedAuthorizeRequest
+{"ClientId":"pow-web-app","ClientName":"Pow Web","RedirectUri":"http://localhost:3000/signin-oidc","AllowedRedirectUris":["http://localhost:3000/signin-oidc"],"SubjectId":"c0749054-3b91-4b41-b171-cb8164b008cf","ResponseType":"code","ResponseMode":"query","GrantType":"authorization_code","RequestedScopes":"openid profile PowWebApi","State":"e37cd69610504a639bbf88cba329f97c","UiLocales":null,"Nonce":null,"AuthenticationContextReferenceClasses":null,"DisplayMode":null,"PromptMode":"","MaxAge":null,"LoginHint":null,"SessionId":"5131A8A23E3041B32C3AA90539DABDD6","Raw":{"client_id":"pow-web-app","redirect_uri":"http://localhost:3000/signin-oidc","response_type":"code","scope":"openid profile PowWebApi","state":"e37cd69610504a639bbf88cba329f97c","code_challenge":"3DJ4gab5j6b4IagnXBf_vjk1olVzgfzLHvjs6_6XPqc","code_challenge_method":"S256","response_mode":"query"},"$type":"AuthorizeRequestValidationLog"}
+2022-09-22 20:06:51.474 +03:00 [DBG] Client is configured to not require consent, no consent is required
+2022-09-22 20:06:51.474 +03:00 [DBG] Creating Authorization Code Flow response.
+2022-09-22 20:06:51.475 +03:00 [DBG] Authorize endpoint response
+{"SubjectId":"c0749054-3b91-4b41-b171-cb8164b008cf","ClientId":"pow-web-app","RedirectUri":"http://localhost:3000/signin-oidc","State":"e37cd69610504a639bbf88cba329f97c","Scope":"openid profile PowWebApi","Error":null,"ErrorDescription":null,"$type":"AuthorizeResponseLog"}
+2022-09-22 20:06:51.908 +03:00 [DBG] CORS request made for path: /.well-known/openid-configuration from origin: http://localhost:3000
+2022-09-22 20:06:51.909 +03:00 [DBG] Client list checked and origin: http://localhost:3000 is allowed
+2022-09-22 20:06:51.909 +03:00 [DBG] CorsPolicyService allowed origin: http://localhost:3000
+2022-09-22 20:06:51.909 +03:00 [DBG] Request path /.well-known/openid-configuration matched to endpoint type Discovery
+2022-09-22 20:06:51.910 +03:00 [DBG] Endpoint enabled: Discovery, successfully created handler: IdentityServer4.Endpoints.DiscoveryEndpoint
+2022-09-22 20:06:51.910 +03:00 [INF] Invoking IdentityServer endpoint: IdentityServer4.Endpoints.DiscoveryEndpoint for /.well-known/openid-configuration
+2022-09-22 20:06:51.910 +03:00 [DBG] Start discovery request
+2022-09-22 20:06:51.921 +03:00 [DBG] CORS request made for path: /connect/token from origin: http://localhost:3000
+2022-09-22 20:06:51.921 +03:00 [DBG] Client list checked and origin: http://localhost:3000 is allowed
+2022-09-22 20:06:51.921 +03:00 [DBG] CorsPolicyService allowed origin: http://localhost:3000
+2022-09-22 20:06:51.921 +03:00 [DBG] Request path /connect/token matched to endpoint type Token
+2022-09-22 20:06:51.923 +03:00 [DBG] Endpoint enabled: Token, successfully created handler: IdentityServer4.Endpoints.TokenEndpoint
+2022-09-22 20:06:51.923 +03:00 [INF] Invoking IdentityServer endpoint: IdentityServer4.Endpoints.TokenEndpoint for /connect/token
+2022-09-22 20:06:51.925 +03:00 [DBG] Start token request.
+2022-09-22 20:06:51.927 +03:00 [DBG] Start client validation
+2022-09-22 20:06:51.929 +03:00 [DBG] Start parsing Basic Authentication secret
+2022-09-22 20:06:51.930 +03:00 [DBG] Start parsing for secret in post body
+2022-09-22 20:06:51.936 +03:00 [DBG] client id without secret found
+2022-09-22 20:06:51.936 +03:00 [DBG] Parser found secret: PostBodySecretParser
+2022-09-22 20:06:51.936 +03:00 [DBG] Secret id found: pow-web-app
+2022-09-22 20:06:51.936 +03:00 [DBG] client configuration validation for client pow-web-app succeeded.
+2022-09-22 20:06:51.936 +03:00 [DBG] Public Client - skipping secret validation success
+2022-09-22 20:06:51.936 +03:00 [DBG] Client validation success
+2022-09-22 20:06:51.938 +03:00 [DBG] Start token request validation
+2022-09-22 20:06:51.941 +03:00 [DBG] Start validation of authorization code token request
+2022-09-22 20:06:51.963 +03:00 [DBG] Client required a proof key for code exchange. Starting PKCE validation
+2022-09-22 20:06:51.963 +03:00 [DBG] Validation of authorization code token request success
+2022-09-22 20:06:51.964 +03:00 [INF] Token request validation success, {"ClientId":"pow-web-app","ClientName":"Pow Web","GrantType":"authorization_code","Scopes":null,"AuthorizationCode":"****21D1","RefreshToken":"********","UserName":null,"AuthenticationContextReferenceClasses":null,"Tenant":null,"IdP":null,"Raw":{"client_id":"pow-web-app","code":"732C04496FD118F60FA553D8E9B00CFC74E03BCA40D6EB81846A7BCC70CA21D1","redirect_uri":"http://localhost:3000/signin-oidc","code_verifier":"3a1d53ad8a5445f7ae62890bc4cb099f0c651e856cb24035950e600dfd1236af452438743c8b4dff8efb0544f2723c0c","grant_type":"authorization_code"},"$type":"TokenRequestValidationLog"}
+2022-09-22 20:06:51.967 +03:00 [DBG] client configuration validation for client pow-web-app succeeded.
+2022-09-22 20:06:51.975 +03:00 [DBG] Getting claims for access token for client: pow-web-app
+2022-09-22 20:06:51.975 +03:00 [DBG] Getting claims for access token for subject: c0749054-3b91-4b41-b171-cb8164b008cf
+2022-09-22 20:06:52.013 +03:00 [DBG] client configuration validation for client pow-web-app succeeded.
+2022-09-22 20:06:52.017 +03:00 [DBG] Getting claims for identity token for subject: c0749054-3b91-4b41-b171-cb8164b008cf and client: pow-web-app
+2022-09-22 20:06:52.017 +03:00 [DBG] In addition to an id_token, an access_token was requested. No claims other than sub are included in the id_token. To obtain more user claims, either use the user info endpoint or set AlwaysIncludeUserClaimsInIdToken on the client configuration.
+2022-09-22 20:06:52.019 +03:00 [DBG] Token request success.
+2022-09-22 20:06:52.041 +03:00 [DBG] Request path /connect/checksession matched to endpoint type Checksession
+2022-09-22 20:06:52.041 +03:00 [DBG] Endpoint enabled: Checksession, successfully created handler: IdentityServer4.Endpoints.CheckSessionEndpoint
+2022-09-22 20:06:52.041 +03:00 [INF] Invoking IdentityServer endpoint: IdentityServer4.Endpoints.CheckSessionEndpoint for /connect/checksession
+2022-09-22 20:06:52.042 +03:00 [DBG] Rendering check session result
+2022-09-22 20:07:11.889 +03:00 [DBG] Request path /connect/authorize matched to endpoint type Authorize
+2022-09-22 20:07:11.894 +03:00 [DBG] Endpoint enabled: Authorize, successfully created handler: IdentityServer4.Endpoints.AuthorizeEndpoint
+2022-09-22 20:07:11.895 +03:00 [INF] Invoking IdentityServer endpoint: IdentityServer4.Endpoints.AuthorizeEndpoint for /connect/authorize
+2022-09-22 20:07:11.895 +03:00 [DBG] Start authorize request
+2022-09-22 20:07:11.895 +03:00 [DBG] User in authorize request: c0749054-3b91-4b41-b171-cb8164b008cf
+2022-09-22 20:07:11.895 +03:00 [DBG] Start authorize request protocol validation
+2022-09-22 20:07:11.895 +03:00 [DBG] client configuration validation for client pow-web-app succeeded.
+2022-09-22 20:07:11.895 +03:00 [DBG] Checking for PKCE parameters
+2022-09-22 20:07:11.896 +03:00 [DBG] Calling into custom validator: IdentityServer4.Validation.DefaultCustomAuthorizeRequestValidator
+2022-09-22 20:07:11.896 +03:00 [DBG] ValidatedAuthorizeRequest
+{"ClientId":"pow-web-app","ClientName":"Pow Web","RedirectUri":"http://localhost:3000/signin-oidc","AllowedRedirectUris":["http://localhost:3000/signin-oidc"],"SubjectId":"c0749054-3b91-4b41-b171-cb8164b008cf","ResponseType":"code","ResponseMode":"query","GrantType":"authorization_code","RequestedScopes":"openid profile PowWebApi","State":"a9808f12c80b469aa95e6b616697cea3","UiLocales":null,"Nonce":null,"AuthenticationContextReferenceClasses":null,"DisplayMode":null,"PromptMode":"","MaxAge":null,"LoginHint":null,"SessionId":"5131A8A23E3041B32C3AA90539DABDD6","Raw":{"client_id":"pow-web-app","redirect_uri":"http://localhost:3000/signin-oidc","response_type":"code","scope":"openid profile PowWebApi","state":"a9808f12c80b469aa95e6b616697cea3","code_challenge":"9BJiIWs7g-ywneuS6Q0l-hJCuGSuG2H0VUe59VfVXnM","code_challenge_method":"S256","response_mode":"query"},"$type":"AuthorizeRequestValidationLog"}
+2022-09-22 20:07:11.896 +03:00 [DBG] Client is configured to not require consent, no consent is required
+2022-09-22 20:07:11.896 +03:00 [DBG] Creating Authorization Code Flow response.
+2022-09-22 20:07:11.897 +03:00 [DBG] Authorize endpoint response
+{"SubjectId":"c0749054-3b91-4b41-b171-cb8164b008cf","ClientId":"pow-web-app","RedirectUri":"http://localhost:3000/signin-oidc","State":"a9808f12c80b469aa95e6b616697cea3","Scope":"openid profile PowWebApi","Error":null,"ErrorDescription":null,"$type":"AuthorizeResponseLog"}
+2022-09-22 20:07:12.375 +03:00 [DBG] CORS request made for path: /.well-known/openid-configuration from origin: http://localhost:3000
+2022-09-22 20:07:12.375 +03:00 [DBG] Client list checked and origin: http://localhost:3000 is allowed
+2022-09-22 20:07:12.375 +03:00 [DBG] CorsPolicyService allowed origin: http://localhost:3000
+2022-09-22 20:07:12.375 +03:00 [DBG] Request path /.well-known/openid-configuration matched to endpoint type Discovery
+2022-09-22 20:07:12.376 +03:00 [DBG] Endpoint enabled: Discovery, successfully created handler: IdentityServer4.Endpoints.DiscoveryEndpoint
+2022-09-22 20:07:12.376 +03:00 [INF] Invoking IdentityServer endpoint: IdentityServer4.Endpoints.DiscoveryEndpoint for /.well-known/openid-configuration
+2022-09-22 20:07:12.376 +03:00 [DBG] Start discovery request
+2022-09-22 20:07:12.387 +03:00 [DBG] CORS request made for path: /.well-known/openid-configuration from origin: http://localhost:3000
+2022-09-22 20:07:12.387 +03:00 [DBG] Client list checked and origin: http://localhost:3000 is allowed
+2022-09-22 20:07:12.388 +03:00 [DBG] CorsPolicyService allowed origin: http://localhost:3000
+2022-09-22 20:07:12.388 +03:00 [DBG] Request path /.well-known/openid-configuration matched to endpoint type Discovery
+2022-09-22 20:07:12.389 +03:00 [DBG] Endpoint enabled: Discovery, successfully created handler: IdentityServer4.Endpoints.DiscoveryEndpoint
+2022-09-22 20:07:12.389 +03:00 [INF] Invoking IdentityServer endpoint: IdentityServer4.Endpoints.DiscoveryEndpoint for /.well-known/openid-configuration
+2022-09-22 20:07:12.389 +03:00 [DBG] Start discovery request
+2022-09-22 20:07:12.397 +03:00 [DBG] Request path /connect/checksession matched to endpoint type Checksession
+2022-09-22 20:07:12.397 +03:00 [DBG] Endpoint enabled: Checksession, successfully created handler: IdentityServer4.Endpoints.CheckSessionEndpoint
+2022-09-22 20:07:12.397 +03:00 [INF] Invoking IdentityServer endpoint: IdentityServer4.Endpoints.CheckSessionEndpoint for /connect/checksession
+2022-09-22 20:07:12.397 +03:00 [DBG] Rendering check session result
+2022-09-22 20:07:12.409 +03:00 [DBG] CORS request made for path: /connect/token from origin: http://localhost:3000
+2022-09-22 20:07:12.409 +03:00 [DBG] Client list checked and origin: http://localhost:3000 is allowed
+2022-09-22 20:07:12.409 +03:00 [DBG] CorsPolicyService allowed origin: http://localhost:3000
+2022-09-22 20:07:12.409 +03:00 [DBG] Request path /connect/token matched to endpoint type Token
+2022-09-22 20:07:12.410 +03:00 [DBG] Endpoint enabled: Token, successfully created handler: IdentityServer4.Endpoints.TokenEndpoint
+2022-09-22 20:07:12.410 +03:00 [INF] Invoking IdentityServer endpoint: IdentityServer4.Endpoints.TokenEndpoint for /connect/token
+2022-09-22 20:07:12.410 +03:00 [DBG] Start token request.
+2022-09-22 20:07:12.410 +03:00 [DBG] Start client validation
+2022-09-22 20:07:12.410 +03:00 [DBG] Start parsing Basic Authentication secret
+2022-09-22 20:07:12.410 +03:00 [DBG] Start parsing for secret in post body
+2022-09-22 20:07:12.411 +03:00 [DBG] client id without secret found
+2022-09-22 20:07:12.411 +03:00 [DBG] Parser found secret: PostBodySecretParser
+2022-09-22 20:07:12.411 +03:00 [DBG] Secret id found: pow-web-app
+2022-09-22 20:07:12.411 +03:00 [DBG] client configuration validation for client pow-web-app succeeded.
+2022-09-22 20:07:12.412 +03:00 [DBG] Public Client - skipping secret validation success
+2022-09-22 20:07:12.412 +03:00 [DBG] Client validation success
+2022-09-22 20:07:12.412 +03:00 [DBG] Start token request validation
+2022-09-22 20:07:12.412 +03:00 [DBG] Start validation of authorization code token request
+2022-09-22 20:07:12.413 +03:00 [DBG] Client required a proof key for code exchange. Starting PKCE validation
+2022-09-22 20:07:12.413 +03:00 [DBG] Validation of authorization code token request success
+2022-09-22 20:07:12.413 +03:00 [INF] Token request validation success, {"ClientId":"pow-web-app","ClientName":"Pow Web","GrantType":"authorization_code","Scopes":null,"AuthorizationCode":"****9C9B","RefreshToken":"********","UserName":null,"AuthenticationContextReferenceClasses":null,"Tenant":null,"IdP":null,"Raw":{"client_id":"pow-web-app","code":"8AD85E7B5A3E3D8A8C979849E08B878A44870CDCDFF0644857C1B8CADB489C9B","redirect_uri":"http://localhost:3000/signin-oidc","code_verifier":"f3299a02280a42929cbda26615e2a79b940e66c39de8430b8d1634cf4224257e5082070bda174f0f81c2876095cf5b90","grant_type":"authorization_code"},"$type":"TokenRequestValidationLog"}
+2022-09-22 20:07:12.413 +03:00 [DBG] client configuration validation for client pow-web-app succeeded.
+2022-09-22 20:07:12.413 +03:00 [DBG] Getting claims for access token for client: pow-web-app
+2022-09-22 20:07:12.414 +03:00 [DBG] Getting claims for access token for subject: c0749054-3b91-4b41-b171-cb8164b008cf
+2022-09-22 20:07:12.415 +03:00 [DBG] client configuration validation for client pow-web-app succeeded.
+2022-09-22 20:07:12.415 +03:00 [DBG] Getting claims for identity token for subject: c0749054-3b91-4b41-b171-cb8164b008cf and client: pow-web-app
+2022-09-22 20:07:12.415 +03:00 [DBG] In addition to an id_token, an access_token was requested. No claims other than sub are included in the id_token. To obtain more user claims, either use the user info endpoint or set AlwaysIncludeUserClaimsInIdToken on the client configuration.
+2022-09-22 20:07:12.416 +03:00 [DBG] Token request success.
+2022-09-22 20:07:41.778 +03:00 [DBG] CORS request made for path: /.well-known/openid-configuration from origin: http://localhost:3000
+2022-09-22 20:07:41.780 +03:00 [DBG] Client list checked and origin: http://localhost:3000 is allowed
+2022-09-22 20:07:41.780 +03:00 [DBG] CorsPolicyService allowed origin: http://localhost:3000
+2022-09-22 20:07:41.780 +03:00 [DBG] Request path /.well-known/openid-configuration matched to endpoint type Discovery
+2022-09-22 20:07:41.781 +03:00 [DBG] Endpoint enabled: Discovery, successfully created handler: IdentityServer4.Endpoints.DiscoveryEndpoint
+2022-09-22 20:07:41.781 +03:00 [INF] Invoking IdentityServer endpoint: IdentityServer4.Endpoints.DiscoveryEndpoint for /.well-known/openid-configuration
+2022-09-22 20:07:41.781 +03:00 [DBG] Start discovery request
+2022-09-22 20:07:41.788 +03:00 [DBG] CORS request made for path: /.well-known/openid-configuration from origin: http://localhost:3000
+2022-09-22 20:07:41.788 +03:00 [DBG] Client list checked and origin: http://localhost:3000 is allowed
+2022-09-22 20:07:41.788 +03:00 [DBG] CorsPolicyService allowed origin: http://localhost:3000
+2022-09-22 20:07:41.789 +03:00 [DBG] Request path /.well-known/openid-configuration matched to endpoint type Discovery
+2022-09-22 20:07:41.789 +03:00 [DBG] Endpoint enabled: Discovery, successfully created handler: IdentityServer4.Endpoints.DiscoveryEndpoint
+2022-09-22 20:07:41.789 +03:00 [INF] Invoking IdentityServer endpoint: IdentityServer4.Endpoints.DiscoveryEndpoint for /.well-known/openid-configuration
+2022-09-22 20:07:41.789 +03:00 [DBG] Start discovery request
+2022-09-22 20:07:41.790 +03:00 [DBG] CORS request made for path: /.well-known/openid-configuration from origin: http://localhost:3000
+2022-09-22 20:07:41.790 +03:00 [DBG] Client list checked and origin: http://localhost:3000 is allowed
+2022-09-22 20:07:41.790 +03:00 [DBG] CorsPolicyService allowed origin: http://localhost:3000
+2022-09-22 20:07:41.791 +03:00 [DBG] Request path /.well-known/openid-configuration matched to endpoint type Discovery
+2022-09-22 20:07:41.791 +03:00 [DBG] Endpoint enabled: Discovery, successfully created handler: IdentityServer4.Endpoints.DiscoveryEndpoint
+2022-09-22 20:07:41.791 +03:00 [INF] Invoking IdentityServer endpoint: IdentityServer4.Endpoints.DiscoveryEndpoint for /.well-known/openid-configuration
+2022-09-22 20:07:41.791 +03:00 [DBG] Start discovery request
+2022-09-22 20:07:41.893 +03:00 [DBG] Request path /connect/authorize matched to endpoint type Authorize
+2022-09-22 20:07:41.893 +03:00 [DBG] Request path /connect/checksession matched to endpoint type Checksession
+2022-09-22 20:07:41.893 +03:00 [DBG] Endpoint enabled: Authorize, successfully created handler: IdentityServer4.Endpoints.AuthorizeEndpoint
+2022-09-22 20:07:41.893 +03:00 [INF] Invoking IdentityServer endpoint: IdentityServer4.Endpoints.AuthorizeEndpoint for /connect/authorize
+2022-09-22 20:07:41.893 +03:00 [DBG] Start authorize request
+2022-09-22 20:07:41.893 +03:00 [DBG] Endpoint enabled: Checksession, successfully created handler: IdentityServer4.Endpoints.CheckSessionEndpoint
+2022-09-22 20:07:41.893 +03:00 [INF] Invoking IdentityServer endpoint: IdentityServer4.Endpoints.CheckSessionEndpoint for /connect/checksession
+2022-09-22 20:07:41.893 +03:00 [DBG] User in authorize request: c0749054-3b91-4b41-b171-cb8164b008cf
+2022-09-22 20:07:41.893 +03:00 [DBG] Rendering check session result
+2022-09-22 20:07:41.893 +03:00 [DBG] Start authorize request protocol validation
+2022-09-22 20:07:41.894 +03:00 [DBG] client configuration validation for client pow-web-app succeeded.
+2022-09-22 20:07:41.894 +03:00 [DBG] Checking for PKCE parameters
+2022-09-22 20:07:41.895 +03:00 [DBG] Calling into custom validator: IdentityServer4.Validation.DefaultCustomAuthorizeRequestValidator
+2022-09-22 20:07:41.896 +03:00 [DBG] ValidatedAuthorizeRequest
+{"ClientId":"pow-web-app","ClientName":"Pow Web","RedirectUri":"http://localhost:3000/signin-oidc","AllowedRedirectUris":["http://localhost:3000/signin-oidc"],"SubjectId":"c0749054-3b91-4b41-b171-cb8164b008cf","ResponseType":"code","ResponseMode":"query","GrantType":"authorization_code","RequestedScopes":"openid profile PowWebApi","State":"b5b5d7c331a34f39b80b89b794516512","UiLocales":null,"Nonce":null,"AuthenticationContextReferenceClasses":null,"DisplayMode":null,"PromptMode":"","MaxAge":null,"LoginHint":null,"SessionId":"5131A8A23E3041B32C3AA90539DABDD6","Raw":{"client_id":"pow-web-app","redirect_uri":"http://localhost:3000/signin-oidc","response_type":"code","scope":"openid profile PowWebApi","state":"b5b5d7c331a34f39b80b89b794516512","code_challenge":"APLZAp6r4ID46r-JcWyVq8HPqk-rRd-HBsXsKJEkap4","code_challenge_method":"S256","response_mode":"query"},"$type":"AuthorizeRequestValidationLog"}
+2022-09-22 20:07:41.897 +03:00 [DBG] Client is configured to not require consent, no consent is required
+2022-09-22 20:07:41.897 +03:00 [DBG] Creating Authorization Code Flow response.
+2022-09-22 20:07:41.904 +03:00 [DBG] Authorize endpoint response
+{"SubjectId":"c0749054-3b91-4b41-b171-cb8164b008cf","ClientId":"pow-web-app","RedirectUri":"http://localhost:3000/signin-oidc","State":"b5b5d7c331a34f39b80b89b794516512","Scope":"openid profile PowWebApi","Error":null,"ErrorDescription":null,"$type":"AuthorizeResponseLog"}
+2022-09-22 20:07:42.435 +03:00 [DBG] CORS request made for path: /.well-known/openid-configuration from origin: http://localhost:3000
+2022-09-22 20:07:42.435 +03:00 [DBG] Client list checked and origin: http://localhost:3000 is allowed
+2022-09-22 20:07:42.435 +03:00 [DBG] CorsPolicyService allowed origin: http://localhost:3000
+2022-09-22 20:07:42.435 +03:00 [DBG] Request path /.well-known/openid-configuration matched to endpoint type Discovery
+2022-09-22 20:07:42.435 +03:00 [DBG] Endpoint enabled: Discovery, successfully created handler: IdentityServer4.Endpoints.DiscoveryEndpoint
+2022-09-22 20:07:42.435 +03:00 [INF] Invoking IdentityServer endpoint: IdentityServer4.Endpoints.DiscoveryEndpoint for /.well-known/openid-configuration
+2022-09-22 20:07:42.436 +03:00 [DBG] Start discovery request
+2022-09-22 20:07:42.443 +03:00 [DBG] CORS request made for path: /.well-known/openid-configuration from origin: http://localhost:3000
+2022-09-22 20:07:42.443 +03:00 [DBG] Client list checked and origin: http://localhost:3000 is allowed
+2022-09-22 20:07:42.443 +03:00 [DBG] CorsPolicyService allowed origin: http://localhost:3000
+2022-09-22 20:07:42.444 +03:00 [DBG] Request path /.well-known/openid-configuration matched to endpoint type Discovery
+2022-09-22 20:07:42.444 +03:00 [DBG] Endpoint enabled: Discovery, successfully created handler: IdentityServer4.Endpoints.DiscoveryEndpoint
+2022-09-22 20:07:42.444 +03:00 [INF] Invoking IdentityServer endpoint: IdentityServer4.Endpoints.DiscoveryEndpoint for /.well-known/openid-configuration
+2022-09-22 20:07:42.444 +03:00 [DBG] Start discovery request
+2022-09-22 20:07:42.453 +03:00 [DBG] CORS request made for path: /connect/token from origin: http://localhost:3000
+2022-09-22 20:07:42.453 +03:00 [DBG] Request path /connect/checksession matched to endpoint type Checksession
+2022-09-22 20:07:42.454 +03:00 [DBG] Client list checked and origin: http://localhost:3000 is allowed
+2022-09-22 20:07:42.454 +03:00 [DBG] Endpoint enabled: Checksession, successfully created handler: IdentityServer4.Endpoints.CheckSessionEndpoint
+2022-09-22 20:07:42.454 +03:00 [DBG] CorsPolicyService allowed origin: http://localhost:3000
+2022-09-22 20:07:42.454 +03:00 [INF] Invoking IdentityServer endpoint: IdentityServer4.Endpoints.CheckSessionEndpoint for /connect/checksession
+2022-09-22 20:07:42.454 +03:00 [DBG] Rendering check session result
+2022-09-22 20:07:42.454 +03:00 [DBG] Request path /connect/token matched to endpoint type Token
+2022-09-22 20:07:42.461 +03:00 [DBG] Endpoint enabled: Token, successfully created handler: IdentityServer4.Endpoints.TokenEndpoint
+2022-09-22 20:07:42.461 +03:00 [INF] Invoking IdentityServer endpoint: IdentityServer4.Endpoints.TokenEndpoint for /connect/token
+2022-09-22 20:07:42.461 +03:00 [DBG] Start token request.
+2022-09-22 20:07:42.461 +03:00 [DBG] Start client validation
+2022-09-22 20:07:42.461 +03:00 [DBG] Start parsing Basic Authentication secret
+2022-09-22 20:07:42.461 +03:00 [DBG] Start parsing for secret in post body
+2022-09-22 20:07:42.461 +03:00 [DBG] client id without secret found
+2022-09-22 20:07:42.461 +03:00 [DBG] Parser found secret: PostBodySecretParser
+2022-09-22 20:07:42.461 +03:00 [DBG] Secret id found: pow-web-app
+2022-09-22 20:07:42.462 +03:00 [DBG] client configuration validation for client pow-web-app succeeded.
+2022-09-22 20:07:42.462 +03:00 [DBG] Public Client - skipping secret validation success
+2022-09-22 20:07:42.462 +03:00 [DBG] Client validation success
+2022-09-22 20:07:42.462 +03:00 [DBG] Start token request validation
+2022-09-22 20:07:42.462 +03:00 [DBG] Start validation of authorization code token request
+2022-09-22 20:07:42.463 +03:00 [DBG] Client required a proof key for code exchange. Starting PKCE validation
+2022-09-22 20:07:42.463 +03:00 [DBG] Validation of authorization code token request success
+2022-09-22 20:07:42.464 +03:00 [INF] Token request validation success, {"ClientId":"pow-web-app","ClientName":"Pow Web","GrantType":"authorization_code","Scopes":null,"AuthorizationCode":"****100B","RefreshToken":"********","UserName":null,"AuthenticationContextReferenceClasses":null,"Tenant":null,"IdP":null,"Raw":{"client_id":"pow-web-app","code":"3B637934044B6E6563AC663E3B11524E80D72633DF1B2FE6A1EC8BE62415100B","redirect_uri":"http://localhost:3000/signin-oidc","code_verifier":"7bb2c2483bdc47bf9536fe0710ee1e7b4d7f3368887e4c599b952c6f46bbf57253e7dafb5baf4e80a390dd44a91a6d06","grant_type":"authorization_code"},"$type":"TokenRequestValidationLog"}
+2022-09-22 20:07:42.464 +03:00 [DBG] client configuration validation for client pow-web-app succeeded.
+2022-09-22 20:07:42.464 +03:00 [DBG] Getting claims for access token for client: pow-web-app
+2022-09-22 20:07:42.464 +03:00 [DBG] Getting claims for access token for subject: c0749054-3b91-4b41-b171-cb8164b008cf
+2022-09-22 20:07:42.466 +03:00 [DBG] client configuration validation for client pow-web-app succeeded.
+2022-09-22 20:07:42.467 +03:00 [DBG] Getting claims for identity token for subject: c0749054-3b91-4b41-b171-cb8164b008cf and client: pow-web-app
+2022-09-22 20:07:42.467 +03:00 [DBG] In addition to an id_token, an access_token was requested. No claims other than sub are included in the id_token. To obtain more user claims, either use the user info endpoint or set AlwaysIncludeUserClaimsInIdToken on the client configuration.
+2022-09-22 20:07:42.468 +03:00 [DBG] Token request success.
+2022-09-22 20:07:55.167 +03:00 [DBG] Request path /connect/authorize matched to endpoint type Authorize
+2022-09-22 20:07:55.167 +03:00 [DBG] Endpoint enabled: Authorize, successfully created handler: IdentityServer4.Endpoints.AuthorizeEndpoint
+2022-09-22 20:07:55.167 +03:00 [INF] Invoking IdentityServer endpoint: IdentityServer4.Endpoints.AuthorizeEndpoint for /connect/authorize
+2022-09-22 20:07:55.167 +03:00 [DBG] Start authorize request
+2022-09-22 20:07:55.167 +03:00 [DBG] User in authorize request: c0749054-3b91-4b41-b171-cb8164b008cf
+2022-09-22 20:07:55.167 +03:00 [DBG] Start authorize request protocol validation
+2022-09-22 20:07:55.167 +03:00 [DBG] client configuration validation for client pow-web-app succeeded.
+2022-09-22 20:07:55.168 +03:00 [DBG] Checking for PKCE parameters
+2022-09-22 20:07:55.168 +03:00 [DBG] Calling into custom validator: IdentityServer4.Validation.DefaultCustomAuthorizeRequestValidator
+2022-09-22 20:07:55.168 +03:00 [DBG] ValidatedAuthorizeRequest
+{"ClientId":"pow-web-app","ClientName":"Pow Web","RedirectUri":"http://localhost:3000/signin-oidc","AllowedRedirectUris":["http://localhost:3000/signin-oidc"],"SubjectId":"c0749054-3b91-4b41-b171-cb8164b008cf","ResponseType":"code","ResponseMode":"query","GrantType":"authorization_code","RequestedScopes":"openid profile PowWebApi","State":"c20763f642e640439f81729d80dfebf5","UiLocales":null,"Nonce":null,"AuthenticationContextReferenceClasses":null,"DisplayMode":null,"PromptMode":"","MaxAge":null,"LoginHint":null,"SessionId":"5131A8A23E3041B32C3AA90539DABDD6","Raw":{"client_id":"pow-web-app","redirect_uri":"http://localhost:3000/signin-oidc","response_type":"code","scope":"openid profile PowWebApi","state":"c20763f642e640439f81729d80dfebf5","code_challenge":"HMhQV5BCM_pyZnmOY30VoK8dpsEPPJlPOh0utbEIfpA","code_challenge_method":"S256","response_mode":"query"},"$type":"AuthorizeRequestValidationLog"}
+2022-09-22 20:07:55.168 +03:00 [DBG] Client is configured to not require consent, no consent is required
+2022-09-22 20:07:55.168 +03:00 [DBG] Creating Authorization Code Flow response.
+2022-09-22 20:07:55.169 +03:00 [DBG] Authorize endpoint response
+{"SubjectId":"c0749054-3b91-4b41-b171-cb8164b008cf","ClientId":"pow-web-app","RedirectUri":"http://localhost:3000/signin-oidc","State":"c20763f642e640439f81729d80dfebf5","Scope":"openid profile PowWebApi","Error":null,"ErrorDescription":null,"$type":"AuthorizeResponseLog"}
+2022-09-22 20:07:55.568 +03:00 [DBG] CORS request made for path: /.well-known/openid-configuration from origin: http://localhost:3000
+2022-09-22 20:07:55.568 +03:00 [DBG] Client list checked and origin: http://localhost:3000 is allowed
+2022-09-22 20:07:55.568 +03:00 [DBG] CorsPolicyService allowed origin: http://localhost:3000
+2022-09-22 20:07:55.568 +03:00 [DBG] Request path /.well-known/openid-configuration matched to endpoint type Discovery
+2022-09-22 20:07:55.569 +03:00 [DBG] Endpoint enabled: Discovery, successfully created handler: IdentityServer4.Endpoints.DiscoveryEndpoint
+2022-09-22 20:07:55.569 +03:00 [INF] Invoking IdentityServer endpoint: IdentityServer4.Endpoints.DiscoveryEndpoint for /.well-known/openid-configuration
+2022-09-22 20:07:55.569 +03:00 [DBG] Start discovery request
+2022-09-22 20:07:55.577 +03:00 [DBG] CORS request made for path: /.well-known/openid-configuration from origin: http://localhost:3000
+2022-09-22 20:07:55.578 +03:00 [DBG] Client list checked and origin: http://localhost:3000 is allowed
+2022-09-22 20:07:55.578 +03:00 [DBG] CorsPolicyService allowed origin: http://localhost:3000
+2022-09-22 20:07:55.578 +03:00 [DBG] Request path /.well-known/openid-configuration matched to endpoint type Discovery
+2022-09-22 20:07:55.578 +03:00 [DBG] Endpoint enabled: Discovery, successfully created handler: IdentityServer4.Endpoints.DiscoveryEndpoint
+2022-09-22 20:07:55.578 +03:00 [INF] Invoking IdentityServer endpoint: IdentityServer4.Endpoints.DiscoveryEndpoint for /.well-known/openid-configuration
+2022-09-22 20:07:55.578 +03:00 [DBG] Start discovery request
+2022-09-22 20:07:55.587 +03:00 [DBG] Request path /connect/checksession matched to endpoint type Checksession
+2022-09-22 20:07:55.587 +03:00 [DBG] Endpoint enabled: Checksession, successfully created handler: IdentityServer4.Endpoints.CheckSessionEndpoint
+2022-09-22 20:07:55.587 +03:00 [INF] Invoking IdentityServer endpoint: IdentityServer4.Endpoints.CheckSessionEndpoint for /connect/checksession
+2022-09-22 20:07:55.587 +03:00 [DBG] Rendering check session result
+2022-09-22 20:07:55.587 +03:00 [DBG] CORS request made for path: /connect/token from origin: http://localhost:3000
+2022-09-22 20:07:55.588 +03:00 [DBG] Client list checked and origin: http://localhost:3000 is allowed
+2022-09-22 20:07:55.588 +03:00 [DBG] CorsPolicyService allowed origin: http://localhost:3000
+2022-09-22 20:07:55.588 +03:00 [DBG] Request path /connect/token matched to endpoint type Token
+2022-09-22 20:07:55.589 +03:00 [DBG] Endpoint enabled: Token, successfully created handler: IdentityServer4.Endpoints.TokenEndpoint
+2022-09-22 20:07:55.589 +03:00 [INF] Invoking IdentityServer endpoint: IdentityServer4.Endpoints.TokenEndpoint for /connect/token
+2022-09-22 20:07:55.589 +03:00 [DBG] Start token request.
+2022-09-22 20:07:55.589 +03:00 [DBG] Start client validation
+2022-09-22 20:07:55.589 +03:00 [DBG] Start parsing Basic Authentication secret
+2022-09-22 20:07:55.589 +03:00 [DBG] Start parsing for secret in post body
+2022-09-22 20:07:55.589 +03:00 [DBG] client id without secret found
+2022-09-22 20:07:55.589 +03:00 [DBG] Parser found secret: PostBodySecretParser
+2022-09-22 20:07:55.589 +03:00 [DBG] Secret id found: pow-web-app
+2022-09-22 20:07:55.589 +03:00 [DBG] client configuration validation for client pow-web-app succeeded.
+2022-09-22 20:07:55.589 +03:00 [DBG] Public Client - skipping secret validation success
+2022-09-22 20:07:55.589 +03:00 [DBG] Client validation success
+2022-09-22 20:07:55.589 +03:00 [DBG] Start token request validation
+2022-09-22 20:07:55.589 +03:00 [DBG] Start validation of authorization code token request
+2022-09-22 20:07:55.590 +03:00 [DBG] Client required a proof key for code exchange. Starting PKCE validation
+2022-09-22 20:07:55.590 +03:00 [DBG] Validation of authorization code token request success
+2022-09-22 20:07:55.590 +03:00 [INF] Token request validation success, {"ClientId":"pow-web-app","ClientName":"Pow Web","GrantType":"authorization_code","Scopes":null,"AuthorizationCode":"****EA70","RefreshToken":"********","UserName":null,"AuthenticationContextReferenceClasses":null,"Tenant":null,"IdP":null,"Raw":{"client_id":"pow-web-app","code":"D5E566EEC14ACAD8FCB653C08C0C835910067EAD41547C520CEBE00A9DE4EA70","redirect_uri":"http://localhost:3000/signin-oidc","code_verifier":"adc19531fdb14e3bbe98ca01c65215ca4bf1f180726a41d6892fee016324819046c1c888c67e417d9811581dafc1313e","grant_type":"authorization_code"},"$type":"TokenRequestValidationLog"}
+2022-09-22 20:07:55.590 +03:00 [DBG] client configuration validation for client pow-web-app succeeded.
+2022-09-22 20:07:55.590 +03:00 [DBG] Getting claims for access token for client: pow-web-app
+2022-09-22 20:07:55.591 +03:00 [DBG] Getting claims for access token for subject: c0749054-3b91-4b41-b171-cb8164b008cf
+2022-09-22 20:07:55.592 +03:00 [DBG] client configuration validation for client pow-web-app succeeded.
+2022-09-22 20:07:55.592 +03:00 [DBG] Getting claims for identity token for subject: c0749054-3b91-4b41-b171-cb8164b008cf and client: pow-web-app
+2022-09-22 20:07:55.592 +03:00 [DBG] In addition to an id_token, an access_token was requested. No claims other than sub are included in the id_token. To obtain more user claims, either use the user info endpoint or set AlwaysIncludeUserClaimsInIdToken on the client configuration.
+2022-09-22 20:07:55.593 +03:00 [DBG] Token request success.

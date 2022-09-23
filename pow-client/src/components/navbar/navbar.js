@@ -12,6 +12,23 @@ const Nav = styled.div`
   display: flex;
   justify-content: flex-start;
   align-items: center;
+  position: relative;
+  left: 10;
+  right: 100;
+  box-sizing: border-box;
+  outline: currentcolor none medium;
+  max-width: 100%;
+  margin: 0px;
+  align-items: center;
+  background: #3A5431 none repeat scroll 0% 0%;
+  color: rgb(248, 248, 248);
+  min-width: 0px;
+  min-height: 0px;
+  flex-direction: row;
+  justify-content: flex-start;
+  padding: 0px 0px
+  box-shadow: rgba(0, 0, 0, 0.2) 0px 10px 20px;
+  z-index: 0;
 `;
 
 const NavIcon = styled(Link)`
@@ -24,16 +41,28 @@ const NavIcon = styled(Link)`
 `;
 
 const SidebarNav = styled.nav`
-  background: #3A5431;
-  width: 350px;
+background: #3A5431 none repeat scroll 0% 0%;
+  width: 280px;
   height: 100vh;
   display: flex;
-  justify-content: center;
+  justify-content: flex-start;
   position: absolute;
   top: 0;
   left: ${({ sidebar }) => (sidebar ? '0' : '-100%')};
   transition: 350ms;
   z-index: 10;
+  bottom: 0px;
+  z-index: 293;
+  display: block;
+  max-width: 100%;
+  align-items: stretch;
+  color: rgb(248, 248, 248);
+  min-width: 0px;
+  min-height: 0px;
+  flex-direction: row;
+  padding: 0px 0px;
+  box-shadow: rgba(0, 0, 0, 0.2) 0px 10px 20px;
+  z-index: 400;
 `;
 
 const SidebarWrap = styled.div`

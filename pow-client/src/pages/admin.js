@@ -24,23 +24,25 @@ function Admin() {
   }
 
   return (
-    <div>
-      <h1>Admin</h1>
-      <p>Hello, {user.profile.given_name}.</p>
+    <>
+    <div className='lobby'>
+      <div>
+        <h1>Admin</h1>
+        <p>Hello, {user.profile.given_name}.</p>
 
+        <button className="button button-outline" onClick={() => getAllAdmin()}>GetAll_Admin_api</button>
+        <button className="button button-outline" onClick={() => getAllUser()}>GetAll_User_api</button>
+        <button className="button button-danger" onClick={() => signOut()}>Sign Out</button>
 
+        <pre>
+          <code>
+            {prettifyJson(doughnutData ? doughnutData : 'No api connect yet :(')}
+          </code>
+        </pre>
 
-      <button className="button button-outline" onClick={() => getAllAdmin()}>GetAll_Admin_api</button>
-      <button className="button button-outline" onClick={() => getAllUser()}>GetAll_User_api</button>
-      <button className="button button-clear" onClick={() => signOut()}>Sign Out</button>
-
-      <pre>
-        <code>
-          {prettifyJson(doughnutData ? doughnutData : 'No api connect yet :(')}
-        </code>
-      </pre>
-
+      </div>
     </div>
+  </>
   )
 }
 
