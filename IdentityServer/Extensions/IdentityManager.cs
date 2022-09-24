@@ -12,14 +12,14 @@ namespace IdentityServer.Extensions
         public static void AddCustomIdentityConfigurations(this IServiceCollection services, IConfiguration config)
         {
             services.AddIdentity<AppUser, IdentityRole>(
-                    config =>
+                    identityOptions =>
                     {
-                        config.Password.RequireUppercase = true;
-                        config.Password.RequireDigit = true;
-                        config.Password.RequireLowercase = true;
-                        config.Password.RequiredLength = 8;
-                        config.User.RequireUniqueEmail = true;
-                        config.User.AllowedUserNameCharacters = "";
+                        identityOptions.Password.RequireUppercase = true;
+                        identityOptions.Password.RequireDigit = true;
+                        identityOptions.Password.RequireLowercase = true;
+                        identityOptions.Password.RequiredLength = 8;
+                        identityOptions.User.RequireUniqueEmail = true;
+                        identityOptions.User.AllowedUserNameCharacters = "";
                     })
                 .AddEntityFrameworkStores<AuthorizationDbContext>()
                 .AddDefaultTokenProviders();

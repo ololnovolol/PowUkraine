@@ -25,6 +25,7 @@ namespace IdentityServer
         {
             services.AddDbContext<AuthorizationDbContext>(
                 options => { options.UseSqlServer(_appConfiguration.GetValue<string>("DbConnection")); });
+
             services.AddCustomIdentityConfigurations(_appConfiguration);
             services.AddCustomCookiesConfigurations();
             services.AddCustomAuthenticationConfigurations(_appConfiguration);

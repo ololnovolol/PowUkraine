@@ -43,7 +43,7 @@ namespace Pow.WebApi.Middleware
 
                     break;
                 }
-                case NotFoundException notFoundException:
+                case NotFoundException:
                     code = HttpStatusCode.NotFound;
 
                     break;

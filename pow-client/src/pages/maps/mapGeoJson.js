@@ -3,7 +3,7 @@ import L from 'leaflet';
 import { Map, TileLayer, Marker, Popup } from "react-leaflet";
 import Basemap from './BaseMaps';
 import CoordInsert from './coordinsert';
-import '../../css/maps/map.css';
+import '../../style/maps/map.css';
 
 L.Icon.Default.imagePath = "https://unpkg.com/leaflet@1.5.0/dist/images/";
 

@@ -1,11 +1,11 @@
 ﻿using System.Security.Claims;
 using System.Threading.Tasks;
 using IdentityServer.Models;
+using IdentityServer.Services;
 using IdentityServer4.Services;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
 
-/// Move all errors to resources 
 namespace IdentityServer.Controllers
 {
     public class AuthorizationController : Controller
@@ -51,7 +51,7 @@ namespace IdentityServer.Controllers
 
             if (user == null)
             {
-                ModelState.AddModelError(string.Empty, "User not found");
+                ModelState.AddModelError(string.Empty, ResourceReader.GetExceptionMessage("user_not_found"));
 
                 return View(viewModel);
             }
@@ -72,7 +72,7 @@ namespace IdentityServer.Controllers
                 return BadRequest();
             }
 
-            ModelState.AddModelError(string.Empty, "Incorrect email (or) password");
+            ModelState.AddModelError(string.Empty, ResourceReader.GetExceptionMessage("Incorrect_psw_email"));
 
             return View(viewModel);
         }
@@ -94,7 +94,7 @@ namespace IdentityServer.Controllers
 
             if (!viewModel.AgreeAllStatements)
             {
-                ModelState.AddModelError(string.Empty, "You must agree all statements");
+                ModelState.AddModelError(string.Empty, ResourceReader.GetExceptionMessage("false_agree"));
 
                 return View(viewModel);
             }
@@ -138,14 +138,14 @@ namespace IdentityServer.Controllers
         [HttpPost]
         public IActionResult ExternalLogin(string provider, string returnUrl)
         {
-            var redirectUri = Url.Action(nameof(ExteranlLoginCallback), "Authorization", new { returnUrl });
+            var redirectUri = Url.Action(nameof(ExternalLoginCallback), "Authorization", new { returnUrl });
             var properties = _signInManager.ConfigureExternalAuthenticationProperties(provider, redirectUri);
 
             return Challenge(properties, provider);
         }
 
         [HttpGet]
-        public async Task<IActionResult> ExteranlLoginCallback(string returnUrl)
+        public async Task<IActionResult> ExternalLoginCallback(string returnUrl)
         {
             var info = await _signInManager.GetExternalLoginInfoAsync();
 
@@ -177,7 +177,7 @@ namespace IdentityServer.Controllers
         {
             if (viewModel.AgreeAllStatements)
             {
-                ModelState.AddModelError(string.Empty, "You must agree all statements");
+                ModelState.AddModelError(string.Empty, ResourceReader.GetExceptionMessage("false_agree"));
 
                 return View(viewModel);
             }
@@ -195,7 +195,7 @@ namespace IdentityServer.Controllers
 
             if (result.Succeeded)
             {
-                result = await _userManager.AddLoginAsync(user, info);
+                await _userManager.AddLoginAsync(user, info);
                 await _userManager.AddToRoleAsync(user, "User");
                 await _signInManager.SignInAsync(user, false);
 

@@ -42,7 +42,7 @@ namespace Pow.WebApi
             app.UseCustomExceptionHandler();
             app.UseRouting();
             app.UseHttpsRedirection();
-            app.UseCors("AllowAll"); // todo expand Cors
+            app.UseCors("AllowAll");
             app.UseAuthentication();
             app.UseAuthorization();
 

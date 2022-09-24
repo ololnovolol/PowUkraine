@@ -1,5 +1,5 @@
 import React, { useEffect } from 'react'
-import { signinRedirectCallback } from '../../services/userService'
+import { signinRedirectCallback } from '../../common/services/userService'
 import { useHistory } from 'react-router-dom'
 
 function SigninOidc() {

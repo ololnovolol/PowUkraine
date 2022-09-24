@@ -50,7 +50,7 @@ namespace IdentityServer.Controllers
 
             if (role != null)
             {
-                var result = await _roleManager.DeleteAsync(role);
+                await _roleManager.DeleteAsync(role);
             }
 
             return Ok();

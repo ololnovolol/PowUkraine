@@ -53,7 +53,7 @@ namespace Pow.Infrastructure.Migrations
                 .AsString(100)
                 .WithColumn("MapUrl")
                 .AsString(100)
-                .WithColumn("GpsLongtitude")
+                .WithColumn("GpsLongitude")
                 .AsString(100)
                 .WithColumn("GpsLatitude")
                 .AsString(100);

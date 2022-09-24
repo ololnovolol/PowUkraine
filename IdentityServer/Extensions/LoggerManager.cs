@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Diagnostics;
 using IdentityServer.Data;
+using IdentityServer.Services;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using Serilog;
@@ -29,7 +30,7 @@ namespace IdentityServer.Extensions
                 }
                 catch (Exception exception)
                 {
-                    Log.Fatal(exception, "An error occurred while app Initialization");
+                    Log.Fatal(exception, ResourceReader.GetExceptionMessage("occurred_initialize"));
                 }
             }
 

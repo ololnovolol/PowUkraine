@@ -16,7 +16,6 @@ namespace Pow.WebApi.Extensions
                             policy.AllowAnyHeader();
                             policy.AllowAnyMethod();
                             policy.AllowAnyOrigin();
-                            //policy.WithOrigins("https://localhost:3000/");
                         });
                 });
         }

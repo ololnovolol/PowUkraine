@@ -1,5 +1,5 @@
 import React from 'react';
-import MapComponent from '../components/maps/mapGeoJson';
+import MapComponent from '../maps/mapGeoJson';
 
 function Mark() {
   return (

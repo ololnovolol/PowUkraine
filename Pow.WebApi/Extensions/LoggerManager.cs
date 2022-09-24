@@ -13,8 +13,6 @@ namespace Pow.WebApi.Extensions
         {
             using (var scope = host.Services.CreateScope())
             {
-                var serviceProvider = scope.ServiceProvider;
-
                 try
                 {
                     // todo add need scopes

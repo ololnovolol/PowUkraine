@@ -1,9 +1,9 @@
 import React, { useState } from 'react'
-import { signoutRedirect } from '../services/userService'
+import { signoutRedirect } from '../../common/services/userService'
 import { useSelector } from 'react-redux'
-import * as apiService from '../services/apiService'
-import { getFromApi_User } from '../services/apiService'
-import { prettifyJson } from '../utils/jsonUtils'
+import * as apiService from '../../common/services/apiService'
+import { getFromApi_User } from '../../common/services/apiService'
+import { prettifyJson } from '../../common/utils/jsonUtils'
 
 function Lobby() {
   const user = useSelector(state => state.auth.user)

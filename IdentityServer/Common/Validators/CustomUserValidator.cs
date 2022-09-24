@@ -3,20 +3,20 @@ using System.Collections.Generic;
 using System.Text.RegularExpressions;
 using System.Threading.Tasks;
 using IdentityServer.Models;
+using IdentityServer.Services;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.Extensions.Configuration;
 
 namespace IdentityServer.Common.Validators
 {
-    //// TODO Move error messages to resources
     public class CustomUserValidator : IUserValidator<AppUser>
     {
-        private readonly IConfiguration _config;
+        private readonly IConfiguration _configuration;
         private readonly List<IdentityError> _errors;
 
-        public CustomUserValidator(IConfiguration config)
+        public CustomUserValidator(IConfiguration configuration)
         {
-            _config = config;
+            _configuration = configuration;
             _errors = new List<IdentityError>();
         }
 
@@ -32,45 +32,44 @@ namespace IdentityServer.Common.Validators
 
         private void ValidateBirthDate(AppUser user)
         {
-            if (user.BirthDay.Year > (DateTime.Now.Year - Constants.MinAgeToAccess) ||
-                user.BirthDay.Year < (DateTime.Now.Year - Constants.MaxAgeToAccess))
+            if (user.BirthDay.Year > DateTime.Now.Year - int.Parse(_configuration["constants:minAge"]) ||
+                user.BirthDay.Year < DateTime.Now.Year - int.Parse(_configuration["constants:maxAge"]))
             {
                 AddErrorsToResult(
-                    "Incorrect birthdate",
-                    $"User birthdate must be upper than {DateTime.Now.Year - Constants.MaxAgeToAccess} " +
-                    $"and lower than {DateTime.Now.Year - Constants.MinAgeToAccess}");
+                    "Incorrect_birthdate",
+                    ResourceReader.GetExceptionMessage("Incorrect_birthdate"));
             }
         }
 
         private async Task ValidateUserName(UserManager<AppUser> manager, AppUser user)
         {
-            if (user.UserName.Contains("admin"))
+            if (user.UserName.ToLower().Contains("admin"))
             {
                 AddErrorsToResult(
-                    "Incorrect user name",
-                    "User nickname must not contain the word 'admin'");
+                    "incorrect_username",
+                    ResourceReader.GetExceptionMessage("incorrect_username"));
             }
 
             if (await manager.FindByNameAsync(user.UserName) != null)
             {
                 AddErrorsToResult(
-                    "Incorect user name",
-                    "This name is already in use");
+                    "already_use_name",
+                    ResourceReader.GetExceptionMessage("already_use_name"));
             }
 
             if (await manager.FindByLoginAsync(user.UserName, "Incorrect user name") != null)
             {
                 AddErrorsToResult(
-                    "Incorect user name",
-                    "This name is already in use");
+                    "already_use_name",
+                    ResourceReader.GetExceptionMessage("already_use_name"));
             }
         }
 
         private void ValidateEmail(AppUser user)
         {
-            var pattern =
-                @"^(?("")(""[^""]+?""@)|(([0-9a-z]((\.(?!\.))|[-!#\$%&'\*\+/=\?\^`\{\}\|~\w])*)(?<=[0-9a-z])@))" +
-                @"(?(\[)(\[(\d{1,3}\.){3}\d{1,3}\])|(([0-9a-z][-\w]*[0-9a-z]*\.)+[a-z0-9]{2,17}))$";
+            const string pattern =
+                @"^(?("")(""[^""]+?""@)|(([0-9a-z]((\.(?!\.))|[-!#\$%&'\*\+/=\?\^`\{\}\|~\w])*)(?<=[0-9a-z])
+                @))(?(\[)(\[(\d{1,3}\.){3}\d{1,3}\])|(([0-9a-z][-\w]*[0-9a-z]*\.)+[a-z0-9]{2,17}))$";
 
             if (user.Email.ToLower().EndsWith("@yandex.ru") ||
                 user.Email.ToLower().EndsWith("@mail.ru") ||
@@ -78,15 +77,15 @@ namespace IdentityServer.Common.Validators
 
             {
                 AddErrorsToResult(
-                    "Incorrect Email Domen",
-                    "This domain is in the spam database. Choose another email service");
+                    "incorrect_email_domen",
+                    ResourceReader.GetExceptionMessage("incorrect_email_domen"));
             }
 
             if (!Regex.IsMatch(user.Email, pattern, RegexOptions.IgnoreCase))
             {
                 AddErrorsToResult(
-                    "Incorrect format Email",
-                    "Incorrect format email adress");
+                    "incorrect_email_format",
+                    ResourceReader.GetExceptionMessage("incorrect_email_format"));
             }
         }
 

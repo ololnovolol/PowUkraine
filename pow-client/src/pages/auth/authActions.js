@@ -5,7 +5,7 @@ import {
   STORE_USER_ERROR,
   LOADING_USER
 } from './types'
-import { setAuthHeader } from '../utils/axiosHeaders'
+import { setAuthHeader } from '../../common/utils/axiosHeaders'
 
 export function storeUser(user) {
   setAuthHeader(user.access_token)

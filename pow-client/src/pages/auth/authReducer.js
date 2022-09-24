@@ -4,7 +4,7 @@ import {
   USER_EXPIRED,
   STORE_USER,
   LOADING_USER
-} from '../actions/types'
+} from './types'
 
 const initialState = {
   user: null,

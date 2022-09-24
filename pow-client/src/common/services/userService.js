@@ -1,5 +1,5 @@
 import { UserManager } from 'oidc-client';
-import { storeUserError, storeUser } from '../actions/authActions'
+import { storeUserError, storeUser } from '../../pages/auth/authActions'
 import { IDENTITY_CONFIG, METADATA_OIDC } from '../utils/Constants/authConstants'
 
 const userManager = new UserManager(IDENTITY_CONFIG)

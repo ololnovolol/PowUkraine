@@ -9,8 +9,8 @@ namespace Pow.WebApi.Controllers.Base
     public abstract class BaseController : ControllerBase
     {
         internal Guid UserId
-            => !User.Identity.IsAuthenticated
+            => User.Identity is { IsAuthenticated: false }
                 ? Guid.Empty
-                : Guid.Parse(User.FindFirst(ClaimTypes.NameIdentifier).Value);
+                : Guid.Parse(User.FindFirst(ClaimTypes.NameIdentifier)?.Value ?? string.Empty);
     }
 }

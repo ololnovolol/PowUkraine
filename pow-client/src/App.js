@@ -1,20 +1,20 @@
 import React, { useEffect } from 'react';
-import './App.css';
+import './style/app/App.css';
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom'
 import SigninOidc from './pages/auth/signin-oidc'
 import SignoutOidc from './pages/auth/signout-oidc'
-import Lobby from './pages/lobby';
-import Mark from './pages/mark';
-import Login from './pages/login';
-import About from './pages/about';
-import Message from './pages/messages';
-import Admin from './pages/admin';
+import Lobby from './pages/userLobby/lobby';
+import Mark from './pages/marks/mark';
+import Login from './pages/auth/login';
+import About from './pages/about/about';
+import Message from './pages/message/messages';
+import Admin from './pages/adminPanel/admin';
 import { Provider } from 'react-redux';
-import store from './store';
-import userManager, { loadUserFromStorage } from './services/userService'
-import AuthProvider from './providers/authProvider'
-import PrivateRoute from './utils/protectedRoute'
-import Navbar from './components/navbar/navbar';
+import store from './store/store';
+import userManager, { loadUserFromStorage } from './common/services/userService'
+import AuthProvider from './pages/auth/authProvider'
+import PrivateRoute from './routes/protectedRoute'
+import Navbar from './pages/navbar/navbar';
 
 
 function App() {

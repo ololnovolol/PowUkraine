@@ -1,6 +1,6 @@
 import React from "react";
 import { Modal, Button, Input} from 'antd';
-import '../../css/maps/coordInsert.css';
+import '../../style/maps/coordInsert.css';
 
 class CoordInsert extends React.Component {
   constructor(props) {

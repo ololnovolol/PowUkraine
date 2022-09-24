@@ -1,5 +1,5 @@
 import React, { useEffect } from 'react'
-import { signoutRedirectCallback } from '../../services/userService'
+import { signoutRedirectCallback } from '../../common/services/userService'
 import { useHistory } from 'react-router-dom'
 
 function SignoutOidc() {
