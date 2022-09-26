@@ -1,0 +1,22 @@
+name: Check codebase
+on: [push]
+
+jobs:
+  build_and_format:
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v2
+
+    - name: Setup .NET Core
+      uses: actions/setup-dotnet@v2
+      with:
+        dotnet-version: '5.0.x'
+
+    - name: Build solution
+      run: dotnet build
+
+    - name: Install dotnet format
+      run: dotnet tool update --global dotnet-format
+
+    - name: Perform dotnet format check
+      run: dotnet format --check --verbosity diagnostic
