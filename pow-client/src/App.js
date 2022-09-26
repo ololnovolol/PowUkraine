@@ -6,9 +6,13 @@ import SignoutOidc from './pages/auth/signout-oidc'
 import Lobby from './pages/userLobby/lobby';
 import Mark from './pages/marks/mark';
 import Login from './pages/auth/login';
+import Logout from './pages/logout/logout';
 import About from './pages/about/about';
+import allMarks from './pages/allMarks/allMarks';
+import ManageAccount from './pages/manageAccount/manageMyAccount'; 
 import Message from './pages/message/messages';
-import Admin from './pages/adminPanel/admin';
+import manageAccounts from './pages/manageAllAccounts/manageAccounts';
+import manageMessages from './pages/manageAllMessages/manageMessages';
 import { Provider } from 'react-redux';
 import store from './store/store';
 import userManager, { loadUserFromStorage } from './common/services/userService'
@@ -29,7 +33,8 @@ function App() {
         <AuthProvider userManager={userManager} store={store}>
           <Router>          
             <Navbar />          
-            <Switch>      
+            <Switch> 
+    
                 <Route path="/" exact component={Mark} />
                 <Route path="/message" component={Message} />
                 <Route path="/login" component={Login} />
@@ -37,8 +42,13 @@ function App() {
                 <Route path="/signin-oidc" component={SigninOidc} />
                 <Route path="/about" component={About} />
 
+                <PrivateRoute exact path="/manageMessages" component={manageMessages} />
+                <PrivateRoute exact path="/manageAccounts" component={manageAccounts} />
+                <PrivateRoute path="/logout" component={Logout} />
+
                 <PrivateRoute exact path="/userLobby" component={Lobby} />
-                <PrivateRoute exact path="/admin" component={Admin} />
+                <PrivateRoute exact path="/manageMarks" component={allMarks} />
+                <PrivateRoute exact path="/manageAccount" component={ManageAccount} />
                
             </Switch>
           </Router>

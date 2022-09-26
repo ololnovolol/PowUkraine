@@ -18,6 +18,8 @@
 }
 
 .admin,
+.manageAccounts,
+.manageMessages,
 .lobby {
 
   display: flex;

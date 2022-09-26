@@ -16,23 +16,7 @@ export const SidebarData = [
   {
     title: 'Important message',
     path: '/message',
-    icon: <RiIcons.RiMessage3Line />,
-
-    iconClosed: <MdIcons.MdOutlineKeyboardArrowDown />,
-    iconOpened: <MdIcons.MdKeyboardArrowUp />,
-
-    subNav: [
-      {
-        title: 'Message 1',
-        path: '/message/message1',
-        icon: <IoIcons.IoIosPaper />
-      },
-      {
-        title: 'Message 2',
-        path: '/message/message2',
-        icon: <IoIcons.IoIosPaper />
-      }
-    ]
+    icon: <RiIcons.RiMessage3Line />
   },
 
   {
@@ -74,44 +58,44 @@ export const SidebarData = [
   
   {
     title: 'Admin panel',
-    path: '/admin',
+    path: '',
     icon: <RiIcons.RiAdminLine />,  
     iconClosed: <MdIcons.MdOutlineKeyboardArrowDown />,
     iconOpened: <MdIcons.MdKeyboardArrowUp />,
 
     subNav: [
         {
+            title: 'Manage messages',
+            path: '/manageMessages',
+            icon: <TiIcons.TiMessages />,
+        },
+        {
             title: 'Accounts',
-            path: '/ManageAccounts',
+            path: '/manageAccounts',
             icon: <IoIcons.IoMdPeople />,
         },
         {
-            title: 'All marks',
-            path: '/allmarks',
-            icon: <MdIcons.MdOutlineBookmarks />,
-        },
-        {
-            title: 'All messages',
-            path: '/allmarks',
-            icon: <TiIcons.TiMessages />,
-        }
+          title: 'Logout',
+          path: '/logout',
+          icon: <RiIcons.RiLogoutBoxRLine />,
+      }
     ],
   },
   {
     title: 'Lobby',
-    path: '/userLobby',
+    path: '',
     icon: <RiIcons.RiUserSettingsLine />,  
     iconClosed: <MdIcons.MdOutlineKeyboardArrowDown />,
     iconOpened: <MdIcons.MdKeyboardArrowUp />,
 
     subNav: [
-        {
-            title: 'All Marks',
-            path: '/allmarks',
-            icon: <MdIcons.MdBookmarks />,
+          {
+            title: 'All marks',
+            path: '/manageMarks',
+            icon: <MdIcons.MdOutlineBookmarks />,
         },
         {
-            title: 'Manage Account',
+            title: 'My data',
             path: '/manageAccount',
             icon: <RiIcons.RiSettings4Line />,
         },
