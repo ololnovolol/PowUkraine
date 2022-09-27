@@ -1,22 +1,24 @@
-﻿using Dapper;
-using Microsoft.Extensions.Configuration;
-using Pow.Domain;
-using Pow.Infrastructure.Repositories.Interfaces;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Data.SqlClient;
 using System.Linq;
 using System.Threading.Tasks;
+using Dapper;
+using Microsoft.Extensions.Configuration;
+using Pow.Domain;
+using Pow.Infrastructure.Repositories.Interfaces;
 
 namespace Pow.Infrastructure.Repositories
 {
     public class MessageRepository : IMessageRepository
     {
         private readonly IConfiguration configuration;
+
         public MessageRepository(IConfiguration configuration)
         {
             this.configuration = configuration;
         }
+
         public async Task<int> AddAsync(Message entity)
         {
             entity.CreatedDate = DateTime.Now;
@@ -28,6 +30,7 @@ namespace Pow.Infrastructure.Repositories
                 return result;
             }
         }
+
         public async Task<int> DeleteAsync(string id)
         {
             var sql = "DELETE FROM Messages WHERE Id = @Id";
@@ -38,6 +41,7 @@ namespace Pow.Infrastructure.Repositories
                 return result;
             }
         }
+
         public async Task<IReadOnlyList<Message>> GetAllAsync()
         {
             var sql = "SELECT * FROM Messages";
@@ -48,6 +52,7 @@ namespace Pow.Infrastructure.Repositories
                 return result.ToList();
             }
         }
+
         public async Task<Message> GetByIdAsync(string id)
         {
             var sql = "SELECT * FROM Messages WHERE Id = @Id";
@@ -58,10 +63,10 @@ namespace Pow.Infrastructure.Repositories
                 return result;
             }
         }
+
         public async Task<int> UpdateAsync(Message entity)
         {
             throw new Exception();
-
         }
     }
 }

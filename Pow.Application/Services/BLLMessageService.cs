@@ -1,59 +1,57 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Threading.Tasks;
 using AutoMapper;
 using Pow.Application.Models;
+using Pow.Domain;
 using Pow.Infrastructure.Repositories;
+using Pow.Infrastructure.Repositories.Interfaces;
 
 namespace Pow.Application.Services
 {
     public class BLLMessageService : IDisposable
     {
-        private UnitOfWork DB { get; }
+        private IUnitOfWork _unitOfWork { get; }
 
-        public BLLMessageService()
+        private readonly IMapper _mapper;
+
+        public BLLMessageService(IUnitOfWork unitOfWork, IMapper mapper)
         {
-            DB = new UnitOfWork();
+            this._unitOfWork = unitOfWork;
+            this._mapper = mapper;
         }
 
+        public async Task<int> Add(MessageBL messageBl) { 
 
-        public bool AddUser(MessageBL element)
-        {
-            DB.Users.Create(item: Mapper.Map<User>(element));
-            DB.Save();
-            return true;
+            var message = this._mapper.Map<Message>(messageBl);
+            return await this._unitOfWork.Messages.AddAsync(message);
         }
 
-        public void UpdateUser(MessageBL element)
+        public async Task<int> Update(MessageBL messageBl)
         {
-            var toUpdate = DB.Users.Read(Id: Guid.Parse(element.Id)).Result;
+            var message = this._mapper.Map<Message>(messageBl);
+            return await this._unitOfWork.Messages.UpdateAsync(message);
+        }
 
-            if (toUpdate != null)
+        public async Task<int> Delete(string id)
+        {
+            return await this._unitOfWork.Messages.DeleteAsync(id);
+        }
+
+        public IEnumerable<MessageBL> GetAll()
+        {
+            List<MessageBL> list = new List<MessageBL>();
+            foreach (Message item in this._unitOfWork.Messages.GetAllAsync().Result)
             {
-                toUpdate = Mapper.Map<User>(element);
-                DB.Users.Update(toUpdate);
-                DB.Save();
+                list.Add(this._mapper.Map<MessageBL>(item));
             }
-        }
 
-        public void RemoveUser(Guid Id)
-        {
-            DB.Users.Delete(Id);
-            DB.Save();
-        }
-
-        public IEnumerable<UserBL> GetUsers()
-        {
-            List<UserBL> result = new List<UserBL>();
-
-            foreach (var item in DB.Users.ReadAll())
-                result.Add(item: Mapper.Map<UserBL>(item));
-
-            return result;
+            return list;
         }
 
         public void Dispose()
         {
-            DB.Dispose();
+            this._unitOfWork.Dispose();
         }
     }
 }

@@ -26,4 +26,8 @@
 		<ProjectReference Include="..\Pow.Infrastructure\Pow.Infrastructure.csproj" />
 	</ItemGroup>
 
+	<ItemGroup>
+	  <Folder Include="AutoMapperProfiles\" />
+	</ItemGroup>
+
 </Project>

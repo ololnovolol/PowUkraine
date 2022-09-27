@@ -1,8 +1,8 @@
+using System;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.Extensions.Hosting;
 using Pow.WebApi.Extensions;
 using Serilog;
-using System;
 
 namespace Pow.WebApi
 {
