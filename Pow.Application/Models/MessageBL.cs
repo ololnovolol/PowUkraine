@@ -16,9 +16,5 @@ namespace Pow.Application.Models
         public string Email { get; set; }
 
         public Guid? UserId { get; set; }
-
-        public ICollection<AttachmentBL> Attachments { get; set; }
-
-        public MarkBL Mark { get; set; }
     }
 }
