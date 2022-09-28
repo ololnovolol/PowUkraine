@@ -81,13 +81,13 @@ const Sidebar = () => {
     <>
       <IconContext.Provider value={{ color: '#F0A30A' }}>
         <Nav>
-          <NavIcon to='/'>
+          <NavIcon to='#'>
             <FiIcons.CgMenu onClick={showSidebar} />
           </NavIcon>
         </Nav>
         <SidebarNav sidebar={sidebar}>
           <SidebarWrap>
-            <NavIcon to='/'>
+            <NavIcon to='#'>
               <FiIcons.CgMenuMotion onClick={showSidebar} />
             </NavIcon>          
             { 
