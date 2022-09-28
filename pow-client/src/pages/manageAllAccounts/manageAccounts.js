@@ -8,11 +8,6 @@ function ManageAccounts() {
   const [doughnutData, setDoughnutData] = useState(null)
   const [usersData, setUsersData] = useState(null)
 
-  async function getAllAdmin() {
-    const doughnuts = await apiService.getFromApi_Admin()
-    setDoughnutData(doughnuts)
-  }
-
   async function getAllUsers() {
     const users = await apiService.getUsers()
     setUsersData(users)
@@ -24,8 +19,7 @@ function ManageAccounts() {
       <div>
         <h1>Manage Accounts</h1>
 
-        <button className="button button-outline" onClick={() => getAllAdmin()}>GetAll_Admin_api</button>
-        <button className="button button-outline" onClick={() => getAllUsers()}>GetAll_User_Identity</button>
+        <button className="button button-outline" onClick={() => getAllUsers()}>GetAll_Users_Identity</button>
 
         <div>
           <code>

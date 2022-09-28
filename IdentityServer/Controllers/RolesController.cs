@@ -7,6 +7,7 @@ using Microsoft.AspNetCore.Mvc;
 
 namespace IdentityServer.Controllers
 {
+    [Route("api/[controller]/[action]")]
     public class RolesController : Controller
     {
         private readonly RoleManager<IdentityRole> _roleManager;
@@ -18,6 +19,14 @@ namespace IdentityServer.Controllers
         {
             _roleManager = roleManager;
             _userManager = userManager;
+        }
+
+        [HttpGet]
+        public async Task<IActionResult> Get()
+        {
+            var result = await _userManager.GetUsersInRoleAsync("user");
+
+            return Json(result);
         }
 
         [HttpPost]
