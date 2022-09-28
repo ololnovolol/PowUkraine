@@ -48,6 +48,23 @@ namespace Pow.Application.Services
             return list;
         }
 
+        public IEnumerable<AttachmentBL> GetByMessageId(string messageId)
+        {
+            List<AttachmentBL> list = new List<AttachmentBL>();
+            foreach (Attachment mark in this._unitOfWork.Attachments.GetByMessageIdAsync(messageId).Result)
+            {
+                list.Add(this._mapper.Map<AttachmentBL>(mark));
+            }
+
+            return list;
+        }
+
+        public AttachmentBL GetById(string id)
+        {
+            var attachment = this._unitOfWork.Attachments.GetByIdAsync(id);
+            return this._mapper.Map<AttachmentBL>(attachment);
+        }
+
         public void Dispose()
         {
             this._unitOfWork.Dispose();

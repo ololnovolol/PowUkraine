@@ -2,12 +2,10 @@
 
 namespace Pow.WebApi.Models
 {
-    public class AttachmentModel : BaseModel
+    public class AttachmentModel
     {
-        public string Title { get; init; }
+        public string Title { get; set; }
 
-        public byte[] File { get; init; }
-
-        public Guid MessageId { get; init; }
+        public byte[] File { get; set; }
     }
 }

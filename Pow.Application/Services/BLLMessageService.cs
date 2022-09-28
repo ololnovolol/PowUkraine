@@ -49,6 +49,23 @@ namespace Pow.Application.Services
             return list;
         }
 
+        public MessageBL GetById(string id)
+        {
+            var message = this._unitOfWork.Messages.GetByIdAsync(id).Result;
+            return this._mapper.Map<MessageBL>(message);
+        }
+
+        public IEnumerable<MessageBL> GetByUser(string userId)
+        {
+            List<MessageBL> list = new List<MessageBL>();
+            foreach (Message item in this._unitOfWork.Messages.GetByUserIdAsync(userId).Result)
+            {
+                list.Add(this._mapper.Map<MessageBL>(item));
+            }
+
+            return list;
+        }
+
         public void Dispose()
         {
             this._unitOfWork.Dispose();

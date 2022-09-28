@@ -50,6 +50,19 @@ namespace Pow.Application.Services
             return list;
         }
 
+        public MarkBL GetByMessage(string messageId)
+        {
+            var mark = this._unitOfWork.Marks.GetByMessageIdAsync(messageId);
+            return this._mapper.Map<MarkBL>(mark);
+
+        }
+
+        public MarkBL GetById(string id)
+        {
+            var mark = this._unitOfWork.Marks.GetByIdAsync(id).Result;
+            return this._mapper.Map<MarkBL>(mark);
+        }
+
         public void Dispose()
         {
             this._unitOfWork.Dispose();

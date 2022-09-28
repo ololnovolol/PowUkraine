@@ -16,7 +16,7 @@ namespace Pow.Domain.Validators
             RuleFor(x => x.MapUrl).NotEmpty();
             RuleFor(x => x.GpsLongitude).NotEmpty().Matches(@"\d");
             RuleFor(x => x.GpsLatitude).NotEmpty().Matches(@"\d");
-            RuleFor(x => x.UserId).NotNull();
+            /*RuleFor(x => x.UserId).NotNull();*/
         }
     }
 }

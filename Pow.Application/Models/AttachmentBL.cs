@@ -8,10 +8,10 @@ namespace Pow.Application.Models
 {
     public class AttachmentBL : BaseModelBL
     {
-        public string Title { get; init; }
+        public string Title { get; set; }
 
-        public byte[] File { get; init; }
+        public byte[] File { get; set; }
 
-        public Guid MessageId { get; init; }
+        public Guid MessageId { get; set; }
     }
 }
