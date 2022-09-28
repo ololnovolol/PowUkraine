@@ -1,0 +1,32 @@
+{
+  "devDependencies": {
+    "eslint": "^8.24.0",
+    "eslint-config-prettier": "^8.5.0",
+    "eslint-config-react-app": "^7.0.1",
+    "eslint-plugin-prettier": "^4.2.1",
+    "eslint-plugin-react": "^7.31.8",
+    "husky": "^8.0.0",
+    "lint-staged": "^13.0.3",
+    "prettier": "^2.7.1",
+    "react-test-renderer": "^18.2.0",
+    "stylelint": "^14.13.0"
+  },
+  "scripts": {
+    "prepare": "husky install"
+  },
+  "lint-staged": {
+    "*.cs": "dotnet format --include",
+    "*.{js,jsx}": [
+      "eslint --fix",
+      "prettier --write"
+    ],
+    "*.css": "stylelint --fix",
+    "*.scss": "stylelint --syntax=scss --fix"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged --relative",
+      "post-commit": "git update-index --again"
+    }
+  }
+}
