@@ -1,21 +1,21 @@
 import React, { useState } from 'react'
 import { useSelector } from 'react-redux'
 import * as apiService from '../../common/services/apiService'
-import { getFromApi_User } from '../../common/services/apiService'
 import { prettifyJson } from '../../common/utils/jsonUtils'
 
 function ManageAccounts() {
   useSelector(state => state.auth.user)
   const [doughnutData, setDoughnutData] = useState(null)
+  const [usersData, setUsersData] = useState(null)
 
   async function getAllAdmin() {
     const doughnuts = await apiService.getFromApi_Admin()
     setDoughnutData(doughnuts)
   }
 
-  async function getAllUser() {
-    const doughnuts = await getFromApi_User()
-    setDoughnutData(doughnuts)
+  async function getAllUsers() {
+    const users = await apiService.getUsers()
+    setUsersData(users)
   }
 
   return (
@@ -25,13 +25,19 @@ function ManageAccounts() {
         <h1>Manage Accounts</h1>
 
         <button className="button button-outline" onClick={() => getAllAdmin()}>GetAll_Admin_api</button>
-        <button className="button button-outline" onClick={() => getAllUser()}>GetAll_User_api</button>
+        <button className="button button-outline" onClick={() => getAllUsers()}>GetAll_User_Identity</button>
 
-        <pre>
+        <div>
           <code>
             {prettifyJson(doughnutData ? doughnutData : 'No api connect yet :(')}
           </code>
-        </pre>
+        </div>
+
+        <div>
+          <code>
+            {prettifyJson(usersData ? usersData : 'No api users yet :(')}
+          </code>
+        </div>
 
       </div>
     </div>

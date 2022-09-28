@@ -10,5 +10,10 @@ export async function getFromApi_User() {
   return response.data;
 };
 
+export async function getUsers() {
+  const response = await axios.get('https://localhost:44316/api/roles/getusers');
+  return response.data;
+};
+
 
 

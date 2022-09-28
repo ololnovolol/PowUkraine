@@ -9,12 +9,14 @@ import * as TiIcons from 'react-icons/ti';
 export const SidebarData = [
   {
     title: 'Mark the enemy',
+    role: 'undefined',
     path: '/',
     icon: <FaIcons.FaMapMarkerAlt />,
     cName: 'nav-text'
   },
   {
     title: 'Important message',
+    role: 'undefined',
     path: '/message',
     icon: <RiIcons.RiMessage3Line />
   },
@@ -58,6 +60,7 @@ export const SidebarData = [
   
   {
     title: 'Admin panel',
+    role: 'admin',
     path: '',
     icon: <RiIcons.RiAdminLine />,  
     iconClosed: <MdIcons.MdOutlineKeyboardArrowDown />,
@@ -83,6 +86,7 @@ export const SidebarData = [
   },
   {
     title: 'Lobby',
+    role: 'user',
     path: '',
     icon: <RiIcons.RiUserSettingsLine />,  
     iconClosed: <MdIcons.MdOutlineKeyboardArrowDown />,
@@ -95,7 +99,7 @@ export const SidebarData = [
             icon: <MdIcons.MdOutlineBookmarks />,
         },
         {
-            title: 'My data',
+            title: 'Manage Account',
             path: '/manageAccount',
             icon: <RiIcons.RiSettings4Line />,
         },
@@ -108,12 +112,14 @@ export const SidebarData = [
   },
   {
     title: 'Authorization',
+    role: 'undefined',
     path: '/login',
     icon: <RiIcons.RiOpenArmLine />,
     cName: 'nav-text'
   },
   {
     title: 'About',
+    role: 'undefined',
     path: '/about',
     icon: <IoIcons.IoMdHelpCircle />,
     cName: 'nav-text'

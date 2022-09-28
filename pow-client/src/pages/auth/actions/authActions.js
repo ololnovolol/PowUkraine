@@ -4,8 +4,8 @@ import {
   USER_EXPIRED,
   STORE_USER_ERROR,
   LOADING_USER
-} from './types'
-import { setAuthHeader } from '../../common/utils/axiosHeaders'
+} from '../types'
+import { setAuthHeader } from '../../../common/utils/axiosHeaders'
 
 export function storeUser(user) {
   setAuthHeader(user.access_token)

@@ -22,7 +22,8 @@ function ManageAccount() {
     <>
     <div className='manageAccounts'>
       <div>
-        <h1>Manage my account</h1>
+        <h1>Manage my account </h1>
+        <p>Hello {}</p>
 
         <button className="button button-outline" onClick={() => getAllAdmin()}>GetAll_Admin_api</button>
         <button className="button button-outline" onClick={() => getAllUser()}>GetAll_User_api</button>

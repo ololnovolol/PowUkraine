@@ -3,7 +3,6 @@ import './style/app/App.css';
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom'
 import SigninOidc from './pages/auth/signin-oidc'
 import SignoutOidc from './pages/auth/signout-oidc'
-import Lobby from './pages/userLobby/lobby';
 import Mark from './pages/marks/mark';
 import Login from './pages/auth/login';
 import Logout from './pages/logout/logout';
@@ -46,7 +45,6 @@ function App() {
                 <PrivateRoute exact path="/manageAccounts" component={manageAccounts} />
                 <PrivateRoute path="/logout" component={Logout} />
 
-                <PrivateRoute exact path="/userLobby" component={Lobby} />
                 <PrivateRoute exact path="/manageMarks" component={allMarks} />
                 <PrivateRoute exact path="/manageAccount" component={ManageAccount} />
                
