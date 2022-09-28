@@ -23,7 +23,7 @@ namespace Pow.Infrastructure.Repositories
         {
             entity.CreatedDate = DateTime.Now;
             var sql = "Insert into Messages (Name,Description,CreatedDate,EventDate,Phone,Email,UserId) VALUES (@Name,@Description,@CreatedDate,@EventDate,@Phone,@Email,@UserId)";
-            using (var connection = new SqlConnection(configuration.GetConnectionString("DefaultConnection")))
+            using (var connection = new SqlConnection(this.configuration.GetConnectionString("DefaultConnection")))
             {
                 connection.Open();
                 var result = await connection.ExecuteAsync(sql, entity);
@@ -34,7 +34,7 @@ namespace Pow.Infrastructure.Repositories
         public async Task<int> DeleteAsync(string id)
         {
             var sql = "DELETE FROM Messages WHERE Id = @Id";
-            using (var connection = new SqlConnection(configuration.GetConnectionString("DefaultConnection")))
+            using (var connection = new SqlConnection(this.configuration.GetConnectionString("DefaultConnection")))
             {
                 connection.Open();
                 var result = await connection.ExecuteAsync(sql, new { Id = id });
@@ -45,7 +45,7 @@ namespace Pow.Infrastructure.Repositories
         public async Task<IReadOnlyList<Message>> GetAllAsync()
         {
             var sql = "SELECT * FROM Messages";
-            using (var connection = new SqlConnection(configuration.GetConnectionString("DefaultConnection")))
+            using (var connection = new SqlConnection(this.configuration.GetConnectionString("DefaultConnection")))
             {
                 connection.Open();
                 var result = await connection.QueryAsync<Message>(sql);
@@ -56,7 +56,7 @@ namespace Pow.Infrastructure.Repositories
         public async Task<Message> GetByIdAsync(string id)
         {
             var sql = "SELECT * FROM Messages WHERE Id = @Id";
-            using (var connection = new SqlConnection(configuration.GetConnectionString("DefaultConnection")))
+            using (var connection = new SqlConnection(this.configuration.GetConnectionString("DefaultConnection")))
             {
                 connection.Open();
                 var result = await connection.QuerySingleOrDefaultAsync<Message>(sql, new { Id = id });

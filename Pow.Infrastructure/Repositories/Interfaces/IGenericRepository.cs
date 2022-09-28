@@ -3,7 +3,8 @@ using System.Threading.Tasks;
 
 namespace Pow.Infrastructure.Repositories.Interfaces
 {
-    public interface IGenericRepository<T> where T : class
+    public interface IGenericRepository<T>
+        where T : class
     {
         Task<T> GetByIdAsync(string id);
 

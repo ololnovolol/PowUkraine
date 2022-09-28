@@ -8,7 +8,6 @@ using Microsoft.Extensions.Configuration;
 using Pow.Domain;
 using Pow.Infrastructure.Repositories.Interfaces;
 
-
 namespace Pow.Infrastructure.Repositories
 {
     public class AttachmentRepository : IAttachmentRepository

@@ -21,8 +21,8 @@ namespace Pow.Application.Services
             this._mapper = mapper;
         }
 
-        public async Task<int> Add(MessageBL messageBl) { 
-
+        public async Task<int> Add(MessageBL messageBl)
+        {
             var message = this._mapper.Map<Message>(messageBl);
             return await this._unitOfWork.Messages.AddAsync(message);
         }

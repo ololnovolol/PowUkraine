@@ -1,22 +1,24 @@
-﻿using Dapper;
-using Microsoft.Extensions.Configuration;
-using Pow.Domain;
-using Pow.Infrastructure.Repositories.Interfaces;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Data.SqlClient;
 using System.Linq;
 using System.Threading.Tasks;
+using Dapper;
+using Microsoft.Extensions.Configuration;
+using Pow.Domain;
+using Pow.Infrastructure.Repositories.Interfaces;
 
 namespace Pow.Infrastructure.Repositories
 {
     public class MarkRepository : IMarkRepository
     {
         private readonly IConfiguration configuration;
+
         public MarkRepository(IConfiguration configuration)
         {
             this.configuration = configuration;
         }
+
         public async Task<int> AddAsync(Mark entity)
         {
             var sql = "Insert into Marks (Desabled,MessageId,Country,City,Region,Address,StreetNumber,PostalCode,County,MapUrl,GpsLongtitude,GpsLatitude) VALUES (@Desabled,@MessageId,@Country,@City,@Region,@Address,@StreetNumber,@PostalCode,@County,@MapUrl,@GpsLongtitude,@GpsLatitude)";
@@ -27,6 +29,7 @@ namespace Pow.Infrastructure.Repositories
                 return result;
             }
         }
+
         public async Task<int> DeleteAsync(string id)
         {
             var sql = "DELETE FROM Marks WHERE Id = @Id";
@@ -37,6 +40,7 @@ namespace Pow.Infrastructure.Repositories
                 return result;
             }
         }
+
         public async Task<IReadOnlyList<Mark>> GetAllAsync()
         {
             var sql = "SELECT * FROM Marks";
@@ -47,6 +51,7 @@ namespace Pow.Infrastructure.Repositories
                 return result.ToList();
             }
         }
+
         public async Task<Mark> GetByIdAsync(string id)
         {
             var sql = "SELECT * FROM Marks WHERE Id = @Id";
@@ -57,6 +62,7 @@ namespace Pow.Infrastructure.Repositories
                 return result;
             }
         }
+
         public async Task<int> UpdateAsync(Mark entity)
         {
             throw new Exception();

@@ -4,11 +4,11 @@ using Pow.Domain;
 
 namespace Pow.Application.AutoMapperProfiles
 {
-    public class MessageProfile : Profile
+    public class MarkProfile : Profile
     {
-        public MessageProfile()
+        public MarkProfile()
         {
-            this.CreateMap<MessageBL, Message>().ReverseMap();
+            this.CreateMap<MarkBL, Mark>().ReverseMap();
         }
     }
 }

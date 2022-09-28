@@ -1,5 +1,5 @@
-﻿using Pow.Domain.Base;
-using System;
+﻿using System;
+using Pow.Domain.Base;
 
 namespace Pow.Domain
 {
@@ -27,6 +27,6 @@ namespace Pow.Domain
 
         public string GpsLatitude { get; init; }
 
-        public Guid? UserId { get; init; }
+        public Guid? MessageId { get; init; }
     }
 }
