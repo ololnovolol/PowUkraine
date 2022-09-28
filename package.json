@@ -9,9 +9,17 @@
     "lint-staged": "^13.0.3",
     "prettier": "^2.7.1",
     "react-test-renderer": "^18.2.0",
-    "stylelint": "^14.13.0"
+    "stylelint": "^14.13.0",
+    "stylelint-config-prettier": "^9.0.3",
+    "stylelint-config-standard": "^28.0.0"
   },
   "scripts": {
+    "lint": "eslint ./pow-client/ --ignore-path .gitignore --no-error-on-unmatched-pattern",
+    "lint:fix": "npm run lint -- --fix",
+    "format": "prettier --check ./pow-client/ !**/*.css --ignore-path .gitignore",
+    "format:fix": "npm run format -- --write",
+    "lint:style": "stylelint \"./pow-client/**/*.css\" \"./pow-client/**/*.scss\" --ignore-path .gitignore",
+    "lint:style:fix": "npm run lint:style -- --fix",
     "prepare": "husky install"
   },
   "lint-staged": {

@@ -5,18 +5,25 @@ jobs:
   build_and_format:
     runs-on: ubuntu-latest
     steps:
-    - uses: actions/checkout@v2
+      - uses: actions/checkout@v2
 
-    - name: Setup .NET Core
-      uses: actions/setup-dotnet@v2
-      with:
-        dotnet-version: '5.0.x'
+      - name: Setup .NET Core
+        uses: actions/setup-dotnet@v2
+        with:
+          dotnet-version: "5.0.x"
 
-    - name: Build solution
-      run: dotnet build
+      - name: Build solution
+        run: dotnet build
 
-    - name: Install dotnet format
-      run: dotnet tool update --global dotnet-format
+      - name: Install dotnet format
+        run: dotnet tool update --global dotnet-format
 
-    - name: Perform dotnet format check
-      run: dotnet format --check --verbosity diagnostic
+      - name: Perform dotnet format check
+        run: dotnet format --check --verbosity diagnostic
+
+      - name: Perform frontend format check
+      - uses: actions/setup-node@v2
+        with:
+          node-version: "16"
+          cache: "npm"
+        run: npm ci && npm run lint && npm run format && npm run lint:style
