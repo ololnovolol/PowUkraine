@@ -9,30 +9,16 @@ import * as TiIcons from 'react-icons/ti';
 export const SidebarData = [
   {
     title: 'Mark the enemy',
+    role: 'undefined',
     path: '/',
     icon: <FaIcons.FaMapMarkerAlt />,
     cName: 'nav-text'
   },
   {
     title: 'Important message',
+    role: 'undefined',
     path: '/message',
-    icon: <RiIcons.RiMessage3Line />,
-
-    iconClosed: <MdIcons.MdOutlineKeyboardArrowDown />,
-    iconOpened: <MdIcons.MdKeyboardArrowUp />,
-
-    subNav: [
-      {
-        title: 'Message 1',
-        path: '/message/message1',
-        icon: <IoIcons.IoIosPaper />
-      },
-      {
-        title: 'Message 2',
-        path: '/message/message2',
-        icon: <IoIcons.IoIosPaper />
-      }
-    ]
+    icon: <RiIcons.RiMessage3Line />
   },
 
   {
@@ -74,41 +60,43 @@ export const SidebarData = [
   
   {
     title: 'Admin panel',
-    path: '/admin',
+    role: 'admin',
+    path: '',
     icon: <RiIcons.RiAdminLine />,  
     iconClosed: <MdIcons.MdOutlineKeyboardArrowDown />,
     iconOpened: <MdIcons.MdKeyboardArrowUp />,
 
     subNav: [
         {
+            title: 'Manage messages',
+            path: '/manageMessages',
+            icon: <TiIcons.TiMessages />,
+        },
+        {
             title: 'Accounts',
-            path: '/ManageAccounts',
+            path: '/manageAccounts',
             icon: <IoIcons.IoMdPeople />,
         },
         {
-            title: 'All marks',
-            path: '/allmarks',
-            icon: <MdIcons.MdOutlineBookmarks />,
-        },
-        {
-            title: 'All messages',
-            path: '/allmarks',
-            icon: <TiIcons.TiMessages />,
-        }
+          title: 'Logout',
+          path: '/logout',
+          icon: <RiIcons.RiLogoutBoxRLine />,
+      }
     ],
   },
   {
     title: 'Lobby',
-    path: '/userLobby',
+    role: 'user',
+    path: '',
     icon: <RiIcons.RiUserSettingsLine />,  
     iconClosed: <MdIcons.MdOutlineKeyboardArrowDown />,
     iconOpened: <MdIcons.MdKeyboardArrowUp />,
 
     subNav: [
-        {
-            title: 'All Marks',
-            path: '/allmarks',
-            icon: <MdIcons.MdBookmarks />,
+          {
+            title: 'All marks',
+            path: '/manageMarks',
+            icon: <MdIcons.MdOutlineBookmarks />,
         },
         {
             title: 'Manage Account',
@@ -124,12 +112,14 @@ export const SidebarData = [
   },
   {
     title: 'Authorization',
+    role: 'undefined',
     path: '/login',
     icon: <RiIcons.RiOpenArmLine />,
     cName: 'nav-text'
   },
   {
     title: 'About',
+    role: 'undefined',
     path: '/about',
     icon: <IoIcons.IoMdHelpCircle />,
     cName: 'nav-text'

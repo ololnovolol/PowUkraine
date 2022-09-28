@@ -69,6 +69,9 @@ const SidebarWrap = styled.div`
   width: 100%;
 `;
 
+
+
+
 const Sidebar = () => {
   const [sidebar, setSidebar] = useState(false);
 
@@ -78,18 +81,20 @@ const Sidebar = () => {
     <>
       <IconContext.Provider value={{ color: '#F0A30A' }}>
         <Nav>
-          <NavIcon to='#'>
+          <NavIcon to='/'>
             <FiIcons.CgMenu onClick={showSidebar} />
           </NavIcon>
         </Nav>
         <SidebarNav sidebar={sidebar}>
           <SidebarWrap>
-            <NavIcon to='#'>
+            <NavIcon to='/'>
               <FiIcons.CgMenuMotion onClick={showSidebar} />
-            </NavIcon>
-            {SidebarData.map((item, index) => {
-              return <SubMenu item={item} key={index} />;
-            })}
+            </NavIcon>          
+            { 
+               SidebarData.map((item, index) =>  {
+                return <SubMenu item={item} key={index} />;
+              })
+            }                   
           </SidebarWrap>
         </SidebarNav>
       </IconContext.Provider>
