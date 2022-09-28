@@ -21,9 +21,11 @@ jobs:
       - name: Perform dotnet format check
         run: dotnet format --check --verbosity diagnostic
 
-      - name: Perform frontend format check
-      - uses: actions/setup-node@v2
+      - name: Setup node.js
+        uses: actions/setup-node@v2
         with:
           node-version: "16"
           cache: "npm"
+
+      - name: Perform frontend format check
         run: npm ci && npm run lint && npm run format && npm run lint:style
