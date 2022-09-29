@@ -27,6 +27,6 @@ namespace Pow.Domain
 
         public string GpsLatitude { get; init; }
 
-        public Guid? UserId { get; init; }
+        public Guid? MessageId { get; init; }
     }
 }

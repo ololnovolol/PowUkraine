@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio Version 16
-VisualStudioVersion = 16.0.32802.440
+# Visual Studio Version 17
+VisualStudioVersion = 17.3.32819.101
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "IdentityServer", "IdentityServer\IdentityServer.csproj", "{E1170042-63D3-42F0-8421-FE18E935E771}"
 EndProject
@@ -9,12 +9,15 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Pow.WebApi", "Pow.WebApi\Po
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Pow.Application", "Pow.Application\Pow.Application.csproj", "{4C5440FA-F3BD-4E43-97ED-0991FD016F81}"
 	ProjectSection(ProjectDependencies) = postProject
-		{24DDA006-807D-4FF9-AF45-7DC36DCEE1E0} = {24DDA006-807D-4FF9-AF45-7DC36DCEE1E0}
+		{117923EF-EF39-4851-8928-F45F413E72DB} = {117923EF-EF39-4851-8928-F45F413E72DB}
 	EndProjectSection
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Pow.Domain", "Pow.Domain\Pow.Domain.csproj", "{24DDA006-807D-4FF9-AF45-7DC36DCEE1E0}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Pow.Infrastructure", "Pow.Infrastructure\Pow.Infrastructure.csproj", "{117923EF-EF39-4851-8928-F45F413E72DB}"
+	ProjectSection(ProjectDependencies) = postProject
+		{24DDA006-807D-4FF9-AF45-7DC36DCEE1E0} = {24DDA006-807D-4FF9-AF45-7DC36DCEE1E0}
+	EndProjectSection
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Pow.Infrastructure.Tests", "Pow.Infrastructure.Tests\Pow.Infrastructure.Tests.csproj", "{2878D8BE-C626-400F-91B5-1C165CA01D82}"
 	ProjectSection(ProjectDependencies) = postProject

@@ -75,6 +75,17 @@ namespace Pow.Infrastructure.Repositories
             }
         }
 
+        public async Task<IReadOnlyList<Message>> GetByUserIdAsync(string userId)
+        {
+            var sql = "SELECT * FROM Messages WHERE UserId = @userId";
+            using (var connection = new SqlConnection(this.configuration.GetConnectionString("DefaultConnection")))
+            {
+                connection.Open();
+                var result = await connection.QueryAsync<Message>(sql);
+                return result.ToList();
+            }
+        }
+
         public async Task<int> UpdateAsync(Message entity)
         {
             throw new Exception();

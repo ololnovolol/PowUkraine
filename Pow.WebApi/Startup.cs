@@ -12,14 +12,14 @@ namespace Pow.WebApi
     {
         public Startup(IConfiguration configuration)
         {
-            Configuration = configuration;
+            this.Configuration = configuration;
         }
 
         public IConfiguration Configuration { get; }
 
         public void ConfigureServices(IServiceCollection services)
         {
-            services.AddCustomDapperConfiguration(Configuration);
+            services.AddCustomDapperConfiguration(this.Configuration);
 
             services.AddControllers();
 

@@ -71,6 +71,17 @@ namespace Pow.Infrastructure.Repositories
             }
         }
 
+        public async Task<IReadOnlyList<Attachment>> GetByMessageIdAsync(string messageId)
+        {
+            var sql = "SELECT * FROM Attachments WHERE MessageId = @messageId";
+            using (var connection = new SqlConnection(configuration.GetConnectionString("DefaultConnection")))
+            {
+                connection.Open();
+                var result = await connection.QueryAsync<Attachment>(sql);
+                return result.ToList();
+            }
+        }
+
         public async Task<int> UpdateAsync(Attachment entity)
         {
             throw new Exception();
