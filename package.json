@@ -20,7 +20,8 @@
     "format:fix": "npm run format -- --write",
     "lint:style": "stylelint \"./pow-client/**/*.css\" \"./pow-client/**/*.scss\" --ignore-path .gitignore",
     "lint:style:fix": "npm run lint:style -- --fix",
-    "prepare": "husky install"
+    "prepare": "husky install",
+    "fix": "npm run lint:fix && npm run format:fix && npm run lint:style:fix"
   },
   "lint-staged": {
     "*.cs": "dotnet format --include",
@@ -36,5 +37,14 @@
       "pre-commit": "lint-staged --relative",
       "post-commit": "git update-index --again"
     }
+  },
+  "prettier": {
+    "trailingComma": "all",
+    "singleQuote": true,
+    "arrowParens": "avoid",
+    "bracketSameLine": true
+  },
+  "stylelint": {
+    "extends": "stylelint-config-prettier"
   }
 }
