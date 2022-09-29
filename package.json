@@ -1,50 +1,49 @@
 {
-  "devDependencies": {
-    "eslint": "^8.24.0",
-    "eslint-config-prettier": "^8.5.0",
-    "eslint-config-react-app": "^7.0.1",
-    "eslint-plugin-prettier": "^4.2.1",
-    "eslint-plugin-react": "^7.31.8",
-    "husky": "^8.0.0",
-    "lint-staged": "^13.0.3",
-    "prettier": "^2.7.1",
-    "react-test-renderer": "^18.2.0",
-    "stylelint": "^14.13.0",
-    "stylelint-config-prettier": "^9.0.3",
-    "stylelint-config-standard": "^28.0.0"
-  },
-  "scripts": {
-    "lint": "eslint ./pow-client/ --ignore-path .gitignore --no-error-on-unmatched-pattern",
-    "lint:fix": "npm run lint -- --fix",
-    "format": "prettier --check ./pow-client/ !**/*.css --ignore-path .gitignore",
-    "format:fix": "npm run format -- --write",
-    "lint:style": "stylelint \"./pow-client/**/*.css\" \"./pow-client/**/*.scss\" --ignore-path .gitignore",
-    "lint:style:fix": "npm run lint:style -- --fix",
-    "prepare": "husky install",
-    "fix": "npm run lint:fix && npm run format:fix && npm run lint:style:fix"
-  },
-  "lint-staged": {
-    "*.cs": "dotnet format --include",
-    "*.{js,jsx}": [
-      "eslint --fix",
-      "prettier --write"
-    ],
-    "*.css": "stylelint --fix",
-    "*.scss": "stylelint --syntax=scss --fix"
-  },
-  "husky": {
-    "hooks": {
-      "pre-commit": "lint-staged --relative",
-      "post-commit": "git update-index --again"
+    "devDependencies": {
+        "eslint": "^8.24.0",
+        "eslint-config-prettier": "^8.5.0",
+        "eslint-config-react-app": "^7.0.1",
+        "eslint-plugin-prettier": "^4.2.1",
+        "eslint-plugin-react": "^7.31.8",
+        "husky": "^8.0.0",
+        "lint-staged": "^13.0.3",
+        "prettier": "^2.7.1",
+        "stylelint": "^14.13.0",
+        "stylelint-config-prettier": "^9.0.3",
+        "stylelint-config-standard": "^28.0.0"
+    },
+    "scripts": {
+        "lint": "eslint ./pow-client/ --ignore-path .gitignore --no-error-on-unmatched-pattern",
+        "lint:fix": "npm run lint -- --fix",
+        "format": "prettier --check ./pow-client/ !**/*.css --ignore-path .gitignore",
+        "format:fix": "npm run format -- --write",
+        "lint:style": "stylelint \"./pow-client/**/*.css\" \"./pow-client/**/*.scss\" --ignore-path .gitignore",
+        "lint:style:fix": "npm run lint:style -- --fix",
+        "prepare": "husky install",
+        "fix": "npm run lint:fix && npm run format:fix && npm run lint:style:fix"
+    },
+    "lint-staged": {
+        "*.cs": "dotnet format --include",
+        "*.{js,jsx}": [
+            "eslint --fix",
+            "prettier --write"
+        ],
+        "*.css": "stylelint --fix",
+        "*.scss": "stylelint --syntax=scss --fix"
+    },
+    "husky": {
+        "hooks": {
+            "pre-commit": "lint-staged --relative",
+            "post-commit": "git update-index --again"
+        }
+    },
+    "prettier": {
+        "trailingComma": "all",
+        "singleQuote": true,
+        "arrowParens": "avoid",
+        "bracketSameLine": true
+    },
+    "stylelint": {
+        "extends": "stylelint-config-prettier"
     }
-  },
-  "prettier": {
-    "trailingComma": "all",
-    "singleQuote": true,
-    "arrowParens": "avoid",
-    "bracketSameLine": true
-  },
-  "stylelint": {
-    "extends": "stylelint-config-prettier"
-  }
 }

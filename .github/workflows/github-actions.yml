@@ -1,5 +1,5 @@
 name: Check codebase
-on: [push]
+on: [push, pull_request]
 
 jobs:
   build_and_format:
@@ -19,7 +19,7 @@ jobs:
         run: dotnet tool update --global dotnet-format
 
       - name: Perform dotnet format check
-        run: dotnet format --check --verbosity diagnostic
+        run: dotnet format --check --verbosity m
 
       - name: Setup node.js
         uses: actions/setup-node@v2
