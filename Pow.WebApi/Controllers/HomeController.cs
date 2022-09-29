@@ -7,25 +7,28 @@ namespace Pow.WebApi.Controllers
 {
     public class HomeController : BaseController
     {
-        [Authorize(Policy = "UserAccess")]
+        //[Authorize(Policy = "UserAccess")]
+        [Authorize(Roles = "User")]
         [HttpGet]
         public IActionResult Get()
         {
             return Ok("Users_only___User___get method=)");
         }
 
-        [Authorize(Policy = "AdminAccess")]
+        //[Authorize(Policy = "AdminAccess")]
+        [Authorize(Roles = "Admin")]
         [HttpGet]
         public IActionResult GetAll()
         {
             return Ok("Admin Access_only___Admin___getAll");
         }
 
-        [Authorize(Policy = "UserAccess")]
+
         [HttpPost]
-        public IActionResult Create([FromBody] string model)
+        public IActionResult Message([FromQuery]string json)
         {
-            return Ok(model);
+            Console.WriteLine(json);
+            return Ok();
         }
 
         [Authorize(Policy = "UserAccess")]

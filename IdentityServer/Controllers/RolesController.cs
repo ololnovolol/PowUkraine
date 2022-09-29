@@ -1,7 +1,9 @@
 ﻿using System.Collections.Generic;
+using System.Data;
 using System.Linq;
 using System.Threading.Tasks;
 using IdentityServer.Models;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
 
@@ -22,34 +24,37 @@ namespace IdentityServer.Controllers
         }
 
         [HttpGet]
-        public async Task<IActionResult> Get()
+        public async Task<IActionResult> GetUsers()
         {
-            var result = await _userManager.GetUsersInRoleAsync("user");
+            var users = _userManager.Users;
+            var roles = await _userManager.GetUsersInRoleAsync("Admin");
+
+            var result = new List<UserVm>();
+
+            foreach (var user in users)
+            {
+                result.Add(
+                    new UserVm
+                    {
+                        FirstName = user.FirstName,
+                        LastName = user.LastName,
+                        Email = user.Email,
+                        PhoneNumber = user.PhoneNumber,
+                        BirthDay = user.BirthDay.ToShortDateString(),
+                        Role = (roles.Contains(user)) ? "Admin" : "User"
+                    }
+                );
+            }
 
             return Json(result);
         }
 
-        [HttpPost]
-        public async Task<IActionResult> Create(string name, string returnUrl)
+        [HttpDelete]
+        public async Task<IActionResult> DeleteUser(string str)
         {
-            if (string.IsNullOrEmpty(name))
-            {
-                return BadRequest();
-            }
+           
 
-            var result = await _roleManager.CreateAsync(new IdentityRole(name));
-
-            if (result.Succeeded)
-            {
-                return Ok();
-            }
-
-            foreach (var error in result.Errors)
-            {
-                ModelState.AddModelError(string.Empty, error.Description);
-            }
-
-            return BadRequest();
+            return RedirectToAction("GetUsers");
         }
 
         [HttpPost]
@@ -63,11 +68,6 @@ namespace IdentityServer.Controllers
             }
 
             return Ok();
-        }
-
-        public IActionResult UserList()
-        {
-            return Json(_userManager.Users);
         }
 
         public async Task<IActionResult> Edit(string userId)

@@ -43,7 +43,7 @@ namespace IdentityServer
 
             app.UseStaticFiles();
             app.UseRouting();
-            app.UseCors();
+            app.UseCors("AllowAll");
             app.UseIdentityServer();
             app.UseEndpoints(endpoints => { endpoints.MapDefaultControllerRoute(); });
 
