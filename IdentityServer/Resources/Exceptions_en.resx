@@ -123,6 +123,9 @@
   <data name="false_agree" xml:space="preserve">
     <value>You must agree all statements</value>
   </data>
+  <data name="Incorrect_birthdate" xml:space="preserve">
+    <value>User birthdate must be upper than 16 (yaers) and lower than 150 (years)</value>
+  </data>
   <data name="incorrect_email_domen" xml:space="preserve">
     <value>This domain is in the spam database. Choose another email service</value>
   </data>
@@ -137,9 +140,6 @@
   </data>
   <data name="occurred_initialize" xml:space="preserve">
     <value>An error occurred while app Initialization</value>
-  </data>
-  <data name="String1Incorrect_birthdaIncorrect_birthdate" xml:space="preserve">
-    <value>User birthdate must be upper than 16 (yaers) and lower than 150 (years)</value>
   </data>
   <data name="user_not_found" xml:space="preserve">
     <value>User not found</value>

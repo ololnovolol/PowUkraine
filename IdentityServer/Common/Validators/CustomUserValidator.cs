@@ -24,24 +24,12 @@ namespace IdentityServer.Common.Validators
         {
             ValidateEmail(user);
             await ValidateUserName(manager, user);
-            ValidateBirthDate(user);
 
             return await Task.FromResult(
                 _errors.Count == 0 ? IdentityResult.Success : IdentityResult.Failed(_errors.ToArray()));
         }
 
-        private void ValidateBirthDate(AppUser user)
-        {
-            if (user.BirthDay.Year > DateTime.Now.Year - int.Parse(_configuration["constants:minAge"]) ||
-                user.BirthDay.Year < DateTime.Now.Year - int.Parse(_configuration["constants:maxAge"]))
-            {
-                AddErrorsToResult(
-                    "Incorrect_birthdate",
-                    ResourceReader.GetExceptionMessage("Incorrect_birthdate"));
-            }
-        }
-
-        private async Task ValidateUserName(UserManager<AppUser> manager, AppUser user)
+        private Task ValidateUserName(UserManager<AppUser> manager, AppUser user)
         {
             if (user.UserName.ToLower().Contains("admin"))
             {
@@ -50,26 +38,13 @@ namespace IdentityServer.Common.Validators
                     ResourceReader.GetExceptionMessage("incorrect_username"));
             }
 
-            if (await manager.FindByNameAsync(user.UserName) != null)
-            {
-                AddErrorsToResult(
-                    "already_use_name",
-                    ResourceReader.GetExceptionMessage("already_use_name"));
-            }
-
-            if (await manager.FindByLoginAsync(user.UserName, "Incorrect user name") != null)
-            {
-                AddErrorsToResult(
-                    "already_use_name",
-                    ResourceReader.GetExceptionMessage("already_use_name"));
-            }
+            return Task.CompletedTask;
         }
 
         private void ValidateEmail(AppUser user)
         {
             const string pattern =
-                @"^(?("")(""[^""]+?""@)|(([0-9a-z]((\.(?!\.))|[-!#\$%&'\*\+/=\?\^`\{\}\|~\w])*)(?<=[0-9a-z])
-                @))(?(\[)(\[(\d{1,3}\.){3}\d{1,3}\])|(([0-9a-z][-\w]*[0-9a-z]*\.)+[a-z0-9]{2,17}))$";
+                @"^([a-z0-9_-]+\.)*[a-z0-9_-]+@[a-z0-9_-]+(\.[a-z0-9_-]+)*\.[a-z]{2,6}$";
 
             if (user.Email.ToLower().EndsWith("@yandex.ru") ||
                 user.Email.ToLower().EndsWith("@mail.ru") ||

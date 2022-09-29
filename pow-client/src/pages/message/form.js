@@ -1,6 +1,7 @@
 import { Form } from '@altiore/form';
 import React from 'react';
 import styled from 'styled-components';
+import * as apiService from '../../common/services/apiService'
 
 const SmButton = styled.button`
   background: #88A87D none repeat scroll 0% 0%;
@@ -31,7 +32,7 @@ const SmButton = styled.button`
 const BgButton = styled.button`
   background: #88A87D none repeat scroll 0% 0%;
   height: 50px;
-  weight: 100px;
+  weight: 100;
   justify-content: flex;
   align-items: center;
   position: relative;
@@ -59,18 +60,25 @@ const Block = styled.div`
   position: relative;
 `;
 
-const MessageForm = () => {
-    const handleSubmit = (values) =>{
-        console.log('handleSubmit', { 
-          values,
-        });
-      };
+export const MessageForm = () => {
+  async function postMsg(values) {
+    const answer = await apiService.sentMessage(values)
+    handleSubmit(answer)
+  }
+
+const handleSubmit = (answer) =>{
+    console.log('handleSubmit', { 
+      answer,
+    });
+  }
+
+
   
     return (
       <>
 
             <h1>Create important message</h1>
-            <Form  onSubmit={handleSubmit}>
+            <Form  onSubmit={postMsg}>
                 <Block>
                     <label>Title</label>
                     <input name="Title"/>
@@ -90,10 +98,10 @@ const MessageForm = () => {
                     <SmButton>Pin</SmButton>
                 </Block>
 
-              
+                <Block>
                     <label>Submit</label>
                     <BgButton type="submit">Submit</BgButton>
-           
+                </Block>
             </Form>
       </>
     );

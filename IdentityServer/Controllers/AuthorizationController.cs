@@ -1,10 +1,12 @@
-﻿using System.Security.Claims;
+﻿using System;
+using System.Security.Claims;
 using System.Threading.Tasks;
 using IdentityServer.Models;
 using IdentityServer.Services;
 using IdentityServer4.Services;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.Extensions.Configuration;
 
 namespace IdentityServer.Controllers
 {
@@ -108,7 +110,7 @@ namespace IdentityServer.Controllers
 
             if (result.Succeeded)
             {
-                await _userManager.AddToRoleAsync(user, "User");
+                var a = await _userManager.AddToRoleAsync(user, "User");
                 await _signInManager.SignInAsync(user, false);
 
                 return Redirect(viewModel.ReturnUrl);
@@ -189,7 +191,7 @@ namespace IdentityServer.Controllers
                 return RedirectToAction("Login");
             }
 
-            var user = new AppUser { UserName = viewModel.UserName, Email = viewModel.Email };
+            var user = new AppUser { UserName = viewModel.UserName, Email = viewModel.Email};
 
             var result = await _userManager.CreateAsync(user);
 
@@ -197,6 +199,7 @@ namespace IdentityServer.Controllers
             {
                 await _userManager.AddLoginAsync(user, info);
                 await _userManager.AddToRoleAsync(user, "User");
+
                 await _signInManager.SignInAsync(user, false);
 
                 return Redirect(viewModel.ReturnUrl);
