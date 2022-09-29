@@ -31,8 +31,13 @@ export async function deleteUser() {
 };
 
 export async function sentMessage(values) {
+    console.log(values.Title);
+    
     axios.post('https://localhost:44312/api/home/message',{
-        data: values,
+        Title: values.Title,
+        Description: "values.Description",
+        Data: values.Data,
+        PhoneNumber: "values.PhoneNumber",
     })
     .then(function (response) {
         console.log(response);
@@ -40,7 +45,9 @@ export async function sentMessage(values) {
     .catch(function (error) {
         console.log(error);
     });
-};
+  }
+
+
 
 
 

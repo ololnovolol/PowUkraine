@@ -2,6 +2,7 @@
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Pow.WebApi.Controllers.Base;
+using Pow.WebApi.Models;
 
 namespace Pow.WebApi.Controllers
 {
@@ -25,11 +26,12 @@ namespace Pow.WebApi.Controllers
 
 
         [HttpPost]
-        public IActionResult Message([FromQuery]string json)
+        public IActionResult Message([FromBody] MessageVm json)
         {
-            Console.WriteLine(json);
-            return Ok();
+
+            return Ok("goood!");
         }
+
 
         [Authorize(Policy = "UserAccess")]
         [HttpDelete("{id}")]

@@ -4,12 +4,14 @@
   box-sizing: border-box;
   margin: 0;
   padding: 0;
+  border-color: none;
   font-family: 'Lato', sans-serif;
 }
 
 .mark,
 .about,
-.message {
+.message
+.notFound {
   display: flex;
   height: 90vh;
   align-items: center;
@@ -20,7 +22,8 @@
 .admin,
 .manageAccounts,
 .manageMessages,
-.lobby {
+.lobby
+.notFound {
 
   display: flex;
   height: 90vh;
@@ -28,4 +31,81 @@
   justify-content: center;
   font-size: 2rem;
 
+}
+
+img.image404 {
+  width: 400px;
+  height: 400px;
+  object-fit: contain;
+  object-position: center;
+  display: block;
+  margin: 10px auto;
+  padding: 50px;
+}
+
+div.noResultMessage{
+  padding: 10px;
+  text-align: center;
+}
+
+div.hero{
+  min-height: 91vh;
+  background-color: #f7f7f7;
+  background-size: cover;
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  position: relative;
+  padding: 40px;
+}
+
+
+
+input {
+  margin-right: 25px;
+  position: relative;
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  border-color: none;
+  color: rgb(3, 3, 3);
+  cursor: pointer;  
+
+  border: 1px solid rgb(13, 13, 13);
+  -webkit-transition: 100s;
+  transition: 0.5s;
+  outline: none;
+}
+
+input:hover {
+  cursor: pointer;
+  border: 1px solid rgb(1, 1, 1);
+}
+
+.input:focus {
+  border: 1px solid rgb(5, 5, 5);
+  stop-color: #88A87D;
+  border: black;
+}
+
+.hidden{
+  opacity: 0;
+  height: 0;
+  width: 0;
+  line-height: 0;
+  overflow: hidden;
+  padding: 0;
+  margin: 0;
+}
+
+label {
+  margin-top: 15px;
+  margin-bottom: 10px;
+  position: relative;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;  
+
+  outline: none;
 }
