@@ -26,11 +26,12 @@ namespace Pow.WebApi.Controllers
 
 
         [HttpPost]
-        public IActionResult Message([FromBody] MessageVm json)
+        public IActionResult Message([FromBody] MessageVm data)
         {
 
             return Ok("goood!");
         }
+
 
 
         [Authorize(Policy = "UserAccess")]

@@ -26,18 +26,24 @@ export async function updateUser() {
 };
 
 export async function deleteUser() {
-  const response = await axios.get('https://localhost:44316/api/roles/getUsers');
+  const response = await axios.get('localhost:44316/api/roles/getUsers');
   return response.data;
 };
 
 export async function sentMessage(values) {
     console.log(values.Title);
     
-    axios.post('https://localhost:44312/api/home/message',{
+    axios.put("https://localhost:44312/api/home/message",{
+      data: values,
+        headers:{
+            'Content-Type': 'application/json'
+        },
+        responseType: "json"
+      /*
         Title: values.Title,
         Description: "values.Description",
         Data: values.Data,
-        PhoneNumber: "values.PhoneNumber",
+        PhoneNumber: "values.PhoneNumber",*/
     })
     .then(function (response) {
         console.log(response);
@@ -45,6 +51,7 @@ export async function sentMessage(values) {
     .catch(function (error) {
         console.log(error);
     });
+    
   }
 
 

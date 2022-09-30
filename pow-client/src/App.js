@@ -42,11 +42,11 @@ function App() {
             <Switch> 
     
                 <Route path="/" exact component={Mark} />
-                <Route path="/message" exact component={Message} />
-                <Route path="/login" exact component={Login} />
+                <Route path="/message" component={Message} />
+                <Route path="/login" component={Login} />
                 <Route path="/signout-oidc" component={SignoutOidc} />
                 <Route path="/signin-oidc" component={SigninOidc} />
-                <Route path="/about" exact component={About} />
+                <Route path="/about" component={About} />
 
                 <PrivateRoute path="/manageMessages" component={manageMessages} />
                 <PrivateRoute path="/manageAccounts" component={manageAccounts} />

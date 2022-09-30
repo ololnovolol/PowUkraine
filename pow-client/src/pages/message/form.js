@@ -1,6 +1,6 @@
 import React, {useState, useRef} from 'react';
 import styled from 'styled-components';
-import * as apiService from '../../common/services/apiService'
+import axios from 'axios'
 
 const SmButton = styled.button`
   background: #88A87D none repeat scroll 0% 0%;
@@ -50,60 +50,88 @@ const Form = styled.form`
 `;
 
 export const MessageForm = () => {
-  const [file, loadFile] = useState(null);
+  const [data, loadData] = useState({
+    Title: "",
+    Description: "",
+    Data: "",
+    PhoneNumber: "",
+    Attachment: "",
+
+  });
   const filePicker = useRef(null);
 
-  async function postMsg(values) {
-
-    const data = {
-      "Title": values.Title,
-      "Description": values.Description,
-      "Data": values.Data,
-      "PhoneNumber": values.PhoneNumber,
-      Attachment: file
-    };
-
-    const answer = await apiService.sentMessage(data)
-    console.log(answer);
+  async function postMsg(e) {
+    e.preventDefault();
+    axios.post('https://localhost:44312/api/home/message',
+    {
+       Title: data.Title,
+       Description: data.Description,
+       Data: data.Data,
+       PhoneNumber: data.PhoneNumber,
+       Attachment: data.Attachment
+     },
+    {
+      headers: {
+        "Content-Type": "application/json"
+      }
+    })
+    .then(function (response) {
+      console.log(response);
+    })
+    .catch(function (error) {
+      console.log(error);
+    });
   }
 
-  function addData(val){
+  /*function handleData(e){
     const formData = new FormData();
-    formData.append('Attachment',file);
-      loadFile(val);
+    formData.append('Attachment',data.Attachment);
+    loadData(formData);
   }
+  */
 
   const handlePick = () => {
     filePicker.current.click();
   }
 
+  function handle(e) {
+
+    const newData={...data}
+    newData[e.target.id] = e.target.value
+    loadData(newData)
+    console.log(newData)
+  }
+
+
+
   
 
-    return (
-      <>
+        return (
+          <>
             <Form  onSubmit={postMsg}>
             <h1>Create important message</h1> 
                 <Block>
                     <label>Title
-                    <input name="Title"/>   </label>
+                    <input id="Title" name="Title" onChange={(e) => handle(e)} value={data.Title} required/>   </label>
                     <label>Phone
-                    <input id="telNo" name="PhoneNumber" type="tel" placeholder="+380-99-77-77-777" /></label>
+                    <input id="PhoneNumber" name="PhoneNumber" onChange={(e) => handle(e)} value={data.PhoneNumber}
+                        type="tel" placeholder="+380-99-77-77-777" /></label>
                     <label>Data
-                    <input name="Data" type={"date"}/></label>
+                    <input id="Data" name="Data" onChange={(e) => handle(e)} value={data.Data} type={"datetime-local"} required/></label>
                     <label>Description
-                    <textarea name="Description"/></label> 
+                    <textarea id="Description" name="Description" onChange={(e) => handle(e)} value={data.Description} /></label> 
                 <Block>
                     <label>Add Location</label>
                     <SmButton type='button'>Pin Location</SmButton>
                 </Block>
-
                 <Block>
                     <label htmlFor="images">Add File
-                    <input className='hidden' type="file" id="images" accept="image/*" ref={filePicker} onChange={addData}/>
+                    <input id="Attachment" name="Attachment" className='hidden' 
+                        onChange={(e) => handle(e)} value={data.Attachment}
+                        type="file" accept="image/*" ref={filePicker}/>
                     </label>
-                    <SmButton type="button" onClick={handlePick}>PinFile</SmButton>
+                    <SmButton type="button" onClick={handlePick} >PinFile</SmButton>
                 </Block>
-
                 <Block>
                     <label>Submit</label>
                     <BgButton type="submit" onClick={postMsg}>Submit</BgButton>
@@ -111,9 +139,8 @@ export const MessageForm = () => {
 
                 </Block>
             </Form>
-
-      </>
-    );
-  };
+          </>
+        );
+      };
   
   export default MessageForm;
