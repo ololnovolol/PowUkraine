@@ -2,6 +2,7 @@
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Pow.WebApi.Controllers.Base;
+using Pow.WebApi.Models;
 
 namespace Pow.WebApi.Controllers
 {
@@ -16,7 +17,7 @@ namespace Pow.WebApi.Controllers
         }
 
         //[Authorize(Policy = "AdminAccess")]
-        [Authorize(Roles = "Admin")]
+        /*[Authorize(Roles = "Admin")]*/
         [HttpGet]
         public IActionResult GetAll()
         {
@@ -25,9 +26,13 @@ namespace Pow.WebApi.Controllers
 
 
         [HttpPost]
-        public IActionResult Message([FromQuery]string json)
+        public IActionResult Post([FromBody] MessageModel message)
         {
-            Console.WriteLine(json);
+            Console.WriteLine(message.Description);
+            Console.WriteLine(message.Phone);
+            Console.WriteLine(message.Email);
+            Console.WriteLine(message.EventDate);
+
             return Ok();
         }
 
