@@ -1,12 +1,10 @@
-﻿using System;
-using System.Security.Claims;
+﻿using System.Security.Claims;
 using System.Threading.Tasks;
 using IdentityServer.Models;
 using IdentityServer.Services;
 using IdentityServer4.Services;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
-using Microsoft.Extensions.Configuration;
 
 namespace IdentityServer.Controllers
 {
@@ -191,7 +189,7 @@ namespace IdentityServer.Controllers
                 return RedirectToAction("Login");
             }
 
-            var user = new AppUser { UserName = viewModel.UserName, Email = viewModel.Email};
+            var user = new AppUser { UserName = viewModel.UserName, Email = viewModel.Email };
 
             var result = await _userManager.CreateAsync(user);
 

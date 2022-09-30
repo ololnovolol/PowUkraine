@@ -13,6 +13,5 @@ namespace Pow.WebApi.Models
         public DateTime Data { get; set; }
 
         public string Attachment { get; set; }
-
     }
 }

@@ -1,9 +1,9 @@
 ﻿using System;
-using Dapper;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Pow.WebApi.Controllers.Base;
+using Pow.WebApi.Models;
 
 namespace Pow.WebApi.Controllers
 {
@@ -25,22 +25,18 @@ namespace Pow.WebApi.Controllers
             return Ok("Admin Access_only___Admin___getAll");
         }
 
-
         [HttpPost]
         public IActionResult Message(IFormCollection data, IFormFile imageFile)
         {
-            var msg = new Models.MessageVm();
+            var msg = new MessageVm();
             msg.Title = data["PhoneNumber"];
             msg.PhoneNumber = data["PhoneNumber"];
             msg.Data = DateTime.Parse(data["Data"]);
             msg.Description = data["Description"];
             msg.Attachment = data["Attachment"];
 
-
             return Ok("goood!");
         }
-
-
 
         [Authorize(Policy = "UserAccess")]
         [HttpDelete("{id}")]
