@@ -60,13 +60,13 @@ export default function UsersTable({theadData, tbodyData}) {
                            </td>
                       })}
                           <td >
-                           <Btn type="button" onClick={() => changeRole(index)}>change role</Btn>
+                           <Btn type="button" onClick={() => changeRole(row.id)}>change role</Btn>
                          </td>
                          <td >
-                           <Btn type="button" onClick={() => updateUser(index)}>update</Btn>
+                           <Btn type="button" onClick={() => updateUser()}>update</Btn>
                          </td>
                          <td >
-                           <Btn type="button" onClick={() => deleteUser(index)}>delete</Btn>
+                           <Btn type="button" onClick={() => deleteUser()}>delete</Btn>
                          </td>
                 </tr>;
               })}
