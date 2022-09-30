@@ -55,24 +55,35 @@ export const MessageForm = () => {
     Description: "",
     Data: "",
     PhoneNumber: "",
-    Attachment: "",
-
+    Location: [],
+    Attachment: []
   });
+  const [file, setFile] = useState([]);
+  const [location, setLocation] = useState({
+    Longitude: "",
+    Latitude: "",
+    MapUrl: ""
+  });
+
   const filePicker = useRef(null);
 
   async function postMsg(e) {
-    e.preventDefault();
+
+
+    const result = handleData(e);
+
     axios.post('https://localhost:44312/api/home/message',
-    {
-       Title: data.Title,
+    
+       /*Title: data.Title,
        Description: data.Description,
        Data: data.Data,
        PhoneNumber: data.PhoneNumber,
-       Attachment: data.Attachment
-     },
+       Attachment: data.Attachment*/
+        result,
+     
     {
       headers: {
-        "Content-Type": "application/json"
+        "Content-Type": "multipart/form-data"
       }
     })
     .then(function (response) {
@@ -83,16 +94,23 @@ export const MessageForm = () => {
     });
   }
 
-  /*function handleData(e){
+  function handleData(e){  
     const formData = new FormData();
-    formData.append('Attachment',data.Attachment);
-    loadData(formData);
+    formData.append('Title', "asfafasf");
+    formData.append('Description', data.Description);
+    formData.append('Data', data.Data);
+    formData.append('PhoneNumber', data.PhoneNumber);
+    formData.append('Attachment', file); 
+    formData.append("Longitude", "55.55");
+    formData.append("Latitude", "22.22");
+    formData.append("MapUrl", "///url");
+   
+    return formData;
   }
-  */
-
+  
   const handlePick = () => {
     filePicker.current.click();
-  }
+}
 
   function handle(e) {
 
@@ -100,6 +118,19 @@ export const MessageForm = () => {
     newData[e.target.id] = e.target.value
     loadData(newData)
     console.log(newData)
+  }
+
+  function handleFile(e) {
+    setFile(e.target.files[0]);
+  }
+
+  function handleLocation(e) {
+    const location = {
+      Longitude: "55.55",
+      Latitude: "22.22",
+      MapUrl: "///url",
+    }
+    setLocation(location);
   }
 
 
@@ -115,19 +146,19 @@ export const MessageForm = () => {
                     <input id="Title" name="Title" onChange={(e) => handle(e)} value={data.Title} required/>   </label>
                     <label>Phone
                     <input id="PhoneNumber" name="PhoneNumber" onChange={(e) => handle(e)} value={data.PhoneNumber}
-                        type="tel" placeholder="+380-99-77-77-777" /></label>
+                        type="tel" placeholder="+380-99-77-77-777" required/></label>
                     <label>Data
                     <input id="Data" name="Data" onChange={(e) => handle(e)} value={data.Data} type={"datetime-local"} required/></label>
                     <label>Description
                     <textarea id="Description" name="Description" onChange={(e) => handle(e)} value={data.Description} /></label> 
                 <Block>
                     <label>Add Location</label>
-                    <SmButton type='button'>Pin Location</SmButton>
+                    <SmButton type='button' onChange={handleLocation}>Pin Location</SmButton>
                 </Block>
                 <Block>
                     <label htmlFor="images">Add File
                     <input id="Attachment" name="Attachment" className='hidden' 
-                        onChange={(e) => handle(e)} value={data.Attachment}
+                        onChange={handleFile}
                         type="file" accept="image/*" ref={filePicker}/>
                     </label>
                     <SmButton type="button" onClick={handlePick} >PinFile</SmButton>
