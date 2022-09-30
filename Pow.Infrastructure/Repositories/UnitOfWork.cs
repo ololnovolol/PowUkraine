@@ -1,4 +1,5 @@
-﻿using Microsoft.Extensions.Logging;
+﻿using System;
+using Microsoft.Extensions.Logging;
 using Pow.Infrastructure.Repositories.Interfaces;
 
 namespace Pow.Infrastructure.Repositories
@@ -7,11 +8,14 @@ namespace Pow.Infrastructure.Repositories
     {
         private readonly ILogger _logger;
 
-        public UnitOfWork(IMarkRepository markRepository, IMessageRepository messageRepository, IAttachmentRepository attachmentRepository)
+        public UnitOfWork(
+            IMarkRepository markRepository,
+            IMessageRepository messageRepository,
+            IAttachmentRepository attachmentRepository)
         {
-            this.Messages = messageRepository;
-            this.Marks = markRepository;
-            this.Attachments = attachmentRepository;
+            Messages = messageRepository;
+            Marks = markRepository;
+            Attachments = attachmentRepository;
         }
 
         public IMessageRepository Messages { get; }
@@ -22,7 +26,7 @@ namespace Pow.Infrastructure.Repositories
 
         public void Dispose()
         {
-            throw new System.NotImplementedException();
+            throw new NotImplementedException();
         }
     }
 }

@@ -8,7 +8,7 @@ namespace Pow.Application.AutoMapperProfiles
     {
         public MarkProfile()
         {
-            this.CreateMap<MarkBL, Mark>().ReverseMap();
+            CreateMap<MarkBL, Mark>().ReverseMap();
         }
     }
 }

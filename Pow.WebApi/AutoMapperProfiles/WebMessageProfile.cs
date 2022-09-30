@@ -8,7 +8,7 @@ namespace Pow.WebApi.AutoMapperProfiles
     {
         public WebMessageProfile()
         {
-            this.CreateMap<MessageModel, MessageBL>()
+            CreateMap<MessageModel, MessageBL>()
                 .ForMember(dest => dest.CreatedDate, opt => opt.Ignore())
                 .ForMember(dest => dest.UserId, opt => opt.Ignore())
                 .ForMember(dest => dest.Id, opt => opt.Ignore())

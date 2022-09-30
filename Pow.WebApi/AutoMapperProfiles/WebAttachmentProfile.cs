@@ -1,8 +1,5 @@
-﻿using System;
-using System.Reflection;
-using AutoMapper;
+﻿using AutoMapper;
 using Pow.Application.Models;
-using Pow.Application.Services;
 using Pow.WebApi.Models;
 
 namespace Pow.WebApi.AutoMapperProfiles
@@ -11,7 +8,7 @@ namespace Pow.WebApi.AutoMapperProfiles
     {
         public WebAttachmentProfile()
         {
-            this.CreateMap<AttachmentModel, AttachmentBL>()
+            CreateMap<AttachmentModel, AttachmentBL>()
                 .ForMember(dest => dest.MessageId, opt => opt.Ignore())
                 .ForMember(dest => dest.Id, opt => opt.Ignore())
                 .ReverseMap();

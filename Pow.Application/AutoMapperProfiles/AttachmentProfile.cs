@@ -8,7 +8,7 @@ namespace Pow.Application.AutoMapperProfiles
     {
         public AttachmentProfile()
         {
-            this.CreateMap<AttachmentBL, Attachment>().ReverseMap();
+            CreateMap<AttachmentBL, Attachment>().ReverseMap();
         }
     }
 }

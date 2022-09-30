@@ -1,5 +1,5 @@
-﻿using Pow.Domain;
-using System.Threading.Tasks;
+﻿using System.Threading.Tasks;
+using Pow.Domain;
 
 namespace Pow.Infrastructure.Repositories.Interfaces
 {
