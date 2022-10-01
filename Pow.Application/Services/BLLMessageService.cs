@@ -14,41 +14,41 @@ namespace Pow.Application.Services
 
         public BLLMessageService(IUnitOfWork unitOfWork, IMapper mapper)
         {
-            _unitOfWork = unitOfWork;
+            UnitOfWork = unitOfWork;
             _mapper = mapper;
         }
 
-        private IUnitOfWork _unitOfWork { get; }
+        private IUnitOfWork UnitOfWork { get; }
 
         public void Dispose()
         {
-            _unitOfWork.Dispose();
+            UnitOfWork.Dispose();
         }
 
         public async Task<int> Add(MessageBL messageBl)
         {
             var message = _mapper.Map<Message>(messageBl);
 
-            return await _unitOfWork.Messages.AddAsync(message);
+            return await UnitOfWork.Messages.AddAsync(message);
         }
 
         public async Task<int> Update(MessageBL messageBl)
         {
             var message = _mapper.Map<Message>(messageBl);
 
-            return await _unitOfWork.Messages.UpdateAsync(message);
+            return await UnitOfWork.Messages.UpdateAsync(message);
         }
 
         public async Task<int> Delete(string id)
         {
-            return await _unitOfWork.Messages.DeleteAsync(id);
+            return await UnitOfWork.Messages.DeleteAsync(id);
         }
 
         public IEnumerable<MessageBL> GetAll()
         {
             var list = new List<MessageBL>();
 
-            foreach (var item in _unitOfWork.Messages.GetAllAsync().Result)
+            foreach (var item in UnitOfWork.Messages.GetAllAsync().Result)
             {
                 list.Add(_mapper.Map<MessageBL>(item));
             }
@@ -58,7 +58,7 @@ namespace Pow.Application.Services
 
         public MessageBL GetById(string id)
         {
-            var message = _unitOfWork.Messages.GetByIdAsync(id).Result;
+            var message = UnitOfWork.Messages.GetByIdAsync(id).Result;
 
             return _mapper.Map<MessageBL>(message);
         }
@@ -67,7 +67,7 @@ namespace Pow.Application.Services
         {
             var list = new List<MessageBL>();
 
-            foreach (var item in _unitOfWork.Messages.GetByUserIdAsync(userId).Result)
+            foreach (var item in UnitOfWork.Messages.GetByUserIdAsync(userId).Result)
             {
                 list.Add(_mapper.Map<MessageBL>(item));
             }

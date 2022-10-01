@@ -12,11 +12,11 @@ namespace Pow.Infrastructure.Repositories
 {
     public class MarkRepository : IMarkRepository
     {
-        private readonly IConfiguration configuration;
+        private readonly IConfiguration _configuration;
 
         public MarkRepository(IConfiguration configuration)
         {
-            this.configuration = configuration;
+            this._configuration = configuration;
         }
 
         public async Task<int> AddAsync(Mark entity)
@@ -26,7 +26,7 @@ namespace Pow.Infrastructure.Repositories
                                "GpsLongitude,GpsLatitude) VALUES (@Desabled,@MessageId,@Country,@City,@Region,@Address," +
                                "@StreetNumber,@PostalCode,@County,@MapUrl,@GpsLongtitude,@GpsLatitude)";
 
-            await using (var connection = new SqlConnection(configuration.GetConnectionString("DefaultConnection")))
+            await using (var connection = new SqlConnection(_configuration.GetConnectionString("DefaultConnection")))
             {
                 connection.Open();
                 var result = await connection.ExecuteAsync(sql, entity);
@@ -39,7 +39,7 @@ namespace Pow.Infrastructure.Repositories
         {
             const string sql = "DELETE FROM Marks WHERE Id = @Id";
 
-            await using (var connection = new SqlConnection(configuration.GetConnectionString("DefaultConnection")))
+            await using (var connection = new SqlConnection(_configuration.GetConnectionString("DefaultConnection")))
             {
                 connection.Open();
                 var result = await connection.ExecuteAsync(sql, new { Id = id });
@@ -52,7 +52,7 @@ namespace Pow.Infrastructure.Repositories
         {
             const string sql = "SELECT * FROM Marks";
 
-            await using (var connection = new SqlConnection(configuration.GetConnectionString("DefaultConnection")))
+            await using (var connection = new SqlConnection(_configuration.GetConnectionString("DefaultConnection")))
             {
                 connection.Open();
                 var result = await connection.QueryAsync<Mark>(sql);
@@ -65,7 +65,7 @@ namespace Pow.Infrastructure.Repositories
         {
             const string sql = "SELECT * FROM Marks WHERE Id = @Id";
 
-            await using (var connection = new SqlConnection(configuration.GetConnectionString("DefaultConnection")))
+            await using (var connection = new SqlConnection(_configuration.GetConnectionString("DefaultConnection")))
             {
                 connection.Open();
                 var result = await connection.QuerySingleOrDefaultAsync<Mark>(sql, new { Id = id });
@@ -78,7 +78,7 @@ namespace Pow.Infrastructure.Repositories
         {
             var sql = "SELECT * FROM Marks WHERE MessageId = @messageId";
 
-            using (var connection = new SqlConnection(configuration.GetConnectionString("DefaultConnection")))
+            using (var connection = new SqlConnection(_configuration.GetConnectionString("DefaultConnection")))
             {
                 connection.Open();
                 var result = await connection.QuerySingleOrDefaultAsync<Mark>(sql);

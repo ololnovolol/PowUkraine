@@ -75,7 +75,7 @@ namespace Pow.Infrastructure.Repositories
         {
             var sql = "SELECT * FROM Attachments WHERE MessageId = @messageId";
 
-            using (var connection = new SqlConnection(configuration.GetConnectionString("DefaultConnection")))
+            using (var connection = new SqlConnection(_configuration.GetConnectionString("DefaultConnection")))
             {
                 connection.Open();
                 var result = await connection.QueryAsync<Attachment>(sql);

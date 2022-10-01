@@ -19,7 +19,7 @@ namespace IdentityServer.Extensions
                         identityOptions.Password.RequireLowercase = true;
                         identityOptions.Password.RequiredLength = 8;
                         identityOptions.User.RequireUniqueEmail = true;
-                        identityOptions.User.AllowedUserNameCharacters = "";
+                        identityOptions.User.AllowedUserNameCharacters = string.Empty;
                     })
                 .AddEntityFrameworkStores<AuthorizationDbContext>()
                 .AddDefaultTokenProviders();

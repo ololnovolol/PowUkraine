@@ -13,14 +13,14 @@ namespace IdentityServer
             {
                 new IdentityResources.OpenId(),
                 new IdentityResources.Profile(),
-                new IdentityResource("roles", new[] { "role" })
+                new IdentityResource("roles", new[] { "role" }),
             };
 
         public static IEnumerable<ApiScope> ApiScopes(IConfiguration config)
         {
             return new List<ApiScope>
             {
-                new ApiScope(config["clientSecret:c_name"], config["clientSecret:c_Disp_name"])
+                new ApiScope(config["clientSecret:c_name"], config["clientSecret:c_Disp_name"]),
             };
         }
 
@@ -31,7 +31,7 @@ namespace IdentityServer
                 new ApiResource(
                     config["clientSecret:c_name"],
                     config["clientSecret:c_Disp_name"],
-                    new[] { JwtClaimTypes.Name }) { Scopes = { config["clientSecret:c_name"] } }
+                    new[] { JwtClaimTypes.Name }) { Scopes = { config["clientSecret:c_name"] } },
             };
         }
 
@@ -56,12 +56,12 @@ namespace IdentityServer
                     {
                         IdentityServerConstants.StandardScopes.OpenId,
                         IdentityServerConstants.StandardScopes.Profile,
-                        config["clientSecret:c_name"]
+                        config["clientSecret:c_name"],
                     },
                     AllowOfflineAccess = true,
                     AllowAccessTokensViaBrowser = true,
-                    AccessTokenLifetime = 1
-                }
+                    AccessTokenLifetime = 1,
+                },
             };
         }
     }

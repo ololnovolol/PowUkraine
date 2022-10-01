@@ -1,16 +1,14 @@
-import { signoutRedirect } from '../../common/services/userService'
-import { useSelector } from 'react-redux'
+import { signoutRedirect } from '../../common/services/userService';
+import { useSelector } from 'react-redux';
 
 function Logout() {
-  useSelector(state => state.auth.user)
+    useSelector(state => state.auth.user);
 
-  function signOut() {
-    signoutRedirect()
-  }
+    function signOut() {
+        signoutRedirect();
+    }
 
-  return (
-    signOut()
-  )
+    return signOut();
 }
 
-export default Logout
+export default Logout;

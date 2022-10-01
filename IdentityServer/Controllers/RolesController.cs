@@ -39,9 +39,8 @@ namespace IdentityServer.Controllers
                         Email = user.Email,
                         PhoneNumber = user.PhoneNumber,
                         BirthDay = user.BirthDay.ToShortDateString(),
-                        Role = (roles.Contains(user)) ? "Admin" : "User"
-                    }
-                );
+                        Role = roles.Contains(user) ? "Admin" : "User",
+                    });
             }
 
             return Json(result);
@@ -80,7 +79,10 @@ namespace IdentityServer.Controllers
 
             var model = new ChangeRoleViewModel
             {
-                UserId = user.Id, UserEmail = user.Email, UserRoles = userRoles, AllRoles = allRoles
+                UserId = user.Id,
+                UserEmail = user.Email,
+                UserRoles = userRoles,
+                AllRoles = allRoles,
             };
 
             return Json(model);

@@ -1,0 +1,31 @@
+name: Check codebase
+on: [push, pull_request]
+
+jobs:
+  build_and_format:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+
+      - name: Setup .NET Core
+        uses: actions/setup-dotnet@v2
+        with:
+          dotnet-version: "5.0.x"
+
+      - name: Build solution
+        run: dotnet build
+
+      - name: Install dotnet format
+        run: dotnet tool update --global dotnet-format
+
+      - name: Perform dotnet format check
+        run: dotnet format --check --verbosity diagnostic
+
+      - name: Setup node.js
+        uses: actions/setup-node@v2
+        with:
+          node-version: "16"
+          cache: "npm"
+
+      - name: Perform frontend format check
+        run: cd pow-client && npm run ci && npm run lint && npm run format && npm run lint:style
