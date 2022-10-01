@@ -28,4 +28,4 @@ jobs:
           cache: "npm"
 
       - name: Perform frontend format check
-        run: npm ci && cd pow-client && npm run lint && npm run format && npm run lint:style
+        run: cd pow-client && npm run ci && npm run lint && npm run format && npm run lint:style
