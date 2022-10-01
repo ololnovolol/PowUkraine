@@ -1,27 +1,15 @@
-import { Form } from '@altiore/form';
-import React from 'react';
+import React, {useState, useRef} from 'react';
 import styled from 'styled-components';
-import * as apiService from '../../common/services/apiService'
+import axios from 'axios'
 
 const SmButton = styled.button`
   background: #88A87D none repeat scroll 0% 0%;
   height: 40px;
-  weight: 100px;
-  justify-content: flex;
-  align-items: center;
-  position: relative;
-  max-width: 100%;
-  align-items: center;
+  border-color: #fff;
   color: #fff;
-  min-width: 0px;
-  min-height: 0px;
   border-radius: 5px;
-
-  justify-content: space-between;
   align-items: center;
-  list-style: none;
-  text-decoration: none;
-  font-size: 18px;
+  font-size: 16px;
   &:hover {
     color: #F0A30A;
     background: #6D8764;
@@ -31,23 +19,15 @@ const SmButton = styled.button`
 
 const BgButton = styled.button`
   background: #88A87D none repeat scroll 0% 0%;
-  height: 50px;
-  weight: 100;
-  justify-content: flex;
-  align-items: center;
+  height: 40px;
+  border-color: #fff;
+  weight: 100%;
   position: relative;
-  max-width: 100%;
-  align-items: center;
+  margin: right 10px;
   color: #F0A30A;
-  min-width: 0px;
-  min-height: 0px;
   border-radius: 5px;
-
   justify-content: space-between;
-  align-items: center;
-  list-style: none;
-  text-decoration: none;
-  font-size: 18px;
+  font-size: 16px;
   &:hover {
     color: #fff;
     background: #6D8764;
@@ -56,55 +36,142 @@ const BgButton = styled.button`
 `;
 
 const Block = styled.div`
-  font-size: 2em;
+
+  font-size: 1rem;
   position: relative;
+  top: 3rem;
+  border: 1 rem solid;
+
+`;
+
+const Form = styled.form`
+  border-radius: 5px;
+  }
 `;
 
 export const MessageForm = () => {
-  async function postMsg(values) {
-    const answer = await apiService.sentMessage(values)
-    handleSubmit(answer)
-  }
+  const [data, loadData] = useState({
+    Title: "",
+    Description: "",
+    Data: "",
+    PhoneNumber: "",
+    Location: [],
+    Attachment: []
+  });
+  const [file, setFile] = useState([]);
+  const [location, setLocation] = useState({
+    Longitude: "",
+    Latitude: "",
+    MapUrl: ""
+  });
 
-const handleSubmit = (answer) =>{
-    console.log('handleSubmit', { 
-      answer,
+  const filePicker = useRef(null);
+
+  async function postMsg(e) {
+
+
+    const result = handleData(e);
+
+    axios.post('https://localhost:44312/api/home/message',
+    
+       /*Title: data.Title,
+       Description: data.Description,
+       Data: data.Data,
+       PhoneNumber: data.PhoneNumber,
+       Attachment: data.Attachment*/
+        result,
+     
+    {
+      headers: {
+        "Content-Type": "multipart/form-data"
+      }
+    })
+    .then(function (response) {
+      console.log(response);
+    })
+    .catch(function (error) {
+      console.log(error);
     });
   }
 
+  function handleData(e){  
+    const formData = new FormData();
+    formData.append('Title', "asfafasf");
+    formData.append('Description', data.Description);
+    formData.append('Data', data.Data);
+    formData.append('PhoneNumber', data.PhoneNumber);
+    formData.append('Attachment', file); 
+    formData.append("Longitude", "55.55");
+    formData.append("Latitude", "22.22");
+    formData.append("MapUrl", "///url");
+   
+    return formData;
+  }
+  
+  const handlePick = () => {
+    filePicker.current.click();
+}
+
+  function handle(e) {
+
+    const newData={...data}
+    newData[e.target.id] = e.target.value
+    loadData(newData)
+    console.log(newData)
+  }
+
+  function handleFile(e) {
+    setFile(e.target.files[0]);
+  }
+
+  function handleLocation(e) {
+    const location = {
+      Longitude: "55.55",
+      Latitude: "22.22",
+      MapUrl: "///url",
+    }
+    setLocation(location);
+  }
+
+
 
   
-    return (
-      <>
 
-            <h1>Create important message</h1>
+        return (
+          <>
             <Form  onSubmit={postMsg}>
+            <h1>Create important message</h1> 
                 <Block>
-                    <label>Title</label>
-                    <input name="Title"/>
-                    <label>Description</label>
-                    <input name="Description"/>    
-                    <label>Phone</label>
-                    <input name="Phone"/>
-                    <label>Date</label>
-                    <input name="Date"/>
-                </Block>
-
+                    <label>Title
+                    <input id="Title" name="Title" onChange={(e) => handle(e)} value={data.Title} required/>   </label>
+                    <label>Phone
+                    <input id="PhoneNumber" name="PhoneNumber" onChange={(e) => handle(e)} value={data.PhoneNumber}
+                        type="tel" placeholder="+380-99-77-77-777" required/></label>
+                    <label>Data
+                    <input id="Data" name="Data" onChange={(e) => handle(e)} value={data.Data} type={"datetime-local"} required/></label>
+                    <label>Description
+                    <textarea id="Description" name="Description" onChange={(e) => handle(e)} value={data.Description} /></label> 
                 <Block>
-                    <label>Pin Location</label>
-                    <SmButton>Pin</SmButton>
-
-                    <label>Pin File</label>
-                    <SmButton>Pin</SmButton>
+                    <label>Add Location</label>
+                    <SmButton type='button' onChange={handleLocation}>Pin Location</SmButton>
                 </Block>
-
+                <Block>
+                    <label htmlFor="images">Add File
+                    <input id="Attachment" name="Attachment" className='hidden' 
+                        onChange={handleFile}
+                        type="file" accept="image/*" ref={filePicker}/>
+                    </label>
+                    <SmButton type="button" onClick={handlePick} >PinFile</SmButton>
+                </Block>
                 <Block>
                     <label>Submit</label>
-                    <BgButton type="submit">Submit</BgButton>
+                    <BgButton type="submit" onClick={postMsg}>Submit</BgButton>
+                </Block>
+
                 </Block>
             </Form>
-      </>
-    );
-  };
+          </>
+        );
+      };
   
   export default MessageForm;

@@ -1,7 +1,9 @@
 ﻿using System;
 using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Pow.WebApi.Controllers.Base;
+using Pow.WebApi.Models;
 
 namespace Pow.WebApi.Controllers
 {
@@ -23,12 +25,17 @@ namespace Pow.WebApi.Controllers
             return Ok("Admin Access_only___Admin___getAll");
         }
 
-
         [HttpPost]
-        public IActionResult Message([FromQuery]string json)
+        public IActionResult Message(IFormCollection data, IFormFile imageFile)
         {
-            Console.WriteLine(json);
-            return Ok();
+            var msg = new MessageVm();
+            msg.Title = data["PhoneNumber"];
+            msg.PhoneNumber = data["PhoneNumber"];
+            msg.Data = DateTime.Parse(data["Data"]);
+            msg.Description = data["Description"];
+            msg.Attachment = data["Attachment"];
+
+            return Ok("goood!");
         }
 
         [Authorize(Policy = "UserAccess")]

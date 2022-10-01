@@ -78,6 +78,7 @@ namespace Pow.Infrastructure.Repositories
             {
                 connection.Open();
                 var result = await connection.QueryAsync<Attachment>(sql);
+
                 return result.ToList();
             }
         }

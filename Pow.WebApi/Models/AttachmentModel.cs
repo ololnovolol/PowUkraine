@@ -1,6 +1,4 @@
-﻿using System;
-
-namespace Pow.WebApi.Models
+﻿namespace Pow.WebApi.Models
 {
     public class AttachmentModel
     {

@@ -1,5 +1,4 @@
-﻿using System;
-using AutoMapper;
+﻿using AutoMapper;
 using Pow.Application.Models;
 using Pow.WebApi.Models;
 
@@ -9,7 +8,7 @@ namespace Pow.WebApi.AutoMapperProfiles
     {
         public WebMarkProfile()
         {
-            this.CreateMap<MarkModel, MarkBL>()
+            CreateMap<MarkModel, MarkBL>()
                 .ForMember(dest => dest.MessageId, opt => opt.Ignore())
                 .ForMember(dest => dest.Id, opt => opt.Ignore())
                 .ReverseMap();

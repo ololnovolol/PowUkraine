@@ -1,7 +1,5 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
 using System.Threading.Tasks;
 using AutoMapper;
 using Pow.Application.Models;
@@ -12,39 +10,47 @@ namespace Pow.Application.Services
 {
     public class BLLMarkService : IDisposable
     {
-        private IUnitOfWork _unitOfWork { get; }
-
         private readonly IMapper _mapper;
 
         public BLLMarkService(IUnitOfWork unitOfWork, IMapper mapper)
         {
-            this._unitOfWork = unitOfWork;
-            this._mapper = mapper;
+            _unitOfWork = unitOfWork;
+            _mapper = mapper;
+        }
+
+        private IUnitOfWork _unitOfWork { get; }
+
+        public void Dispose()
+        {
+            _unitOfWork.Dispose();
         }
 
         public async Task<int> Add(MarkBL markBl)
         {
-            var mark = this._mapper.Map<Mark>(markBl);
-            return await this._unitOfWork.Marks.AddAsync(mark);
+            var mark = _mapper.Map<Mark>(markBl);
+
+            return await _unitOfWork.Marks.AddAsync(mark);
         }
 
         public async Task<int> Update(MarkBL markBl)
         {
-            var mark = this._mapper.Map<Mark>(markBl);
-            return await this._unitOfWork.Marks.UpdateAsync(mark);
+            var mark = _mapper.Map<Mark>(markBl);
+
+            return await _unitOfWork.Marks.UpdateAsync(mark);
         }
 
         public async Task<int> Delete(string id)
         {
-            return await this._unitOfWork.Marks.DeleteAsync(id);
+            return await _unitOfWork.Marks.DeleteAsync(id);
         }
 
         public IEnumerable<MarkBL> GetAll()
         {
-            List<MarkBL> list = new List<MarkBL>();
-            foreach (Mark item in this._unitOfWork.Marks.GetAllAsync().Result)
+            var list = new List<MarkBL>();
+
+            foreach (var item in _unitOfWork.Marks.GetAllAsync().Result)
             {
-                list.Add(this._mapper.Map<MarkBL>(item));
+                list.Add(_mapper.Map<MarkBL>(item));
             }
 
             return list;
@@ -52,20 +58,16 @@ namespace Pow.Application.Services
 
         public MarkBL GetByMessage(string messageId)
         {
-            var mark = this._unitOfWork.Marks.GetByMessageIdAsync(messageId);
-            return this._mapper.Map<MarkBL>(mark);
+            var mark = _unitOfWork.Marks.GetByMessageIdAsync(messageId);
 
+            return _mapper.Map<MarkBL>(mark);
         }
 
         public MarkBL GetById(string id)
         {
-            var mark = this._unitOfWork.Marks.GetByIdAsync(id).Result;
-            return this._mapper.Map<MarkBL>(mark);
-        }
+            var mark = _unitOfWork.Marks.GetByIdAsync(id).Result;
 
-        public void Dispose()
-        {
-            this._unitOfWork.Dispose();
+            return _mapper.Map<MarkBL>(mark);
         }
     }
 }

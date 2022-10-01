@@ -8,7 +8,7 @@ namespace Pow.Application.AutoMapperProfiles
     {
         public MessageProfile()
         {
-            this.CreateMap<MessageBL, Message>().ReverseMap();
+            CreateMap<MessageBL, Message>().ReverseMap();
         }
     }
 }
