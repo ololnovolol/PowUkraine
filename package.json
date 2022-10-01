@@ -1,0 +1,18 @@
+{
+  "devDependencies": {
+    "husky": "^8.0.1",
+    "lint-staged": "^13.0.3"
+  },
+  "scripts": {
+    "prepare": "husky install"
+  },
+  "lint-staged": {
+    "*.cs": "dotnet format --include"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged --relative",
+      "post-commit": "git update-index --again"
+    }
+  }
+}
