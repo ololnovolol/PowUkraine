@@ -19,7 +19,7 @@ jobs:
         run: dotnet tool update --global dotnet-format
 
       - name: Perform dotnet format check
-        run: dotnet format --check --verbosity m
+        run: dotnet format --check --verbosity diagnostic
 
       - name: Setup node.js
         uses: actions/setup-node@v2
