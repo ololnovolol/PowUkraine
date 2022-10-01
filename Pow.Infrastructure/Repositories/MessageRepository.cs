@@ -79,7 +79,7 @@ namespace Pow.Infrastructure.Repositories
         {
             var sql = "SELECT * FROM Messages WHERE UserId = @userId";
 
-            using (var connection = new SqlConnection(this.configuration.GetConnectionString("DefaultConnection")))
+            using (var connection = new SqlConnection(_configuration.GetConnectionString("DefaultConnection")))
             {
                 connection.Open();
                 var result = await connection.QueryAsync<Message>(sql);
