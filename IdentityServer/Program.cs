@@ -6,7 +6,7 @@ using Serilog;
 
 namespace IdentityServer
 {
-    public class Program
+    public static class Program
     {
         [Obsolete]
         public static void Main(string[] args)

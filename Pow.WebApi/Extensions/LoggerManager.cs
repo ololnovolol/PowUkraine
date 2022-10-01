@@ -31,7 +31,8 @@ namespace Pow.WebApi.Extensions
             Activity.DefaultIdFormat = ActivityIdFormat.W3C;
 
             Log.Logger = new LoggerConfiguration()
-                //.MinimumLevel.Override("Microsoft", LogEventLevel.Information)
+
+                // .MinimumLevel.Override("Microsoft", LogEventLevel.Information)
                 .MinimumLevel.Debug()
                 .MinimumLevel.Override("Microsoft", LogEventLevel.Warning)
                 .MinimumLevel.Override("Microsoft.Hosting.Lifetime", LogEventLevel.Information)

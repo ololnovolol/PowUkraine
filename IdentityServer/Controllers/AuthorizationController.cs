@@ -101,7 +101,9 @@ namespace IdentityServer.Controllers
 
             var user = new AppUser
             {
-                UserName = viewModel.UserName, Email = viewModel.Email, BirthDay = viewModel.BirthDay
+                UserName = viewModel.UserName,
+                Email = viewModel.Email,
+                BirthDay = viewModel.BirthDay,
             };
 
             var result = await _userManager.CreateAsync(user, viewModel.Password);
@@ -168,7 +170,7 @@ namespace IdentityServer.Controllers
                 {
                     UserName = info.Principal.FindFirstValue(ClaimTypes.Name),
                     Email = info.Principal.FindFirst(ClaimTypes.Email).Value,
-                    ReturnUrl = returnUrl
+                    ReturnUrl = returnUrl,
                 });
         }
 

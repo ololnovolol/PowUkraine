@@ -1,17 +1,14 @@
-
-import { signinRedirect } from '../../common/services/userService'
-import { useSelector } from 'react-redux'
+import { signinRedirect } from '../../common/services/userService';
+import { useSelector } from 'react-redux';
 
 function Login() {
-  useSelector(state => state.auth.user)
+    useSelector(state => state.auth.user);
 
-  function login() {
-    signinRedirect()
-  }
+    function login() {
+        signinRedirect();
+    }
 
-  return (
-   login()
-  )
+    return login();
 }
 
-export default Login
+export default Login;

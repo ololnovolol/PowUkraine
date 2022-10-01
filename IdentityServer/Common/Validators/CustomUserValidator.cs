@@ -30,7 +30,7 @@ namespace IdentityServer.Common.Validators
 
         private Task ValidateUserName(UserManager<AppUser> manager, AppUser user)
         {
-            if (user.UserName.ToLower().Contains("admin"))
+            if (user.UserName.Contains("admin", System.StringComparison.OrdinalIgnoreCase))
             {
                 AddErrorsToResult(
                     "incorrect_username",
@@ -45,10 +45,9 @@ namespace IdentityServer.Common.Validators
             const string pattern =
                 @"^([a-z0-9_-]+\.)*[a-z0-9_-]+@[a-z0-9_-]+(\.[a-z0-9_-]+)*\.[a-z]{2,6}$";
 
-            if (user.Email.ToLower().EndsWith("@yandex.ru") ||
-                user.Email.ToLower().EndsWith("@mail.ru") ||
-                user.Email.ToLower().EndsWith("ru"))
-
+            if (user.Email.EndsWith("@yandex.ru", System.StringComparison.OrdinalIgnoreCase) ||
+                user.Email.EndsWith("@mail.ru", System.StringComparison.OrdinalIgnoreCase) ||
+                user.Email.EndsWith("ru", System.StringComparison.OrdinalIgnoreCase))
             {
                 AddErrorsToResult(
                     "incorrect_email_domen",

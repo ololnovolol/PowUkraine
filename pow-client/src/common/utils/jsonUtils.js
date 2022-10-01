@@ -1,3 +1,3 @@
-export const prettifyJson = (value) => {
-  return JSON.stringify(value, null, 2);
-}
+export const prettifyJson = value => {
+    return JSON.stringify(value, null, 2);
+};

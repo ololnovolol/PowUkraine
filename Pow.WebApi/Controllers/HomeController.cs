@@ -9,7 +9,7 @@ namespace Pow.WebApi.Controllers
 {
     public class HomeController : BaseController
     {
-        //[Authorize(Policy = "UserAccess")]
+        // [Authorize(Policy = "UserAccess")]
         [Authorize(Roles = "User")]
         [HttpGet]
         public IActionResult Get()
@@ -17,7 +17,7 @@ namespace Pow.WebApi.Controllers
             return Ok("Users_only___User___get method=)");
         }
 
-        //[Authorize(Policy = "AdminAccess")]
+        // [Authorize(Policy = "AdminAccess")]
         [Authorize(Roles = "Admin")]
         [HttpGet]
         public IActionResult GetAll()
