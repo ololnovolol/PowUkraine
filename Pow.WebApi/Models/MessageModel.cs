@@ -13,8 +13,6 @@ namespace Pow.WebApi.Models
 
         public string Email { get; set; }
 
-        public ICollection<AttachmentModel>? Attachments { get; set; }
-
-        public MarkModel? Mark { get; set; }
+        public Guid UserId { get; set; }
     }
 }

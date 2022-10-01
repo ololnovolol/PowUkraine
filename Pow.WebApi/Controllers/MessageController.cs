@@ -1,7 +1,10 @@
 ﻿using System;
 using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
+using Pow.Application.Services;
 using Pow.WebApi.Controllers.Base;
+using Pow.WebApi.Extensions;
 using Pow.WebApi.Models;
 
 namespace Pow.WebApi.Controllers
@@ -26,14 +29,21 @@ namespace Pow.WebApi.Controllers
 
 
         [HttpPost]
-        public IActionResult Post([FromBody] MessageModel message)
+        public IActionResult Message(IFormCollection data, IFormFile imageFile)
         {
-            Console.WriteLine(message.Description);
-            Console.WriteLine(message.Phone);
-            Console.WriteLine(message.Email);
-            Console.WriteLine(message.EventDate);
+            var msg = new MessageModel();
+            msg.Phone = data["PhoneNumber"];
+            msg.EventDate = DateTime.Parse(data["Data"]);
+            msg.Description = data["Description"];            
+            msg.Email = data["Email"];
+            
+            var attachment = new AttachmentModel();
+            attachment.Title = imageFile.FileName;
+            attachment.File = imageFile.GetBytes().Result;
 
-            return Ok();
+            
+
+            return Ok("goood!");
         }
 
         [Authorize(Policy = "UserAccess")]

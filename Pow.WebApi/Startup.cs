@@ -1,8 +1,11 @@
+using AutoMapper;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
+using Pow.Application.Services;
+using Pow.Application.Services.Interfaces;
 using Pow.Infrastructure.Repositories;
 using Pow.Infrastructure.Repositories.Interfaces;
 using Pow.WebApi.Extensions;
@@ -40,6 +43,14 @@ namespace Pow.WebApi
             services.AddSingleton<IAttachmentRepository, AttachmentRepository>();
 
             services.AddSingleton<IUnitOfWork, UnitOfWork>();
+
+            services.AddTransient<IBLLMessageService, BLLMessageService>();
+
+            services.AddTransient<IBLLMarkService, BLLMarkService>();
+
+            services.AddTransient<IBLLAttachmentService, BLLAttachmentService>();
+
+
         }
 
         public void Configure(IApplicationBuilder app, IWebHostEnvironment env)
@@ -57,6 +68,8 @@ namespace Pow.WebApi
             app.UseAuthorization();
 
             app.UseEndpoints(endpoints => { endpoints.MapControllers(); });
+
+            
         }
     }
 }
