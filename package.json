@@ -6,8 +6,5 @@
   "scripts": {
     "prepare": "husky install",
     "dotnet:build": "dotnet build"
-  },
-  "lint-staged": {
-    "*.cs": "dotnet format --include"
   }
 }
