@@ -4,6 +4,7 @@ import { Map, TileLayer, Marker, Popup } from 'react-leaflet';
 import Basemap from './BaseMaps';
 import CoordInsert from './coordinsert';
 import '../../style/maps/map.css';
+import { Link, Redirect, useHistory} from 'react-router-dom';
 
 L.Icon.Default.imagePath = 'https://unpkg.com/leaflet@1.5.0/dist/images/';
 
@@ -13,10 +14,21 @@ class MapComponent extends React.Component {
         lng: 30.5238,
         zoom: 10,
         basemap: 'osm',
+        markers: [[19.4100819, -99.1630388]],
 
         geojsonvisible: false,
         visibleModal: false,
     };
+
+    addMarker = (e) => {
+      const {markers} = this.state
+      if(markers.length > 0){
+        markers[0] = e.latlng;
+      }else{
+        markers.push(e.latlng)
+      }
+      this.setState({markers})
+    }
 
     onCoordInsertChange = (lat, long, z) => {
         this.setState({
@@ -38,6 +50,21 @@ class MapComponent extends React.Component {
         });
     };
 
+    /*redirect = () => {
+      console.log("Hello");
+   
+
+      // return <Redirect to={'/message'} ></Redirect>
+       this.history.push("message");
+    }
+    */
+
+    routingFunction = () => {
+      this.props.history.push({
+          pathname: `/massage`
+      });
+  }
+
     render() {
         var center = [this.state.lat, this.state.lng];
         var z = this.state.zoom;
@@ -49,8 +76,10 @@ class MapComponent extends React.Component {
             cycle: 'https://dev.{s}.tile.openstreetmap.fr/cyclosm/{z}/{x}/{y}.png',
         };
 
+
         return (
-            <Map zoom={z} center={center}>
+          
+            <Map zoom={z} center={center} onClick={this.addMarker}>
                 <TileLayer
                     attribution='&amp;copy <a href="http://osm.org/copyright">OpenStreetMap</a> contributors'
                     url={basemapsDict[this.state.basemap]}
@@ -62,15 +91,20 @@ class MapComponent extends React.Component {
 
                 <CoordInsert onllzChange={this.onCoordInsertChange} />
 
-                <Marker position={center}>
+       
+
+                {this.state.markers.map((position, idx) => 
+                <>
+                  <Marker key={`marker-${idx}`} position={position} on={this.routingFunction}>
                     <Popup>
-                        Широта: {this.state.lat}
-                        <br />
-                        Долгота: {this.state.lng}
-                        <br />
-                        Масштаб: {this.state.zoom}
+                        <span>
+                          <Link to="message">{JSON.stringify(position)}</Link>
+                        </span>
                     </Popup>
-                </Marker>
+                    <Link to="/">Home Page</Link>
+                  </Marker>    
+                </>
+              )}
             </Map>
         );
     }
