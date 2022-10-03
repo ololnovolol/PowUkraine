@@ -4,7 +4,7 @@ import { Map, TileLayer, Marker, Popup } from 'react-leaflet';
 import Basemap from './BaseMaps';
 import CoordInsert from './coordinsert';
 import '../../style/maps/map.css';
-import { Link, Redirect, useHistory} from 'react-router-dom';
+import { Link, Redirect, useHistory } from 'react-router-dom';
 
 L.Icon.Default.imagePath = 'https://unpkg.com/leaflet@1.5.0/dist/images/';
 
@@ -20,15 +20,15 @@ class MapComponent extends React.Component {
         visibleModal: false,
     };
 
-    addMarker = (e) => {
-      const {markers} = this.state
-      if(markers.length > 0){
-        markers[0] = e.latlng;
-      }else{
-        markers.push(e.latlng)
-      }
-      this.setState({markers})
-    }
+    addMarker = e => {
+        const { markers } = this.state;
+        if (markers.length > 0) {
+            markers[0] = e.latlng;
+        } else {
+            markers.push(e.latlng);
+        }
+        this.setState({ markers });
+    };
 
     onCoordInsertChange = (lat, long, z) => {
         this.setState({
@@ -60,10 +60,10 @@ class MapComponent extends React.Component {
     */
 
     routingFunction = () => {
-      this.props.history.push({
-          pathname: `/massage`
-      });
-  }
+        this.props.history.push({
+            pathname: `/massage`,
+        });
+    };
 
     render() {
         var center = [this.state.lat, this.state.lng];
@@ -76,9 +76,7 @@ class MapComponent extends React.Component {
             cycle: 'https://dev.{s}.tile.openstreetmap.fr/cyclosm/{z}/{x}/{y}.png',
         };
 
-
         return (
-          
             <Map zoom={z} center={center} onClick={this.addMarker}>
                 <TileLayer
                     attribution='&amp;copy <a href="http://osm.org/copyright">OpenStreetMap</a> contributors'
@@ -91,20 +89,23 @@ class MapComponent extends React.Component {
 
                 <CoordInsert onllzChange={this.onCoordInsertChange} />
 
-       
-
-                {this.state.markers.map((position, idx) => 
-                <>
-                  <Marker key={`marker-${idx}`} position={position} on={this.routingFunction}>
-                    <Popup>
-                        <span>
-                          <Link to="message">{JSON.stringify(position)}</Link>
-                        </span>
-                    </Popup>
-                    <Link to="/">Home Page</Link>
-                  </Marker>    
-                </>
-              )}
+                {this.state.markers.map((position, idx) => (
+                    <>
+                        <Marker
+                            key={`marker-${idx}`}
+                            position={position}
+                            on={this.routingFunction}>
+                            <Popup>
+                                <span>
+                                    <Link to="message">
+                                        {JSON.stringify(position)}
+                                    </Link>
+                                </span>
+                            </Popup>
+                            <Link to="/">Home Page</Link>
+                        </Marker>
+                    </>
+                ))}
             </Map>
         );
     }

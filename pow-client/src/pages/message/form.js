@@ -47,7 +47,7 @@ const Form = styled.form`
   }
 `;
 
-export const MessageForm = () => {
+export const MessageForm = props => {
     const [data, loadData] = useState({
         Title: '',
         Description: '',
@@ -58,9 +58,9 @@ export const MessageForm = () => {
     });
     const [file, setFile] = useState([]);
     const [location, setLocation] = useState({
-        Longitude: '',
-        Latitude: '',
-        MapUrl: '',
+        Longitude: props.Longitude,
+        Latitude: props.Latitude,
+        MapUrl: props.MapUrl,
     });
 
     const filePicker = useRef(null);
@@ -69,22 +69,11 @@ export const MessageForm = () => {
         const result = handleData(e);
 
         axios
-            .post(
-                'https://localhost:44312/api/home/message',
-
-                /*Title: data.Title,
-       Description: data.Description,
-       Data: data.Data,
-       PhoneNumber: data.PhoneNumber,
-       Attachment: data.Attachment*/
-                result,
-
-                {
-                    headers: {
-                        'Content-Type': 'multipart/form-data',
-                    },
+            .post('https://localhost:44312/api/home/message', result, {
+                headers: {
+                    'Content-Type': 'multipart/form-data',
                 },
-            )
+            })
             .then(function (response) {
                 console.log(response);
             })
@@ -100,9 +89,9 @@ export const MessageForm = () => {
         formData.append('Data', data.Data);
         formData.append('PhoneNumber', data.PhoneNumber);
         formData.append('Attachment', file);
-        formData.append('Longitude', '55.55');
-        formData.append('Latitude', '22.22');
-        formData.append('MapUrl', '///url');
+        formData.append('Longitude', location.Longitude);
+        formData.append('Latitude', location.Latitude);
+        formData.append('MapUrl', location.MapUrl);
 
         return formData;
     }
@@ -123,10 +112,26 @@ export const MessageForm = () => {
     }
 
     function handleLocation(e) {
+        let lat = 'empty';
+        let lon = 'empty';
+        let url = 'empty';
+
+        if (e.Latitude !== undefined) {
+            lat = e.Latitude;
+        }
+
+        if (e.Latitude !== undefined) {
+            lon = e.Longitude;
+        }
+
+        if (e.Latitude !== undefined) {
+            url = e.MapUrl;
+        }
+
         const location = {
-            Longitude: '55.55',
-            Latitude: '22.22',
-            MapUrl: '///url',
+            Longitude: lon,
+            Latitude: lat,
+            MapUrl: url,
         };
         setLocation(location);
     }
@@ -180,9 +185,10 @@ export const MessageForm = () => {
                     </label>
                     <Block>
                         <label>Add Location</label>
-                        <SmButton type="button" onChange={handleLocation}>
+                        <SmButton type="button" onClick={handleLocation}>
                             Pin Location
                         </SmButton>
+                        <span>{JSON.stringify(location)}</span>
                     </Block>
                     <Block>
                         <label htmlFor="images">
@@ -203,9 +209,7 @@ export const MessageForm = () => {
                     </Block>
                     <Block>
                         <label>Submit</label>
-                        <BgButton type="submit" onClick={postMsg}>
-                            Submit
-                        </BgButton>
+                        <BgButton type="submit">Submit</BgButton>
                     </Block>
                 </Block>
             </Form>
