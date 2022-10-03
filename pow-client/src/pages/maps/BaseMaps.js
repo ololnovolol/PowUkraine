@@ -14,8 +14,10 @@ class Basemap extends React.Component {
         return (
             <div className="basemaps-container">
                 <select value={this.props.basemap} onChange={this.onChange}>
-                    <option value="osm">OSM</option>
-                    <option value="hot">OSM HOT</option>
+                    <option value="osm">Classic</option>
+                    <option value="hot">Landshaftic</option>
+                    <option value="cycle">Clear</option>
+                    <option value="dark">Dark</option>
                 </select>
             </div>
         );

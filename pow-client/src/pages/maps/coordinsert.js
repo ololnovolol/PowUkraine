@@ -21,11 +21,11 @@ class CoordInsert extends React.Component {
     };
 
     handleOk = e => {
-        this.props.onllzChange(
-            this.state.latModal,
-            this.state.longModal,
-            this.state.zoomModal,
-        );
+        const result = [[0, 0]];
+        console.log(result);
+
+        this.props.onllzChange(result);
+
         this.setState({
             visibleModal: false,
         });

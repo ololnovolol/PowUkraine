@@ -1,5 +1,6 @@
 import React, { useState, useRef } from 'react';
 import styled from 'styled-components';
+import { useLocation } from 'react-router-dom';
 import axios from 'axios';
 
 const SmButton = styled.button`
@@ -57,11 +58,28 @@ export const MessageForm = props => {
         Attachment: [],
     });
     const [file, setFile] = useState([]);
+    let loc = useLocation();
     const [location, setLocation] = useState({
-        Longitude: props.Longitude,
-        Latitude: props.Latitude,
-        MapUrl: props.MapUrl,
+        Longitude: '0',
+        Latitude: '0',
+        MapUrl: '',
     });
+
+    if (loc.state !== undefined && location.Latitude === '0') {
+        var test = loc.state.markers[0];
+        console.log(test.lat);
+        console.log(test.lng);
+
+        const redirectLoc = {
+            Longitude: '' + test.lng,
+            Latitude: '' + test.lat,
+            MapUrl: '',
+        };
+        //console.log({redirectLoc})
+        setLocation(redirectLoc);
+    }
+
+    //console.log({loc});
 
     const filePicker = useRef(null);
 

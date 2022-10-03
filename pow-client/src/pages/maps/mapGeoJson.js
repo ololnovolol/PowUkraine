@@ -2,9 +2,8 @@ import React from 'react';
 import L from 'leaflet';
 import { Map, TileLayer, Marker, Popup } from 'react-leaflet';
 import Basemap from './BaseMaps';
-import CoordInsert from './coordinsert';
 import '../../style/maps/map.css';
-import { Link, Redirect, useHistory } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 
 L.Icon.Default.imagePath = 'https://unpkg.com/leaflet@1.5.0/dist/images/';
 
@@ -14,7 +13,7 @@ class MapComponent extends React.Component {
         lng: 30.5238,
         zoom: 10,
         basemap: 'osm',
-        markers: [[19.4100819, -99.1630388]],
+        markers: [[0, 0]],
 
         geojsonvisible: false,
         visibleModal: false,
@@ -50,15 +49,6 @@ class MapComponent extends React.Component {
         });
     };
 
-    /*redirect = () => {
-      console.log("Hello");
-   
-
-      // return <Redirect to={'/message'} ></Redirect>
-       this.history.push("message");
-    }
-    */
-
     routingFunction = () => {
         this.props.history.push({
             pathname: `/massage`,
@@ -72,8 +62,8 @@ class MapComponent extends React.Component {
         const basemapsDict = {
             osm: 'https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png',
             hot: 'https://{s}.tile.openstreetmap.fr/hot/{z}/{x}/{y}.png',
-            dark: 'https://{s}.basemaps.cartocdn.com/dark_all/{z}/{x}/{y}@2x.png',
-            cycle: 'https://dev.{s}.tile.openstreetmap.fr/cyclosm/{z}/{x}/{y}.png',
+            cycle: 'https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/tile/{z}/{y}/{x}',
+            dark: 'https://{s}.basemaps.cartocdn.com/dark_all/{z}/{x}/{y}{r}.png',
         };
 
         return (
@@ -87,8 +77,6 @@ class MapComponent extends React.Component {
                     onChange={this.onBMChange}
                 />
 
-                <CoordInsert onllzChange={this.onCoordInsertChange} />
-
                 {this.state.markers.map((position, idx) => (
                     <>
                         <Marker
@@ -97,12 +85,18 @@ class MapComponent extends React.Component {
                             on={this.routingFunction}>
                             <Popup>
                                 <span>
-                                    <Link to="message">
-                                        {JSON.stringify(position)}
+                                    <Link
+                                        to={{
+                                            pathname: 'message',
+                                            state: this.state,
+                                        }}>
+                                        Latitude: {position['lat']}
+                                        <br />
+                                        Longitude: {position['lng']}
+                                        <br />
                                     </Link>
                                 </span>
                             </Popup>
-                            <Link to="/">Home Page</Link>
                         </Marker>
                     </>
                 ))}

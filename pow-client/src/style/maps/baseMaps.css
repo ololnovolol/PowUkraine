@@ -1,15 +1,21 @@
 
 .basemaps-container {
     position: fixed;
-    top: 3rem;
-    right: 20rem;
+    top: 2.5rem;
+    right: 5rem;
+    text-align: center;
     z-index: 1000;
     height: auto;
+    font-size: 10px;
+    font-weight: 1000;
+    text-decoration-color: black;
+    font-optical-sizing: auto;
     width: auto;
     border-radius: 4px;
-    background-color: #F0A30A;
+    background-color: #dfa532;
+    border-color: black;
   }
   .basemaps-container select {
     width: 200px;
-    height: 20px;
+    height: 26px;
   }
