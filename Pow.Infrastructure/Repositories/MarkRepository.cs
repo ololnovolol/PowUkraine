@@ -22,9 +22,9 @@ namespace Pow.Infrastructure.Repositories
         public async Task<int> AddAsync(Mark entity)
         {
             const string sql = "Insert into Marks " +
-                               "(Disabled,MessageId,Country,City,Region,Address,StreetNumber,PostalCode,County,MapUrl," +
-                               "GpsLongitude,GpsLatitude) VALUES (@Desabled,@MessageId,@Country,@City,@Region,@Address," +
-                               "@StreetNumber,@PostalCode,@County,@MapUrl,@GpsLongtitude,@GpsLatitude)";
+                               "(Disabled,MessageId,MapUrl," +
+                               "GpsLongitude,GpsLatitude) VALUES (@Desabled,@MessageId" +
+                               ",@MapUrl,@GpsLongitude,@GpsLatitude)";
 
             await using (var connection = new SqlConnection(configuration.GetConnectionString("DefaultConnection")))
             {

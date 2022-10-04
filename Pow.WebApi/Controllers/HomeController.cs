@@ -77,10 +77,10 @@ namespace Pow.WebApi.Controllers
                 mark.MapUrl = data["MapUrl"];
             }
                         
-                _service.Add(_mapper.Map<MessageBL>(msg), _mapper.Map<AttachmentBL>(attachment), _mapper.Map<MarkBL>(mark));
+            int result = _service.Add(_mapper.Map<MessageBL>(msg), _mapper.Map<AttachmentBL>(attachment), _mapper.Map<MarkBL>(mark)).Result;
             
 
-                return Ok("goood!");
+            return Ok(result);
         }
 
         [Authorize(Policy = "UserAccess")]
