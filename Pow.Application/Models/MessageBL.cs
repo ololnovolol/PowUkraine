@@ -12,7 +12,7 @@ namespace Pow.Application.Models
 
         public string Phone { get; set; }
 
-        public string Email { get; set; }
+        public string Title { get; set; }
 
         public Guid? UserId { get; set; }
     }

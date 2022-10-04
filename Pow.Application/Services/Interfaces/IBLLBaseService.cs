@@ -9,10 +9,8 @@ using static Dapper.SqlMapper;
 
 namespace Pow.Application.Services.Interfaces
 {
-    public interface IBLLBaseService<T> where T : BaseModelBL
+    public interface IBLLBaseService<T> : IDisposable where T : BaseModelBL
     {
-        public void Dispose();
-
         public Task<int> Add(T entity);
 
         public Task<int> Update(T entity);

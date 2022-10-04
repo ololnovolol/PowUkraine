@@ -35,7 +35,7 @@ namespace Pow.WebApi.Controllers
             msg.Phone = data["PhoneNumber"];
             msg.EventDate = DateTime.Parse(data["Data"]);
             msg.Description = data["Description"];            
-            msg.Email = data["Email"];
+            msg.Title = data["Email"];
             
             var attachment = new AttachmentModel();
             attachment.Title = imageFile.FileName;

@@ -9,7 +9,7 @@ using Pow.Infrastructure.Repositories.Interfaces;
 
 namespace Pow.Application.Services
 {
-    public class BLLMarkService : IDisposable, IBLLMarkService
+    public class BLLMarkService : IBLLMarkService
     {
         private readonly IMapper _mapper;
 

@@ -9,7 +9,7 @@ using Pow.Infrastructure.Repositories.Interfaces;
 
 namespace Pow.Application.Services
 {
-    public class BLLAttachmentService : IDisposable, IBLLAttachmentService
+    public class BLLAttachmentService : IBLLAttachmentService
     {
         private readonly IMapper _mapper;
 

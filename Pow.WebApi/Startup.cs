@@ -4,10 +4,12 @@ using Microsoft.AspNetCore.Hosting;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
+using Pow.Application.AutoMapperProfiles;
 using Pow.Application.Services;
 using Pow.Application.Services.Interfaces;
 using Pow.Infrastructure.Repositories;
 using Pow.Infrastructure.Repositories.Interfaces;
+using Pow.WebApi.AutoMapperProfiles;
 using Pow.WebApi.Extensions;
 using Pow.WebApi.Middleware;
 
@@ -36,6 +38,14 @@ namespace Pow.WebApi
 
             services.AddValidators();
 
+            services.AddAutoMapper(typeof(WebAttachmentProfile),
+                typeof(WebMarkProfile),
+                typeof(WebMessageProfile),
+                typeof(MarkProfile),
+                typeof(MessageProfile),
+                typeof(AttachmentProfile));
+
+
             services.AddSingleton<IMessageRepository, MessageRepository>();
 
             services.AddSingleton<IMarkRepository, MarkRepository>();
@@ -50,7 +60,7 @@ namespace Pow.WebApi
 
             services.AddTransient<IBLLAttachmentService, BLLAttachmentService>();
 
-
+            services.AddTransient<IBLLService, BLLService>();
         }
 
         public void Configure(IApplicationBuilder app, IWebHostEnvironment env)

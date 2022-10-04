@@ -9,7 +9,7 @@ using System.Threading.Tasks;
 
 namespace Pow.Application.Services
 {
-    public class BLLService
+    public class BLLService : IBLLService
     {
         private readonly IBLLAttachmentService bLLAttachmentService;
 
@@ -17,6 +17,28 @@ namespace Pow.Application.Services
 
         private readonly IBLLMessageService bLLMessageService;
 
+        private bool disposed = false;
+
+        public void Dispose()
+        {
+            Dispose(true);            
+            GC.SuppressFinalize(this);
+        }
+
+        protected virtual void Dispose(bool disposing)
+        {
+            if (disposed) return;
+            if (disposing)
+            {
+                
+            }            
+            disposed = true;
+        }
+        
+        ~BLLService()
+        {
+            Dispose(false);
+        }
         public BLLService(IBLLMessageService messageService, IBLLMarkService markService, IBLLAttachmentService attachmentService)
         {
             bLLAttachmentService = attachmentService;
@@ -40,6 +62,11 @@ namespace Pow.Application.Services
             await bLLAttachmentService.Add(attachment);
             return await bLLMessageService.Add(message);
 
+        }              
+
+        public void Get(out MessageBL message, out AttachmentBL attachment, out MarkBL mark)
+        {
+            throw new NotImplementedException();
         }
     }
 }

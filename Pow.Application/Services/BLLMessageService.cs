@@ -9,22 +9,40 @@ using Pow.Infrastructure.Repositories.Interfaces;
 
 namespace Pow.Application.Services
 {
-    public class BLLMessageService : IDisposable, IBLLMessageService
+    public class BLLMessageService : IBLLMessageService
     {
         private readonly IMapper _mapper;
+
+        private IUnitOfWork _unitOfWork { get; }
+
+        private bool disposed = false;
 
         public BLLMessageService(IUnitOfWork unitOfWork, IMapper mapper)
         {
             _unitOfWork = unitOfWork;
             _mapper = mapper;
         }
-
-        private IUnitOfWork _unitOfWork { get; }
-
+             
         public void Dispose()
         {
-            _unitOfWork.Dispose();
+            Dispose(true);
+            GC.SuppressFinalize(this);
         }
+
+        protected virtual void Dispose(bool disposing)
+        {
+            if (disposed) return;
+            if (disposing)
+            {
+            
+            }
+            disposed = true;
+        }
+        ~BLLMessageService()
+        {
+            Dispose(false);
+        }
+
 
         public async Task<int> Add(MessageBL messageBl)
         {
