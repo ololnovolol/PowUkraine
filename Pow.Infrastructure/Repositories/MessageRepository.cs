@@ -27,7 +27,7 @@ namespace Pow.Infrastructure.Repositories
                                "(Title,Description,CreatedDate,EventDate,Phone,UserId)" +
                                " VALUES (@Title,@Description,@CreatedDate,@EventDate,@Phone,@UserId)";
 
-            await using (var connection = new SqlConnection(_configuration.GetConnectionString("DefaultConnection")))
+            await using (var connection = new SqlConnection(_configuration.GetConnectionString("DbConnection")))
             {
                 connection.Open();
                 var result = await connection.ExecuteAsync(sql, entity);
@@ -40,7 +40,7 @@ namespace Pow.Infrastructure.Repositories
         {
             var sql = "DELETE FROM Messages WHERE Id = @Id";
 
-            await using (var connection = new SqlConnection(_configuration.GetConnectionString("DefaultConnection")))
+            await using (var connection = new SqlConnection(_configuration.GetConnectionString("DbConnection")))
             {
                 connection.Open();
                 var result = await connection.ExecuteAsync(sql, new { Id = id });
@@ -53,7 +53,7 @@ namespace Pow.Infrastructure.Repositories
         {
             var sql = "SELECT * FROM Messages";
 
-            using (var connection = new SqlConnection(_configuration.GetConnectionString("DefaultConnection")))
+            using (var connection = new SqlConnection(_configuration.GetConnectionString("DbConnection")))
             {
                 connection.Open();
                 var result = await connection.QueryAsync<Message>(sql);
@@ -66,7 +66,7 @@ namespace Pow.Infrastructure.Repositories
         {
             const string sql = "SELECT * FROM Messages WHERE Id = @Id";
 
-            await using (var connection = new SqlConnection(_configuration.GetConnectionString("DefaultConnection")))
+            await using (var connection = new SqlConnection(_configuration.GetConnectionString("DbConnection")))
             {
                 connection.Open();
                 var result = await connection.QuerySingleOrDefaultAsync<Message>(sql, new { Id = id });
@@ -78,7 +78,7 @@ namespace Pow.Infrastructure.Repositories
         public async Task<IReadOnlyList<Message>> GetByUserIdAsync(string userId)
         {
             var sql = "SELECT * FROM Messages WHERE UserId = @userId";
-            using (var connection = new SqlConnection(this._configuration.GetConnectionString("DefaultConnection")))
+            using (var connection = new SqlConnection(this._configuration.GetConnectionString("DbConnection")))
             {
                 connection.Open();
                 var result = await connection.QueryAsync<Message>(sql);

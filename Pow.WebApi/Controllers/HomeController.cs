@@ -60,7 +60,7 @@ namespace Pow.WebApi.Controllers
             msg.Phone = data["PhoneNumber"];
             msg.EventDate = DateTime.Parse(data["Data"]);
             msg.Description = data["Description"];
-            msg.Title = data["Email"];
+            msg.Title = data["Title"];
             /*UserManager<> manager = new UserManager();*/
             if (data.Files.Count > 0)
             {
@@ -72,6 +72,7 @@ namespace Pow.WebApi.Controllers
             if (true) //TODO Check is mark empty?
             {
                 mark = new MarkModel();
+                mark.Disabled = false;
                 mark.GpsLatitude = data["Latitude"];
                 mark.GpsLongitude = data["Longitude"];
                 mark.MapUrl = data["MapUrl"];

@@ -23,10 +23,10 @@ namespace Pow.Infrastructure.Repositories
         {
             const string sql = "Insert into Marks " +
                                "(Disabled,MessageId,MapUrl," +
-                               "GpsLongitude,GpsLatitude) VALUES (@Desabled,@MessageId" +
+                               "GpsLongitude,GpsLatitude) VALUES (@Disabled,@MessageId" +
                                ",@MapUrl,@GpsLongitude,@GpsLatitude)";
 
-            await using (var connection = new SqlConnection(configuration.GetConnectionString("DefaultConnection")))
+            await using (var connection = new SqlConnection(configuration.GetConnectionString("DbConnection")))
             {
                 connection.Open();
                 var result = await connection.ExecuteAsync(sql, entity);
@@ -39,7 +39,7 @@ namespace Pow.Infrastructure.Repositories
         {
             const string sql = "DELETE FROM Marks WHERE Id = @Id";
 
-            await using (var connection = new SqlConnection(configuration.GetConnectionString("DefaultConnection")))
+            await using (var connection = new SqlConnection(configuration.GetConnectionString("DbConnection")))
             {
                 connection.Open();
                 var result = await connection.ExecuteAsync(sql, new { Id = id });

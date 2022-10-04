@@ -23,7 +23,7 @@ namespace Pow.Infrastructure.Repositories
         {
             const string sql = "Insert into Attachments (Title,File,MessageId) VALUES (@Title,@File,@MessageId)";
 
-            await using (var connection = new SqlConnection(_configuration.GetConnectionString("DefaultConnection")))
+            await using (var connection = new SqlConnection(_configuration.GetConnectionString("DbConnection")))
             {
                 connection.Open();
                 var result = await connection.ExecuteAsync(sql, entity);
@@ -36,7 +36,7 @@ namespace Pow.Infrastructure.Repositories
         {
             var sql = "DELETE FROM Attachments WHERE Id = @Id";
 
-            await using (var connection = new SqlConnection(_configuration.GetConnectionString("DefaultConnection")))
+            await using (var connection = new SqlConnection(_configuration.GetConnectionString("DbConnection")))
             {
                 connection.Open();
                 var result = await connection.ExecuteAsync(sql, new { Id = id });
@@ -49,7 +49,7 @@ namespace Pow.Infrastructure.Repositories
         {
             const string sql = "SELECT * FROM Attachments";
 
-            await using (var connection = new SqlConnection(_configuration.GetConnectionString("DefaultConnection")))
+            await using (var connection = new SqlConnection(_configuration.GetConnectionString("DbConnection")))
             {
                 connection.Open();
                 var result = await connection.QueryAsync<Attachment>(sql);
@@ -62,7 +62,7 @@ namespace Pow.Infrastructure.Repositories
         {
             const string sql = "SELECT * FROM Attachments WHERE Id = @Id";
 
-            await using (var connection = new SqlConnection(_configuration.GetConnectionString("DefaultConnection")))
+            await using (var connection = new SqlConnection(_configuration.GetConnectionString("DbConnection")))
             {
                 connection.Open();
                 var result = await connection.QuerySingleOrDefaultAsync<Attachment>(sql, new { Id = id });
@@ -74,7 +74,7 @@ namespace Pow.Infrastructure.Repositories
         public async Task<IReadOnlyList<Attachment>> GetByMessageIdAsync(string messageId)
         {
             var sql = "SELECT * FROM Attachments WHERE MessageId = @messageId";
-            using (var connection = new SqlConnection(_configuration.GetConnectionString("DefaultConnection")))
+            using (var connection = new SqlConnection(_configuration.GetConnectionString("DbConnection")))
             {
                 connection.Open();
                 var result = await connection.QueryAsync<Attachment>(sql);

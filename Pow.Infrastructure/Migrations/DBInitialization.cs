@@ -33,7 +33,7 @@ namespace Pow.Infrastructure.Migrations
                 .WithDefaultValue(SystemMethods.NewGuid)
                 .NotNullable()
                 .PrimaryKey()
-                .WithColumn("Desabled")
+                .WithColumn("Disabled")
                 .AsBoolean()
                 .WithColumn("MessageId")
                 .AsString(450)                

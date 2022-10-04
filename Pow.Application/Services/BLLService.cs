@@ -3,6 +3,7 @@ using Pow.Application.Models;
 using Pow.Application.Services.Interfaces;
 using System;
 using System.Collections.Generic;
+using System.Data.Common;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -57,10 +58,10 @@ namespace Pow.Application.Services
             attachment.Id = Guid.NewGuid();
             attachment.MessageId = message.Id;
             
-
+            await bLLMessageService.Add(message);
             await bLLMarkService.Add(mark);
             await bLLAttachmentService.Add(attachment);
-            return await bLLMessageService.Add(message);
+            return 1;
 
         }              
 
