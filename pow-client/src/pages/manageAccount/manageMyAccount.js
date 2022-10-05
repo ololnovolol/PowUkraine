@@ -3,7 +3,6 @@ import { useSelector } from 'react-redux';
 import * as userService from '../../common/services/userService';
 import styled from 'styled-components';
 import * as apiService from '../../common/services/apiService';
-import axios from 'axios';
 
 const CenterBlock = styled.div`
     background: #3a5431 none repeat scroll 0% 0%;
@@ -87,18 +86,7 @@ function ManageAccount() {
             UserId: doughnutData.UserId,
         };
 
-        axios
-            .post('https://localhost:44316/api/roles/updateUser', user, {
-                headers: {
-                    accept: 'application/json',
-                },
-            })
-            .then(function (response) {
-                console.log(response);
-            })
-            .catch(function (error) {
-                console.log(error);
-            });
+        apiService.updateUser(user);
     }
 
     function handle(e) {

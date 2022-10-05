@@ -23,22 +23,9 @@ namespace IdentityServer.Common.Validators
         public async Task<IdentityResult> ValidateAsync(UserManager<AppUser> manager, AppUser user)
         {
             ValidateEmail(user);
-            await ValidateUserName(manager, user);
 
             return await Task.FromResult(
                 _errors.Count == 0 ? IdentityResult.Success : IdentityResult.Failed(_errors.ToArray()));
-        }
-
-        private Task ValidateUserName(UserManager<AppUser> manager, AppUser user)
-        {
-            if (user.UserName.Contains("admin", StringComparison.OrdinalIgnoreCase))
-            {
-                AddErrorsToResult(
-                    "incorrect_username",
-                    ResourceReader.GetExceptionMessage("incorrect_username"));
-            }
-
-            return Task.CompletedTask;
         }
 
         private void ValidateEmail(AppUser user)

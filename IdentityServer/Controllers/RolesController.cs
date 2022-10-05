@@ -5,6 +5,7 @@ using System.Threading.Tasks;
 using IdentityServer.Models;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.Extensions.Configuration;
 
 namespace IdentityServer.Controllers
 {
@@ -48,14 +49,14 @@ namespace IdentityServer.Controllers
         }
 
         [HttpPost]
-        public async Task<IActionResult> GetUser([FromBody] StringId id)
+        public async Task<IActionResult> GetUser([FromBody] StringParameter id)
         {
             if (id is null)
             {
                 return BadRequest();
             }
 
-            AppUser user = await _userManager.FindByIdAsync(id.UserId);
+            AppUser user = await _userManager.FindByIdAsync(id.Data);
 
             if (user is null)
             {
@@ -111,13 +112,55 @@ namespace IdentityServer.Controllers
         }
 
         [HttpPost]
-        public async Task<IActionResult> Delete(string id)
+        public async Task<IActionResult> DeleteUser([FromBody] StringParameter email)
         {
-            IdentityRole role = await _roleManager.FindByIdAsync(id);
+            if (email.Data is null) return BadRequest();
 
-            if (role != null)
+            var user = await _userManager.FindByEmailAsync(email.Data);
+
+            if (user is null) return BadRequest();
+
+            var result = await _userManager.DeleteAsync(user);
+
+            if (!result.Succeeded)
             {
-                await _roleManager.DeleteAsync(role);
+                return BadRequest();
+            }
+
+            bool isRole = await _userManager.IsInRoleAsync(user, "Admin");
+
+            if (isRole)
+            {
+                await _userManager.RemoveFromRoleAsync(user, "Admin");
+            }
+            else
+            {
+                await _userManager.RemoveFromRoleAsync(user, "User");
+            }
+
+            return Ok();
+        }
+
+        [HttpPost]
+        public async Task<IActionResult> ChangeRole([FromBody] StringParameter email)
+        {
+            if (email.Data is null) return BadRequest();
+
+            var user = await _userManager.FindByEmailAsync(email.Data);
+
+            if (user is null) return BadRequest();
+
+            bool isRole = await _userManager.IsInRoleAsync(user, "Admin");
+
+            if (isRole)
+            {
+                var resultRemove = await _userManager.RemoveFromRoleAsync(user, "Admin");
+                var resultUpdate = await _userManager.AddToRoleAsync(user, "User");
+            }
+            else
+            {
+                // var resultRemove = await _userManager.RemoveFromRoleAsync(user, "User");
+                var resultUpdate = await _userManager.AddToRoleAsync(user, "Admin");
             }
 
             return Ok();

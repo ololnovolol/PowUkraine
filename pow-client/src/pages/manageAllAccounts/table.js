@@ -2,6 +2,7 @@ import React from 'react';
 import Table from 'react-bootstrap/Table';
 import styled from 'styled-components';
 import * as apiService from '../../common/services/apiService';
+import * as userService from '../../common/services/userService';
 
 const Btn = styled.button`
     background: #88a87d none repeat scroll 0% 0%;
@@ -30,7 +31,7 @@ const Btn = styled.button`
 `;
 
 async function changeRole(value) {
-    await apiService.changeUserRole(value);
+    await apiService.changeUserRole(value.email);
 }
 
 async function updateUser(value) {
@@ -38,7 +39,7 @@ async function updateUser(value) {
 }
 
 async function deleteUser(value) {
-    await apiService.deleteUser(value);
+    await apiService.deleteUser(value.email);
 }
 
 export default function UsersTable({ theadData, tbodyData }) {
@@ -62,17 +63,21 @@ export default function UsersTable({ theadData, tbodyData }) {
                             <td>
                                 <Btn
                                     type="button"
-                                    onClick={() => changeRole(row.id)}>
+                                    onClick={() => changeRole(row)}>
                                     change role
                                 </Btn>
                             </td>
                             <td>
-                                <Btn type="button" onClick={() => updateUser()}>
+                                <Btn
+                                    type="button"
+                                    onClick={() => updateUser(row)}>
                                     update
                                 </Btn>
                             </td>
                             <td>
-                                <Btn type="button" onClick={() => deleteUser()}>
+                                <Btn
+                                    type="button"
+                                    onClick={() => deleteUser(row)}>
                                     delete
                                 </Btn>
                             </td>
