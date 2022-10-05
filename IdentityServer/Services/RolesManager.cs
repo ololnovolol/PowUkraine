@@ -11,8 +11,8 @@ namespace IdentityServer.Services
     {
         public static async Task CreateUserRoles(IServiceProvider serviceProvider, IConfiguration configuration)
         {
-            var roleManager = serviceProvider.GetRequiredService<RoleManager<IdentityRole>>();
-            var userManager = serviceProvider.GetRequiredService<UserManager<AppUser>>();
+            RoleManager<IdentityRole> roleManager = serviceProvider.GetRequiredService<RoleManager<IdentityRole>>();
+            UserManager<AppUser> userManager = serviceProvider.GetRequiredService<UserManager<AppUser>>();
 
             if (!await roleManager.RoleExistsAsync("Admin"))
             {
@@ -32,14 +32,17 @@ namespace IdentityServer.Services
             IConfiguration configuration,
             UserManager<AppUser> userManager)
         {
-            var result = await userManager.FindByNameAsync(name);
+            AppUser result = await userManager.FindByNameAsync(name);
 
             if (result != null)
             {
                 return result;
             }
 
-            var user = new AppUser { UserName = name, Email = configuration[$"{name}:email"], BirthDay = DateTime.Now };
+            AppUser user = new AppUser();
+            user.UserName = configuration[$"{name}:name"];
+            user.Email = configuration[$"{name}:email"];
+            user.BirthDay = DateTime.Parse(configuration[$"{name}:bDay"]);
 
             await userManager.CreateAsync(user, configuration[$"{name}:password"]);
 

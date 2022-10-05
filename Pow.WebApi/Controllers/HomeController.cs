@@ -12,37 +12,30 @@ namespace Pow.WebApi.Controllers
         // [Authorize(Policy = "UserAccess")]
         [Authorize(Roles = "User")]
         [HttpGet]
-        public IActionResult Get()
-        {
-            return Ok("Users_only___User___get method=)");
-        }
+        public IActionResult Get() => Ok("Users_only___User___get method=)");
 
         // [Authorize(Policy = "AdminAccess")]
         [Authorize(Roles = "Admin")]
         [HttpGet]
-        public IActionResult GetAll()
-        {
-            return Ok("Admin Access_only___Admin___getAll");
-        }
+        public IActionResult GetAll() => Ok("Admin Access_only___Admin___getAll");
 
         [HttpPost]
         public IActionResult Message(IFormCollection data, IFormFile imageFile)
         {
-            var msg = new MessageVm();
-            msg.Title = data["PhoneNumber"];
-            msg.PhoneNumber = data["PhoneNumber"];
-            msg.Data = DateTime.Parse(data["Data"]);
-            msg.Description = data["Description"];
-            msg.Attachment = data["Attachment"];
+            MessageVm msg = new ()
+            {
+                Title = data["PhoneNumber"],
+                PhoneNumber = data["PhoneNumber"],
+                Data = DateTime.Parse(data["Data"]),
+                Description = data["Description"],
+                Attachment = data["Attachment"],
+            };
 
             return Ok("goood!");
         }
 
         [Authorize(Policy = "UserAccess")]
         [HttpDelete("{id}")]
-        public IActionResult Delete(Guid id)
-        {
-            return Ok($"delete{id}");
-        }
+        public IActionResult Delete(Guid id) => Ok($"delete{id}");
     }
 }

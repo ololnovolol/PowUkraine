@@ -10,7 +10,6 @@ namespace Pow.Application.Common.Exceptions
         }
 
         public NotFoundException()
-            : base()
         {
         }
 

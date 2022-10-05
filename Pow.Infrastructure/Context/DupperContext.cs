@@ -8,14 +8,9 @@ namespace Pow.Infrastructure.Context
     {
         private readonly IConfiguration _configuration;
 
-        public DapperContext(IConfiguration configuration)
-        {
-            _configuration = configuration;
-        }
+        public DapperContext(IConfiguration configuration) => _configuration = configuration;
 
         public IDbConnection CreateConnection()
-        {
-            return new SqlConnection(_configuration.GetConnectionString("DbConnection"));
-        }
+            => new SqlConnection(_configuration.GetConnectionString("DbConnection"));
     }
 }

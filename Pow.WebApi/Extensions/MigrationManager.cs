@@ -9,10 +9,10 @@ namespace Pow.WebApi.Extensions
     {
         public static IHost MigrateDatabase(this IHost host)
         {
-            using (var scope = host.Services.CreateScope())
+            using (IServiceScope scope = host.Services.CreateScope())
             {
-                var databaseService = scope.ServiceProvider.GetRequiredService<Database>();
-                var migrationService = scope.ServiceProvider.GetRequiredService<IMigrationRunner>();
+                Database databaseService = scope.ServiceProvider.GetRequiredService<Database>();
+                IMigrationRunner migrationService = scope.ServiceProvider.GetRequiredService<IMigrationRunner>();
                 databaseService.CreateDatabase("IdentityServer");
                 migrationService.ListMigrations();
                 migrationService.MigrateUp();

@@ -87,6 +87,7 @@ const Sidebar = () => {
                         <NavIcon to="#">
                             <FiIcons.CgMenuMotion onClick={showSidebar} />
                         </NavIcon>
+
                         {SidebarData.map((item, index) => {
                             return <SubMenu item={item} key={index} />;
                         })}

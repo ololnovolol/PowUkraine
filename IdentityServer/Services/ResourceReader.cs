@@ -7,9 +7,11 @@ namespace IdentityServer.Services
     {
         public static string GetExceptionMessage(string code)
         {
-            var rm = new ResourceManager("IdentityServer.Resources.Exceptions_en", Assembly.GetExecutingAssembly());
+            ResourceManager rm = new ResourceManager(
+                "IdentityServer.Resources.Exceptions_en",
+                Assembly.GetExecutingAssembly());
 
-            var result = rm.GetString(code);
+            string result = rm.GetString(code);
 
             return result ?? string.Empty;
         }

@@ -20,35 +20,29 @@ namespace Pow.Application.Services
 
         private IUnitOfWork UnitOfWork { get; }
 
-        public void Dispose()
-        {
-            UnitOfWork.Dispose();
-        }
+        public void Dispose() => UnitOfWork.Dispose();
 
         public async Task<int> Add(AttachmentBL attachmentBl)
         {
-            var attachment = _mapper.Map<Attachment>(attachmentBl);
+            Attachment attachment = _mapper.Map<Attachment>(attachmentBl);
 
             return await UnitOfWork.Attachments.AddAsync(attachment);
         }
 
         public async Task<int> Update(AttachmentBL attachmentBl)
         {
-            var attachment = _mapper.Map<Attachment>(attachmentBl);
+            Attachment attachment = _mapper.Map<Attachment>(attachmentBl);
 
             return await UnitOfWork.Attachments.UpdateAsync(attachment);
         }
 
-        public async Task<int> Delete(string id)
-        {
-            return await UnitOfWork.Attachments.DeleteAsync(id);
-        }
+        public async Task<int> Delete(string id) => await UnitOfWork.Attachments.DeleteAsync(id);
 
         public IEnumerable<AttachmentBL> GetAll()
         {
-            var list = new List<AttachmentBL>();
+            List<AttachmentBL> list = new ();
 
-            foreach (var item in UnitOfWork.Attachments.GetAllAsync().Result)
+            foreach (Attachment item in UnitOfWork.Attachments.GetAllAsync().Result)
             {
                 list.Add(_mapper.Map<AttachmentBL>(item));
             }
@@ -58,9 +52,9 @@ namespace Pow.Application.Services
 
         public IEnumerable<AttachmentBL> GetByMessageId(string messageId)
         {
-            var list = new List<AttachmentBL>();
+            List<AttachmentBL> list = new ();
 
-            foreach (var mark in UnitOfWork.Attachments.GetByMessageIdAsync(messageId).Result)
+            foreach (Attachment mark in UnitOfWork.Attachments.GetByMessageIdAsync(messageId).Result)
             {
                 list.Add(_mapper.Map<AttachmentBL>(mark));
             }
@@ -70,7 +64,7 @@ namespace Pow.Application.Services
 
         public AttachmentBL GetById(string id)
         {
-            var attachment = UnitOfWork.Attachments.GetByIdAsync(id);
+            Task<Attachment> attachment = UnitOfWork.Attachments.GetByIdAsync(id);
 
             return _mapper.Map<AttachmentBL>(attachment);
         }

@@ -1,4 +1,6 @@
-﻿using System.Threading.Tasks;
+﻿using System.Collections.Generic;
+using System.Security.Claims;
+using System.Threading.Tasks;
 using IdentityModel;
 using IdentityServer4.Models;
 using IdentityServer4.Services;
@@ -9,15 +11,12 @@ namespace IdentityServer.Services
     {
         public Task GetProfileDataAsync(ProfileDataRequestContext context)
         {
-            var roleClaims = context.Subject.FindAll(JwtClaimTypes.Role);
+            IEnumerable<Claim> roleClaims = context.Subject.FindAll(JwtClaimTypes.Role);
             context.IssuedClaims.AddRange(roleClaims);
 
             return Task.CompletedTask;
         }
 
-        public Task IsActiveAsync(IsActiveContext context)
-        {
-            return Task.CompletedTask;
-        }
+        public Task IsActiveAsync(IsActiveContext context) => Task.CompletedTask;
     }
 }

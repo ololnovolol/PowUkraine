@@ -5,8 +5,7 @@ namespace Pow.WebApi.Extensions
     public static class CorsManager
     {
         public static void AddCustomCorsConfiguration(this IServiceCollection services)
-        {
-            services.AddCors(
+            => services.AddCors(
                 options =>
                 {
                     options.AddPolicy(
@@ -18,6 +17,5 @@ namespace Pow.WebApi.Extensions
                             policy.AllowAnyOrigin();
                         });
                 });
-        }
     }
 }

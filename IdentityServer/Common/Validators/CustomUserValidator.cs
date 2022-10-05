@@ -1,4 +1,5 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
 using System.Text.RegularExpressions;
 using System.Threading.Tasks;
 using IdentityServer.Models;
@@ -30,7 +31,7 @@ namespace IdentityServer.Common.Validators
 
         private Task ValidateUserName(UserManager<AppUser> manager, AppUser user)
         {
-            if (user.UserName.Contains("admin", System.StringComparison.OrdinalIgnoreCase))
+            if (user.UserName.Contains("admin", StringComparison.OrdinalIgnoreCase))
             {
                 AddErrorsToResult(
                     "incorrect_username",
@@ -45,9 +46,9 @@ namespace IdentityServer.Common.Validators
             const string pattern =
                 @"^([a-z0-9_-]+\.)*[a-z0-9_-]+@[a-z0-9_-]+(\.[a-z0-9_-]+)*\.[a-z]{2,6}$";
 
-            if (user.Email.EndsWith("@yandex.ru", System.StringComparison.OrdinalIgnoreCase) ||
-                user.Email.EndsWith("@mail.ru", System.StringComparison.OrdinalIgnoreCase) ||
-                user.Email.EndsWith("ru", System.StringComparison.OrdinalIgnoreCase))
+            if (user.Email.EndsWith("@yandex.ru", StringComparison.OrdinalIgnoreCase) ||
+                user.Email.EndsWith("@mail.ru", StringComparison.OrdinalIgnoreCase) ||
+                user.Email.EndsWith("ru", StringComparison.OrdinalIgnoreCase))
             {
                 AddErrorsToResult(
                     "incorrect_email_domen",
@@ -63,8 +64,6 @@ namespace IdentityServer.Common.Validators
         }
 
         private void AddErrorsToResult(string code, string description)
-        {
-            _errors.Add(new IdentityError { Code = code, Description = description });
-        }
+            => _errors.Add(new IdentityError { Code = code, Description = description });
     }
 }

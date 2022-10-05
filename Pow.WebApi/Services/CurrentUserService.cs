@@ -11,9 +11,7 @@ namespace Pow.WebApi.Services
         private readonly IHttpContextAccessor _httpContextAccessor;
 
         public CurrentUserService(IHttpContextAccessor httpContextAccessor)
-        {
-            _httpContextAccessor = httpContextAccessor;
-        }
+            => _httpContextAccessor = httpContextAccessor;
 
         public Guid UserId
         {
@@ -21,7 +19,7 @@ namespace Pow.WebApi.Services
             {
                 Debug.Assert(_httpContextAccessor != null, nameof(_httpContextAccessor) + " != null");
 
-                var id = _httpContextAccessor.HttpContext?.User.FindFirstValue(ClaimTypes.NameIdentifier);
+                string id = _httpContextAccessor.HttpContext?.User.FindFirstValue(ClaimTypes.NameIdentifier);
 
                 return string.IsNullOrEmpty(id) ? Guid.Empty : Guid.Parse(id);
             }

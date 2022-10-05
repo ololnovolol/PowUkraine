@@ -6,9 +6,6 @@ namespace Pow.Application.AutoMapperProfiles
 {
     public class MarkProfile : Profile
     {
-        public MarkProfile()
-        {
-            CreateMap<MarkBL, Mark>().ReverseMap();
-        }
+        public MarkProfile() => CreateMap<MarkBL, Mark>().ReverseMap();
     }
 }

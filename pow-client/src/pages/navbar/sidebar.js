@@ -60,7 +60,7 @@ export const SidebarData = [
     {
         title: 'Admin panel',
         role: 'admin',
-        path: '',
+        path: '#',
         icon: <RiIcons.RiAdminLine />,
         iconClosed: <MdIcons.MdOutlineKeyboardArrowDown />,
         iconOpened: <MdIcons.MdKeyboardArrowUp />,
@@ -86,7 +86,7 @@ export const SidebarData = [
     {
         title: 'Lobby',
         role: 'user',
-        path: '',
+        path: '#',
         icon: <RiIcons.RiUserSettingsLine />,
         iconClosed: <MdIcons.MdOutlineKeyboardArrowDown />,
         iconOpened: <MdIcons.MdKeyboardArrowUp />,

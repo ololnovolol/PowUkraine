@@ -17,6 +17,41 @@ export async function getUsers() {
     return response.data;
 }
 
+export async function getUser(id) {
+    let request = { UserId: id };
+    let user = {
+        FirstName: '',
+        LastName: '',
+        Email: '',
+        PhoneNumber: '',
+        BirthDay: '',
+        UserId: '',
+    };
+    const response = axios
+        .post('https://localhost:44316/api/roles/getUser', request, {
+            headers: {
+                accept: 'application/json',
+            },
+        })
+        .then(function (response) {
+            user = {
+                FirstName: response.data.firstName,
+                LastName: response.data.lastName,
+                Email: response.data.email,
+                PhoneNumber: response.data.phoneNumber,
+                BirthDay: response.data.birthDay,
+                UserId: id,
+            };
+
+            return user;
+        })
+        .catch(function (error) {
+            console.log(error);
+        });
+
+    return response;
+}
+
 export async function changeUserRole() {
     const response = await axios.get(
         'https://localhost:44316/api/roles/getUsers',
@@ -46,11 +81,6 @@ export async function sentMessage(values) {
                 'Content-Type': 'application/json',
             },
             responseType: 'json',
-            /*
-        Title: values.Title,
-        Description: "values.Description",
-        Data: values.Data,
-        PhoneNumber: "values.PhoneNumber",*/
         })
         .then(function (response) {
             console.log(response);

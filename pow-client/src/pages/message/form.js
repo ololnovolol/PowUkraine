@@ -102,7 +102,7 @@ export const MessageForm = props => {
 
     function handleData(e) {
         const formData = new FormData();
-        formData.append('Title', 'asfafasf');
+        formData.append('Title', data.Title);
         formData.append('Description', data.Description);
         formData.append('Data', data.Data);
         formData.append('PhoneNumber', data.PhoneNumber);
@@ -130,19 +130,20 @@ export const MessageForm = props => {
     }
 
     function handleLocation(e) {
-        let lat = 'empty';
-        let lon = 'empty';
-        let url = 'empty';
+        let lat = '0';
+        let lon = '0';
+        let url = '';
+        console.log(e);
 
         if (e.Latitude !== undefined) {
             lat = e.Latitude;
         }
 
-        if (e.Latitude !== undefined) {
+        if (e.Longitude !== undefined) {
             lon = e.Longitude;
         }
 
-        if (e.Latitude !== undefined) {
+        if (e.MapUrl !== undefined) {
             url = e.MapUrl;
         }
 
@@ -203,7 +204,10 @@ export const MessageForm = props => {
                     </label>
                     <Block>
                         <label>Add Location</label>
-                        <SmButton type="button" onClick={handleLocation}>
+                        <SmButton
+                            type="button"
+                            onClick={handleLocation}
+                            disabled>
                             Pin Location
                         </SmButton>
                         <span>{JSON.stringify(location)}</span>

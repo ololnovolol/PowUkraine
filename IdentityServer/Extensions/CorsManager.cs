@@ -5,8 +5,7 @@ namespace IdentityServer.Extensions
     public static class CorsManager
     {
         public static void AddCustomCorsConfiguration(this IServiceCollection services)
-        {
-            services.AddCors(
+            => services.AddCors(
                 options =>
                 {
                     options.AddPolicy(
@@ -18,6 +17,5 @@ namespace IdentityServer.Extensions
                             policy.AllowAnyOrigin();
                         });
                 });
-        }
     }
 }

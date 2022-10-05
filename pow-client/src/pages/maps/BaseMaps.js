@@ -17,7 +17,7 @@ class Basemap extends React.Component {
                     <option value="osm">Classic</option>
                     <option value="hot">Landshaftic</option>
                     <option value="cycle">Clear</option>
-                    <option value="dark">Dark</option>
+                    <option value="dark">Mordor</option>
                 </select>
             </div>
         );

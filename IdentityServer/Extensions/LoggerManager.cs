@@ -14,17 +14,17 @@ namespace IdentityServer.Extensions
         [Obsolete]
         public static IHost SetupLogger(this IHost host)
         {
-            using (var scope = host.Services.CreateScope())
+            using (IServiceScope scope = host.Services.CreateScope())
             {
-                var serviceProvider = scope.ServiceProvider;
+                IServiceProvider serviceProvider = scope.ServiceProvider;
 
                 try
                 {
-                    var environment = serviceProvider.GetRequiredService<IHostingEnvironment>();
+                    IHostingEnvironment environment = serviceProvider.GetRequiredService<IHostingEnvironment>();
 
                     if (!environment.IsDevelopment())
                     {
-                        var context = serviceProvider.GetRequiredService<AuthorizationDbContext>();
+                        AuthorizationDbContext context = serviceProvider.GetRequiredService<AuthorizationDbContext>();
                         DbInitializer.Initialize(context);
                     }
                 }
