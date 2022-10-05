@@ -21,7 +21,7 @@ namespace Pow.Infrastructure.Repositories
 
         public async Task<int> AddAsync(Attachment entity)
         {
-            const string sql = "Insert into Attachments (Title,File,MessageId) VALUES (@Title,@File,@MessageId)";
+            const string sql = "Insert into Attachments (Title,[File],MessageId) VALUES (@Title,@File,@MessageId)";
 
             await using (var connection = new SqlConnection(_configuration.GetConnectionString("DbConnection")))
             {

@@ -47,20 +47,23 @@ namespace Pow.Application.Services
             bLLMessageService = messageService;
         }
 
-        public async Task<int> Add(MessageBL message, AttachmentBL? attachment, MarkBL? mark)
+        public async Task<int> AddAsync(MessageBL message, AttachmentBL? attachment, MarkBL? mark)
         {
-            message.Id = Guid.NewGuid();
+            message.Id = new Guid("1b97d618 - bb3f - 4295 - b6a2 - bc95630b74f5");
             message.CreatedDate = DateTime.Now;
-            
-            mark.Id = Guid.NewGuid();
-            mark.MessageId = message.Id;
+            await bLLMessageService.AddAsync(message);
 
-            attachment.Id = Guid.NewGuid();
-            attachment.MessageId = message.Id;
-            
-            await bLLMessageService.Add(message);
-            await bLLMarkService.Add(mark);
-            await bLLAttachmentService.Add(attachment);
+            if (attachment != null)
+            {                
+                attachment.MessageId = message.Id;
+                await bLLAttachmentService.AddAsync(attachment);
+            }
+
+            if (mark != null)
+            {
+                mark.MessageId = message.Id;
+                await bLLMarkService.AddAsync(mark);
+            }
             return 1;
 
         }              

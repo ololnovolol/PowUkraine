@@ -1,4 +1,5 @@
 using AutoMapper;
+using Dapper;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.Extensions.Configuration;
@@ -7,11 +8,13 @@ using Microsoft.Extensions.Hosting;
 using Pow.Application.AutoMapperProfiles;
 using Pow.Application.Services;
 using Pow.Application.Services.Interfaces;
+using Pow.Infrastructure;
 using Pow.Infrastructure.Repositories;
 using Pow.Infrastructure.Repositories.Interfaces;
 using Pow.WebApi.AutoMapperProfiles;
 using Pow.WebApi.Extensions;
 using Pow.WebApi.Middleware;
+using System;
 
 namespace Pow.WebApi
 {
@@ -38,6 +41,10 @@ namespace Pow.WebApi
 
             services.AddValidators();
 
+            SqlMapper.AddTypeHandler(new SqlGuidTypeHandler());
+            SqlMapper.RemoveTypeMap(typeof(Guid));
+            SqlMapper.RemoveTypeMap(typeof(Guid?));
+
             services.AddAutoMapper(typeof(WebAttachmentProfile),
                 typeof(WebMarkProfile),
                 typeof(WebMessageProfile),
@@ -54,13 +61,13 @@ namespace Pow.WebApi
 
             services.AddSingleton<IUnitOfWork, UnitOfWork>();
 
-            services.AddTransient<IBLLMessageService, BLLMessageService>();
+            services.AddSingleton<IBLLMessageService, BLLMessageService>();
 
-            services.AddTransient<IBLLMarkService, BLLMarkService>();
+            services.AddSingleton<IBLLMarkService, BLLMarkService>();
 
-            services.AddTransient<IBLLAttachmentService, BLLAttachmentService>();
+            services.AddSingleton<IBLLAttachmentService, BLLAttachmentService>();
 
-            services.AddTransient<IBLLService, BLLService>();
+            services.AddSingleton<IBLLService, BLLService>();
         }
 
         public void Configure(IApplicationBuilder app, IWebHostEnvironment env)

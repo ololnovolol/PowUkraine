@@ -26,21 +26,21 @@ namespace Pow.Application.Services
             _unitOfWork.Dispose();
         }
 
-        public async Task<int> Add(MarkBL markBl)
+        public async Task<int> AddAsync(MarkBL markBl)
         {
             var mark = _mapper.Map<Mark>(markBl);
 
             return await _unitOfWork.Marks.AddAsync(mark);
         }
 
-        public async Task<int> Update(MarkBL markBl)
+        public async Task<int> UpdateAsync(MarkBL markBl)
         {
             var mark = _mapper.Map<Mark>(markBl);
 
             return await _unitOfWork.Marks.UpdateAsync(mark);
         }
 
-        public async Task<int> Delete(Guid id)
+        public async Task<int> DeleteAsync(Guid id)
         {
             return await _unitOfWork.Marks.DeleteAsync(id.ToString());
         }

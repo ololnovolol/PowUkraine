@@ -53,7 +53,7 @@ namespace Pow.Infrastructure.Migrations
                 .WithColumn("Title")
                 .AsString(30)
                 .WithColumn("File")
-                .AsBinary()
+                .AsBinary(838860800)
                 .WithColumn("MessageId")
                 .AsString(450);
 

@@ -44,21 +44,21 @@ namespace Pow.Application.Services
         }
 
 
-        public async Task<int> Add(MessageBL messageBl)
+        public async Task<int> AddAsync(MessageBL messageBl)
         {
             var message = _mapper.Map<Message>(messageBl);
 
             return await _unitOfWork.Messages.AddAsync(message);
         }
 
-        public async Task<int> Update(MessageBL messageBl)
+        public async Task<int> UpdateAsync(MessageBL messageBl)
         {
             var message = _mapper.Map<Message>(messageBl);
 
             return await _unitOfWork.Messages.UpdateAsync(message);
         }
 
-        public async Task<int> Delete(Guid id)
+        public async Task<int> DeleteAsync(Guid id)
         {
             return await _unitOfWork.Messages.DeleteAsync(id.ToString());
         }

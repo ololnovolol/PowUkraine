@@ -11,11 +11,11 @@ namespace Pow.Application.Services.Interfaces
 {
     public interface IBLLBaseService<T> : IDisposable where T : BaseModelBL
     {
-        public Task<int> Add(T entity);
+        public Task<int> AddAsync(T entity);
 
-        public Task<int> Update(T entity);
+        public Task<int> UpdateAsync(T entity);
 
-        public Task<int> Delete(Guid id);
+        public Task<int> DeleteAsync(Guid id);
 
         public IEnumerable<T> GetAll();
 

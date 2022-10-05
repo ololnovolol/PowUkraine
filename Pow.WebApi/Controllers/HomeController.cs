@@ -1,12 +1,17 @@
 ﻿using System;
+using System.Net.WebSockets;
+using System.Threading.Tasks;
 using AutoMapper;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.AspNetCore.Mvc.Diagnostics;
 using Pow.Application.Models;
 using Pow.Application.Services;
 using Pow.Application.Services.Interfaces;
+using Pow.Domain;
+using Pow.Infrastructure.Repositories.Interfaces;
 using Pow.WebApi.Controllers.Base;
 using Pow.WebApi.Extensions;
 using Pow.WebApi.Models;
@@ -25,13 +30,16 @@ namespace Pow.WebApi.Controllers
 
         private readonly IBLLService _service;
 
-        public HomeController(IBLLService service, IMapper mapper, IBLLMessageService messageService, IBLLMarkService markService, IBLLAttachmentService attachmentService)
+        private readonly IUnitOfWork _unitOfWork;
+
+        public HomeController(IBLLService service, IMapper mapper, IBLLMessageService messageService, IBLLMarkService markService, IBLLAttachmentService attachmentService, IUnitOfWork unitOfWork)
         {
             _mapper = mapper;
             _messageService = messageService;
             _markService = markService;
             _attachmentService = attachmentService;
             _service = service;
+            _unitOfWork = unitOfWork;
         }
 
         //[Authorize(Policy = "UserAccess")]
@@ -51,9 +59,21 @@ namespace Pow.WebApi.Controllers
         }
 
         [HttpPost]
-        public IActionResult Message(IFormCollection data/* , IFormFile imagefile*/)
+        public async Task<IActionResult> Message(IFormCollection data/* , IFormFile imagefile*/)
         {
-            MessageModel msg = new MessageModel();
+            Message mg = new Message()
+            {
+                Id = Guid.NewGuid(),
+                Phone = data["PhoneNumber"],
+                EventDate = DateTime.Parse(data["Data"]),
+                Description = data["Description"],
+                Title = data["Title"],
+                CreatedDate = DateTime.Now
+            };
+
+            await _unitOfWork.Messages.AddAsync(mg);
+            
+            /*MessageModel msg = new MessageModel();
             MarkModel mark = null;
             AttachmentModel attachment = null;
 
@@ -61,7 +81,7 @@ namespace Pow.WebApi.Controllers
             msg.EventDate = DateTime.Parse(data["Data"]);
             msg.Description = data["Description"];
             msg.Title = data["Title"];
-            /*UserManager<> manager = new UserManager();*/
+            *//*UserManager<> manager = new UserManager();*//*
             if (data.Files.Count > 0)
             {
                 attachment = new AttachmentModel();
@@ -77,11 +97,10 @@ namespace Pow.WebApi.Controllers
                 mark.GpsLongitude = data["Longitude"];
                 mark.MapUrl = data["MapUrl"];
             }
-                        
-            int result = _service.Add(_mapper.Map<MessageBL>(msg), _mapper.Map<AttachmentBL>(attachment), _mapper.Map<MarkBL>(mark)).Result;
-            
 
-            return Ok(result);
+            await _service.AddAsync(_mapper.Map<MessageBL>(msg), _mapper.Map<AttachmentBL>(attachment), _mapper.Map<MarkBL>(mark));*/
+
+            return Ok();
         }
 
         [Authorize(Policy = "UserAccess")]
