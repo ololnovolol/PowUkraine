@@ -24,6 +24,9 @@ namespace Pow.Infrastructure.Repositories
 
         public IAttachmentRepository Attachments { get; }
 
-        public void Dispose() => throw new NotImplementedException();
+        public void Dispose()
+        {
+            // throw new NotImplementedException();
+        }
     }
 }

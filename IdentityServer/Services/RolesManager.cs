@@ -17,7 +17,7 @@ namespace IdentityServer.Services
             if (!await roleManager.RoleExistsAsync("Admin"))
             {
                 await roleManager.CreateAsync(new IdentityRole("Admin"));
-                await userManager.AddToRoleAsync(await CreateUserAsync("admin", configuration, userManager), "Admin");
+                await userManager.AddToRoleAsync(await CreateUserAsync("owner", configuration, userManager), "Admin");
             }
 
             if (!await roleManager.RoleExistsAsync("User"))

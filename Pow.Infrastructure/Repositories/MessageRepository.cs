@@ -21,13 +21,13 @@ namespace Pow.Infrastructure.Repositories
             entity.CreatedDate = DateTime.Now;
 
             const string sql = "Insert into Messages " +
-                               "(Name,Description,CreatedDate,EventDate,Phone,Email,UserId)" +
-                               " VALUES (@Name,@Description,@CreatedDate,@EventDate,@Phone,@Email,@UserId)";
+                               "(Description,CreatedDate,EventDate,Phone,Email,UserId)" +
+                               " VALUES (@Description,@CreatedDate,@EventDate,@Phone,@Email,@UserId)";
 
-            await using (SqlConnection connection = new (_configuration.GetConnectionString("DefaultConnection")))
+            await using (var connection = new SqlConnection(_configuration.GetConnectionString("DbConnection")))
             {
                 connection.Open();
-                int result = await connection.ExecuteAsync(sql, entity);
+                var result = await connection.ExecuteAsync(sql, entity);
 
                 return result;
             }
@@ -35,12 +35,12 @@ namespace Pow.Infrastructure.Repositories
 
         public async Task<int> DeleteAsync(string id)
         {
-            string sql = "DELETE FROM Messages WHERE Id = @Id";
+            var sql = "DELETE FROM Messages WHERE Id = @Id";
 
-            await using (SqlConnection connection = new (_configuration.GetConnectionString("DefaultConnection")))
+            await using (var connection = new SqlConnection(_configuration.GetConnectionString("DbConnection")))
             {
                 connection.Open();
-                int result = await connection.ExecuteAsync(sql, new { Id = id });
+                var result = await connection.ExecuteAsync(sql, new { Id = id });
 
                 return result;
             }
@@ -48,12 +48,12 @@ namespace Pow.Infrastructure.Repositories
 
         public async Task<IReadOnlyList<Message>> GetAllAsync()
         {
-            string sql = "SELECT * FROM Messages";
+            var sql = "SELECT * FROM Messages";
 
-            using (SqlConnection connection = new (_configuration.GetConnectionString("DefaultConnection")))
+            using (var connection = new SqlConnection(_configuration.GetConnectionString("DbConnection")))
             {
                 connection.Open();
-                IEnumerable<Message> result = await connection.QueryAsync<Message>(sql);
+                var result = await connection.QueryAsync<Message>(sql);
 
                 return result.ToList();
             }
@@ -63,10 +63,10 @@ namespace Pow.Infrastructure.Repositories
         {
             const string sql = "SELECT * FROM Messages WHERE Id = @Id";
 
-            await using (SqlConnection connection = new (_configuration.GetConnectionString("DefaultConnection")))
+            await using (var connection = new SqlConnection(_configuration.GetConnectionString("DbConnection")))
             {
                 connection.Open();
-                Message result = await connection.QuerySingleOrDefaultAsync<Message>(sql, new { Id = id });
+                var result = await connection.QuerySingleOrDefaultAsync<Message>(sql, new { Id = id });
 
                 return result;
             }
@@ -74,17 +74,20 @@ namespace Pow.Infrastructure.Repositories
 
         public async Task<IReadOnlyList<Message>> GetByUserIdAsync(string userId)
         {
-            string sql = "SELECT * FROM Messages WHERE UserId = @userId";
+            var sql = "SELECT * FROM Messages WHERE UserId = @userId";
 
-            using (SqlConnection connection = new (_configuration.GetConnectionString("DefaultConnection")))
+            using (var connection = new SqlConnection(_configuration.GetConnectionString("DbConnection")))
             {
                 connection.Open();
-                IEnumerable<Message> result = await connection.QueryAsync<Message>(sql);
+                var result = await connection.QueryAsync<Message>(sql);
 
                 return result.ToList();
             }
         }
 
-        public async Task<int> UpdateAsync(Message entity) => throw new Exception();
+        public async Task<int> UpdateAsync(Message entity)
+        {
+            throw new Exception();
+        }
     }
 }
