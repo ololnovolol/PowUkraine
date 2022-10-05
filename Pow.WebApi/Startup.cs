@@ -1,8 +1,11 @@
+using System;
+using Dapper;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
+using Pow.Infrastructure;
 using Pow.WebApi.Extensions;
 using Pow.WebApi.Middleware;
 
@@ -30,6 +33,10 @@ namespace Pow.WebApi
             services.AddInfrastructure();
 
             services.AddValidators();
+
+            SqlMapper.AddTypeHandler(new SqlGuidTypeHandler());
+            SqlMapper.RemoveTypeMap(typeof(Guid));
+            SqlMapper.RemoveTypeMap(typeof(Guid?));
         }
 
         public void Configure(IApplicationBuilder app, IWebHostEnvironment env)
