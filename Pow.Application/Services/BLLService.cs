@@ -19,7 +19,7 @@ namespace Pow.Application.Services
 
         public void Dispose()
         {
-            Dispose(true);            
+            Dispose(true);
             GC.SuppressFinalize(this);
         }
 
