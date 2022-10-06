@@ -31,15 +31,16 @@ namespace Pow.Application.Services
             if (disposed) return;
             if (disposing)
             {
-                
-            }            
+            }
+
             disposed = true;
         }
-        
+
         ~BLLService()
         {
             Dispose(false);
         }
+
         public BLLService(IBLLMessageService messageService, IBLLMarkService markService, IBLLAttachmentService attachmentService)
         {
             bLLAttachmentService = attachmentService;
@@ -49,12 +50,12 @@ namespace Pow.Application.Services
 
         public async Task<int> AddAsync(MessageBL message, AttachmentBL? attachment, MarkBL? mark)
         {
-            message.Id = new Guid("1b97d618 - bb3f - 4295 - b6a2 - bc95630b74f5");
+            message.Id = Guid.NewGuid();
             message.CreatedDate = DateTime.Now;
             await bLLMessageService.AddAsync(message);
 
             if (attachment != null)
-            {                
+            {
                 attachment.MessageId = message.Id;
                 await bLLAttachmentService.AddAsync(attachment);
             }
@@ -64,9 +65,10 @@ namespace Pow.Application.Services
                 mark.MessageId = message.Id;
                 await bLLMarkService.AddAsync(mark);
             }
+
             return 1;
 
-        }              
+        }
 
         public void Get(out MessageBL message, out AttachmentBL attachment, out MarkBL mark)
         {
