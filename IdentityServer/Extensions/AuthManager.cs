@@ -8,8 +8,7 @@ namespace IdentityServer.Extensions
         public static void AddCustomAuthenticationConfigurations(
             this IServiceCollection services,
             IConfiguration appConfiguration)
-        {
-            services.AddAuthentication()
+            => services.AddAuthentication()
                 .AddGoogle(
                     google =>
                     {
@@ -28,6 +27,5 @@ namespace IdentityServer.Extensions
                         linkedIn.ClientId = appConfiguration["linkedin:client_id"];
                         linkedIn.ClientSecret = appConfiguration["linkedin:client_secret"];
                     });
-        }
     }
 }

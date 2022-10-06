@@ -6,9 +6,6 @@ namespace Pow.Application.AutoMapperProfiles
 {
     public class MessageProfile : Profile
     {
-        public MessageProfile()
-        {
-            CreateMap<MessageBL, Message>().ReverseMap();
-        }
+        public MessageProfile() => CreateMap<MessageBL, Message>().ReverseMap();
     }
 }

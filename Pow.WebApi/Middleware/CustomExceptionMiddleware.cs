@@ -12,10 +12,7 @@ namespace Pow.WebApi.Middleware
     {
         private readonly RequestDelegate _next;
 
-        public CustomExceptionMiddleware(RequestDelegate next)
-        {
-            _next = next;
-        }
+        public CustomExceptionMiddleware(RequestDelegate next) => _next = next;
 
         public async Task Invoke(HttpContext context)
         {
@@ -31,8 +28,8 @@ namespace Pow.WebApi.Middleware
 
         private static Task HandleExceptionAsync(HttpContext context, Exception exception)
         {
-            var code = HttpStatusCode.InternalServerError;
-            var result = string.Empty;
+            HttpStatusCode code = HttpStatusCode.InternalServerError;
+            string result = string.Empty;
 
             switch (exception)
             {

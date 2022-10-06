@@ -14,10 +14,7 @@ namespace Pow.Infrastructure.Repositories
     {
         private readonly IConfiguration _configuration;
 
-        public MessageRepository(IConfiguration configuration)
-        {
-            _configuration = configuration;
-        }
+        public MessageRepository(IConfiguration configuration) => _configuration = configuration;
 
         public async Task<int> AddAsync(Message entity)
         {
@@ -27,10 +24,11 @@ namespace Pow.Infrastructure.Repositories
                                "(Description,CreatedDate,EventDate,Phone,Email,UserId)" +
                                " VALUES (@Description,@CreatedDate,@EventDate,@Phone,@Email,@UserId)";
 
-            await using (var connection = new SqlConnection(_configuration.GetConnectionString("DbConnection")))
+            await using (SqlConnection connection =
+                new SqlConnection(_configuration.GetConnectionString("DbConnection")))
             {
                 connection.Open();
-                var result = await connection.ExecuteAsync(sql, entity);
+                int result = await connection.ExecuteAsync(sql, entity);
 
                 return result;
             }
@@ -38,12 +36,13 @@ namespace Pow.Infrastructure.Repositories
 
         public async Task<int> DeleteAsync(string id)
         {
-            var sql = "DELETE FROM Messages WHERE Id = @Id";
+            string sql = "DELETE FROM Messages WHERE Id = @Id";
 
-            await using (var connection = new SqlConnection(_configuration.GetConnectionString("DbConnection")))
+            await using (SqlConnection connection =
+                new SqlConnection(_configuration.GetConnectionString("DbConnection")))
             {
                 connection.Open();
-                var result = await connection.ExecuteAsync(sql, new { Id = id });
+                int result = await connection.ExecuteAsync(sql, new { Id = id });
 
                 return result;
             }
@@ -51,12 +50,12 @@ namespace Pow.Infrastructure.Repositories
 
         public async Task<IReadOnlyList<Message>> GetAllAsync()
         {
-            var sql = "SELECT * FROM Messages";
+            string sql = "SELECT * FROM Messages";
 
-            using (var connection = new SqlConnection(_configuration.GetConnectionString("DbConnection")))
+            using (SqlConnection connection = new SqlConnection(_configuration.GetConnectionString("DbConnection")))
             {
                 connection.Open();
-                var result = await connection.QueryAsync<Message>(sql);
+                IEnumerable<Message> result = await connection.QueryAsync<Message>(sql);
 
                 return result.ToList();
             }
@@ -66,10 +65,11 @@ namespace Pow.Infrastructure.Repositories
         {
             const string sql = "SELECT * FROM Messages WHERE Id = @Id";
 
-            await using (var connection = new SqlConnection(_configuration.GetConnectionString("DbConnection")))
+            await using (SqlConnection connection =
+                new SqlConnection(_configuration.GetConnectionString("DbConnection")))
             {
                 connection.Open();
-                var result = await connection.QuerySingleOrDefaultAsync<Message>(sql, new { Id = id });
+                Message result = await connection.QuerySingleOrDefaultAsync<Message>(sql, new { Id = id });
 
                 return result;
             }
@@ -77,20 +77,17 @@ namespace Pow.Infrastructure.Repositories
 
         public async Task<IReadOnlyList<Message>> GetByUserIdAsync(string userId)
         {
-            var sql = "SELECT * FROM Messages WHERE UserId = @userId";
+            string sql = "SELECT * FROM Messages WHERE UserId = @userId";
 
-            using (var connection = new SqlConnection(_configuration.GetConnectionString("DbConnection")))
+            using (SqlConnection connection = new SqlConnection(_configuration.GetConnectionString("DbConnection")))
             {
                 connection.Open();
-                var result = await connection.QueryAsync<Message>(sql);
+                IEnumerable<Message> result = await connection.QueryAsync<Message>(sql);
 
                 return result.ToList();
             }
         }
 
-        public async Task<int> UpdateAsync(Message entity)
-        {
-            throw new Exception();
-        }
+        public async Task<int> UpdateAsync(Message entity) => throw new Exception();
     }
 }

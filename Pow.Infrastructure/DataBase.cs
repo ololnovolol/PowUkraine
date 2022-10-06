@@ -1,4 +1,6 @@
-﻿using System.Linq;
+﻿using System.Collections.Generic;
+using System.Data;
+using System.Linq;
 using Dapper;
 using Pow.Infrastructure.Context;
 
@@ -8,20 +10,17 @@ namespace Pow.Infrastructure
     {
         private readonly DapperContext _context;
 
-        public Database(DapperContext context)
-        {
-            _context = context;
-        }
+        public Database(DapperContext context) => _context = context;
 
         public void CreateDatabase(string dbName)
         {
-            var query = "SELECT * FROM sys.databases WHERE name = @name";
-            var parameters = new DynamicParameters();
+            string query = "SELECT * FROM sys.databases WHERE name = @name";
+            DynamicParameters parameters = new();
             parameters.Add("name", dbName);
 
-            using (var connection = _context.CreateConnection())
+            using (IDbConnection connection = _context.CreateConnection())
             {
-                var records = connection.Query(query, parameters);
+                IEnumerable<dynamic> records = connection.Query(query, parameters);
 
                 if (!records.Any())
                 {

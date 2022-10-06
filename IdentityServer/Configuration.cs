@@ -17,27 +17,19 @@ namespace IdentityServer
             };
 
         public static IEnumerable<ApiScope> ApiScopes(IConfiguration config)
-        {
-            return new List<ApiScope>
-            {
-                new ApiScope(config["clientSecret:c_name"], config["clientSecret:c_Disp_name"]),
-            };
-        }
+            => new List<ApiScope> { new ApiScope(config["clientSecret:c_name"], config["clientSecret:c_Disp_name"]) };
 
         public static IEnumerable<ApiResource> ApiResources(IConfiguration config)
-        {
-            return new List<ApiResource>
+            => new List<ApiResource>
             {
                 new ApiResource(
                     config["clientSecret:c_name"],
                     config["clientSecret:c_Disp_name"],
                     new[] { JwtClaimTypes.Name }) { Scopes = { config["clientSecret:c_name"] } },
             };
-        }
 
         public static IEnumerable<Client> Clients(IConfiguration config)
-        {
-            return new List<Client>
+            => new List<Client>
             {
                 new Client
                 {
@@ -60,9 +52,8 @@ namespace IdentityServer
                     },
                     AllowOfflineAccess = true,
                     AllowAccessTokensViaBrowser = true,
-                    AccessTokenLifetime = 1,
+                    AccessTokenLifetime = 3600,
                 },
             };
-        }
     }
 }

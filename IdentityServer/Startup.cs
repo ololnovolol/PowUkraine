@@ -16,10 +16,7 @@ namespace IdentityServer
     {
         private readonly IConfiguration _appConfiguration;
 
-        public Startup(IConfiguration appConfiguration)
-        {
-            _appConfiguration = appConfiguration;
-        }
+        public Startup(IConfiguration appConfiguration) => _appConfiguration = appConfiguration;
 
         public void ConfigureServices(IServiceCollection services)
         {

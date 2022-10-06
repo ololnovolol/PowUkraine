@@ -4,8 +4,55 @@ import {
     storeUser,
 } from '../../pages/auth/actions/authActions';
 import { IDENTITY_CONFIG } from '../utils/Constants/authConstants';
+import jwtDecode from 'jwt-decode';
 
 const userManager = new UserManager(IDENTITY_CONFIG);
+
+export async function GetUser() {
+    return await userManager.getUser();
+}
+
+export async function GetUserId() {
+    let user = await userManager.getUser();
+    let access_token = user.access_token;
+    let decode = '';
+    let userId = '';
+
+    if (access_token) {
+        try {
+            decode = jwtDecode(access_token);
+        } catch (error) {
+            console.log('👾 invalid token format', error);
+        }
+
+        userId = '' + decode.sub;
+        console.log(userId);
+
+        return userId;
+    }
+    return userId;
+}
+
+export async function GetUserRole() {
+    let user = await userManager.getUser();
+    let access_token = user.access_token;
+    let decode = '';
+    let userRole = '';
+
+    if (access_token) {
+        try {
+            decode = jwtDecode(access_token);
+        } catch (error) {
+            console.log('👾 invalid token format', error);
+        }
+
+        userRole = '' + decode.role;
+        console.log(userRole);
+
+        return userRole;
+    }
+    return userRole;
+}
 
 export async function loadUserFromStorage(store) {
     try {

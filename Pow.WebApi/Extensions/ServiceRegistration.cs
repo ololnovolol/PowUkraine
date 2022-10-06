@@ -7,11 +7,9 @@ namespace Pow.WebApi.Extensions
     public static class ServiceRegistration
     {
         public static void AddInfrastructure(this IServiceCollection services)
-        {
-            services.AddTransient<IMessageRepository, MessageRepository>()
+            => services.AddTransient<IMessageRepository, MessageRepository>()
                 .AddTransient<IMarkRepository, MarkRepository>()
                 .AddTransient<IAttachmentRepository, AttachmentRepository>()
                 .AddTransient<IUnitOfWork, UnitOfWork>();
-        }
     }
 }

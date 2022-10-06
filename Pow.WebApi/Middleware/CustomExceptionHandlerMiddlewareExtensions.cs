@@ -6,8 +6,6 @@ namespace Pow.WebApi.Middleware
     {
         public static IApplicationBuilder UseCustomExceptionHandler(
             this IApplicationBuilder builder)
-        {
-            return builder.UseMiddleware<CustomExceptionMiddleware>();
-        }
+            => builder.UseMiddleware<CustomExceptionMiddleware>();
     }
 }

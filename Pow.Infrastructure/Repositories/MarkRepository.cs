@@ -14,10 +14,7 @@ namespace Pow.Infrastructure.Repositories
     {
         private readonly IConfiguration _configuration;
 
-        public MarkRepository(IConfiguration configuration)
-        {
-            this._configuration = configuration;
-        }
+        public MarkRepository(IConfiguration configuration) => _configuration = configuration;
 
         public async Task<int> AddAsync(Mark entity)
         {
@@ -26,10 +23,11 @@ namespace Pow.Infrastructure.Repositories
                                "GpsLongitude,GpsLatitude) VALUES (@Disabled,@MessageId,@Country,@City,@Region,@Address," +
                                "@StreetNumber,@PostalCode,@County,@MapUrl,@GpsLongitude,@GpsLatitude)";
 
-            await using (var connection = new SqlConnection(_configuration.GetConnectionString("DbConnection")))
+            await using (SqlConnection connection =
+                new SqlConnection(_configuration.GetConnectionString("DbConnection")))
             {
                 connection.Open();
-                var result = await connection.ExecuteAsync(sql, entity);
+                int result = await connection.ExecuteAsync(sql, entity);
 
                 return result;
             }
@@ -39,10 +37,11 @@ namespace Pow.Infrastructure.Repositories
         {
             const string sql = "DELETE FROM Marks WHERE Id = @Id";
 
-            await using (var connection = new SqlConnection(_configuration.GetConnectionString("DbConnection")))
+            await using (SqlConnection connection =
+                new SqlConnection(_configuration.GetConnectionString("DbConnection")))
             {
                 connection.Open();
-                var result = await connection.ExecuteAsync(sql, new { Id = id });
+                int result = await connection.ExecuteAsync(sql, new { Id = id });
 
                 return result;
             }
@@ -52,10 +51,11 @@ namespace Pow.Infrastructure.Repositories
         {
             const string sql = "SELECT * FROM Marks";
 
-            await using (var connection = new SqlConnection(_configuration.GetConnectionString("DbConnection")))
+            await using (SqlConnection connection =
+                new SqlConnection(_configuration.GetConnectionString("DbConnection")))
             {
                 connection.Open();
-                var result = await connection.QueryAsync<Mark>(sql);
+                IEnumerable<Mark> result = await connection.QueryAsync<Mark>(sql);
 
                 return result.ToList();
             }
@@ -65,10 +65,11 @@ namespace Pow.Infrastructure.Repositories
         {
             const string sql = "SELECT * FROM Marks WHERE Id = @Id";
 
-            await using (var connection = new SqlConnection(_configuration.GetConnectionString("DbConnection")))
+            await using (SqlConnection connection =
+                new SqlConnection(_configuration.GetConnectionString("DbConnection")))
             {
                 connection.Open();
-                var result = await connection.QuerySingleOrDefaultAsync<Mark>(sql, new { Id = id });
+                Mark result = await connection.QuerySingleOrDefaultAsync<Mark>(sql, new { Id = id });
 
                 return result;
             }
@@ -76,20 +77,17 @@ namespace Pow.Infrastructure.Repositories
 
         public async Task<Mark> GetByMessageIdAsync(string messageId)
         {
-            var sql = "SELECT * FROM Marks WHERE MessageId = @messageId";
+            string sql = "SELECT * FROM Marks WHERE MessageId = @messageId";
 
-            using (var connection = new SqlConnection(_configuration.GetConnectionString("DbConnection")))
+            using (SqlConnection connection = new SqlConnection(_configuration.GetConnectionString("DbConnection")))
             {
                 connection.Open();
-                var result = await connection.QuerySingleOrDefaultAsync<Mark>(sql);
+                Mark result = await connection.QuerySingleOrDefaultAsync<Mark>(sql);
 
                 return result;
             }
         }
 
-        public async Task<int> UpdateAsync(Mark entity)
-        {
-            throw new Exception();
-        }
+        public async Task<int> UpdateAsync(Mark entity) => throw new Exception();
     }
 }
