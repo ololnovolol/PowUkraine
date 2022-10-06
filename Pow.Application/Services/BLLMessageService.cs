@@ -5,6 +5,7 @@ using AutoMapper;
 using Pow.Application.Models;
 using Pow.Application.Services.Interfaces;
 using Pow.Domain;
+using Pow.Infrastructure.Repositories;
 using Pow.Infrastructure.Repositories.Interfaces;
 
 namespace Pow.Application.Services
@@ -13,16 +14,16 @@ namespace Pow.Application.Services
     {
         private readonly IMapper _mapper;
 
-        private IUnitOfWork _unitOfWork { get; }
+        private IUnitOfWork UnitOfWork { get; }
 
         private bool disposed = false;
 
         public BLLMessageService(IUnitOfWork unitOfWork, IMapper mapper)
         {
-            _unitOfWork = unitOfWork;
+            UnitOfWork = unitOfWork;
             _mapper = mapper;
         }
-             
+
         public void Dispose()
         {
             Dispose(true);
@@ -34,15 +35,15 @@ namespace Pow.Application.Services
             if (disposed) return;
             if (disposing)
             {
-            
             }
+
             disposed = true;
         }
+
         ~BLLMessageService()
         {
             Dispose(false);
         }
-
 
         public async Task<int> AddAsync(MessageBL messageBl)
         {
@@ -60,7 +61,7 @@ namespace Pow.Application.Services
 
         public async Task<int> DeleteAsync(Guid id)
         {
-            return await _unitOfWork.Messages.DeleteAsync(id.ToString());
+            return await UnitOfWork.Messages.DeleteAsync(id.ToString());
         }
 
         public IEnumerable<MessageBL> GetAll()
@@ -77,7 +78,7 @@ namespace Pow.Application.Services
 
         public MessageBL GetById(Guid id)
         {
-            Message message = UnitOfWork.Messages.GetByIdAsync(id).Result;
+            Message message = UnitOfWork.Messages.GetByIdAsync(id.ToString()).Result;
 
             return _mapper.Map<MessageBL>(message);
         }
@@ -86,13 +87,12 @@ namespace Pow.Application.Services
         {
             List<MessageBL> list = new();
 
-            foreach (Message item in UnitOfWork.Messages.GetByUserIdAsync(userId).Result)
+            foreach (Message item in UnitOfWork.Messages.GetByUserIdAsync(userId.ToString()).Result)
             {
                 list.Add(_mapper.Map<MessageBL>(item));
             }
 
             return list;
         }
-                
     }
 }

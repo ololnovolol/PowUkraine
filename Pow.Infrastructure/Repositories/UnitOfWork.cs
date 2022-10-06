@@ -1,4 +1,5 @@
-﻿using Microsoft.Extensions.Logging;
+﻿using System;
+using Microsoft.Extensions.Logging;
 using Pow.Infrastructure.Repositories.Interfaces;
 
 namespace Pow.Infrastructure.Repositories

@@ -55,19 +55,7 @@ namespace Pow.WebApi.Controllers
         [HttpPost]
         public async Task<IActionResult> Message(IFormCollection data/* , IFormFile imagefile*/)
         {
-            Message mg = new Message()
-            {
-                Id = Guid.NewGuid(),
-                Phone = data["PhoneNumber"],
-                EventDate = DateTime.Parse(data["Data"]),
-                Description = data["Description"],
-                Title = data["Title"],
-                CreatedDate = DateTime.Now
-            };
-
-            await _unitOfWork.Messages.AddAsync(mg);
-            
-            /*MessageModel msg = new MessageModel();
+            MessageModel msg = new MessageModel();
             MarkModel mark = null;
             AttachmentModel attachment = null;
 
@@ -75,7 +63,7 @@ namespace Pow.WebApi.Controllers
             msg.EventDate = DateTime.Parse(data["Data"]);
             msg.Description = data["Description"];
             msg.Title = data["Title"];
-            *//*UserManager<> manager = new UserManager();*//*
+            
             if (data.Files.Count > 0)
             {
                 attachment = new AttachmentModel();
@@ -92,7 +80,7 @@ namespace Pow.WebApi.Controllers
                 mark.MapUrl = data["MapUrl"];
             }
 
-            await _service.AddAsync(_mapper.Map<MessageBL>(msg), _mapper.Map<AttachmentBL>(attachment), _mapper.Map<MarkBL>(mark));*/
+            await _service.AddAsync(_mapper.Map<MessageBL>(msg), _mapper.Map<AttachmentBL>(attachment), _mapper.Map<MarkBL>(mark));
 
             return Ok();
         }

@@ -39,14 +39,14 @@ namespace Pow.Application.Services
 
         public async Task<int> DeleteAsync(Guid id)
         {
-            return await _unitOfWork.Marks.DeleteAsync(id.ToString());
+            return await UnitOfWork.Marks.DeleteAsync(id.ToString());
         }
 
         public IEnumerable<MarkBL> GetAll()
         {
             var list = new List<MarkBL>();
 
-            foreach (var item in _unitOfWork.Marks.GetAllAsync().Result)
+            foreach (var item in UnitOfWork.Marks.GetAllAsync().Result)
             {
                 list.Add(_mapper.Map<MarkBL>(item));
             }
@@ -56,32 +56,31 @@ namespace Pow.Application.Services
 
         public MarkBL GetByMessage(Guid messageId)
         {
-            Task<Mark> mark = UnitOfWork.Marks.GetByMessageIdAsync(messageId);
+            Task<Mark> mark = UnitOfWork.Marks.GetByMessageIdAsync(messageId.ToString());
 
             return _mapper.Map<MarkBL>(mark);
         }
 
-        public MarkBL GetById(string id)
+        public MarkBL GetById(Guid id)
         {
-            Mark mark = UnitOfWork.Marks.GetByIdAsync(id).Result;
+            Mark mark = UnitOfWork.Marks.GetByIdAsync(id.ToString()).Result;
 
             return _mapper.Map<MarkBL>(mark);
         }
 
         public MarkBL GetByMessageId(Guid messageId)
         {
-            return _mapper.Map<MarkBL>(_unitOfWork.Marks.GetByMessageIdAsync(messageId.ToString()).Result);
+            return _mapper.Map<MarkBL>(UnitOfWork.Marks.GetByMessageIdAsync(messageId.ToString()).Result);
         }
 
         public IEnumerable<MarkBL> GetByUser(Guid userId)
         {
-            var messages = _unitOfWork.Messages.GetByUserIdAsync(userId.ToString()).Result;
+            var messages = UnitOfWork.Messages.GetByUserIdAsync(userId.ToString()).Result;
             var list = new List<MarkBL>();
             foreach (var item in messages)
             {
-                list.Add(_mapper.Map<MarkBL>(_unitOfWork.Marks.GetByMessageIdAsync(_mapper.Map<MessageBL>(item).Id.ToString())));
+                list.Add(_mapper.Map<MarkBL>(UnitOfWork.Marks.GetByMessageIdAsync(_mapper.Map<MessageBL>(item).Id.ToString())));
             }
-            
             return list;
         }
     }
