@@ -21,8 +21,8 @@ namespace Pow.Infrastructure.Repositories
             entity.CreatedDate = DateTime.Now;
 
             const string sql = "Insert into Messages " +
-                               "(Description,CreatedDate,EventDate,Phone,Email,UserId)" +
-                               " VALUES (@Description,@CreatedDate,@EventDate,@Phone,@Email,@UserId)";
+                               "(Id,Title,Description,CreatedDate,EventDate,Phone,UserId)" +
+                               " VALUES (@Id,@Title,@Description,@CreatedDate,@EventDate,@Phone,@UserId)";
 
             await using (SqlConnection connection =
                 new SqlConnection(_configuration.GetConnectionString("DbConnection")))

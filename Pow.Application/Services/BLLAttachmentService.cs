@@ -3,46 +3,53 @@ using System.Collections.Generic;
 using System.Threading.Tasks;
 using AutoMapper;
 using Pow.Application.Models;
+using Pow.Application.Services.Interfaces;
 using Pow.Domain;
 using Pow.Infrastructure.Repositories.Interfaces;
 
 namespace Pow.Application.Services
 {
-    public class BLLAttachmentService : IDisposable
+    public class BLLAttachmentService : IBLLAttachmentService
     {
         private readonly IMapper _mapper;
 
         public BLLAttachmentService(IUnitOfWork unitOfWork, IMapper mapper)
         {
-            UnitOfWork = unitOfWork;
+            _unitOfWork = unitOfWork;
             _mapper = mapper;
         }
 
-        private IUnitOfWork UnitOfWork { get; }
+        private IUnitOfWork _unitOfWork { get; }
 
-        public void Dispose() => UnitOfWork.Dispose();
-
-        public async Task<int> Add(AttachmentBL attachmentBl)
+        public void Dispose()
         {
-            Attachment attachment = _mapper.Map<Attachment>(attachmentBl);
-
-            return await UnitOfWork.Attachments.AddAsync(attachment);
+            _unitOfWork.Dispose();
         }
 
-        public async Task<int> Update(AttachmentBL attachmentBl)
+        public async Task<int> AddAsync(AttachmentBL attachmentBl)
         {
-            Attachment attachment = _mapper.Map<Attachment>(attachmentBl);
+            var attachment = _mapper.Map<Attachment>(attachmentBl);
+
+            return await _unitOfWork.Attachments.AddAsync(attachment);
+        }
+
+        public async Task<int> UpdateAsync(AttachmentBL attachmentBl)
+        {
+            var attachment = _mapper.Map<Attachment>(attachmentBl);
 
             return await UnitOfWork.Attachments.UpdateAsync(attachment);
         }
 
-        public async Task<int> Delete(string id) => await UnitOfWork.Attachments.DeleteAsync(id);
+        public async Task<int> DeleteAsync(Guid id)
+        {
+            return await _unitOfWork.Attachments.DeleteAsync(id.ToString());
+        }
 
         public IEnumerable<AttachmentBL> GetAll()
         {
-            List<AttachmentBL> list = new();
+            var list = new List<AttachmentBL>();
 
-            foreach (Attachment item in UnitOfWork.Attachments.GetAllAsync().Result)
+            foreach (var item in _unitOfWork.Attachments.GetAllAsync().Result)
             {
                 list.Add(_mapper.Map<AttachmentBL>(item));
             }
@@ -52,9 +59,9 @@ namespace Pow.Application.Services
 
         public IEnumerable<AttachmentBL> GetByMessageId(string messageId)
         {
-            List<AttachmentBL> list = new();
+            var list = new List<AttachmentBL>();
 
-            foreach (Attachment mark in UnitOfWork.Attachments.GetByMessageIdAsync(messageId).Result)
+            foreach (var mark in _unitOfWork.Attachments.GetByMessageIdAsync(messageId).Result)
             {
                 list.Add(_mapper.Map<AttachmentBL>(mark));
             }
@@ -62,11 +69,23 @@ namespace Pow.Application.Services
             return list;
         }
 
-        public AttachmentBL GetById(string id)
+        public AttachmentBL GetById(Guid id)
         {
-            Task<Attachment> attachment = UnitOfWork.Attachments.GetByIdAsync(id);
+            var attachment = _unitOfWork.Attachments.GetByIdAsync(id.ToString());
 
             return _mapper.Map<AttachmentBL>(attachment);
+        }                     
+
+        public IEnumerable<AttachmentBL> GetByUser(Guid userId)
+        {
+            var messages = _unitOfWork.Messages.GetByUserIdAsync(userId.ToString()).Result;
+            var list = new List<AttachmentBL>();
+            foreach (var item in messages)
+            {
+                list.Add(_mapper.Map<AttachmentBL>(_unitOfWork.Attachments.GetByMessageIdAsync(_mapper.Map<MessageBL>(item).Id.ToString())));
+            }
+
+            return list;
         }
     }
 }
