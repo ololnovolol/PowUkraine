@@ -34,9 +34,7 @@ namespace Pow.WebApi
 
             services.AddValidators();
 
-            SqlMapper.AddTypeHandler(new SqlGuidTypeHandler());
-            SqlMapper.RemoveTypeMap(typeof(Guid));
-            SqlMapper.RemoveTypeMap(typeof(Guid?));
+            DapperExtensions.AddSqlGuidHandler();
         }
 
         public void Configure(IApplicationBuilder app, IWebHostEnvironment env)
