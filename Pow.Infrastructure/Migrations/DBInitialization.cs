@@ -36,7 +36,7 @@ namespace Pow.Infrastructure.Migrations
                 .WithColumn("Disabled")
                 .AsBoolean()
                 .WithColumn("MessageId")
-                .AsString(450)                
+                .AsString(450)
                 .WithColumn("MapUrl")
                 .AsString(100)
                 .WithColumn("GpsLongitude")

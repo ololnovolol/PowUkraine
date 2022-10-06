@@ -1,4 +1,4 @@
-using AutoMapper;
+using System;
 using Dapper;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
@@ -9,12 +9,9 @@ using Pow.Application.AutoMapperProfiles;
 using Pow.Application.Services;
 using Pow.Application.Services.Interfaces;
 using Pow.Infrastructure;
-using Pow.Infrastructure.Repositories;
-using Pow.Infrastructure.Repositories.Interfaces;
 using Pow.WebApi.AutoMapperProfiles;
 using Pow.WebApi.Extensions;
 using Pow.WebApi.Middleware;
-using System;
 
 namespace Pow.WebApi
 {
@@ -42,7 +39,8 @@ namespace Pow.WebApi
             SqlMapper.RemoveTypeMap(typeof(Guid));
             SqlMapper.RemoveTypeMap(typeof(Guid?));
 
-            services.AddAutoMapper(typeof(WebAttachmentProfile),
+            services.AddAutoMapper(
+                typeof(WebAttachmentProfile),
                 typeof(WebMarkProfile),
                 typeof(WebMessageProfile),
                 typeof(MarkProfile),
@@ -75,8 +73,6 @@ namespace Pow.WebApi
             app.UseAuthorization();
 
             app.UseEndpoints(endpoints => { endpoints.MapControllers(); });
-
-            
         }
     }
 }

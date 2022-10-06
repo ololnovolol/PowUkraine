@@ -8,30 +8,7 @@ namespace Pow.Infrastructure.Repositories
     {
         private readonly ILogger _logger;
 
-        private bool disposed = false;
-
-        
-        public void Dispose()
-        {
-            Dispose(true);
-            GC.SuppressFinalize(this);
-        }
-
-        protected virtual void Dispose(bool disposing)
-        {
-            if (disposed) return;
-            if (disposing)
-            {
-               
-            }
-            
-            disposed = true;
-        }
-                
-        ~UnitOfWork()
-        {
-            Dispose(false);
-        }
+        private bool _disposed = false;
 
         public UnitOfWork(
             IMarkRepository markRepository,
@@ -43,11 +20,31 @@ namespace Pow.Infrastructure.Repositories
             Attachments = attachmentRepository;
         }
 
+        ~UnitOfWork()
+        {
+            Dispose(false);
+        }
+
         public IMessageRepository Messages { get; }
 
         public IMarkRepository Marks { get; }
 
+        public void Dispose()
+        {
+            Dispose(true);
+            GC.SuppressFinalize(this);
+        }
+
+        protected virtual void Dispose(bool disposing)
+        {
+            if (_disposed) return;
+            if (disposing)
+            {
+            }
+
+            _disposed = true;
+        }
+
         public IAttachmentRepository Attachments { get; }
-                
     }
 }

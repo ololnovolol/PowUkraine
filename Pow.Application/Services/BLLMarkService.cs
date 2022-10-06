@@ -81,6 +81,7 @@ namespace Pow.Application.Services
             {
                 list.Add(_mapper.Map<MarkBL>(UnitOfWork.Marks.GetByMessageIdAsync(_mapper.Map<MessageBL>(item).Id.ToString())));
             }
+
             return list;
         }
     }

@@ -1,8 +1,5 @@
-﻿using System;
-using System.Threading.Tasks;
-using Microsoft.AspNetCore.Http;
+﻿using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
-using Pow.Domain;
 using Pow.Infrastructure.Repositories.Interfaces;
 
 namespace Pow.WebApi.Controllers

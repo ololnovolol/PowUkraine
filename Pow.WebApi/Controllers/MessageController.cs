@@ -5,9 +5,7 @@ using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Pow.Application.Models;
-using Pow.Application.Services;
 using Pow.Application.Services.Interfaces;
-using Pow.Domain;
 using Pow.Infrastructure.Repositories.Interfaces;
 using Pow.WebApi.Controllers.Base;
 using Pow.WebApi.Extensions;
@@ -17,7 +15,6 @@ namespace Pow.WebApi.Controllers
 {
     public class MessageController : BaseController
     {
-
         private readonly IMapper _mapper;
 
         private readonly IBLLAttachmentService _attachmentService;

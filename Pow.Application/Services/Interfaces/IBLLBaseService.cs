@@ -1,15 +1,12 @@
-﻿using FluentMigrator.Builders.Update;
-using Pow.Application.Models;
-using System;
+﻿using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
 using System.Threading.Tasks;
-using static Dapper.SqlMapper;
+using Pow.Application.Models;
 
 namespace Pow.Application.Services.Interfaces
 {
-    public interface IBLLBaseService<T> : IDisposable where T : BaseModelBL
+    public interface IBLLBaseService<T> : IDisposable
+        where T : BaseModelBL
     {
         public Task<int> AddAsync(T entity);
 

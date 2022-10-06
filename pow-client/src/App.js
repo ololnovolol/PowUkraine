@@ -11,7 +11,7 @@ import Mark from './pages/marks/mark';
 import Login from './pages/auth/login';
 import Logout from './pages/logout/logout';
 import About from './pages/about/about';
-import allMarks from './pages/allMarks/AllMarks';
+import allMarks from './pages/allMarks/allMarks';
 import ManageAccount from './pages/manageAccount/manageMyAccount';
 import Message from './pages/message/messages';
 import manageAccounts from './pages/manageAllAccounts/manageAccounts';

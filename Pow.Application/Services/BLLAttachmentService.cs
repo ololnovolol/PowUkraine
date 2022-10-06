@@ -74,7 +74,7 @@ namespace Pow.Application.Services
             var attachment = UnitOfWork.Attachments.GetByIdAsync(id.ToString());
 
             return _mapper.Map<AttachmentBL>(attachment);
-        }                     
+        }
 
         public IEnumerable<AttachmentBL> GetByUser(Guid userId)
         {
