@@ -40,7 +40,7 @@ namespace Pow.Application.Services
 
         public IEnumerable<AttachmentBL> GetAll()
         {
-            List<AttachmentBL> list = new ();
+            List<AttachmentBL> list = new();
 
             foreach (Attachment item in UnitOfWork.Attachments.GetAllAsync().Result)
             {
@@ -52,7 +52,7 @@ namespace Pow.Application.Services
 
         public IEnumerable<AttachmentBL> GetByMessageId(string messageId)
         {
-            List<AttachmentBL> list = new ();
+            List<AttachmentBL> list = new();
 
             foreach (Attachment mark in UnitOfWork.Attachments.GetByMessageIdAsync(messageId).Result)
             {

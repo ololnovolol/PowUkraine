@@ -255,4 +255,7 @@ dotnet_diagnostic.SA0001.severity = none
 # SA1124: Do not use regions
 dotnet_diagnostic.SA1124.severity = none
 
+# SA1000: Keywords Must Be Spaced Correctly
+dotnet_diagnostic.SA1000.severity = none
+
 csharp_style_implicit_object_creation_when_type_is_apparent = false

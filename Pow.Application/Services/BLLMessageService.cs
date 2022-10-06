@@ -40,7 +40,7 @@ namespace Pow.Application.Services
 
         public IEnumerable<MessageBL> GetAll()
         {
-            List<MessageBL> list = new ();
+            List<MessageBL> list = new();
 
             foreach (Message item in UnitOfWork.Messages.GetAllAsync().Result)
             {
@@ -59,7 +59,7 @@ namespace Pow.Application.Services
 
         public IEnumerable<MessageBL> GetByUser(string userId)
         {
-            List<MessageBL> list = new ();
+            List<MessageBL> list = new();
 
             foreach (Message item in UnitOfWork.Messages.GetByUserIdAsync(userId).Result)
             {

@@ -40,7 +40,7 @@ namespace Pow.Application.Services
 
         public IEnumerable<MarkBL> GetAll()
         {
-            List<MarkBL> list = new ();
+            List<MarkBL> list = new();
 
             foreach (Mark item in UnitOfWork.Marks.GetAllAsync().Result)
             {

@@ -15,7 +15,7 @@ namespace Pow.Infrastructure
         public void CreateDatabase(string dbName)
         {
             string query = "SELECT * FROM sys.databases WHERE name = @name";
-            DynamicParameters parameters = new ();
+            DynamicParameters parameters = new();
             parameters.Add("name", dbName);
 
             using (IDbConnection connection = _context.CreateConnection())

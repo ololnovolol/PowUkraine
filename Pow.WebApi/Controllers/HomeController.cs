@@ -22,7 +22,7 @@ namespace Pow.WebApi.Controllers
         [HttpPost]
         public IActionResult Message(IFormCollection data, IFormFile imageFile)
         {
-            MessageVm msg = new ()
+            MessageVm msg = new()
             {
                 Title = data["PhoneNumber"],
                 PhoneNumber = data["PhoneNumber"],
