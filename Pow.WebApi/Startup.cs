@@ -52,15 +52,6 @@ namespace Pow.WebApi
                 typeof(MessageProfile),
                 typeof(AttachmentProfile));
 
-
-            services.AddSingleton<IMessageRepository, MessageRepository>();
-
-            services.AddSingleton<IMarkRepository, MarkRepository>();
-
-            services.AddSingleton<IAttachmentRepository, AttachmentRepository>();
-
-            services.AddSingleton<IUnitOfWork, UnitOfWork>();
-
             services.AddSingleton<IBLLMessageService, BLLMessageService>();
 
             services.AddSingleton<IBLLMarkService, BLLMarkService>();
