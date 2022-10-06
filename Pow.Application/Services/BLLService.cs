@@ -1,12 +1,9 @@
-﻿using Microsoft.AspNetCore.Authentication;
+﻿using System;
+using System.Collections.Generic;
+using System.Threading.Tasks;
+using Microsoft.AspNetCore.Authentication;
 using Pow.Application.Models;
 using Pow.Application.Services.Interfaces;
-using System;
-using System.Collections.Generic;
-using System.Data.Common;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace Pow.Application.Services
 {
@@ -74,5 +71,11 @@ namespace Pow.Application.Services
         {
             throw new NotImplementedException();
         }
+
+        public void Get(out Task<MessageBL> message, out Task<AttachmentBL> attachment, out Task<MarkBL> mark) => throw new NotImplementedException();
+
+        public void GetAll(out Task<IEnumerable<MessageBL>> messages, out Task<IEnumerable<AttachmentBL>> attachments, out Task<IEnumerable<MarkBL>> marks) => throw new NotImplementedException();
+
+        public void GetByUserId(out Task<IEnumerable<MessageBL>> messages, out Task<IEnumerable<AttachmentBL>> attachments, out Task<IEnumerable<MarkBL>> marks) => throw new NotImplementedException();
     }
 }
