@@ -44,7 +44,10 @@ function App() {
                         <Route path="/" exact component={Mark} />
                         <Route path="/message" component={Message} />
                         <Route path="/login" component={Login} />
-                        <Route path="/signout-oidc" component={SignoutOidc} />
+                        <Route
+                            path="/signout-callback-oidc"
+                            component={SignoutOidc}
+                        />
                         <Route path="/signin-oidc" component={SigninOidc} />
                         <Route path="/about" component={About} />
 

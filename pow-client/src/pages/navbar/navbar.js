@@ -101,6 +101,10 @@ const Sidebar = () => {
                             if (userRole === 'Admin' && item.role === 'User') {
                                 return <SubMenu item={item} key={index} />;
                             }
+
+                            if (userRole === 'All' && item.role === 'Unlogin') {
+                                return <SubMenu item={item} key={index} />;
+                            }
                         })}
                         ;
                     </SidebarWrap>

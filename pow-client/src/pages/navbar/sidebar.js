@@ -74,7 +74,7 @@ export const SidebarData = [
     },
     {
         title: 'Authorization',
-        role: 'All',
+        role: 'Unlogin',
         path: '/login',
         icon: <RiIcons.RiOpenArmLine />,
         cName: 'nav-text',
