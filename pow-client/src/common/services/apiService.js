@@ -14,6 +14,7 @@ export async function getUsers() {
     const response = await axios.get(
         'https://localhost:44316/api/roles/getUsers',
     );
+    console.log(response.data);
     return response.data;
 }
 
@@ -42,7 +43,7 @@ export async function getUser(id) {
                 BirthDay: response.data.birthDay,
                 UserId: id,
             };
-
+            console.log(user);
             return user;
         })
         .catch(function (error) {
@@ -67,7 +68,8 @@ export async function changeUserRole(userEmail) {
         .catch(function (error) {
             console.log(error);
         });
-    return response.data;
+
+    return response;
 }
 
 export async function updateUser(doughnutData) {
@@ -113,6 +115,7 @@ export async function deleteUser(userEmail) {
         .catch(function (error) {
             console.log(error);
         });
+    return response;
 }
 
 export async function sentMessage(values) {

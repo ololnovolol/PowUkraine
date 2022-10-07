@@ -5,7 +5,6 @@ using System.Threading.Tasks;
 using IdentityServer.Models;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
-using Microsoft.Extensions.Configuration;
 
 namespace IdentityServer.Controllers
 {
@@ -36,6 +35,7 @@ namespace IdentityServer.Controllers
                 result.Add(
                     new UserVm
                     {
+                        UserId = user.FirstName,
                         FirstName = user.FirstName,
                         LastName = user.LastName,
                         Email = user.Email,
@@ -65,6 +65,7 @@ namespace IdentityServer.Controllers
 
             UserVm result = new UserVm
             {
+                UserId = user.FirstName,
                 FirstName = user.FirstName ?? string.Empty,
                 LastName = user.LastName ?? string.Empty,
                 Email = user.Email ?? string.Empty,
@@ -114,13 +115,19 @@ namespace IdentityServer.Controllers
         [HttpPost]
         public async Task<IActionResult> DeleteUser([FromBody] StringParameter email)
         {
-            if (email.Data is null) return BadRequest();
+            if (email.Data is null)
+            {
+                return BadRequest();
+            }
 
-            var user = await _userManager.FindByEmailAsync(email.Data);
+            AppUser user = await _userManager.FindByEmailAsync(email.Data);
 
-            if (user is null) return BadRequest();
+            if (user is null)
+            {
+                return BadRequest();
+            }
 
-            var result = await _userManager.DeleteAsync(user);
+            IdentityResult result = await _userManager.DeleteAsync(user);
 
             if (!result.Succeeded)
             {
@@ -144,23 +151,29 @@ namespace IdentityServer.Controllers
         [HttpPost]
         public async Task<IActionResult> ChangeRole([FromBody] StringParameter email)
         {
-            if (email.Data is null) return BadRequest();
+            if (email.Data is null)
+            {
+                return BadRequest();
+            }
 
-            var user = await _userManager.FindByEmailAsync(email.Data);
+            AppUser user = await _userManager.FindByEmailAsync(email.Data);
 
-            if (user is null) return BadRequest();
+            if (user is null)
+            {
+                return BadRequest();
+            }
 
             bool isRole = await _userManager.IsInRoleAsync(user, "Admin");
 
             if (isRole)
             {
-                var resultRemove = await _userManager.RemoveFromRoleAsync(user, "Admin");
-                var resultUpdate = await _userManager.AddToRoleAsync(user, "User");
+                await _userManager.RemoveFromRoleAsync(user, "Admin");
+                await _userManager.AddToRoleAsync(user, "User");
             }
             else
             {
-                // var resultRemove = await _userManager.RemoveFromRoleAsync(user, "User");
-                var resultUpdate = await _userManager.AddToRoleAsync(user, "Admin");
+                await _userManager.RemoveFromRoleAsync(user, "User");
+                await _userManager.AddToRoleAsync(user, "Admin");
             }
 
             return Ok();
