@@ -25,7 +25,7 @@ export async function getUser(id) {
         LastName: '',
         Email: '',
         PhoneNumber: '',
-        BirthDay: '',
+        BirthDay: DataTransfer.Data,
         UserId: '',
     };
     const response = axios

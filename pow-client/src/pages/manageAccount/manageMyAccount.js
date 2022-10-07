@@ -137,8 +137,11 @@ function ManageAccount() {
                             <input
                                 id="PhoneNumber"
                                 name="PhoneNumber"
+                                maxLength={14}
                                 onChange={e => handle(e)}
                                 value={doughnutData.PhoneNumber}
+                                type="tel"
+                                placeholder="+380-99-77-77-777"
                                 required
                             />
                         </label>
@@ -149,6 +152,7 @@ function ManageAccount() {
                                 name="BirthDay"
                                 onChange={e => handle(e)}
                                 value={doughnutData.BirthDay}
+                                type={'datetime-local'}
                                 required
                             />
                         </label>

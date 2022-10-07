@@ -1,4 +1,6 @@
-﻿namespace IdentityServer.Models
+﻿using System;
+
+namespace IdentityServer.Models
 {
     public class UserVm
     {
@@ -12,7 +14,7 @@
 
         public string PhoneNumber { get; set; }
 
-        public string BirthDay { get; set; }
+        public DateTime BirthDay { get; set; }
 
         public string Role { get; set; }
     }

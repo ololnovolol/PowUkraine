@@ -1,7 +1,8 @@
-import React from 'react';
+import React, { useState } from 'react';
 import Table from 'react-bootstrap/Table';
 import styled from 'styled-components';
 import * as apiService from '../../common/services/apiService';
+import * as userManager from '../../common/services/userService';
 
 const Btn = styled.button`
     background: #88a87d none repeat scroll 0% 0%;
@@ -29,17 +30,35 @@ const Btn = styled.button`
     }
 `;
 
-export default function UsersTable({ theadData, tbodyData, state }) {
+export default function UsersTable({ theadData, tbodyData, setAllUsers }) {
     async function changeRole(value) {
-        await apiService.changeUserRole(value.email);
+        if ((await getCurrentUser()) !== value.userId) {
+            await apiService.changeUserRole(value.email);
+            updateData();
+        }
+    }
+
+    async function getCurrentUser() {
+        return await userManager.GetUserId();
     }
 
     async function updateUser(value) {
-        await apiService.updateUser(value);
+        if ((await getCurrentUser()) !== value.userId) {
+            await apiService.updateUser(value);
+            updateData();
+        }
     }
 
     async function deleteUser(value) {
-        await apiService.deleteUser(value.email);
+        if ((await getCurrentUser()) !== value.userId) {
+            await apiService.deleteUser(value.email);
+            updateData();
+        }
+    }
+
+    async function updateData() {
+        const users = await apiService.getUsers();
+        setAllUsers(users);
     }
 
     return (

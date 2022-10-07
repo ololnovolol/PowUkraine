@@ -175,6 +175,8 @@ export const MessageForm = props => {
                         <input
                             id="PhoneNumber"
                             name="PhoneNumber"
+                            pattern="-?[0-9]*(\.[0-9]{6,32})?"
+                            maxLength={14}
                             onChange={e => handle(e)}
                             value={data.PhoneNumber}
                             type="tel"

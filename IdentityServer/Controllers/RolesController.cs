@@ -35,12 +35,12 @@ namespace IdentityServer.Controllers
                 result.Add(
                     new UserVm
                     {
-                        UserId = user.FirstName,
+                        UserId = user.Id,
                         FirstName = user.FirstName,
                         LastName = user.LastName,
                         Email = user.Email,
                         PhoneNumber = user.PhoneNumber,
-                        BirthDay = user.BirthDay.ToShortDateString(),
+                        BirthDay = user.BirthDay,
                         Role = roles.Contains(user) ? "Admin" : "User",
                     });
             }
@@ -65,12 +65,12 @@ namespace IdentityServer.Controllers
 
             UserVm result = new UserVm
             {
-                UserId = user.FirstName,
+                UserId = user.Id,
                 FirstName = user.FirstName ?? string.Empty,
                 LastName = user.LastName ?? string.Empty,
                 Email = user.Email ?? string.Empty,
                 PhoneNumber = user.PhoneNumber ?? string.Empty,
-                BirthDay = user.BirthDay.ToShortDateString(),
+                BirthDay = user.BirthDay,
             };
 
             return Json(result);
