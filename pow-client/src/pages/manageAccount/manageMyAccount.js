@@ -79,7 +79,7 @@ function ManageAccount() {
     async function postMsg(e) {
         let user = {
             FirstName: doughnutData.FirstName,
-            LastName: doughnutData.FirstName,
+            LastName: doughnutData.LastName,
             Email: doughnutData.Email,
             PhoneNumber: doughnutData.PhoneNumber,
             BirthDay: doughnutData.BirthDay,

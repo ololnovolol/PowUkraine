@@ -75,7 +75,7 @@ export async function changeUserRole(userEmail) {
 export async function updateUser(doughnutData) {
     let user = {
         FirstName: doughnutData.FirstName,
-        LastName: doughnutData.FirstName,
+        LastName: doughnutData.LastName,
         Email: doughnutData.Email,
         PhoneNumber: doughnutData.PhoneNumber,
         BirthDay: doughnutData.BirthDay,

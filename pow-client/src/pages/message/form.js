@@ -87,7 +87,7 @@ export const MessageForm = props => {
         const result = handleData(e);
 
         axios
-            .post('https://localhost:44312/api/home/message', result, {
+            .post('https://localhost:44312/api/Message/message', result, {
                 headers: {
                     'Content-Type': 'multipart/form-data',
                 },
