@@ -48,7 +48,13 @@ namespace Pow.WebApi.Controllers
         // [Authorize(Policy = "AdminAccess")]
         [Authorize(Roles = "Admin")]
         [HttpGet]
-        public IActionResult GetAll() => Ok("Admin Access_only___Admin___getAll");
+        public IActionResult GetAll(){
+            MessageModel msg = new MessageModel();
+            MarkModel mark = null;
+            AttachmentModel attachment = null;
+            /*_service.GetAll(out );*/
+            return Ok();
+        }
 
         [HttpPost]
         public async Task<IActionResult> Message(IFormCollection data/* , IFormFile imagefile*/)
@@ -82,6 +88,8 @@ namespace Pow.WebApi.Controllers
 
             return Ok();
         }
+
+
 
         [Authorize(Policy = "UserAccess")]
         [HttpDelete("{id}")]

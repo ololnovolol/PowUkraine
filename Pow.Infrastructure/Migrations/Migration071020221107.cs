@@ -3,7 +3,7 @@
 namespace Pow.Infrastructure.Migrations
 {
     [Migration(20220911200000)]
-    public class DbInitialization : Migration
+    public class Migration071020221107 : Migration
     {
         public override void Up()
         {
@@ -20,9 +20,9 @@ namespace Pow.Infrastructure.Migrations
                 .WithColumn("EventDate")
                 .AsDate()
                 .WithColumn("Phone")
-                .AsString(13)
-                .WithColumn("Title")
                 .AsString(100)
+                .WithColumn("Title")
+                .AsString(200)
                 .WithColumn("UserId")
                 .AsString(450)
                 .Nullable();
