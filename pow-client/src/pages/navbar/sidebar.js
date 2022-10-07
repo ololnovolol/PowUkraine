@@ -8,58 +8,21 @@ import * as TiIcons from 'react-icons/ti';
 export const SidebarData = [
     {
         title: 'Mark the enemy',
-        role: 'undefined',
+        role: 'All',
         path: '/',
         icon: <FaIcons.FaMapMarkerAlt />,
         cName: 'nav-text',
     },
     {
         title: 'Important message',
-        role: 'undefined',
+        role: 'All',
         path: '/message',
         icon: <RiIcons.RiMessage3Line />,
     },
 
     {
-        title: '',
-        path: '',
-        icon: '',
-        cName: 'nav-text',
-    },
-    {
-        title: '',
-        path: '',
-        icon: '',
-        cName: 'nav-text',
-    },
-    {
-        title: '',
-        path: '',
-        icon: '',
-        cName: 'nav-text',
-    },
-    {
-        title: '',
-        path: '',
-        icon: '',
-        cName: 'nav-text',
-    },
-    {
-        title: '',
-        path: '',
-        icon: '',
-        cName: 'nav-text',
-    },
-    {
-        title: '',
-        path: '',
-        icon: '',
-        cName: 'nav-text',
-    },
-
-    {
         title: 'Admin panel',
-        role: 'admin',
+        role: 'Admin',
         path: '#',
         icon: <RiIcons.RiAdminLine />,
         iconClosed: <MdIcons.MdOutlineKeyboardArrowDown />,
@@ -85,7 +48,7 @@ export const SidebarData = [
     },
     {
         title: 'Lobby',
-        role: 'user',
+        role: 'User',
         path: '#',
         icon: <RiIcons.RiUserSettingsLine />,
         iconClosed: <MdIcons.MdOutlineKeyboardArrowDown />,
@@ -111,14 +74,14 @@ export const SidebarData = [
     },
     {
         title: 'Authorization',
-        role: 'undefined',
+        role: 'All',
         path: '/login',
         icon: <RiIcons.RiOpenArmLine />,
         cName: 'nav-text',
     },
     {
         title: 'About',
-        role: 'undefined',
+        role: 'All',
         path: '/about',
         icon: <IoIcons.IoMdHelpCircle />,
         cName: 'nav-text',

@@ -5,6 +5,7 @@ import * as FiIcons from 'react-icons/cg';
 import { SidebarData } from './sidebar';
 import SubMenu from './subMenu';
 import { IconContext } from 'react-icons/lib';
+import * as userService from '../../common/services/userService';
 
 const Nav = styled.div`
   background: #3A5431;
@@ -71,8 +72,13 @@ const SidebarWrap = styled.div`
 
 const Sidebar = () => {
     const [sidebar, setSidebar] = useState(false);
+    const [userRole, setUserRole] = useState('All');
 
-    const showSidebar = () => setSidebar(!sidebar);
+    const showSidebar = async () => {
+        setSidebar(!sidebar);
+        let role = await userService.GetUserRole();
+        setUserRole(role);
+    };
 
     return (
         <>
@@ -87,10 +93,16 @@ const Sidebar = () => {
                         <NavIcon to="#">
                             <FiIcons.CgMenuMotion onClick={showSidebar} />
                         </NavIcon>
-
                         {SidebarData.map((item, index) => {
-                            return <SubMenu item={item} key={index} />;
+                            if (item.role === userRole || item.role === 'All') {
+                                return <SubMenu item={item} key={index} />;
+                            }
+
+                            if (userRole === 'Admin' && item.role === 'User') {
+                                return <SubMenu item={item} key={index} />;
+                            }
                         })}
+                        ;
                     </SidebarWrap>
                 </SidebarNav>
             </IconContext.Provider>

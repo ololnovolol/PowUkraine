@@ -35,7 +35,7 @@ export async function GetUserId() {
 
 export async function GetUserRole() {
     let user = await userManager.getUser();
-    let access_token = user.access_token;
+    let access_token = user?.access_token;
     let decode = '';
     let userRole = '';
 
@@ -44,14 +44,20 @@ export async function GetUserRole() {
             decode = jwtDecode(access_token);
         } catch (error) {
             console.log('👾 invalid token format', error);
+            userRole = 'All';
+            return userRole;
         }
-
         userRole = '' + decode.role;
+        if (userRole === null && userRole === undefined) {
+            userRole = 'All';
+        }
         console.log(userRole);
 
         return userRole;
+    } else {
+        userRole = 'All';
+        return userRole;
     }
-    return userRole;
 }
 
 export async function loadUserFromStorage(store) {
