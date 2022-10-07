@@ -3,14 +3,17 @@ using System.Collections.Generic;
 using System.Threading.Tasks;
 using AutoMapper;
 using Pow.Application.Models;
+using Pow.Application.Services.Interfaces;
 using Pow.Domain;
 using Pow.Infrastructure.Repositories.Interfaces;
 
 namespace Pow.Application.Services
 {
-    public class BLLMessageService : IDisposable
+    public class BLLMessageService : IBLLMessageService
     {
         private readonly IMapper _mapper;
+
+        private bool _disposed = false;
 
         public BLLMessageService(IUnitOfWork unitOfWork, IMapper mapper)
         {
@@ -18,29 +21,51 @@ namespace Pow.Application.Services
             _mapper = mapper;
         }
 
+        ~BLLMessageService()
+        {
+            Dispose(false);
+        }
+
         private IUnitOfWork UnitOfWork { get; }
 
-        public void Dispose() => UnitOfWork.Dispose();
+        public void Dispose()
+        {
+            Dispose(true);
+            GC.SuppressFinalize(this);
+        }
 
-        public async Task<int> Add(MessageBL messageBl)
+        public async Task<int> AddAsync(MessageBL messageBl)
         {
             Message message = _mapper.Map<Message>(messageBl);
 
             return await UnitOfWork.Messages.AddAsync(message);
         }
 
-        public async Task<int> Update(MessageBL messageBl)
+        public async Task<int> UpdateAsync(MessageBL messageBl)
         {
             Message message = _mapper.Map<Message>(messageBl);
 
             return await UnitOfWork.Messages.UpdateAsync(message);
         }
 
-        public async Task<int> Delete(string id) => await UnitOfWork.Messages.DeleteAsync(id);
+        public async Task<int> DeleteAsync(Guid id)
+        {
+            return await UnitOfWork.Messages.DeleteAsync(id.ToString());
+        }
+
+        protected virtual void Dispose(bool disposing)
+        {
+            if (_disposed) return;
+            if (disposing)
+            {
+            }
+
+            _disposed = true;
+        }
 
         public IEnumerable<MessageBL> GetAll()
         {
-            List<MessageBL> list = new ();
+            List<MessageBL> list = new();
 
             foreach (Message item in UnitOfWork.Messages.GetAllAsync().Result)
             {
@@ -50,18 +75,18 @@ namespace Pow.Application.Services
             return list;
         }
 
-        public MessageBL GetById(string id)
+        public MessageBL GetById(Guid id)
         {
-            Message message = UnitOfWork.Messages.GetByIdAsync(id).Result;
+            Message message = UnitOfWork.Messages.GetByIdAsync(id.ToString()).Result;
 
             return _mapper.Map<MessageBL>(message);
         }
 
-        public IEnumerable<MessageBL> GetByUser(string userId)
+        public IEnumerable<MessageBL> GetByUser(Guid userId)
         {
-            List<MessageBL> list = new ();
+            List<MessageBL> list = new();
 
-            foreach (Message item in UnitOfWork.Messages.GetByUserIdAsync(userId).Result)
+            foreach (Message item in UnitOfWork.Messages.GetByUserIdAsync(userId.ToString()).Result)
             {
                 list.Add(_mapper.Map<MessageBL>(item));
             }

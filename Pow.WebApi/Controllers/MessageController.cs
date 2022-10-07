@@ -13,7 +13,7 @@ using Pow.WebApi.Models;
 
 namespace Pow.WebApi.Controllers
 {
-    public class HomeController : BaseController
+    public class MessageController : BaseController
     {
         private readonly IMapper _mapper;
 
@@ -27,7 +27,7 @@ namespace Pow.WebApi.Controllers
 
         private readonly IUnitOfWork _unitOfWork;
 
-        public HomeController(IBLLService service, IMapper mapper, IBLLMessageService messageService, IBLLMarkService markService, IBLLAttachmentService attachmentService, IUnitOfWork unitOfWork)
+        public MessageController(IBLLService service, IMapper mapper, IBLLMessageService messageService, IBLLMarkService markService, IBLLAttachmentService attachmentService, IUnitOfWork unitOfWork)
         {
             _mapper = mapper;
             _messageService = messageService;

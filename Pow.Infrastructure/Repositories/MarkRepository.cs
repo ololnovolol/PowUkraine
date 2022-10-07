@@ -19,9 +19,9 @@ namespace Pow.Infrastructure.Repositories
         public async Task<int> AddAsync(Mark entity)
         {
             const string sql = "Insert into Marks " +
-                               "(Disabled,MessageId,Country,City,Region,Address,StreetNumber,PostalCode,County,MapUrl," +
-                               "GpsLongitude,GpsLatitude) VALUES (@Disabled,@MessageId,@Country,@City,@Region,@Address," +
-                               "@StreetNumber,@PostalCode,@County,@MapUrl,@GpsLongitude,@GpsLatitude)";
+                               "(Disabled,MessageId,MapUrl," +
+                               "GpsLongitude,GpsLatitude) VALUES (@Disabled,@MessageId" +
+                               ",@MapUrl,@GpsLongitude,@GpsLatitude)";
 
             await using (SqlConnection connection =
                 new SqlConnection(_configuration.GetConnectionString("DbConnection")))
