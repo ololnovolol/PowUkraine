@@ -27,7 +27,7 @@ const BgButton = styled.button`
     border-radius: 5px;
     font-size: 16px;
     margin-top: 1rem;
-    margin-left: 40%;
+    margin-left: 42%;
     &:hover {
         color: #fff;
         background: #6d8764;

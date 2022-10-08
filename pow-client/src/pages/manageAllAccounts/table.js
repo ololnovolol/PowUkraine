@@ -30,6 +30,32 @@ const Btn = styled.button`
     }
 `;
 
+const BtnRed = styled.button`
+    background: #88a87d none repeat scroll 0% 0%;
+    height: 40px;
+    weight: 100px;
+    justify-content: flex;
+    align-items: center;
+    position: relative;
+    max-width: 100%;
+    align-items: center;
+    color: #fff;
+    min-width: 0px;
+    min-height: 0px;
+    border-radius: 5px;
+
+    justify-content: space-between;
+    align-items: center;
+    list-style: none;
+    text-decoration: none;
+    font-size: 18px;
+    &:hover {
+        color: red;
+        background: #6d8764;
+        cursor: pointer;
+    }
+`;
+
 export default function UsersTable({ theadData, tbodyData, setAllUsers }) {
     async function changeRole(value) {
         if ((await getCurrentUser()) !== value.userId) {
@@ -90,11 +116,11 @@ export default function UsersTable({ theadData, tbodyData, setAllUsers }) {
                                 </Btn>
                             </td>
                             <td>
-                                <Btn
+                                <BtnRed
                                     type="button"
                                     onClick={() => deleteUser(row)}>
                                     Delete
-                                </Btn>
+                                </BtnRed>
                             </td>
                         </tr>
                     );

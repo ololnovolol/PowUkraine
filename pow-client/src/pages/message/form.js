@@ -2,6 +2,8 @@ import React, { useState, useRef } from 'react';
 import styled from 'styled-components';
 import { useLocation } from 'react-router-dom';
 import axios from 'axios';
+import * as FcIcons from 'react-icons/fc';
+import '../../style/forms/form.css';
 import * as userManager from '../../common/services/userService';
 
 const SmButton = styled.button`
@@ -27,7 +29,7 @@ const BgButton = styled.button`
     border-radius: 5px;
     font-size: 16px;
     margin-top: 2rem;
-    margin-left: 40%;
+    margin-left: 42%;
     &:hover {
         color: #fff;
         background: #6d8764;
@@ -208,7 +210,13 @@ export const MessageForm = props => {
                             disabled>
                             Pin Location
                         </SmButton>
-                        <span>{JSON.stringify(location)}</span>
+                        <span className="span">
+                            {location.Latitude === '0' ? (
+                                ''
+                            ) : (
+                                <FcIcons.FcCheckmark />
+                            )}
+                        </span>
                     </Block>
                     <Block>
                         <label htmlFor="images">
@@ -224,8 +232,11 @@ export const MessageForm = props => {
                             />
                         </label>
                         <SmButton type="button" onClick={handlePick}>
-                            PinFile
+                            Pin File
                         </SmButton>
+                        <span className="span">
+                            {file.length < 1 ? '' : <FcIcons.FcCheckmark />}
+                        </span>
                     </Block>
                     <div>
                         <BgButton type="submit">OK</BgButton>

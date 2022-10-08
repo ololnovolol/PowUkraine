@@ -20,7 +20,10 @@ function Message() {
     return (
         <>
             <CenterBlock>
-                <h1>Create important message</h1>
+                <div className="hh">
+                    <h1>Create important message</h1>
+                </div>
+
                 <MessageForm />
             </CenterBlock>
         </>

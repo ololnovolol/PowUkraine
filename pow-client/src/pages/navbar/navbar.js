@@ -43,14 +43,14 @@ const NavIcon = styled(Link)`
 
 const SidebarNav = styled.nav`
     background: #3a5431 none repeat scroll 0% 0%;
-    width: 280px;
+    width: 250px;
     height: 100vh;
     display: flex;
     justify-content: flex-start;
     position: absolute;
     top: 0;
     left: ${({ sidebar }) => (sidebar ? '0' : '-100%')};
-    transition: 350ms;
+    transition: 250ms;
     z-index: 10;
     bottom: 0px;
     z-index: 293;
@@ -63,7 +63,6 @@ const SidebarNav = styled.nav`
     flex-direction: row;
     padding: 0px 0px;
     box-shadow: rgba(0, 0, 0, 0.2) 0px 10px 20px;
-    z-index: 400;
 `;
 
 const SidebarWrap = styled.div`
