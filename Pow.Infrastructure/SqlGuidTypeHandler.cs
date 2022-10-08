@@ -8,6 +8,6 @@ namespace Pow.Infrastructure
     {
         public override void SetValue(IDbDataParameter parameter, Guid value) => parameter.Value = value.ToString();
 
-        public override Guid Parse(object value) => new Guid((string)value);
+        public override Guid Parse(object value) => new((string)value);
     }
 }

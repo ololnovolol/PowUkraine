@@ -1,12 +1,8 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace Pow.Application.Models
 {
-    public class MessageMarkBL : BaseModelBL
+    public class MessageMarkBl : BaseModelBL
     {
         public string Description { get; set; }
 

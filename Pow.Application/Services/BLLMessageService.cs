@@ -5,29 +5,25 @@ using AutoMapper;
 using Pow.Application.Models;
 using Pow.Application.Services.Interfaces;
 using Pow.Domain;
-using Pow.Infrastructure.Repositories;
 using Pow.Infrastructure.Repositories.Interfaces;
 
 namespace Pow.Application.Services
 {
-    public class BLLMessageService : IBLLMessageService
+    public class BllMessageService : IBLLMessageService
     {
         private readonly IMapper _mapper;
 
-        private bool _disposed = false;
+        private bool _disposed;
 
-        public BLLMessageService(IUnitOfWork unitOfWork, IMapper mapper)
+        public BllMessageService(IUnitOfWork unitOfWork, IMapper mapper)
         {
             UnitOfWork = unitOfWork;
             _mapper = mapper;
         }
 
-        private IUnitOfWork UnitOfWork { get; }
+        ~BllMessageService() => Dispose(false);
 
-        ~BLLMessageService()
-        {
-            Dispose(false);
-        }
+        private IUnitOfWork UnitOfWork { get; }
 
         public void Dispose()
         {
@@ -49,20 +45,7 @@ namespace Pow.Application.Services
             return await UnitOfWork.Messages.UpdateAsync(message);
         }
 
-        protected virtual void Dispose(bool disposing)
-        {
-            if (_disposed) return;
-            if (disposing)
-            {
-            }
-
-            _disposed = true;
-        }
-
-        public async Task<int> DeleteAsync(Guid id)
-        {
-            return await UnitOfWork.Messages.DeleteAsync(id.ToString());
-        }
+        public async Task<int> DeleteAsync(Guid id) => await UnitOfWork.Messages.DeleteAsync(id.ToString());
 
         public async Task<IEnumerable<MessageBL>> GetAll()
         {
@@ -93,6 +76,20 @@ namespace Pow.Application.Services
             }
 
             return list;
+        }
+
+        protected virtual void Dispose(bool disposing)
+        {
+            if (_disposed)
+            {
+                return;
+            }
+
+            if (disposing)
+            {
+            }
+
+            _disposed = true;
         }
     }
 }

@@ -47,13 +47,13 @@ namespace Pow.WebApi
                 typeof(MessageProfile),
                 typeof(AttachmentProfile));
 
-            services.AddSingleton<IBLLMessageService, BLLMessageService>();
+            services.AddSingleton<IBLLMessageService, BllMessageService>();
 
             services.AddSingleton<IBLLMarkService, BLLMarkService>();
 
             services.AddSingleton<IBLLAttachmentService, BLLAttachmentService>();
 
-            services.AddSingleton<IBLLService, BLLService>();
+            services.AddSingleton<IBllService, BllService>();
 
             DapperExtensions.AddSqlGuidHandler();
         }

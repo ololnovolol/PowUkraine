@@ -112,7 +112,7 @@ namespace IdentityServer.Controllers
 
             if (result.Succeeded)
             {
-                IdentityResult a = await _userManager.AddToRoleAsync(user, "User");
+                await _userManager.AddToRoleAsync(user, "User");
                 await _signInManager.SignInAsync(user, false);
 
                 return Redirect(viewModel.ReturnUrl);

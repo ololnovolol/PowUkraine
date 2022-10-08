@@ -6,7 +6,6 @@ using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Pow.Application.Models;
 using Pow.Application.Services.Interfaces;
-using Pow.Infrastructure.Repositories.Interfaces;
 using Pow.WebApi.Controllers.Base;
 using Pow.WebApi.Extensions;
 using Pow.WebApi.Models;
@@ -15,31 +14,16 @@ namespace Pow.WebApi.Controllers
 {
     public class HomeController : BaseController
     {
-        private readonly IBLLAttachmentService _attachmentService;
         private readonly IMapper _mapper;
 
-        private readonly IBLLMarkService _markService;
-
-        private readonly IBLLMessageService _messageService;
-
-        private readonly IBLLService _service;
-
-        private readonly IUnitOfWork _unitOfWork;
+        private readonly IBllService _service;
 
         public HomeController(
-            IBLLService service,
-            IMapper mapper,
-            IBLLMessageService messageService,
-            IBLLMarkService markService,
-            IBLLAttachmentService attachmentService,
-            IUnitOfWork unitOfWork)
+            IBllService service,
+            IMapper mapper)
         {
             _mapper = mapper;
-            _messageService = messageService;
-            _markService = markService;
-            _attachmentService = attachmentService;
             _service = service;
-            _unitOfWork = unitOfWork;
         }
 
         // [Authorize(Policy = "UserAccess")]
@@ -56,7 +40,7 @@ namespace Pow.WebApi.Controllers
         public async Task<IActionResult> Message(IFormCollection data /* , IFormFile imagefile*/)
         {
             MessageModel msg = new();
-            MarkModel mark = null;
+            MarkModel mark;
             AttachmentModel attachment = null;
 
             msg.Phone = data["PhoneNumber"];
@@ -66,9 +50,11 @@ namespace Pow.WebApi.Controllers
 
             if (data.Files.Count > 0)
             {
-                attachment = new AttachmentModel();
-                attachment.Title = data.Files[0].FileName;
-                attachment.File = data.Files[0].GetBytes().Result;
+                attachment = new AttachmentModel
+                {
+                    Title = data.Files[0].FileName,
+                    File = data.Files[0].GetBytes().Result,
+                };
             }
 
             if (true) // TODO Check is mark empty?

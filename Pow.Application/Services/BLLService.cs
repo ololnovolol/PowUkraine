@@ -8,27 +8,27 @@ using Pow.Application.Services.Interfaces;
 
 namespace Pow.Application.Services
 {
-    public class BLLService : IBLLService
+    public class BllService : IBllService
     {
-        private readonly IBLLAttachmentService _bLLAttachmentService;
+        private readonly IBLLAttachmentService _bLlAttachmentService;
 
-        private readonly IBLLMarkService _bLLMarkService;
+        private readonly IBLLMarkService _bLlMarkService;
 
-        private readonly IBLLMessageService _bLLMessageService;
+        private readonly IBLLMessageService _bLlMessageService;
 
         private bool _disposed;
 
-        public BLLService(
+        public BllService(
             IBLLMessageService messageService,
             IBLLMarkService markService,
             IBLLAttachmentService attachmentService)
         {
-            _bLLAttachmentService = attachmentService;
-            _bLLMarkService = markService;
-            _bLLMessageService = messageService;
+            _bLlAttachmentService = attachmentService;
+            _bLlMarkService = markService;
+            _bLlMessageService = messageService;
         }
 
-        ~BLLService() => Dispose(false);
+        ~BllService() => Dispose(false);
 
         public void Dispose()
         {
@@ -40,12 +40,12 @@ namespace Pow.Application.Services
         {
             message.Id = Guid.NewGuid();
             message.CreatedDate = DateTime.Now;
-            await _bLLMessageService.AddAsync(message);
+            await _bLlMessageService.AddAsync(message);
 
             if (attachment != null)
             {
                 attachment.MessageId = message.Id;
-                await _bLLAttachmentService.AddAsync(attachment);
+                await _bLlAttachmentService.AddAsync(attachment);
             }
 
             if (mark == null)
@@ -54,20 +54,20 @@ namespace Pow.Application.Services
             }
 
             mark.MessageId = message.Id;
-            await _bLLMarkService.AddAsync(mark);
+            await _bLlMarkService.AddAsync(mark);
 
             return 1;
         }
 
         public void Get() => throw new NotImplementedException();
 
-        public async Task<IEnumerable<MessageMarkBL>> GetAllMessagesWithMarks()
+        public async Task<IEnumerable<MessageMarkBl>> GetAllMessagesWithMarks()
         {
-            IEnumerable<MessageBL> messages = await _bLLMessageService.GetAll();
-            IEnumerable<MarkBL> marks = await _bLLMarkService.GetAll();
+            IEnumerable<MessageBL> messages = await _bLlMessageService.GetAll();
+            IEnumerable<MarkBL> marks = await _bLlMarkService.GetAll();
 
             return messages.Select(
-                    message => new MessageMarkBL
+                    message => new MessageMarkBl
                     {
                         Id = message.Id,
                         Description = message.Description,
@@ -84,10 +84,10 @@ namespace Pow.Application.Services
 
         public async Task<int> Delete(Guid messageId)
         {
-            await _bLLMarkService.DeleteByMessageId(messageId);
-            await _bLLAttachmentService.DeleteByMessageId(messageId);
+            await _bLlMarkService.DeleteByMessageId(messageId);
+            await _bLlAttachmentService.DeleteByMessageId(messageId);
 
-            return await _bLLMessageService.DeleteAsync(messageId);
+            return await _bLlMessageService.DeleteAsync(messageId);
         }
 
         protected virtual void Dispose(bool disposing)
@@ -99,9 +99,9 @@ namespace Pow.Application.Services
 
             if (disposing)
             {
-                _bLLAttachmentService.Dispose();
-                _bLLMarkService.Dispose();
-                _bLLMessageService.Dispose();
+                _bLlAttachmentService.Dispose();
+                _bLlMarkService.Dispose();
+                _bLlMessageService.Dispose();
             }
 
             _disposed = true;

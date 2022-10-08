@@ -11,7 +11,7 @@ namespace Pow.WebApi.Extensions
     {
         public static IHost SetupLogger(this IHost host)
         {
-            using (IServiceScope scope = host.Services.CreateScope())
+            using (host.Services.CreateScope())
             {
                 try
                 {

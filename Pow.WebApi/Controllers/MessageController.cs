@@ -8,7 +8,7 @@ using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Pow.Application.Models;
 using Pow.Application.Services.Interfaces;
-using Pow.Infrastructure.Repositories.Interfaces;
+
 using Pow.WebApi.Controllers.Base;
 using Pow.WebApi.Extensions;
 using Pow.WebApi.Models;
@@ -17,27 +17,19 @@ namespace Pow.WebApi.Controllers
 {
     public class MessageController : BaseController
     {
-        private readonly IBLLAttachmentService _attachmentService;
         private readonly IMapper _mapper;
-
-        private readonly IBLLMarkService _markService;
 
         private readonly IBLLMessageService _messageService;
 
-        private readonly IBLLService _service;
+        private readonly IBllService _service;
 
         public MessageController(
-            IBLLService service,
+            IBllService service,
             IMapper mapper,
-            IBLLMessageService messageService,
-            IBLLMarkService markService,
-            IBLLAttachmentService attachmentService,
-            IUnitOfWork unitOfWork)
+            IBLLMessageService messageService)
         {
             _mapper = mapper;
             _messageService = messageService;
-            _markService = markService;
-            _attachmentService = attachmentService;
             _service = service;
         }
 

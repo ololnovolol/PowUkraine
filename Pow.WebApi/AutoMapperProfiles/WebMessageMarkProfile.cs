@@ -7,7 +7,7 @@ namespace Pow.WebApi.AutoMapperProfiles
     public class WebMessageMarkProfile : Profile
     {
         public WebMessageMarkProfile()
-            => CreateMap<MessageWithMarkModel, MessageMarkBL>()
+            => CreateMap<MessageWithMarkModel, MessageMarkBl>()
                 .ForMember(dest => dest.Id, opt => opt.Ignore())
                 .ReverseMap();
     }

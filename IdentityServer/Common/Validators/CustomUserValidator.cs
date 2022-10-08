@@ -11,14 +11,9 @@ namespace IdentityServer.Common.Validators
 {
     public class CustomUserValidator : IUserValidator<AppUser>
     {
-        private readonly IConfiguration _configuration;
         private readonly List<IdentityError> _errors;
 
-        public CustomUserValidator(IConfiguration configuration)
-        {
-            _configuration = configuration;
-            _errors = new List<IdentityError>();
-        }
+        public CustomUserValidator(IConfiguration configuration) => _errors = new List<IdentityError>();
 
         public async Task<IdentityResult> ValidateAsync(UserManager<AppUser> manager, AppUser user)
         {

@@ -24,8 +24,7 @@ namespace Pow.Infrastructure.Repositories
                                "(Id,Title,Description,CreatedDate,EventDate,Phone,UserId)" +
                                " VALUES (@Id,@Title,@Description,@CreatedDate,@EventDate,@Phone,@UserId)";
 
-            await using (SqlConnection connection =
-                new SqlConnection(_configuration.GetConnectionString("DbConnection")))
+            await using (SqlConnection connection = new(_configuration.GetConnectionString("DbConnection")))
             {
                 connection.Open();
                 int result = await connection.ExecuteAsync(sql, entity);
@@ -38,8 +37,7 @@ namespace Pow.Infrastructure.Repositories
         {
             string sql = "DELETE FROM Messages WHERE Id = @Id";
 
-            await using (SqlConnection connection =
-                new SqlConnection(_configuration.GetConnectionString("DbConnection")))
+            await using (SqlConnection connection = new(_configuration.GetConnectionString("DbConnection")))
             {
                 connection.Open();
                 int result = await connection.ExecuteAsync(sql, new { Id = id });
@@ -52,7 +50,7 @@ namespace Pow.Infrastructure.Repositories
         {
             string sql = "SELECT * FROM Messages";
 
-            using (SqlConnection connection = new SqlConnection(_configuration.GetConnectionString("DbConnection")))
+            await using (SqlConnection connection = new(_configuration.GetConnectionString("DbConnection")))
             {
                 connection.Open();
                 IEnumerable<Message> result = await connection.QueryAsync<Message>(sql);
@@ -65,8 +63,7 @@ namespace Pow.Infrastructure.Repositories
         {
             const string sql = "SELECT * FROM Messages WHERE Id = @Id";
 
-            await using (SqlConnection connection =
-                new SqlConnection(_configuration.GetConnectionString("DbConnection")))
+            await using (SqlConnection connection = new(_configuration.GetConnectionString("DbConnection")))
             {
                 connection.Open();
                 Message result = await connection.QuerySingleOrDefaultAsync<Message>(sql, new { Id = id });
@@ -79,7 +76,7 @@ namespace Pow.Infrastructure.Repositories
         {
             string sql = "SELECT * FROM Messages WHERE UserId = @userId";
 
-            using (SqlConnection connection = new SqlConnection(_configuration.GetConnectionString("DbConnection")))
+            await using (SqlConnection connection = new(_configuration.GetConnectionString("DbConnection")))
             {
                 connection.Open();
                 IEnumerable<Message> result = await connection.QueryAsync<Message>(sql);

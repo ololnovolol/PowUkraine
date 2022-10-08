@@ -1,17 +1,18 @@
-﻿using System;
+﻿#nullable enable
+using System;
 using System.Collections.Generic;
 using System.Threading.Tasks;
 using Pow.Application.Models;
 
 namespace Pow.Application.Services.Interfaces
 {
-    public interface IBLLService : IDisposable
+    public interface IBllService : IDisposable
     {
-        Task<int> AddAsync(MessageBL message, AttachmentBL? attachmentBL, MarkBL? mark);
+        Task<int> AddAsync(MessageBL message, AttachmentBL? attachmentBl, MarkBL? mark);
 
         void Get();
 
-        Task<IEnumerable<MessageMarkBL>> GetAllMessagesWithMarks();
+        Task<IEnumerable<MessageMarkBl>> GetAllMessagesWithMarks();
 
         void GetByUserId(Guid userId);
 
