@@ -136,3 +136,31 @@ export async function sentMessage(values) {
             console.log(error);
         });
 }
+
+export async function getAllMessages() {
+    const response = await axios.get(
+        'https://localhost:44312/api/message/GetAllMessageWithMarks',
+    );
+    console.log(response.data);
+    return response.data;
+}
+
+export async function deleteMessage(userEmail) {
+    let request = { Data: userEmail };
+
+    console.log(userEmail + '');
+
+    const response = await axios
+        .post('https://localhost:44316/api/roles/DeleteUser', request, {
+            headers: {
+                accept: 'application/json',
+            },
+        })
+        .then(function (response) {
+            console.log(response);
+        })
+        .catch(function (error) {
+            console.log(error);
+        });
+    return response;
+}

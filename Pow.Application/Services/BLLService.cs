@@ -1,8 +1,8 @@
-﻿using System;
+﻿#nullable enable
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
-using Microsoft.AspNetCore.Authentication;
 using Pow.Application.Models;
 using Pow.Application.Services.Interfaces;
 
@@ -16,19 +16,19 @@ namespace Pow.Application.Services
 
         private readonly IBLLMessageService _bLLMessageService;
 
-        private bool _disposed = false;
+        private bool _disposed;
 
-        public BLLService(IBLLMessageService messageService, IBLLMarkService markService, IBLLAttachmentService attachmentService)
+        public BLLService(
+            IBLLMessageService messageService,
+            IBLLMarkService markService,
+            IBLLAttachmentService attachmentService)
         {
             _bLLAttachmentService = attachmentService;
             _bLLMarkService = markService;
             _bLLMessageService = messageService;
         }
 
-        ~BLLService()
-        {
-            Dispose(false);
-        }
+        ~BLLService() => Dispose(false);
 
         public void Dispose()
         {
@@ -48,52 +48,36 @@ namespace Pow.Application.Services
                 await _bLLAttachmentService.AddAsync(attachment);
             }
 
-            if (mark != null)
+            if (mark == null)
             {
-                mark.MessageId = message.Id;
-                await _bLLMarkService.AddAsync(mark);
+                return 1;
             }
+
+            mark.MessageId = message.Id;
+            await _bLLMarkService.AddAsync(mark);
 
             return 1;
         }
 
         public void Get() => throw new NotImplementedException();
 
-        protected virtual void Dispose(bool disposing)
-        {
-            if (_disposed) return;
-            if (disposing)
-            {
-                _bLLAttachmentService.Dispose();
-                _bLLMarkService.Dispose();
-                _bLLMessageService.Dispose();
-            }
-
-            _disposed = true;
-        }
-
         public async Task<IEnumerable<MessageMarkBL>> GetAllMessagesWithMarks()
         {
-            var messages = await _bLLMessageService.GetAll();
-            var marks = await _bLLMarkService.GetAll();
-            var messageMarks = new List<MessageMarkBL>();
-            foreach (var message in messages)
-            {
-                MessageMarkBL messageMark = new MessageMarkBL()
-                {
-                    Id = message.Id,
-                    Description = message.Description,
-                    Title = message.Title,
-                    EventDate = message.EventDate,
-                    CreatedDate = message.CreatedDate,
-                    Marked = marks.Count(i => i.MessageId == message.Id),
-                    UserId = message.UserId,
-                };
+            IEnumerable<MessageBL> messages = await _bLLMessageService.GetAll();
+            IEnumerable<MarkBL> marks = await _bLLMarkService.GetAll();
 
-                messageMarks.Add(messageMark);
-            }
-
-            return messageMarks;
+            return messages.Select(
+                    message => new MessageMarkBL
+                    {
+                        Id = message.Id,
+                        Description = message.Description,
+                        Title = message.Title,
+                        EventDate = message.EventDate,
+                        CreatedDate = message.CreatedDate,
+                        Marked = marks.Count(i => i.MessageId == message.Id),
+                        UserId = message.UserId ?? Guid.Empty,
+                    })
+                .ToList();
         }
 
         public void GetByUserId(Guid userId) => throw new NotImplementedException();
@@ -102,7 +86,25 @@ namespace Pow.Application.Services
         {
             await _bLLMarkService.DeleteByMessageId(messageId);
             await _bLLAttachmentService.DeleteByMessageId(messageId);
+
             return await _bLLMessageService.DeleteAsync(messageId);
+        }
+
+        protected virtual void Dispose(bool disposing)
+        {
+            if (_disposed)
+            {
+                return;
+            }
+
+            if (disposing)
+            {
+                _bLLAttachmentService.Dispose();
+                _bLLMarkService.Dispose();
+                _bLLMessageService.Dispose();
+            }
+
+            _disposed = true;
         }
     }
 }

@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import Table from 'react-bootstrap/Table';
 import styled from 'styled-components';
 import * as apiService from '../../common/services/apiService';
@@ -30,49 +30,34 @@ const Btn = styled.button`
     }
 `;
 
-export default function UsersTable({ theadData, tbodyData, setAllUsers }) {
-    async function changeRole(value) {
-        if ((await getCurrentUser()) !== value.userId) {
-            await apiService.changeUserRole(value.email);
-            updateData();
-        }
+export default function MessageTable({ theadData, tbodyData, setAllUsers }) {
+    async function UpdateMsg(value) {
+        await apiService.changeUserRole(value.email);
+        updateData();
     }
 
-    async function getCurrentUser() {
-        return await userManager.GetUserId();
-    }
-
-    async function updateUser(value) {
-        if ((await getCurrentUser()) !== value.userId) {
-            await apiService.updateUser(value);
-            updateData();
-        }
-    }
-
-    async function deleteUser(value) {
-        if ((await getCurrentUser()) !== value.userId) {
-            await apiService.deleteUser(value.email);
-            updateData();
-        }
+    async function deleteMsg(value) {
+        await apiService.deleteUser(value.email);
+        updateData();
     }
 
     async function updateData() {
-        const users = await apiService.getUsers();
-        setAllUsers(users);
+        const messages = await apiService.getAllMessages();
+        setAllUsers(messages);
     }
 
     return (
         <Table striped bordered hover>
             <thead>
                 <tr>
-                    <th>First Name</th>
-                    <th>Last Name</th>
-                    <th>Email</th>
-                    <th>Phone</th>
-                    <th>BirthDay</th>
-                    <th>Role</th>
-                    <th>Change Role </th>
-                    <th>Delete User </th>
+                    <th>Event Date</th>
+                    <th>Title</th>
+                    <th>Description</th>
+                    <th>Created Date</th>
+                    <th>Has Mark?</th>
+                    <th>User Id</th>
+                    <th>Update Mark </th>
+                    <th>Delete Mark </th>
                 </tr>
             </thead>
             <tbody>
@@ -85,14 +70,14 @@ export default function UsersTable({ theadData, tbodyData, setAllUsers }) {
                             <td>
                                 <Btn
                                     type="button"
-                                    onClick={() => changeRole(row)}>
-                                    Change role
+                                    onClick={() => UpdateMsg(row)}>
+                                    Update
                                 </Btn>
                             </td>
                             <td>
                                 <Btn
                                     type="button"
-                                    onClick={() => deleteUser(row)}>
+                                    onClick={() => deleteMsg(row)}>
                                     Delete
                                 </Btn>
                             </td>

@@ -1,50 +1,48 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { useSelector } from 'react-redux';
 import * as apiService from '../../common/services/apiService';
-import { getFromApi_User } from '../../common/services/apiService';
-import { prettifyJson } from '../../common/utils/jsonUtils';
+import MessageTable from './table';
+import data from './test.json';
+import * as userManager from '../../common/services/userService';
 
 function ManageMessages() {
     useSelector(state => state.auth.user);
-    const [doughnutData, setDoughnutData] = useState(null);
+    const [messageData, setMessageData] = useState([]);
+    const [currentUser, setCurrentUser] = useState('');
 
-    async function getAllAdmin() {
-        const doughnuts = await apiService.getFromApi_Admin();
-        setDoughnutData(doughnuts);
+    useEffect(() => {
+        getAllMessages();
+        getCurrentUser();
+    }, []);
+
+    async function getAllMessages() {
+        const msg = await apiService.getAllMessages();
+        setMessageData(msg);
     }
 
-    async function getAllUser() {
-        const doughnuts = await getFromApi_User();
-        setDoughnutData(doughnuts);
+    function setAllMessages(msg) {
+        setMessageData(msg);
     }
+
+    async function getCurrentUser() {
+        let user = await userManager.GetUserId();
+        setCurrentUser(user);
+    }
+
+    const getHeadings = () => {
+        return Object.keys(data[0]);
+    };
 
     return (
         <>
-            <div className="manageMessages">
-                <div>
-                    <h1>Manage Messages</h1>
-
-                    <button
-                        className="button button-outline"
-                        onClick={() => getAllAdmin()}>
-                        GetAll_Admin_api
-                    </button>
-                    <button
-                        className="button button-outline"
-                        onClick={() => getAllUser()}>
-                        GetAll_User_api
-                    </button>
-
-                    <pre>
-                        <code>
-                            {prettifyJson(
-                                doughnutData
-                                    ? doughnutData
-                                    : 'No api connect yet :(',
-                            )}
-                        </code>
-                    </pre>
-                </div>
+            <div className="container">
+                <h1>Manage Messages</h1>
+                <MessageTable
+                    theadData={getHeadings()}
+                    tbodyData={messageData}
+                    setAllUsers={setAllMessages}
+                    userId={currentUser}
+                />
             </div>
         </>
     );
