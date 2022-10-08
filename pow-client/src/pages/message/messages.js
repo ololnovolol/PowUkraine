@@ -1,32 +1,28 @@
 import React from 'react';
 import MessageForm from './form';
 import styled from 'styled-components';
+import '../../style/forms/form.css';
 
 const CenterBlock = styled.div`
-    background: #3a5431 none repeat scroll 0% 0%;
     width: 50%;
+    height: auto;
     background: #fff;
-    height: 10px;
     position: absolute;
     align-items: center;
+    margin-top: 5rem;
+    margin-bottom: 5rem;
     left: 25%;
-    top: 25%;
-    min-width: 0px;
-    min-height: 0px;
-    justify-content: center;
     padding: 25px 25px;
-    z-index: 0;
-    color: black;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
 `;
 
 function Message() {
     return (
         <>
-            <div>
-                <CenterBlock>
-                    <MessageForm />
-                </CenterBlock>
-            </div>
+            <CenterBlock>
+                <h1>Create important message</h1>
+                <MessageForm />
+            </CenterBlock>
         </>
     );
 }

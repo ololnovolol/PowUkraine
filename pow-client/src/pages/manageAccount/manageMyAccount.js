@@ -3,35 +3,31 @@ import { useSelector } from 'react-redux';
 import * as userService from '../../common/services/userService';
 import styled from 'styled-components';
 import * as apiService from '../../common/services/apiService';
+import '../../style/forms/form.css';
 
 const CenterBlock = styled.div`
-    background: #3a5431 none repeat scroll 0% 0%;
     width: 50%;
+    height: auto;
     background: #fff;
-    height: 10px;
     position: absolute;
     align-items: center;
+    margin-top: 5rem;
+    margin-bottom: 5rem;
     left: 25%;
-    top: 25%;
-    min-width: 0px;
-    min-height: 0px;
-    justify-content: center;
     padding: 25px 25px;
-    z-index: 0;
-    color: black;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
 `;
 
 const BgButton = styled.button`
     background: #88a87d none repeat scroll 0% 0%;
     height: 40px;
+    weight: 100px;
     border-color: #fff;
-    weight: 100%;
-    position: relative;
-    margin: right 10px;
     color: #f0a30a;
     border-radius: 5px;
-    justify-content: space-between;
     font-size: 16px;
+    margin-top: 1rem;
+    margin-left: 40%;
     &:hover {
         color: #fff;
         background: #6d8764;
@@ -42,7 +38,7 @@ const BgButton = styled.button`
 const Block = styled.div`
     font-size: 1rem;
     position: relative;
-    top: 3rem;
+    top: 2rem;
     border: 1 rem solid;
 `;
 
@@ -100,7 +96,9 @@ function ManageAccount() {
         <div>
             <CenterBlock>
                 <Form onSubmit={postMsg}>
-                    <h1>Manage Account</h1>
+                    <div className="hh">
+                        <h1>Manage Account</h1>
+                    </div>
                     <Block>
                         <label>
                             FirstName
@@ -156,10 +154,8 @@ function ManageAccount() {
                                 required
                             />
                         </label>
-                        <Block>
-                            <label>Submit</label>
-                            <BgButton type="submit">Submit</BgButton>
-                        </Block>
+
+                        <BgButton type="submit">OK</BgButton>
                     </Block>
                 </Form>
             </CenterBlock>

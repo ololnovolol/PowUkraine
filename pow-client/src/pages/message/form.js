@@ -7,29 +7,27 @@ import * as userManager from '../../common/services/userService';
 const SmButton = styled.button`
     background: #88a87d none repeat scroll 0% 0%;
     height: 40px;
+    weight: 100px;
     border-color: #fff;
     color: #fff;
     border-radius: 5px;
-    align-items: center;
     font-size: 16px;
     &:hover {
-        color: #f0a30a;
+        color: #fff;
         background: #6d8764;
         cursor: pointer;
-    }
 `;
 
 const BgButton = styled.button`
     background: #88a87d none repeat scroll 0% 0%;
     height: 40px;
+    weight: 100px;
     border-color: #fff;
-    weight: 100%;
-    position: relative;
-    margin: right 10px;
     color: #f0a30a;
     border-radius: 5px;
-    justify-content: space-between;
     font-size: 16px;
+    margin-top: 2rem;
+    margin-left: 40%;
     &:hover {
         color: #fff;
         background: #6d8764;
@@ -40,8 +38,7 @@ const BgButton = styled.button`
 const Block = styled.div`
     font-size: 1rem;
     position: relative;
-    top: 3rem;
-    border: 1 rem solid;
+    top: 1rem;
 `;
 
 const Form = styled.form`
@@ -76,11 +73,8 @@ export const MessageForm = props => {
             Latitude: '' + test.lat,
             MapUrl: '',
         };
-        //console.log({redirectLoc})
         setLocation(redirectLoc);
     }
-
-    //console.log({loc});
 
     const filePicker = useRef(null);
 
@@ -161,7 +155,6 @@ export const MessageForm = props => {
     return (
         <>
             <Form onSubmit={postMsg}>
-                <h1>Create important message</h1>
                 <Block>
                     <label>
                         Title
@@ -234,10 +227,9 @@ export const MessageForm = props => {
                             PinFile
                         </SmButton>
                     </Block>
-                    <Block>
-                        <label>Submit</label>
-                        <BgButton type="submit">Submit</BgButton>
-                    </Block>
+                    <div>
+                        <BgButton type="submit">OK</BgButton>
+                    </div>
                 </Block>
             </Form>
         </>
