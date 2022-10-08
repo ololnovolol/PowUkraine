@@ -2,6 +2,7 @@ import React, { useState, useRef } from 'react';
 import styled from 'styled-components';
 import { useLocation } from 'react-router-dom';
 import axios from 'axios';
+import * as userManager from '../../common/services/userService';
 
 const SmButton = styled.button`
     background: #88a87d none repeat scroll 0% 0%;
@@ -58,6 +59,7 @@ export const MessageForm = props => {
         Attachment: [],
     });
     const [file, setFile] = useState([]);
+    const [userId, setUserId] = useState('');
     let loc = useLocation();
     const [location, setLocation] = useState({
         Longitude: '0',
@@ -84,7 +86,8 @@ export const MessageForm = props => {
     const filePicker = useRef(null);
 
     async function postMsg(e) {
-        const result = handleData(e);
+        let Id = await userManager.GetUserId();
+        const result = handleData(e, Id);
 
         axios
             .post('https://localhost:44312/api/Message/message', result, {
@@ -100,7 +103,7 @@ export const MessageForm = props => {
             });
     }
 
-    function handleData(e) {
+    function handleData(e, Id) {
         const formData = new FormData();
         formData.append('Title', data.Title);
         formData.append('Description', data.Description);
@@ -110,6 +113,7 @@ export const MessageForm = props => {
         formData.append('Longitude', location.Longitude);
         formData.append('Latitude', location.Latitude);
         formData.append('MapUrl', location.MapUrl);
+        formData.append('UserId', Id);
 
         return formData;
     }

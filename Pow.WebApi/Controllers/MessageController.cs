@@ -17,9 +17,8 @@ namespace Pow.WebApi.Controllers
 {
     public class MessageController : BaseController
     {
-        private readonly IMapper _mapper;
-
         private readonly IBLLAttachmentService _attachmentService;
+        private readonly IMapper _mapper;
 
         private readonly IBLLMarkService _markService;
 
@@ -27,16 +26,19 @@ namespace Pow.WebApi.Controllers
 
         private readonly IBLLService _service;
 
-        private readonly IUnitOfWork _unitOfWork;
-
-        public MessageController(IBLLService service, IMapper mapper, IBLLMessageService messageService, IBLLMarkService markService, IBLLAttachmentService attachmentService, IUnitOfWork unitOfWork)
+        public MessageController(
+            IBLLService service,
+            IMapper mapper,
+            IBLLMessageService messageService,
+            IBLLMarkService markService,
+            IBLLAttachmentService attachmentService,
+            IUnitOfWork unitOfWork)
         {
             _mapper = mapper;
             _messageService = messageService;
             _markService = markService;
             _attachmentService = attachmentService;
             _service = service;
-            _unitOfWork = unitOfWork;
         }
 
         // [Authorize(Policy = "UserAccess")]
@@ -47,8 +49,10 @@ namespace Pow.WebApi.Controllers
         // [Authorize(Policy = "AdminAccess")]
         [Authorize(Roles = "Admin")]
         [HttpGet]
-        public async Task<IActionResult> GetAll(){
-            IEnumerable<MessageModel> messages = (await _messageService.GetAll()).Select(i => _mapper.Map<MessageModel>(i));
+        public async Task<IActionResult> GetAll()
+        {
+            IEnumerable<MessageModel> messages =
+                (await _messageService.GetAll()).Select(i => _mapper.Map<MessageModel>(i));
 
             return Ok(messages);
         }
@@ -57,16 +61,16 @@ namespace Pow.WebApi.Controllers
         [HttpGet]
         public async Task<IActionResult> GetAllMessageWithMarks()
         {
-            IEnumerable<MessageWithMarkModel> messagesWithMarks = (await _service.GetAllMessagesWithMarks()).Select(i => _mapper.Map<MessageWithMarkModel>(i));
+            IEnumerable<MessageWithMarkModel> messagesWithMarks =
+                (await _service.GetAllMessagesWithMarks()).Select(i => _mapper.Map<MessageWithMarkModel>(i));
 
             return Ok(messagesWithMarks);
         }
 
-
         [HttpPost]
-        public async Task<IActionResult> Message(IFormCollection data/* , IFormFile imagefile*/)
+        public async Task<IActionResult> Message(IFormCollection data)
         {
-            MessageModel msg = new MessageModel();
+            MessageModel msg = new();
             MarkModel mark = null;
             AttachmentModel attachment = null;
 
@@ -74,33 +78,39 @@ namespace Pow.WebApi.Controllers
             msg.EventDate = DateTime.Parse(data["Data"]);
             msg.Description = data["Description"];
             msg.Title = data["Title"];
+            Guid.TryParse(data["UserId"], out Guid dataGuid);
+            msg.UserId = dataGuid;
 
             if (data.Files.Count > 0)
             {
-                attachment = new AttachmentModel();
-                attachment.Title = data.Files[0].FileName;
-                attachment.File = data.Files[0].GetBytes().Result;
+                attachment = new AttachmentModel
+                {
+                    Title = data.Files[0].FileName,
+                    File = data.Files[0].GetBytes().Result,
+                };
             }
 
             if (!data["Latitude"].Equals("0") && !data["Longitude"].Equals("0"))
             {
-                mark = new MarkModel();
-                mark.Disabled = false;
-                mark.GpsLatitude = data["Latitude"];
-                mark.GpsLongitude = data["Longitude"];
-                mark.MapUrl = data["MapUrl"];
+                mark = new MarkModel
+                {
+                    Disabled = false,
+                    GpsLatitude = data["Latitude"],
+                    GpsLongitude = data["Longitude"],
+                    MapUrl = data["MapUrl"],
+                };
             }
 
-            await _service.AddAsync(_mapper.Map<MessageBL>(msg), _mapper.Map<AttachmentBL>(attachment), _mapper.Map<MarkBL>(mark));
+            await _service.AddAsync(
+                _mapper.Map<MessageBL>(msg),
+                _mapper.Map<AttachmentBL>(attachment),
+                _mapper.Map<MarkBL>(mark));
 
             return Ok("Posted");
         }
 
         [Authorize(Roles = "Admin")]
         [HttpDelete("{id}")]
-        public async Task<IActionResult> Delete(Guid id)
-        {
-            return Ok(await _service.Delete(id));
-        }
+        public async Task<IActionResult> Delete(Guid id) => Ok(await _service.Delete(id));
     }
 }

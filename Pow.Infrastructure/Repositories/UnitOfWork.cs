@@ -29,6 +29,8 @@ namespace Pow.Infrastructure.Repositories
 
         public IMarkRepository Marks { get; }
 
+        public IAttachmentRepository Attachments { get; }
+
         public void Dispose()
         {
             Dispose(true);
@@ -44,7 +46,5 @@ namespace Pow.Infrastructure.Repositories
 
             _disposed = true;
         }
-
-        public IAttachmentRepository Attachments { get; }
     }
 }

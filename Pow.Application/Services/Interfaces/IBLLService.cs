@@ -13,7 +13,7 @@ namespace Pow.Application.Services.Interfaces
 
         Task<IEnumerable<MessageMarkBL>> GetAllMessagesWithMarks();
 
-        void GetByUserId(Guid UserId);
+        void GetByUserId(Guid userId);
 
         Task<int> Delete(Guid messageId);
     }

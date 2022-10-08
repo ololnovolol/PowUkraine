@@ -122,7 +122,7 @@ export async function sentMessage(values) {
     console.log(values.Title);
 
     axios
-        .put('https://localhost:44312/api/home/message', {
+        .put('https://localhost:44312/api/Message/message', {
             data: values,
             headers: {
                 'Content-Type': 'application/json',

@@ -106,7 +106,6 @@ const Sidebar = () => {
                                 return <SubMenu item={item} key={index} />;
                             }
                         })}
-                        ;
                     </SidebarWrap>
                 </SidebarNav>
             </IconContext.Provider>

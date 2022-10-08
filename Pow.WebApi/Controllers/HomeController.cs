@@ -15,9 +15,8 @@ namespace Pow.WebApi.Controllers
 {
     public class HomeController : BaseController
     {
-        private readonly IMapper _mapper;
-
         private readonly IBLLAttachmentService _attachmentService;
+        private readonly IMapper _mapper;
 
         private readonly IBLLMarkService _markService;
 
@@ -27,7 +26,13 @@ namespace Pow.WebApi.Controllers
 
         private readonly IUnitOfWork _unitOfWork;
 
-        public HomeController(IBLLService service, IMapper mapper, IBLLMessageService messageService, IBLLMarkService markService, IBLLAttachmentService attachmentService, IUnitOfWork unitOfWork)
+        public HomeController(
+            IBLLService service,
+            IMapper mapper,
+            IBLLMessageService messageService,
+            IBLLMarkService markService,
+            IBLLAttachmentService attachmentService,
+            IUnitOfWork unitOfWork)
         {
             _mapper = mapper;
             _messageService = messageService;
@@ -48,9 +53,9 @@ namespace Pow.WebApi.Controllers
         public IActionResult GetAll() => Ok("Admin Access_only___Admin___getAll");
 
         [HttpPost]
-        public async Task<IActionResult> Message(IFormCollection data/* , IFormFile imagefile*/)
+        public async Task<IActionResult> Message(IFormCollection data /* , IFormFile imagefile*/)
         {
-            MessageModel msg = new MessageModel();
+            MessageModel msg = new();
             MarkModel mark = null;
             AttachmentModel attachment = null;
 
@@ -75,7 +80,10 @@ namespace Pow.WebApi.Controllers
                 mark.MapUrl = data["MapUrl"];
             }
 
-            await _service.AddAsync(_mapper.Map<MessageBL>(msg), _mapper.Map<AttachmentBL>(attachment), _mapper.Map<MarkBL>(mark));
+            await _service.AddAsync(
+                _mapper.Map<MessageBL>(msg),
+                _mapper.Map<AttachmentBL>(attachment),
+                _mapper.Map<MarkBL>(mark));
 
             return Ok();
         }

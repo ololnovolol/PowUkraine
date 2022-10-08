@@ -14,9 +14,7 @@ namespace Pow.Application.Services
     {
         private readonly IMapper _mapper;
 
-        private IUnitOfWork UnitOfWork { get; }
-
-        private bool disposed = false;
+        private bool _disposed = false;
 
         public BLLMessageService(IUnitOfWork unitOfWork, IMapper mapper)
         {
@@ -24,25 +22,17 @@ namespace Pow.Application.Services
             _mapper = mapper;
         }
 
-        public void Dispose()
-        {
-            Dispose(true);
-            GC.SuppressFinalize(this);
-        }
-
-        protected virtual void Dispose(bool disposing)
-        {
-            if (disposed) return;
-            if (disposing)
-            {
-            }
-
-            disposed = true;
-        }
+        private IUnitOfWork UnitOfWork { get; }
 
         ~BLLMessageService()
         {
             Dispose(false);
+        }
+
+        public void Dispose()
+        {
+            Dispose(true);
+            GC.SuppressFinalize(this);
         }
 
         public async Task<int> AddAsync(MessageBL messageBl)
@@ -57,6 +47,16 @@ namespace Pow.Application.Services
             Message message = _mapper.Map<Message>(messageBl);
 
             return await UnitOfWork.Messages.UpdateAsync(message);
+        }
+
+        protected virtual void Dispose(bool disposing)
+        {
+            if (_disposed) return;
+            if (disposing)
+            {
+            }
+
+            _disposed = true;
         }
 
         public async Task<int> DeleteAsync(Guid id)
