@@ -14,7 +14,7 @@ namespace Pow.Application.Services.Interfaces
 
         public Task<int> DeleteAsync(Guid id);
 
-        public IEnumerable<T> GetAll();
+        public Task<IEnumerable<T>> GetAll();
 
         public T GetById(Guid id);
 

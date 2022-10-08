@@ -1,5 +1,9 @@
-﻿using System.Threading.Tasks;
+﻿using System;
+using System.Threading.Tasks;
+using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
+using Pow.Application.Services.Interfaces;
+using Pow.Domain;
 using Pow.Infrastructure.Repositories.Interfaces;
 
 namespace Pow.WebApi.Controllers
@@ -8,17 +12,17 @@ namespace Pow.WebApi.Controllers
     [ApiController]
     public class MarksController : ControllerBase
     {
-        private readonly IUnitOfWork _unitOfWork;
+        private readonly IBLLMarkService _markService;
 
-        public MarksController(IUnitOfWork unitOfWork)
+        public MarksController(IBLLMarkService markService)
         {
-            _unitOfWork = unitOfWork;
+            _markService = markService;
         }
 
         [HttpGet]
         public async Task<IActionResult> GetAllMarks()
         {
-            var marks = await _unitOfWork.Marks.GetAllAsync();
+            var marks = await _markService.GetAll();
             return Ok(marks);
         }
     }

@@ -5,6 +5,7 @@ using AutoMapper;
 using Pow.Application.Models;
 using Pow.Application.Services.Interfaces;
 using Pow.Domain;
+using Pow.Infrastructure.Repositories;
 using Pow.Infrastructure.Repositories.Interfaces;
 
 namespace Pow.Application.Services
@@ -13,7 +14,9 @@ namespace Pow.Application.Services
     {
         private readonly IMapper _mapper;
 
-        private bool _disposed = false;
+        private IUnitOfWork UnitOfWork { get; }
+
+        private bool disposed = false;
 
         public BLLMessageService(IUnitOfWork unitOfWork, IMapper mapper)
         {
@@ -21,17 +24,25 @@ namespace Pow.Application.Services
             _mapper = mapper;
         }
 
-        ~BLLMessageService()
-        {
-            Dispose(false);
-        }
-
-        private IUnitOfWork UnitOfWork { get; }
-
         public void Dispose()
         {
             Dispose(true);
             GC.SuppressFinalize(this);
+        }
+
+        protected virtual void Dispose(bool disposing)
+        {
+            if (disposed) return;
+            if (disposing)
+            {
+            }
+
+            disposed = true;
+        }
+
+        ~BLLMessageService()
+        {
+            Dispose(false);
         }
 
         public async Task<int> AddAsync(MessageBL messageBl)
@@ -53,21 +64,11 @@ namespace Pow.Application.Services
             return await UnitOfWork.Messages.DeleteAsync(id.ToString());
         }
 
-        protected virtual void Dispose(bool disposing)
-        {
-            if (_disposed) return;
-            if (disposing)
-            {
-            }
-
-            _disposed = true;
-        }
-
-        public IEnumerable<MessageBL> GetAll()
+        public async Task<IEnumerable<MessageBL>> GetAll()
         {
             List<MessageBL> list = new();
 
-            foreach (Message item in UnitOfWork.Messages.GetAllAsync().Result)
+            foreach (Message item in await UnitOfWork.Messages.GetAllAsync())
             {
                 list.Add(_mapper.Map<MessageBL>(item));
             }

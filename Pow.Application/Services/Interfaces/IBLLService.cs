@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 using System.Threading.Tasks;
 using Pow.Application.Models;
 
@@ -8,6 +9,12 @@ namespace Pow.Application.Services.Interfaces
     {
         Task<int> AddAsync(MessageBL message, AttachmentBL? attachmentBL, MarkBL? mark);
 
-        void Get(out MessageBL message, out AttachmentBL? attachment, out MarkBL? mark);
+        void Get();
+
+        Task<IEnumerable<MessageMarkBL>> GetAllMessagesWithMarks();
+
+        void GetByUserId(Guid UserId);
+
+        Task<int> Delete(Guid messageId);
     }
 }

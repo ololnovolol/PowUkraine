@@ -1,4 +1,6 @@
 ﻿using System;
+using System.Collections.Generic;
+using System.Linq;
 using System.Threading.Tasks;
 using AutoMapper;
 using Microsoft.AspNetCore.Authorization;
@@ -45,7 +47,21 @@ namespace Pow.WebApi.Controllers
         // [Authorize(Policy = "AdminAccess")]
         [Authorize(Roles = "Admin")]
         [HttpGet]
-        public IActionResult GetAll() => Ok("Admin Access_only___Admin___getAll");
+        public async Task<IActionResult> GetAll(){
+            IEnumerable<MessageModel> messages = (await _messageService.GetAll()).Select(i => _mapper.Map<MessageModel>(i));
+
+            return Ok(messages);
+        }
+
+        [Authorize(Roles = "Admin")]
+        [HttpGet]
+        public async Task<IActionResult> GetAllMessageWithMarks()
+        {
+            IEnumerable<MessageWithMarkModel> messagesWithMarks = (await _service.GetAllMessagesWithMarks()).Select(i => _mapper.Map<MessageWithMarkModel>(i));
+
+            return Ok(messagesWithMarks);
+        }
+
 
         [HttpPost]
         public async Task<IActionResult> Message(IFormCollection data/* , IFormFile imagefile*/)
@@ -66,7 +82,7 @@ namespace Pow.WebApi.Controllers
                 attachment.File = data.Files[0].GetBytes().Result;
             }
 
-            if (true) // TODO Check is mark empty?
+            if (!data["Latitude"].Equals("0") && !data["Longitude"].Equals("0"))
             {
                 mark = new MarkModel();
                 mark.Disabled = false;
@@ -77,11 +93,14 @@ namespace Pow.WebApi.Controllers
 
             await _service.AddAsync(_mapper.Map<MessageBL>(msg), _mapper.Map<AttachmentBL>(attachment), _mapper.Map<MarkBL>(mark));
 
-            return Ok();
+            return Ok("Posted");
         }
 
-        [Authorize(Policy = "UserAccess")]
+        [Authorize(Roles = "Admin")]
         [HttpDelete("{id}")]
-        public IActionResult Delete(Guid id) => Ok($"delete{id}");
+        public async Task<IActionResult> Delete(Guid id)
+        {
+            return Ok(await _service.Delete(id));
+        }
     }
 }

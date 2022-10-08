@@ -51,7 +51,7 @@ namespace Pow.Infrastructure.Migrations
                 .NotNullable()
                 .PrimaryKey()
                 .WithColumn("Title")
-                .AsString(30)
+                .AsString(200)
                 .WithColumn("File")
                 .AsBinary(838860800)
                 .WithColumn("MessageId")

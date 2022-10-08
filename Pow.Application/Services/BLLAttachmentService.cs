@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Linq;
 using System.Threading.Tasks;
 using AutoMapper;
 using Pow.Application.Models;
@@ -45,11 +46,11 @@ namespace Pow.Application.Services
             return await UnitOfWork.Attachments.DeleteAsync(id.ToString());
         }
 
-        public IEnumerable<AttachmentBL> GetAll()
+        public async Task<IEnumerable<AttachmentBL>> GetAll()
         {
             var list = new List<AttachmentBL>();
 
-            foreach (var item in UnitOfWork.Attachments.GetAllAsync().Result)
+            foreach (var item in await UnitOfWork.Attachments.GetAllAsync())
             {
                 list.Add(_mapper.Map<AttachmentBL>(item));
             }
@@ -86,6 +87,12 @@ namespace Pow.Application.Services
             }
 
             return list;
+        }
+
+        public async Task<int> DeleteByMessageId(Guid messageId)
+        {
+            var attachments = await UnitOfWork.Attachments.GetAllAsync();
+            return attachments.Where(i => i.MessageId == messageId).Select(async i => await UnitOfWork.Attachments.DeleteAsync(i.Id.ToString())).Count();
         }
     }
 }
