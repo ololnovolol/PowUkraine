@@ -59,7 +59,6 @@ export const MessageForm = props => {
         Attachment: [],
     });
     const [file, setFile] = useState([]);
-    const [userId, setUserId] = useState('');
     let loc = useLocation();
     const [location, setLocation] = useState({
         Longitude: '0',

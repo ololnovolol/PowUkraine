@@ -1,8 +1,7 @@
-import React, { useState } from 'react';
+import React from 'react';
 import Table from 'react-bootstrap/Table';
 import styled from 'styled-components';
 import * as apiService from '../../common/services/apiService';
-import * as userManager from '../../common/services/userService';
 
 const Btn = styled.button`
     background: #88a87d none repeat scroll 0% 0%;

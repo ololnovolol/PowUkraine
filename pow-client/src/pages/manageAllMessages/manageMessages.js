@@ -3,6 +3,7 @@ import { useSelector } from 'react-redux';
 import * as apiService from '../../common/services/apiService';
 import MessageTable from './table';
 import data from './test.json';
+import '../../style/table/table.css';
 import * as userManager from '../../common/services/userService';
 
 function ManageMessages() {
@@ -35,9 +36,12 @@ function ManageMessages() {
 
     return (
         <>
-            <div className="container">
-                <h1>Manage Messages</h1>
+            <div className="container mtb-3">
+                <div className="hh">
+                    <h1>Manage Messages</h1>
+                </div>
                 <MessageTable
+                    className="table"
                     theadData={getHeadings()}
                     tbodyData={messageData}
                     setAllUsers={setAllMessages}

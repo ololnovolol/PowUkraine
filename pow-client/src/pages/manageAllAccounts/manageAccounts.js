@@ -3,6 +3,7 @@ import { useSelector } from 'react-redux';
 import * as apiService from '../../common/services/apiService';
 import UsersTable from './table';
 import data from './test.json';
+import '../../style/table/table.css';
 import * as userManager from '../../common/services/userService';
 
 function ManageAccounts() {
@@ -35,9 +36,12 @@ function ManageAccounts() {
 
     return (
         <>
-            <div className="container">
-                <h1>Manage Accounts</h1>
+            <div className="container mtb-3">
+                <div className="hh">
+                    <h1>Manage Accounts</h1>
+                </div>
                 <UsersTable
+                    className="table"
                     theadData={getHeadings()}
                     tbodyData={usersData}
                     setAllUsers={setAllUsers}
