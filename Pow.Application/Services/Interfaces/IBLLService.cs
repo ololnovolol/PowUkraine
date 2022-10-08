@@ -9,10 +9,12 @@ namespace Pow.Application.Services.Interfaces
     {
         Task<int> AddAsync(MessageBL message, AttachmentBL? attachmentBL, MarkBL? mark);
 
-        void Get(out Task<MessageBL> message, out Task<AttachmentBL>? attachment, out Task<MarkBL>? mark);
+        void Get();
 
-        void GetAll(out Task<IEnumerable<MessageBL>> messages, out Task<IEnumerable<AttachmentBL>> attachments, out Task<IEnumerable<MarkBL>> marks);
+        Task<IEnumerable<MessageMarkBL>> GetAllMessagesWithMarks();
 
-        void GetByUserId(out Task<IEnumerable<MessageBL>> messages, out Task<IEnumerable<AttachmentBL>> attachments, out Task<IEnumerable<MarkBL>> marks);
+        void GetByUserId(Guid UserId);
+
+        Task<int> Delete(Guid messageId);
     }
 }

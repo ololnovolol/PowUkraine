@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Authentication;
 using Pow.Application.Models;
@@ -28,6 +29,9 @@ namespace Pow.Application.Services
             if (disposed) return;
             if (disposing)
             {
+                bLLAttachmentService.Dispose();
+                bLLMarkService.Dispose();
+                bLLMessageService.Dispose();
             }
 
             disposed = true;
@@ -64,18 +68,41 @@ namespace Pow.Application.Services
             }
 
             return 1;
-
         }
 
-        public void Get(out MessageBL message, out AttachmentBL attachment, out MarkBL mark)
+        public void Get() => throw new NotImplementedException();
+
+        public async Task<IEnumerable<MessageMarkBL>> GetAllMessagesWithMarks()
         {
-            throw new NotImplementedException();
+            var messages = await bLLMessageService.GetAll();
+            var marks = await bLLMarkService.GetAll();
+            var messageMarks = new List<MessageMarkBL>();
+            foreach (var message in messages)
+            {
+                MessageMarkBL messageMark = new MessageMarkBL()
+                {
+                    Id = message.Id,
+                    Description = message.Description,
+                    Title = message.Title,
+                    EventDate = message.EventDate,
+                    CreatedDate = message.CreatedDate,
+                    Marked = marks.Count(i => i.MessageId == message.Id),
+                    UserId = message.UserId,
+                };
+
+                messageMarks.Add(messageMark);
+            }
+
+            return messageMarks;
         }
 
-        public void Get(out Task<MessageBL> message, out Task<AttachmentBL> attachment, out Task<MarkBL> mark) => throw new NotImplementedException();
+        public void GetByUserId(Guid UserId) => throw new NotImplementedException();
 
-        public void GetAll(out Task<IEnumerable<MessageBL>> messages, out Task<IEnumerable<AttachmentBL>> attachments, out Task<IEnumerable<MarkBL>> marks) => throw new NotImplementedException();
-
-        public void GetByUserId(out Task<IEnumerable<MessageBL>> messages, out Task<IEnumerable<AttachmentBL>> attachments, out Task<IEnumerable<MarkBL>> marks) => throw new NotImplementedException();
+        public async Task<int> Delete(Guid messageId)
+        {
+            await bLLMarkService.DeleteByMessageId(messageId);
+            await bLLAttachmentService.DeleteByMessageId(messageId);
+            return await bLLMessageService.DeleteAsync(messageId);
+        }
     }
 }

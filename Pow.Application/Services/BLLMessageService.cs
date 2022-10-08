@@ -64,11 +64,11 @@ namespace Pow.Application.Services
             return await UnitOfWork.Messages.DeleteAsync(id.ToString());
         }
 
-        public IEnumerable<MessageBL> GetAll()
+        public async Task<IEnumerable<MessageBL>> GetAll()
         {
             List<MessageBL> list = new();
 
-            foreach (Message item in UnitOfWork.Messages.GetAllAsync().Result)
+            foreach (Message item in await UnitOfWork.Messages.GetAllAsync())
             {
                 list.Add(_mapper.Map<MessageBL>(item));
             }

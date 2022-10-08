@@ -1,9 +1,7 @@
-﻿using Pow.Application.Models;
-using System;
+﻿using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
 using System.Threading.Tasks;
+using Pow.Application.Models;
 
 namespace Pow.Application.Services.Interfaces
 {
@@ -11,5 +9,6 @@ namespace Pow.Application.Services.Interfaces
     {
         public IEnumerable<AttachmentBL> GetByMessageId(string messageId);
 
+        public Task<int> DeleteByMessageId(Guid messageId);
     }
 }
