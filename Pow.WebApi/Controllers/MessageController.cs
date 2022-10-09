@@ -49,7 +49,7 @@ namespace Pow.WebApi.Controllers
             return Ok(messages);
         }
 
-        [Authorize(Roles = "Admin")]
+        /*[Authorize(Roles = "Admin")]*/
         [HttpGet]
         public async Task<IActionResult> GetAllMessageWithMarks()
         {

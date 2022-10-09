@@ -9,6 +9,7 @@ namespace Pow.WebApi.AutoMapperProfiles
         public WebMessageMarkProfile()
             => CreateMap<MessageWithMarkModel, MessageMarkBL>()
                 .ForMember(dest => dest.Id, opt => opt.Ignore())
+                /*.ForMember(dest => dest.EventDate)*/
                 .ReverseMap();
     }
 }

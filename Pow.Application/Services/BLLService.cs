@@ -75,6 +75,8 @@ namespace Pow.Application.Services
                         EventDate = message.EventDate,
                         CreatedDate = message.CreatedDate,
                         Marked = marks.Count(i => i.MessageId == message.Id),
+                        MarksID = marks.Where(i => i.MessageId == message.Id).Select(i => i.Id),
+                        Phone = message.Phone,
                         UserId = message.UserId ?? Guid.Empty,
                     })
                 .ToList();
