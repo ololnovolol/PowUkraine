@@ -1,8 +1,10 @@
 ﻿using System;
+using System.Collections;
+using System.Collections.Generic;
 
 namespace Pow.Application.Models
 {
-    public class MessageMarkBl : BaseModelBL
+    public class MessageMarkBL : BaseModelBL
     {
         public string Description { get; set; }
 
@@ -13,6 +15,8 @@ namespace Pow.Application.Models
         public string Title { get; set; }
 
         public int Marked { get; set; } = 0;
+
+        public List<Guid>? MarksID { get; set; }
 
         public Guid? UserId { get; set; }
     }

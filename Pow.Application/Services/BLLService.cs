@@ -8,7 +8,7 @@ using Pow.Application.Services.Interfaces;
 
 namespace Pow.Application.Services
 {
-    public class BllService : IBllService
+    public class BLLService : IBLLService
     {
         private readonly IBLLAttachmentService _bLlAttachmentService;
 
@@ -18,7 +18,7 @@ namespace Pow.Application.Services
 
         private bool _disposed;
 
-        public BllService(
+        public BLLService(
             IBLLMessageService messageService,
             IBLLMarkService markService,
             IBLLAttachmentService attachmentService)
@@ -28,7 +28,7 @@ namespace Pow.Application.Services
             _bLlMessageService = messageService;
         }
 
-        ~BllService() => Dispose(false);
+        ~BLLService() => Dispose(false);
 
         public void Dispose()
         {
@@ -61,13 +61,13 @@ namespace Pow.Application.Services
 
         public void Get() => throw new NotImplementedException();
 
-        public async Task<IEnumerable<MessageMarkBl>> GetAllMessagesWithMarks()
+        public async Task<IEnumerable<MessageMarkBL>> GetAllMessagesWithMarks()
         {
             IEnumerable<MessageBL> messages = await _bLlMessageService.GetAll();
             IEnumerable<MarkBL> marks = await _bLlMarkService.GetAll();
 
             return messages.Select(
-                    message => new MessageMarkBl
+                    message => new MessageMarkBL
                     {
                         Id = message.Id,
                         Description = message.Description,

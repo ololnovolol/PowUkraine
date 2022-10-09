@@ -42,4 +42,8 @@
 		<ProjectReference Include="..\Pow.Infrastructure\Pow.Infrastructure.csproj" />
 	</ItemGroup>
 
+	<ItemGroup>
+	  <Folder Include="Logdata\" />
+	</ItemGroup>
+
 </Project>

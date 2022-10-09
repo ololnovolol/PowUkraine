@@ -21,10 +21,10 @@ namespace Pow.WebApi.Controllers
 
         private readonly IBLLMessageService _messageService;
 
-        private readonly IBllService _service;
+        private readonly IBLLService _service;
 
         public MessageController(
-            IBllService service,
+            IBLLService service,
             IMapper mapper,
             IBLLMessageService messageService)
         {

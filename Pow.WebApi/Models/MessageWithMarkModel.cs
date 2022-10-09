@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 
 namespace Pow.WebApi.Models
 {
@@ -13,6 +14,8 @@ namespace Pow.WebApi.Models
         public string Title { get; set; }
 
         public int Marked { get; set; }
+
+        public List<Guid> MarksId { get; set; }
 
         public Guid? UserId { get; set; }
     }

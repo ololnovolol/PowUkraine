@@ -9,19 +9,19 @@ using Pow.Infrastructure.Repositories.Interfaces;
 
 namespace Pow.Application.Services
 {
-    public class BllMessageService : IBLLMessageService
+    public class BLLMessageService : IBLLMessageService
     {
         private readonly IMapper _mapper;
 
         private bool _disposed;
 
-        public BllMessageService(IUnitOfWork unitOfWork, IMapper mapper)
+        public BLLMessageService(IUnitOfWork unitOfWork, IMapper mapper)
         {
             UnitOfWork = unitOfWork;
             _mapper = mapper;
         }
 
-        ~BllMessageService() => Dispose(false);
+        ~BLLMessageService() => Dispose(false);
 
         private IUnitOfWork UnitOfWork { get; }
 

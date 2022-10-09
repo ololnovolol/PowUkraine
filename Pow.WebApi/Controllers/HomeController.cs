@@ -16,10 +16,10 @@ namespace Pow.WebApi.Controllers
     {
         private readonly IMapper _mapper;
 
-        private readonly IBllService _service;
+        private readonly IBLLService _service;
 
         public HomeController(
-            IBllService service,
+            IBLLService service,
             IMapper mapper)
         {
             _mapper = mapper;

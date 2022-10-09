@@ -6,13 +6,13 @@ using Pow.Application.Models;
 
 namespace Pow.Application.Services.Interfaces
 {
-    public interface IBllService : IDisposable
+    public interface IBLLService : IDisposable
     {
         Task<int> AddAsync(MessageBL message, AttachmentBL? attachmentBl, MarkBL? mark);
 
         void Get();
 
-        Task<IEnumerable<MessageMarkBl>> GetAllMessagesWithMarks();
+        Task<IEnumerable<MessageMarkBL>> GetAllMessagesWithMarks();
 
         void GetByUserId(Guid userId);
 
