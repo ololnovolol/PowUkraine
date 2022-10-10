@@ -62,15 +62,14 @@ export default function MessageTable({ theadData, tbodyData, setAllUsers }) {
     const [show, setShow] = useState(false);
     const [data, setData] = useState([]);
 
-    async function UpdateMsg(value) {
-        await apiService.changeUserRole(value.email);
-        updateData();
+    async function UpdateMsg() {
+        let msgs = await apiService.getAllMessages();
+        setAllUsers(msgs);
     }
 
     async function deleteMsg(value) {
-        console.log(value);
-        await apiService.deleteUser(value.email);
-        updateData();
+        await apiService.deleteMessage(value.id);
+        UpdateMsg();
     }
 
     async function updateData(bool, value) {
@@ -78,7 +77,7 @@ export default function MessageTable({ theadData, tbodyData, setAllUsers }) {
 
         tbodyData.map(e => {
             if (
-                e.userId === value.userId &&
+                e.id === value.id &&
                 e.title === value.title &&
                 e.description === value.description
             ) {
@@ -116,6 +115,10 @@ export default function MessageTable({ theadData, tbodyData, setAllUsers }) {
                                         </td>
                                     );
                                 } else if (key === 'userId') {
+                                } else if (key === 'id') {
+                                } else if (key === 'file') {
+                                } else if (key === 'phone') {
+                                } else if (key === 'marksId') {
                                 } else if (key === 'createdDate') {
                                 } else {
                                     return <td key={row[key]}>{row[key]}</td>;

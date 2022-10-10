@@ -47,8 +47,9 @@ const Form = styled.form`
 function FormModal(params) {
     const [msgData, setMsgData] = useState({
         Title: params.array.title,
+        Id: params.array.id,
         EventDate: params.array.eventDate,
-        UserId: params.array.userId,
+        UserPhone: params.array.phone,
         PhoneNumber: params.array.phoneNumber,
         Description: params.array.description,
         CreatedDate: params.array.createdDate,
@@ -71,6 +72,15 @@ function FormModal(params) {
                 </div>
                 <Block>
                     <label>
+                        ID
+                        <input
+                            id="id"
+                            name="id"
+                            value={msgData.Id}
+                            readonly
+                        />{' '}
+                    </label>
+                    <label>
                         Title
                         <input
                             id="title"
@@ -89,11 +99,11 @@ function FormModal(params) {
                         />
                     </label>
                     <label>
-                        UserId
+                        User Phone
                         <input
-                            id="userId"
-                            name="userId"
-                            value={msgData.UserId}
+                            id="phone"
+                            name="phone"
+                            value={msgData.UserPhone}
                             readonly
                         />
                     </label>
@@ -116,30 +126,12 @@ function FormModal(params) {
                         />
                     </label>
                     <label>
-                        Created Date
-                        <input
-                            id="createdDate"
-                            name="createdDate"
-                            value={msgData.CreatedDate}
-                            readonly
-                        />
-                    </label>
-                    <label>
                         Description
                         <textarea
                             id="eventDate"
                             name="eventDate"
                             type={'textarea'}
                             value={msgData.Description}
-                            readonly
-                        />
-                    </label>
-                    <label>
-                        Files
-                        <input
-                            id="files"
-                            name="files"
-                            value={msgData.Files}
                             readonly
                         />
                     </label>

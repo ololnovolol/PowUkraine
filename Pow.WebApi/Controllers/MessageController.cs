@@ -8,7 +8,6 @@ using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Pow.Application.Models;
 using Pow.Application.Services.Interfaces;
-
 using Pow.WebApi.Controllers.Base;
 using Pow.WebApi.Extensions;
 using Pow.WebApi.Models;
@@ -52,7 +51,8 @@ namespace Pow.WebApi.Controllers
         public async Task<IActionResult> GetAllMessagesWithMarksAndAttachments()
         {
             IEnumerable<MessageWithMarkModel> messagesWithMarks =
-                (await _service.GetAllMessagesWithMarksAndAttachments()).Select(i => _mapper.Map<MessageWithMarkModel>(i));
+                (await _service.GetAllMessagesWithMarksAndAttachments()).Select(
+                    i => _mapper.Map<MessageWithMarkModel>(i));
 
             return Ok(messagesWithMarks);
         }
@@ -100,7 +100,7 @@ namespace Pow.WebApi.Controllers
         }
 
         [Authorize(Roles = "Admin")]
-        [HttpDelete("{id}")]
-        public async Task<IActionResult> Delete(Guid id) => Ok(await _service.Delete(id));
+        [HttpPost]
+        public async Task<IActionResult> Delete([FromBody] StringParameter id) => Ok(await _service.Delete(Guid.Parse(id.Data)));
     }
 }
