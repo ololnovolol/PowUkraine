@@ -52,5 +52,5 @@ jobs:
         with:
           app-name: 'powukraine'
           slot-name: 'Production'
-          publish-profile: ${{ secrets.AZUREAPPSERVICE_PUBLISHPROFILE_4DEC8E66C28A4471B070D6DB287C53D9 }}
+          publish-profile: ${{ secrets.AZUREAPPSERVICE_PUBLISHPROFILE_9C9302D04A70461B82FCB8485C2B3E97 }}
           package: .
