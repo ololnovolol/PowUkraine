@@ -1,7 +1,5 @@
-﻿using System.Collections.Generic;
-using System.Threading.Tasks;
+﻿using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
-using Pow.Application.Models;
 using Pow.Application.Services.Interfaces;
 
 namespace Pow.WebApi.Controllers
@@ -10,16 +8,19 @@ namespace Pow.WebApi.Controllers
     [ApiController]
     public class MarksController : ControllerBase
     {
-        private readonly IBLLMarkService _markService;
+        private readonly IMarksOnMapService _marksOnMapService;
 
-        public MarksController(IBLLMarkService markService) => _markService = markService;
+        public MarksController(IMarksOnMapService marksOnMapService)
+        {
+            _marksOnMapService = marksOnMapService;
+        }
 
         [HttpGet]
         public async Task<IActionResult> GetAllMarks()
         {
-            IEnumerable<MarkBL> marks = await _markService.GetAll();
+            var marksOnMap = await _marksOnMapService.GetAllAsync();
 
-            return Ok(marks);
+            return Ok(marksOnMap);
         }
     }
 }

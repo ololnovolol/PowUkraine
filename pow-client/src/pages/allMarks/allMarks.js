@@ -15,7 +15,7 @@ function AllMarks() {
         loadMarks();
     }, []);
 
-    const position = [50.45, 30.5];
+    const position = [48.96, 32.56];
     const basemapsDict = {
         osm: 'https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png',
         hot: 'https://{s}.tile.openstreetmap.fr/hot/{z}/{x}/{y}.png',
@@ -24,7 +24,7 @@ function AllMarks() {
     };
 
     return (
-        <Map className="map" center={position} zoom={10}>
+        <Map className="map" center={position} zoom={6}>
             <TileLayer
                 attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
                 url={basemapsDict[basemap]}
@@ -32,13 +32,16 @@ function AllMarks() {
             <Basemap basemap={basemap} onChange={setBasemap} />
 
             {marks.map(mark => {
-                const coords = [mark.gpsLatitude, mark.gpsLongitude];
+                const coords = [mark.latitude, mark.longitude];
 
                 return (
                     <Marker key={mark.id} position={coords}>
                         <Popup>
                             <div>
-                                <h2>{coords}</h2>
+                                <h4>{mark.title}</h4>
+                                <span Style={'font-size: 2rem'}>
+                                    {mark.description}
+                                </span>
                             </div>
                         </Popup>
                     </Marker>
