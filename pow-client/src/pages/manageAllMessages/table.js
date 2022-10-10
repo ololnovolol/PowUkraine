@@ -116,6 +116,10 @@ export default function MessageTable({ theadData, tbodyData, setAllUsers }) {
                                         </td>
                                     );
                                 } else if (key === 'userId') {
+                                } else if (key === 'id') {
+                                } else if (key === 'file') {
+                                } else if (key === 'phone') {
+                                } else if (key === 'marksId') {
                                 } else if (key === 'createdDate') {
                                 } else {
                                     return <td key={row[key]}>{row[key]}</td>;

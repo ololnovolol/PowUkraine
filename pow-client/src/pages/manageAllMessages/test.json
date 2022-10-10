@@ -1,10 +1,16 @@
 [
   {
-    "eventDate": "2022-10-07T00:00:00",
-    "title": "ergvecvewv",
-    "description": "sdcscs895888",
-    "createdDate": "2022-10-07T00:00:00",
+    "eventDate": "07 октября 2022",
+    "title": "Bad man",
+    "id": "154d06d2-0f1b-487f-ab67-ac0439bdb788",
+    "description": "he is louding about ZSU bad things",
+
+    "createdDate": "07 октября 2022",
+
     "marked": 1,
+    "marksId": ["4c021389-84ac-4085-bb5b-8b3e72f8a6c7"],
+    "phone": "231432134234",
+    "file": [],
     "userId": "00000000-0000-0000-0000-000000000000"
   }
 ]

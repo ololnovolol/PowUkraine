@@ -139,7 +139,7 @@ export async function sentMessage(values) {
 
 export async function getAllMessages() {
     const response = await axios.get(
-        'https://localhost:44312/api/message/GetAllMessageWithMarks',
+        'https://localhost:44312/api/message/GetAllMessagesWithMarksAndAttachments',
     );
     console.log(response.data);
     return response.data;
