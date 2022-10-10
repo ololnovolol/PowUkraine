@@ -33,12 +33,10 @@ namespace Pow.WebApi.Controllers
             _service = service;
         }
 
-        // [Authorize(Policy = "UserAccess")]
         [Authorize(Roles = "User")]
         [HttpGet]
         public IActionResult Get() => Ok("Users_only___User___get method=)");
 
-        // [Authorize(Policy = "AdminAccess")]
         [Authorize(Roles = "Admin")]
         [HttpGet]
         public async Task<IActionResult> GetAll()
@@ -49,7 +47,7 @@ namespace Pow.WebApi.Controllers
             return Ok(messages);
         }
 
-        /*[Authorize(Roles = "Admin")]*/
+        [Authorize(Roles = "Admin")]
         [HttpGet]
         public async Task<IActionResult> GetAllMessagesWithMarksAndAttachments()
         {

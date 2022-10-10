@@ -7,7 +7,7 @@ namespace Pow.WebApi.AutoMapperProfiles
     {
         public string Convert(DateTime source, string destination, ResolutionContext context)
         {
-            return System.Convert.ToString(source.ToString("dddd, dd MMMM yyyy"));
+            return System.Convert.ToString(source.ToString("dd MMMM yyyy"));
         }
     }
 }
