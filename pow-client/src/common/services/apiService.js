@@ -145,13 +145,13 @@ export async function getAllMessages() {
     return response.data;
 }
 
-export async function deleteMessage(userEmail) {
-    let request = { Data: userEmail };
+export async function deleteMessage(id) {
+    let request = { Data: id };
 
-    console.log(userEmail + '');
+    console.log(id + '');
 
     const response = await axios
-        .post('https://localhost:44316/api/roles/DeleteUser', request, {
+        .post('https://localhost:44312/api/message/Delete', request, {
             headers: {
                 accept: 'application/json',
             },
