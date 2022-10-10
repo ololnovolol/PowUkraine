@@ -61,10 +61,11 @@ namespace Pow.Application.Services
 
         public void Get() => throw new NotImplementedException();
 
-        public async Task<IEnumerable<MessageMarkBL>> GetAllMessagesWithMarks()
+        public async Task<IEnumerable<MessageMarkBL>> GetAllMessagesWithMarksAndAttachments()
         {
             IEnumerable<MessageBL> messages = await _bLlMessageService.GetAll();
             IEnumerable<MarkBL> marks = await _bLlMarkService.GetAll();
+            IEnumerable<AttachmentBL> attachments = await _bLlAttachmentService.GetAll();
 
             return messages.Select(
                     message => new MessageMarkBL
@@ -78,6 +79,7 @@ namespace Pow.Application.Services
                         MarksID = marks.Where(i => i.MessageId == message.Id).Select(i => i.Id),
                         Phone = message.Phone,
                         UserId = message.UserId ?? Guid.Empty,
+                        File = attachments.Where(i => i.MessageId == message.Id).Select(i => i.File),
                     })
                 .ToList();
         }

@@ -12,7 +12,7 @@ namespace Pow.Application.Services.Interfaces
 
         void Get();
 
-        Task<IEnumerable<MessageMarkBL>> GetAllMessagesWithMarks();
+        Task<IEnumerable<MessageMarkBL>> GetAllMessagesWithMarksAndAttachments();
 
         void GetByUserId(Guid userId);
 

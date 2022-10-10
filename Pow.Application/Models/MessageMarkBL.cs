@@ -20,6 +20,8 @@ namespace Pow.Application.Models
 
         public string Phone { get; set; }
 
+        public IEnumerable<byte[]> File { get; set; }
+
         public Guid? UserId { get; set; }
     }
 }
