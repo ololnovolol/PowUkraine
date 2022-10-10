@@ -39,13 +39,7 @@ namespace Pow.WebApi
             SqlMapper.RemoveTypeMap(typeof(Guid));
             SqlMapper.RemoveTypeMap(typeof(Guid?));
 
-            services.AddAutoMapper(
-                typeof(WebAttachmentProfile),
-                typeof(WebMarkProfile),
-                typeof(WebMessageProfile),
-                typeof(MarkProfile),
-                typeof(MessageProfile),
-                typeof(AttachmentProfile));
+            services.AddAutoMapper();
 
             services.AddSingleton<IBLLMessageService, BLLMessageService>();
 

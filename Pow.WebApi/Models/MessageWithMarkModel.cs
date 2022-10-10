@@ -9,9 +9,9 @@ namespace Pow.WebApi.Models
 
         public string Description { get; set; }
 
-        public DateTime EventDate { get; set; }
+        public string EventDate { get; set; }
 
-        public DateTime CreatedDate { get; set; }
+        public string CreatedDate { get; set; }
 
         public string Title { get; set; }
 
