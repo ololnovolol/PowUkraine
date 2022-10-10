@@ -255,7 +255,13 @@ dotnet_diagnostic.SA0001.severity = none
 # SA1124: Do not use regions
 dotnet_diagnostic.SA1124.severity = none
 
-# SA1000: Keywords Must Be Spaced Correctly
+# SA1000: Keywords must be spaced correctly
 dotnet_diagnostic.SA1000.severity = none
+
+# IDE0005: Remove unnecessary using directives
+dotnet_diagnostic.IDE0005.severity = warning
+
+# SA1313: Parameter names must begin with lowercase letter
+dotnet_diagnostic.SA1313.severity = none
 
 csharp_style_implicit_object_creation_when_type_is_apparent = false
