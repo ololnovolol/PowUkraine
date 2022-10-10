@@ -16,7 +16,11 @@ namespace Pow.Application.Models
 
         public int Marked { get; set; } = 0;
 
-        public List<Guid>? MarksID { get; set; }
+        public IEnumerable<Guid> MarksID { get; set; } = new List<Guid>();
+
+        public string Phone { get; set; }
+
+        public IEnumerable<byte[]> File { get; set; }
 
         public Guid? UserId { get; set; }
     }

@@ -49,12 +49,12 @@ namespace Pow.WebApi.Controllers
             return Ok(messages);
         }
 
-        [Authorize(Roles = "Admin")]
+        /*[Authorize(Roles = "Admin")]*/
         [HttpGet]
-        public async Task<IActionResult> GetAllMessageWithMarks()
+        public async Task<IActionResult> GetAllMessagesWithMarksAndAttachments()
         {
             IEnumerable<MessageWithMarkModel> messagesWithMarks =
-                (await _service.GetAllMessagesWithMarks()).Select(i => _mapper.Map<MessageWithMarkModel>(i));
+                (await _service.GetAllMessagesWithMarksAndAttachments()).Select(i => _mapper.Map<MessageWithMarkModel>(i));
 
             return Ok(messagesWithMarks);
         }
